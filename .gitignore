@@ -1,0 +1,16 @@
+node_modules
+.vercel
+.output
+.nitro
+dist
+*.log
+.DS_Store
+.env
+.env.local
+.env.*.local
+!.env.example
+artifacts
+screenshots
+.grok/preview.log
+.grok/status
+public/indian-box-office-source.zip

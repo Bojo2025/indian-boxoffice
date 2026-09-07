@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0c0b0a;
+  --color-bg-elevated: #141210;
+  --color-surface: #1b1814;
+  --color-fg: #f3efe6;
+  --color-muted: #9a9488;
+  --color-subtle: #6f6a62;
+  --color-border: #2c2823;
+  --color-accent: #c45c3e;
+  --color-accent-fg: #0c0b0a;
+  --color-paper: #e8e0d2;
+  --color-gain: #8aa37a;
+  --color-loss: #c47a72;
+  --color-ring: #c45c3e;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Newsreader", "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --shadow-border: 0 0 0 1px rgba(243, 239, 230, 0.08);
+  --shadow-border-hover: 0 0 0 1px rgba(243, 239, 230, 0.14);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    min-height: 100dvh;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  img {
+    outline: 1px solid rgba(243, 239, 230, 0.1);
+    outline-offset: -1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.report-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-top: 1.75rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+}
+
+.report-body p {
+  color: var(--color-paper);
+  line-height: 1.65;
+  margin-bottom: 0.9rem;
+}
+
+.report-body strong {
+  color: var(--color-fg);
+  font-weight: 600;
+}
