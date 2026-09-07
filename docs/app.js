@@ -96,11 +96,22 @@
     return parseCr(raw);
   }
 
+  async function fetchWithTimeout(url, timeoutMs = 12000) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+    try {
+      const res = await fetch(url, { signal: ctrl.signal });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
   async function scrapeWikipedia() {
     const url =
       "https://en.wikipedia.org/w/api.php?action=parse&page=List_of_Indian_films_of_2026&prop=wikitext&format=json&formatversion=2&origin=*";
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`Wikipedia HTTP ${res.status}`);
+    const res = await fetchWithTimeout(url);
     const json = await res.json();
     const wikitext = json.parse?.wikitext ?? "";
     const chunks = wikitext.split(/\n\|-/).slice(1);
@@ -133,8 +144,7 @@
 
   async function scrapeRss(sourceId, rssUrl) {
     const proxy = `https://api.allorigins.win/raw?url=${encodeURIComponent(rssUrl)}`;
-    const res = await fetch(proxy);
-    if (!res.ok) throw new Error(`${sourceId} HTTP ${res.status}`);
+    const res = await fetchWithTimeout(proxy);
     const xml = await res.text();
     const items = xml.match(/<item\b[\s\S]*?<\/item>/gi) ?? [];
     let n = 0;
@@ -157,8 +167,7 @@
 
   async function scrapeHungama() {
     const target = "https://www.bollywoodhungama.com/box-office-collections/worldwide/2026/";
-    const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(target)}`);
-    if (!res.ok) throw new Error(`Hungama HTTP ${res.status}`);
+    const res = await fetchWithTimeout(`https://api.allorigins.win/raw?url=${encodeURIComponent(target)}`);
     const html = await res.text();
     const rows = html.match(/<tr[\s\S]*?<\/tr>/gi) ?? [];
     let matched = 0;
@@ -289,13 +298,14 @@
       ["etimes", () => scrapeRss("etimes", "https://timesofindia.indiatimes.com/rssfeeds/1081479906.cms")],
       ["express", () => scrapeRss("express", "https://www.thehindu.com/entertainment/movies/feeder/default.rss")],
     ];
-    for (const [id, fn] of jobs) {
-      try {
-        await fn();
-      } catch (err) {
+    const results = await Promise.allSettled(jobs.map(([, fn]) => fn()));
+    results.forEach((result, i) => {
+      if (result.status === "rejected") {
+        const id = jobs[i][0];
+        const err = result.reason;
         logs.push(`${id}: blocked — ${err instanceof Error ? err.message : "failed"}`);
       }
-    }
+    });
     render();
     status.textContent = logs.join(" · ") || "Pull finished.";
     document.getElementById("live-badge").textContent = "Live scrape";
