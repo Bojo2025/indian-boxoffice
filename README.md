@@ -2,7 +2,13 @@
 
 Independent **consensus desk** for Indian theatrical collections. The site does not treat any one tracker as fact. It pulls Sacnilk, Koimoi, Bollywood Hungama, Box Office India, Pinkvilla, Indian Express, ETimes and Wikipedia, then publishes a weighted-median consensus, source spread, a daily report, and a desk analyst.
 
-This repository **is** the complete website. Clone it, install, run.
+This repository **is** the complete website.
+
+**Live desk (GitHub Pages):** [https://bojo2025.github.io/indian-boxoffice/](https://bojo2025.github.io/indian-boxoffice/)
+
+That URL serves `docs/index.html`. The page scrapes Wikipedia, Hungama (via a CORS proxy) and entertainment RSS in the browser, then formats the board. Trade sites that block the request keep the catalogue figure.
+
+The Node app below is the same desk with a server-side scrape (`npm run dev`).
 
 ## Requirements
 

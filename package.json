@@ -25,7 +25,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "pack:source": "node scripts/pack-source.mjs",
-    "posters": "node scripts/generate-posters.mjs"
+    "posters": "node scripts/generate-posters.mjs",
+    "export:desk": "npx vite-node scripts/export-desk-catalog.mts"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.4",

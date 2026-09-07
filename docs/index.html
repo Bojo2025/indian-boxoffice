@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indian Box Office</title>
+  <meta name="description" content="Live consensus of Indian theatrical collections, scraped from public trackers and formatted on this desk." />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="mast">
+    <a class="brand" href="#top">
+      <span class="mark">IBO</span>
+      <span>
+        <strong>Indian Box Office</strong>
+        <span>Consensus desk</span>
+      </span>
+    </a>
+    <nav>
+      <a href="#now">Now playing</a>
+      <a href="#rankings">2026</a>
+      <a href="#wires">Wires</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+  <main id="top">
+    <p class="kicker"><span class="badge" id="live-badge">Live scrape</span><span id="desk-date"></span></p>
+    <h1>Live collections, scraped from the trackers.</h1>
+    <p class="lede">
+      Wikipedia’s 2026 ranking, entertainment RSS, and the desk catalogue are pulled in the browser
+      when you open this page. Sacnilk and Hungama HTML is attempted; if they block the request the
+      last catalogue figure stays on the card and the miss is logged.
+    </p>
+    <div class="toolbar">
+      <button class="pull" id="pull" type="button">Pull live collections</button>
+      <p class="status" id="status">Opening the trackers…</p>
+    </div>
+    <dl class="stats" id="stats"></dl>
+    <section id="now">
+      <p class="kicker">Theatrical</p>
+      <h2>Now in theatres</h2>
+      <div class="grid" id="now-grid" style="margin-top:24px"></div>
+    </section>
+    <section id="late">
+      <p class="kicker">Holdovers</p>
+      <h2>Late run</h2>
+      <div class="grid" id="late-grid" style="margin-top:24px"></div>
+    </section>
+    <section id="rankings">
+      <p class="kicker">Year board</p>
+      <h2>2026 worldwide</h2>
+      <p class="lede">Ranked on IBO consensus worldwide gross. Live Wikipedia figures overlay matching titles.</p>
+      <div style="overflow-x:auto;margin-top:24px">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+              <th>Language</th>
+              <th class="num">India net</th>
+              <th class="num">Worldwide</th>
+            </tr>
+          </thead>
+          <tbody id="rank-body"></tbody>
+        </table>
+      </div>
+    </section>
+    <section id="wires">
+      <p class="kicker">Wires</p>
+      <h2>Latest headlines</h2>
+      <ul class="wires" id="wires-list"></ul>
+    </section>
+    <section id="sources">
+      <p class="kicker">Method</p>
+      <h2>Sources on the desk</h2>
+      <div class="grid" id="source-grid" style="margin-top:24px"></div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      Independent consensus of published theatrical estimates. India has no official auditor — we publish the spread.
+      Figures in ₹ crore. India nett / worldwide gross.
+    </div>
+  </footer>
+  <script src="./catalog.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
