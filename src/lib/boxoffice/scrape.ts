@@ -1,4 +1,4 @@
-import { HUNGAMA_PAGES, MOVIES, SACNILK_PAGES, dateForDay } from "./catalog";
+import { HUNGAMA_PAGES, KOIMOI_PAGES, MOVIES, SACNILK_PAGES, dateForDay } from "./catalog";
 import { deskDate } from "./format";
 import type { Movie, Reading, TerritorySplit } from "./types";
 
@@ -420,6 +420,81 @@ function parsePinkvilla(html: string): ScrapedHeadline[] {
   return out;
 }
 
+/** Soft lifetime reading from a newsroom headline that cites a crore figure. */
+function readingFromHeadline(sourceId: string, title: string, url: string): Reading | null {
+  const movie = matchMovie(title);
+  if (!movie) return null;
+  const gross = title.match(
+    /(?:earns?|collects?|grosses?|makes?|clocks?|nets?)\s*(?:rs\.?|₹)?\s*([\d,.]+)\s*cr/i,
+  );
+  const net = title.match(/([\d,.]+)\s*cr(?:ore)?\s*(?:india\s*)?nett?/i);
+  const indiaNet = parseCr(net?.[1] ?? "");
+  const indiaGross = parseCr(gross?.[1] ?? "");
+  if (indiaNet == null && indiaGross == null) return null;
+  return {
+    movieId: movie.id,
+    sourceId,
+    reportDate: LIFETIME_DATE,
+    dayNumber: movieDayFallback(movie),
+    indiaNet,
+    indiaGross,
+    overseas: null,
+    worldwide: indiaGross,
+    screens: null,
+    occupancy: null,
+    note: "lifetime live · newsroom headline estimate",
+  };
+}
+
+function parseKoimoiPage(html: string, movie: Movie): Reading[] {
+  const text = stripTags(html);
+  const out: Reading[] = [];
+  const dayRe =
+    /Day\s+(\d+)\s*[:\-]?\s*(?:\([^)]+\)\s*)?(?:₹|Rs\.?)\s*([\d,.]+)\s*Cr/gi;
+  let match: RegExpExecArray | null;
+  const seen = new Set<number>();
+  while ((match = dayRe.exec(text))) {
+    const day = Number(match[1]);
+    const indiaNet = parseCr(match[2]);
+    if (!day || seen.has(day) || indiaNet == null || indiaNet <= 0 || indiaNet > 400) continue;
+    seen.add(day);
+    out.push({
+      movieId: movie.id,
+      sourceId: "koimoi",
+      reportDate: dateForDay(movie.releaseDate, day),
+      dayNumber: day,
+      indiaNet,
+      indiaGross: Math.round(indiaNet * 1.18 * 100) / 100,
+      overseas: null,
+      worldwide: null,
+      screens: null,
+      occupancy: null,
+      note: "live scrape",
+    });
+  }
+
+  const lifeWw = text.match(/worldwide[^.]{0,60}?(?:₹|Rs\.?)\s*([\d,.]+)\s*Cr/i);
+  const lifeNet = text.match(/India\s*(?:Net|Nett)[^.]{0,40}?(?:₹|Rs\.?)\s*([\d,.]+)\s*Cr/i);
+  const worldwide = parseCr(lifeWw?.[1] ?? "");
+  const indiaNet = parseCr(lifeNet?.[1] ?? "");
+  if (indiaNet != null || worldwide != null) {
+    out.push({
+      movieId: movie.id,
+      sourceId: "koimoi",
+      reportDate: LIFETIME_DATE,
+      dayNumber: out.at(-1)?.dayNumber ?? movieDayFallback(movie),
+      indiaNet: indiaNet ?? null,
+      indiaGross: indiaNet != null ? Math.round(indiaNet * 1.18 * 100) / 100 : null,
+      overseas: null,
+      worldwide: worldwide ?? null,
+      screens: null,
+      occupancy: null,
+      note: "lifetime live",
+    });
+  }
+  return out;
+}
+
 function wikiReadings(rows: WikiRow[]): Reading[] {
   const out: Reading[] = [];
   for (const row of rows) {
@@ -621,14 +696,34 @@ export async function ingestLiveSources(): Promise<IngestResult> {
         const items = parsePinkvilla(html);
         if (!items.length) throw new Error("No box-office headlines");
         headlines.push(...items);
+        for (const item of items) {
+          const soft = readingFromHeadline("pinkvilla", item.title, item.url);
+          if (soft) readings.push(soft);
+        }
       },
     },
-    {
-      sourceId: "koimoi",
+    ...KOIMOI_PAGES.map((page) => ({
+      sourceId: "koimoi" as const,
       run: async () => {
-        await fetchText("https://www.koimoi.com/box-office/");
+        const movie = MOVIES.find((m) => m.id === page.movieId);
+        if (!movie) throw new Error(`Unknown movie ${page.movieId}`);
+        const html = await fetchText(
+          `https://www.koimoi.com/box-office/daily-breakdown/${page.slug}/`,
+        );
+        const parsed = parseKoimoiPage(html, movie);
+        if (!parsed.length) throw new Error("No day-wise rows");
+        readings.push(...parsed);
+        const lastDaily = parsed.filter((r) => r.note === "live scrape").at(-1);
+        const life = parsed.find((r) => r.note.startsWith("lifetime"));
+        headlines.push({
+          sourceId: "koimoi",
+          title: `${movie.title}: Koimoi ${parsed.filter((r) => r.note === "live scrape").length} days`,
+          url: `https://www.koimoi.com/box-office/daily-breakdown/${page.slug}/`,
+          publishedAt: new Date().toISOString(),
+          summary: `Live day-wise pull. Last day ${lastDaily?.dayNumber ?? "—"}. India net \u20B9${life?.indiaNet ?? lastDaily?.indiaNet ?? "—"} Cr.`,
+        });
       },
-    },
+    })),
     {
       sourceId: "boi",
       run: async () => {
@@ -636,7 +731,7 @@ export async function ingestLiveSources(): Promise<IngestResult> {
         const links = parseBoiHome(home);
         if (!links.length) throw new Error("No BOI report links");
         let readingsN = 0;
-        await runPool(links.slice(0, 5), 3, async (link) => {
+        await runPool(links.slice(0, 8), 3, async (link) => {
           try {
             const html = await fetchText(link.url);
             const parsed = parseBoiArticle(html, link.title, link.url);

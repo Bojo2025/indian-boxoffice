@@ -26,7 +26,8 @@
     "format": "prettier --write .",
     "pack:source": "node scripts/pack-source.mjs",
     "posters": "node scripts/generate-posters.mjs",
-    "export:desk": "npx vite-node scripts/export-desk-catalog.mts"
+    "export:desk": "npx vite-node scripts/export-desk-catalog.mts",
+    "publish:desk": "npx vite-node scripts/publish-desk-board.mts"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.4",

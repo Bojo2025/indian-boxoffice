@@ -7,7 +7,7 @@
 
   const films = catalog.films.map((f) => ({ ...f }));
   const logs = [];
-  const headlines = [];
+  const headlines = [...(catalog.headlines || [])];
 
   const IST = "Asia/Kolkata";
 
@@ -108,25 +108,6 @@
     }
   }
 
-  async function fetchProxied(targetUrl) {
-    const proxies = [
-      `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`,
-      `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`,
-    ];
-    let lastError = new Error("proxies blocked");
-    for (const url of proxies) {
-      try {
-        const res = await fetchWithTimeout(url, 10000);
-        const text = await res.text();
-        if (text && text.length > 400) return text;
-        lastError = new Error("empty proxy body");
-      } catch (err) {
-        lastError = err instanceof Error ? err : new Error("proxy failed");
-      }
-    }
-    throw lastError;
-  }
-
   async function scrapeWikipedia() {
     const url =
       "https://en.wikipedia.org/w/api.php?action=parse&page=List_of_Indian_films_of_2026&prop=wikitext&format=json&formatversion=2&origin=*";
@@ -145,78 +126,41 @@
       const amount = (chunk.match(/INR\|([^}]+)/) ?? [])[1]?.trim() ?? "";
       const ww = wikiAmountToCr(amount);
       const showing = /#b6fcb6|currently showing/i.test(chunk);
-      if (ww != null) {
+      if (ww != null && ww > (movie.worldwide || 0)) {
         movie.worldwide = ww;
         movie.liveWiki = true;
         matched += 1;
       }
       if (showing && movie.status === "closed") movie.status = "playing";
     }
-    logs.push(`wikipedia: ${matched} titles updated from the 2026 ranking`);
-    headlines.unshift({
-      sourceId: "wikipedia",
-      title: "List of Indian films of 2026 — worldwide ranking",
-      url: "https://en.wikipedia.org/wiki/List_of_Indian_films_of_2026",
-      summary: `${matched} catalogue titles matched to the live Wikipedia table.`,
-    });
+    logs.push(`wikipedia overlay: ${matched} titles`);
   }
 
-  async function scrapeRss(sourceId, rssUrl) {
-    const xml = await fetchProxied(rssUrl);
-    const items = xml.match(/<item\b[\s\S]*?<\/item>/gi) ?? [];
-    let n = 0;
-    for (const item of items.slice(0, 8)) {
-      const title = decodeXml((item.match(/<title>([\s\S]*?)<\/title>/i) ?? [])[1] ?? "");
-      const linkRaw = decodeXml((item.match(/<link>([\s\S]*?)<\/link>/i) ?? [])[1] ?? "");
-      const url = stripTags(linkRaw);
-      const desc = stripTags(
-        decodeXml((item.match(/<description>([\s\S]*?)<\/description>/i) ?? [])[1] ?? ""),
-      ).slice(0, 280);
-      if (!title || !url.startsWith("http")) continue;
-      if (!/box office|collection|film|movie|cinema|toxic|dhurandhar/i.test(`${title} ${desc}`)) {
-        continue;
-      }
-      headlines.push({ sourceId, title, url, summary: desc });
-      n += 1;
+  function boardStamp() {
+    if (!catalog.generatedAt) return "";
+    try {
+      return new Date(catalog.generatedAt).toLocaleString("en-GB", {
+        timeZone: IST,
+        day: "numeric",
+        month: "short",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    } catch {
+      return catalog.generatedAt;
     }
-    logs.push(`${sourceId}: ${n} headlines`);
   }
 
-  async function scrapeHungama() {
-    const target = "https://www.bollywoodhungama.com/box-office-collections/worldwide/2026/";
-    const html = await fetchProxied(target);
-    const rows = html.match(/<tr[\s\S]*?<\/tr>/gi) ?? [];
-    let matched = 0;
-    for (const row of rows) {
-      const cells = [...row.matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi)].map((m) => stripTags(m[1]));
-      if (cells.length < 3) continue;
-      const movie = matchMovie(cells[1] || cells[0]);
-      if (!movie) continue;
-      const ww = parseCr(cells[cells.length - 1]);
-      if (ww != null && ww > 1) {
-        movie.hungamaWw = ww;
-        movie.worldwide = ww;
-        matched += 1;
-      }
-    }
-    if (!matched) throw new Error("Hungama table empty or blocked");
-    logs.push(`hungama: ${matched} titles from the 2026 worldwide table`);
-  }
-
-  function stripTags(s) {
-    return s.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-  }
-
-  function decodeXml(s) {
-    return s
-      .replace(/<!\[CDATA\[/g, "")
-      .replace(/\]\]>/g, "")
-      .replace(/&amp;/g, "&")
-      .replace(/&lt;/g, "<")
-      .replace(/&gt;/g, ">")
-      .replace(/&quot;/g, '"')
-      .replace(/&#039;/g, "'")
-      .trim();
+  function ingestSummary() {
+    const rows = catalog.logs || [];
+    if (!rows.length) return "Seed catalogue only.";
+    const ok = rows.filter((l) => l.status === "ok").map((l) => l.sourceId);
+    const blocked = rows.filter((l) => l.status !== "ok").map((l) => l.sourceId);
+    const unique = (xs) => [...new Set(xs)];
+    const parts = [];
+    if (ok.length) parts.push(`trade ok: ${unique(ok).join(", ")}`);
+    if (blocked.length) parts.push(`missed: ${unique(blocked).join(", ")}`);
+    return parts.join(" · ") || "Publish finished.";
   }
 
   function render() {
@@ -232,7 +176,7 @@
       stat("Tracked worldwide", formatCrCompact(ytdWw)),
       stat("India net on file", formatCrCompact(ytdNet)),
       stat("Now playing", String(playing.length)),
-      stat("Sources", String(catalog.sources.length)),
+      stat("Board published", boardStamp() || "—"),
     ].join("");
 
     document.getElementById("now-grid").innerHTML = playing.map(card).join("") || empty("No live titles.");
@@ -241,7 +185,7 @@
       .map(
         (m, i) => `<tr class="${m.status === "playing" ? "live" : ""}">
         <td class="rank">${i + 1}</td>
-        <td>${esc(m.title)}${m.status === "playing" ? '<span class="pill">Playing</span>' : ""}${m.liveWiki ? '<span class="pill">Wiki</span>' : ""}</td>
+        <td>${esc(m.title)}${m.status === "playing" ? '<span class="pill">Playing</span>' : ""}${m.liveWiki ? '<span class="pill">Wiki</span>' : ""}${m.liveSources?.length ? `<span class="pill">${esc(m.liveSources.length)} src</span>` : ""}</td>
         <td>${esc(m.language)}</td>
         <td class="num">${esc(formatCr(m.indiaNet))}</td>
         <td class="num strong">${esc(formatCr(m.worldwide))}</td>
@@ -251,23 +195,24 @@
 
     document.getElementById("wires-list").innerHTML =
       headlines
-        .slice(0, 10)
+        .slice(0, 12)
         .map(
           (h) => `<li>
         <a href="${esc(h.url)}" target="_blank" rel="noopener noreferrer">${esc(h.title)}</a>
         <p>${esc(h.summary || h.sourceId)}</p>
       </li>`,
         )
-        .join("") || `<li><p>No wires yet — pull live collections.</p></li>`;
+        .join("") || `<li><p>No wires on this board yet.</p></li>`;
 
     document.getElementById("source-grid").innerHTML = catalog.sources
-      .map(
-        (s) => `<article class="source">
+      .map((s) => {
+        const spine = (catalog.spine || []).includes(s.id);
+        return `<article class="source">
         <h3>${s.homepage ? `<a href="${esc(s.homepage)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>` : esc(s.name)}</h3>
-        <p class="meta">${esc(s.kind)} · weight ${esc(s.weight)}</p>
+        <p class="meta">${esc(s.kind)} · weight ${esc(s.weight)}${spine ? " · spine" : ""}</p>
         <p>${esc(s.notes)}</p>
-      </article>`,
-      )
+      </article>`;
+      })
       .join("");
   }
 
@@ -277,8 +222,9 @@
 
   function card(m) {
     const day = dayNumber(m.releaseDate);
+    const src = m.liveSources?.length ? ` · ${m.liveSources.join("+")}` : "";
     return `<article class="card">
-      <p class="kicker">${esc(m.language)} · Day ${day}${m.status === "late" ? " · Late run" : ""}</p>
+      <p class="kicker">${esc(m.language)} · Day ${day}${m.status === "late" ? " · Late run" : ""}${esc(src)}</p>
       <h3>${esc(m.title)}</h3>
       <p class="meta">${esc(m.director)} · ${esc(m.starring)}</p>
       <p class="synopsis">${esc(m.synopsis)}</p>
@@ -301,37 +247,28 @@
       .replace(/"/g, "&quot;");
   }
 
-  async function pull() {
+  async function overlayWiki() {
     const btn = document.getElementById("pull");
     const status = document.getElementById("status");
     btn.disabled = true;
-    status.textContent = "Scraping Wikipedia, Hungama and the wires…";
+    status.textContent = "Checking Wikipedia overlay…";
     logs.length = 0;
-    headlines.length = 0;
-    const jobs = [
-      ["wikipedia", scrapeWikipedia],
-      ["hungama", scrapeHungama],
-      ["etimes", () => scrapeRss("etimes", "https://timesofindia.indiatimes.com/rssfeeds/1081479906.cms")],
-      ["express", () => scrapeRss("express", "https://www.thehindu.com/entertainment/movies/feeder/default.rss")],
-    ];
-    const results = await Promise.allSettled(jobs.map(([, fn]) => fn()));
-    results.forEach((result, i) => {
-      if (result.status === "rejected") {
-        const id = jobs[i][0];
-        const err = result.reason;
-        logs.push(`${id}: blocked — ${err instanceof Error ? err.message : "failed"}`);
-      }
-    });
+    try {
+      await scrapeWikipedia();
+    } catch (err) {
+      logs.push(`wikipedia: blocked — ${err instanceof Error ? err.message : "failed"}`);
+    }
     render();
-    const wikiOk = results[0].status === "fulfilled";
-    const hungamaOk = results[1].status === "fulfilled";
-    status.textContent = logs.join(" · ") || "Pull finished.";
+    status.textContent = [ingestSummary(), ...logs].filter(Boolean).join(" · ");
     document.getElementById("live-badge").textContent =
-      wikiOk || hungamaOk ? "Live scrape" : "Catalogue";
+      catalog.mode === "server-consensus" ? "Server consensus" : "Catalogue";
     btn.disabled = false;
   }
 
-  document.getElementById("pull").addEventListener("click", pull);
+  document.getElementById("pull").addEventListener("click", overlayWiki);
+  document.getElementById("live-badge").textContent =
+    catalog.mode === "server-consensus" ? "Server consensus" : "Catalogue";
+  document.getElementById("status").textContent = ingestSummary();
   render();
-  pull();
+  overlayWiki();
 })();

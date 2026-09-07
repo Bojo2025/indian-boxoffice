@@ -1,4 +1,4 @@
-window.IBO_CATALOG = {
+{
   "generatedAt": "2026-09-07T20:04:08.376Z",
   "mode": "server-consensus",
   "spine": [
@@ -800,4 +800,4 @@ window.IBO_CATALOG = {
       "summary": "Live day-wise pull. Last day 53. WW ₹229.93 Cr."
     }
   ]
-};
+}

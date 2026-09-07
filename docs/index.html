@@ -28,16 +28,16 @@
     </nav>
   </header>
   <main id="top">
-    <p class="kicker"><span class="badge" id="live-badge">Live scrape</span><span id="desk-date"></span></p>
-    <h1>Live collections, scraped from the trackers.</h1>
+    <p class="kicker"><span class="badge" id="live-badge">Server consensus</span><span id="desk-date"></span></p>
+    <h1>Consensus board from the trade spine.</h1>
     <p class="lede">
-      Wikipedia’s 2026 ranking, entertainment RSS, and the desk catalogue are pulled in the browser
-      when you open this page. Sacnilk and Hungama HTML is attempted; if they block the request the
-      last catalogue figure stays on the card and the miss is logged.
+      Sacnilk, Koimoi, Bollywood Hungama and Box Office India are pulled server-side into a weighted
+      median board, then published here. Wikipedia can overlay worldwide figures in the browser;
+      when a tracker blocks, the last seed or prior pull stays on the card.
     </p>
     <div class="toolbar">
-      <button class="pull" id="pull" type="button">Pull live collections</button>
-      <p class="status" id="status">Opening the trackers…</p>
+      <button class="pull" id="pull" type="button">Refresh Wikipedia overlay</button>
+      <p class="status" id="status">Loading published board…</p>
     </div>
     <dl class="stats" id="stats"></dl>
     <section id="now">
@@ -87,7 +87,7 @@
       Figures in ₹ crore. India nett / worldwide gross.
     </div>
   </footer>
-  <script src="./catalog.js?v=20260907b"></script>
-  <script src="./app.js?v=20260907b"></script>
+  <script src="./catalog.js?v=20260908a"></script>
+  <script src="./app.js?v=20260908a"></script>
 </body>
 </html>

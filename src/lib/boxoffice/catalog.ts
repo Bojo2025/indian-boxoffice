@@ -500,6 +500,22 @@ export const HUNGAMA_PAGES: { movieId: string; slug: string }[] = [
   { movieId: "alpha", slug: "alpha" },
   { movieId: "bhooth-bangla", slug: "bhooth-bangla" },
   { movieId: "peddi", slug: "peddi" },
+  { movieId: "hanuman-ansh", slug: "hanuman-ansh" },
+  { movieId: "spider-man-bnd", slug: "spider-man-brand-new-day" },
+  { movieId: "the-odyssey", slug: "the-odyssey" },
+  { movieId: "insidious-further", slug: "insidious-out-of-the-further" },
+];
+
+/** Koimoi day-wise pages. Often Cloudflare-blocked; publisher keeps seed rows when live pull fails. */
+export const KOIMOI_PAGES: { movieId: string; slug: string }[] = [
+  { movieId: "toxic", slug: "toxic-day-wise-box-office-collection" },
+  { movieId: "awarapan-2", slug: "awarapan-2-day-wise-box-office-collection" },
+  { movieId: "dhamaal-4", slug: "dhamaal-4-day-wise-box-office-collection" },
+  { movieId: "border-2", slug: "border-2-day-wise-box-office-collection" },
+  { movieId: "dhurandhar", slug: "dhurandhar-the-revenge-day-wise-box-office-collection" },
+  { movieId: "spider-man-bnd", slug: "spider-man-brand-new-day-day-wise-box-office-collection" },
+  { movieId: "batwara-1947", slug: "batwara-1947-day-wise-box-office-collection" },
+  { movieId: "hanuman-ansh", slug: "hanuman-ansh-day-wise-box-office-collection" },
 ];
 
 
