@@ -1,4 +1,5 @@
 window.IBO_CATALOG = {
+  "generatedAt": "2026-09-07T19:11:36.058Z",
   "sources": [
     {
       "id": "sacnilk",
@@ -87,10 +88,10 @@ window.IBO_CATALOG = {
       "synopsis": "A pan-India drama set in post-independence Goa. Dual-role Yash vehicle that opened like a mass film and is holding like a divided one.",
       "status": "playing",
       "verdict": "Pending",
-      "indiaNet": 190,
-      "indiaGross": 224,
-      "overseas": 30.75,
-      "worldwide": 254.75,
+      "indiaNet": 215.7,
+      "indiaGross": 254.53,
+      "overseas": 34.3,
+      "worldwide": 288.83,
       "lastDayNet": 5.9
     },
     {
@@ -106,10 +107,10 @@ window.IBO_CATALOG = {
       "synopsis": "Vishesh Films sequel. Quiet Independence-weekend build, then a genuine word-of-mouth climb into the 100-crore club.",
       "status": "playing",
       "verdict": "Hit",
-      "indiaNet": 144.8,
-      "indiaGross": 170.9,
-      "overseas": 28.64,
-      "worldwide": 199.54,
+      "indiaNet": 153.67,
+      "indiaGross": 181.34,
+      "overseas": 28.92,
+      "worldwide": 210.26,
       "lastDayNet": 0.9
     },
     {
@@ -125,10 +126,10 @@ window.IBO_CATALOG = {
       "synopsis": "Suriya family drama with a slow theatrical burn. Producer gross and Sacnilk remain tens of crores apart — the year's clearest reporting gap.",
       "status": "playing",
       "verdict": "Hit",
-      "indiaNet": 66,
-      "indiaGross": 78,
-      "overseas": 43,
-      "worldwide": 121.27,
+      "indiaNet": 105.41,
+      "indiaGross": 124.39,
+      "overseas": 44.25,
+      "worldwide": 168.64,
       "lastDayNet": 1.05
     },
     {
@@ -163,10 +164,10 @@ window.IBO_CATALOG = {
       "synopsis": "Partition drama that found a North circuit but not a national breakout.",
       "status": "playing",
       "verdict": "Average",
-      "indiaNet": 0,
-      "indiaGross": 0,
-      "overseas": 0,
-      "worldwide": 0,
+      "indiaNet": 39.58,
+      "indiaGross": 46.7,
+      "overseas": 4.74,
+      "worldwide": 51.44,
       "lastDayNet": 0.12
     },
     {
@@ -182,10 +183,10 @@ window.IBO_CATALOG = {
       "synopsis": "Small-to-mid Tamil release climbing on Sunday occupancy rather than a Friday blast.",
       "status": "playing",
       "verdict": "Pending",
-      "indiaNet": 0,
-      "indiaGross": 0,
-      "overseas": 0,
-      "worldwide": 0,
+      "indiaNet": 5.95,
+      "indiaGross": 7.03,
+      "overseas": 0.72,
+      "worldwide": 7.75,
       "lastDayNet": 0.72
     },
     {
@@ -201,10 +202,10 @@ window.IBO_CATALOG = {
       "synopsis": "Horror holdover with a serviceable multiplex opening and a fast weekday fade.",
       "status": "playing",
       "verdict": "Pending",
-      "indiaNet": 0,
-      "indiaGross": 0,
-      "overseas": 0,
-      "worldwide": 0,
+      "indiaNet": 16.62,
+      "indiaGross": 19.61,
+      "overseas": 2,
+      "worldwide": 21.61,
       "lastDayNet": 0.18
     },
     {
@@ -220,10 +221,10 @@ window.IBO_CATALOG = {
       "synopsis": "Kids' matinee title. Modest India gross, weekend-weighted.",
       "status": "playing",
       "verdict": "Pending",
-      "indiaNet": 0,
-      "indiaGross": 0,
-      "overseas": 0,
-      "worldwide": 0,
+      "indiaNet": 3.44,
+      "indiaGross": 4.06,
+      "overseas": 0.42,
+      "worldwide": 4.48,
       "lastDayNet": 0.08
     },
     {
@@ -239,10 +240,10 @@ window.IBO_CATALOG = {
       "synopsis": "Devotional animation with a long thin tail rather than an opening.",
       "status": "late",
       "verdict": "Flop",
-      "indiaNet": 0,
-      "indiaGross": 0,
-      "overseas": 0,
-      "worldwide": 0,
+      "indiaNet": 29.3,
+      "indiaGross": 34.57,
+      "overseas": 3.52,
+      "worldwide": 38.09,
       "lastDayNet": 1.2
     },
     {
@@ -260,7 +261,7 @@ window.IBO_CATALOG = {
       "verdict": "All Time Blockbuster",
       "indiaNet": 494,
       "indiaGross": 590.27,
-      "overseas": 0,
+      "overseas": 39.35,
       "worldwide": 590.27,
       "lastDayNet": 0.72
     },
@@ -296,10 +297,10 @@ window.IBO_CATALOG = {
       "synopsis": "Prestige Hollywood hold. India is a premium-screen story, not a mass one.",
       "status": "late",
       "verdict": "Pending",
-      "indiaNet": 0,
-      "indiaGross": 0,
-      "overseas": 0,
-      "worldwide": 0,
+      "indiaNet": 117.7,
+      "indiaGross": 138.88,
+      "overseas": 14.13,
+      "worldwide": 153.01,
       "lastDayNet": 0.55
     },
     {

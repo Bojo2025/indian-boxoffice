@@ -108,6 +108,25 @@
     }
   }
 
+  async function fetchProxied(targetUrl) {
+    const proxies = [
+      `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`,
+      `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`,
+    ];
+    let lastError = new Error("proxies blocked");
+    for (const url of proxies) {
+      try {
+        const res = await fetchWithTimeout(url, 10000);
+        const text = await res.text();
+        if (text && text.length > 400) return text;
+        lastError = new Error("empty proxy body");
+      } catch (err) {
+        lastError = err instanceof Error ? err : new Error("proxy failed");
+      }
+    }
+    throw lastError;
+  }
+
   async function scrapeWikipedia() {
     const url =
       "https://en.wikipedia.org/w/api.php?action=parse&page=List_of_Indian_films_of_2026&prop=wikitext&format=json&formatversion=2&origin=*";
@@ -143,9 +162,7 @@
   }
 
   async function scrapeRss(sourceId, rssUrl) {
-    const proxy = `https://api.allorigins.win/raw?url=${encodeURIComponent(rssUrl)}`;
-    const res = await fetchWithTimeout(proxy);
-    const xml = await res.text();
+    const xml = await fetchProxied(rssUrl);
     const items = xml.match(/<item\b[\s\S]*?<\/item>/gi) ?? [];
     let n = 0;
     for (const item of items.slice(0, 8)) {
@@ -167,8 +184,7 @@
 
   async function scrapeHungama() {
     const target = "https://www.bollywoodhungama.com/box-office-collections/worldwide/2026/";
-    const res = await fetchWithTimeout(`https://api.allorigins.win/raw?url=${encodeURIComponent(target)}`);
-    const html = await res.text();
+    const html = await fetchProxied(target);
     const rows = html.match(/<tr[\s\S]*?<\/tr>/gi) ?? [];
     let matched = 0;
     for (const row of rows) {
@@ -307,8 +323,11 @@
       }
     });
     render();
+    const wikiOk = results[0].status === "fulfilled";
+    const hungamaOk = results[1].status === "fulfilled";
     status.textContent = logs.join(" · ") || "Pull finished.";
-    document.getElementById("live-badge").textContent = "Live scrape";
+    document.getElementById("live-badge").textContent =
+      wikiOk || hungamaOk ? "Live scrape" : "Catalogue";
     btn.disabled = false;
   }
 

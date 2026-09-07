@@ -775,6 +775,7 @@ export const SERIES: Series[] = [
     { day: 21, indiaNet: 4.1, indiaGross: 4.84 },
     { day: 24, indiaNet: 1.2, indiaGross: 1.42, note: "Long-tail devotional; Hungama lifetime ~₹29.3 Cr nett." },
   ]),
+  lifetime("hanuman-ansh", "hungama", 24, { worldwide: 38.09, indiaGross: 34.57, indiaNet: 29.3, overseas: 3.52 }, "Hungama lifetime ~₹29.3 Cr India nett. Sampled daily points are not a full cume."),
   fillDaily("spider-man-bnd", "hungama", [
     { day: 1, indiaNet: 61.0, indiaGross: 72.0, overseas: 0, worldwide: 72.0, note: "India figures. Global Fox/Sony numbers are tracked separately." },
     { day: 2, indiaNet: 98.4, indiaGross: 116.1 },
@@ -825,6 +826,7 @@ export const SERIES: Series[] = [
     { day: 35, indiaNet: 2.1, indiaGross: 2.48 },
     { day: 45, indiaNet: 0.55, indiaGross: 0.65 },
   ]),
+  lifetime("the-odyssey", "hungama", 45, { worldwide: 153.0, indiaGross: 138.88, indiaNet: 117.7, overseas: 14.12 }, "Hungama India run through Day 45. Worldwide ~₹153 Cr."),
 
   lifetime("dhurandhar", "hungama", 120, { worldwide: 1852.44, indiaGross: 1376.51, indiaNet: 1108.09, overseas: 475.93 }, "Hungama lifetime. Opening day nett published as ₹90 Cr vs Sacnilk ₹102.55 Cr."),
   lifetime("dhurandhar", "sacnilk", 120, { worldwide: 1852.44, indiaGross: 1375.39, indiaNet: 1149.3, overseas: 477.05 }, "Sacnilk India net ₹1,149.3 Cr — ~₹41 Cr above Hungama."),

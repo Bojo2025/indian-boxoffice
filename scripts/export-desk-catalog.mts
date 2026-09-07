@@ -23,19 +23,34 @@ function weightedMedian(pairs: { value: number; weight: number }[]): number {
 
 const weights = Object.fromEntries(SOURCES.map((s) => [s.id, s.weight]));
 
+type MoneyField = "indiaNet" | "indiaGross" | "overseas" | "worldwide";
+
+function fromLifetime(life: typeof SERIES, field: MoneyField): number {
+  return weightedMedian(
+    life
+      .map((s) => {
+        const pt = s.points[s.points.length - 1];
+        return { value: pt?.[field] ?? NaN, weight: weights[s.sourceId] ?? 0.5 };
+      })
+      .filter((p) => Number.isFinite(p.value)),
+  );
+}
+
+function fromDaily(daily: typeof SERIES, field: MoneyField): number {
+  if (daily.length === 0) return 0;
+  const bySource = new Map<string, number>();
+  for (const s of daily) {
+    const total = s.points.reduce((a, p) => a + (p[field] ?? 0), 0);
+    bySource.set(s.sourceId, Math.max(bySource.get(s.sourceId) ?? 0, total));
+  }
+  return Math.max(0, ...bySource.values());
+}
+
 const films = MOVIES.map((m) => {
   const series = SERIES.filter((s) => s.movieId === m.id);
   const life = series.filter((s) => s.mode === "lifetime");
   const daily = series.filter((s) => s.mode === "daily");
-  const pick = (field: "indiaNet" | "indiaGross" | "overseas" | "worldwide") =>
-    weightedMedian(
-      life
-        .map((s) => {
-          const pt = s.points[s.points.length - 1];
-          return { value: pt?.[field] ?? NaN, weight: weights[s.sourceId] ?? 0.5 };
-        })
-        .filter((p) => Number.isFinite(p.value)),
-    );
+  const pick = (field: MoneyField) => round2(Math.max(fromLifetime(life, field), fromDaily(daily, field)));
   const lastDaily = daily
     .flatMap((s) => s.points)
     .sort((a, b) => a.day - b.day)
@@ -53,15 +68,16 @@ const films = MOVIES.map((m) => {
     synopsis: m.synopsis,
     status: m.status,
     verdict: m.verdict,
-    indiaNet: round2(pick("indiaNet")),
-    indiaGross: round2(pick("indiaGross")),
-    overseas: round2(pick("overseas")),
-    worldwide: round2(pick("worldwide")),
+    indiaNet: pick("indiaNet"),
+    indiaGross: pick("indiaGross"),
+    overseas: pick("overseas"),
+    worldwide: pick("worldwide"),
     lastDayNet: lastDaily?.indiaNet ?? null,
   };
 });
 
 const pack = {
+  generatedAt: new Date().toISOString(),
   sources: SOURCES,
   films,
 };
