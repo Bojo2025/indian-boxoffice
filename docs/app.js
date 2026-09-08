@@ -56,6 +56,17 @@
     return `₹${abs.toLocaleString("en-IN", { maximumFractionDigits: 1, minimumFractionDigits: 1 })} Cr`;
   }
 
+  function formatDelta(value) {
+    if (value == null || Number.isNaN(value) || Math.abs(value) < 0.05) return null;
+    const sign = value > 0 ? "+" : "−";
+    const abs = Math.abs(value);
+    const formatted = abs.toLocaleString("en-IN", {
+      minimumFractionDigits: abs >= 10 ? 1 : 2,
+      maximumFractionDigits: abs >= 10 ? 1 : 2,
+    });
+    return `${sign}₹${formatted} Cr`;
+  }
+
   function parseCr(raw) {
     if (!raw) return null;
     const cleaned = String(raw).replace(/,/g, "").replace(/[^\d.]/g, "");
@@ -136,7 +147,22 @@
     logs.push(`wikipedia overlay: ${matched} titles`);
   }
 
-  function boardStamp() {
+  function boardStampLocal() {
+    if (!catalog.generatedAt) return "";
+    try {
+      return new Date(catalog.generatedAt).toLocaleString(undefined, {
+        weekday: "short",
+        day: "numeric",
+        month: "short",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    } catch {
+      return catalog.generatedAt;
+    }
+  }
+
+  function boardStampIst() {
     if (!catalog.generatedAt) return "";
     try {
       return new Date(catalog.generatedAt).toLocaleString("en-GB", {
@@ -163,9 +189,50 @@
     return parts.join(" · ") || "Publish finished.";
   }
 
+  function renderUpdated() {
+    const local = boardStampLocal();
+    const ist = boardStampIst();
+    const compared = catalog.comparedTo ? ` · vs ${catalog.comparedTo}` : "";
+    document.getElementById("updated-line").textContent = local
+      ? `Last updated ${local} (your time) · ${ist} IST${compared}`
+      : "Board timestamp unavailable";
+  }
+
+  function renderHealth() {
+    const el = document.getElementById("health-alert");
+    const alerts = catalog.health?.alerts || [];
+    if (!alerts.length) {
+      el.hidden = true;
+      el.textContent = "";
+      return;
+    }
+    el.hidden = false;
+    el.textContent = alerts.slice(0, 3).join(" · ");
+    el.className = catalog.health?.hardFail ? "alert alert-hard" : "alert";
+  }
+
+  function renderChanges() {
+    const list = document.getElementById("changes-list");
+    const changes = catalog.changes || [];
+    if (!changes.length) {
+      list.innerHTML = `<li><p class="meta">No material moves vs ${esc(catalog.comparedTo || "the previous board")} yet — check after the next publish.</p></li>`;
+      return;
+    }
+    list.innerHTML = changes
+      .map((c) => {
+        const cls = (c.deltaWw ?? 0) >= 0 ? "gain" : "loss";
+        return `<li><span class="${cls}">${esc(c.text)}</span></li>`;
+      })
+      .join("");
+  }
+
   function render() {
     const today = deskDate();
     document.getElementById("desk-date").textContent = `${deskLong(today)} · IST`;
+    renderUpdated();
+    renderHealth();
+    renderChanges();
+
     const playing = films.filter((m) => m.status === "playing");
     const late = films.filter((m) => m.status === "late");
     const ranked = [...films].sort((a, b) => b.worldwide - a.worldwide);
@@ -176,7 +243,7 @@
       stat("Tracked worldwide", formatCrCompact(ytdWw)),
       stat("India net on file", formatCrCompact(ytdNet)),
       stat("Now playing", String(playing.length)),
-      stat("Board published", boardStamp() || "—"),
+      stat("Spine alerts", String((catalog.health?.alerts || []).length)),
     ].join("");
 
     document.getElementById("now-grid").innerHTML = playing.map(card).join("") || empty("No live titles.");
@@ -187,8 +254,8 @@
         <td class="rank">${i + 1}</td>
         <td>${esc(m.title)}${m.status === "playing" ? '<span class="pill">Playing</span>' : ""}${m.liveWiki ? '<span class="pill">Wiki</span>' : ""}${m.liveSources?.length ? `<span class="pill">${esc(m.liveSources.length)} src</span>` : ""}</td>
         <td>${esc(m.language)}</td>
-        <td class="num">${esc(formatCr(m.indiaNet))}</td>
-        <td class="num strong">${esc(formatCr(m.worldwide))}</td>
+        <td class="num">${esc(formatCr(m.indiaNet))}${deltaHtml(m.deltaNet)}</td>
+        <td class="num strong">${esc(formatCr(m.worldwide))}${deltaHtml(m.deltaWw)}</td>
       </tr>`,
       )
       .join("");
@@ -207,13 +274,26 @@
     document.getElementById("source-grid").innerHTML = catalog.sources
       .map((s) => {
         const spine = (catalog.spine || []).includes(s.id);
+        const health = catalog.health?.spine?.[s.id];
+        const healthNote = health
+          ? health.ok
+            ? " · live ok"
+            : ` · failing ×${health.streakFail || 1}`
+          : "";
         return `<article class="source">
         <h3>${s.homepage ? `<a href="${esc(s.homepage)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>` : esc(s.name)}</h3>
-        <p class="meta">${esc(s.kind)} · weight ${esc(s.weight)}${spine ? " · spine" : ""}</p>
+        <p class="meta">${esc(s.kind)} · weight ${esc(s.weight)}${spine ? " · spine" : ""}${esc(healthNote)}</p>
         <p>${esc(s.notes)}</p>
       </article>`;
       })
       .join("");
+  }
+
+  function deltaHtml(value) {
+    const text = formatDelta(value);
+    if (!text) return "";
+    const cls = value >= 0 ? "gain" : "loss";
+    return `<div class="delta ${cls}">${esc(text)}</div>`;
   }
 
   function stat(label, value) {
@@ -229,8 +309,8 @@
       <p class="meta">${esc(m.director)} · ${esc(m.starring)}</p>
       <p class="synopsis">${esc(m.synopsis)}</p>
       <dl>
-        <div><dt>India net</dt><dd>${esc(formatCr(m.indiaNet))}</dd></div>
-        <div><dt>Worldwide</dt><dd>${esc(formatCr(m.worldwide))}</dd></div>
+        <div><dt>India net</dt><dd>${esc(formatCr(m.indiaNet))}${deltaHtml(m.deltaNet)}</dd></div>
+        <div><dt>Worldwide</dt><dd>${esc(formatCr(m.worldwide))}${deltaHtml(m.deltaWw)}</dd></div>
       </dl>
     </article>`;
   }

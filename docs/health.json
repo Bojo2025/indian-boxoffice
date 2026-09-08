@@ -1,0 +1,42 @@
+{
+  "updatedAt": "2026-09-08T07:16:14.383Z",
+  "spine": {
+    "sacnilk": {
+      "ok": true,
+      "streakFail": 0,
+      "lastOk": "2026-09-08T07:16:14.383Z",
+      "lastFail": null,
+      "detail": "694 collection rows from 16 live pulls",
+      "readings": 694
+    },
+    "koimoi": {
+      "ok": false,
+      "streakFail": 2,
+      "lastOk": null,
+      "lastFail": "2026-09-08T07:16:14.383Z",
+      "detail": "HTTP 403",
+      "readings": 0
+    },
+    "hungama": {
+      "ok": true,
+      "streakFail": 0,
+      "lastOk": "2026-09-08T07:16:14.383Z",
+      "lastFail": null,
+      "detail": "46 collection rows from 16 live pulls",
+      "readings": 46
+    },
+    "boi": {
+      "ok": true,
+      "streakFail": 0,
+      "lastOk": "2026-09-08T07:16:14.383Z",
+      "lastFail": null,
+      "detail": "Fetched 1 page (headlines / status)",
+      "readings": 0
+    }
+  },
+  "alerts": [
+    "koimoi failed: HTTP 403 (streak 2)",
+    "koimoi has failed 2 consecutive publishes"
+  ],
+  "hardFail": false
+}

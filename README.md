@@ -6,9 +6,9 @@ This repository **is** the complete website.
 
 **Live desk (GitHub Pages):** [https://bojo2025.github.io/indian-boxoffice/](https://bojo2025.github.io/indian-boxoffice/)
 
-That URL serves `docs/index.html`. The page scrapes Wikipedia, Hungama (via a CORS proxy) and entertainment RSS in the browser, then formats the board. Trade sites that block the request keep the catalogue figure.
+That URL serves `docs/index.html`. The board is a **server-published** consensus file (`docs/catalog.js` / `docs/board.json`) built by `npm run publish:desk` from Sacnilk, Hungama, Koimoi and Box Office India. The page can still overlay Wikipedia worldwide figures in the browser. Day-over-day deltas come from `docs/history/`.
 
-The Node app below is the same desk with a server-side scrape (`npm run dev`).
+The Node app below is the same desk with a live server-side scrape (`npm run dev`).
 
 ## Requirements
 
@@ -27,6 +27,13 @@ npm run dev
 Open [http://localhost:8080](http://localhost:8080).
 
 That is the whole app: Pulse, Now playing, 2026 rankings, Catalogue, film files, Daily report, Desk, Wires, Sources, Download.
+
+### Static Pages desk only
+
+```bash
+npm run publish:desk   # scrape trade spine → docs/catalog.js + board.json + health.json
+npx serve docs
+```
 
 ### Desk analyst (optional)
 
@@ -54,14 +61,20 @@ DATABASE_URL=postgresql://user:pass@host/dbname?sslmode=require
 
 Then `npm run db:migrate` against that database. Serverless hosts should not rely on in-memory PGLite.
 
-## Deploy (Vercel)
+## Deploy
+
+### GitHub Pages (static desk)
+
+Pages serves `/docs` from `main`. The board refreshes via `.github/workflows/publish-desk.yml` (every 3 hours + manual `workflow_dispatch`). That workflow needs a token with the `workflow` and `contents` scopes (and `issues` to open spine-failure alerts).
+
+### Vercel (full app)
 
 1. Push this repository to GitHub.
 2. Import the repo in [Vercel](https://vercel.com/new). Framework: Vite. Build command: `npm run build`.
 3. Set `DATABASE_URL` (Neon) and optionally `XAI_API_KEY` and `VITE_GITHUB_REPO`.
 4. Deploy.
 
-A GitHub Actions workflow (`.github/workflows/ci.yml`) runs `npm ci` and `npm run typecheck` on push.
+CI (`.github/workflows/ci.yml`) runs `npm ci` and `npm run typecheck` on push/PR when workflow permissions allow.
 
 ## What’s in the product
 

@@ -216,12 +216,19 @@ function movieDayFallback(movie: Movie): number {
   );
 }
 
-function clampHollywoodWorldwide(movie: Movie, worldwide: number | null, indiaGross: number | null): number | null {
-  if (worldwide == null) return null;
+function clampHollywoodWorldwide(
+  movie: Movie,
+  worldwide: number | null,
+  indiaGross: number | null,
+): { value: number | null; note: string | null } {
+  if (worldwide == null) return { value: null, note: null };
   if (movie.industry === "Hollywood" && indiaGross != null && worldwide > indiaGross * 2.5) {
-    return indiaGross;
+    return {
+      value: indiaGross,
+      note: `Sacnilk reported WW \u20B9${worldwide} Cr; India desk keeps India gross \u20B9${indiaGross} Cr (global WW exceeds 2.5\u00d7 India gross)`,
+    };
   }
-  return worldwide;
+  return { value: worldwide, note: null };
 }
 
 function parseSacnilkPage(
@@ -263,7 +270,8 @@ function parseSacnilkPage(
     const indiaGross = parseCr(life[2]);
     const overseasRaw = parseCr(life[3]);
     const indiaNet = parseCr(life[4]);
-    const worldwide = clampHollywoodWorldwide(movie, worldwideRaw, indiaGross);
+    const clamped = clampHollywoodWorldwide(movie, worldwideRaw, indiaGross);
+    const worldwide = clamped.value;
     const overseas =
       movie.industry === "Hollywood" && overseasRaw != null && indiaGross != null && overseasRaw > indiaGross * 2.5
         ? null
@@ -282,10 +290,9 @@ function parseSacnilkPage(
       worldwide,
       screens: null,
       occupancy: null,
-      note:
-        worldwideRaw != null && worldwide !== worldwideRaw
-          ? `lifetime live · Sacnilk global WW \u20B9${worldwideRaw} Cr (India desk stores India gross)`
-          : "lifetime live",
+      note: clamped.note
+        ? `lifetime live · ${clamped.note}`
+        : "lifetime live",
     });
   }
 
@@ -386,12 +393,12 @@ function parseHungamaMoviePage(html: string, movie: Movie): Reading[] {
       reportDate,
       dayNumber: day,
       indiaNet,
-      indiaGross: Math.round(indiaNet * 1.18 * 100) / 100,
+      indiaGross: null,
       overseas: null,
       worldwide: null,
       screens: Number.isFinite(screens) && screens > 10 ? screens : null,
       occupancy: occupancy != null && occupancy <= 100 ? occupancy : null,
-      note: "live scrape · Hungama nett (often Hindi-weighted)",
+      note: "live scrape · Hungama nett (often Hindi-weighted); India gross not scraped",
     });
   }
   return out;
@@ -464,12 +471,12 @@ function parseKoimoiPage(html: string, movie: Movie): Reading[] {
       reportDate: dateForDay(movie.releaseDate, day),
       dayNumber: day,
       indiaNet,
-      indiaGross: Math.round(indiaNet * 1.18 * 100) / 100,
+      indiaGross: null,
       overseas: null,
       worldwide: null,
       screens: null,
       occupancy: null,
-      note: "live scrape",
+      note: "live scrape · Koimoi nett; India gross not scraped",
     });
   }
 
@@ -484,7 +491,7 @@ function parseKoimoiPage(html: string, movie: Movie): Reading[] {
       reportDate: LIFETIME_DATE,
       dayNumber: out.at(-1)?.dayNumber ?? movieDayFallback(movie),
       indiaNet: indiaNet ?? null,
-      indiaGross: indiaNet != null ? Math.round(indiaNet * 1.18 * 100) / 100 : null,
+      indiaGross: null,
       overseas: null,
       worldwide: worldwide ?? null,
       screens: null,

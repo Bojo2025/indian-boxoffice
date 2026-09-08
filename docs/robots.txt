@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bojo2025.github.io/indian-boxoffice/sitemap.xml

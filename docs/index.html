@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Indian Box Office</title>
-  <meta name="description" content="Live consensus of Indian theatrical collections, scraped from public trackers and formatted on this desk." />
+  <meta name="description" content="Independent weighted-median consensus of Indian theatrical collections from Sacnilk, Hungama, Koimoi and Box Office India." />
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,24 +22,35 @@
     </a>
     <nav>
       <a href="#now">Now playing</a>
+      <a href="#changed">Changed</a>
       <a href="#rankings">2026</a>
       <a href="#wires">Wires</a>
       <a href="#sources">Sources</a>
+      <a href="./board.json">board.json</a>
     </nav>
   </header>
   <main id="top">
     <p class="kicker"><span class="badge" id="live-badge">Server consensus</span><span id="desk-date"></span></p>
+    <p class="updated" id="updated-line">Board loading…</p>
     <h1>Consensus board from the trade spine.</h1>
     <p class="lede">
       Sacnilk, Koimoi, Bollywood Hungama and Box Office India are pulled server-side into a weighted
-      median board, then published here. Wikipedia can overlay worldwide figures in the browser;
-      when a tracker blocks, the last seed or prior pull stays on the card.
+      median board, then published here. Day-over-day deltas show what moved since the last board.
+      Wikipedia can overlay worldwide figures in the browser.
     </p>
     <div class="toolbar">
       <button class="pull" id="pull" type="button">Refresh Wikipedia overlay</button>
+      <a class="ghost" href="./board.json">Download board.json</a>
+      <a class="ghost" href="./health.json">health.json</a>
       <p class="status" id="status">Loading published board…</p>
     </div>
+    <p class="alert" id="health-alert" hidden></p>
     <dl class="stats" id="stats"></dl>
+    <section id="changed">
+      <p class="kicker">Since yesterday</p>
+      <h2>What changed</h2>
+      <ul class="changes" id="changes-list"></ul>
+    </section>
     <section id="now">
       <p class="kicker">Theatrical</p>
       <h2>Now in theatres</h2>
@@ -48,7 +59,7 @@
     <section id="late">
       <p class="kicker">Holdovers</p>
       <h2>Late run</h2>
-      <p class="lede">Holdovers still occupying screens. Totals are the last tracker cume, not a zero placeholder.</p>
+      <p class="lede">Holdovers still occupying screens. Totals are tracker cumes with day-over-day deltas where available.</p>
       <div class="grid" id="late-grid" style="margin-top:24px"></div>
     </section>
     <section id="rankings">
@@ -84,10 +95,10 @@
   <footer>
     <div class="wrap">
       Independent consensus of published theatrical estimates. India has no official auditor — we publish the spread.
-      Figures in ₹ crore. India nett / worldwide gross.
+      Figures in ₹ crore. India nett / worldwide gross. Fabricated GST grosses are not shown as tracked data.
     </div>
   </footer>
-  <script src="./catalog.js?v=20260908a"></script>
-  <script src="./app.js?v=20260908a"></script>
+  <script src="./catalog.js?v=20260908c"></script>
+  <script src="./app.js?v=20260908c"></script>
 </body>
 </html>
