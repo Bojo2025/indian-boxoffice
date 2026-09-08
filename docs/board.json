@@ -276,7 +276,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "hi",
-      "poster": "./posters/hi.svg"
+      "poster": "./posters/hi.jpg"
     },
     {
       "id": "insidious-further",
@@ -301,7 +301,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "insidious-further",
-      "poster": "./posters/insidious-further.svg"
+      "poster": "./posters/insidious-further.jpg"
     },
     {
       "id": "paw-patrol-dino",
@@ -326,7 +326,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "paw-patrol-dino",
-      "poster": "./posters/paw-patrol-dino.svg"
+      "poster": "./posters/paw-patrol-dino.jpg"
     },
     {
       "id": "hanuman-ansh",
@@ -354,7 +354,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "hanuman-ansh",
-      "poster": "./posters/hanuman-ansh.svg"
+      "poster": "./posters/hanuman-ansh.jpg"
     },
     {
       "id": "spider-man-bnd",
@@ -381,7 +381,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "spider-man-bnd",
-      "poster": "./posters/spider-man-bnd.svg"
+      "poster": "./posters/spider-man-bnd.jpg"
     },
     {
       "id": "dhamaal-4",
@@ -409,7 +409,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "dhamaal-4",
-      "poster": "./posters/dhamaal-4.svg"
+      "poster": "./posters/dhamaal-4.jpg"
     },
     {
       "id": "the-odyssey",
@@ -436,7 +436,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "the-odyssey",
-      "poster": "./posters/the-odyssey.svg"
+      "poster": "./posters/the-odyssey.jpg"
     },
     {
       "id": "dhurandhar",
@@ -523,7 +523,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "peddi",
-      "poster": "./posters/peddi.svg"
+      "poster": "./posters/peddi.jpg"
     },
     {
       "id": "jana-nayagan",
@@ -550,7 +550,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "jana-nayagan",
-      "poster": "./posters/jana-nayagan.svg"
+      "poster": "./posters/jana-nayagan.jpg"
     },
     {
       "id": "karuppu",
@@ -578,7 +578,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "karuppu",
-      "poster": "./posters/karuppu.svg"
+      "poster": "./posters/karuppu.jpg"
     },
     {
       "id": "msvpg",
@@ -632,7 +632,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "bhooth-bangla",
-      "poster": "./posters/bhooth-bangla.svg"
+      "poster": "./posters/bhooth-bangla.jpg"
     },
     {
       "id": "drishyam-3",
@@ -659,7 +659,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "drishyam-3",
-      "poster": "./posters/drishyam-3.svg"
+      "poster": "./posters/drishyam-3.jpg"
     },
     {
       "id": "vaazha-ii",
@@ -712,7 +712,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "welcome-jungle",
-      "poster": "./posters/welcome-jungle.svg"
+      "poster": "./posters/welcome-jungle.jpg"
     },
     {
       "id": "cocktail-2",
@@ -740,7 +740,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "cocktail-2",
-      "poster": "./posters/cocktail-2.svg"
+      "poster": "./posters/cocktail-2.jpg"
     },
     {
       "id": "alpha",
@@ -767,7 +767,7 @@
       "deltaNet": 0,
       "deltaWw": 0,
       "posterKey": "alpha",
-      "poster": "./posters/alpha.svg"
+      "poster": "./posters/alpha.jpg"
     }
   ],
   "changes": [],

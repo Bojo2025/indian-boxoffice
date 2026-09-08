@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600" role="img" aria-label="Drishyam 3">
-  <rect width="400" height="600" fill="#1b1814"/>
-  <rect x="0" y="0" width="8" height="600" fill="#c45c3e"/>
-  <text x="28" y="48" fill="#c45c3e" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" letter-spacing="3">MALAYALAM</text>
-  <text x="28" y="320" fill="#f3efe6" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="500">Drishyam 3</text>
-  <text x="28" y="560" fill="#9a9488" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" letter-spacing="2">IBO DESK FILE</text>
-</svg>

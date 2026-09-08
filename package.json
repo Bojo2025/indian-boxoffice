@@ -27,7 +27,9 @@
     "pack:source": "node scripts/pack-source.mjs",
     "posters": "node scripts/generate-posters.mjs",
     "export:desk": "npx vite-node scripts/export-desk-catalog.mts",
-    "publish:desk": "npx vite-node scripts/publish-desk-board.mts"
+    "publish:desk": "npx vite-node scripts/publish-desk-board.mts",
+    "fetch:posters": "npx vite-node scripts/fetch-posters.mts",
+    "inject:posters": "npx vite-node scripts/inject-posters.mts"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.4",

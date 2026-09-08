@@ -1,0 +1,180 @@
+{
+  "fetchedAt": "2026-09-08T08:13:23.469Z",
+  "results": [
+    {
+      "id": "toxic",
+      "key": "toxic",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2025/01/Toxic-12.jpg"
+    },
+    {
+      "id": "awarapan-2",
+      "key": "awarapan-2",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2025/03/Awarapan-2.jpg"
+    },
+    {
+      "id": "border-2",
+      "key": "border-2",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2024/05/Border2.jpg"
+    },
+    {
+      "id": "dhurandhar",
+      "key": "dhurandhar",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/03/Dhurandhar-The-Revenge-3.jpeg"
+    },
+    {
+      "id": "dhamaal-4",
+      "key": "dhamaal-4",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2025/03/Dhamaal-4-poster.jpeg"
+    },
+    {
+      "id": "batwara-1947",
+      "key": "batwara",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2023/10/Batwara1947.jpeg"
+    },
+    {
+      "id": "welcome-jungle",
+      "key": "welcome-jungle",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2021/12/Welcome-To-The-Jungle-poster-2026.jpeg"
+    },
+    {
+      "id": "cocktail-2",
+      "key": "cocktail-2",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2025/09/Cocktail2.jpg"
+    },
+    {
+      "id": "alpha",
+      "key": "alpha",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/07/Alpha-13.jpeg"
+    },
+    {
+      "id": "bhooth-bangla",
+      "key": "bhooth-bangla",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/04/Bhooth-Bangla1-1.jpeg"
+    },
+    {
+      "id": "peddi",
+      "key": "peddi",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/02/Peddi-2-1.jpg"
+    },
+    {
+      "id": "hanuman-ansh",
+      "key": "hanuman-ansh",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/08/Hanuman-Ansh.jpg"
+    },
+    {
+      "id": "spider-man-bnd",
+      "key": "spider-man-bnd",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2025/08/Spider-Man-Brand-New-Day-2025.jpg"
+    },
+    {
+      "id": "the-odyssey",
+      "key": "the-odyssey",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/07/The-Odyssey-English-POSTER.jpg"
+    },
+    {
+      "id": "insidious-further",
+      "key": "insidious-further",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2025/08/INSIDIOUS.jpg"
+    },
+    {
+      "id": "jana-nayagan",
+      "key": "jana-nayagan",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/01/Jan-Neta-poster.jpeg"
+    },
+    {
+      "id": "karuppu",
+      "key": "karuppu",
+      "source": "hungama",
+      "ok": false,
+      "detail": "HTTP 404"
+    },
+    {
+      "id": "msvpg",
+      "key": "msvpg",
+      "source": "hungama",
+      "ok": false,
+      "detail": "HTTP 404"
+    },
+    {
+      "id": "drishyam-3",
+      "key": "drishyam-3",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/09/Drishyam-–-The-Conclusion-001.jpeg"
+    },
+    {
+      "id": "vaazha-ii",
+      "key": "vaazha-ii",
+      "source": "hungama",
+      "ok": false,
+      "detail": "HTTP 404"
+    },
+    {
+      "id": "paw-patrol-dino",
+      "key": "paw-patrol-dino",
+      "source": "hungama",
+      "ok": true,
+      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/01/PAW.jpg"
+    },
+    {
+      "id": "irumudi",
+      "key": "irumudi",
+      "source": "sacnilk",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/news/1000026812.jpg"
+    },
+    {
+      "id": "hi",
+      "key": "hi",
+      "source": "sacnilk",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/news/1000026974.jpg"
+    },
+    {
+      "id": "vishwanath-and-sons",
+      "key": "vishwanath",
+      "source": "sacnilk",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/news/1000026663.jpg"
+    },
+    {
+      "id": "karuppu",
+      "key": "karuppu",
+      "source": "sacnilk",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/news/1000025690.jpg"
+    }
+  ]
+}
