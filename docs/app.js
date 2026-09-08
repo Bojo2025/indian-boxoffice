@@ -198,38 +198,8 @@
       : "Board timestamp unavailable";
   }
 
-  function renderHealth() {
-    const el = document.getElementById("health-alert");
-    const alerts = catalog.health?.alerts || [];
-    if (!alerts.length) {
-      el.hidden = true;
-      el.textContent = "";
-      return;
-    }
-    el.hidden = false;
-    el.textContent = alerts.slice(0, 3).join(" · ");
-    el.className = catalog.health?.hardFail ? "alert alert-hard" : "alert";
-  }
-
-  function renderChanges() {
-    const list = document.getElementById("changes-list");
-    const changes = catalog.changes || [];
-    if (!changes.length) {
-      list.innerHTML = `<li><p class="meta">No material moves vs ${esc(catalog.comparedTo || "the previous board")} yet — check after the next publish.</p></li>`;
-      return;
-    }
-    list.innerHTML = changes
-      .map((c) => {
-        const cls = (c.deltaWw ?? 0) >= 0 ? "gain" : "loss";
-        return `<li><span class="${cls}">${esc(c.text)}</span></li>`;
-      })
-      .join("");
-  }
-
   function render() {
     renderUpdated();
-    renderHealth();
-    renderChanges();
 
     const playing = films.filter((m) => m.status === "playing");
     const late = films.filter((m) => m.status === "late");
@@ -241,7 +211,7 @@
       stat("Tracked worldwide", formatCrCompact(ytdWw)),
       stat("India net on file", formatCrCompact(ytdNet)),
       stat("Now playing", String(playing.length)),
-      stat("Spine alerts", String((catalog.health?.alerts || []).length)),
+      stat("Sources", String(catalog.sources?.length || 0)),
     ].join("");
 
     document.getElementById("now-grid").innerHTML = playing.map(card).join("") || empty("No live titles.");
