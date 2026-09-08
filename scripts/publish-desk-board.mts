@@ -3,7 +3,7 @@
  * Pulls Sacnilk + Hungama + Koimoi + BOI (+ newsroom/Wikipedia overlays),
  * merges with the seed catalogue as fallback, writes docs/catalog.js + health + history.
  */
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync, copyFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { MOVIES, SERIES, SOURCES, dateForDay } from "../src/lib/boxoffice/catalog.ts";
@@ -14,8 +14,35 @@ import type { Reading } from "../src/lib/boxoffice/types.ts";
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const outDir = join(root, "docs");
 const historyDir = join(outDir, "history");
+const postersSrc = join(root, "public", "posters");
+const postersOut = join(outDir, "posters");
 mkdirSync(outDir, { recursive: true });
 mkdirSync(historyDir, { recursive: true });
+mkdirSync(postersOut, { recursive: true });
+
+function syncPosters() {
+  if (!existsSync(postersSrc)) return;
+  for (const name of readdirSync(postersSrc)) {
+    if (!/\.(jpe?g|png|webp|svg)$/i.test(name)) continue;
+    copyFileSync(join(postersSrc, name), join(postersOut, name));
+  }
+}
+
+function posterFor(posterKey: string): { posterKey: string; poster: string } {
+  const jpg = join(postersOut, `${posterKey}.jpg`);
+  const jpeg = join(postersOut, `${posterKey}.jpeg`);
+  const png = join(postersOut, `${posterKey}.png`);
+  const webp = join(postersOut, `${posterKey}.webp`);
+  const svg = join(postersOut, `${posterKey}.svg`);
+  if (existsSync(jpg)) return { posterKey, poster: `./posters/${posterKey}.jpg` };
+  if (existsSync(jpeg)) return { posterKey, poster: `./posters/${posterKey}.jpeg` };
+  if (existsSync(png)) return { posterKey, poster: `./posters/${posterKey}.png` };
+  if (existsSync(webp)) return { posterKey, poster: `./posters/${posterKey}.webp` };
+  if (existsSync(svg)) return { posterKey, poster: `./posters/${posterKey}.svg` };
+  return { posterKey, poster: "./posters/hero-cinema.jpg" };
+}
+
+syncPosters();
 
 const TRADE = new Set(["sacnilk", "koimoi", "hungama", "boi"]);
 const SPINE = ["sacnilk", "koimoi", "hungama", "boi"] as const;
@@ -36,6 +63,8 @@ type FilmCard = {
   synopsis: string;
   status: string;
   verdict: string;
+  posterKey: string;
+  poster: string;
   indiaNet: number;
   indiaGross: number;
   overseas: number;
@@ -287,6 +316,7 @@ const films: FilmCard[] = MOVIES.map((m) => {
   const prev = priorMap.get(m.id);
   const deltaNet = prev ? round2(indiaNet - prev.indiaNet) : null;
   const deltaWw = prev ? round2(worldwide - prev.worldwide) : null;
+  const art = posterFor(m.posterKey || m.id);
   return {
     id: m.id,
     slug: m.slug,
@@ -300,6 +330,8 @@ const films: FilmCard[] = MOVIES.map((m) => {
     synopsis: m.synopsis,
     status: m.status,
     verdict: m.verdict,
+    posterKey: art.posterKey,
+    poster: art.poster,
     indiaNet,
     indiaGross,
     overseas,

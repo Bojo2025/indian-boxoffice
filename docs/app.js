@@ -1,7 +1,7 @@
 (function () {
   const catalog = window.IBO_CATALOG;
   if (!catalog) {
-    document.getElementById("status").textContent = "Catalogue failed to load.";
+    document.getElementById("updated-line").textContent = "Catalogue failed to load.";
     return;
   }
 
@@ -227,8 +227,6 @@
   }
 
   function render() {
-    const today = deskDate();
-    document.getElementById("desk-date").textContent = `${deskLong(today)} · IST`;
     renderUpdated();
     renderHealth();
     renderChanges();
@@ -252,7 +250,10 @@
       .map(
         (m, i) => `<tr class="${m.status === "playing" ? "live" : ""}">
         <td class="rank">${i + 1}</td>
-        <td>${esc(m.title)}${m.status === "playing" ? '<span class="pill">Playing</span>' : ""}${m.liveWiki ? '<span class="pill">Wiki</span>' : ""}${m.liveSources?.length ? `<span class="pill">${esc(m.liveSources.length)} src</span>` : ""}</td>
+        <td class="title-cell">
+          <img class="poster-thumb" src="${esc(posterSrc(m))}" alt="" loading="lazy" onerror="this.onerror=null;this.src='${esc(posterFallback(m))}'" />
+          <span>${esc(m.title)}${m.status === "playing" ? '<span class="pill">Playing</span>' : ""}${m.liveWiki ? '<span class="pill">Wiki</span>' : ""}</span>
+        </td>
         <td>${esc(m.language)}</td>
         <td class="num">${esc(formatCr(m.indiaNet))}${deltaHtml(m.deltaNet)}</td>
         <td class="num strong">${esc(formatCr(m.worldwide))}${deltaHtml(m.deltaWw)}</td>
@@ -300,18 +301,36 @@
     return `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`;
   }
 
+  function posterSrc(m) {
+    if (m.poster) return m.poster;
+    const key = m.posterKey || m.id;
+    return `./posters/${key}.jpg`;
+  }
+
+  function posterFallback(m) {
+    const key = m.posterKey || m.id;
+    return `./posters/${key}.svg`;
+  }
+
   function card(m) {
     const day = dayNumber(m.releaseDate);
     const src = m.liveSources?.length ? ` · ${m.liveSources.join("+")}` : "";
+    const img = posterSrc(m);
+    const fallback = posterFallback(m);
     return `<article class="card">
-      <p class="kicker">${esc(m.language)} · Day ${day}${m.status === "late" ? " · Late run" : ""}${esc(src)}</p>
-      <h3>${esc(m.title)}</h3>
-      <p class="meta">${esc(m.director)} · ${esc(m.starring)}</p>
-      <p class="synopsis">${esc(m.synopsis)}</p>
-      <dl>
-        <div><dt>India net</dt><dd>${esc(formatCr(m.indiaNet))}${deltaHtml(m.deltaNet)}</dd></div>
-        <div><dt>Worldwide</dt><dd>${esc(formatCr(m.worldwide))}${deltaHtml(m.deltaWw)}</dd></div>
-      </dl>
+      <div class="poster-wrap">
+        <img class="poster" src="${esc(img)}" alt="${esc(m.title)} poster" loading="lazy" onerror="this.onerror=null;this.src='${esc(fallback)}'" />
+      </div>
+      <div class="card-body">
+        <p class="kicker">${esc(m.language)} · Day ${day}${m.status === "late" ? " · Late run" : ""}${esc(src)}</p>
+        <h3>${esc(m.title)}</h3>
+        <p class="meta">${esc(m.director)} · ${esc(m.starring)}</p>
+        <p class="synopsis">${esc(m.synopsis)}</p>
+        <dl>
+          <div><dt>India net</dt><dd>${esc(formatCr(m.indiaNet))}${deltaHtml(m.deltaNet)}</dd></div>
+          <div><dt>Worldwide</dt><dd>${esc(formatCr(m.worldwide))}${deltaHtml(m.deltaWw)}</dd></div>
+        </dl>
+      </div>
     </article>`;
   }
 
@@ -328,10 +347,6 @@
   }
 
   async function overlayWiki() {
-    const btn = document.getElementById("pull");
-    const status = document.getElementById("status");
-    btn.disabled = true;
-    status.textContent = "Checking Wikipedia overlay…";
     logs.length = 0;
     try {
       await scrapeWikipedia();
@@ -339,16 +354,8 @@
       logs.push(`wikipedia: blocked — ${err instanceof Error ? err.message : "failed"}`);
     }
     render();
-    status.textContent = [ingestSummary(), ...logs].filter(Boolean).join(" · ");
-    document.getElementById("live-badge").textContent =
-      catalog.mode === "server-consensus" ? "Server consensus" : "Catalogue";
-    btn.disabled = false;
   }
 
-  document.getElementById("pull").addEventListener("click", overlayWiki);
-  document.getElementById("live-badge").textContent =
-    catalog.mode === "server-consensus" ? "Server consensus" : "Catalogue";
-  document.getElementById("status").textContent = ingestSummary();
   render();
   overlayWiki();
 })();
