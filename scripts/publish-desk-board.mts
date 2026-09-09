@@ -365,6 +365,17 @@ const changes = films
     };
   });
 
+// Embed today's morning brief if one exists
+type MorningBrief = {
+  briefDate: string;
+  generatedAt: string;
+  headline: string;
+  lede: string;
+  body: string;
+  citations: { url: string; title?: string }[];
+};
+const morningBrief = readJson<MorningBrief>(join(outDir, "morning-brief.json"));
+
 const pack = {
   generatedAt: nowIso,
   deskDate: today,
@@ -389,6 +400,7 @@ const pack = {
     publishedAt: h.publishedAt,
     summary: h.summary,
   })),
+  morningBrief: morningBrief ?? null,
   downloads: {
     boardJson: "./board.json",
     healthJson: "./health.json",

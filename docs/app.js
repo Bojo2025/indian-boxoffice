@@ -198,6 +198,55 @@
       : "Board timestamp unavailable";
   }
 
+  function renderBrief(brief) {
+    const section = document.getElementById("brief");
+    if (!brief || !brief.headline || !section) return;
+
+    // Show only if brief is from today (Mauritius or IST tolerance ±1 day)
+    const briefMs = new Date(brief.generatedAt).getTime();
+    const nowMs = Date.now();
+    const ageDays = (nowMs - briefMs) / 86400000;
+    if (ageDays > 1.5) return; // stale — don't show
+
+    document.getElementById("brief-headline").textContent = brief.headline;
+    document.getElementById("brief-lede").textContent = brief.lede || "";
+
+    // Render body paragraphs
+    const bodyEl = document.getElementById("brief-body");
+    bodyEl.innerHTML = (brief.body || "")
+      .split(/\n\n+/)
+      .filter(Boolean)
+      .map((p) => `<p>${esc(p.trim())}</p>`)
+      .join("");
+
+    // Citations
+    const citeEl = document.getElementById("brief-citations");
+    if (brief.citations && brief.citations.length) {
+      citeEl.innerHTML = brief.citations
+        .map((c) => `<li><a href="${esc(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.title || c.url)}</a></li>`)
+        .join("");
+    } else {
+      citeEl.style.display = "none";
+    }
+
+    // Stamp
+    const stampEl = document.getElementById("brief-stamp");
+    try {
+      stampEl.textContent = `Generated ${new Date(brief.generatedAt).toLocaleString("en-GB", {
+        timeZone: "Indian/Mauritius",
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        hour: "2-digit",
+        minute: "2-digit",
+      })} (Mauritius)`;
+    } catch {
+      stampEl.textContent = brief.generatedAt;
+    }
+
+    section.style.display = "";
+  }
+
   function render() {
     renderUpdated();
 
@@ -326,6 +375,7 @@
     render();
   }
 
+  renderBrief(catalog.morningBrief);
   render();
   overlayWiki();
 })();

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260908g" />
+  <link rel="stylesheet" href="./styles.css?v=20260909a" />
 </head>
 <body>
   <header class="mast">
@@ -21,6 +21,7 @@
       </span>
     </a>
     <nav>
+      <a href="#brief">Morning brief</a>
       <a href="#now">Now playing</a>
       <a href="#rankings">2026</a>
       <a href="#wires">Wires</a>
@@ -30,6 +31,14 @@
   <main id="top">
     <p class="updated" id="updated-line">Board loading…</p>
     <dl class="stats" id="stats"></dl>
+    <section id="brief" style="display:none">
+      <p class="kicker">Morning brief</p>
+      <h2 id="brief-headline"></h2>
+      <p class="brief-lede" id="brief-lede"></p>
+      <div class="brief-body" id="brief-body"></div>
+      <ul class="brief-citations" id="brief-citations"></ul>
+      <p class="updated" id="brief-stamp"></p>
+    </section>
     <section id="now">
       <p class="kicker">Theatrical</p>
       <h2>Now in theatres</h2>
@@ -75,7 +84,7 @@
       Figures in ₹ crore. India nett / worldwide gross.
     </div>
   </footer>
-  <script src="./catalog.js?v=20260908g"></script>
-  <script src="./app.js?v=20260908g"></script>
+  <script src="./catalog.js?v=20260909a"></script>
+  <script src="./app.js?v=20260909a"></script>
 </body>
 </html>
