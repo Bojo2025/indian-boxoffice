@@ -1,10 +1,31 @@
 {
   "briefDate": "2026-09-09",
-  "generatedAt": "2026-09-09T06:25:56.820Z",
-  "headline": "Toxic Struggles Against ₹500 Crore Budget as Irumudi Drives Weekday Holds",
-  "lede": "Toxic crawled to",
-  "body": "",
-  "citations": [],
-  "boardGeneratedAt": "2026-09-09T06:25:43.499Z",
-  "model": "gemini-flash-latest"
+  "generatedAt": "2026-09-09T06:40:26.778Z",
+  "headline": "Dhurandhar: The Revenge leads the board at ₹1,813.4 Cr WW",
+  "lede": "Dhurandhar: The Revenge sits at ₹1,813.4 Cr worldwide / ₹1,149.3 Cr India nett on the consensus desk.",
+  "body": "No material day-over-day moves since the last board snapshot.\n\nNow playing: Toxic (₹337.4 Cr WW); Awarapan 2 (₹210.3 Cr WW); Vishwanath And Sons (₹205.6 Cr WW); Irumudi (₹218.2 Cr WW); Batwara 1947 (₹54.2 Cr WW).\n\nWire: Hi: Sacnilk 11 days, India net ₹11.87 Cr (sacnilk).\n\nFigures are weighted-median consensus across trade trackers. India has no official auditor.",
+  "citations": [
+    {
+      "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "title": "Hi: Sacnilk 11 days, India net ₹11.87 Cr"
+    },
+    {
+      "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "title": "Toxic: Sacnilk 13 days, India net ₹246.89 Cr"
+    },
+    {
+      "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "title": "Awarapan 2: Sacnilk 25 days, India net ₹150.3 Cr"
+    },
+    {
+      "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr"
+    },
+    {
+      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "title": "Irumudi: Sacnilk 18 days, India net ₹168.7 Cr"
+    }
+  ],
+  "boardGeneratedAt": "2026-09-08T07:16:14.383Z",
+  "model": "board-template"
 }

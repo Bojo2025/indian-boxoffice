@@ -198,20 +198,29 @@
       : "Board timestamp unavailable";
   }
 
+  function clip(text, max) {
+    const t = String(text || "").replace(/\s+/g, " ").trim();
+    if (!t) return "";
+    if (t.length <= max) return t;
+    const cut = t.slice(0, max);
+    const sp = cut.lastIndexOf(" ");
+    return `${(sp > 40 ? cut.slice(0, sp) : cut).trim()}…`;
+  }
+
   function renderBrief(brief) {
     const section = document.getElementById("brief");
     if (!brief || !brief.headline || !section) return;
 
-    // Show only if brief is from today (Mauritius or IST tolerance ±1 day)
     const briefMs = new Date(brief.generatedAt).getTime();
-    const nowMs = Date.now();
-    const ageDays = (nowMs - briefMs) / 86400000;
-    if (ageDays > 1.5) return; // stale — don't show
+    if (!Number.isFinite(briefMs) || (Date.now() - briefMs) / 86400000 > 1.5) return;
+
+    const fullText = [brief.lede, brief.body].filter(Boolean).join("\n\n").trim();
+    const preview = clip(fullText || brief.headline, 160);
 
     document.getElementById("brief-headline").textContent = brief.headline;
+    document.getElementById("brief-preview").textContent = preview;
     document.getElementById("brief-lede").textContent = brief.lede || "";
 
-    // Render body paragraphs
     const bodyEl = document.getElementById("brief-body");
     bodyEl.innerHTML = (brief.body || "")
       .split(/\n\n+/)
@@ -219,17 +228,20 @@
       .map((p) => `<p>${esc(p.trim())}</p>`)
       .join("");
 
-    // Citations
     const citeEl = document.getElementById("brief-citations");
     if (brief.citations && brief.citations.length) {
+      citeEl.style.display = "";
       citeEl.innerHTML = brief.citations
-        .map((c) => `<li><a href="${esc(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.title || c.url)}</a></li>`)
+        .map(
+          (c) =>
+            `<li><a href="${esc(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.title || c.url)}</a></li>`,
+        )
         .join("");
     } else {
+      citeEl.innerHTML = "";
       citeEl.style.display = "none";
     }
 
-    // Stamp
     const stampEl = document.getElementById("brief-stamp");
     try {
       stampEl.textContent = `Generated ${new Date(brief.generatedAt).toLocaleString("en-GB", {
@@ -244,7 +256,44 @@
       stampEl.textContent = brief.generatedAt;
     }
 
+    const teaser = document.getElementById("brief-teaser");
+    const full = document.getElementById("brief-full");
+    const more = document.getElementById("brief-more");
+    let open = false;
+
+    function setOpen(next) {
+      open = next;
+      teaser.setAttribute("aria-expanded", open ? "true" : "false");
+      full.hidden = !open;
+      more.textContent = open ? "Hide brief ↑" : "Read full brief →";
+      if (open) {
+        history.replaceState(null, "", "#brief");
+      }
+    }
+
+    teaser.onclick = (e) => {
+      e.preventDefault();
+      setOpen(!open);
+    };
+
+    if (location.hash === "#brief") setOpen(true);
+    else setOpen(false);
+
     section.style.display = "";
+  }
+
+  async function loadBrief() {
+    let brief = catalog.morningBrief || null;
+    try {
+      const res = await fetch(`./morning-brief.json?v=${Date.now()}`, { cache: "no-store" });
+      if (res.ok) {
+        const remote = await res.json();
+        if (remote?.headline) brief = remote;
+      }
+    } catch {
+      /* keep catalog fallback */
+    }
+    renderBrief(brief);
   }
 
   function render() {
@@ -375,7 +424,7 @@
     render();
   }
 
-  renderBrief(catalog.morningBrief);
+  loadBrief();
   render();
   overlayWiki();
 })();

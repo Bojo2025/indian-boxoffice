@@ -3,12 +3,12 @@
  *
  * Runs once a day (targeting 08:00 Mauritius = 04:00 UTC via GitHub Actions).
  * 1. Reads the latest board.json (already produced by publish:desk).
- * 2. Calls Gemini (free-tier AI Studio) with Google Search grounding for
- *    Indian box office news from the last 24 hours.
- * 3. Writes docs/morning-brief.json consumed by the homepage.
+ * 2. Calls Gemini free-tier (optional Google Search) for a trade-paper brief.
+ * 3. Writes docs/morning-brief.json and injects it into catalog.js / board.json
+ *    so the Pages homepage can show a teaser + expandable full brief.
  *
- * Idempotent: if a brief for today already exists it exits early unless FORCE_BRIEF=1.
- * If GEMINI_API_KEY is absent it exits gracefully (no paid fallback).
+ * Idempotent unless FORCE_BRIEF=1. Falls back to a deterministic board brief
+ * if Gemini is missing, rate-limited, or returns truncated text.
  */
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -17,9 +17,11 @@ import { fileURLToPath } from "node:url";
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const outDir = join(root, "docs");
 const boardPath = join(outDir, "board.json");
+const catalogPath = join(outDir, "catalog.js");
 const briefPath = join(outDir, "morning-brief.json");
 
 const MODEL = process.env.GEMINI_MODEL || "gemini-flash-latest";
+const WANT_SEARCH = process.env.GEMINI_SEARCH === "1";
 
 function deskDateIst(d = new Date()): string {
   return new Intl.DateTimeFormat("en-CA", {
@@ -52,21 +54,18 @@ const todayMu = deskDateMauritius();
 const todayIst = deskDateIst();
 
 if (process.env.FORCE_BRIEF !== "1") {
-  const existing = readJson<{ briefDate?: string }>(briefPath);
-  if (existing?.briefDate === todayMu || existing?.briefDate === todayIst) {
+  const existing = readJson<{ briefDate?: string; body?: string; lede?: string }>(briefPath);
+  const usable =
+    existing &&
+    (existing.briefDate === todayMu || existing.briefDate === todayIst) &&
+    (existing.body?.trim().length ?? 0) >= 40 &&
+    (existing.lede?.trim().length ?? 0) >= 20;
+  if (usable) {
     console.log(
-      `Morning brief already exists for ${existing.briefDate} — skipping. Set FORCE_BRIEF=1 to regenerate.`,
+      `Morning brief already exists for ${existing!.briefDate} — skipping. Set FORCE_BRIEF=1 to regenerate.`,
     );
     process.exit(0);
   }
-}
-
-const apiKey = process.env.GEMINI_API_KEY;
-if (!apiKey) {
-  console.warn(
-    "GEMINI_API_KEY not set — morning brief skipped. Add it to GitHub Secrets → GEMINI_API_KEY.",
-  );
-  process.exit(0);
 }
 
 type FilmRow = {
@@ -101,6 +100,17 @@ type Board = {
   health?: { hardFail?: boolean; alerts?: string[] };
 };
 
+type Brief = {
+  briefDate: string;
+  generatedAt: string;
+  headline: string;
+  lede: string;
+  body: string;
+  citations: { url: string; title?: string }[];
+  boardGeneratedAt: string | null;
+  model: string;
+};
+
 const board = readJson<Board>(boardPath);
 const films = board?.films ?? [];
 const headlines = board?.headlines ?? [];
@@ -110,13 +120,143 @@ if (!films.length) {
   process.exit(1);
 }
 
+const playing = films.filter((f) => f.status === "playing");
+const ranked = [...films].sort((a, b) => b.worldwide - a.worldwide);
+const movers = [...films]
+  .filter((f) => f.deltaWw != null && Math.abs(f.deltaWw) >= 0.5)
+  .sort((a, b) => Math.abs(b.deltaWw ?? 0) - Math.abs(a.deltaWw ?? 0));
+const top = ranked[0];
+const topMover = movers[0];
+
+function fmt(n: number | null | undefined): string {
+  if (n == null || !Number.isFinite(n)) return "n/a";
+  return `₹${n.toLocaleString("en-IN", { maximumFractionDigits: 1 })} Cr`;
+}
+
+function deltaLabel(n: number | null | undefined): string {
+  if (n == null || !Number.isFinite(n) || Math.abs(n) < 0.05) return "";
+  return `${n >= 0 ? "+" : ""}${n.toLocaleString("en-IN", { maximumFractionDigits: 1 })} Cr`;
+}
+
+function templateBrief(): Brief {
+  const leadFilm = topMover ?? top;
+  const headline = leadFilm
+    ? topMover
+      ? `${leadFilm.title} moves ${deltaLabel(leadFilm.deltaWw)} worldwide`
+      : `${leadFilm.title} leads the board at ${fmt(leadFilm.worldwide)} WW`
+    : "Indian Box Office morning board";
+
+  const lede = top
+    ? `${top.title} sits at ${fmt(top.worldwide)} worldwide / ${fmt(top.indiaNet)} India nett on the consensus desk.`
+    : "Consensus desk refreshed from Sacnilk, Hungama, Koimoi and Box Office India.";
+
+  const moverLines = movers.slice(0, 4).map((f) => {
+    const parts = [`${f.title}: WW ${deltaLabel(f.deltaWw)}`];
+    if (f.deltaNet != null && Math.abs(f.deltaNet) >= 0.5) {
+      parts.push(`India net ${deltaLabel(f.deltaNet)}`);
+    }
+    return parts.join(", ");
+  });
+
+  const playingLine =
+    playing.length > 0
+      ? `Now playing: ${playing
+          .slice(0, 5)
+          .map((f) => `${f.title} (${fmt(f.worldwide)} WW)`)
+          .join("; ")}.`
+      : "No titles marked playing on this board.";
+
+  const wireLine = headlines[0]
+    ? `Wire: ${headlines[0].title} (${headlines[0].sourceId}).`
+    : "No fresh wires on this board pull.";
+
+  const body = [
+    moverLines.length
+      ? `Day-over-day movers on the consensus board — ${moverLines.join(". ")}.`
+      : "No material day-over-day moves since the last board snapshot.",
+    playingLine,
+    wireLine,
+    "Figures are weighted-median consensus across trade trackers. India has no official auditor.",
+  ].join("\n\n");
+
+  return {
+    briefDate: todayMu,
+    generatedAt: new Date().toISOString(),
+    headline: headline.slice(0, 90),
+    lede,
+    body,
+    citations: headlines.slice(0, 5).map((h) => ({ url: h.url, title: h.title })),
+    boardGeneratedAt: board?.generatedAt ?? null,
+    model: "board-template",
+  };
+}
+
+function parseModelText(text: string): { headline: string; lede: string; body: string } {
+  const lines = text.split("\n");
+  const headline =
+    (lines.find((l) => /^HEADLINE:/i.test(l)) ?? "").replace(/^HEADLINE:\s*/i, "").trim() ||
+    "Indian Box Office morning brief";
+  const lede =
+    (lines.find((l) => /^LEDE:/i.test(l)) ?? "").replace(/^LEDE:\s*/i, "").trim() || "";
+  const bodyStart = lines.findIndex((l) => /^BODY:/i.test(l));
+  const body =
+    bodyStart >= 0
+      ? lines
+          .slice(bodyStart)
+          .join("\n")
+          .replace(/^BODY:\s*/i, "")
+          .trim()
+      : text.replace(/^HEADLINE:.*$/im, "").replace(/^LEDE:.*$/im, "").trim();
+  return { headline, lede, body };
+}
+
+function isComplete(parts: { headline: string; lede: string; body: string }): boolean {
+  if (parts.headline.length < 8) return false;
+  if (parts.lede.length < 24) return false;
+  if (parts.body.length < 60) return false;
+  // Truncation heuristics
+  if (/[,:;–—-]\s*$/.test(parts.lede)) return false;
+  if (/\b(to|the|a|an|and|of|for|as|at|in)\s*$/i.test(parts.lede)) return false;
+  return true;
+}
+
+function injectBrief(brief: Brief) {
+  if (existsSync(catalogPath)) {
+    const raw = readFileSync(catalogPath, "utf8");
+    const match = raw.match(/^window\.IBO_CATALOG\s*=\s*([\s\S]*);\s*$/);
+    if (match) {
+      try {
+        const pack = JSON.parse(match[1]) as Record<string, unknown>;
+        pack.morningBrief = brief;
+        writeFileSync(catalogPath, `window.IBO_CATALOG = ${JSON.stringify(pack, null, 2)};\n`);
+        console.log("✓ Injected morningBrief into docs/catalog.js");
+      } catch (err) {
+        console.warn("Could not inject catalog.js:", err);
+      }
+    }
+  }
+  const boardPack = readJson<Record<string, unknown>>(boardPath);
+  if (boardPack) {
+    boardPack.morningBrief = brief;
+    writeFileSync(boardPath, `${JSON.stringify(boardPack, null, 2)}\n`);
+    console.log("✓ Injected morningBrief into docs/board.json");
+  }
+}
+
+function writeBrief(brief: Brief) {
+  writeFileSync(briefPath, `${JSON.stringify(brief, null, 2)}\n`);
+  injectBrief(brief);
+  console.log(`✓ Morning brief written → docs/morning-brief.json`);
+  console.log(`  Headline: ${brief.headline}`);
+  console.log(`  Model: ${brief.model}`);
+  console.log(`  Citations: ${brief.citations.length}`);
+}
+
 const rows = films
   .slice(0, 20)
   .map((f) => {
     const delta =
-      f.deltaWw != null
-        ? ` (${f.deltaWw >= 0 ? "+" : ""}${f.deltaWw} Cr WW since last board)`
-        : "";
+      f.deltaWw != null ? ` (${f.deltaWw >= 0 ? "+" : ""}${f.deltaWw} Cr WW since last board)` : "";
     const day = f.trackedThroughDay ? ` day ${f.trackedThroughDay}` : "";
     const live = f.liveSources?.length ? ` [${f.liveSources.join("+")}]` : "";
     const budget = f.budgetCr ? ` budget ₹${f.budgetCr} Cr` : "";
@@ -139,31 +279,27 @@ const boardStamp = board?.generatedAt
     }) + " IST"
   : "recent";
 
-const SYSTEM = `You are the IBO Desk morning brief writer — the staff analyst of Indian Box Office, an independent consensus desk covering theatrical collections in India.
+const SYSTEM = `You are the IBO Desk morning brief writer — staff analyst of Indian Box Office, an independent consensus desk for theatrical collections in India.
 
 Style rules:
-- Figures in ₹ crore. India nett for domestic; worldwide gross for global.
-- India has no official box-office auditor. Note source spread when trackers disagree.
-- Be a trade paper, not a fan account. Short declarative sentences. No hype words.
-- Producer statements are claims — log them, do not launder into consensus.
-- Under 220 words total (headline + lede + body combined).
+- Figures in ₹ crore. India nett domestic; worldwide gross global.
+- Note tracker disagreement when relevant. No hype words. Short trade-paper sentences.
+- Under 220 words total.
 
-Output format — return EXACTLY these labelled lines, nothing else:
-HEADLINE: <max 12 words, the day's single most important number or story>
-LEDE: <one sentence, the most important fact>
-BODY: <2-3 short paragraphs covering: top earner of the day/weekend; notable holds or drops; upcoming releases this week if any; source spread / tracker disagreement if notable>`;
+Return EXACTLY these labels, nothing else:
+HEADLINE: <max 12 words>
+LEDE: <one complete sentence>
+BODY: <2-3 complete short paragraphs>`;
 
-const USER = `Today is ${todayMu} (Mauritius time). Search the web for Indian box office news published in the last 24 hours, then write today's IBO Desk morning brief.
+const USER = `Today is ${todayMu} (Mauritius). Write today's IBO Desk morning brief from this consensus snapshot (generated ${boardStamp}).
 
-Board snapshot (generated ${boardStamp}):
+Board:
 ${rows}
 
-Recent wires from tracked sources:
-${wireLines || "(none scraped yet today)"}
+Wires:
+${wireLines || "(none)"}
 
-Use both the web search results AND the snapshot to write the brief. Cite tracker names when giving figures. Keep the brief under 220 words.`;
-
-console.log(`Calling Gemini (${MODEL}) with Google Search grounding…`);
+Cite tracker names when giving figures. Finish every sentence. Keep under 220 words.`;
 
 type GeminiResponse = {
   candidates?: {
@@ -172,17 +308,19 @@ type GeminiResponse = {
       groundingChunks?: { web?: { uri?: string; title?: string } }[];
     };
   }[];
-  error?: { message?: string; code?: number; status?: string };
+  error?: { message?: string };
 };
 
 async function callGemini(withSearch: boolean): Promise<GeminiResponse> {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) throw new Error("GEMINI_API_KEY missing");
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${encodeURIComponent(apiKey)}`;
   const payload: Record<string, unknown> = {
     systemInstruction: { parts: [{ text: SYSTEM }] },
     contents: [{ role: "user", parts: [{ text: USER }] }],
     generationConfig: {
-      temperature: 0.3,
-      maxOutputTokens: 700,
+      temperature: 0.25,
+      maxOutputTokens: 1200,
     },
   };
   if (withSearch) payload.tools = [{ google_search: {} }];
@@ -193,25 +331,37 @@ async function callGemini(withSearch: boolean): Promise<GeminiResponse> {
     body: JSON.stringify(payload),
   });
   const data = (await res.json()) as GeminiResponse;
-  if (!res.ok) {
-    const msg = data.error?.message ?? JSON.stringify(data);
-    throw new Error(`HTTP ${res.status}: ${msg}`);
-  }
+  if (!res.ok) throw new Error(`HTTP ${res.status}: ${data.error?.message ?? JSON.stringify(data)}`);
   if (data.error?.message) throw new Error(data.error.message);
   return data;
 }
 
-let data: GeminiResponse;
-try {
-  data = await callGemini(true);
-} catch (err) {
-  console.warn(`Grounded call failed (${err instanceof Error ? err.message : err}) — retrying without search…`);
+const fallback = templateBrief();
+const apiKey = process.env.GEMINI_API_KEY;
+
+if (!apiKey) {
+  console.warn("GEMINI_API_KEY not set — writing board-template brief.");
+  writeBrief(fallback);
+  process.exit(0);
+}
+
+console.log(`Calling Gemini (${MODEL})${WANT_SEARCH ? " with search" : " (board-only prompt)"}…`);
+
+let data: GeminiResponse | null = null;
+const attempts = WANT_SEARCH ? [false, true] : [false];
+for (const withSearch of attempts) {
   try {
-    data = await callGemini(false);
-  } catch (err2) {
-    console.error(`Gemini API error: ${err2 instanceof Error ? err2.message : err2}`);
-    process.exit(1);
+    data = await callGemini(withSearch);
+    break;
+  } catch (err) {
+    console.warn(`Gemini call failed (${withSearch ? "search" : "plain"}): ${err instanceof Error ? err.message : err}`);
   }
+}
+
+if (!data) {
+  console.warn("Gemini unavailable — writing board-template brief.");
+  writeBrief(fallback);
+  process.exit(0);
 }
 
 const text =
@@ -226,41 +376,24 @@ const citations = chunks
   .filter((c) => c.url)
   .slice(0, 10);
 
-if (!text) {
-  console.error("Empty response from Gemini — aborting.");
-  process.exit(1);
-}
-
 console.log("Gemini response:\n", text, "\n");
 
-const lines = text.split("\n");
-const headline =
-  (lines.find((l) => /^HEADLINE:/i.test(l)) ?? "").replace(/^HEADLINE:\s*/i, "").trim() ||
-  "Indian Box Office morning brief";
-const lede =
-  (lines.find((l) => /^LEDE:/i.test(l)) ?? "").replace(/^LEDE:\s*/i, "").trim() || "";
-const bodyStart = lines.findIndex((l) => /^BODY:/i.test(l));
-const bodyText =
-  bodyStart >= 0
-    ? lines
-        .slice(bodyStart)
-        .join("\n")
-        .replace(/^BODY:\s*/i, "")
-        .trim()
-    : text.replace(/^HEADLINE:.*$/im, "").replace(/^LEDE:.*$/im, "").trim();
+const parsed = parseModelText(text);
+if (!isComplete(parsed)) {
+  console.warn("Gemini returned incomplete brief — using board-template instead.");
+  writeBrief(fallback);
+  process.exit(0);
+}
 
-const brief = {
+writeBrief({
   briefDate: todayMu,
   generatedAt: new Date().toISOString(),
-  headline,
-  lede,
-  body: bodyText,
-  citations: citations.map((c) => ({ url: c.url, title: c.title || c.url })),
+  headline: parsed.headline,
+  lede: parsed.lede,
+  body: parsed.body,
+  citations: citations.length
+    ? citations
+    : headlines.slice(0, 5).map((h) => ({ url: h.url, title: h.title })),
   boardGeneratedAt: board?.generatedAt ?? null,
   model: MODEL,
-};
-
-writeFileSync(briefPath, `${JSON.stringify(brief, null, 2)}\n`);
-console.log(`✓ Morning brief written → docs/morning-brief.json`);
-console.log(`  Headline: ${headline}`);
-console.log(`  Citations: ${citations.length}`);
+});

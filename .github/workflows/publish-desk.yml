@@ -37,7 +37,7 @@ jobs:
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          FORCE_BRIEF: ${{ inputs.force_brief == 'true' && '1' || '' }}
+          FORCE_BRIEF: ${{ (inputs.force_brief == true || inputs.force_brief == 'true') && '1' || '' }}
         run: |
           # Generate brief on the dedicated 04:00 UTC cron, manual dispatch, or when forced
           HOUR=$(date -u +%H)
@@ -50,7 +50,7 @@ jobs:
         run: |
           git config user.name "ibo-desk-bot"
           git config user.email "ibo-desk-bot@users.noreply.github.com"
-          git add docs/catalog.js docs/board.json docs/health.json docs/history docs/app.js docs/index.html docs/sitemap.xml docs/robots.txt docs/morning-brief.json || true
+          git add docs/catalog.js docs/board.json docs/health.json docs/history docs/app.js docs/index.html docs/styles.css docs/sitemap.xml docs/robots.txt docs/morning-brief.json || true
           if git diff --staged --quiet; then
             echo "No board changes"
             exit 0

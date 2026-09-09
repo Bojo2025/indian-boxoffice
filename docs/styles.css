@@ -175,25 +175,61 @@ tr.live td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
 /* ── Morning Brief ─────────────────────────────────────────────────────── */
 #brief {
   margin: 48px 0 0;
-  padding: 32px 36px 36px;
+  padding: 28px 32px 30px;
   background: color-mix(in srgb, var(--accent) 8%, var(--surface));
   border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
 }
 #brief h2 {
-  font-size: clamp(1.4rem, 3.5vw, 2rem);
-  margin-top: 10px;
+  font-size: clamp(1.35rem, 3.2vw, 1.9rem);
+  margin-top: 8px;
   color: var(--fg);
+}
+.brief-teaser {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.brief-teaser:hover h2,
+.brief-teaser:focus-visible h2 {
+  color: var(--paper);
+}
+.brief-preview {
+  margin: 12px 0 0;
+  max-width: 68ch;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+.brief-more {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+.brief-teaser[aria-expanded="true"] .brief-more {
+  color: var(--muted);
+}
+.brief-full {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border));
+}
+.brief-full[hidden] {
+  display: none;
 }
 .brief-lede {
   font-family: var(--font-display);
   font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--paper);
-  margin: 12px 0 0;
+  margin: 0;
   max-width: 70ch;
   line-height: 1.5;
 }
 .brief-body {
-  margin-top: 18px;
+  margin-top: 16px;
   max-width: 68ch;
 }
 .brief-body p {
