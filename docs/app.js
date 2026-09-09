@@ -315,15 +315,26 @@
     const playing = films.filter((m) => m.status === "playing");
     const late = films.filter((m) => m.status === "late");
     const ranked = [...films].sort((a, b) => b.worldwide - a.worldwide);
-    const ytdWw = films.reduce((a, m) => a + (m.worldwide || 0), 0);
-    const ytdNet = films.reduce((a, m) => a + (m.indiaNet || 0), 0);
 
-    document.getElementById("stats").innerHTML = [
-      stat("Tracked worldwide", formatCrCompact(ytdWw)),
-      stat("India net on file", formatCrCompact(ytdNet)),
-      stat("Now playing", String(playing.length)),
-      stat("Sources", String(catalog.sources?.length || 0)),
-    ].join("");
+    // This week's board: theatrical titles ranked by worldwide gross
+    const weekPool = films.filter((m) => m.status === "playing" || m.status === "late");
+    const weekRanked = [...weekPool].sort((a, b) => (b.worldwide || 0) - (a.worldwide || 0));
+    const weekBoard = document.getElementById("week-board");
+    weekBoard.innerHTML =
+      weekRanked
+        .slice(0, 5)
+        .map(
+          (m, i) => `<li>
+            <span class="week-rank">${i + 1}</span>
+            <span class="week-title">${esc(m.title)}</span>
+            <span class="week-gross">
+              <strong>${esc(formatCrCompact(m.worldwide))}</strong>
+              <em>WW</em>
+              <span>${esc(formatCrCompact(m.indiaNet))} net</span>
+            </span>
+          </li>`,
+        )
+        .join("") || `<li class="week-empty">No theatrical titles on the board.</li>`;
 
     document.getElementById("now-grid").innerHTML = playing.map(card).join("") || empty("No live titles.");
     document.getElementById("late-grid").innerHTML = late.map(card).join("") || empty("No late-run titles.");
