@@ -208,17 +208,20 @@
   }
 
   function renderBrief(brief) {
-    const section = document.getElementById("brief");
-    if (!brief || !brief.headline || !section) return;
+    const box = document.getElementById("brief");
+    const modal = document.getElementById("brief-modal");
+    const teaser = document.getElementById("brief-teaser");
+    if (!brief || !brief.headline || !box || !modal || !teaser) return;
 
     const briefMs = new Date(brief.generatedAt).getTime();
     if (!Number.isFinite(briefMs) || (Date.now() - briefMs) / 86400000 > 1.5) return;
 
-    const fullText = [brief.lede, brief.body].filter(Boolean).join("\n\n").trim();
-    const preview = clip(fullText || brief.headline, 160);
+    const fullText = [brief.lede, brief.body].filter(Boolean).join(" ").trim();
+    const preview = clip(fullText || brief.headline, 120);
 
     document.getElementById("brief-headline").textContent = brief.headline;
     document.getElementById("brief-preview").textContent = preview;
+    document.getElementById("brief-modal-headline").textContent = brief.headline;
     document.getElementById("brief-lede").textContent = brief.lede || "";
 
     const bodyEl = document.getElementById("brief-body");
@@ -256,30 +259,40 @@
       stampEl.textContent = brief.generatedAt;
     }
 
-    const teaser = document.getElementById("brief-teaser");
-    const full = document.getElementById("brief-full");
-    const more = document.getElementById("brief-more");
-    let open = false;
+    function openBrief() {
+      if (typeof modal.showModal === "function") modal.showModal();
+      else modal.setAttribute("open", "");
+      history.replaceState(null, "", "#brief");
+    }
 
-    function setOpen(next) {
-      open = next;
-      teaser.setAttribute("aria-expanded", open ? "true" : "false");
-      full.hidden = !open;
-      more.textContent = open ? "Hide brief ↑" : "Read full brief →";
-      if (open) {
-        history.replaceState(null, "", "#brief");
-      }
+    function closeBrief() {
+      if (typeof modal.close === "function" && modal.open) modal.close();
+      else modal.removeAttribute("open");
+      if (location.hash === "#brief") history.replaceState(null, "", " ");
     }
 
     teaser.onclick = (e) => {
       e.preventDefault();
-      setOpen(!open);
+      openBrief();
     };
 
-    if (location.hash === "#brief") setOpen(true);
-    else setOpen(false);
+    modal.addEventListener("close", () => {
+      if (location.hash === "#brief") history.replaceState(null, "", " ");
+    });
 
-    section.style.display = "";
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeBrief();
+    });
+
+    document.querySelectorAll('a[href="#brief"]').forEach((a) => {
+      a.onclick = (e) => {
+        e.preventDefault();
+        openBrief();
+      };
+    });
+
+    box.style.display = "flex";
+    if (location.hash === "#brief") openBrief();
   }
 
   async function loadBrief() {

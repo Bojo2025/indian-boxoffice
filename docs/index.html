@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260909b" />
+  <link rel="stylesheet" href="./styles.css?v=20260909c" />
 </head>
 <body>
   <header class="mast">
@@ -30,21 +30,28 @@
   </header>
   <main id="top">
     <p class="updated" id="updated-line">Board loading…</p>
-    <dl class="stats" id="stats"></dl>
-    <section id="brief" style="display:none" aria-label="Morning brief">
-      <p class="kicker">Morning brief</p>
-      <a class="brief-teaser" id="brief-teaser" href="#brief" aria-expanded="false">
-        <h2 id="brief-headline"></h2>
-        <p class="brief-preview" id="brief-preview"></p>
-        <span class="brief-more" id="brief-more">Read full brief →</span>
-      </a>
-      <div class="brief-full" id="brief-full" hidden>
-        <p class="brief-lede" id="brief-lede"></p>
-        <div class="brief-body" id="brief-body"></div>
-        <ul class="brief-citations" id="brief-citations"></ul>
-        <p class="updated" id="brief-stamp"></p>
-      </div>
-    </section>
+    <div class="board-top">
+      <dl class="stats" id="stats"></dl>
+      <aside id="brief" class="brief-box" style="display:none" aria-label="Morning brief">
+        <button type="button" class="brief-teaser" id="brief-teaser" aria-haspopup="dialog" aria-controls="brief-modal">
+          <p class="kicker">Morning brief</p>
+          <h2 id="brief-headline"></h2>
+          <p class="brief-preview" id="brief-preview"></p>
+          <span class="brief-more">Open full brief →</span>
+        </button>
+      </aside>
+    </div>
+    <dialog id="brief-modal" class="brief-modal">
+      <form method="dialog" class="brief-modal-bar">
+        <p class="kicker">Morning brief</p>
+        <button type="submit" class="brief-modal-close" aria-label="Close">Close</button>
+      </form>
+      <h2 id="brief-modal-headline"></h2>
+      <p class="brief-lede" id="brief-lede"></p>
+      <div class="brief-body" id="brief-body"></div>
+      <ul class="brief-citations" id="brief-citations"></ul>
+      <p class="updated" id="brief-stamp"></p>
+    </dialog>
     <section id="now">
       <p class="kicker">Theatrical</p>
       <h2>Now in theatres</h2>
@@ -90,7 +97,7 @@
       Figures in ₹ crore. India nett / worldwide gross.
     </div>
   </footer>
-  <script src="./catalog.js?v=20260909b"></script>
-  <script src="./app.js?v=20260909b"></script>
+  <script src="./catalog.js?v=20260909c"></script>
+  <script src="./app.js?v=20260909c"></script>
 </body>
 </html>
