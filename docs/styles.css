@@ -103,10 +103,10 @@ button.pull:disabled { opacity: 0.5; cursor: wait; }
   display: flex;
   gap: 16px;
   align-items: stretch;
-  margin: 24px 0 16px;
+  margin: 16px 0 8px;
 }
-section { margin: 48px 0; }
-#now { margin-top: 28px; }
+section { margin: 40px 0; }
+#now { margin-top: 12px; }
 .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .card, .source {
   background: var(--surface);
