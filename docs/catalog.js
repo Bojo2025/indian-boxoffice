@@ -1,7 +1,7 @@
 window.IBO_CATALOG = {
-  "generatedAt": "2026-09-08T07:16:14.383Z",
-  "deskDate": "2026-09-08",
-  "comparedTo": "2026-09-08 prior",
+  "generatedAt": "2026-09-09T06:42:13.440Z",
+  "deskDate": "2026-09-09",
+  "comparedTo": "2026-09-08",
   "mode": "server-consensus",
   "spine": [
     "sacnilk",
@@ -12,18 +12,20 @@ window.IBO_CATALOG = {
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 2)",
-      "koimoi has failed 2 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 4)",
+      "koimoi has failed 4 consecutive publishes",
+      "boi failed: HTTP 403 (streak 2)",
+      "boi has failed 2 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
         "ok": true,
         "streakFail": 0,
-        "detail": "694 collection rows from 16 live pulls"
+        "detail": "704 collection rows from 16 live pulls"
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 2,
+        "streakFail": 4,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -32,9 +34,9 @@ window.IBO_CATALOG = {
         "detail": "46 collection rows from 16 live pulls"
       },
       "boi": {
-        "ok": true,
-        "streakFail": 0,
-        "detail": "Fetched 1 page (headlines / status)"
+        "ok": false,
+        "streakFail": 2,
+        "detail": "HTTP 403"
       }
     }
   },
@@ -126,20 +128,20 @@ window.IBO_CATALOG = {
       "synopsis": "A pan-India drama set in post-independence Goa. Dual-role Yash vehicle that opened like a mass film and is holding like a divided one.",
       "status": "playing",
       "verdict": "Pending",
-      "indiaNet": 246.89,
-      "indiaGross": 294.66,
-      "overseas": 43.3,
-      "worldwide": 337.43,
-      "lastDayNet": 1.14,
-      "trackedThroughDay": 14,
+      "posterKey": "toxic",
+      "poster": "./posters/toxic.jpg",
+      "indiaNet": 247.25,
+      "indiaGross": 295.1,
+      "overseas": 43.4,
+      "worldwide": 338.5,
+      "lastDayNet": 0.02,
+      "trackedThroughDay": 15,
       "liveSources": [
         "sacnilk",
         "wikipedia"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "toxic",
-      "poster": "./posters/toxic.jpg"
+      "deltaNet": 0.36,
+      "deltaWw": 1.07
     },
     {
       "id": "awarapan-2",
@@ -154,20 +156,20 @@ window.IBO_CATALOG = {
       "synopsis": "Vishesh Films sequel. Quiet Independence-weekend build, then a genuine word-of-mouth climb into the 100-crore club.",
       "status": "playing",
       "verdict": "Hit",
-      "indiaNet": 150.3,
-      "indiaGross": 179.15,
+      "posterKey": "awarapan-2",
+      "poster": "./posters/awarapan-2.jpg",
+      "indiaNet": 150.36,
+      "indiaGross": 179.22,
       "overseas": 33.41,
       "worldwide": 210.26,
-      "lastDayNet": 0.05,
-      "trackedThroughDay": 26,
+      "lastDayNet": 0.06,
+      "trackedThroughDay": 27,
       "liveSources": [
         "sacnilk",
         "hungama"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "awarapan-2",
-      "poster": "./posters/awarapan-2.jpg"
+      "deltaNet": 0.06,
+      "deltaWw": 0
     },
     {
       "id": "vishwanath-and-sons",
@@ -182,19 +184,19 @@ window.IBO_CATALOG = {
       "synopsis": "Suriya family drama with a slow theatrical burn. Producer gross and Sacnilk remain tens of crores apart — the year's clearest reporting gap.",
       "status": "playing",
       "verdict": "Hit",
-      "indiaNet": 121.5,
-      "indiaGross": 140.55,
+      "posterKey": "vishwanath",
+      "poster": "./posters/vishwanath.jpg",
+      "indiaNet": 121.74,
+      "indiaGross": 140.82,
       "overseas": 65,
-      "worldwide": 205.55,
+      "worldwide": 205.82,
       "lastDayNet": 0.24,
-      "trackedThroughDay": 25,
+      "trackedThroughDay": 26,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "vishwanath",
-      "poster": "./posters/vishwanath.jpg"
+      "deltaNet": 0.24,
+      "deltaWw": 0.27
     },
     {
       "id": "irumudi",
@@ -209,19 +211,19 @@ window.IBO_CATALOG = {
       "synopsis": "Ayyappa Deeksha road film that turned into Ravi Teja's cleanest family hold of the decade, led by Nizam.",
       "status": "playing",
       "verdict": "Super Hit",
-      "indiaNet": 168.7,
-      "indiaGross": 196.05,
-      "overseas": 22.15,
-      "worldwide": 218.2,
-      "lastDayNet": 2.4,
-      "trackedThroughDay": 18,
+      "posterKey": "irumudi",
+      "poster": "./posters/irumudi.jpg",
+      "indiaNet": 170.95,
+      "indiaGross": 198.65,
+      "overseas": 22.2,
+      "worldwide": 220.85,
+      "lastDayNet": 2.25,
+      "trackedThroughDay": 19,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "irumudi",
-      "poster": "./posters/irumudi.jpg"
+      "deltaNet": 2.25,
+      "deltaWw": 2.65
     },
     {
       "id": "batwara-1947",
@@ -236,20 +238,20 @@ window.IBO_CATALOG = {
       "synopsis": "Partition drama that found a North circuit but not a national breakout.",
       "status": "playing",
       "verdict": "Average",
+      "posterKey": "batwara",
+      "poster": "./posters/batwara.jpg",
       "indiaNet": 38.08,
       "indiaGross": 45.16,
       "overseas": 9.05,
       "worldwide": 54.2,
       "lastDayNet": 0.01,
-      "trackedThroughDay": 26,
+      "trackedThroughDay": 27,
       "liveSources": [
         "sacnilk",
         "hungama"
       ],
       "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "batwara",
-      "poster": "./posters/batwara.jpg"
+      "deltaWw": 0
     },
     {
       "id": "hi",
@@ -264,19 +266,19 @@ window.IBO_CATALOG = {
       "synopsis": "Small-to-mid Tamil release climbing on Sunday occupancy rather than a Friday blast.",
       "status": "playing",
       "verdict": "Pending",
-      "indiaNet": 11.87,
-      "indiaGross": 13.71,
+      "posterKey": "hi",
+      "poster": "./posters/hi.jpg",
+      "indiaNet": 12.14,
+      "indiaGross": 14.14,
       "overseas": 0,
-      "worldwide": 13.71,
-      "lastDayNet": 0.23,
-      "trackedThroughDay": 11,
+      "worldwide": 14.14,
+      "lastDayNet": 0.19,
+      "trackedThroughDay": 12,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "hi",
-      "poster": "./posters/hi.jpg"
+      "deltaNet": 0.27,
+      "deltaWw": 0.43
     },
     {
       "id": "insidious-further",
@@ -291,6 +293,8 @@ window.IBO_CATALOG = {
       "synopsis": "Horror holdover with a serviceable multiplex opening and a fast weekday fade.",
       "status": "playing",
       "verdict": "Pending",
+      "posterKey": "insidious-further",
+      "poster": "./posters/insidious-further.jpg",
       "indiaNet": 16.62,
       "indiaGross": 19.61,
       "overseas": 2,
@@ -299,9 +303,7 @@ window.IBO_CATALOG = {
       "trackedThroughDay": 11,
       "liveSources": [],
       "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "insidious-further",
-      "poster": "./posters/insidious-further.jpg"
+      "deltaWw": 0
     },
     {
       "id": "paw-patrol-dino",
@@ -316,6 +318,8 @@ window.IBO_CATALOG = {
       "synopsis": "Kids' matinee title. Modest India gross, weekend-weighted.",
       "status": "playing",
       "verdict": "Pending",
+      "posterKey": "paw-patrol-dino",
+      "poster": "./posters/paw-patrol-dino.jpg",
       "indiaNet": 3.44,
       "indiaGross": 4.06,
       "overseas": 0.42,
@@ -324,9 +328,7 @@ window.IBO_CATALOG = {
       "trackedThroughDay": 11,
       "liveSources": [],
       "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "paw-patrol-dino",
-      "poster": "./posters/paw-patrol-dino.jpg"
+      "deltaWw": 0
     },
     {
       "id": "hanuman-ansh",
@@ -341,20 +343,20 @@ window.IBO_CATALOG = {
       "synopsis": "Devotional animation with a long thin tail rather than an opening.",
       "status": "late",
       "verdict": "Flop",
-      "indiaNet": 132.13,
-      "indiaGross": 156.24,
+      "posterKey": "hanuman-ansh",
+      "poster": "./posters/hanuman-ansh.jpg",
+      "indiaNet": 142.88,
+      "indiaGross": 168.89,
       "overseas": 0,
-      "worldwide": 156.2,
-      "lastDayNet": 10,
-      "trackedThroughDay": 32,
+      "worldwide": 168.85,
+      "lastDayNet": 10.75,
+      "trackedThroughDay": 33,
       "liveSources": [
         "sacnilk",
         "hungama"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "hanuman-ansh",
-      "poster": "./posters/hanuman-ansh.jpg"
+      "deltaNet": 10.75,
+      "deltaWw": 12.65
     },
     {
       "id": "spider-man-bnd",
@@ -369,19 +371,19 @@ window.IBO_CATALOG = {
       "synopsis": "The year's biggest Hollywood grosser in India. Still occupying premium screens in week five.",
       "status": "late",
       "verdict": "All Time Blockbuster",
-      "indiaNet": 497.51,
-      "indiaGross": 595.25,
+      "posterKey": "spider-man-bnd",
+      "poster": "./posters/spider-man-bnd.jpg",
+      "indiaNet": 497.75,
+      "indiaGross": 595.52,
       "overseas": 0,
-      "worldwide": 595.25,
-      "lastDayNet": 0.21,
-      "trackedThroughDay": 40,
+      "worldwide": 595.52,
+      "lastDayNet": 0.24,
+      "trackedThroughDay": 41,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "spider-man-bnd",
-      "poster": "./posters/spider-man-bnd.jpg"
+      "deltaNet": 0.24,
+      "deltaWw": 0.27
     },
     {
       "id": "dhamaal-4",
@@ -396,20 +398,20 @@ window.IBO_CATALOG = {
       "synopsis": "Comedy franchise that paid for itself without becoming a cultural event.",
       "status": "late",
       "verdict": "Hit",
-      "indiaNet": 167.87,
-      "indiaGross": 199.35,
-      "overseas": 30.85,
-      "worldwide": 230.16,
-      "lastDayNet": 0.01,
-      "trackedThroughDay": 61,
-      "liveSources": [
-        "hungama",
-        "sacnilk"
-      ],
-      "deltaNet": 0,
-      "deltaWw": 0,
       "posterKey": "dhamaal-4",
-      "poster": "./posters/dhamaal-4.jpg"
+      "poster": "./posters/dhamaal-4.jpg",
+      "indiaNet": 167.88,
+      "indiaGross": 199.36,
+      "overseas": 30.85,
+      "worldwide": 230.17,
+      "lastDayNet": 0.01,
+      "trackedThroughDay": 62,
+      "liveSources": [
+        "sacnilk",
+        "hungama"
+      ],
+      "deltaNet": 0.01,
+      "deltaWw": 0.01
     },
     {
       "id": "the-odyssey",
@@ -424,19 +426,19 @@ window.IBO_CATALOG = {
       "synopsis": "Prestige Hollywood hold. India is a premium-screen story, not a mass one.",
       "status": "late",
       "verdict": "Pending",
-      "indiaNet": 193.07,
-      "indiaGross": 229.93,
+      "posterKey": "the-odyssey",
+      "poster": "./posters/the-odyssey.jpg",
+      "indiaNet": 193.39,
+      "indiaGross": 230.28,
       "overseas": 0,
-      "worldwide": 229.93,
-      "lastDayNet": 0.25,
-      "trackedThroughDay": 53,
+      "worldwide": 230.28,
+      "lastDayNet": 0.32,
+      "trackedThroughDay": 54,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "the-odyssey",
-      "poster": "./posters/the-odyssey.jpg"
+      "deltaNet": 0.32,
+      "deltaWw": 0.35
     },
     {
       "id": "dhurandhar",
@@ -451,21 +453,21 @@ window.IBO_CATALOG = {
       "synopsis": "The film that bent 2026. Roughly a fifth of India's first-half box office sat in this one title.",
       "status": "closed",
       "verdict": "All Time Blockbuster",
-      "indiaNet": 1149.3,
+      "posterKey": "dhurandhar",
+      "poster": "./posters/dhurandhar.jpg",
+      "indiaNet": 1108.09,
       "indiaGross": 1375.39,
-      "overseas": 438,
-      "worldwide": 1813.39,
+      "overseas": 470,
+      "worldwide": 1820,
       "lastDayNet": 0.01,
-      "trackedThroughDay": 174,
+      "trackedThroughDay": 175,
       "liveSources": [
         "sacnilk",
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "dhurandhar",
-      "poster": "./posters/dhurandhar.jpg"
+      "deltaNet": -41.21,
+      "deltaWw": 6.61
     },
     {
       "id": "border-2",
@@ -480,21 +482,21 @@ window.IBO_CATALOG = {
       "synopsis": "Republic Day war film. Second-highest Indian grosser of the year, a long way behind Dhurandhar.",
       "status": "closed",
       "verdict": "Blockbuster",
+      "posterKey": "border-2",
+      "poster": "./posters/border-2.jpg",
       "indiaNet": 329.43,
       "indiaGross": 393.46,
       "overseas": 57.25,
       "worldwide": 450.19,
       "lastDayNet": 0.01,
-      "trackedThroughDay": 229,
+      "trackedThroughDay": 230,
       "liveSources": [
         "sacnilk",
         "hungama",
         "wikipedia"
       ],
       "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "border-2",
-      "poster": "./posters/border-2.jpg"
+      "deltaWw": 0
     },
     {
       "id": "peddi",
@@ -509,21 +511,21 @@ window.IBO_CATALOG = {
       "synopsis": "Sports drama whose worldwide gross is still published as a range — ₹330 to ₹400 crore.",
       "status": "closed",
       "verdict": "Blockbuster",
+      "posterKey": "peddi",
+      "poster": "./posters/peddi.jpg",
       "indiaNet": 244.64,
       "indiaGross": 289,
       "overseas": 52.9,
       "worldwide": 341.9,
       "lastDayNet": 0.01,
-      "trackedThroughDay": 166,
+      "trackedThroughDay": 167,
       "liveSources": [
         "sacnilk",
         "hungama",
         "wikipedia"
       ],
       "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "peddi",
-      "poster": "./posters/peddi.jpg"
+      "deltaWw": 0
     },
     {
       "id": "jana-nayagan",
@@ -538,19 +540,19 @@ window.IBO_CATALOG = {
       "synopsis": "Vijay's theatrical farewell. Tight 320–325 crore band across newsrooms, now on ZEE5.",
       "status": "closed",
       "verdict": "Blockbuster",
+      "posterKey": "jana-nayagan",
+      "poster": "./posters/jana-nayagan.jpg",
       "indiaNet": 0,
       "indiaGross": 0,
       "overseas": 0,
       "worldwide": 322.5,
       "lastDayNet": null,
-      "trackedThroughDay": 242,
+      "trackedThroughDay": 243,
       "liveSources": [
         "wikipedia"
       ],
       "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "jana-nayagan",
-      "poster": "./posters/jana-nayagan.jpg"
+      "deltaWw": 0
     },
     {
       "id": "karuppu",
@@ -565,20 +567,20 @@ window.IBO_CATALOG = {
       "synopsis": "Suriya's mass register. Paired with Vishwanath And Sons, his most complete year.",
       "status": "closed",
       "verdict": "Blockbuster",
+      "posterKey": "karuppu",
+      "poster": "./posters/karuppu.jpg",
       "indiaNet": 198.18,
       "indiaGross": 228.97,
       "overseas": 81.15,
       "worldwide": 310.12,
       "lastDayNet": 0.01,
-      "trackedThroughDay": 152,
+      "trackedThroughDay": 153,
       "liveSources": [
         "sacnilk",
         "wikipedia"
       ],
       "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "karuppu",
-      "poster": "./posters/karuppu.jpg"
+      "deltaWw": 0
     },
     {
       "id": "msvpg",
@@ -593,19 +595,19 @@ window.IBO_CATALOG = {
       "synopsis": "Sankranti Megastar film. Solid 300-crore worldwide without dominating the year.",
       "status": "closed",
       "verdict": "Hit",
+      "posterKey": "msvpg",
+      "poster": "./posters/msvpg.svg",
       "indiaNet": 0,
       "indiaGross": 0,
       "overseas": 0,
       "worldwide": 305,
       "lastDayNet": null,
-      "trackedThroughDay": 240,
+      "trackedThroughDay": 241,
       "liveSources": [
         "wikipedia"
       ],
       "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "msvpg",
-      "poster": "./posters/msvpg.svg"
+      "deltaWw": 0
     },
     {
       "id": "bhooth-bangla",
@@ -620,19 +622,19 @@ window.IBO_CATALOG = {
       "synopsis": "Comedy-horror that landed as a paid-up performer rather than a runaway.",
       "status": "closed",
       "verdict": "Average",
+      "posterKey": "bhooth-bangla",
+      "poster": "./posters/bhooth-bangla.jpg",
       "indiaNet": 168.26,
       "indiaGross": 199.13,
       "overseas": 48.15,
       "worldwide": 247.28,
       "lastDayNet": 5,
-      "trackedThroughDay": 159,
+      "trackedThroughDay": 160,
       "liveSources": [
         "hungama"
       ],
       "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "bhooth-bangla",
-      "poster": "./posters/bhooth-bangla.jpg"
+      "deltaWw": 0
     },
     {
       "id": "drishyam-3",
@@ -647,19 +649,19 @@ window.IBO_CATALOG = {
       "synopsis": "The franchise still prints money in Malayalam and dubbed Hindi without needing a splash opening.",
       "status": "closed",
       "verdict": "Blockbuster",
+      "posterKey": "drishyam-3",
+      "poster": "./posters/drishyam-3.jpg",
       "indiaNet": 0,
       "indiaGross": 0,
       "overseas": 0,
       "worldwide": 242,
       "lastDayNet": null,
-      "trackedThroughDay": 202,
+      "trackedThroughDay": 203,
       "liveSources": [
         "wikipedia"
       ],
       "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "drishyam-3",
-      "poster": "./posters/drishyam-3.jpg"
+      "deltaWw": 0
     },
     {
       "id": "vaazha-ii",
@@ -674,6 +676,8 @@ window.IBO_CATALOG = {
       "synopsis": "Sequel that out-earned its scale. A Mollywood word-of-mouth case study.",
       "status": "closed",
       "verdict": "Blockbuster",
+      "posterKey": "vaazha-ii",
+      "poster": "./posters/vaazha-ii.svg",
       "indiaNet": 178,
       "indiaGross": 210,
       "overseas": 24.5,
@@ -682,9 +686,7 @@ window.IBO_CATALOG = {
       "trackedThroughDay": 80,
       "liveSources": [],
       "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "vaazha-ii",
-      "poster": "./posters/vaazha-ii.svg"
+      "deltaWw": 0
     },
     {
       "id": "welcome-jungle",
@@ -699,20 +701,20 @@ window.IBO_CATALOG = {
       "synopsis": "Early-summer comedy that held a multiplex floor into July.",
       "status": "closed",
       "verdict": "Hit",
+      "posterKey": "welcome-jungle",
+      "poster": "./posters/welcome-jungle.jpg",
       "indiaNet": 134.11,
       "indiaGross": 159.15,
       "overseas": 33.6,
       "worldwide": 192.75,
       "lastDayNet": 0.01,
-      "trackedThroughDay": 75,
+      "trackedThroughDay": 76,
       "liveSources": [
         "sacnilk",
         "hungama"
       ],
       "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "welcome-jungle",
-      "poster": "./posters/welcome-jungle.jpg"
+      "deltaWw": 0
     },
     {
       "id": "cocktail-2",
@@ -727,20 +729,20 @@ window.IBO_CATALOG = {
       "synopsis": "Nostalgia sequel. Average verdict, adult multiplex.",
       "status": "closed",
       "verdict": "Average",
+      "posterKey": "cocktail-2",
+      "poster": "./posters/cocktail-2.jpg",
       "indiaNet": 95.5,
       "indiaGross": 113.74,
       "overseas": 34,
       "worldwide": 147.73,
       "lastDayNet": 0.01,
-      "trackedThroughDay": 82,
+      "trackedThroughDay": 83,
       "liveSources": [
-        "hungama",
-        "sacnilk"
+        "sacnilk",
+        "hungama"
       ],
       "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "cocktail-2",
-      "poster": "./posters/cocktail-2.jpg"
+      "deltaWw": 0
     },
     {
       "id": "alpha",
@@ -755,42 +757,61 @@ window.IBO_CATALOG = {
       "synopsis": "YRF spy-verse entry that opened and then fell off a cliff.",
       "status": "closed",
       "verdict": "Flop",
+      "posterKey": "alpha",
+      "poster": "./posters/alpha.jpg",
       "indiaNet": 57.72,
       "indiaGross": 68.72,
       "overseas": 29.9,
       "worldwide": 98.62,
       "lastDayNet": null,
-      "trackedThroughDay": 68,
+      "trackedThroughDay": 69,
       "liveSources": [
         "hungama"
       ],
       "deltaNet": 0,
-      "deltaWw": 0,
-      "posterKey": "alpha",
-      "poster": "./posters/alpha.jpg"
+      "deltaWw": 0
     }
   ],
-  "changes": [],
+  "changes": [
+    {
+      "id": "hanuman-ansh",
+      "title": "Hanuman Ansh",
+      "text": "Hanuman Ansh: WW +₹12.65 Cr, India net +₹10.75 Cr since 2026-09-08",
+      "deltaNet": 10.75,
+      "deltaWw": 12.65
+    },
+    {
+      "id": "dhurandhar",
+      "title": "Dhurandhar: The Revenge",
+      "text": "Dhurandhar: The Revenge: WW +₹6.61 Cr, India net ₹-41.21 Cr since 2026-09-08",
+      "deltaNet": -41.21,
+      "deltaWw": 6.61
+    },
+    {
+      "id": "irumudi",
+      "title": "Irumudi",
+      "text": "Irumudi: WW +₹2.65 Cr, India net +₹2.25 Cr since 2026-09-08",
+      "deltaNet": 2.25,
+      "deltaWw": 2.65
+    },
+    {
+      "id": "toxic",
+      "title": "Toxic",
+      "text": "Toxic: WW +₹1.07 Cr since 2026-09-08",
+      "deltaNet": 0.36,
+      "deltaWw": 1.07
+    }
+  ],
   "logs": [
     {
       "sourceId": "sacnilk",
       "status": "ok",
-      "detail": "694 collection rows from 16 live pulls"
+      "detail": "704 collection rows from 16 live pulls"
     },
     {
       "sourceId": "hungama",
       "status": "ok",
       "detail": "46 collection rows from 16 live pulls"
-    },
-    {
-      "sourceId": "koimoi",
-      "status": "blocked",
-      "detail": "HTTP 403"
-    },
-    {
-      "sourceId": "express",
-      "status": "ok",
-      "detail": "Fetched 1 page (headlines / status)"
     },
     {
       "sourceId": "etimes",
@@ -808,159 +829,169 @@ window.IBO_CATALOG = {
       "detail": "Fetched 1 page (headlines / status)"
     },
     {
-      "sourceId": "boi",
+      "sourceId": "koimoi",
+      "status": "blocked",
+      "detail": "HTTP 403"
+    },
+    {
+      "sourceId": "express",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
+    },
+    {
+      "sourceId": "boi",
+      "status": "blocked",
+      "detail": "HTTP 403"
     }
   ],
   "headlines": [
     {
       "sourceId": "sacnilk",
-      "title": "Hi: Sacnilk 11 days, India net ₹11.87 Cr",
-      "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:08.071Z",
-      "summary": "Live day-wise pull. Last day 11. WW ₹13.71 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Toxic: Sacnilk 13 days, India net ₹246.89 Cr",
+      "title": "Toxic: Sacnilk 15 days, India net ₹247.25 Cr",
       "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:08.128Z",
-      "summary": "Live day-wise pull. Last day 13. WW ₹337.43 Cr."
+      "publishedAt": "2026-09-09T06:42:09.735Z",
+      "summary": "Live day-wise pull. Last day 15. WW ₹338.5 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Awarapan 2: Sacnilk 25 days, India net ₹150.3 Cr",
+      "title": "Hi: Sacnilk 12 days, India net ₹12.14 Cr",
+      "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-09T06:42:10.048Z",
+      "summary": "Live day-wise pull. Last day 12. WW ₹14.14 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Awarapan 2: Sacnilk 26 days, India net ₹150.36 Cr",
       "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:08.150Z",
-      "summary": "Live day-wise pull. Last day 25. WW ₹212.7 Cr."
+      "publishedAt": "2026-09-09T06:42:10.068Z",
+      "summary": "Live day-wise pull. Last day 26. WW ₹212.76 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr",
-      "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:08.421Z",
-      "summary": "Live day-wise pull. Last day 58. WW ₹450.19 Cr."
+      "title": "Vishwanath And Sons: Sacnilk 26 days, India net ₹121.74 Cr",
+      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-09T06:42:10.089Z",
+      "summary": "Live day-wise pull. Last day 26. WW ₹205.82 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Irumudi: Sacnilk 18 days, India net ₹168.7 Cr",
+      "title": "Irumudi: Sacnilk 19 days, India net ₹170.95 Cr",
       "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:08.465Z",
-      "summary": "Live day-wise pull. Last day 18. WW ₹218.2 Cr."
+      "publishedAt": "2026-09-09T06:42:10.145Z",
+      "summary": "Live day-wise pull. Last day 19. WW ₹220.85 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Dhurandhar: The Revenge: Sacnilk 98 days, India net ₹1149.3 Cr",
       "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:08.528Z",
+      "publishedAt": "2026-09-09T06:42:10.186Z",
       "summary": "Live day-wise pull. Last day 101. WW ₹1813.39 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Vishwanath And Sons: Sacnilk 25 days, India net ₹121.5 Cr",
-      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:08.545Z",
-      "summary": "Live day-wise pull. Last day 25. WW ₹205.55 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Batwara 1947: Sacnilk 24 days, India net ₹38.08 Cr",
       "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:08.558Z",
+      "publishedAt": "2026-09-09T06:42:10.298Z",
       "summary": "Live day-wise pull. Last day 24. WW ₹54.2 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr",
+      "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-09T06:42:10.447Z",
+      "summary": "Live day-wise pull. Last day 58. WW ₹450.19 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Peddi: Sacnilk 63 days, India net ₹244.64 Cr",
       "url": "https://www.sacnilk.com/news/peddi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:08.946Z",
+      "publishedAt": "2026-09-09T06:42:10.578Z",
       "summary": "Live day-wise pull. Last day 71. WW ₹341.9 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Spider-Man: Brand New Day: Sacnilk 41 days, India net ₹497.75 Cr",
+      "url": "https://www.sacnilk.com/news/spider_man_brand_new_day_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-09T06:42:11.040Z",
+      "summary": "Live day-wise pull. Last day 41. WW ₹595.52 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Karuppu: Sacnilk 55 days, India net ₹198.18 Cr",
       "url": "https://www.sacnilk.com/news/karuppu_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:09.056Z",
+      "publishedAt": "2026-09-09T06:42:11.140Z",
       "summary": "Live day-wise pull. Last day 59. WW ₹310.12 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Welcome To The Jungle: Sacnilk 49 days, India net ₹134.11 Cr",
       "url": "https://www.sacnilk.com/news/welcome_to_the_jungle_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:09.097Z",
+      "publishedAt": "2026-09-09T06:42:11.268Z",
       "summary": "Live day-wise pull. Last day 49. WW ₹192.75 Cr."
     },
     {
-      "sourceId": "hungama",
-      "title": "Hungama 2026 worldwide: 9 titles matched",
-      "url": "https://www.bollywoodhungama.com/box-office-collections/worldwide/2026/",
-      "publishedAt": "2026-09-08T07:16:09.239Z",
-      "summary": "dhurandhar ₹1852.44 Cr WW · border-2 ₹464.5 Cr WW · bhooth-bangla ₹247.28 Cr WW · dhamaal-4 ₹224.61 Cr WW · awarapan-2 ₹207.17 Cr WW"
-    },
-    {
       "sourceId": "sacnilk",
-      "title": "Spider-Man: Brand New Day: Sacnilk 40 days, India net ₹497.51 Cr",
-      "url": "https://www.sacnilk.com/news/spider_man_brand_new_day_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:09.351Z",
-      "summary": "Live day-wise pull. Last day 40. WW ₹595.25 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Hanuman Ansh: Sacnilk 32 days, India net ₹132.13 Cr",
-      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:09.395Z",
-      "summary": "Live day-wise pull. Last day 32. WW ₹156.2 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Dhamaal 4: Sacnilk 57 days, India net ₹167.87 Cr",
-      "url": "https://www.sacnilk.com/news/dhamaal_4_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:09.410Z",
-      "summary": "Live day-wise pull. Last day 59. WW ₹230.16 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "The Odyssey: Sacnilk 53 days, India net ₹193.07 Cr",
+      "title": "The Odyssey: Sacnilk 54 days, India net ₹193.39 Cr",
       "url": "https://www.sacnilk.com/news/the_odyssey_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-08T07:16:09.575Z",
-      "summary": "Live day-wise pull. Last day 53. WW ₹229.93 Cr."
+      "publishedAt": "2026-09-09T06:42:11.472Z",
+      "summary": "Live day-wise pull. Last day 54. WW ₹230.28 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Hanuman Ansh: Sacnilk 33 days, India net ₹142.88 Cr",
+      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-09T06:42:11.489Z",
+      "summary": "Live day-wise pull. Last day 33. WW ₹168.85 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Cocktail 2: Sacnilk 59 days, India net ₹95.5 Cr",
+      "url": "https://www.sacnilk.com/news/cocktail_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-09T06:42:11.515Z",
+      "summary": "Live day-wise pull. Last day 66. WW ₹147.73 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Dhamaal 4: Sacnilk 58 days, India net ₹167.88 Cr",
+      "url": "https://www.sacnilk.com/news/dhamaal_4_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-09T06:42:11.864Z",
+      "summary": "Live day-wise pull. Last day 61. WW ₹230.17 Cr."
     }
   ],
-  "downloads": {
-    "boardJson": "./board.json",
-    "healthJson": "./health.json",
-    "history": "./history/2026-09-08.json"
-  },
   "morningBrief": {
     "briefDate": "2026-09-09",
-    "generatedAt": "2026-09-09T06:40:26.778Z",
-    "headline": "Dhurandhar: The Revenge leads the board at ₹1,813.4 Cr WW",
-    "lede": "Dhurandhar: The Revenge sits at ₹1,813.4 Cr worldwide / ₹1,149.3 Cr India nett on the consensus desk.",
-    "body": "No material day-over-day moves since the last board snapshot.\n\nNow playing: Toxic (₹337.4 Cr WW); Awarapan 2 (₹210.3 Cr WW); Vishwanath And Sons (₹205.6 Cr WW); Irumudi (₹218.2 Cr WW); Batwara 1947 (₹54.2 Cr WW).\n\nWire: Hi: Sacnilk 11 days, India net ₹11.87 Cr (sacnilk).\n\nFigures are weighted-median consensus across trade trackers. India has no official auditor.",
+    "generatedAt": "2026-09-09T06:42:22.276Z",
+    "headline": "Hanuman Ansh moves +12.7 Cr worldwide",
+    "lede": "Dhurandhar: The Revenge sits at ₹1,820 Cr worldwide / ₹1,108.1 Cr India nett on the consensus desk.",
+    "body": "Day-over-day movers on the consensus board — Hanuman Ansh: WW +12.7 Cr, India net +10.8 Cr. Dhurandhar: The Revenge: WW +6.6 Cr, India net -41.2 Cr. Irumudi: WW +2.7 Cr, India net +2.3 Cr. Toxic: WW +1.1 Cr.\n\nNow playing: Toxic (₹338.5 Cr WW); Awarapan 2 (₹210.3 Cr WW); Vishwanath And Sons (₹205.8 Cr WW); Irumudi (₹220.9 Cr WW); Batwara 1947 (₹54.2 Cr WW).\n\nWire: Toxic: Sacnilk 15 days, India net ₹247.25 Cr (sacnilk).\n\nFigures are weighted-median consensus across trade trackers. India has no official auditor.",
     "citations": [
       {
-        "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-        "title": "Hi: Sacnilk 11 days, India net ₹11.87 Cr"
+        "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
+        "title": "Toxic: Sacnilk 15 days, India net ₹247.25 Cr"
       },
       {
-        "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-        "title": "Toxic: Sacnilk 13 days, India net ₹246.89 Cr"
+        "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+        "title": "Hi: Sacnilk 12 days, India net ₹12.14 Cr"
       },
       {
         "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-        "title": "Awarapan 2: Sacnilk 25 days, India net ₹150.3 Cr"
+        "title": "Awarapan 2: Sacnilk 26 days, India net ₹150.36 Cr"
       },
       {
-        "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-        "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr"
+        "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
+        "title": "Vishwanath And Sons: Sacnilk 26 days, India net ₹121.74 Cr"
       },
       {
         "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-        "title": "Irumudi: Sacnilk 18 days, India net ₹168.7 Cr"
+        "title": "Irumudi: Sacnilk 19 days, India net ₹170.95 Cr"
       }
     ],
-    "boardGeneratedAt": "2026-09-08T07:16:14.383Z",
+    "boardGeneratedAt": "2026-09-09T06:42:13.440Z",
     "model": "board-template"
+  },
+  "downloads": {
+    "boardJson": "./board.json",
+    "healthJson": "./health.json",
+    "history": "./history/2026-09-09.json"
   }
 };

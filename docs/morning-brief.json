@@ -1,31 +1,31 @@
 {
   "briefDate": "2026-09-09",
-  "generatedAt": "2026-09-09T06:40:26.778Z",
-  "headline": "Dhurandhar: The Revenge leads the board at ₹1,813.4 Cr WW",
-  "lede": "Dhurandhar: The Revenge sits at ₹1,813.4 Cr worldwide / ₹1,149.3 Cr India nett on the consensus desk.",
-  "body": "No material day-over-day moves since the last board snapshot.\n\nNow playing: Toxic (₹337.4 Cr WW); Awarapan 2 (₹210.3 Cr WW); Vishwanath And Sons (₹205.6 Cr WW); Irumudi (₹218.2 Cr WW); Batwara 1947 (₹54.2 Cr WW).\n\nWire: Hi: Sacnilk 11 days, India net ₹11.87 Cr (sacnilk).\n\nFigures are weighted-median consensus across trade trackers. India has no official auditor.",
+  "generatedAt": "2026-09-09T06:42:22.276Z",
+  "headline": "Hanuman Ansh moves +12.7 Cr worldwide",
+  "lede": "Dhurandhar: The Revenge sits at ₹1,820 Cr worldwide / ₹1,108.1 Cr India nett on the consensus desk.",
+  "body": "Day-over-day movers on the consensus board — Hanuman Ansh: WW +12.7 Cr, India net +10.8 Cr. Dhurandhar: The Revenge: WW +6.6 Cr, India net -41.2 Cr. Irumudi: WW +2.7 Cr, India net +2.3 Cr. Toxic: WW +1.1 Cr.\n\nNow playing: Toxic (₹338.5 Cr WW); Awarapan 2 (₹210.3 Cr WW); Vishwanath And Sons (₹205.8 Cr WW); Irumudi (₹220.9 Cr WW); Batwara 1947 (₹54.2 Cr WW).\n\nWire: Toxic: Sacnilk 15 days, India net ₹247.25 Cr (sacnilk).\n\nFigures are weighted-median consensus across trade trackers. India has no official auditor.",
   "citations": [
     {
-      "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Hi: Sacnilk 11 days, India net ₹11.87 Cr"
+      "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "title": "Toxic: Sacnilk 15 days, India net ₹247.25 Cr"
     },
     {
-      "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Toxic: Sacnilk 13 days, India net ₹246.89 Cr"
+      "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "title": "Hi: Sacnilk 12 days, India net ₹12.14 Cr"
     },
     {
       "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Awarapan 2: Sacnilk 25 days, India net ₹150.3 Cr"
+      "title": "Awarapan 2: Sacnilk 26 days, India net ₹150.36 Cr"
     },
     {
-      "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr"
+      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "title": "Vishwanath And Sons: Sacnilk 26 days, India net ₹121.74 Cr"
     },
     {
       "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Irumudi: Sacnilk 18 days, India net ₹168.7 Cr"
+      "title": "Irumudi: Sacnilk 19 days, India net ₹170.95 Cr"
     }
   ],
-  "boardGeneratedAt": "2026-09-08T07:16:14.383Z",
+  "boardGeneratedAt": "2026-09-09T06:42:13.440Z",
   "model": "board-template"
 }
