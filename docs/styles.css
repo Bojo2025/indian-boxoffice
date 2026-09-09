@@ -103,9 +103,10 @@ button.pull:disabled { opacity: 0.5; cursor: wait; }
   display: flex;
   gap: 16px;
   align-items: stretch;
-  margin: 40px 0 56px;
+  margin: 24px 0 16px;
 }
-section { margin: 64px 0; }
+section { margin: 48px 0; }
+#now { margin-top: 28px; }
 .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .card, .source {
   background: var(--surface);
