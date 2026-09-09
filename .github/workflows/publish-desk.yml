@@ -1,0 +1,97 @@
+name: Publish desk board
+
+on:
+  schedule:
+    # Every 3 hours — box office moves fast around openings / weekends
+    - cron: "0 */3 * * *"
+    # 04:00 UTC = 08:00 Mauritius — dedicated morning brief run
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+    inputs:
+      force_brief:
+        description: "Force regenerate today's morning brief even if it already exists"
+        required: false
+        default: "false"
+        type: boolean
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Publish consensus board
+        id: publish
+        continue-on-error: true
+        run: npm run publish:desk
+      - name: Generate morning brief
+        id: brief
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          FORCE_BRIEF: ${{ inputs.force_brief == 'true' && '1' || '' }}
+        run: |
+          # Generate brief on the dedicated 04:00 UTC cron, manual dispatch, or when forced
+          HOUR=$(date -u +%H)
+          if [ "$HOUR" = "04" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "${{ inputs.force_brief }}" = "true" ]; then
+            npm run morning:brief
+          else
+            echo "Outside morning brief window (current hour UTC: $HOUR) — skipping."
+          fi
+      - name: Commit board if changed
+        run: |
+          git config user.name "ibo-desk-bot"
+          git config user.email "ibo-desk-bot@users.noreply.github.com"
+          git add docs/catalog.js docs/board.json docs/health.json docs/history docs/app.js docs/index.html docs/sitemap.xml docs/robots.txt docs/morning-brief.json || true
+          if git diff --staged --quiet; then
+            echo "No board changes"
+            exit 0
+          fi
+          git commit -m "Refresh Pages desk from Sacnilk/Koimoi/Hungama/BOI consensus."
+          git push
+      - name: Open or update spine failure issue
+        if: steps.publish.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body = 'Scheduled `publish:desk` reported a hard spine failure (usually Sacnilk day-wise parse = 0).';
+            try {
+              const health = JSON.parse(fs.readFileSync('docs/health.json', 'utf8'));
+              body += `\n\n**Updated:** ${health.updatedAt}\n\n`;
+              body += (health.alerts || []).map((a) => `- ${a}`).join('\n');
+            } catch (e) {
+              body += `\n\nCould not read docs/health.json (${e.message}).`;
+            }
+            const title = 'Desk publish: spine scraper hard-fail';
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'desk-health',
+            });
+            const existing = issues.data.find((i) => i.title === title);
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['desk-health'],
+              });
+            }
