@@ -1,12 +1,12 @@
 {
   "date": "2026-09-09",
-  "generatedAt": "2026-09-09T13:34:35.952Z",
+  "generatedAt": "2026-09-09T18:23:38.479Z",
   "films": [
     {
       "id": "toxic",
       "title": "Toxic",
-      "indiaNet": 247.25,
-      "worldwide": 338.5,
+      "indiaNet": 247.83,
+      "worldwide": 339.29,
       "status": "playing"
     },
     {
@@ -26,8 +26,8 @@
     {
       "id": "irumudi",
       "title": "Irumudi",
-      "indiaNet": 170.95,
-      "worldwide": 220.85,
+      "indiaNet": 172.85,
+      "worldwide": 223.1,
       "status": "playing"
     },
     {
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 142.88,
-      "worldwide": 168.85,
+      "indiaNet": 153.13,
+      "worldwide": 180.95,
       "status": "late"
     },
     {
