@@ -7,7 +7,6 @@
 
   const films = catalog.films.map((f) => ({ ...f }));
   const logs = [];
-  const headlines = [...(catalog.headlines || [])];
 
   const IST = "Asia/Kolkata";
 
@@ -352,17 +351,6 @@
       </tr>`,
       )
       .join("");
-
-    document.getElementById("wires-list").innerHTML =
-      headlines
-        .slice(0, 12)
-        .map(
-          (h) => `<li>
-        <a href="${esc(h.url)}" target="_blank" rel="noopener noreferrer">${esc(h.title)}</a>
-        <p>${esc(h.summary || h.sourceId)}</p>
-      </li>`,
-        )
-        .join("") || `<li><p>No wires on this board yet.</p></li>`;
 
   }
 
