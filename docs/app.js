@@ -364,22 +364,6 @@
         )
         .join("") || `<li><p>No wires on this board yet.</p></li>`;
 
-    document.getElementById("source-grid").innerHTML = catalog.sources
-      .map((s) => {
-        const spine = (catalog.spine || []).includes(s.id);
-        const health = catalog.health?.spine?.[s.id];
-        const healthNote = health
-          ? health.ok
-            ? " · live ok"
-            : ` · failing ×${health.streakFail || 1}`
-          : "";
-        return `<article class="source">
-        <h3>${s.homepage ? `<a href="${esc(s.homepage)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>` : esc(s.name)}</h3>
-        <p class="meta">${esc(s.kind)} · weight ${esc(s.weight)}${spine ? " · spine" : ""}${esc(healthNote)}</p>
-        <p>${esc(s.notes)}</p>
-      </article>`;
-      })
-      .join("");
   }
 
   function deltaHtml(value) {
