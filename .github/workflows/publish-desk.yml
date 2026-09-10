@@ -39,12 +39,11 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           FORCE_BRIEF: ${{ (inputs.force_brief == true || inputs.force_brief == 'true') && '1' || '' }}
         run: |
-          # Generate brief on the dedicated 04:00 UTC cron, manual dispatch, or when forced
-          HOUR=$(date -u +%H)
-          if [ "$HOUR" = "04" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "${{ inputs.force_brief }}" = "true" ]; then
+          # Use the schedule identity; GitHub may start cron jobs late or early.
+          if [ "${{ github.event.schedule }}" = "0 4 * * *" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "${{ inputs.force_brief }}" = "true" ]; then
             npm run morning:brief
           else
-            echo "Outside morning brief window (current hour UTC: $HOUR) — skipping."
+            echo "This is not the 04:00 UTC brief schedule — skipping."
           fi
       - name: Commit board if changed
         run: |
