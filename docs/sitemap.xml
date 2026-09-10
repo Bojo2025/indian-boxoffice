@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bojo2025.github.io/indian-boxoffice/</loc>
+    <loc>https://indian-boxoffice.com/</loc>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bojo2025.github.io/indian-boxoffice/board.json</loc>
+    <loc>https://indian-boxoffice.com/board.json</loc>
     <changefreq>hourly</changefreq>
     <priority>0.6</priority>
   </url>
