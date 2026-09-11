@@ -36,7 +36,6 @@ jobs:
         id: brief
         continue-on-error: true
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           FORCE_BRIEF: ${{ (inputs.force_brief == true || inputs.force_brief == 'true') && '1' || '' }}
         run: |
           # Use the schedule identity; GitHub may start cron jobs late or early.

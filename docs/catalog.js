@@ -930,35 +930,35 @@ window.IBO_CATALOG = {
     }
   ],
   "morningBrief": {
-    "briefDate": "2026-09-10",
-    "generatedAt": "2026-09-10T05:15:41.284Z",
-    "headline": "Dhurandhar: The Revenge leads the board at ₹1,820 Cr WW",
-    "lede": "Dhurandhar: The Revenge sits at ₹1,820 Cr worldwide / ₹1,108.1 Cr India nett on the consensus desk.",
-    "body": "No material day-over-day moves since the last board snapshot.\n\nNow playing: Toxic (₹339.3 Cr WW); Awarapan 2 (₹210.3 Cr WW); Vishwanath And Sons (₹206.1 Cr WW); Irumudi (₹223.1 Cr WW); Batwara 1947 (₹54.2 Cr WW).\n\nWire: Batwara 1947: Sacnilk 24 days, India net ₹38.08 Cr (sacnilk).\n\nFigures are weighted-median consensus across trade trackers. India has no official auditor.",
+    "briefDate": "2026-09-11",
+    "generatedAt": "2026-09-11T05:16:46.158Z",
+    "headline": "India box office: Dhurandhar: The Revenge leads at ₹1,820 Cr worldwide",
+    "lede": "Dhurandhar: The Revenge leads the current IBO consensus board at ₹1,820 Cr worldwide, including ₹1,108.1 Cr in India nett.",
+    "body": "Current board ranking: 1. Dhurandhar: The Revenge — India nett ₹1,108.1 Cr; worldwide ₹1,820 Cr | 2. Spider-Man: Brand New Day — India nett ₹498.1 Cr; worldwide ₹596 Cr | 3. Border 2 — India nett ₹329.4 Cr; worldwide ₹450.2 Cr | 4. Peddi — India nett ₹244.6 Cr; worldwide ₹341.9 Cr | 5. Toxic — India nett ₹248.2 Cr; worldwide ₹339.3 Cr.\n\nNo material day-over-day worldwide move of ₹0.5 Cr or more was recorded in the latest board comparison.\n\nDesk health: koimoi failed: HTTP 403 (streak 15); koimoi has failed 15 consecutive publishes. Figures remain the weighted-median consensus of the available trackers; India has no official box-office auditor.",
     "citations": [
+      {
+        "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+        "title": "Hi: Sacnilk 14 days, India net ₹12.39 Cr"
+      },
       {
         "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
         "title": "Batwara 1947: Sacnilk 24 days, India net ₹38.08 Cr"
       },
       {
-        "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-        "title": "Irumudi: Sacnilk 20 days, India net ₹172.85 Cr"
-      },
-      {
-        "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-        "title": "Awarapan 2: Sacnilk 27 days, India net ₹150.4 Cr"
-      },
-      {
-        "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-        "title": "Hi: Sacnilk 13 days, India net ₹12.34 Cr"
+        "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
+        "title": "Toxic: Sacnilk 16 days, India net ₹248.24 Cr"
       },
       {
         "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
-        "title": "Vishwanath And Sons: Sacnilk 27 days, India net ₹121.95 Cr"
+        "title": "Vishwanath And Sons: Sacnilk 28 days, India net ₹122.02 Cr"
+      },
+      {
+        "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+        "title": "Dhurandhar: The Revenge: Sacnilk 98 days, India net ₹1149.3 Cr"
       }
     ],
-    "boardGeneratedAt": "2026-09-10T05:15:32.344Z",
-    "model": "board-template"
+    "boardGeneratedAt": "2026-09-11T03:47:43.882Z",
+    "model": "deterministic-editorial-v1"
   },
   "downloads": {
     "boardJson": "./board.json",
