@@ -1,31 +1,31 @@
 {
   "briefDate": "2026-09-11",
-  "generatedAt": "2026-09-11T06:10:57.748Z",
+  "generatedAt": "2026-09-11T06:13:56.144Z",
   "headline": "India box office: Hanuman Ansh leads the latest daily chart at ₹10 Cr",
   "lede": "Hanuman Ansh leads the latest reported daily India nett at ₹10 Cr on Day 35; its cumulative India nett is ₹163.1 Cr.",
-  "body": "Latest reported daily ranking: 1. Hanuman Ansh — ₹10 Cr on Day 35; cumulative India nett ₹163.1 Cr | 2. Irumudi — ₹1.6 Cr on Day 21; cumulative India nett ₹174.5 Cr | 3. Toxic — ₹0.4 Cr on Day 17; cumulative India nett ₹248.2 Cr | 4. Spider-Man: Brand New Day — ₹0.2 Cr on Day 43; cumulative India nett ₹498.1 Cr | 5. Insidious: Out of The Further — ₹0.2 Cr on Day 11; cumulative India nett ₹16.6 Cr.\n\nRecent-release watch: Haiwaan (released 2026-09-11) — latest India nett n/a; Sardar 2 (released 2026-09-10) — latest India nett n/a; Hi (released 2026-08-28) — latest India nett ₹0.1 Cr; Toxic (released 2026-08-26) — latest India nett ₹0.4 Cr.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader at ₹1,820 Cr, but that is not the current daily chart.\n\nNo material day-over-day worldwide move of ₹0.5 Cr or more was recorded in the latest board comparison.\n\nDesk health: koimoi failed: HTTP 403 (streak 17); koimoi has failed 17 consecutive publishes. Figures remain the weighted-median consensus of the available trackers; India has no official box-office auditor.",
+  "body": "Latest reported daily ranking: 1. Hanuman Ansh — ₹10 Cr on Day 35; cumulative India nett ₹163.1 Cr | 2. Sardar 2 — ₹4.5 Cr on Day 1; cumulative India nett ₹4.5 Cr | 3. Irumudi — ₹1.6 Cr on Day 21; cumulative India nett ₹174.5 Cr | 4. Toxic — ₹0.4 Cr on Day 17; cumulative India nett ₹248.2 Cr | 5. Spider-Man: Brand New Day — ₹0.2 Cr on Day 43; cumulative India nett ₹498.1 Cr.\n\nRecent-release watch: Haiwaan (released 2026-09-11) — latest India nett n/a; Sardar 2 (released 2026-09-10) — latest India nett ₹4.5 Cr; Hi (released 2026-08-28) — latest India nett ₹0.1 Cr; Toxic (released 2026-08-26) — latest India nett ₹0.4 Cr.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader at ₹1,820 Cr, but that is not the current daily chart.\n\nNo material day-over-day worldwide move of ₹0.5 Cr or more was recorded in the latest board comparison.\n\nDesk health: koimoi failed: HTTP 403 (streak 18); koimoi has failed 18 consecutive publishes. Figures remain the weighted-median consensus of the available trackers; India has no official box-office auditor.",
   "citations": [
     {
-      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Vishwanath And Sons: Sacnilk 27 days, India net ₹122.02 Cr"
+      "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "title": "Toxic: Sacnilk 16 days, India net ₹248.24 Cr"
     },
     {
       "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Awarapan 2: Sacnilk 27 days, India net ₹150.43 Cr"
+      "title": "Awarapan 2: Sacnilk 28 days, India net ₹150.43 Cr"
+    },
+    {
+      "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "title": "Border 2: Sacnilk 88 days, India net ₹329.43 Cr"
+    },
+    {
+      "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "title": "Batwara 1947: Sacnilk 28 days, India net ₹38.08 Cr"
     },
     {
       "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Irumudi: Sacnilk 20 days, India net ₹174.45 Cr"
-    },
-    {
-      "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Dhurandhar: The Revenge: Sacnilk 98 days, India net ₹1149.3 Cr"
-    },
-    {
-      "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Hi: Sacnilk 13 days, India net ₹12.39 Cr"
+      "title": "Irumudi: Sacnilk 21 days, India net ₹174.45 Cr"
     }
   ],
-  "boardGeneratedAt": "2026-09-11T06:10:53.825Z",
+  "boardGeneratedAt": "2026-09-11T06:13:50.675Z",
   "model": "deterministic-editorial-v1"
 }
