@@ -67,6 +67,7 @@ type FilmRow = {
   id: string;
   title: string;
   language: string;
+  releaseDate: string;
   status: string;
   verdict: string;
   budgetCr: number | null;
@@ -118,10 +119,15 @@ if (!films.length) {
 const ranked = [...films]
   .filter((film) => Number.isFinite(film.worldwide))
   .sort((a, b) => b.worldwide - a.worldwide);
+const currentRanked = [...films]
+  .filter((film) => film.status !== "closed" && film.lastDayNet != null && film.lastDayNet > 0)
+  .sort((a, b) => (b.lastDayNet ?? 0) - (a.lastDayNet ?? 0));
 const movers = [...films]
   .filter((film) => film.deltaWw != null && Math.abs(film.deltaWw) >= 0.5)
   .sort((a, b) => Math.abs(b.deltaWw ?? 0) - Math.abs(a.deltaWw ?? 0));
 const top = ranked[0];
+const currentTop = currentRanked[0];
+const deskDayMs = Date.parse(`${todayIst}T12:00:00+05:30`);
 
 function fmt(n: number | null | undefined): string {
   if (n == null || !Number.isFinite(n)) return "n/a";
@@ -133,14 +139,33 @@ function deltaLabel(n: number | null | undefined): string {
   return `${n >= 0 ? "+" : ""}${n.toLocaleString("en-IN", { maximumFractionDigits: 1 })} Cr`;
 }
 
-function rankingLine(): string {
-  return ranked
+function currentRankingLine(): string {
+  if (!currentRanked.length) return "No current daily collection figures are available.";
+  return currentRanked
     .slice(0, 5)
     .map(
       (film, index) =>
-        `${index + 1}. ${film.title} — India nett ${fmt(film.indiaNet)}; worldwide ${fmt(film.worldwide)}`,
+        `${index + 1}. ${film.title} — ${fmt(film.lastDayNet)} on Day ${film.trackedThroughDay ?? "—"}; cumulative India nett ${fmt(film.indiaNet)}`,
     )
     .join(" | ");
+}
+
+function recentReleaseLine(): string {
+  const recent = films
+    .filter((film) => film.status !== "closed")
+    .filter((film) => {
+      const ageMs = deskDayMs - Date.parse(`${film.releaseDate}T12:00:00+05:30`);
+      return ageMs >= 0 && ageMs <= 45 * 86_400_000;
+    })
+    .sort((a, b) => b.releaseDate.localeCompare(a.releaseDate))
+    .slice(0, 4);
+  if (!recent.length) return "No recent release is currently represented with a daily figure.";
+  return recent
+    .map(
+      (film) =>
+        `${film.title} (released ${film.releaseDate}) — latest India nett ${fmt(film.lastDayNet)}`,
+    )
+    .join("; ");
 }
 
 function momentumLine(): string {
@@ -168,14 +193,18 @@ function deskNote(): string {
 }
 
 function buildBrief(): Brief {
-  const headline = top
-    ? `India box office: ${top.title} leads at ${fmt(top.worldwide)} worldwide`
+  const headline = currentTop
+    ? `India box office: ${currentTop.title} leads the latest daily chart at ${fmt(currentTop.lastDayNet)}`
     : "Indian Box Office morning brief";
-  const lede = top
-    ? `${top.title} leads the current IBO consensus board at ${fmt(top.worldwide)} worldwide, including ${fmt(top.indiaNet)} in India nett.`
+  const lede = currentTop
+    ? `${currentTop.title} leads the latest reported daily India nett at ${fmt(currentTop.lastDayNet)} on Day ${currentTop.trackedThroughDay ?? "—"}; its cumulative India nett is ${fmt(currentTop.indiaNet)}.`
     : "The IBO consensus board has been refreshed from the latest available tracker data.";
   const body = [
-    `Current board ranking: ${rankingLine()}.`,
+    `Latest reported daily ranking: ${currentRankingLine()}.`,
+    `Recent-release watch: ${recentReleaseLine()}.`,
+    top
+      ? `Lifetime context: ${top.title} remains the cumulative worldwide leader at ${fmt(top.worldwide)}, but that is not the current daily chart.`
+      : "Lifetime totals are unavailable on this board pull.",
     momentumLine(),
     deskNote(),
   ].join("\n\n");
