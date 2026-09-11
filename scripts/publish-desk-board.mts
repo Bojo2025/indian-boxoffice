@@ -445,12 +445,6 @@ writeFileSync(
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://indian-boxoffice.com/board.json</loc>
-    <lastmod>${nowIso}</lastmod>
-    <changefreq>hourly</changefreq>
-    <priority>0.5</priority>
-  </url>
 </urlset>
 `,
 );

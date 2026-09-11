@@ -2,12 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://indian-boxoffice.com/</loc>
+    <lastmod>2026-09-11T07:30:00.000Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://indian-boxoffice.com/board.json</loc>
-    <changefreq>hourly</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>
