@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generatedAt": "2026-09-11T05:30:49.776Z",
+  "generatedAt": "2026-09-11T06:10:53.825Z",
   "films": [
     {
       "id": "toxic",
@@ -64,6 +64,20 @@
       "indiaNet": 163.13,
       "worldwide": 192.75,
       "status": "late"
+    },
+    {
+      "id": "sardar-2",
+      "title": "Sardar 2",
+      "indiaNet": 4.5,
+      "worldwide": 6.8,
+      "status": "playing"
+    },
+    {
+      "id": "haiwaan",
+      "title": "Haiwaan",
+      "indiaNet": 0,
+      "worldwide": 0,
+      "status": "playing"
     },
     {
       "id": "spider-man-bnd",
