@@ -93,7 +93,11 @@ type Board = {
   deskDate?: string;
   films?: FilmRow[];
   headlines?: Headline[];
-  health?: { hardFail?: boolean; alerts?: string[] };
+  health?: {
+    hardFail?: boolean;
+    alerts?: string[];
+    spine?: Record<string, { ok?: boolean }>;
+  };
 };
 
 type Brief = {
@@ -109,8 +113,6 @@ type Brief = {
 
 const board = readJson<Board>(boardPath);
 const films = board?.films ?? [];
-const headlines = board?.headlines ?? [];
-
 if (!films.length) {
   console.warn("board.json has no films — run `npm run publish:desk` first.");
   process.exit(1);
@@ -183,13 +185,20 @@ function momentumLine(): string {
   return `Momentum: ${entries.join("; ")} since the previous board snapshot.`;
 }
 
+// Reports feed health as counts only — individual tracker names are never
+// exposed to readers.
 function deskNote(): string {
-  const alerts = board?.health?.alerts ?? [];
-  if (alerts.length) {
-    const visibleAlerts = alerts.slice(0, 2).join("; ");
-    return `Desk health: ${visibleAlerts}. Figures remain the weighted-median consensus of the available trackers; India has no official box-office auditor.`;
+  const spine = board?.health?.spine ?? {};
+  const feeds = Object.values(spine);
+  const degraded = feeds.filter((feed) => feed?.ok === false).length;
+  if (!feeds.length && (board?.health?.alerts?.length ?? 0) > 0) {
+    return "Desk health: some feeds are degraded on this pull. Figures remain the weighted-median consensus of the trackers still reporting; India has no official box-office auditor.";
   }
-  return "Desk health is clear. Figures are the weighted-median consensus of the available trade trackers; India has no official box-office auditor.";
+  if (degraded > 0) {
+    const noun = degraded === 1 ? "feed is" : "feeds are";
+    return `Desk health: ${degraded} of ${feeds.length} tracker ${noun} unreachable on this pull. Figures remain the weighted-median consensus of the trackers still reporting; India has no official box-office auditor.`;
+  }
+  return "Desk health is clear, with every tracker feed reporting. Figures are the weighted-median consensus of those feeds; India has no official box-office auditor.";
 }
 
 function buildBrief(): Brief {
@@ -215,10 +224,8 @@ function buildBrief(): Brief {
     headline: headline.slice(0, 100),
     lede,
     body,
-    citations: headlines.slice(0, 5).map((headline) => ({
-      url: headline.url,
-      title: headline.title,
-    })),
+    // Readers never see tracker attribution, so the brief ships no citations.
+    citations: [],
     boardGeneratedAt: board?.generatedAt ?? null,
     model: "deterministic-editorial-v1",
   };
