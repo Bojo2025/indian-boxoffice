@@ -311,13 +311,20 @@
   function render() {
     renderUpdated();
 
+    const momentumRanked = [...films]
+      .filter((m) => (m.status === "playing" || m.status === "late") && m.lastDayNet > 0)
+      .sort((a, b) => (b.lastDayNet || 0) - (a.lastDayNet || 0));
+    const momentumIds = new Set(momentumRanked.map((m) => m.id));
     const playing = films.filter((m) => m.status === "playing");
-    const late = films.filter((m) => m.status === "late");
+    const late = films.filter((m) => m.status === "late" && !momentumIds.has(m.id));
+    const now = [...momentumRanked, ...playing.filter((m) => !momentumIds.has(m.id))];
     const ranked = [...films].sort((a, b) => b.worldwide - a.worldwide);
 
-    // This week's board: theatrical titles ranked by worldwide gross
+    // Put current daily momentum ahead of lifetime totals on the weekly board.
     const weekPool = films.filter((m) => m.status === "playing" || m.status === "late");
-    const weekRanked = [...weekPool].sort((a, b) => (b.worldwide || 0) - (a.worldwide || 0));
+    const weekRanked = [...weekPool].sort(
+      (a, b) => (b.lastDayNet || 0) - (a.lastDayNet || 0) || (b.worldwide || 0) - (a.worldwide || 0),
+    );
     const weekBoard = document.getElementById("week-board");
     weekBoard.innerHTML =
       weekRanked
@@ -335,7 +342,7 @@
         )
         .join("") || `<li class="week-empty">No theatrical titles on the board.</li>`;
 
-    document.getElementById("now-grid").innerHTML = playing.map(card).join("") || empty("No live titles.");
+    document.getElementById("now-grid").innerHTML = now.map(card).join("") || empty("No live titles.");
     document.getElementById("late-grid").innerHTML = late.map(card).join("") || empty("No late-run titles.");
     document.getElementById("rank-body").innerHTML = ranked
       .map(
