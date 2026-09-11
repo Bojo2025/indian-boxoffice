@@ -385,7 +385,6 @@
 
   function card(m) {
     const day = dayNumber(m.releaseDate);
-    const src = m.liveSources?.length ? ` · ${m.liveSources.join("+")}` : "";
     const img = posterSrc(m);
     const fallback = posterFallback(m);
     return `<article class="card">
@@ -393,7 +392,7 @@
         <img class="poster" src="${esc(img)}" alt="${esc(m.title)} poster" loading="lazy" onerror="this.onerror=null;this.src='${esc(fallback)}'" />
       </div>
       <div class="card-body">
-        <p class="kicker">${esc(m.language)} · Day ${day}${m.status === "late" ? " · Late run" : ""}${esc(src)}</p>
+        <p class="kicker">${esc(m.language)} · Day ${day}${m.status === "late" ? " · Late run" : ""}</p>
         <h3>${esc(m.title)}</h3>
         <p class="meta">${esc(m.director)} · ${esc(m.starring)}</p>
         <p class="synopsis">${esc(m.synopsis)}</p>
