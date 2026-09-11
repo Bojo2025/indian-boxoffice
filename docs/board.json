@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T03:47:43.882Z",
+  "generatedAt": "2026-09-11T05:30:49.776Z",
   "deskDate": "2026-09-11",
   "comparedTo": "2026-09-11 prior",
   "mode": "server-consensus",
@@ -12,30 +12,30 @@
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 15)",
-      "koimoi has failed 15 consecutive publishes",
-      "boi failed: HTTP 403 (streak 13)",
-      "boi has failed 13 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 16)",
+      "koimoi has failed 16 consecutive publishes",
+      "boi failed: HTTP 403 (streak 14)",
+      "boi has failed 14 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
         "ok": true,
         "streakFail": 0,
-        "detail": "719 collection rows from 16 live pulls"
+        "detail": "95 collection rows from 16 live pulls"
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 15,
+        "streakFail": 16,
         "detail": "HTTP 403"
       },
       "hungama": {
         "ok": true,
         "streakFail": 0,
-        "detail": "46 collection rows from 16 live pulls"
+        "detail": "46 collection rows from 15 live pulls, 1 page(s) missed"
       },
       "boi": {
         "ok": false,
-        "streakFail": 13,
+        "streakFail": 14,
         "detail": "HTTP 403"
       }
     }
@@ -159,10 +159,10 @@
       "posterKey": "awarapan-2",
       "poster": "./posters/awarapan-2.jpg",
       "indiaNet": 150.43,
-      "indiaGross": 179.31,
+      "indiaGross": 179.3,
       "overseas": 33.41,
       "worldwide": 210.26,
-      "lastDayNet": 0.03,
+      "lastDayNet": 0.95,
       "trackedThroughDay": 29,
       "liveSources": [
         "sacnilk",
@@ -190,8 +190,8 @@
       "indiaGross": 141.12,
       "overseas": 67.75,
       "worldwide": 208.87,
-      "lastDayNet": 0.07,
-      "trackedThroughDay": 28,
+      "lastDayNet": null,
+      "trackedThroughDay": 29,
       "liveSources": [
         "sacnilk"
       ],
@@ -217,8 +217,8 @@
       "indiaGross": 202.7,
       "overseas": 22.25,
       "worldwide": 224.95,
-      "lastDayNet": 1.6,
-      "trackedThroughDay": 21,
+      "lastDayNet": null,
+      "trackedThroughDay": 22,
       "liveSources": [
         "sacnilk"
       ],
@@ -241,10 +241,10 @@
       "posterKey": "batwara",
       "poster": "./posters/batwara.jpg",
       "indiaNet": 38.08,
-      "indiaGross": 45.16,
+      "indiaGross": 45.15,
       "overseas": 9.05,
       "worldwide": 54.2,
-      "lastDayNet": 0.01,
+      "lastDayNet": null,
       "trackedThroughDay": 29,
       "liveSources": [
         "sacnilk",
@@ -272,8 +272,8 @@
       "indiaGross": 14.42,
       "overseas": 0,
       "worldwide": 14.42,
-      "lastDayNet": 0.05,
-      "trackedThroughDay": 14,
+      "lastDayNet": null,
+      "trackedThroughDay": 15,
       "liveSources": [
         "sacnilk"
       ],
@@ -346,11 +346,11 @@
       "posterKey": "hanuman-ansh",
       "poster": "./posters/hanuman-ansh.jpg",
       "indiaNet": 163.13,
-      "indiaGross": 192.79,
+      "indiaGross": 192.75,
       "overseas": 0,
       "worldwide": 192.75,
-      "lastDayNet": 10,
-      "trackedThroughDay": 35,
+      "lastDayNet": 13,
+      "trackedThroughDay": 36,
       "liveSources": [
         "sacnilk",
         "hungama"
@@ -377,8 +377,8 @@
       "indiaGross": 595.95,
       "overseas": 0,
       "worldwide": 595.95,
-      "lastDayNet": 0.19,
-      "trackedThroughDay": 43,
+      "lastDayNet": null,
+      "trackedThroughDay": 44,
       "liveSources": [
         "sacnilk"
       ],
@@ -401,10 +401,10 @@
       "posterKey": "dhamaal-4",
       "poster": "./posters/dhamaal-4.jpg",
       "indiaNet": 167.88,
-      "indiaGross": 199.36,
+      "indiaGross": 199.32,
       "overseas": 30.85,
       "worldwide": 230.17,
-      "lastDayNet": 0.01,
+      "lastDayNet": null,
       "trackedThroughDay": 64,
       "liveSources": [
         "sacnilk",
@@ -432,8 +432,8 @@
       "indiaGross": 230.8,
       "overseas": 0,
       "worldwide": 230.8,
-      "lastDayNet": 0.16,
-      "trackedThroughDay": 56,
+      "lastDayNet": null,
+      "trackedThroughDay": 57,
       "liveSources": [
         "sacnilk"
       ],
@@ -459,12 +459,12 @@
       "indiaGross": 1375.39,
       "overseas": 470,
       "worldwide": 1820,
-      "lastDayNet": 0.01,
+      "lastDayNet": 1,
       "trackedThroughDay": 177,
       "liveSources": [
-        "sacnilk",
         "hungama",
-        "wikipedia"
+        "wikipedia",
+        "sacnilk"
       ],
       "deltaNet": 0,
       "deltaWw": 0
@@ -485,10 +485,10 @@
       "posterKey": "border-2",
       "poster": "./posters/border-2.jpg",
       "indiaNet": 329.43,
-      "indiaGross": 393.46,
+      "indiaGross": 392.94,
       "overseas": 57.25,
       "worldwide": 450.19,
-      "lastDayNet": 0.01,
+      "lastDayNet": 5,
       "trackedThroughDay": 232,
       "liveSources": [
         "sacnilk",
@@ -521,8 +521,8 @@
       "trackedThroughDay": 169,
       "liveSources": [
         "sacnilk",
-        "hungama",
-        "wikipedia"
+        "wikipedia",
+        "hungama"
       ],
       "deltaNet": 0,
       "deltaWw": 0
@@ -573,7 +573,7 @@
       "indiaGross": 228.97,
       "overseas": 81.15,
       "worldwide": 310.12,
-      "lastDayNet": 0.01,
+      "lastDayNet": null,
       "trackedThroughDay": 155,
       "liveSources": [
         "sacnilk",
@@ -707,7 +707,7 @@
       "indiaGross": 159.15,
       "overseas": 33.6,
       "worldwide": 192.75,
-      "lastDayNet": 0.01,
+      "lastDayNet": 6,
       "trackedThroughDay": 78,
       "liveSources": [
         "sacnilk",
@@ -732,10 +732,10 @@
       "posterKey": "cocktail-2",
       "poster": "./posters/cocktail-2.jpg",
       "indiaNet": 95.5,
-      "indiaGross": 113.74,
+      "indiaGross": 113.73,
       "overseas": 34,
       "worldwide": 147.73,
-      "lastDayNet": 0.01,
+      "lastDayNet": null,
       "trackedThroughDay": 85,
       "liveSources": [
         "sacnilk",
@@ -777,15 +777,20 @@
     {
       "sourceId": "sacnilk",
       "status": "ok",
-      "detail": "719 collection rows from 16 live pulls"
+      "detail": "95 collection rows from 16 live pulls"
     },
     {
       "sourceId": "hungama",
       "status": "ok",
-      "detail": "46 collection rows from 16 live pulls"
+      "detail": "46 collection rows from 15 live pulls, 1 page(s) missed"
     },
     {
       "sourceId": "etimes",
+      "status": "ok",
+      "detail": "Fetched 1 page (headlines / status)"
+    },
+    {
+      "sourceId": "express",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
     },
@@ -796,11 +801,6 @@
     },
     {
       "sourceId": "pinkvilla",
-      "status": "ok",
-      "detail": "Fetched 1 page (headlines / status)"
-    },
-    {
-      "sourceId": "express",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
     },
@@ -818,146 +818,146 @@
   "headlines": [
     {
       "sourceId": "sacnilk",
-      "title": "Hi: Sacnilk 14 days, India net ₹12.39 Cr",
+      "title": "Hi: Sacnilk 0 days, India net ₹12.39 Cr",
       "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:38.893Z",
-      "summary": "Live day-wise pull. Last day 14. WW ₹14.42 Cr."
+      "publishedAt": "2026-09-11T05:30:44.360Z",
+      "summary": "Live day-wise pull. Last day —. WW ₹14.42 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Batwara 1947: Sacnilk 24 days, India net ₹38.08 Cr",
+      "title": "Batwara 1947: Sacnilk 0 days, India net ₹38.08 Cr",
       "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:38.913Z",
-      "summary": "Live day-wise pull. Last day 24. WW ₹54.2 Cr."
+      "publishedAt": "2026-09-11T05:30:44.913Z",
+      "summary": "Live day-wise pull. Last day —. WW ₹54.2 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Toxic: Sacnilk 16 days, India net ₹248.24 Cr",
-      "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:38.972Z",
-      "summary": "Live day-wise pull. Last day 16. WW ₹339.32 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Vishwanath And Sons: Sacnilk 28 days, India net ₹122.02 Cr",
-      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:39.070Z",
-      "summary": "Live day-wise pull. Last day 28. WW ₹208.87 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Dhurandhar: The Revenge: Sacnilk 98 days, India net ₹1149.3 Cr",
-      "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:39.326Z",
-      "summary": "Live day-wise pull. Last day 101. WW ₹1813.39 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr",
-      "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:39.510Z",
-      "summary": "Live day-wise pull. Last day 58. WW ₹450.19 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Awarapan 2: Sacnilk 28 days, India net ₹150.43 Cr",
-      "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:39.582Z",
-      "summary": "Live day-wise pull. Last day 28. WW ₹212.85 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Irumudi: Sacnilk 21 days, India net ₹174.45 Cr",
+      "title": "Irumudi: Sacnilk 0 days, India net ₹174.45 Cr",
       "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:39.603Z",
-      "summary": "Live day-wise pull. Last day 21. WW ₹224.95 Cr."
+      "publishedAt": "2026-09-11T05:30:44.941Z",
+      "summary": "Live day-wise pull. Last day —. WW ₹224.95 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Karuppu: Sacnilk 55 days, India net ₹198.18 Cr",
-      "url": "https://www.sacnilk.com/news/karuppu_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:39.633Z",
-      "summary": "Live day-wise pull. Last day 59. WW ₹310.12 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Spider-Man: Brand New Day: Sacnilk 43 days, India net ₹498.12 Cr",
-      "url": "https://www.sacnilk.com/news/spider_man_brand_new_day_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:39.855Z",
-      "summary": "Live day-wise pull. Last day 43. WW ₹595.95 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Dhamaal 4: Sacnilk 58 days, India net ₹167.88 Cr",
-      "url": "https://www.sacnilk.com/news/dhamaal_4_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:39.877Z",
-      "summary": "Live day-wise pull. Last day 61. WW ₹230.17 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Welcome To The Jungle: Sacnilk 49 days, India net ₹134.11 Cr",
-      "url": "https://www.sacnilk.com/news/welcome_to_the_jungle_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:40.099Z",
-      "summary": "Live day-wise pull. Last day 49. WW ₹192.75 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "The Odyssey: Sacnilk 56 days, India net ₹193.85 Cr",
-      "url": "https://www.sacnilk.com/news/the_odyssey_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:40.201Z",
-      "summary": "Live day-wise pull. Last day 56. WW ₹230.8 Cr."
+      "title": "Awarapan 2: Sacnilk 0 days, India net ₹150.43 Cr",
+      "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T05:30:44.959Z",
+      "summary": "Live day-wise pull. Last day —. WW ₹212.85 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Peddi: Sacnilk 63 days, India net ₹244.64 Cr",
       "url": "https://www.sacnilk.com/news/peddi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:40.239Z",
+      "publishedAt": "2026-09-11T05:30:45.050Z",
       "summary": "Live day-wise pull. Last day 71. WW ₹341.9 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Cocktail 2: Sacnilk 59 days, India net ₹95.5 Cr",
-      "url": "https://www.sacnilk.com/news/cocktail_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:40.502Z",
-      "summary": "Live day-wise pull. Last day 66. WW ₹147.73 Cr."
+      "title": "Toxic: Sacnilk 16 days, India net ₹248.24 Cr",
+      "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T05:30:45.107Z",
+      "summary": "Live day-wise pull. Last day 16. WW ₹339.32 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Hanuman Ansh: Sacnilk 35 days, India net ₹163.13 Cr",
+      "title": "Vishwanath And Sons: Sacnilk 0 days, India net ₹122.02 Cr",
+      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T05:30:45.150Z",
+      "summary": "Live day-wise pull. Last day —. WW ₹208.87 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Welcome To The Jungle: Sacnilk 0 days, India net ₹134.11 Cr",
+      "url": "https://www.sacnilk.com/news/welcome_to_the_jungle_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T05:30:45.513Z",
+      "summary": "Live day-wise pull. Last day —. WW ₹192.75 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Border 2: Sacnilk 0 days, India net ₹329.43 Cr",
+      "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T05:30:45.552Z",
+      "summary": "Live day-wise pull. Last day —. WW ₹450.19 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Dhamaal 4: Sacnilk 0 days, India net ₹167.88 Cr",
+      "url": "https://www.sacnilk.com/news/dhamaal_4_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T05:30:45.690Z",
+      "summary": "Live day-wise pull. Last day —. WW ₹230.17 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Spider-Man: Brand New Day: Sacnilk 0 days, India net ₹498.12 Cr",
+      "url": "https://www.sacnilk.com/news/spider_man_brand_new_day_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T05:30:45.729Z",
+      "summary": "Live day-wise pull. Last day —. WW ₹595.95 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Karuppu: Sacnilk 0 days, India net ₹198.18 Cr",
+      "url": "https://www.sacnilk.com/news/karuppu_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T05:30:45.924Z",
+      "summary": "Live day-wise pull. Last day —. WW ₹310.12 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Cocktail 2: Sacnilk 0 days, India net ₹95.5 Cr",
+      "url": "https://www.sacnilk.com/news/cocktail_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T05:30:46.075Z",
+      "summary": "Live day-wise pull. Last day —. WW ₹147.73 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Hanuman Ansh: Sacnilk 0 days, India net ₹163.13 Cr",
       "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T03:47:40.529Z",
-      "summary": "Live day-wise pull. Last day 35. WW ₹192.75 Cr."
+      "publishedAt": "2026-09-11T05:30:46.180Z",
+      "summary": "Live day-wise pull. Last day —. WW ₹192.75 Cr."
+    },
+    {
+      "sourceId": "hungama",
+      "title": "Hungama 2026 worldwide: 9 titles matched",
+      "url": "https://www.bollywoodhungama.com/box-office-collections/worldwide/2026/",
+      "publishedAt": "2026-09-11T05:30:46.191Z",
+      "summary": "dhurandhar ₹1852.44 Cr WW · border-2 ₹464.5 Cr WW · bhooth-bangla ₹247.28 Cr WW · dhamaal-4 ₹224.61 Cr WW · awarapan-2 ₹207.3 Cr WW"
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "The Odyssey: Sacnilk 0 days, India net ₹193.85 Cr",
+      "url": "https://www.sacnilk.com/news/the_odyssey_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T05:30:46.283Z",
+      "summary": "Live day-wise pull. Last day —. WW ₹230.8 Cr."
     }
   ],
   "morningBrief": {
     "briefDate": "2026-09-11",
-    "generatedAt": "2026-09-11T05:16:46.158Z",
+    "generatedAt": "2026-09-11T05:30:53.523Z",
     "headline": "India box office: Dhurandhar: The Revenge leads at ₹1,820 Cr worldwide",
     "lede": "Dhurandhar: The Revenge leads the current IBO consensus board at ₹1,820 Cr worldwide, including ₹1,108.1 Cr in India nett.",
-    "body": "Current board ranking: 1. Dhurandhar: The Revenge — India nett ₹1,108.1 Cr; worldwide ₹1,820 Cr | 2. Spider-Man: Brand New Day — India nett ₹498.1 Cr; worldwide ₹596 Cr | 3. Border 2 — India nett ₹329.4 Cr; worldwide ₹450.2 Cr | 4. Peddi — India nett ₹244.6 Cr; worldwide ₹341.9 Cr | 5. Toxic — India nett ₹248.2 Cr; worldwide ₹339.3 Cr.\n\nNo material day-over-day worldwide move of ₹0.5 Cr or more was recorded in the latest board comparison.\n\nDesk health: koimoi failed: HTTP 403 (streak 15); koimoi has failed 15 consecutive publishes. Figures remain the weighted-median consensus of the available trackers; India has no official box-office auditor.",
+    "body": "Current board ranking: 1. Dhurandhar: The Revenge — India nett ₹1,108.1 Cr; worldwide ₹1,820 Cr | 2. Spider-Man: Brand New Day — India nett ₹498.1 Cr; worldwide ₹596 Cr | 3. Border 2 — India nett ₹329.4 Cr; worldwide ₹450.2 Cr | 4. Peddi — India nett ₹244.6 Cr; worldwide ₹341.9 Cr | 5. Toxic — India nett ₹248.2 Cr; worldwide ₹339.3 Cr.\n\nNo material day-over-day worldwide move of ₹0.5 Cr or more was recorded in the latest board comparison.\n\nDesk health: koimoi failed: HTTP 403 (streak 16); koimoi has failed 16 consecutive publishes. Figures remain the weighted-median consensus of the available trackers; India has no official box-office auditor.",
     "citations": [
       {
         "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-        "title": "Hi: Sacnilk 14 days, India net ₹12.39 Cr"
+        "title": "Hi: Sacnilk 0 days, India net ₹12.39 Cr"
       },
       {
         "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
-        "title": "Batwara 1947: Sacnilk 24 days, India net ₹38.08 Cr"
+        "title": "Batwara 1947: Sacnilk 0 days, India net ₹38.08 Cr"
       },
       {
-        "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-        "title": "Toxic: Sacnilk 16 days, India net ₹248.24 Cr"
+        "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+        "title": "Irumudi: Sacnilk 0 days, India net ₹174.45 Cr"
       },
       {
-        "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
-        "title": "Vishwanath And Sons: Sacnilk 28 days, India net ₹122.02 Cr"
+        "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+        "title": "Awarapan 2: Sacnilk 0 days, India net ₹150.43 Cr"
       },
       {
-        "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-        "title": "Dhurandhar: The Revenge: Sacnilk 98 days, India net ₹1149.3 Cr"
+        "url": "https://www.sacnilk.com/news/peddi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+        "title": "Peddi: Sacnilk 63 days, India net ₹244.64 Cr"
       }
     ],
-    "boardGeneratedAt": "2026-09-11T03:47:43.882Z",
+    "boardGeneratedAt": "2026-09-11T05:30:49.776Z",
     "model": "deterministic-editorial-v1"
   },
   "downloads": {
