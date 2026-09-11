@@ -28,7 +28,7 @@
     "posters": "node scripts/generate-posters.mjs",
     "export:desk": "npx vite-node scripts/export-desk-catalog.mts",
     "publish:desk": "npx vite-node scripts/publish-desk-board.mts",
-    "morning:brief": "npx vite-node scripts/generate-morning-brief.mts",
+    "morning:brief": "node --experimental-strip-types scripts/generate-morning-brief.mts",
     "fetch:posters": "npx vite-node scripts/fetch-posters.mts",
     "inject:posters": "npx vite-node scripts/inject-posters.mts"
   },
