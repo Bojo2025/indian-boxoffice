@@ -238,7 +238,7 @@ function parseSacnilkPage(
   const text = stripTags(html);
   const readings: Reading[] = [];
   const dayRe =
-    /Day\s+(\d+)\s*\([^)]+\)\s*\u20B9\s*([\d,.]+)\s*Cr\s*\u20B9\s*([\d,.]+)\s*Cr\s*([\d,]+)\s*([\d.]+)\s*%/g;
+    /Day\s+(\d+)(?:\s+\d{1,2}\s+[A-Za-z]{3,9})?\s*\([^)]+\)\s*\u20B9\s*([\d,.]+)\s*Cr\s*\u20B9\s*([\d,.]+)\s*Cr\s*([\d,]+)\s*([\d.]+)\s*%/g;
   let match: RegExpExecArray | null;
   while ((match = dayRe.exec(text))) {
     const day = Number(match[1]);
