@@ -36,6 +36,18 @@
     return Math.max(1, Math.floor((b - a) / 86400000) + 1);
   }
 
+  function formatReleaseDate(iso) {
+    if (!iso) return "—";
+    const date = new Date(`${iso}T12:00:00+05:30`);
+    if (Number.isNaN(date.getTime())) return "—";
+    return new Intl.DateTimeFormat("en-GB", {
+      timeZone: IST,
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    }).format(date);
+  }
+
   function formatCr(value) {
     if (value == null || Number.isNaN(value)) return "—";
     const abs = Math.abs(value);
@@ -350,9 +362,10 @@
         <td class="rank">${i + 1}</td>
         <td class="title-cell">
           <img class="poster-thumb" src="${esc(posterSrc(m))}" alt="" loading="lazy" onerror="this.onerror=null;this.src='${esc(posterFallback(m))}'" />
-          <span>${esc(m.title)}${m.status === "playing" ? '<span class="pill">Playing</span>' : ""}${m.liveWiki ? '<span class="pill">Wiki</span>' : ""}</span>
+          <span>${esc(m.title)}${m.status === "playing" ? '<span class="pill">Playing</span>' : ""}</span>
         </td>
         <td>${esc(m.language)}</td>
+        <td>${esc(formatReleaseDate(m.releaseDate))}</td>
         <td class="num">${esc(formatCr(m.indiaNet))}${deltaHtml(m.deltaNet)}</td>
         <td class="num strong">${esc(formatCr(m.worldwide))}${deltaHtml(m.deltaWw)}</td>
       </tr>`,
