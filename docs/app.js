@@ -361,7 +361,7 @@
         (m, i) => `<tr class="${m.status === "playing" ? "live" : ""}">
         <td class="rank">${i + 1}</td>
         <td class="title-cell">
-          <img class="poster-thumb" src="${esc(posterSrc(m))}" alt="" loading="lazy" onerror="this.onerror=null;this.src='${esc(posterFallback(m))}'" />
+          <img class="poster-thumb" src="${esc(posterSrc(m))}" alt="${esc(m.title)} box office poster" loading="lazy" onerror="this.onerror=null;this.src='${esc(posterFallback(m))}'" />
           <span>${esc(m.title)}${m.status === "playing" ? '<span class="pill">Playing</span>' : ""}</span>
         </td>
         <td>${esc(m.language)}</td>
@@ -372,6 +372,58 @@
       )
       .join("");
 
+    renderStructuredData(ranked);
+  }
+
+  // Publishes the live board as schema.org entities so search engines can read
+  // the rankings without executing the table markup.
+  function renderStructuredData(ranked) {
+    const site = "https://indian-boxoffice.com/";
+    const people = (value) =>
+      String(value || "")
+        .split(",")
+        .map((name) => name.trim())
+        .filter((name) => name && name !== "—")
+        .slice(0, 5)
+        .map((name) => ({ "@type": "Person", name }));
+
+    const payload = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Indian box office collection rankings",
+      description:
+        "Indian theatrical releases ranked by worldwide gross, with India nett collection and release date.",
+      numberOfItems: Math.min(ranked.length, 25),
+      itemListOrder: "https://schema.org/ItemListOrderDescending",
+      itemListElement: ranked.slice(0, 25).map((m, i) => {
+        const directors = people(m.director);
+        const actors = people(m.starring);
+        return {
+          "@type": "ListItem",
+          position: i + 1,
+          item: {
+            "@type": "Movie",
+            name: m.title,
+            url: `${site}#rankings`,
+            image: m.poster ? new URL(m.poster.replace(/^\.\//, ""), site).href : undefined,
+            inLanguage: m.language,
+            datePublished: m.releaseDate,
+            director: directors.length ? directors : undefined,
+            actor: actors.length ? actors : undefined,
+            countryOfOrigin: { "@type": "Country", name: "India" },
+          },
+        };
+      }),
+    };
+
+    let tag = document.getElementById("ibo-board-schema");
+    if (!tag) {
+      tag = document.createElement("script");
+      tag.type = "application/ld+json";
+      tag.id = "ibo-board-schema";
+      document.head.appendChild(tag);
+    }
+    tag.textContent = JSON.stringify(payload).replace(/</g, "\\u003c");
   }
 
   function deltaHtml(value) {
