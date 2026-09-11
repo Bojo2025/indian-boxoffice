@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generatedAt": "2026-09-11T06:13:50.675Z",
+  "generatedAt": "2026-09-11T06:59:39.630Z",
   "films": [
     {
       "id": "toxic",
@@ -80,6 +80,13 @@
       "status": "playing"
     },
     {
+      "id": "mirzapur-the-movie",
+      "title": "Mirzapur: The Movie",
+      "indiaNet": 148.45,
+      "worldwide": 212.44,
+      "status": "playing"
+    },
+    {
       "id": "spider-man-bnd",
       "title": "Spider-Man: Brand New Day",
       "indiaNet": 498.12,
@@ -105,21 +112,21 @@
       "title": "Dhurandhar: The Revenge",
       "indiaNet": 1108.09,
       "worldwide": 1820,
-      "status": "closed"
+      "status": "playing"
     },
     {
       "id": "border-2",
       "title": "Border 2",
       "indiaNet": 329.43,
       "worldwide": 450.19,
-      "status": "closed"
+      "status": "playing"
     },
     {
       "id": "peddi",
       "title": "Peddi",
       "indiaNet": 244.64,
       "worldwide": 341.9,
-      "status": "closed"
+      "status": "playing"
     },
     {
       "id": "jana-nayagan",
@@ -133,7 +140,7 @@
       "title": "Karuppu",
       "indiaNet": 198.18,
       "worldwide": 310.12,
-      "status": "closed"
+      "status": "playing"
     },
     {
       "id": "msvpg",
@@ -168,14 +175,14 @@
       "title": "Welcome To The Jungle",
       "indiaNet": 134.11,
       "worldwide": 192.75,
-      "status": "closed"
+      "status": "playing"
     },
     {
       "id": "cocktail-2",
       "title": "Cocktail 2",
       "indiaNet": 95.5,
       "worldwide": 147.73,
-      "status": "closed"
+      "status": "playing"
     },
     {
       "id": "alpha",
@@ -183,6 +190,62 @@
       "indiaNet": 57.72,
       "worldwide": 98.62,
       "status": "closed"
+    },
+    {
+      "id": "mandaadi",
+      "title": "Mandaadi",
+      "indiaNet": 4.75,
+      "worldwide": 6.55,
+      "status": "playing"
+    },
+    {
+      "id": "maremma",
+      "title": "Maremma",
+      "indiaNet": 0.15,
+      "worldwide": 0.17,
+      "status": "playing"
+    },
+    {
+      "id": "wild-tamil-nadu",
+      "title": "Wild Tamil Nadu",
+      "indiaNet": 0.05,
+      "worldwide": 0.07,
+      "status": "playing"
+    },
+    {
+      "id": "gladiators-special-trailer-premiere",
+      "title": "Gladiators: Special Trailer Premiere",
+      "indiaNet": 0.01,
+      "worldwide": 0.01,
+      "status": "playing"
+    },
+    {
+      "id": "immortal",
+      "title": "Immortal",
+      "indiaNet": 6.46,
+      "worldwide": 6.25,
+      "status": "playing"
+    },
+    {
+      "id": "ramba-oorvasi-menaka",
+      "title": "Ramba Oorvasi Menaka",
+      "indiaNet": 3.96,
+      "worldwide": 4.6,
+      "status": "playing"
+    },
+    {
+      "id": "bol-bhavein-na-bol",
+      "title": "Bol Bhavein Na Bol",
+      "indiaNet": 1.34,
+      "worldwide": 1.49,
+      "status": "playing"
+    },
+    {
+      "id": "asambhauuu",
+      "title": "Asambhauuu",
+      "indiaNet": 0.76,
+      "worldwide": 0.86,
+      "status": "playing"
     }
   ]
 }
