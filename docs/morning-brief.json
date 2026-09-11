@@ -1,31 +1,10 @@
 {
   "briefDate": "2026-09-11",
-  "generatedAt": "2026-09-11T06:59:44.613Z",
+  "generatedAt": "2026-09-11T07:26:07.435Z",
   "headline": "India box office: Mirzapur: The Movie leads the latest daily chart at ₹10.6 Cr",
   "lede": "Mirzapur: The Movie leads the latest reported daily India nett at ₹10.6 Cr on Day 8; its cumulative India nett is ₹148.5 Cr.",
-  "body": "Latest reported daily ranking: 1. Mirzapur: The Movie — ₹10.6 Cr on Day 8; cumulative India nett ₹148.5 Cr | 2. Hanuman Ansh — ₹10 Cr on Day 35; cumulative India nett ₹163.1 Cr | 3. Mandaadi — ₹4.8 Cr on Day 2; cumulative India nett ₹4.8 Cr | 4. Sardar 2 — ₹4.5 Cr on Day 1; cumulative India nett ₹4.5 Cr | 5. Irumudi — ₹1.6 Cr on Day 21; cumulative India nett ₹174.5 Cr.\n\nRecent-release watch: Haiwaan (released 2026-09-11) — latest India nett n/a; Sardar 2 (released 2026-09-10) — latest India nett ₹4.5 Cr; Mandaadi (released 2026-09-10) — latest India nett ₹4.8 Cr; Maremma (released 2026-09-10) — latest India nett n/a.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader at ₹1,820 Cr, but that is not the current daily chart.\n\nNo material day-over-day worldwide move of ₹0.5 Cr or more was recorded in the latest board comparison.\n\nDesk health: koimoi failed: HTTP 403 (streak 19); koimoi has failed 19 consecutive publishes. Figures remain the weighted-median consensus of the available trackers; India has no official box-office auditor.",
-  "citations": [
-    {
-      "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Awarapan 2: Sacnilk 28 days, India net ₹150.43 Cr"
-    },
-    {
-      "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Toxic: Sacnilk 16 days, India net ₹248.24 Cr"
-    },
-    {
-      "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Hi: Sacnilk 14 days, India net ₹12.39 Cr"
-    },
-    {
-      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Vishwanath And Sons: Sacnilk 28 days, India net ₹122.02 Cr"
-    },
-    {
-      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "title": "Irumudi: Sacnilk 21 days, India net ₹174.45 Cr"
-    }
-  ],
+  "body": "Latest reported daily ranking: 1. Mirzapur: The Movie — ₹10.6 Cr on Day 8; cumulative India nett ₹148.5 Cr | 2. Hanuman Ansh — ₹10 Cr on Day 35; cumulative India nett ₹163.1 Cr | 3. Mandaadi — ₹4.8 Cr on Day 2; cumulative India nett ₹4.8 Cr | 4. Sardar 2 — ₹4.5 Cr on Day 1; cumulative India nett ₹4.5 Cr | 5. Irumudi — ₹1.6 Cr on Day 21; cumulative India nett ₹174.5 Cr.\n\nRecent-release watch: Haiwaan (released 2026-09-11) — latest India nett n/a; Sardar 2 (released 2026-09-10) — latest India nett ₹4.5 Cr; Mandaadi (released 2026-09-10) — latest India nett ₹4.8 Cr; Maremma (released 2026-09-10) — latest India nett n/a.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader at ₹1,820 Cr, but that is not the current daily chart.\n\nNo material day-over-day worldwide move of ₹0.5 Cr or more was recorded in the latest board comparison.\n\nDesk health: 2 of 4 tracker feeds are unreachable on this pull. Figures remain the weighted-median consensus of the trackers still reporting; India has no official box-office auditor.",
+  "citations": [],
   "boardGeneratedAt": "2026-09-11T06:59:39.630Z",
   "model": "deterministic-editorial-v1"
 }
