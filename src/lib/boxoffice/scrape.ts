@@ -23,6 +23,7 @@ export type IngestResult = {
   readings: Reading[];
   territories: TerritorySplit[];
   wikiRows: WikiRow[];
+  discoveredMovies: Movie[];
   logs: { sourceId: string; status: string; detail: string }[];
 };
 
@@ -145,6 +146,91 @@ function tableRows(html: string): string[][] {
       );
       if (cells.length) out.push(cells);
     }
+  }
+  return out;
+}
+
+function discoveredId(title: string): string {
+  return foldTitle(title).replace(/\s+/g, "-").slice(0, 80);
+}
+
+function discoveredLanguage(industry: string): string {
+  const key = industry.toLowerCase();
+  if (key.includes("bollywood")) return "Hindi";
+  if (key.includes("kollywood")) return "Tamil";
+  if (key.includes("tollywood")) return "Telugu";
+  if (key.includes("mollywood")) return "Malayalam";
+  if (key.includes("sandalwood")) return "Kannada";
+  return industry || "Indian";
+}
+
+function dateFromAge(days: number): string {
+  const date = new Date(`${deskDate()}T12:00:00+05:30`);
+  date.setDate(date.getDate() - Math.max(0, days - 1));
+  return date.toISOString().slice(0, 10);
+}
+
+function parseSacnilkIndex(html: string): { movie: Movie; reading: Reading }[] {
+  const out: { movie: Movie; reading: Reading }[] = [];
+  const seen = new Set<string>();
+  const links = /href="(\/movie\/([^"]+))"/gi;
+  let match: RegExpExecArray | null;
+
+  while ((match = links.exec(html))) {
+    const path = match[1];
+    const start = html.lastIndexOf('<div class="movie-card', match.index);
+    const next = html.indexOf('<div class="movie-card', match.index + path.length);
+    const card = html.slice(start >= 0 ? start : match.index, next >= 0 ? next : match.index + 10000);
+    const detailSlug = match[2];
+    const titleRaw =
+      card.match(/<h3[^>]*>([\s\S]*?)<\/h3>/i)?.[1] ??
+      card.match(/<div class="font-bold">([\s\S]*?)<\/div>/i)?.[1] ??
+      "";
+    const title = stripTags(titleRaw).replace(/\s+/g, " ").replace(/\s*\([^)]*\)\s*$/, "").trim();
+    const industry =
+      titleRaw.match(/\((Bollywood|Kollywood|Tollywood|Mollywood|Sandalwood|Hollywood)\)/i)?.[1] ??
+      "Indian";
+    const text = stripTags(card);
+    const net = parseCr(text.match(/Net:\s*₹\s*([\d,.]+)\s*Cr/i)?.[1]);
+    const gross = parseCr(text.match(/Gross:\s*₹\s*([\d,.]+)\s*Cr/i)?.[1]);
+    const worldwide = parseCr(text.match(/WW:\s*₹\s*([\d,.]+)\s*Cr/i)?.[1]);
+    const days = Number(text.match(/Days:\s*(\d+)\s*Days/i)?.[1] ?? "");
+    if (!title || !net || !worldwide || !days || seen.has(detailSlug)) continue;
+    seen.add(detailSlug);
+
+    const id = discoveredId(title);
+    const movie: Movie = {
+      id,
+      slug: detailSlug,
+      title,
+      language: discoveredLanguage(industry),
+      industry,
+      director: "—",
+      starring: "—",
+      releaseDate: dateFromAge(days),
+      budgetCr: null,
+      runtimeMin: null,
+      synopsis: "Automatically discovered from Sacnilk's current theatrical board.",
+      posterKey: "hero-cinema",
+      status: "playing",
+      verdict: "Pending",
+    };
+    out.push({
+      movie,
+      reading: {
+        movieId: id,
+        sourceId: "sacnilk",
+        reportDate: LIFETIME_DATE,
+        dayNumber: days,
+        indiaNet: net,
+        indiaGross: gross,
+        overseas: worldwide != null && gross != null ? Math.max(0, worldwide - gross) : null,
+        worldwide,
+        screens: null,
+        occupancy: null,
+        note: "live index",
+      },
+    });
   }
   return out;
 }
@@ -453,7 +539,7 @@ function parsePinkvilla(html: string): ScrapedHeadline[] {
 }
 
 /** Soft lifetime reading from a newsroom headline that cites a crore figure. */
-function readingFromHeadline(sourceId: string, title: string, url: string): Reading | null {
+function readingFromHeadline(sourceId: string, title: string, _url: string): Reading | null {
   const movie = matchMovie(title);
   if (!movie) return null;
   const gross = title.match(
@@ -482,7 +568,7 @@ function parseKoimoiPage(html: string, movie: Movie): Reading[] {
   const text = stripTags(html);
   const out: Reading[] = [];
   const dayRe =
-    /Day\s+(\d+)\s*[:\-]?\s*(?:\([^)]+\)\s*)?(?:₹|Rs\.?)\s*([\d,.]+)\s*Cr/gi;
+    /Day\s+(\d+)\s*[:-]?\s*(?:\([^)]+\)\s*)?(?:₹|Rs\.?)\s*([\d,.]+)\s*Cr/gi;
   let match: RegExpExecArray | null;
   const seen = new Set<number>();
   while ((match = dayRe.exec(text))) {
@@ -604,9 +690,46 @@ export async function ingestLiveSources(): Promise<IngestResult> {
   const headlines: ScrapedHeadline[] = [];
   const readings: Reading[] = [];
   const territories: TerritorySplit[] = [];
+  const discoveredMovies: Movie[] = [];
   let wikiRows: WikiRow[] = [];
 
   const jobs: { sourceId: string; run: () => Promise<void> }[] = [
+    {
+      sourceId: "sacnilk",
+      run: async () => {
+        const html = await fetchText("https://www.sacnilk.com/box-office-collections");
+        const discovered = parseSacnilkIndex(html).filter(({ movie }) => !matchMovie(movie.title));
+        discoveredMovies.push(...discovered.map(({ movie }) => movie));
+        readings.push(...discovered.map(({ reading }) => reading));
+
+        await runPool(discovered, 4, async ({ movie }) => {
+          const pageSlug = movie.slug.replace(/_2026$/i, "");
+          try {
+            const detail = await fetchText(
+              `https://www.sacnilk.com/news/${pageSlug}_2026_Box_Office_Collection_Day_Wise_Worldwide`,
+            );
+            const parsed = parseSacnilkPage(detail, movie);
+            readings.push(...parsed.readings);
+            const lastDaily = parsed.readings.filter((r) => r.note === "live scrape").at(-1);
+            headlines.push({
+              sourceId: "sacnilk",
+              title: `${movie.title}: Sacnilk discovered live`,
+              url: `https://www.sacnilk.com/news/${pageSlug}_2026_Box_Office_Collection_Day_Wise_Worldwide`,
+              publishedAt: new Date().toISOString(),
+              summary: `Auto-discovered ${movie.industry} title. Latest reported India net \u20B9${lastDaily?.indiaNet ?? "—"} Cr.`,
+            });
+          } catch {
+            headlines.push({
+              sourceId: "sacnilk",
+              title: `${movie.title}: Sacnilk discovered`,
+              url: `https://www.sacnilk.com/movie/${movie.slug}`,
+              publishedAt: new Date().toISOString(),
+              summary: `Auto-discovered ${movie.industry} title. Current board India net \u20B9${readings.find((r) => r.movieId === movie.id)?.indiaNet ?? "—"} Cr.`,
+            });
+          }
+        });
+      },
+    },
     ...SACNILK_PAGES.map((page) => ({
       sourceId: "sacnilk" as const,
       run: async () => {
@@ -839,5 +962,5 @@ export async function ingestLiveSources(): Promise<IngestResult> {
     return true;
   });
 
-  return { headlines: uniqueHeadlines, readings, territories, wikiRows, logs };
+  return { headlines: uniqueHeadlines, readings, territories, wikiRows, discoveredMovies, logs };
 }
