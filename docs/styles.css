@@ -657,3 +657,50 @@ a {
     min-height: 126px;
   }
 }
+
+/* ── Small-screen header and ranking refinement ─────────────────────────── */
+@media (max-width: 640px) {
+  .brand {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    column-gap: 8px;
+    row-gap: 2px;
+    align-items: center;
+    flex-wrap: initial;
+  }
+  .brand > .mark {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .brand > span:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .brand > span:nth-child(2) strong {
+    white-space: nowrap;
+    font-size: 15px;
+  }
+  .brand .credit {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    white-space: normal;
+    font-size: 9px;
+    line-height: 1.25;
+  }
+  .week-board li {
+    grid-template-columns: 22px minmax(0, 1fr);
+    align-items: center;
+  }
+  .week-title {
+    min-width: 0;
+    white-space: nowrap;
+  }
+  .week-gross {
+    grid-column: 2;
+    justify-content: flex-start;
+    margin-top: -3px;
+  }
+}
