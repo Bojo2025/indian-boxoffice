@@ -1,12 +1,12 @@
 {
   "date": "2026-09-11",
-  "generatedAt": "2026-09-11T08:21:45.519Z",
+  "generatedAt": "2026-09-11T10:53:51.594Z",
   "films": [
     {
       "id": "toxic",
       "title": "Toxic",
       "indiaNet": 248.24,
-      "worldwide": 339.32,
+      "worldwide": 339.79,
       "status": "playing"
     },
     {
@@ -89,8 +89,8 @@
     {
       "id": "spider-man-bnd",
       "title": "Spider-Man: Brand New Day",
-      "indiaNet": 498.12,
-      "worldwide": 595.95,
+      "indiaNet": 497.95,
+      "worldwide": 595.85,
       "status": "late"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 193.85,
-      "worldwide": 230.8,
+      "indiaNet": 193.62,
+      "worldwide": 230.7,
       "status": "late"
     },
     {
@@ -194,8 +194,8 @@
     {
       "id": "mandaadi",
       "title": "Mandaadi",
-      "indiaNet": 4.75,
-      "worldwide": 6.55,
+      "indiaNet": 4.9,
+      "worldwide": 6.75,
       "status": "playing"
     },
     {
