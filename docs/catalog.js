@@ -1,7 +1,7 @@
 window.IBO_CATALOG = {
-  "generatedAt": "2026-09-11T20:42:25.667Z",
+  "generatedAt": "2026-09-11T23:05:15.167Z",
   "deskDate": "2026-09-12",
-  "comparedTo": "2026-09-11",
+  "comparedTo": "2026-09-12 prior",
   "mode": "server-consensus",
   "spine": [
     "sacnilk",
@@ -12,10 +12,10 @@ window.IBO_CATALOG = {
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 23)",
-      "koimoi has failed 23 consecutive publishes",
-      "boi failed: HTTP 403 (streak 21)",
-      "boi has failed 21 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 24)",
+      "koimoi has failed 24 consecutive publishes",
+      "boi failed: HTTP 403 (streak 22)",
+      "boi has failed 22 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
@@ -25,7 +25,7 @@ window.IBO_CATALOG = {
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 23,
+        "streakFail": 24,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@ window.IBO_CATALOG = {
       },
       "boi": {
         "ok": false,
-        "streakFail": 21,
+        "streakFail": 22,
         "detail": "HTTP 403"
       }
     }
@@ -140,7 +140,7 @@ window.IBO_CATALOG = {
         "sacnilk",
         "wikipedia"
       ],
-      "deltaNet": 0.26,
+      "deltaNet": 0,
       "deltaWw": 0
     },
     {
@@ -168,7 +168,7 @@ window.IBO_CATALOG = {
         "sacnilk",
         "hungama"
       ],
-      "deltaNet": 0.01,
+      "deltaNet": 0,
       "deltaWw": 0
     },
     {
@@ -195,8 +195,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.05,
-      "deltaWw": 0.05
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "irumudi",
@@ -222,8 +222,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 1.35,
-      "deltaWw": 1.6
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "batwara-1947",
@@ -277,8 +277,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.05,
-      "deltaWw": 0.06
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "insidious-further",
@@ -355,8 +355,8 @@ window.IBO_CATALOG = {
         "sacnilk",
         "hungama"
       ],
-      "deltaNet": 10.5,
-      "deltaWw": 12.4
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "sardar-2",
@@ -382,8 +382,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 2.45,
-      "deltaWw": 3.85
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "haiwaan",
@@ -409,8 +409,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 3,
-      "deltaWw": 4.6
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "mirzapur-the-movie",
@@ -437,8 +437,8 @@ window.IBO_CATALOG = {
         "sacnilk",
         "hungama"
       ],
-      "deltaNet": 9,
-      "deltaWw": 13.11
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "spider-man-bnd",
@@ -465,8 +465,8 @@ window.IBO_CATALOG = {
         "sacnilk",
         "pinkvilla"
       ],
-      "deltaNet": 0.17,
-      "deltaWw": 0.18
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "dhamaal-4",
@@ -520,8 +520,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.15,
-      "deltaWw": 0.16
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "dhurandhar",
@@ -741,8 +741,8 @@ window.IBO_CATALOG = {
       "lastDayNet": null,
       "trackedThroughDay": 80,
       "liveSources": [],
-      "deltaNet": 174,
-      "deltaWw": -0.1
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "vaazha-ii",
@@ -876,8 +876,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "pradhama-drishtiya-kuttakkar",
@@ -903,8 +903,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "mahendragiri-varahi",
@@ -930,8 +930,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "singh-vs-kaur-2",
@@ -957,8 +957,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "aasha",
@@ -984,8 +984,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "fall-2-deadpoint",
@@ -1011,8 +1011,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "video",
@@ -1038,8 +1038,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "america-america-2",
@@ -1065,8 +1065,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "jayanti-2",
@@ -1092,54 +1092,11 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null
+      "deltaNet": 0,
+      "deltaWw": 0
     }
   ],
-  "changes": [
-    {
-      "id": "mirzapur-the-movie",
-      "title": "Mirzapur: The Movie",
-      "text": "Mirzapur: The Movie: WW +₹13.11 Cr, India net +₹9 Cr since 2026-09-11",
-      "deltaNet": 9,
-      "deltaWw": 13.11
-    },
-    {
-      "id": "hanuman-ansh",
-      "title": "Hanuman Ansh",
-      "text": "Hanuman Ansh: WW +₹12.4 Cr, India net +₹10.5 Cr since 2026-09-11",
-      "deltaNet": 10.5,
-      "deltaWw": 12.4
-    },
-    {
-      "id": "haiwaan",
-      "title": "Haiwaan",
-      "text": "Haiwaan: WW +₹4.6 Cr, India net +₹3 Cr since 2026-09-11",
-      "deltaNet": 3,
-      "deltaWw": 4.6
-    },
-    {
-      "id": "sardar-2",
-      "title": "Sardar 2",
-      "text": "Sardar 2: WW +₹3.85 Cr, India net +₹2.45 Cr since 2026-09-11",
-      "deltaNet": 2.45,
-      "deltaWw": 3.85
-    },
-    {
-      "id": "irumudi",
-      "title": "Irumudi",
-      "text": "Irumudi: WW +₹1.6 Cr, India net +₹1.35 Cr since 2026-09-11",
-      "deltaNet": 1.35,
-      "deltaWw": 1.6
-    },
-    {
-      "id": "drishyam-3",
-      "title": "Drishyam 3",
-      "text": "Drishyam 3: India net +₹174 Cr since 2026-09-11",
-      "deltaNet": 174,
-      "deltaWw": -0.1
-    }
-  ],
+  "changes": [],
   "logs": [
     {
       "sourceId": "sacnilk",
@@ -1157,12 +1114,12 @@ window.IBO_CATALOG = {
       "detail": "7 collection rows from 1 live pull"
     },
     {
-      "sourceId": "koimoi",
-      "status": "blocked",
-      "detail": "HTTP 403"
+      "sourceId": "etimes",
+      "status": "ok",
+      "detail": "Fetched 1 page (headlines / status)"
     },
     {
-      "sourceId": "etimes",
+      "sourceId": "express",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
     },
@@ -1172,9 +1129,9 @@ window.IBO_CATALOG = {
       "detail": "1 collection rows from 1 live pull"
     },
     {
-      "sourceId": "express",
-      "status": "ok",
-      "detail": "Fetched 1 page (headlines / status)"
+      "sourceId": "koimoi",
+      "status": "blocked",
+      "detail": "HTTP 403"
     },
     {
       "sourceId": "boi",
@@ -1185,115 +1142,115 @@ window.IBO_CATALOG = {
   "headlines": [
     {
       "sourceId": "sacnilk",
-      "title": "Batwara 1947: Sacnilk 28 days, India net ₹38.08 Cr",
-      "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:19.716Z",
-      "summary": "Live day-wise pull. Last day 28. WW ₹54.2 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Toxic: Sacnilk 17 days, India net ₹248.5 Cr",
-      "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:19.990Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹339.79 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Irumudi: Sacnilk 22 days, India net ₹175.8 Cr",
-      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:20.013Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹226.55 Cr."
+      "title": "Awarapan 2: Sacnilk 29 days, India net ₹150.44 Cr",
+      "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T23:05:03.041Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹212.86 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Vishwanath And Sons: Sacnilk 29 days, India net ₹122.07 Cr",
       "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:20.060Z",
+      "publishedAt": "2026-09-11T23:05:03.208Z",
       "summary": "Live day-wise pull. Last day 1. WW ₹208.92 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Border 2: Sacnilk 88 days, India net ₹329.43 Cr",
-      "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:20.087Z",
-      "summary": "Live day-wise pull. Last day 112. WW ₹450.19 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Epic: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Epic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:20.250Z",
-      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹2.1 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Hi: Sacnilk 15 days, India net ₹12.44 Cr",
-      "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:20.365Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹14.48 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Awarapan 2: Sacnilk 29 days, India net ₹150.44 Cr",
-      "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:20.672Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹212.86 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Spider-Man: Brand New Day: Sacnilk 44 days, India net ₹498.12 Cr",
-      "url": "https://www.sacnilk.com/news/spider_man_brand_new_day_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:20.929Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹596.03 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Dhurandhar: The Revenge: Sacnilk 106 days, India net ₹1149.3 Cr",
       "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:21.009Z",
+      "publishedAt": "2026-09-11T23:05:03.668Z",
       "summary": "Live day-wise pull. Last day 106. WW ₹1813.39 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Singh Vs Kaur 2: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Singh_Vs_Kaur_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:21.023Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.35 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Mahendragiri Varahi: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Mahendragiri_Varahi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:21.034Z",
-      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹0.55 Cr."
+      "title": "Batwara 1947: Sacnilk 28 days, India net ₹38.08 Cr",
+      "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T23:05:03.872Z",
+      "summary": "Live day-wise pull. Last day 28. WW ₹54.2 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Peddi: Sacnilk 73 days, India net ₹244.64 Cr",
       "url": "https://www.sacnilk.com/news/peddi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:21.122Z",
+      "publishedAt": "2026-09-11T23:05:03.908Z",
       "summary": "Live day-wise pull. Last day 88. WW ₹341.9 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Karuppu: Sacnilk 67 days, India net ₹198.18 Cr",
-      "url": "https://www.sacnilk.com/news/karuppu_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:21.156Z",
-      "summary": "Live day-wise pull. Last day 69. WW ₹310.12 Cr."
+      "title": "Hi: Sacnilk 15 days, India net ₹12.44 Cr",
+      "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T23:05:03.950Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹14.48 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Dhamaal 4: Sacnilk 63 days, India net ₹167.88 Cr",
-      "url": "https://www.sacnilk.com/news/dhamaal_4_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-11T20:42:21.176Z",
-      "summary": "Live day-wise pull. Last day 63. WW ₹230.17 Cr."
+      "title": "Irumudi: Sacnilk 22 days, India net ₹175.8 Cr",
+      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T23:05:04.218Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹226.55 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Toxic: Sacnilk 17 days, India net ₹248.5 Cr",
+      "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T23:05:04.248Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹339.79 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Border 2: Sacnilk 88 days, India net ₹329.43 Cr",
+      "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T23:05:04.275Z",
+      "summary": "Live day-wise pull. Last day 112. WW ₹450.19 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Mahendragiri Varahi: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Mahendragiri_Varahi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T23:05:04.354Z",
+      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹0.55 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Singh Vs Kaur 2: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Singh_Vs_Kaur_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T23:05:04.366Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.35 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Spider-Man: Brand New Day: Sacnilk 44 days, India net ₹498.12 Cr",
+      "url": "https://www.sacnilk.com/news/spider_man_brand_new_day_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T23:05:04.536Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹596.03 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Pradhama Drishtiya Kuttakkar: Sacnilk discovered",
       "url": "https://www.sacnilk.com/movie/Pradhama_Drishtiya_Kuttakkar_2026",
-      "publishedAt": "2026-09-11T20:42:21.177Z",
+      "publishedAt": "2026-09-11T23:05:04.602Z",
       "summary": "Auto-discovered Mollywood title. Current board India net ₹0.92 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Welcome To The Jungle: Sacnilk 49 days, India net ₹134.11 Cr",
+      "url": "https://www.sacnilk.com/news/welcome_to_the_jungle_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T23:05:04.625Z",
+      "summary": "Live day-wise pull. Last day 49. WW ₹192.75 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Dhamaal 4: Sacnilk 63 days, India net ₹167.88 Cr",
+      "url": "https://www.sacnilk.com/news/dhamaal_4_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T23:05:04.965Z",
+      "summary": "Live day-wise pull. Last day 63. WW ₹230.17 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Haiwaan: Sacnilk 1 days, India net ₹3 Cr",
+      "url": "https://www.sacnilk.com/news/haiwaan_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-11T23:05:04.974Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹4.6 Cr."
     }
   ],
   "morningBrief": {
