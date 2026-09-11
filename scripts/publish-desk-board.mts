@@ -302,10 +302,11 @@ const blockedTrade = new Set(
 if (!spineStatus.koimoi?.ok) blockedTrade.add("koimoi");
 
 const merged = mergeReadings(seedReadings(), live.readings, blockedTrade);
+const movieCatalog = [...MOVIES, ...live.discoveredMovies];
 const prior = previousSnapshot(today);
 const priorMap = new Map((prior?.films ?? []).map((f) => [f.id, f]));
 
-const films: FilmCard[] = MOVIES.map((m) => {
+const films: FilmCard[] = movieCatalog.map((m) => {
   const rows = merged.filter((r) => r.movieId === m.id);
   const indiaNet = consensusField(rows, "indiaNet");
   const indiaGross = consensusField(rows, "indiaGross");
@@ -313,6 +314,9 @@ const films: FilmCard[] = MOVIES.map((m) => {
   let worldwide = consensusField(rows, "worldwide");
   if (!worldwide && indiaGross) worldwide = indiaGross;
   const liveSources = [...new Set(live.readings.filter((r) => r.movieId === m.id).map((r) => r.sourceId))];
+  const hasLiveDaily = live.readings.some(
+    (r) => r.movieId === m.id && r.note === "live scrape" && r.reportDate < "2099-01-01",
+  );
   const prev = priorMap.get(m.id);
   const deltaNet = prev ? round2(indiaNet - prev.indiaNet) : null;
   const deltaWw = prev ? round2(worldwide - prev.worldwide) : null;
@@ -328,7 +332,7 @@ const films: FilmCard[] = MOVIES.map((m) => {
     releaseDate: m.releaseDate,
     budgetCr: m.budgetCr,
     synopsis: m.synopsis,
-    status: m.status,
+    status: m.status === "closed" && hasLiveDaily ? "playing" : m.status,
     verdict: m.verdict,
     posterKey: art.posterKey,
     poster: art.poster,
