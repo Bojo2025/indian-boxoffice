@@ -262,6 +262,31 @@ function parseSacnilkPage(
     });
   }
 
+  // Newer Sacnilk cards sometimes expose only India nett + occupancy, with
+  // the calendar year between the date and the weekday label.
+  const compactDayRe =
+    /Day\s+(\d+)(?:\s+\d{1,2}\s+[A-Za-z]{3,9}(?:\s+\d{4})?)?\s*\([^)]+\)\s*\u20B9\s*([\d,.]+)\s*Cr(?:\s+([\d.]+)\s*%|\s+Language Breakdown)/g;
+  const seenDays = new Set(readings.map((reading) => reading.dayNumber));
+  while ((match = compactDayRe.exec(text))) {
+    const day = Number(match[1]);
+    const indiaNet = parseCr(match[2]);
+    if (!day || indiaNet == null || seenDays.has(day)) continue;
+    seenDays.add(day);
+    readings.push({
+      movieId: movie.id,
+      sourceId: "sacnilk",
+      reportDate: dateForDay(movie.releaseDate, day),
+      dayNumber: day,
+      indiaNet,
+      indiaGross: null,
+      overseas: null,
+      worldwide: null,
+      screens: null,
+      occupancy: match[3] ? Number(match[3]) : null,
+      note: "live scrape",
+    });
+  }
+
   const life = text.match(
     /worldwide collections of\s*\u20B9\s*([\d,.]+)\s*Cr\s*\(\s*India Gross:\s*\u20B9\s*([\d,.]+)\s*Cr\s*,\s*Overseas:\s*\u20B9\s*([\d,.]+)\s*Cr[\s\S]{0,120}?\u20B9\s*([\d,.]+)\s*Cr in net/i,
   );
