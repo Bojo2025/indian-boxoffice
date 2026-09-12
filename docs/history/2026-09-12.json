@@ -1,6 +1,6 @@
 {
   "date": "2026-09-12",
-  "generatedAt": "2026-09-12T10:21:24.800Z",
+  "generatedAt": "2026-09-12T15:16:13.356Z",
   "films": [
     {
       "id": "toxic",
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3",
-      "indiaNet": 174,
-      "worldwide": 242,
+      "indiaNet": 0,
+      "worldwide": 242.1,
       "status": "closed"
     },
     {
