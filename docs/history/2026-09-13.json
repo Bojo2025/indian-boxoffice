@@ -1,6 +1,6 @@
 {
   "date": "2026-09-13",
-  "generatedAt": "2026-09-13T11:22:17.155Z",
+  "generatedAt": "2026-09-13T15:52:09.461Z",
   "films": [
     {
       "id": "toxic",
@@ -132,7 +132,7 @@
       "id": "jana-nayagan",
       "title": "Jana Nayagan",
       "indiaNet": 0,
-      "worldwide": 333.55,
+      "worldwide": 329.28,
       "status": "closed"
     },
     {
