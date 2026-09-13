@@ -1,6 +1,6 @@
 {
   "date": "2026-09-13",
-  "generatedAt": "2026-09-13T03:59:08.358Z",
+  "generatedAt": "2026-09-13T08:35:15.291Z",
   "films": [
     {
       "id": "toxic",
@@ -252,76 +252,6 @@
       "title": "Jayanti 2",
       "indiaNet": 0.31,
       "worldwide": 0.34,
-      "status": "playing"
-    },
-    {
-      "id": "pidha-pachhi",
-      "title": "Pidha Pachhi",
-      "indiaNet": 0.12,
-      "worldwide": 0.13,
-      "status": "playing"
-    },
-    {
-      "id": "dahaan-the-evil-within",
-      "title": "Dahaan: The Evil Within",
-      "indiaNet": 0.1,
-      "worldwide": 0.11,
-      "status": "playing"
-    },
-    {
-      "id": "last-man-in-tower",
-      "title": "Last Man in Tower",
-      "indiaNet": 0.09,
-      "worldwide": 0.09,
-      "status": "playing"
-    },
-    {
-      "id": "saalagaarara-sahakara-sangha",
-      "title": "Saalagaarara Sahakara Sangha",
-      "indiaNet": 0.04,
-      "worldwide": 0.05,
-      "status": "playing"
-    },
-    {
-      "id": "dandakali",
-      "title": "Dandakali",
-      "indiaNet": 0.03,
-      "worldwide": 0.03,
-      "status": "playing"
-    },
-    {
-      "id": "ozhiyathe",
-      "title": "Ozhiyathe",
-      "indiaNet": 0.02,
-      "worldwide": 0.03,
-      "status": "playing"
-    },
-    {
-      "id": "deka-xoinyaxi-the-millennial-monks",
-      "title": "Deka Xoinyaxi (The Millennial Monks)",
-      "indiaNet": 0.02,
-      "worldwide": 0.02,
-      "status": "playing"
-    },
-    {
-      "id": "arayanum-amarakkaranum",
-      "title": "Arayanum Amarakkaranum",
-      "indiaNet": 0.02,
-      "worldwide": 0.02,
-      "status": "playing"
-    },
-    {
-      "id": "ghun-gaon",
-      "title": "Ghun Gaon",
-      "indiaNet": 0.02,
-      "worldwide": 0.02,
-      "status": "playing"
-    },
-    {
-      "id": "bhata",
-      "title": "Bhata",
-      "indiaNet": 0.02,
-      "worldwide": 0.02,
       "status": "playing"
     }
   ]
