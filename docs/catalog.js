@@ -1,5 +1,5 @@
 window.IBO_CATALOG = {
-  "generatedAt": "2026-09-12T22:54:47.829Z",
+  "generatedAt": "2026-09-13T03:59:08.358Z",
   "deskDate": "2026-09-13",
   "comparedTo": "2026-09-13 prior",
   "mode": "server-consensus",
@@ -12,20 +12,20 @@ window.IBO_CATALOG = {
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 30)",
-      "koimoi has failed 30 consecutive publishes",
-      "boi failed: HTTP 403 (streak 28)",
-      "boi has failed 28 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 31)",
+      "koimoi has failed 31 consecutive publishes",
+      "boi failed: HTTP 403 (streak 29)",
+      "boi has failed 29 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
         "ok": true,
         "streakFail": 0,
-        "detail": "855 collection rows from 20 live pulls"
+        "detail": "865 collection rows from 20 live pulls"
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 30,
+        "streakFail": 31,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@ window.IBO_CATALOG = {
       },
       "boi": {
         "ok": false,
-        "streakFail": 28,
+        "streakFail": 29,
         "detail": "HTTP 403"
       }
     }
@@ -378,9 +378,10 @@ window.IBO_CATALOG = {
       "overseas": 3.5,
       "worldwide": 14.25,
       "lastDayNet": 2.2,
-      "trackedThroughDay": 3,
+      "trackedThroughDay": 4,
       "liveSources": [
-        "sacnilk"
+        "sacnilk",
+        "pinkvilla"
       ],
       "deltaNet": 0,
       "deltaWw": 0
@@ -405,9 +406,10 @@ window.IBO_CATALOG = {
       "overseas": 2,
       "worldwide": 8.6,
       "lastDayNet": 2.5,
-      "trackedThroughDay": 2,
+      "trackedThroughDay": 3,
       "liveSources": [
-        "sacnilk"
+        "sacnilk",
+        "pinkvilla"
       ],
       "deltaNet": 0,
       "deltaWw": 0
@@ -427,18 +429,18 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "mirzapur-the-movie",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 170.45,
-      "indiaGross": 203.19,
+      "indiaNet": 171.45,
+      "indiaGross": 204.39,
       "overseas": 42,
-      "worldwide": 245.19,
-      "lastDayNet": 12.5,
+      "worldwide": 246.39,
+      "lastDayNet": 13.5,
       "trackedThroughDay": 10,
       "liveSources": [
         "sacnilk",
         "hungama"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0
+      "deltaNet": 1,
+      "deltaWw": 1.2
     },
     {
       "id": "spider-man-bnd",
@@ -862,7 +864,7 @@ window.IBO_CATALOG = {
       "industry": "Tollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-12",
+      "releaseDate": "2026-09-11",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "status": "playing",
@@ -874,7 +876,7 @@ window.IBO_CATALOG = {
       "overseas": 1.65,
       "worldwide": 5.6,
       "lastDayNet": 1.3,
-      "trackedThroughDay": 2,
+      "trackedThroughDay": 3,
       "liveSources": [
         "sacnilk"
       ],
@@ -889,7 +891,7 @@ window.IBO_CATALOG = {
       "industry": "Tollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-12",
+      "releaseDate": "2026-09-11",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "status": "playing",
@@ -901,7 +903,7 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 1.42,
       "lastDayNet": 0.69,
-      "trackedThroughDay": 2,
+      "trackedThroughDay": 3,
       "liveSources": [
         "sacnilk"
       ],
@@ -916,7 +918,7 @@ window.IBO_CATALOG = {
       "industry": "Mollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-12",
+      "releaseDate": "2026-09-11",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "status": "playing",
@@ -928,7 +930,7 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 1.12,
       "lastDayNet": null,
-      "trackedThroughDay": 2,
+      "trackedThroughDay": 3,
       "liveSources": [
         "sacnilk"
       ],
@@ -943,7 +945,7 @@ window.IBO_CATALOG = {
       "industry": "Mollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-12",
+      "releaseDate": "2026-09-11",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "status": "playing",
@@ -955,7 +957,7 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 1.03,
       "lastDayNet": 2.02,
-      "trackedThroughDay": 2,
+      "trackedThroughDay": 3,
       "liveSources": [
         "sacnilk"
       ],
@@ -970,7 +972,7 @@ window.IBO_CATALOG = {
       "industry": "Indian",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-12",
+      "releaseDate": "2026-09-11",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "status": "playing",
@@ -982,7 +984,7 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 1.02,
       "lastDayNet": 0.45,
-      "trackedThroughDay": 2,
+      "trackedThroughDay": 3,
       "liveSources": [
         "sacnilk"
       ],
@@ -997,7 +999,7 @@ window.IBO_CATALOG = {
       "industry": "Hollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-12",
+      "releaseDate": "2026-09-11",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "status": "playing",
@@ -1009,7 +1011,7 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 0.72,
       "lastDayNet": null,
-      "trackedThroughDay": 2,
+      "trackedThroughDay": 3,
       "liveSources": [
         "sacnilk"
       ],
@@ -1024,7 +1026,7 @@ window.IBO_CATALOG = {
       "industry": "Sandalwood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-12",
+      "releaseDate": "2026-09-11",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "status": "playing",
@@ -1036,7 +1038,7 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 0.44,
       "lastDayNet": null,
-      "trackedThroughDay": 2,
+      "trackedThroughDay": 3,
       "liveSources": [
         "sacnilk"
       ],
@@ -1051,7 +1053,7 @@ window.IBO_CATALOG = {
       "industry": "Sandalwood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-12",
+      "releaseDate": "2026-09-11",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "status": "playing",
@@ -1063,7 +1065,7 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 0.41,
       "lastDayNet": null,
-      "trackedThroughDay": 2,
+      "trackedThroughDay": 3,
       "liveSources": [
         "sacnilk"
       ],
@@ -1078,7 +1080,7 @@ window.IBO_CATALOG = {
       "industry": "Indian",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-12",
+      "releaseDate": "2026-09-11",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "status": "playing",
@@ -1090,20 +1092,298 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 0.34,
       "lastDayNet": null,
-      "trackedThroughDay": 2,
+      "trackedThroughDay": 3,
       "liveSources": [
         "sacnilk"
       ],
       "deltaNet": 0,
       "deltaWw": 0
+    },
+    {
+      "id": "pidha-pachhi",
+      "slug": "Pidha_Pachhi_2026",
+      "title": "Pidha Pachhi",
+      "language": "Indian",
+      "industry": "Indian",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-09-11",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.12,
+      "indiaGross": 0.13,
+      "overseas": 0,
+      "worldwide": 0.13,
+      "lastDayNet": null,
+      "trackedThroughDay": 3,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": null,
+      "deltaWw": null
+    },
+    {
+      "id": "dahaan-the-evil-within",
+      "slug": "Dahaan_The_Evil_Within_2026",
+      "title": "Dahaan: The Evil Within",
+      "language": "Indian",
+      "industry": "Indian",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-09-11",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.1,
+      "indiaGross": 0.11,
+      "overseas": 0,
+      "worldwide": 0.11,
+      "lastDayNet": null,
+      "trackedThroughDay": 3,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": null,
+      "deltaWw": null
+    },
+    {
+      "id": "last-man-in-tower",
+      "slug": "Last_Man_in_Tower_2026",
+      "title": "Last Man in Tower",
+      "language": "Hindi",
+      "industry": "Bollywood",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-09-11",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.09,
+      "indiaGross": 0.09,
+      "overseas": 0,
+      "worldwide": 0.09,
+      "lastDayNet": null,
+      "trackedThroughDay": 3,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": null,
+      "deltaWw": null
+    },
+    {
+      "id": "saalagaarara-sahakara-sangha",
+      "slug": "Saalagaarara_Sahakara_Sangha_2026",
+      "title": "Saalagaarara Sahakara Sangha",
+      "language": "Kannada",
+      "industry": "Sandalwood",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-09-11",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.04,
+      "indiaGross": 0.05,
+      "overseas": 0,
+      "worldwide": 0.05,
+      "lastDayNet": null,
+      "trackedThroughDay": 3,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": null,
+      "deltaWw": null
+    },
+    {
+      "id": "dandakali",
+      "slug": "Dandakali_2026",
+      "title": "Dandakali",
+      "language": "Indian",
+      "industry": "Indian",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-09-11",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.03,
+      "indiaGross": 0.03,
+      "overseas": 0,
+      "worldwide": 0.03,
+      "lastDayNet": null,
+      "trackedThroughDay": 3,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": null,
+      "deltaWw": null
+    },
+    {
+      "id": "ozhiyathe",
+      "slug": "Ozhiyathe_2026",
+      "title": "Ozhiyathe",
+      "language": "Malayalam",
+      "industry": "Mollywood",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-09-11",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.02,
+      "indiaGross": 0.03,
+      "overseas": 0,
+      "worldwide": 0.03,
+      "lastDayNet": null,
+      "trackedThroughDay": 3,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": null,
+      "deltaWw": null
+    },
+    {
+      "id": "deka-xoinyaxi-the-millennial-monks",
+      "slug": "Deka_Xoinyaxi_2026",
+      "title": "Deka Xoinyaxi (The Millennial Monks)",
+      "language": "Indian",
+      "industry": "Indian",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-09-11",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.02,
+      "indiaGross": 0.02,
+      "overseas": 0,
+      "worldwide": 0.02,
+      "lastDayNet": null,
+      "trackedThroughDay": 3,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": null,
+      "deltaWw": null
+    },
+    {
+      "id": "arayanum-amarakkaranum",
+      "slug": "Arayanum_Amarakkaranum_2026",
+      "title": "Arayanum Amarakkaranum",
+      "language": "Malayalam",
+      "industry": "Mollywood",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-09-11",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.02,
+      "indiaGross": 0.02,
+      "overseas": 0,
+      "worldwide": 0.02,
+      "lastDayNet": null,
+      "trackedThroughDay": 3,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": null,
+      "deltaWw": null
+    },
+    {
+      "id": "ghun-gaon",
+      "slug": "Ghun_Gaon_2026",
+      "title": "Ghun Gaon",
+      "language": "Indian",
+      "industry": "Indian",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-09-11",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.02,
+      "indiaGross": 0.02,
+      "overseas": 0,
+      "worldwide": 0.02,
+      "lastDayNet": null,
+      "trackedThroughDay": 3,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": null,
+      "deltaWw": null
+    },
+    {
+      "id": "bhata",
+      "slug": "Bhata_2026",
+      "title": "Bhata",
+      "language": "Indian",
+      "industry": "Indian",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-09-11",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.02,
+      "indiaGross": 0.02,
+      "overseas": 0,
+      "worldwide": 0.02,
+      "lastDayNet": null,
+      "trackedThroughDay": 3,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": null,
+      "deltaWw": null
     }
   ],
-  "changes": [],
+  "changes": [
+    {
+      "id": "mirzapur-the-movie",
+      "title": "Mirzapur: The Movie",
+      "text": "Mirzapur: The Movie: WW +₹1.2 Cr, India net +₹1 Cr since 2026-09-13 prior",
+      "deltaNet": 1,
+      "deltaWw": 1.2
+    }
+  ],
   "logs": [
     {
       "sourceId": "sacnilk",
       "status": "ok",
-      "detail": "855 collection rows from 20 live pulls"
+      "detail": "865 collection rows from 20 live pulls"
     },
     {
       "sourceId": "hungama",
@@ -1111,14 +1391,14 @@ window.IBO_CATALOG = {
       "detail": "47 collection rows from 16 live pulls"
     },
     {
-      "sourceId": "wikipedia",
-      "status": "ok",
-      "detail": "8 collection rows from 1 live pull"
-    },
-    {
       "sourceId": "etimes",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
+    },
+    {
+      "sourceId": "wikipedia",
+      "status": "ok",
+      "detail": "8 collection rows from 1 live pull"
     },
     {
       "sourceId": "koimoi",
@@ -1128,131 +1408,131 @@ window.IBO_CATALOG = {
     {
       "sourceId": "pinkvilla",
       "status": "ok",
-      "detail": "1 collection rows from 1 live pull"
-    },
-    {
-      "sourceId": "express",
-      "status": "ok",
-      "detail": "Fetched 1 page (headlines / status)"
+      "detail": "3 collection rows from 1 live pull"
     },
     {
       "sourceId": "boi",
       "status": "blocked",
       "detail": "HTTP 403"
+    },
+    {
+      "sourceId": "express",
+      "status": "ok",
+      "detail": "Fetched 1 page (headlines / status)"
     }
   ],
   "headlines": [
     {
       "sourceId": "sacnilk",
+      "title": "Irumudi: Sacnilk 23 days, India net ₹178.05 Cr",
+      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-13T03:59:04.122Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹229.25 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Batwara 1947: Sacnilk 28 days, India net ₹38.08 Cr",
+      "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-13T03:59:04.366Z",
+      "summary": "Live day-wise pull. Last day 28. WW ₹54.2 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Hi: Sacnilk 16 days, India net ₹12.51 Cr",
+      "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-13T03:59:04.493Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹14.56 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
       "title": "Border 2: Sacnilk 88 days, India net ₹329.43 Cr",
       "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:35.453Z",
+      "publishedAt": "2026-09-13T03:59:04.524Z",
       "summary": "Live day-wise pull. Last day 112. WW ₹450.19 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Vishwanath And Sons: Sacnilk 30 days, India net ₹122.17 Cr",
       "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:35.474Z",
+      "publishedAt": "2026-09-13T03:59:04.574Z",
       "summary": "Live day-wise pull. Last day 1. WW ₹209.03 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Batwara 1947: Sacnilk 28 days, India net ₹38.08 Cr",
-      "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:35.519Z",
-      "summary": "Live day-wise pull. Last day 28. WW ₹54.2 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Irumudi: Sacnilk 23 days, India net ₹178.05 Cr",
-      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:35.555Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹229.25 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Hi: Sacnilk 16 days, India net ₹12.51 Cr",
-      "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:35.592Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹14.56 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Epic: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Epic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:35.600Z",
-      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹2.1 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Toxic: Sacnilk 18 days, India net ₹248.78 Cr",
       "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:35.722Z",
+      "publishedAt": "2026-09-13T03:59:04.648Z",
       "summary": "Live day-wise pull. Last day 1. WW ₹340.04 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Awarapan 2: Sacnilk 30 days, India net ₹150.45 Cr",
       "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:35.769Z",
+      "publishedAt": "2026-09-13T03:59:04.790Z",
       "summary": "Live day-wise pull. Last day 1. WW ₹212.87 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Singh Vs Kaur 2: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Singh_Vs_Kaur_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:36.104Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.4 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Peddi: Sacnilk 73 days, India net ₹244.64 Cr",
-      "url": "https://www.sacnilk.com/news/peddi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:36.268Z",
-      "summary": "Live day-wise pull. Last day 88. WW ₹341.9 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Dhurandhar: The Revenge: Sacnilk 106 days, India net ₹1149.3 Cr",
-      "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:36.354Z",
-      "summary": "Live day-wise pull. Last day 106. WW ₹1813.39 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Karuppu: Sacnilk 67 days, India net ₹198.18 Cr",
-      "url": "https://www.sacnilk.com/news/karuppu_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:36.381Z",
-      "summary": "Live day-wise pull. Last day 69. WW ₹310.12 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Pradhama Drishtiya Kuttakkar: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Pradhama_Drishtiya_Kuttakkar_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:36.408Z",
-      "summary": "Auto-discovered Mollywood title. Latest reported India net ₹0.92 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Welcome To The Jungle: Sacnilk 49 days, India net ₹134.11 Cr",
-      "url": "https://www.sacnilk.com/news/welcome_to_the_jungle_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:36.444Z",
-      "summary": "Live day-wise pull. Last day 49. WW ₹192.75 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Mahendragiri Varahi: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/Mahendragiri_Varahi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:36.613Z",
+      "publishedAt": "2026-09-13T03:59:04.949Z",
       "summary": "Auto-discovered Tollywood title. Latest reported India net ₹0.55 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Dhamaal 4: Sacnilk 63 days, India net ₹167.88 Cr",
-      "url": "https://www.sacnilk.com/news/dhamaal_4_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-12T22:54:36.736Z",
-      "summary": "Live day-wise pull. Last day 63. WW ₹230.17 Cr."
+      "title": "Karuppu: Sacnilk 67 days, India net ₹198.18 Cr",
+      "url": "https://www.sacnilk.com/news/karuppu_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-13T03:59:05.093Z",
+      "summary": "Live day-wise pull. Last day 69. WW ₹310.12 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Peddi: Sacnilk 73 days, India net ₹244.64 Cr",
+      "url": "https://www.sacnilk.com/news/peddi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-13T03:59:05.131Z",
+      "summary": "Live day-wise pull. Last day 88. WW ₹341.9 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Welcome To The Jungle: Sacnilk 49 days, India net ₹134.11 Cr",
+      "url": "https://www.sacnilk.com/news/welcome_to_the_jungle_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-13T03:59:05.156Z",
+      "summary": "Live day-wise pull. Last day 49. WW ₹192.75 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Pradhama Drishtiya Kuttakkar: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Pradhama_Drishtiya_Kuttakkar_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-13T03:59:05.204Z",
+      "summary": "Auto-discovered Mollywood title. Latest reported India net ₹0.92 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Epic: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Epic_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-13T03:59:05.212Z",
+      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹2.1 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Aasha: Sacnilk discovered",
+      "url": "https://www.sacnilk.com/movie/Aasha_2026",
+      "publishedAt": "2026-09-13T03:59:05.298Z",
+      "summary": "Auto-discovered Mollywood title. Current board India net ₹0.99 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Dhurandhar: The Revenge: Sacnilk 106 days, India net ₹1149.3 Cr",
+      "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-13T03:59:05.424Z",
+      "summary": "Live day-wise pull. Last day 106. WW ₹1813.39 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Singh Vs Kaur 2: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Singh_Vs_Kaur_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-13T03:59:05.452Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.4 Cr."
     }
   ],
   "morningBrief": {
