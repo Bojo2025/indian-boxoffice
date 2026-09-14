@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-14T19:46:16.663Z",
+  "generatedAt": "2026-09-14T23:44:37.308Z",
   "deskDate": "2026-09-15",
-  "comparedTo": "2026-09-14",
+  "comparedTo": "2026-09-15 prior",
   "mode": "server-consensus",
   "spine": [
     "sacnilk",
@@ -12,20 +12,20 @@
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 40)",
-      "koimoi has failed 40 consecutive publishes",
-      "boi failed: HTTP 403 (streak 38)",
-      "boi has failed 38 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 41)",
+      "koimoi has failed 41 consecutive publishes",
+      "boi failed: HTTP 403 (streak 39)",
+      "boi has failed 39 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
         "ok": true,
         "streakFail": 0,
-        "detail": "892 collection rows from 20 live pulls"
+        "detail": "886 collection rows from 20 live pulls"
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 40,
+        "streakFail": 41,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@
       },
       "boi": {
         "ok": false,
-        "streakFail": 38,
+        "streakFail": 39,
         "detail": "HTTP 403"
       }
     }
@@ -130,18 +130,18 @@
       "verdict": "Pending",
       "posterKey": "toxic",
       "poster": "./posters/toxic.jpg",
-      "indiaNet": 249.2,
-      "indiaGross": 297.43,
+      "indiaNet": 249.24,
+      "indiaGross": 297.48,
       "overseas": 43.75,
-      "worldwide": 341.18,
-      "lastDayNet": 0.24,
+      "worldwide": 341.23,
+      "lastDayNet": 0.22,
       "trackedThroughDay": 21,
       "liveSources": [
         "sacnilk",
         "wikipedia"
       ],
-      "deltaNet": 0.18,
-      "deltaWw": 0.2
+      "deltaNet": 0.04,
+      "deltaWw": 0.05
     },
     {
       "id": "awarapan-2",
@@ -168,7 +168,7 @@
         "sacnilk",
         "hungama"
       ],
-      "deltaNet": 0.01,
+      "deltaNet": 0,
       "deltaWw": 0
     },
     {
@@ -195,8 +195,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.09,
-      "deltaWw": 0.09
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "irumudi",
@@ -222,8 +222,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 2.5,
-      "deltaWw": 2.95
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "batwara-1947",
@@ -272,13 +272,13 @@
       "indiaGross": 14.74,
       "overseas": 0,
       "worldwide": 14.74,
-      "lastDayNet": 0.09,
-      "trackedThroughDay": 17,
+      "lastDayNet": 0.07,
+      "trackedThroughDay": 18,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.07,
-      "deltaWw": 0.08
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "insidious-further",
@@ -355,8 +355,8 @@
         "sacnilk",
         "hungama"
       ],
-      "deltaNet": 8.25,
-      "deltaWw": 9.75
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "sardar-2",
@@ -382,8 +382,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 1.5,
-      "deltaWw": 2
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "haiwaan",
@@ -410,8 +410,8 @@
         "sacnilk",
         "hungama"
       ],
-      "deltaNet": 0.7,
-      "deltaWw": 1.08
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "mirzapur-the-movie",
@@ -439,8 +439,8 @@
         "wikipedia",
         "hungama"
       ],
-      "deltaNet": 5.5,
-      "deltaWw": 7.6
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "spider-man-bnd",
@@ -461,13 +461,13 @@
       "indiaGross": 597.08,
       "overseas": 0,
       "worldwide": 597.08,
-      "lastDayNet": 0.34,
-      "trackedThroughDay": 46,
+      "lastDayNet": 0.26,
+      "trackedThroughDay": 47,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.26,
-      "deltaWw": 0.28
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "dhamaal-4",
@@ -521,8 +521,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.23,
-      "deltaWw": 0.26
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "dhurandhar",
@@ -576,8 +576,8 @@
       "trackedThroughDay": 236,
       "liveSources": [
         "sacnilk",
-        "wikipedia",
-        "hungama"
+        "hungama",
+        "wikipedia"
       ],
       "deltaNet": 0,
       "deltaWw": 0
@@ -876,8 +876,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.1,
-      "deltaWw": 0.11
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "pradhama-drishtiya-kuttakkar",
@@ -903,8 +903,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 2,
-      "deltaWw": 2.3
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "epic",
@@ -930,7 +930,7 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.96,
+      "deltaNet": 0,
       "deltaWw": 0
     },
     {
@@ -957,8 +957,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.61,
-      "deltaWw": 0.68
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "mahendragiri-varahi",
@@ -984,8 +984,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.59,
-      "deltaWw": 0.66
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "singh-vs-kaur-2",
@@ -1006,13 +1006,13 @@
       "indiaGross": 1.61,
       "overseas": 0,
       "worldwide": 1.61,
-      "lastDayNet": 0.39,
+      "lastDayNet": 0.14,
       "trackedThroughDay": 4,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.14,
-      "deltaWw": 0.16
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "fall-2-deadpoint",
@@ -1038,8 +1038,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.18,
-      "deltaWw": 0.2
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "jayanti-2",
@@ -1065,8 +1065,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.45,
-      "deltaWw": 0.5
+      "deltaNet": 0,
+      "deltaWw": 0
     },
     {
       "id": "video",
@@ -1092,343 +1092,16 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.19,
-      "deltaWw": 0.21
-    },
-    {
-      "id": "america-america-2",
-      "slug": "America_America_2_2026",
-      "title": "America America 2",
-      "language": "Kannada",
-      "industry": "Sandalwood",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-09-12",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.67,
-      "indiaGross": 0.76,
-      "overseas": 0,
-      "worldwide": 0.76,
-      "lastDayNet": null,
-      "trackedThroughDay": 4,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": null,
-      "deltaWw": null
-    },
-    {
-      "id": "dahaan-the-evil-within",
-      "slug": "Dahaan_The_Evil_Within_2026",
-      "title": "Dahaan: The Evil Within",
-      "language": "Indian",
-      "industry": "Indian",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-09-12",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.4,
-      "indiaGross": 0.44,
-      "overseas": 0,
-      "worldwide": 0.44,
-      "lastDayNet": null,
-      "trackedThroughDay": 4,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": null,
-      "deltaWw": null
-    },
-    {
-      "id": "pidha-pachhi",
-      "slug": "Pidha_Pachhi_2026",
-      "title": "Pidha Pachhi",
-      "language": "Indian",
-      "industry": "Indian",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-09-12",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.36,
-      "indiaGross": 0.4,
-      "overseas": 0,
-      "worldwide": 0.4,
-      "lastDayNet": null,
-      "trackedThroughDay": 4,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": null,
-      "deltaWw": null
-    },
-    {
-      "id": "last-man-in-tower",
-      "slug": "Last_Man_in_Tower_2026",
-      "title": "Last Man in Tower",
-      "language": "Hindi",
-      "industry": "Bollywood",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-09-12",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.18,
-      "indiaGross": 0.19,
-      "overseas": 0,
-      "worldwide": 0.19,
-      "lastDayNet": null,
-      "trackedThroughDay": 4,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": null,
-      "deltaWw": null
-    },
-    {
-      "id": "dandakali",
-      "slug": "Dandakali_2026",
-      "title": "Dandakali",
-      "language": "Indian",
-      "industry": "Indian",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-09-12",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.09,
-      "indiaGross": 0.1,
-      "overseas": 0,
-      "worldwide": 0.1,
-      "lastDayNet": null,
-      "trackedThroughDay": 4,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": null,
-      "deltaWw": null
-    },
-    {
-      "id": "saalagaarara-sahakara-sangha",
-      "slug": "Saalagaarara_Sahakara_Sangha_2026",
-      "title": "Saalagaarara Sahakara Sangha",
-      "language": "Kannada",
-      "industry": "Sandalwood",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-09-12",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.08,
-      "indiaGross": 0.1,
-      "overseas": 0,
-      "worldwide": 0.1,
-      "lastDayNet": null,
-      "trackedThroughDay": 4,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": null,
-      "deltaWw": null
-    },
-    {
-      "id": "ozhiyathe",
-      "slug": "Ozhiyathe_2026",
-      "title": "Ozhiyathe",
-      "language": "Malayalam",
-      "industry": "Mollywood",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-09-12",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.04,
-      "indiaGross": 0.05,
-      "overseas": 0,
-      "worldwide": 0.05,
-      "lastDayNet": null,
-      "trackedThroughDay": 4,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": null,
-      "deltaWw": null
-    },
-    {
-      "id": "mahabahu-the-brahmaputra",
-      "slug": "Mahabahu_The_Brahmaputra_2026",
-      "title": "Mahabahu: The Brahmaputra",
-      "language": "Indian",
-      "industry": "Indian",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-09-12",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.05,
-      "indiaGross": 0.05,
-      "overseas": 0,
-      "worldwide": 0.05,
-      "lastDayNet": null,
-      "trackedThroughDay": 4,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": null,
-      "deltaWw": null
-    },
-    {
-      "id": "arayanum-amarakkaranum",
-      "slug": "Arayanum_Amarakkaranum_2026",
-      "title": "Arayanum Amarakkaranum",
-      "language": "Malayalam",
-      "industry": "Mollywood",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-09-12",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.04,
-      "indiaGross": 0.04,
-      "overseas": 0,
-      "worldwide": 0.04,
-      "lastDayNet": null,
-      "trackedThroughDay": 4,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": null,
-      "deltaWw": null
-    },
-    {
-      "id": "ghun-gaon",
-      "slug": "Ghun_Gaon_2026",
-      "title": "Ghun Gaon",
-      "language": "Indian",
-      "industry": "Indian",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-09-12",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.04,
-      "indiaGross": 0.04,
-      "overseas": 0,
-      "worldwide": 0.04,
-      "lastDayNet": null,
-      "trackedThroughDay": 4,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": null,
-      "deltaWw": null
+      "deltaNet": 0,
+      "deltaWw": 0
     }
   ],
-  "changes": [
-    {
-      "id": "hanuman-ansh",
-      "title": "Hanuman Ansh",
-      "text": "Hanuman Ansh: WW +₹9.75 Cr, India net +₹8.25 Cr since 2026-09-14",
-      "deltaNet": 8.25,
-      "deltaWw": 9.75
-    },
-    {
-      "id": "mirzapur-the-movie",
-      "title": "Mirzapur: The Movie",
-      "text": "Mirzapur: The Movie: WW +₹7.6 Cr, India net +₹5.5 Cr since 2026-09-14",
-      "deltaNet": 5.5,
-      "deltaWw": 7.6
-    },
-    {
-      "id": "irumudi",
-      "title": "Irumudi",
-      "text": "Irumudi: WW +₹2.95 Cr, India net +₹2.5 Cr since 2026-09-14",
-      "deltaNet": 2.5,
-      "deltaWw": 2.95
-    },
-    {
-      "id": "pradhama-drishtiya-kuttakkar",
-      "title": "Pradhama Drishtiya Kuttakkar",
-      "text": "Pradhama Drishtiya Kuttakkar: WW +₹2.3 Cr, India net +₹2 Cr since 2026-09-14",
-      "deltaNet": 2,
-      "deltaWw": 2.3
-    },
-    {
-      "id": "sardar-2",
-      "title": "Sardar 2",
-      "text": "Sardar 2: WW +₹2 Cr, India net +₹1.5 Cr since 2026-09-14",
-      "deltaNet": 1.5,
-      "deltaWw": 2
-    },
-    {
-      "id": "haiwaan",
-      "title": "Haiwaan",
-      "text": "Haiwaan: WW +₹1.08 Cr, India net +₹0.7 Cr since 2026-09-14",
-      "deltaNet": 0.7,
-      "deltaWw": 1.08
-    },
-    {
-      "id": "aasha",
-      "title": "Aasha",
-      "text": "Aasha: WW +₹0.68 Cr, India net +₹0.61 Cr since 2026-09-14",
-      "deltaNet": 0.61,
-      "deltaWw": 0.68
-    },
-    {
-      "id": "mahendragiri-varahi",
-      "title": "Mahendragiri Varahi",
-      "text": "Mahendragiri Varahi: WW +₹0.66 Cr, India net +₹0.59 Cr since 2026-09-14",
-      "deltaNet": 0.59,
-      "deltaWw": 0.66
-    }
-  ],
+  "changes": [],
   "logs": [
     {
       "sourceId": "sacnilk",
       "status": "ok",
-      "detail": "892 collection rows from 20 live pulls"
+      "detail": "886 collection rows from 20 live pulls"
     },
     {
       "sourceId": "hungama",
@@ -1469,115 +1142,115 @@
   "headlines": [
     {
       "sourceId": "sacnilk",
-      "title": "Irumudi: Sacnilk 25 days, India net ₹182.9 Cr",
-      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:01.988Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹234.95 Cr."
+      "title": "Batwara 1947: Sacnilk 28 days, India net ₹38.08 Cr",
+      "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-14T23:44:25.404Z",
+      "summary": "Live day-wise pull. Last day 28. WW ₹54.2 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Toxic: Sacnilk 19 days, India net ₹249.2 Cr",
+      "title": "Toxic: Sacnilk 20 days, India net ₹249.24 Cr",
       "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:02.521Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹341.18 Cr."
+      "publishedAt": "2026-09-14T23:44:25.714Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹341.23 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Hi: Sacnilk 17 days, India net ₹12.67 Cr",
+      "title": "Hi: Sacnilk 18 days, India net ₹12.67 Cr",
       "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:02.546Z",
+      "publishedAt": "2026-09-14T23:44:25.750Z",
       "summary": "Live day-wise pull. Last day 1. WW ₹14.74 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Awarapan 2: Sacnilk 32 days, India net ₹150.48 Cr",
       "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:02.596Z",
+      "publishedAt": "2026-09-14T23:44:25.804Z",
       "summary": "Live day-wise pull. Last day 1. WW ₹212.9 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Vishwanath And Sons: Sacnilk 32 days, India net ₹122.39 Cr",
-      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:02.696Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹209.26 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Batwara 1947: Sacnilk 28 days, India net ₹38.08 Cr",
-      "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:02.787Z",
-      "summary": "Live day-wise pull. Last day 28. WW ₹54.2 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Border 2: Sacnilk 88 days, India net ₹329.43 Cr",
-      "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:02.940Z",
-      "summary": "Live day-wise pull. Last day 112. WW ₹450.19 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Dhurandhar: The Revenge: Sacnilk 106 days, India net ₹1149.3 Cr",
-      "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:03.005Z",
-      "summary": "Live day-wise pull. Last day 106. WW ₹1813.39 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Peddi: Sacnilk 73 days, India net ₹244.64 Cr",
-      "url": "https://www.sacnilk.com/news/peddi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:03.465Z",
-      "summary": "Live day-wise pull. Last day 88. WW ₹341.9 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Pradhama Drishtiya Kuttakkar: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/Pradhama_Drishtiya_Kuttakkar_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:03.579Z",
+      "publishedAt": "2026-09-14T23:44:25.882Z",
       "summary": "Auto-discovered Mollywood title. Latest reported India net ₹0.85 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Karuppu: Sacnilk 67 days, India net ₹198.18 Cr",
-      "url": "https://www.sacnilk.com/news/karuppu_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:03.617Z",
-      "summary": "Live day-wise pull. Last day 69. WW ₹310.12 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Welcome To The Jungle: Sacnilk 49 days, India net ₹134.11 Cr",
-      "url": "https://www.sacnilk.com/news/welcome_to_the_jungle_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:03.636Z",
-      "summary": "Live day-wise pull. Last day 49. WW ₹192.75 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Epic: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Epic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:03.858Z",
-      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹2.1 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Jadi: The Untold Side of If: Sacnilk discovered",
       "url": "https://www.sacnilk.com/movie/Jadi_The_Untold_Side_of_If_2026",
-      "publishedAt": "2026-09-14T19:46:03.900Z",
+      "publishedAt": "2026-09-14T23:44:25.919Z",
       "summary": "Auto-discovered Indian title. Current board India net ₹0.14 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Hanuman Ansh: Sacnilk 39 days, India net ₹222.88 Cr",
-      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:03.960Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹277.8 Cr."
+      "title": "Irumudi: Sacnilk 25 days, India net ₹182.9 Cr",
+      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-14T23:44:25.996Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹234.95 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Spider-Man: Brand New Day: Sacnilk 46 days, India net ₹498.96 Cr",
+      "title": "Border 2: Sacnilk 88 days, India net ₹329.43 Cr",
+      "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-14T23:44:26.031Z",
+      "summary": "Live day-wise pull. Last day 112. WW ₹450.19 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Mahendragiri Varahi: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Mahendragiri_Varahi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-14T23:44:26.308Z",
+      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹0.55 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Peddi: Sacnilk 73 days, India net ₹244.64 Cr",
+      "url": "https://www.sacnilk.com/news/peddi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-14T23:44:26.353Z",
+      "summary": "Live day-wise pull. Last day 88. WW ₹341.9 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Dhurandhar: The Revenge: Sacnilk 106 days, India net ₹1149.3 Cr",
+      "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-14T23:44:26.403Z",
+      "summary": "Live day-wise pull. Last day 106. WW ₹1813.39 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Vishwanath And Sons: Sacnilk 32 days, India net ₹122.39 Cr",
+      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-14T23:44:26.426Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹209.26 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Epic: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Epic_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-14T23:44:26.474Z",
+      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹2.1 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Spider-Man: Brand New Day: Sacnilk 47 days, India net ₹498.96 Cr",
       "url": "https://www.sacnilk.com/news/spider_man_brand_new_day_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-14T19:46:04.145Z",
+      "publishedAt": "2026-09-14T23:44:26.570Z",
       "summary": "Live day-wise pull. Last day 1. WW ₹597.08 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Singh Vs Kaur 2: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Singh_Vs_Kaur_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-14T23:44:26.588Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.4 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Karuppu: Sacnilk 67 days, India net ₹198.18 Cr",
+      "url": "https://www.sacnilk.com/news/karuppu_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-14T23:44:26.776Z",
+      "summary": "Live day-wise pull. Last day 69. WW ₹310.12 Cr."
     }
   ],
   "morningBrief": {

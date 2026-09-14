@@ -1,12 +1,12 @@
 {
   "date": "2026-09-15",
-  "generatedAt": "2026-09-14T19:46:16.663Z",
+  "generatedAt": "2026-09-14T23:44:37.308Z",
   "films": [
     {
       "id": "toxic",
       "title": "Toxic",
-      "indiaNet": 249.2,
-      "worldwide": 341.18,
+      "indiaNet": 249.24,
+      "worldwide": 341.23,
       "status": "playing"
     },
     {
@@ -252,76 +252,6 @@
       "title": "Video",
       "indiaNet": 0.87,
       "worldwide": 0.98,
-      "status": "playing"
-    },
-    {
-      "id": "america-america-2",
-      "title": "America America 2",
-      "indiaNet": 0.67,
-      "worldwide": 0.76,
-      "status": "playing"
-    },
-    {
-      "id": "dahaan-the-evil-within",
-      "title": "Dahaan: The Evil Within",
-      "indiaNet": 0.4,
-      "worldwide": 0.44,
-      "status": "playing"
-    },
-    {
-      "id": "pidha-pachhi",
-      "title": "Pidha Pachhi",
-      "indiaNet": 0.36,
-      "worldwide": 0.4,
-      "status": "playing"
-    },
-    {
-      "id": "last-man-in-tower",
-      "title": "Last Man in Tower",
-      "indiaNet": 0.18,
-      "worldwide": 0.19,
-      "status": "playing"
-    },
-    {
-      "id": "dandakali",
-      "title": "Dandakali",
-      "indiaNet": 0.09,
-      "worldwide": 0.1,
-      "status": "playing"
-    },
-    {
-      "id": "saalagaarara-sahakara-sangha",
-      "title": "Saalagaarara Sahakara Sangha",
-      "indiaNet": 0.08,
-      "worldwide": 0.1,
-      "status": "playing"
-    },
-    {
-      "id": "ozhiyathe",
-      "title": "Ozhiyathe",
-      "indiaNet": 0.04,
-      "worldwide": 0.05,
-      "status": "playing"
-    },
-    {
-      "id": "mahabahu-the-brahmaputra",
-      "title": "Mahabahu: The Brahmaputra",
-      "indiaNet": 0.05,
-      "worldwide": 0.05,
-      "status": "playing"
-    },
-    {
-      "id": "arayanum-amarakkaranum",
-      "title": "Arayanum Amarakkaranum",
-      "indiaNet": 0.04,
-      "worldwide": 0.04,
-      "status": "playing"
-    },
-    {
-      "id": "ghun-gaon",
-      "title": "Ghun Gaon",
-      "indiaNet": 0.04,
-      "worldwide": 0.04,
       "status": "playing"
     }
   ]
