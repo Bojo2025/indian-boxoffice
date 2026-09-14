@@ -1,12 +1,12 @@
 {
   "date": "2026-09-14",
-  "generatedAt": "2026-09-14T09:18:33.530Z",
+  "generatedAt": "2026-09-14T12:14:16.172Z",
   "films": [
     {
       "id": "toxic",
       "title": "Toxic",
-      "indiaNet": 249.04,
-      "worldwide": 340.04,
+      "indiaNet": 249.02,
+      "worldwide": 340.98,
       "status": "playing"
     },
     {
@@ -132,7 +132,7 @@
       "id": "jana-nayagan",
       "title": "Jana Nayagan",
       "indiaNet": 0,
-      "worldwide": 329.28,
+      "worldwide": 322.5,
       "status": "closed"
     },
     {
@@ -208,8 +208,8 @@
     {
       "id": "epic",
       "title": "Epic",
-      "indiaNet": 4.28,
-      "worldwide": 5.6,
+      "indiaNet": 4.48,
+      "worldwide": 7.35,
       "status": "playing"
     },
     {
