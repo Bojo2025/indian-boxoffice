@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generatedAt": "2026-09-16T21:04:16.336Z",
+  "generatedAt": "2026-09-17T04:09:43.957Z",
   "films": [
     {
       "id": "toxic",
@@ -252,76 +252,6 @@
       "title": "Video",
       "indiaNet": 1.13,
       "worldwide": 1.27,
-      "status": "playing"
-    },
-    {
-      "id": "america-america-2",
-      "title": "America America 2",
-      "indiaNet": 0.84,
-      "worldwide": 0.95,
-      "status": "playing"
-    },
-    {
-      "id": "dahaan-the-evil-within",
-      "title": "Dahaan: The Evil Within",
-      "indiaNet": 0.62,
-      "worldwide": 0.69,
-      "status": "playing"
-    },
-    {
-      "id": "pidha-pachhi",
-      "title": "Pidha Pachhi",
-      "indiaNet": 0.51,
-      "worldwide": 0.56,
-      "status": "playing"
-    },
-    {
-      "id": "last-man-in-tower",
-      "title": "Last Man in Tower",
-      "indiaNet": 0.2,
-      "worldwide": 0.21,
-      "status": "playing"
-    },
-    {
-      "id": "dandakali",
-      "title": "Dandakali",
-      "indiaNet": 0.14,
-      "worldwide": 0.16,
-      "status": "playing"
-    },
-    {
-      "id": "saalagaarara-sahakara-sangha",
-      "title": "Saalagaarara Sahakara Sangha",
-      "indiaNet": 0.1,
-      "worldwide": 0.12,
-      "status": "playing"
-    },
-    {
-      "id": "ozhiyathe",
-      "title": "Ozhiyathe",
-      "indiaNet": 0.06,
-      "worldwide": 0.07,
-      "status": "playing"
-    },
-    {
-      "id": "mahabahu-the-brahmaputra",
-      "title": "Mahabahu: The Brahmaputra",
-      "indiaNet": 0.07,
-      "worldwide": 0.07,
-      "status": "playing"
-    },
-    {
-      "id": "ghun-gaon",
-      "title": "Ghun Gaon",
-      "indiaNet": 0.06,
-      "worldwide": 0.06,
-      "status": "playing"
-    },
-    {
-      "id": "arayanum-amarakkaranum",
-      "title": "Arayanum Amarakkaranum",
-      "indiaNet": 0.05,
-      "worldwide": 0.05,
       "status": "playing"
     }
   ]
