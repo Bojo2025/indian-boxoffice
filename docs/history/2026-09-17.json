@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generatedAt": "2026-09-17T08:57:46.926Z",
+  "generatedAt": "2026-09-17T11:17:24.365Z",
   "films": [
     {
       "id": "toxic",
@@ -68,8 +68,8 @@
     {
       "id": "sardar-2",
       "title": "Sardar 2",
-      "indiaNet": 14.51,
-      "worldwide": 20.88,
+      "indiaNet": 14.55,
+      "worldwide": 21.78,
       "status": "playing"
     },
     {
@@ -202,14 +202,14 @@
       "id": "pradhama-drishtiya-kuttakkar",
       "title": "Pradhama Drishtiya Kuttakkar",
       "indiaNet": 10.42,
-      "worldwide": 10.5,
+      "worldwide": 12.1,
       "status": "playing"
     },
     {
       "id": "epic",
       "title": "Epic",
-      "indiaNet": 6.91,
-      "worldwide": 9.5,
+      "indiaNet": 6.79,
+      "worldwide": 10.45,
       "status": "playing"
     },
     {
