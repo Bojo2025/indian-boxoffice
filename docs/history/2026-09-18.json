@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generatedAt": "2026-09-18T08:32:48.269Z",
+  "generatedAt": "2026-09-18T10:50:29.155Z",
   "films": [
     {
       "id": "toxic",
@@ -208,15 +208,15 @@
     {
       "id": "pradhama-drishtiya-kuttakkar",
       "title": "Pradhama Drishtiya Kuttakkar",
-      "indiaNet": 11.74,
-      "worldwide": 12.1,
+      "indiaNet": 11.5,
+      "worldwide": 13.35,
       "status": "playing"
     },
     {
       "id": "epic",
       "title": "Epic",
-      "indiaNet": 7.23,
-      "worldwide": 10.45,
+      "indiaNet": 7.29,
+      "worldwide": 11.07,
       "status": "playing"
     },
     {
