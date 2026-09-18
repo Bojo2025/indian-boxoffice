@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generatedAt": "2026-09-17T21:06:27.478Z",
+  "generatedAt": "2026-09-18T03:55:11.744Z",
   "films": [
     {
       "id": "toxic",
@@ -82,8 +82,8 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 203.2,
-      "worldwide": 291.89,
+      "indiaNet": 203.45,
+      "worldwide": 292.14,
       "status": "playing"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 117.7,
-      "worldwide": 153.01,
+      "indiaNet": 194.87,
+      "worldwide": 232.25,
       "status": "late"
     },
     {
@@ -252,76 +252,6 @@
       "title": "Fall 2: Deadpoint",
       "indiaNet": 1.46,
       "worldwide": 1.66,
-      "status": "playing"
-    },
-    {
-      "id": "video",
-      "title": "Video",
-      "indiaNet": 1.22,
-      "worldwide": 1.38,
-      "status": "playing"
-    },
-    {
-      "id": "america-america-2",
-      "title": "America America 2",
-      "indiaNet": 0.92,
-      "worldwide": 1.04,
-      "status": "playing"
-    },
-    {
-      "id": "dahaan-the-evil-within",
-      "title": "Dahaan: The Evil Within",
-      "indiaNet": 0.72,
-      "worldwide": 0.8,
-      "status": "playing"
-    },
-    {
-      "id": "pidha-pachhi",
-      "title": "Pidha Pachhi",
-      "indiaNet": 0.56,
-      "worldwide": 0.62,
-      "status": "playing"
-    },
-    {
-      "id": "last-man-in-tower",
-      "title": "Last Man in Tower",
-      "indiaNet": 0.21,
-      "worldwide": 0.22,
-      "status": "playing"
-    },
-    {
-      "id": "dandakali",
-      "title": "Dandakali",
-      "indiaNet": 0.16,
-      "worldwide": 0.19,
-      "status": "playing"
-    },
-    {
-      "id": "saalagaarara-sahakara-sangha",
-      "title": "Saalagaarara Sahakara Sangha",
-      "indiaNet": 0.1,
-      "worldwide": 0.13,
-      "status": "playing"
-    },
-    {
-      "id": "ozhiyathe",
-      "title": "Ozhiyathe",
-      "indiaNet": 0.07,
-      "worldwide": 0.08,
-      "status": "playing"
-    },
-    {
-      "id": "mahabahu-the-brahmaputra",
-      "title": "Mahabahu: The Brahmaputra",
-      "indiaNet": 0.08,
-      "worldwide": 0.08,
-      "status": "playing"
-    },
-    {
-      "id": "ghun-gaon",
-      "title": "Ghun Gaon",
-      "indiaNet": 0.06,
-      "worldwide": 0.07,
       "status": "playing"
     }
   ]
