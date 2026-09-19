@@ -1,6 +1,6 @@
 {
   "date": "2026-09-19",
-  "generatedAt": "2026-09-19T03:52:10.584Z",
+  "generatedAt": "2026-09-19T08:19:50.664Z",
   "films": [
     {
       "id": "toxic",
@@ -194,22 +194,22 @@
     {
       "id": "resident-evil",
       "title": "Resident Evil",
-      "indiaNet": 2.5,
-      "worldwide": 3,
+      "indiaNet": 2.6,
+      "worldwide": 3.1,
       "status": "playing"
     },
     {
       "id": "vibe",
       "title": "VIBE",
-      "indiaNet": 1.5,
-      "worldwide": 1.8,
+      "indiaNet": 1.7,
+      "worldwide": 2.04,
       "status": "playing"
     },
     {
       "id": "daayra",
       "title": "Daayra",
-      "indiaNet": 0.9,
-      "worldwide": 1.08,
+      "indiaNet": 1,
+      "worldwide": 1.2,
       "status": "playing"
     },
     {
