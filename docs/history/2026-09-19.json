@@ -1,6 +1,6 @@
 {
   "date": "2026-09-19",
-  "generatedAt": "2026-09-19T10:33:58.083Z",
+  "generatedAt": "2026-09-19T15:38:17.010Z",
   "films": [
     {
       "id": "toxic",
@@ -259,6 +259,76 @@
       "title": "Missing Meghana",
       "indiaNet": 0.09,
       "worldwide": 0.1,
+      "status": "playing"
+    },
+    {
+      "id": "practical-magic-2",
+      "title": "Practical Magic 2",
+      "indiaNet": 0.09,
+      "worldwide": 0.1,
+      "status": "playing"
+    },
+    {
+      "id": "the-dark-heaven",
+      "title": "The Dark Heaven",
+      "indiaNet": 0.07,
+      "worldwide": 0.08,
+      "status": "playing"
+    },
+    {
+      "id": "chatni",
+      "title": "Chatni",
+      "indiaNet": 0.07,
+      "worldwide": 0.08,
+      "status": "playing"
+    },
+    {
+      "id": "secret-soldier",
+      "title": "Secret Soldier",
+      "indiaNet": 0.07,
+      "worldwide": 0.08,
+      "status": "playing"
+    },
+    {
+      "id": "4-rivers-6-ranges-chushi-gangdruk",
+      "title": "4 Rivers 6 Ranges Chushi Gangdruk",
+      "indiaNet": 0.06,
+      "worldwide": 0.07,
+      "status": "playing"
+    },
+    {
+      "id": "sandakari",
+      "title": "Sandakari",
+      "indiaNet": 0.06,
+      "worldwide": 0.06,
+      "status": "playing"
+    },
+    {
+      "id": "kaagitham-padavalu",
+      "title": "Kaagitham Padavalu",
+      "indiaNet": 0.05,
+      "worldwide": 0.06,
+      "status": "playing"
+    },
+    {
+      "id": "nawmai-the-wancho-warrior",
+      "title": "Nawmai: The Wancho Warrior",
+      "indiaNet": 0.05,
+      "worldwide": 0.05,
+      "status": "playing"
+    },
+    {
+      "id": "the-uprising",
+      "title": "The Uprising",
+      "indiaNet": 0.04,
+      "worldwide": 0.05,
+      "status": "playing"
+    },
+    {
+      "id": "ottam-thullal",
+      "title": "Ottam Thullal",
+      "indiaNet": 0.05,
+      "worldwide": 0.05,
       "status": "playing"
     }
   ]
