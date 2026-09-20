@@ -1,6 +1,6 @@
 {
   "date": "2026-09-20",
-  "generatedAt": "2026-09-20T04:09:10.754Z",
+  "generatedAt": "2026-09-20T08:51:37.160Z",
   "films": [
     {
       "id": "toxic",
@@ -145,7 +145,7 @@
     {
       "id": "msvpg",
       "title": "Mana Shankara Vara Prasad Garu",
-      "indiaNet": 216,
+      "indiaNet": 0,
       "worldwide": 305,
       "status": "closed"
     },
@@ -201,15 +201,15 @@
     {
       "id": "vibe",
       "title": "VIBE",
-      "indiaNet": 4.35,
-      "worldwide": 5.22,
+      "indiaNet": 4.45,
+      "worldwide": 5.34,
       "status": "playing"
     },
     {
       "id": "daayra",
       "title": "Daayra",
-      "indiaNet": 2.6,
-      "worldwide": 3.1,
+      "indiaNet": 2.75,
+      "worldwide": 3.3,
       "status": "playing"
     },
     {
