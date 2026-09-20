@@ -78,6 +78,14 @@
     return `${sign}₹${formatted} Cr`;
   }
 
+  function formatRating(value) {
+    return value == null || Number.isNaN(value) ? "Not available" : `${Number(value).toFixed(1)} / 10`;
+  }
+
+  function filmHref(movie) {
+    return `#film-${movie.slug}`;
+  }
+
   function parseCr(raw) {
     if (!raw) return null;
     const cleaned = String(raw).replace(/,/g, "").replace(/[^\d.]/g, "");
@@ -320,6 +328,123 @@
     renderBrief(brief);
   }
 
+  function renderFilmDetail(movie) {
+    const modal = document.getElementById("film-modal");
+    const detail = document.getElementById("film-detail");
+    if (!modal || !detail || !movie) return;
+
+    const days = Array.isArray(movie.dayWise)
+      ? [...movie.dayWise].sort((a, b) => a.dayNumber - b.dayNumber)
+      : [];
+    const dayRows = days
+      .map(
+        (day) => `<tr>
+          <td>Day ${esc(day.dayNumber)}<small>${esc(formatReleaseDate(day.reportDate))}</small></td>
+          <td class="num">${esc(formatCr(day.indiaNet))}</td>
+          <td class="num strong">${esc(formatCr(day.worldwide))}</td>
+          <td class="num">${esc(day.occupancy == null ? "—" : `${day.occupancy.toFixed(1)}%`)}</td>
+          <td class="num ${day.netChangePct != null && day.netChangePct < 0 ? "loss" : "gain"}">${esc(day.netChangePct == null ? "—" : `${day.netChangePct >= 0 ? "+" : ""}${day.netChangePct.toFixed(1)}%`)}</td>
+        </tr>`,
+      )
+      .join("");
+    const dayBlock = days.length
+      ? `<div class="film-detail-days">
+          <h3>Day-wise box office collection</h3>
+          <p>Reported India nett and worldwide gross for each available theatrical day.</p>
+          <div style="overflow-x:auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th class="num">India net</th>
+                  <th class="num">Worldwide</th>
+                  <th class="num">Occupancy</th>
+                  <th class="num">Change</th>
+                </tr>
+              </thead>
+              <tbody>${dayRows}</tbody>
+            </table>
+          </div>
+        </div>`
+      : `<div class="film-detail-days">
+          <h3>Day-wise box office collection</h3>
+          <div class="film-detail-empty">No day-wise figures are available for this film yet.</div>
+        </div>`;
+
+    detail.innerHTML = `
+      <div class="film-detail">
+        <div class="film-detail-hero">
+          <img class="film-detail-poster" src="${esc(posterSrc(movie))}" alt="${esc(movie.title)} movie poster" onerror="this.onerror=null;this.src='${esc(posterFallback(movie))}'" />
+          <div>
+            <p class="kicker">${esc(movie.language)} · ${esc(movie.industry)} · ${esc(movie.status)}</p>
+            <h2 id="film-detail-title">${esc(movie.title)}</h2>
+            <p class="film-detail-meta">${esc(movie.director)} · Released ${esc(formatReleaseDate(movie.releaseDate))}${movie.runtimeMin ? ` · ${esc(movie.runtimeMin)} min` : ""}</p>
+            <p class="film-detail-cast"><strong>Cast</strong><br />${esc(movie.starring)}</p>
+            <p class="film-detail-description">${esc(movie.synopsis)}</p>
+          </div>
+        </div>
+        <dl class="film-detail-stats">
+          <div><dt>India net</dt><dd>${esc(formatCr(movie.indiaNet))}</dd></div>
+          <div><dt>Worldwide</dt><dd>${esc(formatCr(movie.worldwide))}</dd></div>
+          <div><dt>Latest day</dt><dd>${esc(formatCr(movie.lastDayNet))}</dd></div>
+          <div><dt>Film rating</dt><dd>${esc(formatRating(movie.rating))}</dd></div>
+          <div><dt>Box office verdict</dt><dd>${esc(movie.verdict)}</dd></div>
+          <div><dt>Budget</dt><dd>${movie.budgetCr == null ? "—" : esc(formatCr(movie.budgetCr))}</dd></div>
+        </dl>
+        ${dayBlock}
+      </div>`;
+  }
+
+  function closeFilmDetail() {
+    const modal = document.getElementById("film-modal");
+    if (modal && typeof modal.close === "function" && modal.open) modal.close();
+    else if (modal) modal.removeAttribute("open");
+    if (location.hash.startsWith("#film-")) {
+      history.replaceState(null, "", `${location.pathname}${location.search}`);
+    }
+  }
+
+  function openFilmDetail(movie) {
+    const modal = document.getElementById("film-modal");
+    if (!modal || !movie) return;
+    renderFilmDetail(movie);
+    if (typeof modal.showModal === "function" && !modal.open) modal.showModal();
+    else modal.setAttribute("open", "");
+    history.replaceState(null, "", filmHref(movie));
+  }
+
+  function routeHash() {
+    if (location.hash.startsWith("#film-")) {
+      const slug = decodeURIComponent(location.hash.slice("#film-".length));
+      const movie = films.find((item) => item.slug === slug);
+      if (movie) openFilmDetail(movie);
+      return;
+    }
+    const modal = document.getElementById("film-modal");
+    if (modal && modal.open) modal.close();
+  }
+
+  function wireFilmDetails() {
+    const modal = document.getElementById("film-modal");
+    if (!modal) return;
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const link = target.closest('a[href^="#film-"]');
+      if (!link) return;
+      const slug = decodeURIComponent(link.getAttribute("href").slice("#film-".length));
+      const movie = films.find((item) => item.slug === slug);
+      if (!movie) return;
+      event.preventDefault();
+      openFilmDetail(movie);
+    });
+    modal.addEventListener("close", closeFilmDetail);
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) closeFilmDetail();
+    });
+    window.addEventListener("hashchange", routeHash);
+  }
+
   function render() {
     renderUpdated();
 
@@ -343,13 +468,15 @@
         .slice(0, 5)
         .map(
           (m, i) => `<li>
-            <span class="week-rank">${i + 1}</span>
-            <span class="week-title">${esc(m.title)}</span>
-            <span class="week-gross">
-              <strong>${esc(formatCrCompact(m.worldwide))}</strong>
-              <em>WW</em>
-              <span>${esc(formatCrCompact(m.indiaNet))} net</span>
-            </span>
+            <a class="week-link" href="${esc(filmHref(m))}" aria-label="Open details for ${esc(m.title)}">
+              <span class="week-rank">${i + 1}</span>
+              <span class="week-title">${esc(m.title)}</span>
+              <span class="week-gross">
+                <strong>${esc(formatCrCompact(m.worldwide))}</strong>
+                <em>WW</em>
+                <span>${esc(formatCrCompact(m.indiaNet))} net</span>
+              </span>
+            </a>
           </li>`,
         )
         .join("") || `<li class="week-empty">No theatrical titles on the board.</li>`;
@@ -361,8 +488,10 @@
         (m, i) => `<tr class="${m.status === "playing" ? "live" : ""}">
         <td class="rank">${i + 1}</td>
         <td class="title-cell">
-          <img class="poster-thumb" src="${esc(posterSrc(m))}" alt="${esc(m.title)} box office poster" loading="lazy" onerror="this.onerror=null;this.src='${esc(posterFallback(m))}'" />
-          <span>${esc(m.title)}${m.status === "playing" ? '<span class="pill">Playing</span>' : ""}</span>
+          <a href="${esc(filmHref(m))}" aria-label="Open details for ${esc(m.title)}">
+            <img class="poster-thumb" src="${esc(posterSrc(m))}" alt="${esc(m.title)} box office poster" loading="lazy" onerror="this.onerror=null;this.src='${esc(posterFallback(m))}'" />
+            <span>${esc(m.title)}${m.status === "playing" ? '<span class="pill">Playing</span>' : ""}</span>
+          </a>
         </td>
         <td>${esc(m.language)}</td>
         <td>${esc(formatReleaseDate(m.releaseDate))}</td>
@@ -452,21 +581,23 @@
     const day = dayNumber(m.releaseDate);
     const img = posterSrc(m);
     const fallback = posterFallback(m);
-    return `<article class="card">
-      <div class="poster-wrap">
-        <img class="poster" src="${esc(img)}" alt="${esc(m.title)} poster" loading="lazy" onerror="this.onerror=null;this.src='${esc(fallback)}'" />
-      </div>
-      <div class="card-body">
-        <p class="kicker">${esc(m.language)} · Day ${day}${m.status === "late" ? " · Late run" : ""}</p>
-        <h3>${esc(m.title)}</h3>
-        <p class="meta">${esc(m.director)} · ${esc(m.starring)}</p>
-        <p class="synopsis">${esc(m.synopsis)}</p>
-        <dl>
-          <div><dt>India net</dt><dd>${esc(formatCr(m.indiaNet))}${deltaHtml(m.deltaNet)}</dd></div>
-          <div><dt>Worldwide</dt><dd>${esc(formatCr(m.worldwide))}${deltaHtml(m.deltaWw)}</dd></div>
-        </dl>
-      </div>
-    </article>`;
+    return `<a class="film-card-link" href="${esc(filmHref(m))}" aria-label="Open details for ${esc(m.title)}">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="${esc(img)}" alt="${esc(m.title)} poster" loading="lazy" onerror="this.onerror=null;this.src='${esc(fallback)}'" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">${esc(m.language)} · Day ${day}${m.status === "late" ? " · Late run" : ""}</p>
+          <h3>${esc(m.title)}</h3>
+          <p class="meta">${esc(m.director)} · ${esc(m.starring)}</p>
+          <p class="synopsis">${esc(m.synopsis)}</p>
+          <dl>
+            <div><dt>India net</dt><dd>${esc(formatCr(m.indiaNet))}${deltaHtml(m.deltaNet)}</dd></div>
+            <div><dt>Worldwide</dt><dd>${esc(formatCr(m.worldwide))}${deltaHtml(m.deltaWw)}</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>`;
   }
 
   function empty(text) {
@@ -492,6 +623,8 @@
   }
 
   loadBrief();
+  wireFilmDetails();
   render();
+  routeHash();
   overlayWiki();
 })();
