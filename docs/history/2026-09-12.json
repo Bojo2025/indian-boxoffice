@@ -1,33 +1,33 @@
 {
-  "date": "2026-09-11",
-  "generatedAt": "2026-09-11T16:08:46.827Z",
+  "date": "2026-09-12",
+  "generatedAt": "2026-09-12T15:16:13.356Z",
   "films": [
     {
       "id": "toxic",
       "title": "Toxic",
-      "indiaNet": 248.24,
-      "worldwide": 339.79,
+      "indiaNet": 248.45,
+      "worldwide": 340.04,
       "status": "playing"
     },
     {
       "id": "awarapan-2",
       "title": "Awarapan 2",
-      "indiaNet": 150.43,
+      "indiaNet": 150.44,
       "worldwide": 210.26,
       "status": "playing"
     },
     {
       "id": "vishwanath-and-sons",
       "title": "Vishwanath And Sons",
-      "indiaNet": 122.02,
-      "worldwide": 208.87,
+      "indiaNet": 122.07,
+      "worldwide": 208.92,
       "status": "playing"
     },
     {
       "id": "irumudi",
       "title": "Irumudi",
-      "indiaNet": 174.45,
-      "worldwide": 224.95,
+      "indiaNet": 175.8,
+      "worldwide": 226.55,
       "status": "playing"
     },
     {
@@ -40,8 +40,8 @@
     {
       "id": "hi",
       "title": "Hi",
-      "indiaNet": 12.39,
-      "worldwide": 14.42,
+      "indiaNet": 12.44,
+      "worldwide": 14.48,
       "status": "playing"
     },
     {
@@ -61,36 +61,36 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 163.13,
-      "worldwide": 192.75,
+      "indiaNet": 173.63,
+      "worldwide": 205.15,
       "status": "late"
     },
     {
       "id": "sardar-2",
       "title": "Sardar 2",
-      "indiaNet": 4.5,
-      "worldwide": 6.8,
+      "indiaNet": 6.95,
+      "worldwide": 10.65,
       "status": "playing"
     },
     {
       "id": "haiwaan",
       "title": "Haiwaan",
-      "indiaNet": 0,
-      "worldwide": 0,
+      "indiaNet": 3,
+      "worldwide": 4.6,
       "status": "playing"
     },
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 148.45,
-      "worldwide": 212.44,
+      "indiaNet": 157.95,
+      "worldwide": 226.19,
       "status": "playing"
     },
     {
       "id": "spider-man-bnd",
       "title": "Spider-Man: Brand New Day",
-      "indiaNet": 497.95,
-      "worldwide": 595.85,
+      "indiaNet": 498.12,
+      "worldwide": 596.03,
       "status": "late"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 193.62,
-      "worldwide": 230.7,
+      "indiaNet": 193.74,
+      "worldwide": 230.86,
       "status": "late"
     },
     {
@@ -192,59 +192,66 @@
       "status": "closed"
     },
     {
-      "id": "mandaadi",
-      "title": "Mandaadi",
-      "indiaNet": 4.9,
-      "worldwide": 6.75,
+      "id": "epic",
+      "title": "Epic",
+      "indiaNet": 2.1,
+      "worldwide": 3.45,
       "status": "playing"
     },
     {
-      "id": "maremma",
-      "title": "Maremma",
+      "id": "pradhama-drishtiya-kuttakkar",
+      "title": "Pradhama Drishtiya Kuttakkar",
+      "indiaNet": 0.92,
+      "worldwide": 1.03,
+      "status": "playing"
+    },
+    {
+      "id": "mahendragiri-varahi",
+      "title": "Mahendragiri Varahi",
+      "indiaNet": 0.55,
+      "worldwide": 0.65,
+      "status": "playing"
+    },
+    {
+      "id": "singh-vs-kaur-2",
+      "title": "Singh Vs Kaur 2",
+      "indiaNet": 0.35,
+      "worldwide": 0.42,
+      "status": "playing"
+    },
+    {
+      "id": "aasha",
+      "title": "Aasha",
+      "indiaNet": 0.29,
+      "worldwide": 0.33,
+      "status": "playing"
+    },
+    {
+      "id": "fall-2-deadpoint",
+      "title": "Fall 2: Deadpoint",
+      "indiaNet": 0.25,
+      "worldwide": 0.29,
+      "status": "playing"
+    },
+    {
+      "id": "video",
+      "title": "Video",
       "indiaNet": 0.15,
       "worldwide": 0.17,
       "status": "playing"
     },
     {
-      "id": "wild-tamil-nadu",
-      "title": "Wild Tamil Nadu",
-      "indiaNet": 0.05,
-      "worldwide": 0.07,
+      "id": "america-america-2",
+      "title": "America America 2",
+      "indiaNet": 0.12,
+      "worldwide": 0.14,
       "status": "playing"
     },
     {
-      "id": "gladiators-special-trailer-premiere",
-      "title": "Gladiators: Special Trailer Premiere",
-      "indiaNet": 0.01,
-      "worldwide": 0.01,
-      "status": "playing"
-    },
-    {
-      "id": "immortal",
-      "title": "Immortal",
-      "indiaNet": 6.46,
-      "worldwide": 6.25,
-      "status": "playing"
-    },
-    {
-      "id": "ramba-oorvasi-menaka",
-      "title": "Ramba Oorvasi Menaka",
-      "indiaNet": 3.96,
-      "worldwide": 4.6,
-      "status": "playing"
-    },
-    {
-      "id": "bol-bhavein-na-bol",
-      "title": "Bol Bhavein Na Bol",
-      "indiaNet": 1.34,
-      "worldwide": 1.49,
-      "status": "playing"
-    },
-    {
-      "id": "asambhauuu",
-      "title": "Asambhauuu",
-      "indiaNet": 0.76,
-      "worldwide": 0.86,
+      "id": "jayanti-2",
+      "title": "Jayanti 2",
+      "indiaNet": 0.1,
+      "worldwide": 0.11,
       "status": "playing"
     }
   ]
