@@ -1,6 +1,6 @@
 {
   "date": "2026-09-20",
-  "generatedAt": "2026-09-20T08:51:37.160Z",
+  "generatedAt": "2026-09-20T10:56:44.357Z",
   "films": [
     {
       "id": "toxic",
@@ -259,6 +259,76 @@
       "title": "The Dark Heaven",
       "indiaNet": 0.24,
       "worldwide": 0.27,
+      "status": "playing"
+    },
+    {
+      "id": "practical-magic-2",
+      "title": "Practical Magic 2",
+      "indiaNet": 0.19,
+      "worldwide": 0.21,
+      "status": "playing"
+    },
+    {
+      "id": "4-rivers-6-ranges-chushi-gangdruk",
+      "title": "4 Rivers 6 Ranges Chushi Gangdruk",
+      "indiaNet": 0.16,
+      "worldwide": 0.18,
+      "status": "playing"
+    },
+    {
+      "id": "toss",
+      "title": "Toss",
+      "indiaNet": 0.14,
+      "worldwide": 0.16,
+      "status": "playing"
+    },
+    {
+      "id": "missing-meghana",
+      "title": "Missing Meghana",
+      "indiaNet": 0.13,
+      "worldwide": 0.14,
+      "status": "playing"
+    },
+    {
+      "id": "the-uprising",
+      "title": "The Uprising",
+      "indiaNet": 0.12,
+      "worldwide": 0.14,
+      "status": "playing"
+    },
+    {
+      "id": "secret-soldier",
+      "title": "Secret Soldier",
+      "indiaNet": 0.12,
+      "worldwide": 0.14,
+      "status": "playing"
+    },
+    {
+      "id": "sandakari",
+      "title": "Sandakari",
+      "indiaNet": 0.12,
+      "worldwide": 0.13,
+      "status": "playing"
+    },
+    {
+      "id": "ottam-thullal",
+      "title": "Ottam Thullal",
+      "indiaNet": 0.11,
+      "worldwide": 0.12,
+      "status": "playing"
+    },
+    {
+      "id": "firki",
+      "title": "Firki",
+      "indiaNet": 0.1,
+      "worldwide": 0.12,
+      "status": "playing"
+    },
+    {
+      "id": "kaagitham-padavalu",
+      "title": "Kaagitham Padavalu",
+      "indiaNet": 0.09,
+      "worldwide": 0.11,
       "status": "playing"
     }
   ]
