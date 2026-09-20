@@ -133,10 +133,7 @@ button.pull:disabled { opacity: 0.5; cursor: wait; }
   padding: 0;
 }
 .week-board li {
-  display: grid;
-  grid-template-columns: 28px minmax(0, 1fr) auto;
-  gap: 10px;
-  align-items: baseline;
+  display: block;
   padding: 8px 0;
   border-top: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
 }
@@ -158,6 +155,7 @@ button.pull:disabled { opacity: 0.5; cursor: wait; }
   grid-template-columns: 28px minmax(0, 1fr) auto;
   gap: 10px;
   align-items: baseline;
+  width: 100%;
   color: inherit;
   text-decoration: none;
 }
