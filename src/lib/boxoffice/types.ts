@@ -22,6 +22,7 @@ export type Movie = {
   budgetCr: number | null;
   runtimeMin: number | null;
   synopsis: string;
+  rating?: number | null;
   posterKey: string;
   status: MovieStatus;
   verdict: string;

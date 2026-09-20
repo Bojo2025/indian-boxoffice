@@ -7,7 +7,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync, copyFileSync, readd
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { MOVIES, SERIES, SOURCES, dateForDay } from "../src/lib/boxoffice/catalog.ts";
-import { round2 } from "../src/lib/boxoffice/consensus.ts";
+import { buildConsensus, round2 } from "../src/lib/boxoffice/consensus.ts";
 import { ingestLiveSources } from "../src/lib/boxoffice/scrape.ts";
 import type { Reading } from "../src/lib/boxoffice/types.ts";
 
@@ -61,6 +61,7 @@ type FilmCard = {
   releaseDate: string;
   budgetCr: number | null;
   synopsis: string;
+  rating: number | null;
   status: string;
   verdict: string;
   posterKey: string;
@@ -74,6 +75,18 @@ type FilmCard = {
   liveSources: string[];
   deltaNet: number | null;
   deltaWw: number | null;
+  dayWise: {
+    reportDate: string;
+    dayNumber: number;
+    indiaNet: number;
+    indiaGross: number;
+    overseas: number;
+    worldwide: number;
+    netChangePct: number | null;
+    disagreementPct: number | null;
+    screens: number | null;
+    occupancy: number | null;
+  }[];
 };
 
 type HealthFile = {
@@ -321,6 +334,21 @@ const films: FilmCard[] = movieCatalog.map((m) => {
   const deltaNet = prev ? round2(indiaNet - prev.indiaNet) : null;
   const deltaWw = prev ? round2(worldwide - prev.worldwide) : null;
   const art = posterFor(m.posterKey || m.id);
+  const dayWise = buildConsensus(
+    rows.filter((r) => !r.note.startsWith("lifetime") && r.reportDate < "2099-01-01"),
+    weights,
+  ).map((day) => ({
+    reportDate: day.reportDate,
+    dayNumber: day.dayNumber,
+    indiaNet: day.indiaNet,
+    indiaGross: day.indiaGross,
+    overseas: day.overseas,
+    worldwide: day.worldwide,
+    netChangePct: day.netChangePct,
+    disagreementPct: day.disagreementPct,
+    screens: day.screens,
+    occupancy: day.occupancy,
+  }));
   return {
     id: m.id,
     slug: m.slug,
@@ -332,6 +360,7 @@ const films: FilmCard[] = movieCatalog.map((m) => {
     releaseDate: m.releaseDate,
     budgetCr: m.budgetCr,
     synopsis: m.synopsis,
+    rating: m.rating ?? null,
     status: m.status === "closed" && hasLiveDaily ? "playing" : m.status,
     verdict: m.verdict,
     posterKey: art.posterKey,
@@ -345,6 +374,7 @@ const films: FilmCard[] = movieCatalog.map((m) => {
     liveSources,
     deltaNet,
     deltaWw,
+    dayWise,
   };
 });
 
