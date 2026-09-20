@@ -58,15 +58,6 @@
     return `₹${formatted} Cr`;
   }
 
-  function formatCrCompact(value) {
-    if (value == null || Number.isNaN(value)) return "—";
-    const abs = Math.abs(value);
-    if (abs >= 100) {
-      return `₹${abs.toLocaleString("en-IN", { maximumFractionDigits: 0 })} Cr`;
-    }
-    return `₹${abs.toLocaleString("en-IN", { maximumFractionDigits: 1, minimumFractionDigits: 1 })} Cr`;
-  }
-
   function formatDelta(value) {
     if (value == null || Number.isNaN(value) || Math.abs(value) < 0.05) return null;
     const sign = value > 0 ? "+" : "−";
@@ -471,11 +462,6 @@
             <a class="week-link" href="${esc(filmHref(m))}" aria-label="Open details for ${esc(m.title)}">
               <span class="week-rank">${i + 1}</span>
               <span class="week-title">${esc(m.title)}</span>
-              <span class="week-gross">
-                <strong>${esc(formatCrCompact(m.worldwide))}</strong>
-                <em>WW</em>
-                <span>${esc(formatCrCompact(m.indiaNet))} net</span>
-              </span>
             </a>
           </li>`,
         )
