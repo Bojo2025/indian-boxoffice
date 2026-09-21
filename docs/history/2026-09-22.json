@@ -1,12 +1,12 @@
 {
   "date": "2026-09-22",
-  "generatedAt": "2026-09-21T19:54:42.619Z",
+  "generatedAt": "2026-09-21T23:56:02.962Z",
   "films": [
     {
       "id": "toxic",
       "title": "Toxic",
-      "indiaNet": 249.91,
-      "worldwide": 341.99,
+      "indiaNet": 249.94,
+      "worldwide": 342.03,
       "status": "playing"
     },
     {
