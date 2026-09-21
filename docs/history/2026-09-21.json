@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generatedAt": "2026-09-20T23:04:55.994Z",
+  "generatedAt": "2026-09-21T04:06:22.191Z",
   "films": [
     {
       "id": "toxic",
@@ -201,8 +201,8 @@
     {
       "id": "resident-evil",
       "title": "Resident Evil",
-      "indiaNet": 9.6,
-      "worldwide": 11.45,
+      "indiaNet": 9.5,
+      "worldwide": 11.33,
       "status": "playing"
     },
     {
