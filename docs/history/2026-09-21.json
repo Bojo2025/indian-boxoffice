@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generatedAt": "2026-09-21T09:21:06.964Z",
+  "generatedAt": "2026-09-21T12:22:45.653Z",
   "films": [
     {
       "id": "toxic",
@@ -26,8 +26,8 @@
     {
       "id": "irumudi",
       "title": "Irumudi",
-      "indiaNet": 188.38,
-      "worldwide": 241.28,
+      "indiaNet": 103.5,
+      "worldwide": 145.45,
       "status": "playing"
     },
     {
@@ -40,8 +40,8 @@
     {
       "id": "hi",
       "title": "Hi",
-      "indiaNet": 5.95,
-      "worldwide": 7.75,
+      "indiaNet": 12.79,
+      "worldwide": 14.88,
       "status": "playing"
     },
     {
@@ -68,8 +68,8 @@
     {
       "id": "sardar-2",
       "title": "Sardar 2",
-      "indiaNet": 15.84,
-      "worldwide": 23.35,
+      "indiaNet": 0,
+      "worldwide": 0,
       "status": "playing"
     },
     {
