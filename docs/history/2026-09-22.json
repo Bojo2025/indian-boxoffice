@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generatedAt": "2026-09-22T08:51:15.350Z",
+  "generatedAt": "2026-09-22T11:13:44.993Z",
   "films": [
     {
       "id": "toxic",
@@ -33,15 +33,15 @@
     {
       "id": "batwara-1947",
       "title": "Batwara 1947",
-      "indiaNet": 36.76,
-      "worldwide": 49.49,
+      "indiaNet": 38.08,
+      "worldwide": 54.2,
       "status": "playing"
     },
     {
       "id": "hi",
       "title": "Hi",
-      "indiaNet": 5.95,
-      "worldwide": 7.75,
+      "indiaNet": 12.8,
+      "worldwide": 14.89,
       "status": "playing"
     },
     {
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 15,
-      "worldwide": 263,
+      "indiaNet": 276.03,
+      "worldwide": 359.7,
       "status": "late"
     },
     {
@@ -82,37 +82,37 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 217.6,
-      "worldwide": 315.34,
+      "indiaNet": 204.96,
+      "worldwide": 303.53,
       "status": "playing"
     },
     {
       "id": "spider-man-bnd",
       "title": "Spider-Man: Brand New Day",
-      "indiaNet": 494,
-      "worldwide": 590.27,
+      "indiaNet": 499.93,
+      "worldwide": 598.13,
       "status": "late"
     },
     {
       "id": "dhamaal-4",
       "title": "Dhamaal 4",
-      "indiaNet": 163.8,
-      "worldwide": 224.61,
+      "indiaNet": 167.88,
+      "worldwide": 230.17,
       "status": "late"
     },
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 195.42,
-      "worldwide": 232.86,
+      "indiaNet": 117.7,
+      "worldwide": 153.01,
       "status": "late"
     },
     {
       "id": "dhurandhar",
       "title": "Dhurandhar: The Revenge",
-      "indiaNet": 1108.09,
+      "indiaNet": 1095,
       "worldwide": 1820,
-      "status": "playing"
+      "status": "closed"
     },
     {
       "id": "border-2",
@@ -173,16 +173,16 @@
     {
       "id": "welcome-jungle",
       "title": "Welcome To The Jungle",
-      "indiaNet": 130.8,
-      "worldwide": 186.84,
-      "status": "closed"
+      "indiaNet": 134.11,
+      "worldwide": 192.75,
+      "status": "playing"
     },
     {
       "id": "cocktail-2",
       "title": "Cocktail 2",
-      "indiaNet": 95.5,
-      "worldwide": 147.73,
-      "status": "playing"
+      "indiaNet": 92.09,
+      "worldwide": 143.6,
+      "status": "closed"
     },
     {
       "id": "alpha",
@@ -259,76 +259,6 @@
       "title": "The Dark Heaven",
       "indiaNet": 0.59,
       "worldwide": 0.66,
-      "status": "playing"
-    },
-    {
-      "id": "its-a-medical-miracle",
-      "title": "It's a Medical Miracle",
-      "indiaNet": 1.67,
-      "worldwide": 0.65,
-      "status": "playing"
-    },
-    {
-      "id": "4-rivers-6-ranges-chushi-gangdruk",
-      "title": "4 Rivers 6 Ranges Chushi Gangdruk",
-      "indiaNet": 0.31,
-      "worldwide": 0.36,
-      "status": "playing"
-    },
-    {
-      "id": "practical-magic-2",
-      "title": "Practical Magic 2",
-      "indiaNet": 0.27,
-      "worldwide": 0.3,
-      "status": "playing"
-    },
-    {
-      "id": "firki",
-      "title": "Firki",
-      "indiaNet": 0.23,
-      "worldwide": 0.26,
-      "status": "playing"
-    },
-    {
-      "id": "toss",
-      "title": "Toss",
-      "indiaNet": 0.21,
-      "worldwide": 0.24,
-      "status": "playing"
-    },
-    {
-      "id": "the-uprising",
-      "title": "The Uprising",
-      "indiaNet": 0.21,
-      "worldwide": 0.23,
-      "status": "playing"
-    },
-    {
-      "id": "sandakari",
-      "title": "Sandakari",
-      "indiaNet": 0.21,
-      "worldwide": 0.23,
-      "status": "playing"
-    },
-    {
-      "id": "ottam-thullal",
-      "title": "Ottam Thullal",
-      "indiaNet": 0.17,
-      "worldwide": 0.2,
-      "status": "playing"
-    },
-    {
-      "id": "secret-soldier",
-      "title": "Secret Soldier",
-      "indiaNet": 0.18,
-      "worldwide": 0.2,
-      "status": "playing"
-    },
-    {
-      "id": "khoonta",
-      "title": "Khoonta",
-      "indiaNet": 0.16,
-      "worldwide": 0.19,
       "status": "playing"
     }
   ]
