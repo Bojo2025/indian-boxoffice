@@ -1,12 +1,12 @@
 {
   "date": "2026-09-22",
-  "generatedAt": "2026-09-22T04:11:28.921Z",
+  "generatedAt": "2026-09-22T08:51:15.350Z",
   "films": [
     {
       "id": "toxic",
       "title": "Toxic",
-      "indiaNet": 249.94,
-      "worldwide": 342.03,
+      "indiaNet": 214.75,
+      "worldwide": 287.41,
       "status": "playing"
     },
     {
@@ -26,22 +26,22 @@
     {
       "id": "irumudi",
       "title": "Irumudi",
-      "indiaNet": 188.69,
-      "worldwide": 241.28,
+      "indiaNet": 103.5,
+      "worldwide": 145.45,
       "status": "playing"
     },
     {
       "id": "batwara-1947",
       "title": "Batwara 1947",
-      "indiaNet": 38.08,
-      "worldwide": 54.2,
+      "indiaNet": 36.76,
+      "worldwide": 49.49,
       "status": "playing"
     },
     {
       "id": "hi",
       "title": "Hi",
-      "indiaNet": 12.8,
-      "worldwide": 14.89,
+      "indiaNet": 5.95,
+      "worldwide": 7.75,
       "status": "playing"
     },
     {
@@ -61,22 +61,22 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 276.03,
-      "worldwide": 352.45,
+      "indiaNet": 15,
+      "worldwide": 263,
       "status": "late"
     },
     {
       "id": "sardar-2",
       "title": "Sardar 2",
-      "indiaNet": 15.98,
-      "worldwide": 23.5,
+      "indiaNet": 0,
+      "worldwide": 0,
       "status": "playing"
     },
     {
       "id": "haiwaan",
       "title": "Haiwaan",
-      "indiaNet": 9.89,
-      "worldwide": 15.05,
+      "indiaNet": 8.71,
+      "worldwide": 11.52,
       "status": "playing"
     },
     {
@@ -89,15 +89,15 @@
     {
       "id": "spider-man-bnd",
       "title": "Spider-Man: Brand New Day",
-      "indiaNet": 499.93,
-      "worldwide": 598.13,
+      "indiaNet": 494,
+      "worldwide": 590.27,
       "status": "late"
     },
     {
       "id": "dhamaal-4",
       "title": "Dhamaal 4",
-      "indiaNet": 167.88,
-      "worldwide": 230.17,
+      "indiaNet": 163.8,
+      "worldwide": 224.61,
       "status": "late"
     },
     {
@@ -117,9 +117,9 @@
     {
       "id": "border-2",
       "title": "Border 2",
-      "indiaNet": 329.43,
-      "worldwide": 450.19,
-      "status": "playing"
+      "indiaNet": 341.7,
+      "worldwide": 464.5,
+      "status": "closed"
     },
     {
       "id": "peddi",
@@ -173,9 +173,9 @@
     {
       "id": "welcome-jungle",
       "title": "Welcome To The Jungle",
-      "indiaNet": 134.11,
-      "worldwide": 192.75,
-      "status": "playing"
+      "indiaNet": 130.8,
+      "worldwide": 186.84,
+      "status": "closed"
     },
     {
       "id": "cocktail-2",
@@ -215,8 +215,8 @@
     {
       "id": "daayra",
       "title": "Daayra",
-      "indiaNet": 4.95,
-      "worldwide": 7.68,
+      "indiaNet": 5,
+      "worldwide": 7.75,
       "status": "playing"
     },
     {
@@ -259,6 +259,76 @@
       "title": "The Dark Heaven",
       "indiaNet": 0.59,
       "worldwide": 0.66,
+      "status": "playing"
+    },
+    {
+      "id": "its-a-medical-miracle",
+      "title": "It's a Medical Miracle",
+      "indiaNet": 1.67,
+      "worldwide": 0.65,
+      "status": "playing"
+    },
+    {
+      "id": "4-rivers-6-ranges-chushi-gangdruk",
+      "title": "4 Rivers 6 Ranges Chushi Gangdruk",
+      "indiaNet": 0.31,
+      "worldwide": 0.36,
+      "status": "playing"
+    },
+    {
+      "id": "practical-magic-2",
+      "title": "Practical Magic 2",
+      "indiaNet": 0.27,
+      "worldwide": 0.3,
+      "status": "playing"
+    },
+    {
+      "id": "firki",
+      "title": "Firki",
+      "indiaNet": 0.23,
+      "worldwide": 0.26,
+      "status": "playing"
+    },
+    {
+      "id": "toss",
+      "title": "Toss",
+      "indiaNet": 0.21,
+      "worldwide": 0.24,
+      "status": "playing"
+    },
+    {
+      "id": "the-uprising",
+      "title": "The Uprising",
+      "indiaNet": 0.21,
+      "worldwide": 0.23,
+      "status": "playing"
+    },
+    {
+      "id": "sandakari",
+      "title": "Sandakari",
+      "indiaNet": 0.21,
+      "worldwide": 0.23,
+      "status": "playing"
+    },
+    {
+      "id": "ottam-thullal",
+      "title": "Ottam Thullal",
+      "indiaNet": 0.17,
+      "worldwide": 0.2,
+      "status": "playing"
+    },
+    {
+      "id": "secret-soldier",
+      "title": "Secret Soldier",
+      "indiaNet": 0.18,
+      "worldwide": 0.2,
+      "status": "playing"
+    },
+    {
+      "id": "khoonta",
+      "title": "Khoonta",
+      "indiaNet": 0.16,
+      "worldwide": 0.19,
       "status": "playing"
     }
   ]
