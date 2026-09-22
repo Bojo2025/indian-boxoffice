@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generatedAt": "2026-09-21T23:56:02.962Z",
+  "generatedAt": "2026-09-22T04:11:28.921Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 275.88,
-      "worldwide": 352.3,
+      "indiaNet": 276.03,
+      "worldwide": 352.45,
       "status": "late"
     },
     {
@@ -82,8 +82,8 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 217.45,
-      "worldwide": 315.14,
+      "indiaNet": 217.6,
+      "worldwide": 315.34,
       "status": "playing"
     },
     {
