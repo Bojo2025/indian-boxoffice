@@ -1,18 +1,18 @@
 {
   "date": "2026-09-22",
-  "generatedAt": "2026-09-22T11:13:44.993Z",
+  "generatedAt": "2026-09-22T16:35:51.982Z",
   "films": [
     {
       "id": "toxic",
       "title": "Toxic",
-      "indiaNet": 214.75,
-      "worldwide": 287.41,
+      "indiaNet": 249.94,
+      "worldwide": 342.03,
       "status": "playing"
     },
     {
       "id": "awarapan-2",
       "title": "Awarapan 2",
-      "indiaNet": 150.55,
+      "indiaNet": 153.67,
       "worldwide": 210.26,
       "status": "playing"
     },
@@ -26,15 +26,15 @@
     {
       "id": "irumudi",
       "title": "Irumudi",
-      "indiaNet": 103.5,
-      "worldwide": 145.45,
+      "indiaNet": 188.69,
+      "worldwide": 241.28,
       "status": "playing"
     },
     {
       "id": "batwara-1947",
       "title": "Batwara 1947",
-      "indiaNet": 38.08,
-      "worldwide": 54.2,
+      "indiaNet": 36.76,
+      "worldwide": 49.49,
       "status": "playing"
     },
     {
@@ -68,22 +68,22 @@
     {
       "id": "sardar-2",
       "title": "Sardar 2",
-      "indiaNet": 0,
-      "worldwide": 0,
+      "indiaNet": 15.98,
+      "worldwide": 23.5,
       "status": "playing"
     },
     {
       "id": "haiwaan",
       "title": "Haiwaan",
-      "indiaNet": 8.71,
-      "worldwide": 11.52,
+      "indiaNet": 9.89,
+      "worldwide": 15.05,
       "status": "playing"
     },
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 204.96,
-      "worldwide": 303.53,
+      "indiaNet": 217.6,
+      "worldwide": 315.34,
       "status": "playing"
     },
     {
@@ -103,23 +103,23 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 117.7,
-      "worldwide": 153.01,
+      "indiaNet": 195.42,
+      "worldwide": 232.86,
       "status": "late"
     },
     {
       "id": "dhurandhar",
       "title": "Dhurandhar: The Revenge",
-      "indiaNet": 1095,
+      "indiaNet": 1108.09,
       "worldwide": 1820,
-      "status": "closed"
+      "status": "playing"
     },
     {
       "id": "border-2",
       "title": "Border 2",
-      "indiaNet": 341.7,
-      "worldwide": 464.5,
-      "status": "closed"
+      "indiaNet": 329.43,
+      "worldwide": 450.19,
+      "status": "playing"
     },
     {
       "id": "peddi",
@@ -180,9 +180,9 @@
     {
       "id": "cocktail-2",
       "title": "Cocktail 2",
-      "indiaNet": 92.09,
-      "worldwide": 143.6,
-      "status": "closed"
+      "indiaNet": 95.5,
+      "worldwide": 147.73,
+      "status": "playing"
     },
     {
       "id": "alpha",
