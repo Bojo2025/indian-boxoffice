@@ -1,7 +1,7 @@
 window.IBO_CATALOG = {
-  "generatedAt": "2026-09-24T16:48:15.224Z",
-  "deskDate": "2026-09-24",
-  "comparedTo": "2026-09-24 prior",
+  "generatedAt": "2026-09-24T21:19:37.184Z",
+  "deskDate": "2026-09-25",
+  "comparedTo": "2026-09-24",
   "mode": "server-consensus",
   "spine": [
     "sacnilk",
@@ -13,21 +13,22 @@ window.IBO_CATALOG = {
     "hardFail": true,
     "alerts": [
       "HARD: Sacnilk returned 0 day-wise rows — primary spine is down or the HTML regex broke",
-      "sacnilk failed: This operation was aborted (streak 1)",
-      "koimoi failed: HTTP 403 (streak 42)",
-      "koimoi has failed 42 consecutive publishes",
-      "boi failed: HTTP 403 (streak 22)",
-      "boi has failed 22 consecutive publishes"
+      "sacnilk failed: This operation was aborted (streak 2)",
+      "sacnilk has failed 2 consecutive publishes",
+      "koimoi failed: HTTP 403 (streak 43)",
+      "koimoi has failed 43 consecutive publishes",
+      "boi failed: HTTP 403 (streak 23)",
+      "boi has failed 23 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
         "ok": false,
-        "streakFail": 1,
+        "streakFail": 2,
         "detail": "This operation was aborted"
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 42,
+        "streakFail": 43,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -37,7 +38,7 @@ window.IBO_CATALOG = {
       },
       "boi": {
         "ok": false,
-        "streakFail": 22,
+        "streakFail": 23,
         "detail": "HTTP 403"
       }
     }
@@ -138,12 +139,12 @@ window.IBO_CATALOG = {
       "overseas": 34,
       "worldwide": 287.41,
       "lastDayNet": 5.9,
-      "trackedThroughDay": 30,
+      "trackedThroughDay": 31,
       "liveSources": [
         "wikipedia"
       ],
-      "deltaNet": -35.28,
-      "deltaWw": -54.72,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-26",
@@ -240,12 +241,12 @@ window.IBO_CATALOG = {
       "overseas": 28.92,
       "worldwide": 207.39,
       "lastDayNet": 0.9,
-      "trackedThroughDay": 42,
+      "trackedThroughDay": 43,
       "liveSources": [
         "hungama"
       ],
-      "deltaNet": 0.72,
-      "deltaWw": -2.87,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-14",
@@ -488,8 +489,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 1.05,
       "trackedThroughDay": 18,
       "liveSources": [],
-      "deltaNet": -17.12,
-      "deltaWw": -40.81,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-14",
@@ -732,8 +733,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 3.4,
       "trackedThroughDay": 11,
       "liveSources": [],
-      "deltaNet": -86.6,
-      "deltaWw": -97,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-21",
@@ -890,12 +891,12 @@ window.IBO_CATALOG = {
       "overseas": 5.73,
       "worldwide": 49.49,
       "lastDayNet": null,
-      "trackedThroughDay": 42,
+      "trackedThroughDay": 43,
       "liveSources": [
         "hungama"
       ],
-      "deltaNet": -1.32,
-      "deltaWw": -4.71,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
@@ -921,8 +922,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 0.72,
       "trackedThroughDay": 4,
       "liveSources": [],
-      "deltaNet": -6.86,
-      "deltaWw": -7.16,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-28",
@@ -1315,14 +1316,14 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 3.5,
       "lastDayNet": 13,
-      "trackedThroughDay": 49,
+      "trackedThroughDay": 50,
       "liveSources": [
         "hungama",
         "wikipedia",
         "pinkvilla"
       ],
-      "deltaNet": -269.68,
-      "deltaWw": -368.45,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-27",
@@ -1373,8 +1374,8 @@ window.IBO_CATALOG = {
       "lastDayNet": null,
       "trackedThroughDay": null,
       "liveSources": [],
-      "deltaNet": -16.22,
-      "deltaWw": -23.76,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
@@ -1398,12 +1399,12 @@ window.IBO_CATALOG = {
       "overseas": 1.15,
       "worldwide": 11.52,
       "lastDayNet": null,
-      "trackedThroughDay": 14,
+      "trackedThroughDay": 15,
       "liveSources": [
         "hungama"
       ],
-      "deltaNet": -1.2,
-      "deltaWw": -3.55,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
@@ -1427,13 +1428,13 @@ window.IBO_CATALOG = {
       "overseas": 59.53,
       "worldwide": 307.55,
       "lastDayNet": null,
-      "trackedThroughDay": 21,
+      "trackedThroughDay": 22,
       "liveSources": [
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": -13.16,
-      "deltaWw": -14.84,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
@@ -1459,8 +1460,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 0.72,
       "trackedThroughDay": 33,
       "liveSources": [],
-      "deltaNet": -6.1,
-      "deltaWw": -8.04,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-07-30",
@@ -1665,12 +1666,12 @@ window.IBO_CATALOG = {
       "overseas": 29.61,
       "worldwide": 224.61,
       "lastDayNet": null,
-      "trackedThroughDay": 77,
+      "trackedThroughDay": 78,
       "liveSources": [
         "hungama"
       ],
-      "deltaNet": -4.08,
-      "deltaWw": -5.56,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
@@ -1696,8 +1697,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 0.55,
       "trackedThroughDay": 45,
       "liveSources": [],
-      "deltaNet": -77.9,
-      "deltaWw": -80.05,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-07-17",
@@ -1866,13 +1867,13 @@ window.IBO_CATALOG = {
       "overseas": 475.93,
       "worldwide": 1852.44,
       "lastDayNet": 1,
-      "trackedThroughDay": 190,
+      "trackedThroughDay": 191,
       "liveSources": [
         "hungama",
         "wikipedia"
       ],
       "deltaNet": 0,
-      "deltaWw": 32.44,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-03-19",
@@ -2209,13 +2210,13 @@ window.IBO_CATALOG = {
       "overseas": 57.71,
       "worldwide": 464.5,
       "lastDayNet": 5,
-      "trackedThroughDay": 245,
+      "trackedThroughDay": 246,
       "liveSources": [
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": 12.27,
-      "deltaWw": 14.31,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-02-01",
@@ -2264,13 +2265,13 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 333.43,
       "lastDayNet": 1,
-      "trackedThroughDay": 182,
+      "trackedThroughDay": 183,
       "liveSources": [
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": -243.64,
-      "deltaWw": -8.47,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-06-08",
@@ -2307,7 +2308,7 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 322.5,
       "lastDayNet": null,
-      "trackedThroughDay": 258,
+      "trackedThroughDay": 259,
       "liveSources": [
         "wikipedia"
       ],
@@ -2338,8 +2339,8 @@ window.IBO_CATALOG = {
       "lastDayNet": null,
       "trackedThroughDay": 70,
       "liveSources": [],
-      "deltaNet": 30.82,
-      "deltaWw": 2.38,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
@@ -2363,7 +2364,7 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 305,
       "lastDayNet": null,
-      "trackedThroughDay": 256,
+      "trackedThroughDay": 257,
       "liveSources": [
         "wikipedia"
       ],
@@ -2392,7 +2393,7 @@ window.IBO_CATALOG = {
       "overseas": 48.15,
       "worldwide": 247.28,
       "lastDayNet": 5,
-      "trackedThroughDay": 175,
+      "trackedThroughDay": 176,
       "liveSources": [
         "hungama"
       ],
@@ -2536,12 +2537,12 @@ window.IBO_CATALOG = {
       "overseas": 31.13,
       "worldwide": 186.84,
       "lastDayNet": 6,
-      "trackedThroughDay": 91,
+      "trackedThroughDay": 92,
       "liveSources": [
         "hungama"
       ],
-      "deltaNet": -3.31,
-      "deltaWw": -5.91,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-07-01",
@@ -2578,12 +2579,12 @@ window.IBO_CATALOG = {
       "overseas": 33.96,
       "worldwide": 143.6,
       "lastDayNet": null,
-      "trackedThroughDay": 98,
+      "trackedThroughDay": 99,
       "liveSources": [
         "hungama"
       ],
-      "deltaNet": -3.41,
-      "deltaWw": -4.13,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
@@ -2607,7 +2608,7 @@ window.IBO_CATALOG = {
       "overseas": 29.9,
       "worldwide": 98.62,
       "lastDayNet": null,
-      "trackedThroughDay": 84,
+      "trackedThroughDay": 85,
       "liveSources": [
         "hungama"
       ],
@@ -2616,64 +2617,7 @@ window.IBO_CATALOG = {
       "dayWise": []
     }
   ],
-  "changes": [
-    {
-      "id": "hanuman-ansh",
-      "title": "Hanuman Ansh",
-      "text": "Hanuman Ansh: WW ₹-368.45 Cr, India net ₹-269.68 Cr since 2026-09-24 prior",
-      "deltaNet": -269.68,
-      "deltaWw": -368.45
-    },
-    {
-      "id": "irumudi",
-      "title": "Irumudi",
-      "text": "Irumudi: WW ₹-97 Cr, India net ₹-86.6 Cr since 2026-09-24 prior",
-      "deltaNet": -86.6,
-      "deltaWw": -97
-    },
-    {
-      "id": "the-odyssey",
-      "title": "The Odyssey",
-      "text": "The Odyssey: WW ₹-80.05 Cr, India net ₹-77.9 Cr since 2026-09-24 prior",
-      "deltaNet": -77.9,
-      "deltaWw": -80.05
-    },
-    {
-      "id": "toxic",
-      "title": "Toxic",
-      "text": "Toxic: WW ₹-54.72 Cr, India net ₹-35.28 Cr since 2026-09-24 prior",
-      "deltaNet": -35.28,
-      "deltaWw": -54.72
-    },
-    {
-      "id": "vishwanath-and-sons",
-      "title": "Vishwanath And Sons",
-      "text": "Vishwanath And Sons: WW ₹-40.81 Cr, India net ₹-17.12 Cr since 2026-09-24 prior",
-      "deltaNet": -17.12,
-      "deltaWw": -40.81
-    },
-    {
-      "id": "dhurandhar",
-      "title": "Dhurandhar: The Revenge",
-      "text": "Dhurandhar: The Revenge: WW +₹32.44 Cr since 2026-09-24 prior",
-      "deltaNet": 0,
-      "deltaWw": 32.44
-    },
-    {
-      "id": "sardar-2",
-      "title": "Sardar 2",
-      "text": "Sardar 2: WW ₹-23.76 Cr, India net ₹-16.22 Cr since 2026-09-24 prior",
-      "deltaNet": -16.22,
-      "deltaWw": -23.76
-    },
-    {
-      "id": "mirzapur-the-movie",
-      "title": "Mirzapur: The Movie",
-      "text": "Mirzapur: The Movie: WW ₹-14.84 Cr, India net ₹-13.16 Cr since 2026-09-24 prior",
-      "deltaNet": -13.16,
-      "deltaWw": -14.84
-    }
-  ],
+  "changes": [],
   "logs": [
     {
       "sourceId": "sacnilk",
@@ -2686,14 +2630,19 @@ window.IBO_CATALOG = {
       "detail": "48 collection rows from 16 live pulls"
     },
     {
+      "sourceId": "wikipedia",
+      "status": "ok",
+      "detail": "8 collection rows from 1 live pull"
+    },
+    {
       "sourceId": "etimes",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
     },
     {
-      "sourceId": "wikipedia",
+      "sourceId": "express",
       "status": "ok",
-      "detail": "8 collection rows from 1 live pull"
+      "detail": "Fetched 1 page (headlines / status)"
     },
     {
       "sourceId": "pinkvilla",
@@ -2706,11 +2655,6 @@ window.IBO_CATALOG = {
       "detail": "HTTP 403"
     },
     {
-      "sourceId": "express",
-      "status": "ok",
-      "detail": "Fetched 1 page (headlines / status)"
-    },
-    {
       "sourceId": "boi",
       "status": "blocked",
       "detail": "HTTP 403"
@@ -2721,8 +2665,22 @@ window.IBO_CATALOG = {
       "sourceId": "hungama",
       "title": "Hungama 2026 worldwide: 11 titles matched",
       "url": "https://www.bollywoodhungama.com/box-office-collections/worldwide/2026/",
-      "publishedAt": "2026-09-24T16:48:05.886Z",
+      "publishedAt": "2026-09-24T21:19:27.574Z",
       "summary": "dhurandhar ₹1852.44 Cr WW · border-2 ₹464.5 Cr WW · mirzapur-the-movie ₹307.55 Cr WW · bhooth-bangla ₹247.28 Cr WW · dhamaal-4 ₹224.61 Cr WW"
+    },
+    {
+      "sourceId": "wikipedia",
+      "title": "Wikipedia 2026 ranking: Dhurandhar: The Revenge leads at 1,852.44 crore",
+      "url": "https://en.wikipedia.org/wiki/List_of_Indian_films_of_2026",
+      "publishedAt": "2026-09-24T21:19:30.668Z",
+      "summary": "1. Dhurandhar: The Revenge (Hindi) 1,852.44 crore · 2. Border 2 (Hindi) 464.50 crore · 3. Hanuman Ansh (Hindi) 366.45 crore · 4. Peddi (Telugu) 330–336.85 crore · 5. Toxic (Kannada) 320–341.39 crore · 6. Jana Nayagan (Tamil) 320-325 crore"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Govinda BREAKS SILENCE on his Lalbaugcha Raja visit with Rani",
+      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/govinda-breaks-silence-on-his-lalbaugcha-raja-visit-with-rani-swarnkar-a-very-strategically-planned-movement-says-his-personal-life-is-not-a-subject-for-anyone/articleshow/134467480.cms",
+      "publishedAt": "2026-09-24T17:25:47.000Z",
+      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134467480.cms\" /&gt;Govinda recently visited Lalbaugcha Raja Pandal to pray for the success of his upcoming film 'Roopa'. He claimed that rumors reg"
     },
     {
       "sourceId": "etimes",
@@ -2733,17 +2691,59 @@ window.IBO_CATALOG = {
     },
     {
       "sourceId": "etimes",
+      "title": "Govinda calls Diljit Dosanjh a 'world-level star'",
+      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/govinda-thanks-diljit-dosanjh-for-calling-him-legendary-says-maine-kaha-tha-ki-ye-ek-din-world-level-star-banenge/articleshow/134468350.cms",
+      "publishedAt": "2026-09-24T18:15:25.000Z",
+      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134468350.cms\" /&gt;Govinda has expressed heartfelt thanks to Diljit Dosanjh for referring to him as legendary in a recent interview. He reminisced "
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Quote of the day by Bob Dylan",
+      "url": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/quote-of-the-day-by-bob-dylan-people-seldom-do-what-they-believe-in-they-do-what-is-convenient-then-repent-a-powerful-life-lesson-about-the-gap-between-values-and-actions/articleshow/134464828.cms",
+      "publishedAt": "2026-09-24T17:30:00.000Z",
+      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134464828.cms\" /&gt;Bob Dylan's insightful quote delves into the struggle between personal convictions and the decisions influenced by external pres"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Anees Bazmee mourns demise of 'Welcome' star Mushtaq Khan",
+      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/anees-bazmee-mourns-the-demise-of-welcome-star-mushtaq-khan-calls-him-a-truly-remarkable-artist-and-a-beautiful-soul/articleshow/134467136.cms",
+      "publishedAt": "2026-09-24T17:05:10.000Z",
+      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134467136.cms\" /&gt;In a heartfelt tribute, filmmaker Anees Bazmee expressed his disbelief on social media regarding the passing of actor Mushtaq Kh"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Tim Janus, passes away at 49 after a long battle with cancer",
+      "url": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/the-amazing-race-star-tim-janus-passes-away-at-49-after-a-long-battle-with-cancer/articleshow/134467661.cms",
+      "publishedAt": "2026-09-24T17:34:34.000Z",
+      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134467661.cms\" /&gt;Tim Janus, affectionately known as 'Eater X', died on September 16, 2026, from complications related to cancer. Renowned for his"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "In 1996, Diane Keaton sold a Lloyd Wright-designed Los Feliz home",
+      "url": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/in-1996-diane-keaton-sold-a-lloyd-wright-designed-los-feliz-home-after-spending-nearly-1-million-restoring-it/articleshow/134464415.cms",
+      "publishedAt": "2026-09-24T16:30:00.000Z",
+      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134464415.cms\" /&gt;Diane Keaton bought a historic home in Los Feliz designed by Lloyd Wright in the early 1990s. She invested nearly $1 million in "
+    },
+    {
+      "sourceId": "etimes",
+      "title": "In 2025, comedian Matt Rife became the legal guardian of the famous Annabelle doll",
+      "url": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/in-2025-comedian-matt-rife-bought-ed-and-lorraine-warrens-connecticut-home-and-occult-museum-for-1-million-becoming-the-guardian-of-the-famous-annabelle-doll/articleshow/134463506.cms",
+      "publishedAt": "2026-09-24T15:30:00.000Z",
+      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134463506.cms\" /&gt;In a surprising turn of events in 2025, comedians Matt Rife and Elton Castee took ownership of the notorious Warren Occult Museu"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "'Hanuman Ansh' co-producer says producers who once REFUSED film have now APOLOGISED",
+      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/hanuman-ansh-co-producer-anupriya-nagar-says-bollywood-producers-who-once-refused-the-film-have-now-apologised-that-was-the-biggest-mistake/articleshow/134466955.cms",
+      "publishedAt": "2026-09-24T16:49:34.000Z",
+      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134466955.cms\" /&gt;Anupriya Nagar shared that the initial resistance from investors towards 'Hanuman Ansh' was rooted in its modest budget. Yet, th"
+    },
+    {
+      "sourceId": "etimes",
       "title": "Dolly Parton's estate lawsuit claims nephew made $27M arms sale after her death",
       "url": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/dolly-partons-estate-lawsuit-claims-nephew-bryan-seaver-said-he-sold-27-million-worth-of-ammunition-and-arms-to-haitian-police-on-the-day-the-singer-died-report/articleshow/134466688.cms",
       "publishedAt": "2026-09-24T16:31:57.000Z",
       "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134466688.cms\" /&gt;Dolly Parton’s estate has sued her nephew Bryan Seaver, alleging he sought money through threats and intimidation. Court documen"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Sanjay Mishra mourns Mushtaq Khan's death: 'He became like a guardian'",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/sanjay-mishra-mourns-welcome-co-star-mushtaq-khans-death-he-became-like-a-guardian-to-me-did-not-get-the-credit-he-deserved/articleshow/134466530.cms",
-      "publishedAt": "2026-09-24T16:15:55.000Z",
-      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134466530.cms\" /&gt;Sanjay Mishra conveyed profound sorrow upon hearing the news of Mushtaq Khan's passing. Khan, who had been battling illness, was"
     },
     {
       "sourceId": "etimes",
@@ -2754,80 +2754,24 @@ window.IBO_CATALOG = {
     },
     {
       "sourceId": "etimes",
-      "title": "Revisiting Mushtaq Khan's iconic roles in 'Welcome', 'Gadar' and more",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/mushtaq-khan-passes-away-at-56-revisiting-his-iconic-roles-in-welcome-gadar-and-more/articleshow/134465886.cms",
-      "publishedAt": "2026-09-24T15:35:52.000Z",
-      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134465886.cms\" /&gt;The film industry mourns the loss of veteran actor Mushtaq Khan, who has died at 56 in Mumbai after a fight with lung cancer. Re"
+      "title": "Sanjay Mishra mourns Mushtaq Khan's death: 'He became like a guardian'",
+      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/sanjay-mishra-mourns-welcome-co-star-mushtaq-khans-death-he-became-like-a-guardian-to-me-did-not-get-the-credit-he-deserved/articleshow/134466530.cms",
+      "publishedAt": "2026-09-24T16:15:55.000Z",
+      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134466530.cms\" /&gt;Sanjay Mishra conveyed profound sorrow upon hearing the news of Mushtaq Khan's passing. Khan, who had been battling illness, was"
     },
     {
-      "sourceId": "etimes",
-      "title": "Who is Rishikanth? All about ‘Modha Rathiri' star's 15-year journey",
-      "url": "https://timesofindia.indiatimes.com/entertainment/tamil/movies/news/who-is-rishikanth-from-temple-monkeys-to-modha-rathiri-and-dorothy-the-15-year-journey-behind-tamil-cinemas-rising-star/articleshow/134465737.cms",
-      "publishedAt": "2026-09-24T15:20:46.000Z",
-      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134465737.cms\" /&gt;Rishikanth transitioned from creating online comedy content to becoming a lead actor in Tamil cinema. After 15 years of persiste"
+      "sourceId": "express",
+      "title": "‘The Paradise’ movie review: An emotionally distant, epic misfire starring Nani",
+      "url": "https://www.thehindu.com/entertainment/movies/the-paradise-movie-review-an-emotionally-distant-epic-misfire-starring-nani/article71502534.ece",
+      "publishedAt": "2026-09-24T11:19:53.000Z",
+      "summary": "Nani’s physical transformation in this Srikanth Odela-directed film is striking, but it cannot make up for a narrative that struggles to establish its characters or conflict (The Hindu feed; Indian Express RSS blocked)"
     },
     {
-      "sourceId": "etimes",
-      "title": "Dhanush calls Karthik Subbaraj's 'Dorothy' 'a masterpiece'",
-      "url": "https://timesofindia.indiatimes.com/entertainment/tamil/movies/news/dhanush-calls-karthik-subbarajs-dorothy-a-masterpiece-and-says-ilaiyaraajas-background-score-will-blow-your-mind-away-ahead-of-september-25-release/articleshow/134464942.cms",
-      "publishedAt": "2026-09-24T14:51:07.000Z",
-      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134464942.cms\" /&gt;Dhanush has lauded Karthik Subbaraj's film 'Dorothy', calling it a true masterpiece that showcases outstanding performances and "
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Kavin and Nayanthara’s ‘Hi’ OTT release date confirmed",
-      "url": "https://timesofindia.indiatimes.com/entertainment/tamil/movies/news/hi-ott-release-date-confirmed-when-and-where-to-watch-kavin-and-nayantharas-romantic-drama/articleshow/134464773.cms",
-      "publishedAt": "2026-09-24T14:16:39.000Z",
-      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134464773.cms\" /&gt;The much-anticipated romantic drama 'Hi' featuring Kavin and Nayanthara will grace ZEE5 screens starting September 25, 2026. Hel"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "'Hanuman Ansh' BO Day 49 [LIVE]: Neem Kaorli Baba biopic crosses Rs 287 crore India net",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/box-office/hanuman-ansh-box-office-collection-day-49-live-vishal-chaturvedi-and-shobhinaw-satyaas-spiritual-biopic-on-neem-kaorli-baba-maintains-strong-theatrical-run-eyes-rs-290-crore-india-net-and-rs-375-crore-worldwide-gross/articleshow/134454285.cms",
-      "publishedAt": "2026-09-24T07:01:27.000Z",
-      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134454285.cms\" /&gt;Vishal Chaturvedi's spiritual biopic 'Hanuman Ansh', starring Shobhinaw Satyaa as Neem Karoli Baba, shows no signs of slowing do"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Alia gives shout-out to Ranbir's 'Love And War' look: 'Hey handsome'",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/alia-bhatt-gives-shout-out-to-ranbir-kapoor-after-love-and-war-first-look-release-hey-handsome/articleshow/134464433.cms",
-      "publishedAt": "2026-09-24T14:05:35.000Z",
-      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134464433.cms\" /&gt;Ranbir Kapoor's new film, 'Love &amp; War,' has revealed its first look poster, much to the delight of co-stars Alia Bhatt and V"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Salman Khan's 'Monster' locks a Rs 100 crore theatrical deal",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/salman-khan-and-nayantharas-monster-locks-a-rs-100-crore-theatrical-deal-with-multiplex-chain-leading-giant-in-exhibition-is-confident-of-making-big-profits-report/articleshow/134464264.cms",
-      "publishedAt": "2026-09-24T13:51:47.000Z",
-      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134464264.cms\" /&gt;In a thrilling announcement, PVRInox has secured the distribution rights for Salman Khan's film 'Monster' at Rs 100 crore. This "
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Quote of the day by Humphrey Bogart",
-      "url": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/quote-of-the-day-by-humphrey-bogart-everybody-has-something-to-conceal-when-the-american-actor-highlighted-that-everyone-keeps-a-part-of-their-life-hidden/articleshow/134462712.cms",
-      "publishedAt": "2026-09-24T13:30:00.000Z",
-      "summary": "&lt;img border=\"0\" hspace=\"10\" align=\"left\" style=\"margin-top:3px;margin-right:5px;\" src=\"https://timesofindia.indiatimes.com/photo/134462712.cms\" /&gt;Humphrey Bogart's assertion, 'Everybody has something to conceal,' underscores the intricate dynamics of personal privacy. It il"
-    },
-    {
-      "sourceId": "wikipedia",
-      "title": "Wikipedia 2026 ranking: Dhurandhar: The Revenge leads at 1,852.44 crore",
-      "url": "https://en.wikipedia.org/wiki/List_of_Indian_films_of_2026",
-      "publishedAt": "2026-09-24T16:48:06.199Z",
-      "summary": "1. Dhurandhar: The Revenge (Hindi) 1,852.44 crore · 2. Border 2 (Hindi) 464.50 crore · 3. Hanuman Ansh (Hindi) 366.45 crore · 4. Peddi (Telugu) 330–336.85 crore · 5. Toxic (Kannada) 320–341.39 crore · 6. Jana Nayagan (Tamil) 320-325 crore"
-    },
-    {
-      "sourceId": "pinkvilla",
-      "title": "Mandaadi Box Office Collections: Soori starrer sports action drama collects Rs 1.25 crore on Day 14, on track to Rs. 100 crore club",
-      "url": "https://www.pinkvilla.com/entertainment/box-office/mandaadi-box-office-collections-soori-starrer-sports-action-drama-collects-rs-1-25-crore-on-day-14-on-track-to-rs-100-crore-club-1405584",
-      "publishedAt": "2026-09-24T16:48:06.397Z",
-      "summary": "Pinkvilla box-office desk"
-    },
-    {
-      "sourceId": "pinkvilla",
-      "title": "Vibe Box Office Collections: Kunal Kemmu starrer is a WASH OUT, collects Rs 10 crore in 6 days",
-      "url": "https://www.pinkvilla.com/entertainment/box-office/vibe-box-office-collections-kunal-kemmu-starrer-is-a-wash-out-collects-rs-10-crore-in-6-days-1405583",
-      "publishedAt": "2026-09-24T16:48:06.397Z",
-      "summary": "Pinkvilla box-office desk"
+      "sourceId": "express",
+      "title": "‘Wild Horse Nine’ trailer: Martin McDonagh sends John Malkovich and Sam Rockwell to Easter Island",
+      "url": "https://www.thehindu.com/entertainment/movies/wild-horse-nine-trailer-martin-mcdonagh-sends-john-malkovich-and-sam-rockwell-to-easter-island/article71503372.ece",
+      "publishedAt": "2026-09-24T08:38:22.000Z",
+      "summary": "‘The Banshees of Inisherin’ filmmaker’s latest dark comedy follows two CIA agents whose trip to Easter Island unfolds against the backdrop of the 1973 Chilean coup (The Hindu feed; Indian Express RSS blocked)"
     }
   ],
   "morningBrief": {
@@ -2843,6 +2787,6 @@ window.IBO_CATALOG = {
   "downloads": {
     "boardJson": "./board.json",
     "healthJson": "./health.json",
-    "history": "./history/2026-09-24.json"
+    "history": "./history/2026-09-25.json"
   }
 };

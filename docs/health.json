@@ -1,46 +1,47 @@
 {
-  "updatedAt": "2026-09-24T16:48:15.224Z",
+  "updatedAt": "2026-09-24T21:19:37.184Z",
   "spine": {
     "sacnilk": {
       "ok": false,
-      "streakFail": 1,
+      "streakFail": 2,
       "lastOk": "2026-09-24T11:23:02.497Z",
-      "lastFail": "2026-09-24T16:48:15.224Z",
+      "lastFail": "2026-09-24T21:19:37.184Z",
       "detail": "This operation was aborted",
       "readings": 0
     },
     "koimoi": {
       "ok": false,
-      "streakFail": 42,
+      "streakFail": 43,
       "lastOk": null,
-      "lastFail": "2026-09-24T16:48:15.224Z",
+      "lastFail": "2026-09-24T21:19:37.184Z",
       "detail": "HTTP 403",
       "readings": 0
     },
     "hungama": {
       "ok": true,
       "streakFail": 0,
-      "lastOk": "2026-09-24T16:48:15.224Z",
+      "lastOk": "2026-09-24T21:19:37.184Z",
       "lastFail": null,
       "detail": "48 collection rows from 16 live pulls",
       "readings": 48
     },
     "boi": {
       "ok": false,
-      "streakFail": 22,
+      "streakFail": 23,
       "lastOk": "2026-09-20T12:15:00.746Z",
-      "lastFail": "2026-09-24T16:48:15.224Z",
+      "lastFail": "2026-09-24T21:19:37.184Z",
       "detail": "HTTP 403",
       "readings": 0
     }
   },
   "alerts": [
     "HARD: Sacnilk returned 0 day-wise rows — primary spine is down or the HTML regex broke",
-    "sacnilk failed: This operation was aborted (streak 1)",
-    "koimoi failed: HTTP 403 (streak 42)",
-    "koimoi has failed 42 consecutive publishes",
-    "boi failed: HTTP 403 (streak 22)",
-    "boi has failed 22 consecutive publishes"
+    "sacnilk failed: This operation was aborted (streak 2)",
+    "sacnilk has failed 2 consecutive publishes",
+    "koimoi failed: HTTP 403 (streak 43)",
+    "koimoi has failed 43 consecutive publishes",
+    "boi failed: HTTP 403 (streak 23)",
+    "boi has failed 23 consecutive publishes"
   ],
   "hardFail": true
 }
