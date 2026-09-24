@@ -1,47 +1,47 @@
 {
   "date": "2026-09-24",
-  "generatedAt": "2026-09-24T11:23:02.497Z",
+  "generatedAt": "2026-09-24T16:48:15.224Z",
   "films": [
     {
       "id": "toxic",
       "title": "Toxic",
-      "indiaNet": 250.03,
-      "worldwide": 342.13,
+      "indiaNet": 214.75,
+      "worldwide": 287.41,
       "status": "playing"
     },
     {
       "id": "awarapan-2",
       "title": "Awarapan 2",
-      "indiaNet": 150.56,
-      "worldwide": 210.26,
+      "indiaNet": 151.28,
+      "worldwide": 207.39,
       "status": "playing"
     },
     {
       "id": "vishwanath-and-sons",
       "title": "Vishwanath And Sons",
-      "indiaNet": 122.53,
-      "worldwide": 209.45,
+      "indiaNet": 105.41,
+      "worldwide": 168.64,
       "status": "playing"
     },
     {
       "id": "irumudi",
       "title": "Irumudi",
-      "indiaNet": 190.1,
-      "worldwide": 242.45,
+      "indiaNet": 103.5,
+      "worldwide": 145.45,
       "status": "playing"
     },
     {
       "id": "batwara-1947",
       "title": "Batwara 1947",
-      "indiaNet": 38.08,
-      "worldwide": 54.2,
+      "indiaNet": 36.76,
+      "worldwide": 49.49,
       "status": "playing"
     },
     {
       "id": "hi",
       "title": "Hi",
-      "indiaNet": 12.81,
-      "worldwide": 14.91,
+      "indiaNet": 5.95,
+      "worldwide": 7.75,
       "status": "playing"
     },
     {
@@ -61,72 +61,72 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 284.68,
-      "worldwide": 371.95,
+      "indiaNet": 15,
+      "worldwide": 3.5,
       "status": "late"
     },
     {
       "id": "sardar-2",
       "title": "Sardar 2",
-      "indiaNet": 16.22,
-      "worldwide": 23.76,
+      "indiaNet": 0,
+      "worldwide": 0,
       "status": "playing"
     },
     {
       "id": "haiwaan",
       "title": "Haiwaan",
-      "indiaNet": 9.91,
-      "worldwide": 15.07,
+      "indiaNet": 8.71,
+      "worldwide": 11.52,
       "status": "playing"
     },
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 221.5,
-      "worldwide": 322.39,
+      "indiaNet": 208.34,
+      "worldwide": 307.55,
       "status": "playing"
     },
     {
       "id": "spider-man-bnd",
       "title": "Spider-Man: Brand New Day",
-      "indiaNet": 500.1,
-      "worldwide": 598.31,
+      "indiaNet": 494,
+      "worldwide": 590.27,
       "status": "late"
     },
     {
       "id": "dhamaal-4",
       "title": "Dhamaal 4",
-      "indiaNet": 167.88,
-      "worldwide": 230.17,
+      "indiaNet": 163.8,
+      "worldwide": 224.61,
       "status": "late"
     },
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 195.6,
-      "worldwide": 233.06,
+      "indiaNet": 117.7,
+      "worldwide": 153.01,
       "status": "late"
     },
     {
       "id": "dhurandhar",
       "title": "Dhurandhar: The Revenge",
       "indiaNet": 1108.09,
-      "worldwide": 1820,
-      "status": "playing"
+      "worldwide": 1852.44,
+      "status": "closed"
     },
     {
       "id": "border-2",
       "title": "Border 2",
-      "indiaNet": 329.43,
-      "worldwide": 450.19,
-      "status": "playing"
+      "indiaNet": 341.7,
+      "worldwide": 464.5,
+      "status": "closed"
     },
     {
       "id": "peddi",
       "title": "Peddi",
-      "indiaNet": 244.64,
-      "worldwide": 341.9,
-      "status": "playing"
+      "indiaNet": 1,
+      "worldwide": 333.43,
+      "status": "closed"
     },
     {
       "id": "jana-nayagan",
@@ -138,9 +138,9 @@
     {
       "id": "karuppu",
       "title": "Karuppu",
-      "indiaNet": 198.18,
-      "worldwide": 310.12,
-      "status": "playing"
+      "indiaNet": 229,
+      "worldwide": 312.5,
+      "status": "closed"
     },
     {
       "id": "msvpg",
@@ -173,16 +173,16 @@
     {
       "id": "welcome-jungle",
       "title": "Welcome To The Jungle",
-      "indiaNet": 134.11,
-      "worldwide": 192.75,
-      "status": "playing"
+      "indiaNet": 130.8,
+      "worldwide": 186.84,
+      "status": "closed"
     },
     {
       "id": "cocktail-2",
       "title": "Cocktail 2",
-      "indiaNet": 95.5,
-      "worldwide": 147.73,
-      "status": "playing"
+      "indiaNet": 92.09,
+      "worldwide": 143.6,
+      "status": "closed"
     },
     {
       "id": "alpha",
@@ -190,76 +190,6 @@
       "indiaNet": 57.72,
       "worldwide": 98.62,
       "status": "closed"
-    },
-    {
-      "id": "nct-127-5th-tour-neo-city-seoul-the-redline",
-      "title": "NCT 127 5th Tour 'Neo City: Seoul - The Redline'",
-      "indiaNet": 0.03,
-      "worldwide": 0.04,
-      "status": "playing"
-    },
-    {
-      "id": "resident-evil",
-      "title": "Resident Evil",
-      "indiaNet": 13.7,
-      "worldwide": 16.32,
-      "status": "playing"
-    },
-    {
-      "id": "vibe",
-      "title": "VIBE",
-      "indiaNet": 10.45,
-      "worldwide": 14.43,
-      "status": "playing"
-    },
-    {
-      "id": "daayra",
-      "title": "Daayra",
-      "indiaNet": 5.95,
-      "worldwide": 9.23,
-      "status": "playing"
-    },
-    {
-      "id": "citylights",
-      "title": "Citylights",
-      "indiaNet": 4.75,
-      "worldwide": 5.32,
-      "status": "playing"
-    },
-    {
-      "id": "mitti-de-putt",
-      "title": "Mitti De Putt",
-      "indiaNet": 1.05,
-      "worldwide": 1.22,
-      "status": "playing"
-    },
-    {
-      "id": "chatni",
-      "title": "Chatni",
-      "indiaNet": 0.97,
-      "worldwide": 1.08,
-      "status": "playing"
-    },
-    {
-      "id": "its-a-medical-miracle",
-      "title": "It's a Medical Miracle",
-      "indiaNet": 2.05,
-      "worldwide": 1.07,
-      "status": "playing"
-    },
-    {
-      "id": "l-amp-o-law-and-order",
-      "title": "L&amp;O - Law and Order",
-      "indiaNet": 0.87,
-      "worldwide": 0.98,
-      "status": "playing"
-    },
-    {
-      "id": "the-dark-heaven",
-      "title": "The Dark Heaven",
-      "indiaNet": 0.86,
-      "worldwide": 0.95,
-      "status": "playing"
     }
   ]
 }
