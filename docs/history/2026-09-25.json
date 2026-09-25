@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generatedAt": "2026-09-25T04:09:59.216Z",
+  "generatedAt": "2026-09-25T09:08:35.131Z",
   "films": [
     {
       "id": "toxic",
@@ -222,15 +222,15 @@
     {
       "id": "vibe",
       "title": "VIBE",
-      "indiaNet": 11.35,
-      "worldwide": 14.43,
+      "indiaNet": 11.25,
+      "worldwide": 15.47,
       "status": "playing"
     },
     {
       "id": "daayra",
       "title": "Daayra",
-      "indiaNet": 6.36,
-      "worldwide": 9.23,
+      "indiaNet": 6.3,
+      "worldwide": 9.74,
       "status": "playing"
     },
     {
@@ -259,76 +259,6 @@
       "title": "Chatni",
       "indiaNet": 1.09,
       "worldwide": 1.21,
-      "status": "playing"
-    },
-    {
-      "id": "the-dark-heaven",
-      "title": "The Dark Heaven",
-      "indiaNet": 0.99,
-      "worldwide": 1.1,
-      "status": "playing"
-    },
-    {
-      "id": "l-amp-o-law-and-order",
-      "title": "L&amp;O - Law and Order",
-      "indiaNet": 0.92,
-      "worldwide": 1.03,
-      "status": "playing"
-    },
-    {
-      "id": "happy-journey",
-      "title": "Happy Journey",
-      "indiaNet": 0.89,
-      "worldwide": 0.98,
-      "status": "playing"
-    },
-    {
-      "id": "firki",
-      "title": "Firki",
-      "indiaNet": 0.41,
-      "worldwide": 0.47,
-      "status": "playing"
-    },
-    {
-      "id": "4-rivers-6-ranges-chushi-gangdruk",
-      "title": "4 Rivers 6 Ranges Chushi Gangdruk",
-      "indiaNet": 0.39,
-      "worldwide": 0.44,
-      "status": "playing"
-    },
-    {
-      "id": "sandakari",
-      "title": "Sandakari",
-      "indiaNet": 0.34,
-      "worldwide": 0.37,
-      "status": "playing"
-    },
-    {
-      "id": "practical-magic-2",
-      "title": "Practical Magic 2",
-      "indiaNet": 0.32,
-      "worldwide": 0.35,
-      "status": "playing"
-    },
-    {
-      "id": "secret-soldier",
-      "title": "Secret Soldier",
-      "indiaNet": 0.3,
-      "worldwide": 0.33,
-      "status": "playing"
-    },
-    {
-      "id": "the-uprising",
-      "title": "The Uprising",
-      "indiaNet": 0.26,
-      "worldwide": 0.28,
-      "status": "playing"
-    },
-    {
-      "id": "toss",
-      "title": "Toss",
-      "indiaNet": 0.24,
-      "worldwide": 0.27,
       "status": "playing"
     }
   ]
