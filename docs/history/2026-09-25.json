@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generatedAt": "2026-09-25T11:28:43.616Z",
+  "generatedAt": "2026-09-25T16:52:42.141Z",
   "films": [
     {
       "id": "toxic",
@@ -192,6 +192,27 @@
       "status": "closed"
     },
     {
+      "id": "vvan-force-of-the-forrest",
+      "title": "Vvan - Force of the Forrest",
+      "indiaNet": 8,
+      "worldwide": 9.6,
+      "status": "playing"
+    },
+    {
+      "id": "avengers-endgame-encore",
+      "title": "Avengers Endgame: Encore",
+      "indiaNet": 7.25,
+      "worldwide": 8.68,
+      "status": "playing"
+    },
+    {
+      "id": "heart-of-the-beast",
+      "title": "Heart of the Beast",
+      "indiaNet": 0.7,
+      "worldwide": 0.84,
+      "status": "playing"
+    },
+    {
       "id": "the-paradise",
       "title": "The Paradise",
       "indiaNet": 46.25,
@@ -308,27 +329,6 @@
       "title": "Practical Magic 2",
       "indiaNet": 0.32,
       "worldwide": 0.35,
-      "status": "playing"
-    },
-    {
-      "id": "secret-soldier",
-      "title": "Secret Soldier",
-      "indiaNet": 0.3,
-      "worldwide": 0.33,
-      "status": "playing"
-    },
-    {
-      "id": "the-uprising",
-      "title": "The Uprising",
-      "indiaNet": 0.26,
-      "worldwide": 0.28,
-      "status": "playing"
-    },
-    {
-      "id": "toss",
-      "title": "Toss",
-      "indiaNet": 0.24,
-      "worldwide": 0.27,
       "status": "playing"
     }
   ]
