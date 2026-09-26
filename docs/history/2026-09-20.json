@@ -1,6 +1,6 @@
 {
   "date": "2026-09-20",
-  "generatedAt": "2026-09-20T12:15:00.746Z",
+  "generatedAt": "2026-09-20T15:43:30.023Z",
   "films": [
     {
       "id": "toxic",
@@ -110,8 +110,8 @@
     {
       "id": "dhurandhar",
       "title": "Dhurandhar: The Revenge",
-      "indiaNet": 1149.3,
-      "worldwide": 1813.39,
+      "indiaNet": 1108.09,
+      "worldwide": 1820,
       "status": "playing"
     },
     {

@@ -1,7 +1,7 @@
 window.IBO_CATALOG = {
-  "generatedAt": "2026-09-20T12:15:00.746Z",
-  "deskDate": "2026-09-20",
-  "comparedTo": "2026-09-11",
+  "generatedAt": "2026-09-26T04:14:20.383Z",
+  "deskDate": "2026-09-26",
+  "comparedTo": "2026-09-26 prior",
   "mode": "server-consensus",
   "spine": [
     "sacnilk",
@@ -12,19 +12,20 @@ window.IBO_CATALOG = {
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 20)",
-      "koimoi has failed 20 consecutive publishes",
-      "boi recovered after 17 failed runs"
+      "koimoi failed: HTTP 403 (streak 49)",
+      "koimoi has failed 49 consecutive publishes",
+      "boi failed: HTTP 403 (streak 29)",
+      "boi has failed 29 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
         "ok": true,
         "streakFail": 0,
-        "detail": "937 collection rows from 20 live pulls"
+        "detail": "1001 collection rows from 20 live pulls"
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 20,
+        "streakFail": 49,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -33,9 +34,9 @@ window.IBO_CATALOG = {
         "detail": "48 collection rows from 16 live pulls"
       },
       "boi": {
-        "ok": true,
-        "streakFail": 0,
-        "detail": "Fetched 1 page (headlines / status)"
+        "ok": false,
+        "streakFail": 29,
+        "detail": "HTTP 403"
       }
     }
   },
@@ -130,18 +131,18 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "toxic",
       "poster": "./posters/toxic.jpg",
-      "indiaNet": 249.8,
-      "indiaGross": 298.11,
+      "indiaNet": 250.06,
+      "indiaGross": 298.41,
       "overseas": 43.75,
-      "worldwide": 341.86,
-      "lastDayNet": 0.11,
-      "trackedThroughDay": 26,
+      "worldwide": 342.16,
+      "lastDayNet": 0.01,
+      "trackedThroughDay": 32,
       "liveSources": [
         "sacnilk",
         "wikipedia"
       ],
-      "deltaNet": 1.56,
-      "deltaWw": 2.54,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-26",
@@ -442,6 +443,78 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 60,
           "occupancy": 32.2
+        },
+        {
+          "reportDate": "2026-09-20",
+          "dayNumber": 26,
+          "indiaNet": 0.11,
+          "indiaGross": 0.13,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 60,
+          "occupancy": 32.2
+        },
+        {
+          "reportDate": "2026-09-21",
+          "dayNumber": 27,
+          "indiaNet": 0.03,
+          "indiaGross": 0.04,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -72.73,
+          "disagreementPct": 0,
+          "screens": 57,
+          "occupancy": 20.3
+        },
+        {
+          "reportDate": "2026-09-22",
+          "dayNumber": 28,
+          "indiaNet": 0.03,
+          "indiaGross": 0.04,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 58,
+          "occupancy": 25
+        },
+        {
+          "reportDate": "2026-09-23",
+          "dayNumber": 29,
+          "indiaNet": 0.06,
+          "indiaGross": 0.06,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 100,
+          "disagreementPct": 0,
+          "screens": 54,
+          "occupancy": 22.4
+        },
+        {
+          "reportDate": "2026-09-24",
+          "dayNumber": 30,
+          "indiaNet": 0.02,
+          "indiaGross": 0.02,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -66.67,
+          "disagreementPct": 0,
+          "screens": 37,
+          "occupancy": 25.4
+        },
+        {
+          "reportDate": "2026-09-25",
+          "dayNumber": 31,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -50,
+          "disagreementPct": 0,
+          "screens": 7,
+          "occupancy": 17
         }
       ]
     },
@@ -461,17 +534,17 @@ window.IBO_CATALOG = {
       "verdict": "Hit",
       "posterKey": "awarapan-2",
       "poster": "./posters/awarapan-2.jpg",
-      "indiaNet": 150.53,
-      "indiaGross": 179.4,
+      "indiaNet": 150.57,
+      "indiaGross": 179.44,
       "overseas": 33.41,
       "worldwide": 210.26,
-      "lastDayNet": 0.02,
-      "trackedThroughDay": 38,
+      "lastDayNet": 0,
+      "trackedThroughDay": 44,
       "liveSources": [
         "sacnilk",
         "hungama"
       ],
-      "deltaNet": 0.1,
+      "deltaNet": 0,
       "deltaWw": 0,
       "dayWise": [
         {
@@ -917,6 +990,78 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 16,
           "occupancy": 44
+        },
+        {
+          "reportDate": "2026-09-20",
+          "dayNumber": 38,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -50,
+          "disagreementPct": 0,
+          "screens": 17,
+          "occupancy": 38
+        },
+        {
+          "reportDate": "2026-09-21",
+          "dayNumber": 39,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 14,
+          "occupancy": 9
+        },
+        {
+          "reportDate": "2026-09-22",
+          "dayNumber": 40,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 14,
+          "occupancy": 11
+        },
+        {
+          "reportDate": "2026-09-23",
+          "dayNumber": 41,
+          "indiaNet": 0,
+          "indiaGross": 0,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -100,
+          "disagreementPct": 0,
+          "screens": null,
+          "occupancy": 46
+        },
+        {
+          "reportDate": "2026-09-24",
+          "dayNumber": 42,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": null,
+          "disagreementPct": 0,
+          "screens": 10,
+          "occupancy": 15
+        },
+        {
+          "reportDate": "2026-09-25",
+          "dayNumber": 43,
+          "indiaNet": 0,
+          "indiaGross": 0,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -100,
+          "disagreementPct": 0,
+          "screens": null,
+          "occupancy": 13
         }
       ]
     },
@@ -936,17 +1081,17 @@ window.IBO_CATALOG = {
       "verdict": "Hit",
       "posterKey": "vishwanath",
       "poster": "./posters/vishwanath.jpg",
-      "indiaNet": 122.48,
-      "indiaGross": 141.64,
+      "indiaNet": 122.54,
+      "indiaGross": 141.71,
       "overseas": 67.75,
-      "worldwide": 209.39,
-      "lastDayNet": 0.02,
-      "trackedThroughDay": 37,
+      "worldwide": 209.46,
+      "lastDayNet": 0,
+      "trackedThroughDay": 43,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.46,
-      "deltaWw": 0.52,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-14",
@@ -1391,6 +1536,78 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 18,
           "occupancy": 39
+        },
+        {
+          "reportDate": "2026-09-20",
+          "dayNumber": 38,
+          "indiaNet": 0.03,
+          "indiaGross": 0.03,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 50,
+          "disagreementPct": 0,
+          "screens": 16,
+          "occupancy": 52.5
+        },
+        {
+          "reportDate": "2026-09-21",
+          "dayNumber": 39,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -66.67,
+          "disagreementPct": 0,
+          "screens": 10,
+          "occupancy": 23
+        },
+        {
+          "reportDate": "2026-09-22",
+          "dayNumber": 40,
+          "indiaNet": 0,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -100,
+          "disagreementPct": 0,
+          "screens": 13,
+          "occupancy": 37.7
+        },
+        {
+          "reportDate": "2026-09-23",
+          "dayNumber": 41,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": null,
+          "disagreementPct": 0,
+          "screens": 13,
+          "occupancy": 36
+        },
+        {
+          "reportDate": "2026-09-24",
+          "dayNumber": 42,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 12,
+          "occupancy": 36.3
+        },
+        {
+          "reportDate": "2026-09-25",
+          "dayNumber": 43,
+          "indiaNet": 0,
+          "indiaGross": 0,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -100,
+          "disagreementPct": 0,
+          "screens": null,
+          "occupancy": 3
         }
       ]
     },
@@ -1410,17 +1627,17 @@ window.IBO_CATALOG = {
       "verdict": "Super Hit",
       "posterKey": "irumudi",
       "poster": "./posters/irumudi.jpg",
-      "indiaNet": 187.38,
-      "indiaGross": 217.68,
+      "indiaNet": 190.79,
+      "indiaGross": 220.78,
       "overseas": 22.45,
-      "worldwide": 240.13,
-      "lastDayNet": 0.68,
-      "trackedThroughDay": 30,
+      "worldwide": 243.23,
+      "lastDayNet": 0.35,
+      "trackedThroughDay": 36,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 12.93,
-      "deltaWw": 15.18,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-21",
@@ -1781,6 +1998,78 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 1003,
           "occupancy": 21
+        },
+        {
+          "reportDate": "2026-09-20",
+          "dayNumber": 31,
+          "indiaNet": 1,
+          "indiaGross": 1.15,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 47.06,
+          "disagreementPct": 0,
+          "screens": 998,
+          "occupancy": 28
+        },
+        {
+          "reportDate": "2026-09-21",
+          "dayNumber": 32,
+          "indiaNet": 0.45,
+          "indiaGross": 0.53,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -55,
+          "disagreementPct": 0,
+          "screens": 920,
+          "occupancy": 20
+        },
+        {
+          "reportDate": "2026-09-22",
+          "dayNumber": 33,
+          "indiaNet": 0.55,
+          "indiaGross": 0.64,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 22.22,
+          "disagreementPct": 0,
+          "screens": 931,
+          "occupancy": 21.1
+        },
+        {
+          "reportDate": "2026-09-23",
+          "dayNumber": 34,
+          "indiaNet": 0.72,
+          "indiaGross": 0.81,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 30.91,
+          "disagreementPct": 0,
+          "screens": 811,
+          "occupancy": 21
+        },
+        {
+          "reportDate": "2026-09-24",
+          "dayNumber": 35,
+          "indiaNet": 0.34,
+          "indiaGross": 0.38,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -52.78,
+          "disagreementPct": 0,
+          "screens": 434,
+          "occupancy": 21
+        },
+        {
+          "reportDate": "2026-09-25",
+          "dayNumber": 36,
+          "indiaNet": 0.35,
+          "indiaGross": 0.4,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 2.94,
+          "disagreementPct": 0,
+          "screens": 348,
+          "occupancy": 21
         }
       ]
     },
@@ -1805,7 +2094,7 @@ window.IBO_CATALOG = {
       "overseas": 9.05,
       "worldwide": 54.2,
       "lastDayNet": 0,
-      "trackedThroughDay": 38,
+      "trackedThroughDay": 44,
       "liveSources": [
         "sacnilk",
         "hungama"
@@ -2148,6 +2437,18 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": null,
           "occupancy": 1
+        },
+        {
+          "reportDate": "2026-09-23",
+          "dayNumber": 41,
+          "indiaNet": 0,
+          "indiaGross": 0,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": null,
+          "disagreementPct": 0,
+          "screens": null,
+          "occupancy": 1
         }
       ]
     },
@@ -2167,17 +2468,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hi",
       "poster": "./posters/hi.jpg",
-      "indiaNet": 12.76,
-      "indiaGross": 14.85,
+      "indiaNet": 12.82,
+      "indiaGross": 14.92,
       "overseas": 0,
-      "worldwide": 14.85,
-      "lastDayNet": 0.02,
-      "trackedThroughDay": 23,
+      "worldwide": 14.92,
+      "lastDayNet": 0,
+      "trackedThroughDay": 29,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.37,
-      "deltaWw": 0.43,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-28",
@@ -2454,6 +2755,78 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 15,
           "occupancy": 50
+        },
+        {
+          "reportDate": "2026-09-20",
+          "dayNumber": 24,
+          "indiaNet": 0.03,
+          "indiaGross": 0.03,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 50,
+          "disagreementPct": 0,
+          "screens": 14,
+          "occupancy": 56
+        },
+        {
+          "reportDate": "2026-09-21",
+          "dayNumber": 25,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -66.67,
+          "disagreementPct": 0,
+          "screens": 12,
+          "occupancy": 19
+        },
+        {
+          "reportDate": "2026-09-22",
+          "dayNumber": 26,
+          "indiaNet": 0,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -100,
+          "disagreementPct": 0,
+          "screens": 13,
+          "occupancy": 24
+        },
+        {
+          "reportDate": "2026-09-23",
+          "dayNumber": 27,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": null,
+          "disagreementPct": 0,
+          "screens": 13,
+          "occupancy": 19
+        },
+        {
+          "reportDate": "2026-09-24",
+          "dayNumber": 28,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 9,
+          "occupancy": 20
+        },
+        {
+          "reportDate": "2026-09-25",
+          "dayNumber": 29,
+          "indiaNet": 0,
+          "indiaGross": 0,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -100,
+          "disagreementPct": 0,
+          "screens": null,
+          "occupancy": 2
         }
       ]
     },
@@ -2793,19 +3166,19 @@ window.IBO_CATALOG = {
       "verdict": "Flop",
       "posterKey": "hanuman-ansh",
       "poster": "./posters/hanuman-ansh.jpg",
-      "indiaNet": 258.13,
-      "indiaGross": 304.8,
-      "overseas": 24.5,
-      "worldwide": 329.3,
-      "lastDayNet": 9.75,
-      "trackedThroughDay": 45,
+      "indiaNet": 291.53,
+      "indiaGross": 344.35,
+      "overseas": 37,
+      "worldwide": 381.35,
+      "lastDayNet": 3.35,
+      "trackedThroughDay": 51,
       "liveSources": [
         "sacnilk",
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": 95,
-      "deltaWw": 136.55,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-07",
@@ -3334,6 +3707,78 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 7119,
           "occupancy": 30
+        },
+        {
+          "reportDate": "2026-09-20",
+          "dayNumber": 45,
+          "indiaNet": 13.75,
+          "indiaGross": 16.25,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 41.03,
+          "disagreementPct": 0,
+          "screens": 7628,
+          "occupancy": 40
+        },
+        {
+          "reportDate": "2026-09-21",
+          "dayNumber": 46,
+          "indiaNet": 4.15,
+          "indiaGross": 4.9,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -69.82,
+          "disagreementPct": 0,
+          "screens": 7629,
+          "occupancy": 15
+        },
+        {
+          "reportDate": "2026-09-22",
+          "dayNumber": 47,
+          "indiaNet": 4.9,
+          "indiaGross": 5.75,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 18.07,
+          "disagreementPct": 0,
+          "screens": 7702,
+          "occupancy": 26
+        },
+        {
+          "reportDate": "2026-09-23",
+          "dayNumber": 48,
+          "indiaNet": 3.75,
+          "indiaGross": 4.5,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -23.47,
+          "disagreementPct": 0,
+          "screens": 7358,
+          "occupancy": 14
+        },
+        {
+          "reportDate": "2026-09-24",
+          "dayNumber": 49,
+          "indiaNet": 3.5,
+          "indiaGross": 4.15,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -6.67,
+          "disagreementPct": 0,
+          "screens": 6729,
+          "occupancy": 15
+        },
+        {
+          "reportDate": "2026-09-25",
+          "dayNumber": 50,
+          "indiaNet": 3.35,
+          "indiaGross": 4,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -4.29,
+          "disagreementPct": 0,
+          "screens": 3767,
+          "occupancy": 21
         }
       ]
     },
@@ -3353,17 +3798,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "sardar-2",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 15.5,
-      "indiaGross": 18.12,
+      "indiaNet": 16.28,
+      "indiaGross": 18.98,
       "overseas": 4.85,
-      "worldwide": 22.97,
-      "lastDayNet": 0.26,
-      "trackedThroughDay": 10,
+      "worldwide": 23.83,
+      "lastDayNet": 0.01,
+      "trackedThroughDay": 16,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 11,
-      "deltaWw": 16.17,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-09-10",
@@ -3484,6 +3929,78 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 345,
           "occupancy": 24
+        },
+        {
+          "reportDate": "2026-09-20",
+          "dayNumber": 11,
+          "indiaNet": 0.34,
+          "indiaGross": 0.38,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 30.77,
+          "disagreementPct": 0,
+          "screens": 337,
+          "occupancy": 28.1
+        },
+        {
+          "reportDate": "2026-09-21",
+          "dayNumber": 12,
+          "indiaNet": 0.14,
+          "indiaGross": 0.15,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -58.82,
+          "disagreementPct": 0,
+          "screens": 294,
+          "occupancy": 16.9
+        },
+        {
+          "reportDate": "2026-09-22",
+          "dayNumber": 13,
+          "indiaNet": 0.12,
+          "indiaGross": 0.13,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -14.29,
+          "disagreementPct": 0,
+          "screens": 311,
+          "occupancy": 15.6
+        },
+        {
+          "reportDate": "2026-09-23",
+          "dayNumber": 14,
+          "indiaNet": 0.12,
+          "indiaGross": 0.13,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 264,
+          "occupancy": 17.1
+        },
+        {
+          "reportDate": "2026-09-24",
+          "dayNumber": 15,
+          "indiaNet": 0.05,
+          "indiaGross": 0.06,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -58.33,
+          "disagreementPct": 0,
+          "screens": 146,
+          "occupancy": 18.9
+        },
+        {
+          "reportDate": "2026-09-25",
+          "dayNumber": 16,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -80,
+          "disagreementPct": 0,
+          "screens": 7,
+          "occupancy": 8
         }
       ]
     },
@@ -3503,18 +4020,18 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "haiwaan",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 9.87,
-      "indiaGross": 11.78,
+      "indiaNet": 9.92,
+      "indiaGross": 11.83,
       "overseas": 3.25,
-      "worldwide": 15.03,
+      "worldwide": 15.08,
       "lastDayNet": 0.01,
-      "trackedThroughDay": 10,
+      "trackedThroughDay": 16,
       "liveSources": [
-        "sacnilk",
-        "hungama"
+        "hungama",
+        "sacnilk"
       ],
-      "deltaNet": 9.87,
-      "deltaWw": 15.03,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-09-11",
@@ -3623,6 +4140,66 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 89,
           "occupancy": 9
+        },
+        {
+          "reportDate": "2026-09-20",
+          "dayNumber": 10,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 78,
+          "occupancy": 8
+        },
+        {
+          "reportDate": "2026-09-21",
+          "dayNumber": 11,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 68,
+          "occupancy": 5
+        },
+        {
+          "reportDate": "2026-09-22",
+          "dayNumber": 12,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 54,
+          "occupancy": 5
+        },
+        {
+          "reportDate": "2026-09-23",
+          "dayNumber": 13,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 50,
+          "occupancy": 7
+        },
+        {
+          "reportDate": "2026-09-24",
+          "dayNumber": 14,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 28,
+          "occupancy": 7
         }
       ]
     },
@@ -3642,19 +4219,19 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "mirzapur-the-movie",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 210.7,
-      "indiaGross": 250.94,
-      "overseas": 51.25,
-      "worldwide": 302.19,
-      "lastDayNet": 4.5,
-      "trackedThroughDay": 17,
+      "indiaNet": 223.8,
+      "indiaGross": 266.37,
+      "overseas": 59.5,
+      "worldwide": 325.87,
+      "lastDayNet": 1,
+      "trackedThroughDay": 23,
       "liveSources": [
         "sacnilk",
         "hungama",
-        "pinkvilla"
+        "wikipedia"
       ],
-      "deltaNet": 62.25,
-      "deltaWw": 89.75,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-09-04",
@@ -3847,6 +4424,78 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 4345,
           "occupancy": 23
+        },
+        {
+          "reportDate": "2026-09-20",
+          "dayNumber": 17,
+          "indiaNet": 5,
+          "indiaGross": 5.9,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 11.11,
+          "disagreementPct": 0,
+          "screens": 4402,
+          "occupancy": 26
+        },
+        {
+          "reportDate": "2026-09-21",
+          "dayNumber": 18,
+          "indiaNet": 1.9,
+          "indiaGross": 2.25,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -62,
+          "disagreementPct": 0,
+          "screens": 4456,
+          "occupancy": 14
+        },
+        {
+          "reportDate": "2026-09-22",
+          "dayNumber": 19,
+          "indiaNet": 2.15,
+          "indiaGross": 2.5,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 13.16,
+          "disagreementPct": 0,
+          "screens": 4419,
+          "occupancy": 23
+        },
+        {
+          "reportDate": "2026-09-23",
+          "dayNumber": 20,
+          "indiaNet": 1.65,
+          "indiaGross": 1.95,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -23.26,
+          "disagreementPct": 0,
+          "screens": 4268,
+          "occupancy": 13
+        },
+        {
+          "reportDate": "2026-09-24",
+          "dayNumber": 21,
+          "indiaNet": 1.4,
+          "indiaGross": 1.65,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -15.15,
+          "disagreementPct": 0,
+          "screens": 3469,
+          "occupancy": 13
+        },
+        {
+          "reportDate": "2026-09-25",
+          "dayNumber": 22,
+          "indiaNet": 1,
+          "indiaGross": 1.18,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -28.57,
+          "disagreementPct": 0,
+          "screens": 1322,
+          "occupancy": 20
         }
       ]
     },
@@ -3866,17 +4515,17 @@ window.IBO_CATALOG = {
       "verdict": "All Time Blockbuster",
       "posterKey": "spider-man-bnd",
       "poster": "./posters/spider-man-bnd.jpg",
-      "indiaNet": 499.61,
-      "indiaGross": 597.77,
+      "indiaNet": 500.2,
+      "indiaGross": 598.42,
       "overseas": 0,
-      "worldwide": 597.77,
-      "lastDayNet": 0.21,
-      "trackedThroughDay": 52,
+      "worldwide": 598.42,
+      "lastDayNet": 0.02,
+      "trackedThroughDay": 58,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 1.49,
-      "deltaWw": 1.82,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-07-30",
@@ -4501,6 +5150,78 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 81,
           "occupancy": 46.6
+        },
+        {
+          "reportDate": "2026-09-20",
+          "dayNumber": 53,
+          "indiaNet": 0.25,
+          "indiaGross": 0.29,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 19.05,
+          "disagreementPct": 0,
+          "screens": 81,
+          "occupancy": 57.4
+        },
+        {
+          "reportDate": "2026-09-21",
+          "dayNumber": 54,
+          "indiaNet": 0.07,
+          "indiaGross": 0.07,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -72,
+          "disagreementPct": 0,
+          "screens": 92,
+          "occupancy": 18.1
+        },
+        {
+          "reportDate": "2026-09-22",
+          "dayNumber": 55,
+          "indiaNet": 0.08,
+          "indiaGross": 0.09,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 14.29,
+          "disagreementPct": 0,
+          "screens": 92,
+          "occupancy": 25.3
+        },
+        {
+          "reportDate": "2026-09-23",
+          "dayNumber": 56,
+          "indiaNet": 0.09,
+          "indiaGross": 0.09,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 12.5,
+          "disagreementPct": 0,
+          "screens": 89,
+          "occupancy": 19
+        },
+        {
+          "reportDate": "2026-09-24",
+          "dayNumber": 57,
+          "indiaNet": 0.08,
+          "indiaGross": 0.08,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -11.11,
+          "disagreementPct": 0,
+          "screens": 74,
+          "occupancy": 18.6
+        },
+        {
+          "reportDate": "2026-09-25",
+          "dayNumber": 58,
+          "indiaNet": 0.02,
+          "indiaGross": 0.03,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -75,
+          "disagreementPct": 0,
+          "screens": 27,
+          "occupancy": 25.1
         }
       ]
     },
@@ -4525,7 +5246,7 @@ window.IBO_CATALOG = {
       "overseas": 30.85,
       "worldwide": 230.17,
       "lastDayNet": 0,
-      "trackedThroughDay": 73,
+      "trackedThroughDay": 79,
       "liveSources": [
         "sacnilk",
         "hungama"
@@ -5300,6 +6021,18 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": null,
           "occupancy": 5
+        },
+        {
+          "reportDate": "2026-09-21",
+          "dayNumber": 74,
+          "indiaNet": 0,
+          "indiaGross": 0,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": null,
+          "disagreementPct": 0,
+          "screens": null,
+          "occupancy": 3
         }
       ]
     },
@@ -5319,17 +6052,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "the-odyssey",
       "poster": "./posters/the-odyssey.jpg",
-      "indiaNet": 195.12,
-      "indiaGross": 232.53,
+      "indiaNet": 195.57,
+      "indiaGross": 233.03,
       "overseas": 0,
-      "worldwide": 232.53,
-      "lastDayNet": 0.21,
-      "trackedThroughDay": 65,
+      "worldwide": 233.03,
+      "lastDayNet": 0.03,
+      "trackedThroughDay": 71,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 1.27,
-      "deltaWw": 1.73,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-07-17",
@@ -6090,11 +6823,11 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-09-18",
           "dayNumber": 64,
-          "indiaNet": 0.09,
-          "indiaGross": 0.09,
+          "indiaNet": 0.07,
+          "indiaGross": 0.08,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": 28.57,
+          "netChangePct": 0,
           "disagreementPct": 0,
           "screens": 36,
           "occupancy": 24.8
@@ -6102,14 +6835,86 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-09-19",
           "dayNumber": 65,
-          "indiaNet": 0.21,
-          "indiaGross": 0.24,
+          "indiaNet": 0.18,
+          "indiaGross": 0.21,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": 133.33,
+          "netChangePct": 157.14,
           "disagreementPct": 0,
           "screens": 42,
           "occupancy": 48
+        },
+        {
+          "reportDate": "2026-09-20",
+          "dayNumber": 66,
+          "indiaNet": 0.21,
+          "indiaGross": 0.25,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 16.67,
+          "disagreementPct": 0,
+          "screens": 44,
+          "occupancy": 49.8
+        },
+        {
+          "reportDate": "2026-09-21",
+          "dayNumber": 67,
+          "indiaNet": 0.05,
+          "indiaGross": 0.06,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -76.19,
+          "disagreementPct": 0,
+          "screens": 49,
+          "occupancy": 15.1
+        },
+        {
+          "reportDate": "2026-09-22",
+          "dayNumber": 68,
+          "indiaNet": 0.07,
+          "indiaGross": 0.08,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 40,
+          "disagreementPct": 0,
+          "screens": 50,
+          "occupancy": 28.3
+        },
+        {
+          "reportDate": "2026-09-23",
+          "dayNumber": 69,
+          "indiaNet": 0.07,
+          "indiaGross": 0.08,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 47,
+          "occupancy": 20.2
+        },
+        {
+          "reportDate": "2026-09-24",
+          "dayNumber": 70,
+          "indiaNet": 0.07,
+          "indiaGross": 0.08,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 43,
+          "occupancy": 21.1
+        },
+        {
+          "reportDate": "2026-09-25",
+          "dayNumber": 71,
+          "indiaNet": 0.03,
+          "indiaGross": 0.03,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -57.14,
+          "disagreementPct": 0,
+          "screens": 21,
+          "occupancy": 15
         }
       ]
     },
@@ -6129,19 +6934,19 @@ window.IBO_CATALOG = {
       "verdict": "All Time Blockbuster",
       "posterKey": "dhurandhar",
       "poster": "./posters/dhurandhar.jpg",
-      "indiaNet": 1149.3,
+      "indiaNet": 1108.09,
       "indiaGross": 1375.39,
-      "overseas": 438,
-      "worldwide": 1813.39,
+      "overseas": 470,
+      "worldwide": 1820,
       "lastDayNet": 0,
-      "trackedThroughDay": 186,
+      "trackedThroughDay": 192,
       "liveSources": [
         "sacnilk",
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": 41.21,
-      "deltaWw": -6.61,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-03-19",
@@ -6152,8 +6957,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": null,
           "disagreementPct": 13.035575175279144,
-          "screens": 21633,
-          "occupancy": 56.7
+          "screens": 10874,
+          "occupancy": 69.27
         },
         {
           "reportDate": "2026-03-20",
@@ -6164,8 +6969,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -21.29,
           "disagreementPct": 0.34627751669552453,
-          "screens": 20125,
-          "occupancy": 52.9
+          "screens": 10125,
+          "occupancy": 63.76
         },
         {
           "reportDate": "2026-03-21",
@@ -6176,8 +6981,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 39.99,
           "disagreementPct": 3.6036036036036037,
-          "screens": 20917,
-          "occupancy": 73.6
+          "screens": 10525,
+          "occupancy": 80.44
         },
         {
           "reportDate": "2026-03-22",
@@ -6188,8 +6993,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 1.64,
           "disagreementPct": 1.6238753565942459,
-          "screens": 21202,
-          "occupancy": 76.2
+          "screens": 10668,
+          "occupancy": 80.99
         },
         {
           "reportDate": "2026-03-23",
@@ -6200,8 +7005,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -43.4,
           "disagreementPct": 9.67741935483871,
-          "screens": 20382,
-          "occupancy": 46.5
+          "screens": 10257,
+          "occupancy": 48.45
         },
         {
           "reportDate": "2026-03-24",
@@ -6212,8 +7017,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -12.92,
           "disagreementPct": 6.569343065693434,
-          "screens": 20412,
-          "occupancy": 38.7
+          "screens": 10272,
+          "occupancy": 41.17
         },
         {
           "reportDate": "2026-03-25",
@@ -6224,8 +7029,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -13.87,
           "disagreementPct": 8,
-          "screens": 20352,
-          "occupancy": 33.6
+          "screens": 10243,
+          "occupancy": 38.3
         },
         {
           "reportDate": "2026-03-26",
@@ -6236,8 +7041,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 1.95,
           "disagreementPct": 1.4184397163120623,
-          "screens": 19493,
-          "occupancy": 35.1
+          "screens": 9804,
+          "occupancy": 32.69
         },
         {
           "reportDate": "2026-03-27",
@@ -6248,8 +7053,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -16,
           "disagreementPct": 9.404388714733543,
-          "screens": 18456,
-          "occupancy": 31.5
+          "screens": 9277,
+          "occupancy": 32.58
         },
         {
           "reportDate": "2026-03-28",
@@ -6260,8 +7065,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 50.54,
           "disagreementPct": 4.639804639804642,
-          "screens": 18820,
-          "occupancy": 44.9
+          "screens": 9459,
+          "occupancy": 54.96
         },
         {
           "reportDate": "2026-03-29",
@@ -6272,8 +7077,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 8.35,
           "disagreementPct": 3.1319910514541305,
-          "screens": 19270,
-          "occupancy": 48.6
+          "screens": 9684,
+          "occupancy": 54.63
         },
         {
           "reportDate": "2026-03-30",
@@ -6284,8 +7089,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -62.85,
           "disagreementPct": 5.273833671399598,
-          "screens": 17614,
-          "occupancy": 23.5
+          "screens": 8849,
+          "occupancy": 27.38
         },
         {
           "reportDate": "2026-03-31",
@@ -6296,8 +7101,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 7.71,
           "disagreementPct": 4.694835680751173,
-          "screens": 17883,
-          "occupancy": 26.1
+          "screens": 8980,
+          "occupancy": 31.86
         },
         {
           "reportDate": "2026-04-01",
@@ -6308,8 +7113,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -26.24,
           "disagreementPct": 5.626598465473153,
-          "screens": 17906,
-          "occupancy": 19.8
+          "screens": 8987,
+          "occupancy": 24.78
         },
         {
           "reportDate": "2026-04-02",
@@ -6320,8 +7125,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -8.96,
           "disagreementPct": 1.6528925619834753,
-          "screens": 17030,
-          "occupancy": 18.1
+          "screens": 8537,
+          "occupancy": 23.57
         },
         {
           "reportDate": "2026-04-03",
@@ -6332,8 +7137,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 17.76,
           "disagreementPct": 2.585193889541719,
-          "screens": 13330,
-          "occupancy": 27
+          "screens": 6675,
+          "occupancy": 33.78
         },
         {
           "reportDate": "2026-04-04",
@@ -6344,8 +7149,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 19.03,
           "disagreementPct": 2.566633761105621,
-          "screens": 14172,
-          "occupancy": 28.9
+          "screens": 7096,
+          "occupancy": 40.88
         },
         {
           "reportDate": "2026-04-05",
@@ -6356,7 +7161,7 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 10.14,
           "disagreementPct": 0.8888888888888888,
-          "screens": 14229,
+          "screens": 7125,
           "occupancy": 33.6
         },
         {
@@ -6368,8 +7173,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -64.6,
           "disagreementPct": 0,
-          "screens": 13736,
-          "occupancy": 14.2
+          "screens": 6878,
+          "occupancy": 16.12
         },
         {
           "reportDate": "2026-04-07",
@@ -6380,8 +7185,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 1,
           "disagreementPct": 0.9950248756218869,
-          "screens": 13554,
-          "occupancy": 14.3
+          "screens": 6786,
+          "occupancy": 16.12
         },
         {
           "reportDate": "2026-04-08",
@@ -6392,8 +7197,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -21.78,
           "disagreementPct": 1.2578616352201213,
-          "screens": 13093,
-          "occupancy": 13.3
+          "screens": 6555,
+          "occupancy": 15.15
         },
         {
           "reportDate": "2026-04-09",
@@ -6404,8 +7209,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -9.49,
           "disagreementPct": 2.1201413427561886,
-          "screens": 12418,
-          "occupancy": 12.3
+          "screens": 6218,
+          "occupancy": 15.01
         },
         {
           "reportDate": "2026-04-10",
@@ -6548,8 +7353,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 29.63,
           "disagreementPct": 4.87804878048781,
-          "screens": 3854,
-          "occupancy": 20.9
+          "screens": 1961,
+          "occupancy": 16.24
         },
         {
           "reportDate": "2026-04-22",
@@ -6620,8 +7425,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -69.12,
           "disagreementPct": 4.87804878048781,
-          "screens": 2808,
-          "occupancy": 11.2
+          "screens": 1436,
+          "occupancy": 12.48
         },
         {
           "reportDate": "2026-04-28",
@@ -6656,8 +7461,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 15,
           "disagreementPct": 13.953488372093014,
-          "screens": 2367,
-          "occupancy": 13.1
+          "screens": 1211,
+          "occupancy": 11.41
         },
         {
           "reportDate": "2026-05-01",
@@ -6668,8 +7473,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -8.7,
           "disagreementPct": 4.87804878048781,
-          "screens": 851,
-          "occupancy": 27.7
+          "screens": 437,
+          "occupancy": 25.41
         },
         {
           "reportDate": "2026-05-02",
@@ -7438,7 +8243,7 @@ window.IBO_CATALOG = {
       "overseas": 57.25,
       "worldwide": 450.19,
       "lastDayNet": 0,
-      "trackedThroughDay": 241,
+      "trackedThroughDay": 247,
       "liveSources": [
         "sacnilk",
         "hungama",
@@ -7564,8 +8369,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 26.76,
           "disagreementPct": 6.896551724137931,
-          "screens": 12356,
-          "occupancy": 34.9
+          "screens": 6241,
+          "occupancy": 28.45
         },
         {
           "reportDate": "2026-02-02",
@@ -7576,8 +8381,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -74.44,
           "disagreementPct": 13.953488372093023,
-          "screens": 11671,
-          "occupancy": 13
+          "screens": 5897,
+          "occupancy": 9.44
         },
         {
           "reportDate": "2026-02-03",
@@ -8526,11 +9331,11 @@ window.IBO_CATALOG = {
       "overseas": 52.9,
       "worldwide": 341.9,
       "lastDayNet": 0,
-      "trackedThroughDay": 178,
+      "trackedThroughDay": 184,
       "liveSources": [
         "sacnilk",
-        "hungama",
-        "wikipedia"
+        "wikipedia",
+        "hungama"
       ],
       "deltaNet": 0,
       "deltaWw": 0,
@@ -9446,7 +10251,7 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 322.5,
       "lastDayNet": null,
-      "trackedThroughDay": 254,
+      "trackedThroughDay": 260,
       "liveSources": [
         "wikipedia"
       ],
@@ -10309,7 +11114,7 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 305,
       "lastDayNet": null,
-      "trackedThroughDay": 252,
+      "trackedThroughDay": 258,
       "liveSources": [
         "wikipedia"
       ],
@@ -10338,7 +11143,7 @@ window.IBO_CATALOG = {
       "overseas": 48.15,
       "worldwide": 247.28,
       "lastDayNet": 5,
-      "trackedThroughDay": 171,
+      "trackedThroughDay": 177,
       "liveSources": [
         "hungama"
       ],
@@ -10354,8 +11159,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": null,
           "disagreementPct": 0,
-          "screens": null,
-          "occupancy": null
+          "screens": 12115,
+          "occupancy": 27.35
         },
         {
           "reportDate": "2026-04-22",
@@ -10366,8 +11171,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -66.67,
           "disagreementPct": 0,
-          "screens": null,
-          "occupancy": null
+          "screens": 11902,
+          "occupancy": 10.59
         },
         {
           "reportDate": "2026-04-25",
@@ -10378,8 +11183,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 66.67,
           "disagreementPct": 0,
-          "screens": null,
-          "occupancy": null
+          "screens": 9767,
+          "occupancy": 19.82
         },
         {
           "reportDate": "2026-04-29",
@@ -10390,8 +11195,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -70,
           "disagreementPct": 0,
-          "screens": null,
-          "occupancy": null
+          "screens": 9091,
+          "occupancy": 8.67
         },
         {
           "reportDate": "2026-05-03",
@@ -10402,8 +11207,8 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": 66.67,
           "disagreementPct": 0,
-          "screens": null,
-          "occupancy": null
+          "screens": 5170,
+          "occupancy": 22.13
         }
       ]
     },
@@ -10430,7 +11235,7 @@ window.IBO_CATALOG = {
       "lastDayNet": null,
       "trackedThroughDay": 80,
       "liveSources": [],
-      "deltaNet": 174,
+      "deltaNet": 0,
       "deltaWw": 0,
       "dayWise": []
     },
@@ -10482,7 +11287,7 @@ window.IBO_CATALOG = {
       "overseas": 33.6,
       "worldwide": 192.75,
       "lastDayNet": 0.01,
-      "trackedThroughDay": 87,
+      "trackedThroughDay": 93,
       "liveSources": [
         "sacnilk",
         "hungama"
@@ -10560,7 +11365,7 @@ window.IBO_CATALOG = {
           "netChangePct": -33.51,
           "disagreementPct": 2.4691358024691414,
           "screens": 10463,
-          "occupancy": 14.05
+          "occupancy": 14.04
         },
         {
           "reportDate": "2026-07-02",
@@ -11101,10 +11906,10 @@ window.IBO_CATALOG = {
       "overseas": 34,
       "worldwide": 147.73,
       "lastDayNet": 0,
-      "trackedThroughDay": 94,
+      "trackedThroughDay": 100,
       "liveSources": [
-        "sacnilk",
-        "hungama"
+        "hungama",
+        "sacnilk"
       ],
       "deltaNet": 0,
       "deltaWw": 0,
@@ -11972,7 +12777,7 @@ window.IBO_CATALOG = {
       "overseas": 29.9,
       "worldwide": 98.62,
       "lastDayNet": null,
-      "trackedThroughDay": 80,
+      "trackedThroughDay": 86,
       "liveSources": [
         "hungama"
       ],
@@ -11981,14 +12786,14 @@ window.IBO_CATALOG = {
       "dayWise": []
     },
     {
-      "id": "resident-evil",
-      "slug": "Resident_Evil_2026",
-      "title": "Resident Evil",
-      "language": "Hollywood",
-      "industry": "Hollywood",
+      "id": "vvan-force-of-the-forrest",
+      "slug": "Vvan_2026",
+      "title": "Vvan - Force of the Forrest",
+      "language": "Hindi",
+      "industry": "Bollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-18",
+      "releaseDate": "2026-09-25",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -11996,53 +12801,41 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 5.8,
-      "indiaGross": 6.93,
+      "indiaNet": 8,
+      "indiaGross": 9.6,
       "overseas": 0,
-      "worldwide": 6.93,
-      "lastDayNet": 3.2,
-      "trackedThroughDay": 3,
+      "worldwide": 9.6,
+      "lastDayNet": 8,
+      "trackedThroughDay": 2,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
-          "reportDate": "2026-09-18",
+          "reportDate": "2026-09-25",
           "dayNumber": 1,
-          "indiaNet": 2.6,
+          "indiaNet": 8,
           "indiaGross": 0,
           "overseas": 0,
           "worldwide": 0,
           "netChangePct": null,
           "disagreementPct": 0,
           "screens": null,
-          "occupancy": 14.9
-        },
-        {
-          "reportDate": "2026-09-19",
-          "dayNumber": 2,
-          "indiaNet": 3.2,
-          "indiaGross": 3.83,
-          "overseas": 0,
-          "worldwide": 0,
-          "netChangePct": 23.08,
-          "disagreementPct": 0,
-          "screens": 4310,
-          "occupancy": 19.2
+          "occupancy": 26
         }
       ]
     },
     {
-      "id": "vibe",
-      "slug": "VIBE_2026",
-      "title": "VIBE",
-      "language": "Hindi",
-      "industry": "Bollywood",
+      "id": "avengers-endgame-encore",
+      "slug": "Avengers_Endgame_Encore_2026",
+      "title": "Avengers Endgame: Encore",
+      "language": "Hollywood",
+      "industry": "Hollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-18",
+      "releaseDate": "2026-09-25",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -12050,12 +12843,96 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 4.45,
-      "indiaGross": 5.34,
+      "indiaNet": 7.25,
+      "indiaGross": 8.68,
       "overseas": 0,
-      "worldwide": 5.34,
-      "lastDayNet": 2.75,
-      "trackedThroughDay": 3,
+      "worldwide": 8.68,
+      "lastDayNet": 7.25,
+      "trackedThroughDay": 2,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": 0,
+      "deltaWw": 0,
+      "dayWise": [
+        {
+          "reportDate": "2026-09-25",
+          "dayNumber": 1,
+          "indiaNet": 7.25,
+          "indiaGross": 0,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": null,
+          "disagreementPct": 0,
+          "screens": null,
+          "occupancy": 32.2
+        }
+      ]
+    },
+    {
+      "id": "meesaya-murukku-2",
+      "slug": "Meesaya_Murukku_2_2026",
+      "title": "Meesaya Murukku 2",
+      "language": "Tamil",
+      "industry": "Kollywood",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-09-25",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "rating": null,
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 3.3,
+      "indiaGross": 3.85,
+      "overseas": 0,
+      "worldwide": 3.85,
+      "lastDayNet": 3.3,
+      "trackedThroughDay": 2,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": 0,
+      "deltaWw": 0,
+      "dayWise": [
+        {
+          "reportDate": "2026-09-25",
+          "dayNumber": 1,
+          "indiaNet": 3.3,
+          "indiaGross": 0,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": null,
+          "disagreementPct": 0,
+          "screens": null,
+          "occupancy": 40
+        }
+      ]
+    },
+    {
+      "id": "dorothy",
+      "slug": "Dorothy_2026",
+      "title": "Dorothy",
+      "language": "Tamil",
+      "industry": "Kollywood",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-09-25",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "rating": null,
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 1.7,
+      "indiaGross": 2,
+      "overseas": 0,
+      "worldwide": 2,
+      "lastDayNet": 1.7,
+      "trackedThroughDay": 2,
       "liveSources": [
         "sacnilk"
       ],
@@ -12063,7 +12940,7 @@ window.IBO_CATALOG = {
       "deltaWw": null,
       "dayWise": [
         {
-          "reportDate": "2026-09-18",
+          "reportDate": "2026-09-25",
           "dayNumber": 1,
           "indiaNet": 1.7,
           "indiaGross": 0,
@@ -12072,31 +12949,19 @@ window.IBO_CATALOG = {
           "netChangePct": null,
           "disagreementPct": 0,
           "screens": null,
-          "occupancy": 14
-        },
-        {
-          "reportDate": "2026-09-19",
-          "dayNumber": 2,
-          "indiaNet": 2.75,
-          "indiaGross": 3.3,
-          "overseas": 0,
-          "worldwide": 0,
-          "netChangePct": 61.76,
-          "disagreementPct": 0,
-          "screens": 2979,
-          "occupancy": 21
+          "occupancy": 33
         }
       ]
     },
     {
-      "id": "daayra",
-      "slug": "Daayra_2026",
-      "title": "Daayra",
-      "language": "Hindi",
-      "industry": "Bollywood",
+      "id": "heart-of-the-beast",
+      "slug": "Heart_of_the_Beast_2026",
+      "title": "Heart of the Beast",
+      "language": "Hollywood",
+      "industry": "Hollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-18",
+      "releaseDate": "2026-09-25",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -12104,53 +12969,41 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 2.75,
-      "indiaGross": 3.3,
+      "indiaNet": 0.7,
+      "indiaGross": 0.84,
       "overseas": 0,
-      "worldwide": 3.3,
-      "lastDayNet": 1.75,
-      "trackedThroughDay": 3,
+      "worldwide": 0.84,
+      "lastDayNet": 0.7,
+      "trackedThroughDay": 2,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
-          "reportDate": "2026-09-18",
+          "reportDate": "2026-09-25",
           "dayNumber": 1,
-          "indiaNet": 1,
+          "indiaNet": 0.7,
           "indiaGross": 0,
           "overseas": 0,
           "worldwide": 0,
           "netChangePct": null,
           "disagreementPct": 0,
           "screens": null,
-          "occupancy": 12
-        },
-        {
-          "reportDate": "2026-09-19",
-          "dayNumber": 2,
-          "indiaNet": 1.75,
-          "indiaGross": 2.1,
-          "overseas": 0,
-          "worldwide": 0,
-          "netChangePct": 75,
-          "disagreementPct": 0,
-          "screens": 2062,
-          "occupancy": 18
+          "occupancy": 26.2
         }
       ]
     },
     {
-      "id": "citylights",
-      "slug": "Citylights_2026",
-      "title": "Citylights",
-      "language": "Kannada",
-      "industry": "Sandalwood",
+      "id": "primetime",
+      "slug": "Primetime_2026",
+      "title": "Primetime",
+      "language": "Hollywood",
+      "industry": "Hollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-18",
+      "releaseDate": "2026-09-25",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -12158,28 +13011,41 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 1.79,
-      "indiaGross": 2,
+      "indiaNet": 0.29,
+      "indiaGross": 0.33,
       "overseas": 0,
-      "worldwide": 2,
-      "lastDayNet": null,
-      "trackedThroughDay": 3,
+      "worldwide": 0.33,
+      "lastDayNet": 0.29,
+      "trackedThroughDay": 2,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
-      "dayWise": []
+      "deltaNet": 0,
+      "deltaWw": 0,
+      "dayWise": [
+        {
+          "reportDate": "2026-09-25",
+          "dayNumber": 1,
+          "indiaNet": 0.29,
+          "indiaGross": 0,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": null,
+          "disagreementPct": 0,
+          "screens": null,
+          "occupancy": 36
+        }
+      ]
     },
     {
-      "id": "its-a-medical-miracle",
-      "slug": "Its_a_Medical_Miracle_2026",
-      "title": "It's a Medical Miracle",
+      "id": "aaram",
+      "slug": "Aaram_2026",
+      "title": "Aaram",
       "language": "Malayalam",
       "industry": "Mollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-18",
+      "releaseDate": "2026-09-25",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -12187,194 +13053,28 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.98,
-      "indiaGross": 0.65,
+      "indiaNet": 0.2,
+      "indiaGross": 0.22,
       "overseas": 0,
-      "worldwide": 0.65,
-      "lastDayNet": 0.43,
-      "trackedThroughDay": 3,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": null,
-      "deltaWw": null,
-      "dayWise": [
-        {
-          "reportDate": "2026-09-18",
-          "dayNumber": 1,
-          "indiaNet": 0.55,
-          "indiaGross": 0,
-          "overseas": 0,
-          "worldwide": 0,
-          "netChangePct": null,
-          "disagreementPct": 0,
-          "screens": null,
-          "occupancy": 22
-        },
-        {
-          "reportDate": "2026-09-19",
-          "dayNumber": 2,
-          "indiaNet": 0.43,
-          "indiaGross": 0.5,
-          "overseas": 0,
-          "worldwide": 0,
-          "netChangePct": -21.82,
-          "disagreementPct": 0,
-          "screens": 654,
-          "occupancy": 18
-        }
-      ]
-    },
-    {
-      "id": "l-amp-o-law-and-order",
-      "slug": "LO__Law_and_Order_2026",
-      "title": "L&amp;O - Law and Order",
-      "language": "Malayalam",
-      "industry": "Mollywood",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-09-18",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "rating": null,
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.47,
-      "indiaGross": 0.53,
-      "overseas": 0,
-      "worldwide": 0.53,
+      "worldwide": 0.22,
       "lastDayNet": null,
-      "trackedThroughDay": 3,
+      "trackedThroughDay": 2,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
-      "id": "mitti-de-putt",
-      "slug": "Mitti_De_Putt_2026",
-      "title": "Mitti De Putt",
-      "language": "Indian",
-      "industry": "Indian",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-09-18",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "rating": null,
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.35,
-      "indiaGross": 0.42,
-      "overseas": 0,
-      "worldwide": 0.42,
-      "lastDayNet": 0.15,
-      "trackedThroughDay": 3,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": null,
-      "deltaWw": null,
-      "dayWise": [
-        {
-          "reportDate": "2026-09-18",
-          "dayNumber": 1,
-          "indiaNet": 0.2,
-          "indiaGross": 0,
-          "overseas": 0,
-          "worldwide": 0,
-          "netChangePct": null,
-          "disagreementPct": 0,
-          "screens": null,
-          "occupancy": 10
-        },
-        {
-          "reportDate": "2026-09-19",
-          "dayNumber": 2,
-          "indiaNet": 0.15,
-          "indiaGross": 0.18,
-          "overseas": 0,
-          "worldwide": 0,
-          "netChangePct": -25,
-          "disagreementPct": 0,
-          "screens": 580,
-          "occupancy": 10
-        }
-      ]
-    },
-    {
-      "id": "happy-journey",
-      "slug": "Happy_Journey_2026",
-      "title": "Happy Journey",
-      "language": "Telugu",
-      "industry": "Tollywood",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-09-18",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "rating": null,
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.31,
-      "indiaGross": 0.35,
-      "overseas": 0,
-      "worldwide": 0.35,
-      "lastDayNet": null,
-      "trackedThroughDay": 3,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": null,
-      "deltaWw": null,
-      "dayWise": []
-    },
-    {
-      "id": "chatni",
-      "slug": "Chatni_2026",
-      "title": "Chatni",
-      "language": "Indian",
-      "industry": "Indian",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-09-18",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "rating": null,
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.25,
-      "indiaGross": 0.28,
-      "overseas": 0,
-      "worldwide": 0.28,
-      "lastDayNet": null,
-      "trackedThroughDay": 3,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": null,
-      "deltaWw": null,
-      "dayWise": []
-    },
-    {
-      "id": "the-dark-heaven",
-      "slug": "The_Dark_Heaven_2026",
-      "title": "The Dark Heaven",
+      "id": "lenin-pandiyan",
+      "slug": "Lenin_Pandiyan_2026",
+      "title": "Lenin Pandiyan",
       "language": "Tamil",
       "industry": "Kollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-09-18",
+      "releaseDate": "2026-09-25",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -12382,83 +13082,84 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.24,
-      "indiaGross": 0.27,
+      "indiaNet": 0.16,
+      "indiaGross": 0.18,
       "overseas": 0,
-      "worldwide": 0.27,
+      "worldwide": 0.18,
       "lastDayNet": null,
-      "trackedThroughDay": 3,
+      "trackedThroughDay": 2,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
+      "dayWise": []
+    },
+    {
+      "id": "forgotten-island-3d",
+      "slug": "Forgotten_Island_2026",
+      "title": "Forgotten Island (3D)",
+      "language": "Hollywood",
+      "industry": "Hollywood",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-09-25",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "rating": null,
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.17,
+      "indiaGross": 0.18,
+      "overseas": 0,
+      "worldwide": 0.18,
+      "lastDayNet": null,
+      "trackedThroughDay": 2,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": 0,
+      "deltaWw": 0,
+      "dayWise": []
+    },
+    {
+      "id": "tutt-paini-english-ne",
+      "slug": "Tutt_Paini_English_Ne_2026",
+      "title": "Tutt Paini English Ne",
+      "language": "Indian",
+      "industry": "Indian",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-09-25",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "rating": null,
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.14,
+      "indiaGross": 0.15,
+      "overseas": 0,
+      "worldwide": 0.15,
+      "lastDayNet": null,
+      "trackedThroughDay": 2,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     }
   ],
-  "changes": [
-    {
-      "id": "hanuman-ansh",
-      "title": "Hanuman Ansh",
-      "text": "Hanuman Ansh: WW +₹136.55 Cr, India net +₹95 Cr since 2026-09-11",
-      "deltaNet": 95,
-      "deltaWw": 136.55
-    },
-    {
-      "id": "mirzapur-the-movie",
-      "title": "Mirzapur: The Movie",
-      "text": "Mirzapur: The Movie: WW +₹89.75 Cr, India net +₹62.25 Cr since 2026-09-11",
-      "deltaNet": 62.25,
-      "deltaWw": 89.75
-    },
-    {
-      "id": "sardar-2",
-      "title": "Sardar 2",
-      "text": "Sardar 2: WW +₹16.17 Cr, India net +₹11 Cr since 2026-09-11",
-      "deltaNet": 11,
-      "deltaWw": 16.17
-    },
-    {
-      "id": "irumudi",
-      "title": "Irumudi",
-      "text": "Irumudi: WW +₹15.18 Cr, India net +₹12.93 Cr since 2026-09-11",
-      "deltaNet": 12.93,
-      "deltaWw": 15.18
-    },
-    {
-      "id": "haiwaan",
-      "title": "Haiwaan",
-      "text": "Haiwaan: WW +₹15.03 Cr, India net +₹9.87 Cr since 2026-09-11",
-      "deltaNet": 9.87,
-      "deltaWw": 15.03
-    },
-    {
-      "id": "dhurandhar",
-      "title": "Dhurandhar: The Revenge",
-      "text": "Dhurandhar: The Revenge: WW ₹-6.61 Cr, India net +₹41.21 Cr since 2026-09-11",
-      "deltaNet": 41.21,
-      "deltaWw": -6.61
-    },
-    {
-      "id": "toxic",
-      "title": "Toxic",
-      "text": "Toxic: WW +₹2.54 Cr, India net +₹1.56 Cr since 2026-09-11",
-      "deltaNet": 1.56,
-      "deltaWw": 2.54
-    },
-    {
-      "id": "spider-man-bnd",
-      "title": "Spider-Man: Brand New Day",
-      "text": "Spider-Man: Brand New Day: WW +₹1.82 Cr, India net +₹1.49 Cr since 2026-09-11",
-      "deltaNet": 1.49,
-      "deltaWw": 1.82
-    }
-  ],
+  "changes": [],
   "logs": [
     {
       "sourceId": "sacnilk",
       "status": "ok",
-      "detail": "937 collection rows from 20 live pulls"
+      "detail": "1001 collection rows from 20 live pulls"
     },
     {
       "sourceId": "hungama",
@@ -12466,19 +13167,14 @@ window.IBO_CATALOG = {
       "detail": "48 collection rows from 16 live pulls"
     },
     {
+      "sourceId": "wikipedia",
+      "status": "ok",
+      "detail": "8 collection rows from 1 live pull"
+    },
+    {
       "sourceId": "etimes",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
-    },
-    {
-      "sourceId": "wikipedia",
-      "status": "ok",
-      "detail": "7 collection rows from 1 live pull"
-    },
-    {
-      "sourceId": "koimoi",
-      "status": "blocked",
-      "detail": "HTTP 403"
     },
     {
       "sourceId": "express",
@@ -12488,141 +13184,146 @@ window.IBO_CATALOG = {
     {
       "sourceId": "pinkvilla",
       "status": "ok",
-      "detail": "1 collection rows from 1 live pull"
+      "detail": "Fetched 1 page (headlines / status)"
+    },
+    {
+      "sourceId": "koimoi",
+      "status": "blocked",
+      "detail": "HTTP 403"
     },
     {
       "sourceId": "boi",
-      "status": "ok",
-      "detail": "Fetched 1 page (headlines / status)"
+      "status": "blocked",
+      "detail": "HTTP 403"
     }
   ],
   "headlines": [
     {
       "sourceId": "sacnilk",
-      "title": "Toxic: Sacnilk 25 days, India net ₹249.8 Cr",
+      "title": "Toxic: Sacnilk 31 days, India net ₹250.06 Cr",
       "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:51.872Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹341.86 Cr."
+      "publishedAt": "2026-09-26T04:14:16.499Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹342.16 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Hi: Sacnilk 23 days, India net ₹12.76 Cr",
+      "title": "Hi: Sacnilk 29 days, India net ₹12.82 Cr",
       "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:52.191Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹14.85 Cr."
+      "publishedAt": "2026-09-26T04:14:16.610Z",
+      "summary": "Live day-wise pull. Last day 29. WW ₹14.92 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Awarapan 2: Sacnilk 37 days, India net ₹150.53 Cr",
-      "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:52.238Z",
-      "summary": "Live day-wise pull. Last day 36. WW ₹212.95 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Irumudi: Sacnilk 30 days, India net ₹187.38 Cr",
-      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:52.307Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹240.13 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Resident Evil: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Resident_Evil_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:52.398Z",
-      "summary": "Auto-discovered Hollywood title. Latest reported India net ₹2.6 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Batwara 1947: Sacnilk 28 days, India net ₹38.08 Cr",
-      "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:52.421Z",
-      "summary": "Live day-wise pull. Last day 28. WW ₹54.2 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Daayra: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Daayra_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:52.534Z",
-      "summary": "Auto-discovered Bollywood title. Latest reported India net ₹1 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Vishwanath And Sons: Sacnilk 37 days, India net ₹122.48 Cr",
+      "title": "Vishwanath And Sons: Sacnilk 43 days, India net ₹122.54 Cr",
       "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:52.554Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹209.39 Cr."
+      "publishedAt": "2026-09-26T04:14:16.643Z",
+      "summary": "Live day-wise pull. Last day 43. WW ₹209.46 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "VIBE: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/VIBE_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:52.607Z",
-      "summary": "Auto-discovered Bollywood title. Latest reported India net ₹1.7 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Citylights: Sacnilk discovered",
-      "url": "https://www.sacnilk.com/movie/Citylights_2026",
-      "publishedAt": "2026-09-20T12:14:52.635Z",
-      "summary": "Auto-discovered Sandalwood title. Current board India net ₹1.79 Cr."
+      "title": "Awarapan 2: Sacnilk 43 days, India net ₹150.57 Cr",
+      "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-26T04:14:16.686Z",
+      "summary": "Live day-wise pull. Last day 43. WW ₹212.99 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Border 2: Sacnilk 88 days, India net ₹329.43 Cr",
       "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:52.659Z",
+      "publishedAt": "2026-09-26T04:14:16.734Z",
       "summary": "Live day-wise pull. Last day 112. WW ₹450.19 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Dhurandhar: The Revenge: Sacnilk 106 days, India net ₹1149.3 Cr",
-      "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:52.823Z",
-      "summary": "Live day-wise pull. Last day 106. WW ₹1813.39 Cr."
+      "title": "Irumudi: Sacnilk 36 days, India net ₹190.79 Cr",
+      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-26T04:14:16.757Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹243.23 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "It's a Medical Miracle: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Its_a_Medical_Miracle_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:52.912Z",
-      "summary": "Auto-discovered Mollywood title. Latest reported India net ₹0.55 Cr."
+      "title": "Batwara 1947: Sacnilk 29 days, India net ₹38.08 Cr",
+      "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-26T04:14:16.777Z",
+      "summary": "Live day-wise pull. Last day 41. WW ₹54.2 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Vvan - Force of the Forrest: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Vvan_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-26T04:14:16.803Z",
+      "summary": "Auto-discovered Bollywood title. Latest reported India net ₹8 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Dorothy: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Dorothy_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-26T04:14:16.835Z",
+      "summary": "Auto-discovered Kollywood title. Latest reported India net ₹1.7 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Avengers Endgame: Encore: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Avengers_Endgame_Encore_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-26T04:14:16.866Z",
+      "summary": "Auto-discovered Hollywood title. Latest reported India net ₹7.25 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Meesaya Murukku 2: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Meesaya_Murukku_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-26T04:14:16.875Z",
+      "summary": "Auto-discovered Kollywood title. Latest reported India net ₹3.3 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Peddi: Sacnilk 73 days, India net ₹244.64 Cr",
       "url": "https://www.sacnilk.com/news/peddi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:53.070Z",
+      "publishedAt": "2026-09-26T04:14:16.962Z",
       "summary": "Live day-wise pull. Last day 88. WW ₹341.9 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Karuppu: Sacnilk 67 days, India net ₹198.18 Cr",
+      "url": "https://www.sacnilk.com/news/karuppu_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-26T04:14:17.061Z",
+      "summary": "Live day-wise pull. Last day 69. WW ₹310.12 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Dhurandhar: The Revenge: Sacnilk 106 days, India net ₹1149.3 Cr",
+      "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-26T04:14:17.122Z",
+      "summary": "Live day-wise pull. Last day 106. WW ₹1813.39 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Welcome To The Jungle: Sacnilk 49 days, India net ₹134.11 Cr",
       "url": "https://www.sacnilk.com/news/welcome_to_the_jungle_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:53.092Z",
+      "publishedAt": "2026-09-26T04:14:17.142Z",
       "summary": "Live day-wise pull. Last day 49. WW ₹192.75 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Mitti De Putt: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Mitti_De_Putt_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-20T12:14:53.188Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.2 Cr."
+      "title": "Heart of the Beast: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Heart_of_the_Beast_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-26T04:14:17.152Z",
+      "summary": "Auto-discovered Hollywood title. Latest reported India net ₹0.7 Cr."
     }
   ],
   "morningBrief": {
-    "briefDate": "2026-09-20",
-    "generatedAt": "2026-09-20T08:51:42.625Z",
-    "headline": "India box office: Hanuman Ansh leads the latest daily chart at ₹9.8 Cr",
-    "lede": "Hanuman Ansh leads the latest reported daily India nett at ₹9.8 Cr on Day 45; its cumulative India nett is ₹258.1 Cr.",
-    "body": "Latest reported daily ranking: 1. Hanuman Ansh — ₹9.8 Cr on Day 45; cumulative India nett ₹258.1 Cr | 2. Mirzapur: The Movie — ₹4.5 Cr on Day 17; cumulative India nett ₹210.7 Cr | 3. Resident Evil — ₹3.2 Cr on Day 3; cumulative India nett ₹5.8 Cr | 4. VIBE — ₹2.8 Cr on Day 3; cumulative India nett ₹4.5 Cr | 5. Daayra — ₹1.8 Cr on Day 3; cumulative India nett ₹2.8 Cr.\n\nRecent-release watch: Resident Evil (released 2026-09-18) — latest India nett ₹3.2 Cr; VIBE (released 2026-09-18) — latest India nett ₹2.8 Cr; Daayra (released 2026-09-18) — latest India nett ₹1.8 Cr; Citylights (released 2026-09-18) — latest India nett n/a.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader at ₹1,820 Cr, but that is not the current daily chart.\n\nNo material day-over-day worldwide move of ₹0.5 Cr or more was recorded in the latest board comparison.\n\nDesk health: 2 of 4 tracker feeds are unreachable on this pull. Figures remain the weighted-median consensus of the trackers still reporting; India has no official box-office auditor.",
+    "briefDate": "2026-09-25",
+    "generatedAt": "2026-09-25T09:08:36.613Z",
+    "headline": "India box office: The Paradise leads the latest daily chart at ₹34.7 Cr",
+    "lede": "The Paradise leads the latest reported daily India nett at ₹34.7 Cr on Day 2; its cumulative India nett is ₹46.3 Cr.",
+    "body": "Latest reported daily ranking: 1. The Paradise — ₹34.7 Cr on Day 2; cumulative India nett ₹46.3 Cr | 2. Hanuman Ansh — ₹3.7 Cr on Day 50; cumulative India nett ₹288.3 Cr | 3. Mirzapur: The Movie — ₹1.5 Cr on Day 22; cumulative India nett ₹223 Cr | 4. Resident Evil — ₹1.2 Cr on Day 8; cumulative India nett ₹14.9 Cr | 5. VIBE — ₹0.8 Cr on Day 8; cumulative India nett ₹11.3 Cr.\n\nRecent-release watch: The Paradise (released 2026-09-24) — latest India nett ₹34.7 Cr; Bandkhor (released 2026-09-24) — latest India nett n/a; NCT 127 5th Tour 'Neo City: Seoul - The Redline' (released 2026-09-20) — latest India nett n/a; Resident Evil (released 2026-09-18) — latest India nett ₹1.2 Cr.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader at ₹1,820 Cr, but that is not the current daily chart.\n\nMomentum: VIBE +1 Cr worldwide; Daayra +0.5 Cr worldwide since the previous board snapshot.\n\nDesk health: 2 of 4 tracker feeds are unreachable on this pull. Figures remain the weighted-median consensus of the trackers still reporting; India has no official box-office auditor.",
     "citations": [],
-    "boardGeneratedAt": "2026-09-20T08:51:37.160Z",
+    "boardGeneratedAt": "2026-09-25T09:08:35.131Z",
     "model": "deterministic-editorial-v1"
   },
   "downloads": {
     "boardJson": "./board.json",
     "healthJson": "./health.json",
-    "history": "./history/2026-09-20.json"
+    "history": "./history/2026-09-26.json"
   }
 };
