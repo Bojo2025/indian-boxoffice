@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://indian-boxoffice.com/sitemap.xml
+Sitemap: https://indian-boxoffice.com/feed.xml

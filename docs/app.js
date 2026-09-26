@@ -83,7 +83,7 @@
   }
 
   function filmHref(movie) {
-    return `#film-${movie.slug}`;
+    return `/movies/${movie.slug}/`;
   }
 
   function parseCr(raw) {
@@ -292,8 +292,11 @@
 
     teaser.onclick = (e) => {
       e.preventDefault();
-      openBrief();
+      window.location.href = "/brief/";
     };
+
+    const more = teaser.querySelector(".brief-more");
+    if (more) more.textContent = "Read full morning brief →";
 
     modal.addEventListener("close", () => {
       if (location.hash === "#brief") history.replaceState(null, "", " ");
@@ -304,15 +307,13 @@
     });
 
     document.querySelectorAll('a[href="#brief"]').forEach((a) => {
-      a.onclick = (e) => {
-        e.preventDefault();
-        openBrief();
-      };
+      a.setAttribute("href", "/brief/");
     });
 
     box.style.display = "flex";
-    if (location.hash === "#brief") openBrief();
-  }
+    if (location.hash === "#brief") {
+      window.location.replace("/brief/");
+    }
 
   async function loadBrief() {
     let brief = catalog.morningBrief || null;
@@ -410,7 +411,7 @@
     renderFilmDetail(movie);
     if (typeof modal.showModal === "function" && !modal.open) modal.showModal();
     else modal.setAttribute("open", "");
-    history.replaceState(null, "", filmHref(movie));
+    history.replaceState(null, "", `#film-${movie.slug}`);
   }
 
   function routeHash() {
@@ -427,6 +428,7 @@
   function wireFilmDetails() {
     const modal = document.getElementById("film-modal");
     if (!modal) return;
+    // Hash URLs remain a UX fallback; primary links navigate to /movies/<slug>/.
     document.addEventListener("click", (event) => {
       const target = event.target;
       if (!(target instanceof Element)) return;
@@ -533,7 +535,7 @@
           item: {
             "@type": "Movie",
             name: m.title,
-            url: `${site}#rankings`,
+            url: `${site}movies/${m.slug}/`,
             image: m.poster ? new URL(m.poster.replace(/^\.\//, ""), site).href : undefined,
             inLanguage: m.language,
             datePublished: m.releaseDate,
