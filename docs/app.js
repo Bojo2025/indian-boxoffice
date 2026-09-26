@@ -82,6 +82,23 @@
     return value == null || Number.isNaN(value) ? "Not available" : `${Number(value).toFixed(1)} / 10`;
   }
 
+  function computeDayMilestones(days) {
+    const sorted = [...days].sort((a, b) => a.dayNumber - b.dayNumber);
+    const day1 = sorted.find((d) => d.dayNumber === 1);
+    const weekendDays = sorted.filter((d) => d.dayNumber >= 1 && d.dayNumber <= 3);
+    const weekendNet =
+      weekendDays.length >= 1 ? weekendDays.reduce((sum, d) => sum + (d.indiaNet || 0), 0) : null;
+    const week1Days = sorted.filter((d) => d.dayNumber >= 1 && d.dayNumber <= 7);
+    const week1Net =
+      week1Days.length >= 1 ? week1Days.reduce((sum, d) => sum + (d.indiaNet || 0), 0) : null;
+    const highestDay = sorted.length
+      ? sorted.reduce((max, d) => ((d.indiaNet || 0) > (max.indiaNet || 0) ? d : max), sorted[0])
+      : null;
+    const latestDay = sorted.length ? sorted[sorted.length - 1] : null;
+
+    return { day1, weekendNet, week1Net, highestDay, latestDay };
+  }
+
   function filmHref(movie) {
     return `/movies/${movie.slug}/`;
   }
@@ -337,10 +354,36 @@
     const days = Array.isArray(movie.dayWise)
       ? [...movie.dayWise].sort((a, b) => a.dayNumber - b.dayNumber)
       : [];
+    const milestones = computeDayMilestones(days);
+    const milestoneHtml = days.length
+      ? `<div class="day-milestones">
+          <div class="milestone-card">
+            <span class="m-label">Opening Day (Day 1)</span>
+            <strong class="m-val">${esc(formatCr(milestones.day1?.indiaNet))}</strong>
+            <span class="m-sub">India nett</span>
+          </div>
+          <div class="milestone-card">
+            <span class="m-label">Opening Weekend</span>
+            <strong class="m-val">${esc(formatCr(milestones.weekendNet))}</strong>
+            <span class="m-sub">Days 1–3 nett</span>
+          </div>
+          <div class="milestone-card">
+            <span class="m-label">Week 1 Total</span>
+            <strong class="m-val">${esc(formatCr(milestones.week1Net))}</strong>
+            <span class="m-sub">Days 1–7 nett</span>
+          </div>
+          <div class="milestone-card">
+            <span class="m-label">Highest Single Day</span>
+            <strong class="m-val">${esc(formatCr(milestones.highestDay?.indiaNet))}</strong>
+            <span class="m-sub">${milestones.highestDay ? `Day ${milestones.highestDay.dayNumber}` : "—"}</span>
+          </div>
+        </div>`
+      : "";
+
     const dayRows = days
       .map(
-        (day) => `<tr>
-          <td>Day ${esc(day.dayNumber)}<small>${esc(formatReleaseDate(day.reportDate))}</small></td>
+        (day) => `<tr class="${day.dayNumber === 1 ? "day-one" : ""}">
+          <td>${day.dayNumber === 1 ? "<strong>Day 1 (Opening)</strong>" : `Day ${esc(day.dayNumber)}`}<small>${esc(formatReleaseDate(day.reportDate))}</small></td>
           <td class="num">${esc(formatCr(day.indiaNet))}</td>
           <td class="num strong">${esc(formatCr(day.worldwide))}</td>
           <td class="num">${esc(day.occupancy == null ? "—" : `${day.occupancy.toFixed(1)}%`)}</td>
@@ -350,8 +393,9 @@
       .join("");
     const dayBlock = days.length
       ? `<div class="film-detail-days">
-          <h3>Day-wise box office collection</h3>
+          <h3>Day-by-day box office collection</h3>
           <p>Reported India nett and worldwide gross for each available theatrical day.</p>
+          ${milestoneHtml}
           <div style="overflow-x:auto">
             <table>
               <thead>
@@ -368,7 +412,7 @@
           </div>
         </div>`
       : `<div class="film-detail-days">
-          <h3>Day-wise box office collection</h3>
+          <h3>Day-by-day box office collection</h3>
           <div class="film-detail-empty">No day-wise figures are available for this film yet.</div>
         </div>`;
 
