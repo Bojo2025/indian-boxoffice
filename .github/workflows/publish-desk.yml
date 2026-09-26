@@ -44,11 +44,14 @@ jobs:
           else
             echo "This is not the 04:00 UTC brief schedule — skipping."
           fi
+      - name: Refresh SEO static pages
+        continue-on-error: true
+        run: npm run seo:pages
       - name: Commit board if changed
         run: |
           git config user.name "ibo-desk-bot"
           git config user.email "ibo-desk-bot@users.noreply.github.com"
-          git add docs/catalog.js docs/board.json docs/health.json docs/history docs/app.js docs/index.html docs/styles.css docs/sitemap.xml docs/robots.txt docs/morning-brief.json || true
+          git add docs/catalog.js docs/board.json docs/health.json docs/history docs/app.js docs/index.html docs/styles.css docs/sitemap.xml docs/robots.txt docs/morning-brief.json docs/feed.xml docs/movies docs/rankings docs/languages docs/about-methodology docs/brief docs/briefs docs/.indexnow-key docs/*.txt || true
           if git diff --staged --quiet; then
             echo "No board changes"
             exit 0

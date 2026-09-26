@@ -59,6 +59,8 @@ if (process.env.FORCE_BRIEF !== "1") {
     console.log(
       `Morning brief already exists for ${existing!.briefDate} — skipping. Set FORCE_BRIEF=1 to regenerate.`,
     );
+    const { generateSeoPages } = await import("./generate-seo-pages.mts");
+    await generateSeoPages();
     process.exit(0);
   }
 }
@@ -258,6 +260,10 @@ function injectBrief(brief: Brief) {
 const brief = buildBrief();
 writeFileSync(briefPath, `${JSON.stringify(brief, null, 2)}\n`);
 injectBrief(brief);
+
+const { generateSeoPages } = await import("./generate-seo-pages.mts");
+await generateSeoPages();
+
 console.log("✓ Morning brief written → docs/morning-brief.json");
 console.log(`  Headline: ${brief.headline}`);
 console.log(`  Model: ${brief.model}`);

@@ -9,6 +9,7 @@
   <meta name="author" content="Kevin Boyjonauth" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#0f0d0b" />
+  <link rel="alternate" type="application/rss+xml" title="Indian Box Office Feed" href="https://indian-boxoffice.com/feed.xml" />
   <link rel="canonical" href="https://indian-boxoffice.com/" />
 
   <meta property="og:type" content="website" />
@@ -31,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260920c" />
+  <link rel="stylesheet" href="./styles.css?v=20260926a" />
 
   <script type="application/ld+json">
   {
@@ -45,7 +46,18 @@
         "url": "https://indian-boxoffice.com/",
         "logo": "https://indian-boxoffice.com/favicon.svg",
         "description": "Independent desk publishing daily Indian theatrical box office collections across all language industries.",
-        "founder": { "@type": "Person", "name": "Kevin Boyjonauth" },
+        "founder": {
+          "@type": "Person",
+          "name": "Kevin Boyjonauth",
+          "jobTitle": "Lead Developer & Box Office Analyst",
+          "sameAs": [
+            "https://github.com/Bojo2025",
+            "https://github.com/Bojo2025/indian-boxoffice"
+          ]
+        },
+        "sameAs": [
+          "https://github.com/Bojo2025/indian-boxoffice"
+        ],
         "areaServed": { "@type": "Country", "name": "India" }
       },
       {
@@ -139,7 +151,7 @@
 </head>
 <body>
   <header class="mast">
-    <a class="brand" href="#top">
+    <a class="brand" href="/">
       <span class="mark">IBO</span>
       <span>
         <strong>Indian Box Office</strong>
@@ -148,9 +160,10 @@
       <small class="credit">Developed by Mr Kevin Boyjonauth</small>
     </a>
     <nav>
-      <a href="#brief">Morning brief</a>
+      <a href="/brief/">Morning brief</a>
       <a href="#now">Now playing</a>
-      <a href="#rankings">2026</a>
+      <a href="/rankings/2026/">2026</a>
+      <a href="/about-methodology/">Methodology</a>
       <a href="#faq">FAQ</a>
     </nav>
   </header>
@@ -166,7 +179,63 @@
     <div class="board-top">
       <section class="week-board-wrap" aria-label="This week's box office">
         <p class="kicker">This week</p>
-        <ol class="week-board" id="week-board"></ol>
+        <ol class="week-board" id="week-board">
+<li>
+            <a class="week-link" href="/movies/Vvan_2026/" aria-label="Open details for Vvan - Force of the Forrest">
+              <span class="week-rank">1</span>
+              <span class="week-title">Vvan - Force of the Forrest</span>
+              <span class="week-gross">
+                <strong>₹9.6 Cr</strong>
+                <em>WW</em>
+                <span>₹8.0 Cr net</span>
+              </span>
+            </a>
+          </li>
+<li>
+            <a class="week-link" href="/movies/Avengers_Endgame_Encore_2026/" aria-label="Open details for Avengers Endgame: Encore">
+              <span class="week-rank">2</span>
+              <span class="week-title">Avengers Endgame: Encore</span>
+              <span class="week-gross">
+                <strong>₹8.7 Cr</strong>
+                <em>WW</em>
+                <span>₹7.3 Cr net</span>
+              </span>
+            </a>
+          </li>
+<li>
+            <a class="week-link" href="/movies/hanuman-ansh/" aria-label="Open details for Hanuman Ansh">
+              <span class="week-rank">3</span>
+              <span class="week-title">Hanuman Ansh</span>
+              <span class="week-gross">
+                <strong>₹381 Cr</strong>
+                <em>WW</em>
+                <span>₹292 Cr net</span>
+              </span>
+            </a>
+          </li>
+<li>
+            <a class="week-link" href="/movies/Meesaya_Murukku_2_2026/" aria-label="Open details for Meesaya Murukku 2">
+              <span class="week-rank">4</span>
+              <span class="week-title">Meesaya Murukku 2</span>
+              <span class="week-gross">
+                <strong>₹3.9 Cr</strong>
+                <em>WW</em>
+                <span>₹3.3 Cr net</span>
+              </span>
+            </a>
+          </li>
+<li>
+            <a class="week-link" href="/movies/Dorothy_2026/" aria-label="Open details for Dorothy">
+              <span class="week-rank">5</span>
+              <span class="week-title">Dorothy</span>
+              <span class="week-gross">
+                <strong>₹2.0 Cr</strong>
+                <em>WW</em>
+                <span>₹1.7 Cr net</span>
+              </span>
+            </a>
+          </li>
+</ol>
       </section>
       <aside id="brief" class="brief-box" style="display:none" aria-label="Morning brief">
         <button type="button" class="brief-teaser" id="brief-teaser" aria-haspopup="dialog" aria-controls="brief-modal">
@@ -199,13 +268,542 @@
       <p class="kicker">Theatrical</p>
       <h2>Now in theatres</h2>
       <p class="section-sub">Films currently running in Indian cinemas, ranked by their latest reported daily India nett collection.</p>
-      <div class="grid" id="now-grid" style="margin-top:24px"></div>
+      <div class="grid" id="now-grid" style="margin-top:24px">
+<a class="film-card-link" href="/movies/Vvan_2026/" aria-label="Open details for Vvan - Force of the Forrest">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hero-cinema.jpg" alt="Vvan - Force of the Forrest poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hindi · Day 2</p>
+          <h3>Vvan - Force of the Forrest</h3>
+          <p class="meta">— · —</p>
+          <p class="synopsis">Automatically discovered from Sacnilk's current theatrical board.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹8.00 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹9.60 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/Avengers_Endgame_Encore_2026/" aria-label="Open details for Avengers Endgame: Encore">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hero-cinema.jpg" alt="Avengers Endgame: Encore poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hollywood · Day 2</p>
+          <h3>Avengers Endgame: Encore</h3>
+          <p class="meta">— · —</p>
+          <p class="synopsis">Automatically discovered from Sacnilk's current theatrical board.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹7.25 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹8.68 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/hanuman-ansh/" aria-label="Open details for Hanuman Ansh">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hanuman-ansh.jpg" alt="Hanuman Ansh poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hindi · Day 51 · Late run</p>
+          <h3>Hanuman Ansh</h3>
+          <p class="meta">Charuvi Agrawal · Animated</p>
+          <p class="synopsis">Devotional animation with a long thin tail rather than an opening.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹291.5 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹381.4 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/Meesaya_Murukku_2_2026/" aria-label="Open details for Meesaya Murukku 2">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hero-cinema.jpg" alt="Meesaya Murukku 2 poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Tamil · Day 2</p>
+          <h3>Meesaya Murukku 2</h3>
+          <p class="meta">— · —</p>
+          <p class="synopsis">Automatically discovered from Sacnilk's current theatrical board.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹3.30 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹3.85 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/Dorothy_2026/" aria-label="Open details for Dorothy">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hero-cinema.jpg" alt="Dorothy poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Tamil · Day 2</p>
+          <h3>Dorothy</h3>
+          <p class="meta">— · —</p>
+          <p class="synopsis">Automatically discovered from Sacnilk's current theatrical board.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹1.70 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹2.00 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/mirzapur-the-movie/" aria-label="Open details for Mirzapur: The Movie">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hero-cinema.jpg" alt="Mirzapur: The Movie poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hindi · Day 23</p>
+          <h3>Mirzapur: The Movie</h3>
+          <p class="meta">Gurmmeet Singh · Pankaj Tripathi, Ali Fazal, Divyenndu, Jitendra Kumar, Ravi Kishan</p>
+          <p class="synopsis">The theatrical continuation of the Mirzapur crime saga.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹223.8 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹325.9 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/Heart_of_the_Beast_2026/" aria-label="Open details for Heart of the Beast">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hero-cinema.jpg" alt="Heart of the Beast poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hollywood · Day 2</p>
+          <h3>Heart of the Beast</h3>
+          <p class="meta">— · —</p>
+          <p class="synopsis">Automatically discovered from Sacnilk's current theatrical board.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹0.70 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹0.84 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/irumudi/" aria-label="Open details for Irumudi">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/irumudi.jpg" alt="Irumudi poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Telugu · Day 37</p>
+          <h3>Irumudi</h3>
+          <p class="meta">Shiva Nirvana · Ravi Teja, Baby Nakshathra</p>
+          <p class="synopsis">Ayyappa Deeksha road film that turned into Ravi Teja's cleanest family hold of the decade, led by Nizam.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹190.8 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹243.2 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/Primetime_2026/" aria-label="Open details for Primetime">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hero-cinema.jpg" alt="Primetime poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hollywood · Day 2</p>
+          <h3>Primetime</h3>
+          <p class="meta">— · —</p>
+          <p class="synopsis">Automatically discovered from Sacnilk's current theatrical board.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹0.29 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹0.33 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/insidious-out-of-the-further/" aria-label="Open details for Insidious: Out of The Further">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/insidious-further.jpg" alt="Insidious: Out of The Further poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">English · Day 37</p>
+          <h3>Insidious: Out of The Further</h3>
+          <p class="meta">Patrick Wilson · Ty Simpkins, Patrick Wilson</p>
+          <p class="synopsis">Horror holdover with a serviceable multiplex opening and a fast weekday fade.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹16.62 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹21.61 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/paw-patrol-the-dino-movie/" aria-label="Open details for PAW Patrol: The Dino Movie">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/paw-patrol-dino.jpg" alt="PAW Patrol: The Dino Movie poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">English · Day 37</p>
+          <h3>PAW Patrol: The Dino Movie</h3>
+          <p class="meta">Cal Brunker · Animated</p>
+          <p class="synopsis">Kids' matinee title. Modest India gross, weekend-weighted.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹3.44 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹4.48 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/the-odyssey/" aria-label="Open details for The Odyssey">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/the-odyssey.jpg" alt="The Odyssey poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">English · Day 72 · Late run</p>
+          <h3>The Odyssey</h3>
+          <p class="meta">Christopher Nolan · Matt Damon, Tom Holland, Anne Hathaway</p>
+          <p class="synopsis">Prestige Hollywood hold. India is a premium-screen story, not a mass one.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹195.6 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹233.0 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/spider-man-brand-new-day/" aria-label="Open details for Spider-Man: Brand New Day">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/spider-man-bnd.jpg" alt="Spider-Man: Brand New Day poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">English · Day 59 · Late run</p>
+          <h3>Spider-Man: Brand New Day</h3>
+          <p class="meta">Destin Daniel Cretton · Tom Holland</p>
+          <p class="synopsis">The year's biggest Hollywood grosser in India. Still occupying premium screens in week five.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹500.2 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹598.4 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/toxic/" aria-label="Open details for Toxic">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/toxic.jpg" alt="Toxic poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Kannada · Day 32</p>
+          <h3>Toxic</h3>
+          <p class="meta">Geetu Mohandas · Yash, Kiara Advani, Nayanthara, Huma Qureshi, Tara Sutaria, Rukmini Vasanth</p>
+          <p class="synopsis">A pan-India drama set in post-independence Goa. Dual-role Yash vehicle that opened like a mass film and is holding like a divided one.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹250.1 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹342.2 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/sardar-2/" aria-label="Open details for Sardar 2">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hero-cinema.jpg" alt="Sardar 2 poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Tamil · Day 17</p>
+          <h3>Sardar 2</h3>
+          <p class="meta">P. S. Mithran · Karthi</p>
+          <p class="synopsis">Karthi's spy-action sequel opened in India on September 10, 2026.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹16.28 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹23.83 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/haiwaan/" aria-label="Open details for Haiwaan">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hero-cinema.jpg" alt="Haiwaan poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hindi · Day 16</p>
+          <h3>Haiwaan</h3>
+          <p class="meta">Priyadarshan · Akshay Kumar, Saif Ali Khan</p>
+          <p class="synopsis">Priyadarshan's Hindi thriller released in India on September 11, 2026.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹9.92 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹15.08 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/welcome-to-the-jungle/" aria-label="Open details for Welcome To The Jungle">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/welcome-jungle.jpg" alt="Welcome To The Jungle poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hindi · Day 93</p>
+          <h3>Welcome To The Jungle</h3>
+          <p class="meta">Ahmed Khan · Akshay Kumar, Disha Patani</p>
+          <p class="synopsis">Early-summer comedy that held a multiplex floor into July.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹134.1 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹192.8 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/awarapan-2/" aria-label="Open details for Awarapan 2">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/awarapan-2.jpg" alt="Awarapan 2 poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hindi · Day 44</p>
+          <h3>Awarapan 2</h3>
+          <p class="meta">Nitin Kakkar · Emraan Hashmi</p>
+          <p class="synopsis">Vishesh Films sequel. Quiet Independence-weekend build, then a genuine word-of-mouth climb into the 100-crore club.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹150.6 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹210.3 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/vishwanath-and-sons/" aria-label="Open details for Vishwanath And Sons">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/vishwanath.jpg" alt="Vishwanath And Sons poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Tamil · Day 44</p>
+          <h3>Vishwanath And Sons</h3>
+          <p class="meta">Nandha Periyasamy · Suriya, Mamitha Baiju</p>
+          <p class="synopsis">Suriya family drama with a slow theatrical burn. Producer gross and Sacnilk remain tens of crores apart — the year's clearest reporting gap.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹122.5 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹209.5 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/batwara-1947/" aria-label="Open details for Batwara 1947">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/batwara.jpg" alt="Batwara 1947 poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hindi · Day 44</p>
+          <h3>Batwara 1947</h3>
+          <p class="meta">Anil Sharma · Gippy Grewal, Mahie Gill</p>
+          <p class="synopsis">Partition drama that found a North circuit but not a national breakout.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹38.08 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹54.20 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/hi/" aria-label="Open details for Hi">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hi.jpg" alt="Hi poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Tamil · Day 30</p>
+          <h3>Hi</h3>
+          <p class="meta">Gokul · Nayanthara, Kavin</p>
+          <p class="synopsis">Small-to-mid Tamil release climbing on Sunday occupancy rather than a Friday blast.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹12.82 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹14.92 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/dhurandhar-the-revenge/" aria-label="Open details for Dhurandhar: The Revenge">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/dhurandhar.jpg" alt="Dhurandhar: The Revenge poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hindi · Day 192</p>
+          <h3>Dhurandhar: The Revenge</h3>
+          <p class="meta">Aditya Dhar · Ranveer Singh, Akshaye Khanna, R. Madhavan, Sanjay Dutt</p>
+          <p class="synopsis">The film that bent 2026. Roughly a fifth of India's first-half box office sat in this one title.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹1,108.1 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹1,820.0 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/border-2/" aria-label="Open details for Border 2">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/border-2.jpg" alt="Border 2 poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hindi · Day 247</p>
+          <h3>Border 2</h3>
+          <p class="meta">Anoop Sathyan · Sunny Deol, Varun Dhawan, Diljit Dosanjh, Ahan Shetty</p>
+          <p class="synopsis">Republic Day war film. Second-highest Indian grosser of the year, a long way behind Dhurandhar.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹329.4 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹450.2 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/peddi/" aria-label="Open details for Peddi">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/peddi.jpg" alt="Peddi poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Telugu · Day 184</p>
+          <h3>Peddi</h3>
+          <p class="meta">Buchireddy Mallidi · Ram Charan, Janhvi Kapoor</p>
+          <p class="synopsis">Sports drama whose worldwide gross is still published as a range — ₹330 to ₹400 crore.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹244.6 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹341.9 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/karuppu/" aria-label="Open details for Karuppu">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/karuppu.jpg" alt="Karuppu poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Tamil · Day 170</p>
+          <h3>Karuppu</h3>
+          <p class="meta">R. Ajay Gnanamuthu · Suriya</p>
+          <p class="synopsis">Suriya's mass register. Paired with Vishwanath And Sons, his most complete year.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹198.2 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹310.1 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/cocktail-2/" aria-label="Open details for Cocktail 2">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/cocktail-2.jpg" alt="Cocktail 2 poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hindi · Day 100</p>
+          <h3>Cocktail 2</h3>
+          <p class="meta">Homi Adajania · Saif Ali Khan, Deepika Padukone, Diana Penty</p>
+          <p class="synopsis">Nostalgia sequel. Average verdict, adult multiplex.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹95.50 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹147.7 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/Aaram_2026/" aria-label="Open details for Aaram">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hero-cinema.jpg" alt="Aaram poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Malayalam · Day 2</p>
+          <h3>Aaram</h3>
+          <p class="meta">— · —</p>
+          <p class="synopsis">Automatically discovered from Sacnilk's current theatrical board.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹0.20 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹0.22 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/Lenin_Pandiyan_2026/" aria-label="Open details for Lenin Pandiyan">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hero-cinema.jpg" alt="Lenin Pandiyan poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Tamil · Day 2</p>
+          <h3>Lenin Pandiyan</h3>
+          <p class="meta">— · —</p>
+          <p class="synopsis">Automatically discovered from Sacnilk's current theatrical board.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹0.16 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹0.18 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/Forgotten_Island_2026/" aria-label="Open details for Forgotten Island (3D)">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hero-cinema.jpg" alt="Forgotten Island (3D) poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hollywood · Day 2</p>
+          <h3>Forgotten Island (3D)</h3>
+          <p class="meta">— · —</p>
+          <p class="synopsis">Automatically discovered from Sacnilk's current theatrical board.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹0.17 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹0.18 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+<a class="film-card-link" href="/movies/Tutt_Paini_English_Ne_2026/" aria-label="Open details for Tutt Paini English Ne">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/hero-cinema.jpg" alt="Tutt Paini English Ne poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Indian · Day 2</p>
+          <h3>Tutt Paini English Ne</h3>
+          <p class="meta">— · —</p>
+          <p class="synopsis">Automatically discovered from Sacnilk's current theatrical board.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹0.14 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹0.15 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+</div>
     </section>
     <section id="late">
       <p class="kicker">Holdovers</p>
       <h2>Late run</h2>
       <p class="section-sub">Long-running releases still on screens after their opening weeks.</p>
-      <div class="grid" id="late-grid" style="margin-top:24px"></div>
+      <div class="grid" id="late-grid" style="margin-top:24px">
+<a class="film-card-link" href="/movies/dhamaal-4/" aria-label="Open details for Dhamaal 4">
+      <article class="card">
+        <div class="poster-wrap">
+          <img class="poster" src="/posters/dhamaal-4.jpg" alt="Dhamaal 4 poster" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <p class="kicker">Hindi · Day 79 · Late run</p>
+          <h3>Dhamaal 4</h3>
+          <p class="meta">Kapil Sharma · Arshad Warsi, Javed Jaffrey, Riteish Deshmukh</p>
+          <p class="synopsis">Comedy franchise that paid for itself without becoming a cultural event.</p>
+          <dl>
+            <div><dt>India net</dt><dd>₹167.9 Cr</dd></div>
+            <div><dt>Worldwide</dt><dd>₹230.2 Cr</dd></div>
+          </dl>
+        </div>
+      </article>
+    </a>
+</div>
     </section>
     <section id="rankings">
       <p class="kicker">Year board</p>
@@ -223,7 +821,489 @@
               <th class="num">Worldwide</th>
             </tr>
           </thead>
-          <tbody id="rank-body"></tbody>
+          <tbody id="rank-body">
+<tr class="live">
+        <td class="rank">1</td>
+        <td class="title-cell">
+          <a href="/movies/dhurandhar-the-revenge/" aria-label="Open details for Dhurandhar: The Revenge">
+            <img class="poster-thumb" src="/posters/dhurandhar.jpg" alt="Dhurandhar: The Revenge box office poster" loading="lazy" />
+            <span>Dhurandhar: The Revenge<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Hindi</td>
+        <td>19 Mar 2026</td>
+        <td class="num">₹1,108.1 Cr</td>
+        <td class="num strong">₹1,820.0 Cr</td>
+      </tr>
+<tr class="">
+        <td class="rank">2</td>
+        <td class="title-cell">
+          <a href="/movies/spider-man-brand-new-day/" aria-label="Open details for Spider-Man: Brand New Day">
+            <img class="poster-thumb" src="/posters/spider-man-bnd.jpg" alt="Spider-Man: Brand New Day box office poster" loading="lazy" />
+            <span>Spider-Man: Brand New Day</span>
+          </a>
+        </td>
+        <td>English</td>
+        <td>30 Jul 2026</td>
+        <td class="num">₹500.2 Cr</td>
+        <td class="num strong">₹598.4 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">3</td>
+        <td class="title-cell">
+          <a href="/movies/border-2/" aria-label="Open details for Border 2">
+            <img class="poster-thumb" src="/posters/border-2.jpg" alt="Border 2 box office poster" loading="lazy" />
+            <span>Border 2<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Hindi</td>
+        <td>23 Jan 2026</td>
+        <td class="num">₹329.4 Cr</td>
+        <td class="num strong">₹450.2 Cr</td>
+      </tr>
+<tr class="">
+        <td class="rank">4</td>
+        <td class="title-cell">
+          <a href="/movies/hanuman-ansh/" aria-label="Open details for Hanuman Ansh">
+            <img class="poster-thumb" src="/posters/hanuman-ansh.jpg" alt="Hanuman Ansh box office poster" loading="lazy" />
+            <span>Hanuman Ansh</span>
+          </a>
+        </td>
+        <td>Hindi</td>
+        <td>7 Aug 2026</td>
+        <td class="num">₹291.5 Cr</td>
+        <td class="num strong">₹381.4 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">5</td>
+        <td class="title-cell">
+          <a href="/movies/toxic/" aria-label="Open details for Toxic">
+            <img class="poster-thumb" src="/posters/toxic.jpg" alt="Toxic box office poster" loading="lazy" />
+            <span>Toxic<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Kannada</td>
+        <td>26 Aug 2026</td>
+        <td class="num">₹250.1 Cr</td>
+        <td class="num strong">₹342.2 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">6</td>
+        <td class="title-cell">
+          <a href="/movies/peddi/" aria-label="Open details for Peddi">
+            <img class="poster-thumb" src="/posters/peddi.jpg" alt="Peddi box office poster" loading="lazy" />
+            <span>Peddi<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Telugu</td>
+        <td>27 Mar 2026</td>
+        <td class="num">₹244.6 Cr</td>
+        <td class="num strong">₹341.9 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">7</td>
+        <td class="title-cell">
+          <a href="/movies/mirzapur-the-movie/" aria-label="Open details for Mirzapur: The Movie">
+            <img class="poster-thumb" src="/posters/hero-cinema.jpg" alt="Mirzapur: The Movie box office poster" loading="lazy" />
+            <span>Mirzapur: The Movie<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Hindi</td>
+        <td>4 Sept 2026</td>
+        <td class="num">₹223.8 Cr</td>
+        <td class="num strong">₹325.9 Cr</td>
+      </tr>
+<tr class="">
+        <td class="rank">8</td>
+        <td class="title-cell">
+          <a href="/movies/jana-nayagan/" aria-label="Open details for Jana Nayagan">
+            <img class="poster-thumb" src="/posters/jana-nayagan.jpg" alt="Jana Nayagan box office poster" loading="lazy" />
+            <span>Jana Nayagan</span>
+          </a>
+        </td>
+        <td>Tamil</td>
+        <td>10 Jan 2026</td>
+        <td class="num">₹0.00 Cr</td>
+        <td class="num strong">₹322.5 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">9</td>
+        <td class="title-cell">
+          <a href="/movies/karuppu/" aria-label="Open details for Karuppu">
+            <img class="poster-thumb" src="/posters/karuppu.jpg" alt="Karuppu box office poster" loading="lazy" />
+            <span>Karuppu<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Tamil</td>
+        <td>10 Apr 2026</td>
+        <td class="num">₹198.2 Cr</td>
+        <td class="num strong">₹310.1 Cr</td>
+      </tr>
+<tr class="">
+        <td class="rank">10</td>
+        <td class="title-cell">
+          <a href="/movies/mana-shankara-vara-prasad-garu/" aria-label="Open details for Mana Shankara Vara Prasad Garu">
+            <img class="poster-thumb" src="/posters/msvpg.svg" alt="Mana Shankara Vara Prasad Garu box office poster" loading="lazy" />
+            <span>Mana Shankara Vara Prasad Garu</span>
+          </a>
+        </td>
+        <td>Telugu</td>
+        <td>12 Jan 2026</td>
+        <td class="num">₹0.00 Cr</td>
+        <td class="num strong">₹305.0 Cr</td>
+      </tr>
+<tr class="">
+        <td class="rank">11</td>
+        <td class="title-cell">
+          <a href="/movies/bhooth-bangla/" aria-label="Open details for Bhooth Bangla">
+            <img class="poster-thumb" src="/posters/bhooth-bangla.jpg" alt="Bhooth Bangla box office poster" loading="lazy" />
+            <span>Bhooth Bangla</span>
+          </a>
+        </td>
+        <td>Hindi</td>
+        <td>3 Apr 2026</td>
+        <td class="num">₹168.3 Cr</td>
+        <td class="num strong">₹247.3 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">12</td>
+        <td class="title-cell">
+          <a href="/movies/irumudi/" aria-label="Open details for Irumudi">
+            <img class="poster-thumb" src="/posters/irumudi.jpg" alt="Irumudi box office poster" loading="lazy" />
+            <span>Irumudi<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Telugu</td>
+        <td>21 Aug 2026</td>
+        <td class="num">₹190.8 Cr</td>
+        <td class="num strong">₹243.2 Cr</td>
+      </tr>
+<tr class="">
+        <td class="rank">13</td>
+        <td class="title-cell">
+          <a href="/movies/drishyam-3/" aria-label="Open details for Drishyam 3">
+            <img class="poster-thumb" src="/posters/drishyam-3.jpg" alt="Drishyam 3 box office poster" loading="lazy" />
+            <span>Drishyam 3</span>
+          </a>
+        </td>
+        <td>Malayalam</td>
+        <td>19 Feb 2026</td>
+        <td class="num">₹174.0 Cr</td>
+        <td class="num strong">₹242.0 Cr</td>
+      </tr>
+<tr class="">
+        <td class="rank">14</td>
+        <td class="title-cell">
+          <a href="/movies/vaazha-ii/" aria-label="Open details for Vaazha II: Biopic of a Billion Bros">
+            <img class="poster-thumb" src="/posters/vaazha-ii.svg" alt="Vaazha II: Biopic of a Billion Bros box office poster" loading="lazy" />
+            <span>Vaazha II: Biopic of a Billion Bros</span>
+          </a>
+        </td>
+        <td>Malayalam</td>
+        <td>6 Mar 2026</td>
+        <td class="num">₹178.0 Cr</td>
+        <td class="num strong">₹234.5 Cr</td>
+      </tr>
+<tr class="">
+        <td class="rank">15</td>
+        <td class="title-cell">
+          <a href="/movies/the-odyssey/" aria-label="Open details for The Odyssey">
+            <img class="poster-thumb" src="/posters/the-odyssey.jpg" alt="The Odyssey box office poster" loading="lazy" />
+            <span>The Odyssey</span>
+          </a>
+        </td>
+        <td>English</td>
+        <td>17 Jul 2026</td>
+        <td class="num">₹195.6 Cr</td>
+        <td class="num strong">₹233.0 Cr</td>
+      </tr>
+<tr class="">
+        <td class="rank">16</td>
+        <td class="title-cell">
+          <a href="/movies/dhamaal-4/" aria-label="Open details for Dhamaal 4">
+            <img class="poster-thumb" src="/posters/dhamaal-4.jpg" alt="Dhamaal 4 box office poster" loading="lazy" />
+            <span>Dhamaal 4</span>
+          </a>
+        </td>
+        <td>Hindi</td>
+        <td>10 Jul 2026</td>
+        <td class="num">₹167.9 Cr</td>
+        <td class="num strong">₹230.2 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">17</td>
+        <td class="title-cell">
+          <a href="/movies/awarapan-2/" aria-label="Open details for Awarapan 2">
+            <img class="poster-thumb" src="/posters/awarapan-2.jpg" alt="Awarapan 2 box office poster" loading="lazy" />
+            <span>Awarapan 2<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Hindi</td>
+        <td>14 Aug 2026</td>
+        <td class="num">₹150.6 Cr</td>
+        <td class="num strong">₹210.3 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">18</td>
+        <td class="title-cell">
+          <a href="/movies/vishwanath-and-sons/" aria-label="Open details for Vishwanath And Sons">
+            <img class="poster-thumb" src="/posters/vishwanath.jpg" alt="Vishwanath And Sons box office poster" loading="lazy" />
+            <span>Vishwanath And Sons<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Tamil</td>
+        <td>14 Aug 2026</td>
+        <td class="num">₹122.5 Cr</td>
+        <td class="num strong">₹209.5 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">19</td>
+        <td class="title-cell">
+          <a href="/movies/welcome-to-the-jungle/" aria-label="Open details for Welcome To The Jungle">
+            <img class="poster-thumb" src="/posters/welcome-jungle.jpg" alt="Welcome To The Jungle box office poster" loading="lazy" />
+            <span>Welcome To The Jungle<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Hindi</td>
+        <td>26 Jun 2026</td>
+        <td class="num">₹134.1 Cr</td>
+        <td class="num strong">₹192.8 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">20</td>
+        <td class="title-cell">
+          <a href="/movies/cocktail-2/" aria-label="Open details for Cocktail 2">
+            <img class="poster-thumb" src="/posters/cocktail-2.jpg" alt="Cocktail 2 box office poster" loading="lazy" />
+            <span>Cocktail 2<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Hindi</td>
+        <td>19 Jun 2026</td>
+        <td class="num">₹95.50 Cr</td>
+        <td class="num strong">₹147.7 Cr</td>
+      </tr>
+<tr class="">
+        <td class="rank">21</td>
+        <td class="title-cell">
+          <a href="/movies/alpha/" aria-label="Open details for Alpha">
+            <img class="poster-thumb" src="/posters/alpha.jpg" alt="Alpha box office poster" loading="lazy" />
+            <span>Alpha</span>
+          </a>
+        </td>
+        <td>Hindi</td>
+        <td>3 Jul 2026</td>
+        <td class="num">₹57.72 Cr</td>
+        <td class="num strong">₹98.62 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">22</td>
+        <td class="title-cell">
+          <a href="/movies/batwara-1947/" aria-label="Open details for Batwara 1947">
+            <img class="poster-thumb" src="/posters/batwara.jpg" alt="Batwara 1947 box office poster" loading="lazy" />
+            <span>Batwara 1947<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Hindi</td>
+        <td>14 Aug 2026</td>
+        <td class="num">₹38.08 Cr</td>
+        <td class="num strong">₹54.20 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">23</td>
+        <td class="title-cell">
+          <a href="/movies/sardar-2/" aria-label="Open details for Sardar 2">
+            <img class="poster-thumb" src="/posters/hero-cinema.jpg" alt="Sardar 2 box office poster" loading="lazy" />
+            <span>Sardar 2<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Tamil</td>
+        <td>10 Sept 2026</td>
+        <td class="num">₹16.28 Cr</td>
+        <td class="num strong">₹23.83 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">24</td>
+        <td class="title-cell">
+          <a href="/movies/insidious-out-of-the-further/" aria-label="Open details for Insidious: Out of The Further">
+            <img class="poster-thumb" src="/posters/insidious-further.jpg" alt="Insidious: Out of The Further box office poster" loading="lazy" />
+            <span>Insidious: Out of The Further<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>English</td>
+        <td>21 Aug 2026</td>
+        <td class="num">₹16.62 Cr</td>
+        <td class="num strong">₹21.61 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">25</td>
+        <td class="title-cell">
+          <a href="/movies/haiwaan/" aria-label="Open details for Haiwaan">
+            <img class="poster-thumb" src="/posters/hero-cinema.jpg" alt="Haiwaan box office poster" loading="lazy" />
+            <span>Haiwaan<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Hindi</td>
+        <td>11 Sept 2026</td>
+        <td class="num">₹9.92 Cr</td>
+        <td class="num strong">₹15.08 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">26</td>
+        <td class="title-cell">
+          <a href="/movies/hi/" aria-label="Open details for Hi">
+            <img class="poster-thumb" src="/posters/hi.jpg" alt="Hi box office poster" loading="lazy" />
+            <span>Hi<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Tamil</td>
+        <td>28 Aug 2026</td>
+        <td class="num">₹12.82 Cr</td>
+        <td class="num strong">₹14.92 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">27</td>
+        <td class="title-cell">
+          <a href="/movies/Vvan_2026/" aria-label="Open details for Vvan - Force of the Forrest">
+            <img class="poster-thumb" src="/posters/hero-cinema.jpg" alt="Vvan - Force of the Forrest box office poster" loading="lazy" />
+            <span>Vvan - Force of the Forrest<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Hindi</td>
+        <td>25 Sept 2026</td>
+        <td class="num">₹8.00 Cr</td>
+        <td class="num strong">₹9.60 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">28</td>
+        <td class="title-cell">
+          <a href="/movies/Avengers_Endgame_Encore_2026/" aria-label="Open details for Avengers Endgame: Encore">
+            <img class="poster-thumb" src="/posters/hero-cinema.jpg" alt="Avengers Endgame: Encore box office poster" loading="lazy" />
+            <span>Avengers Endgame: Encore<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Hollywood</td>
+        <td>25 Sept 2026</td>
+        <td class="num">₹7.25 Cr</td>
+        <td class="num strong">₹8.68 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">29</td>
+        <td class="title-cell">
+          <a href="/movies/paw-patrol-the-dino-movie/" aria-label="Open details for PAW Patrol: The Dino Movie">
+            <img class="poster-thumb" src="/posters/paw-patrol-dino.jpg" alt="PAW Patrol: The Dino Movie box office poster" loading="lazy" />
+            <span>PAW Patrol: The Dino Movie<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>English</td>
+        <td>21 Aug 2026</td>
+        <td class="num">₹3.44 Cr</td>
+        <td class="num strong">₹4.48 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">30</td>
+        <td class="title-cell">
+          <a href="/movies/Meesaya_Murukku_2_2026/" aria-label="Open details for Meesaya Murukku 2">
+            <img class="poster-thumb" src="/posters/hero-cinema.jpg" alt="Meesaya Murukku 2 box office poster" loading="lazy" />
+            <span>Meesaya Murukku 2<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Tamil</td>
+        <td>25 Sept 2026</td>
+        <td class="num">₹3.30 Cr</td>
+        <td class="num strong">₹3.85 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">31</td>
+        <td class="title-cell">
+          <a href="/movies/Dorothy_2026/" aria-label="Open details for Dorothy">
+            <img class="poster-thumb" src="/posters/hero-cinema.jpg" alt="Dorothy box office poster" loading="lazy" />
+            <span>Dorothy<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Tamil</td>
+        <td>25 Sept 2026</td>
+        <td class="num">₹1.70 Cr</td>
+        <td class="num strong">₹2.00 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">32</td>
+        <td class="title-cell">
+          <a href="/movies/Heart_of_the_Beast_2026/" aria-label="Open details for Heart of the Beast">
+            <img class="poster-thumb" src="/posters/hero-cinema.jpg" alt="Heart of the Beast box office poster" loading="lazy" />
+            <span>Heart of the Beast<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Hollywood</td>
+        <td>25 Sept 2026</td>
+        <td class="num">₹0.70 Cr</td>
+        <td class="num strong">₹0.84 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">33</td>
+        <td class="title-cell">
+          <a href="/movies/Primetime_2026/" aria-label="Open details for Primetime">
+            <img class="poster-thumb" src="/posters/hero-cinema.jpg" alt="Primetime box office poster" loading="lazy" />
+            <span>Primetime<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Hollywood</td>
+        <td>25 Sept 2026</td>
+        <td class="num">₹0.29 Cr</td>
+        <td class="num strong">₹0.33 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">34</td>
+        <td class="title-cell">
+          <a href="/movies/Aaram_2026/" aria-label="Open details for Aaram">
+            <img class="poster-thumb" src="/posters/hero-cinema.jpg" alt="Aaram box office poster" loading="lazy" />
+            <span>Aaram<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Malayalam</td>
+        <td>25 Sept 2026</td>
+        <td class="num">₹0.20 Cr</td>
+        <td class="num strong">₹0.22 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">35</td>
+        <td class="title-cell">
+          <a href="/movies/Lenin_Pandiyan_2026/" aria-label="Open details for Lenin Pandiyan">
+            <img class="poster-thumb" src="/posters/hero-cinema.jpg" alt="Lenin Pandiyan box office poster" loading="lazy" />
+            <span>Lenin Pandiyan<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Tamil</td>
+        <td>25 Sept 2026</td>
+        <td class="num">₹0.16 Cr</td>
+        <td class="num strong">₹0.18 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">36</td>
+        <td class="title-cell">
+          <a href="/movies/Forgotten_Island_2026/" aria-label="Open details for Forgotten Island (3D)">
+            <img class="poster-thumb" src="/posters/hero-cinema.jpg" alt="Forgotten Island (3D) box office poster" loading="lazy" />
+            <span>Forgotten Island (3D)<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Hollywood</td>
+        <td>25 Sept 2026</td>
+        <td class="num">₹0.17 Cr</td>
+        <td class="num strong">₹0.18 Cr</td>
+      </tr>
+<tr class="live">
+        <td class="rank">37</td>
+        <td class="title-cell">
+          <a href="/movies/Tutt_Paini_English_Ne_2026/" aria-label="Open details for Tutt Paini English Ne">
+            <img class="poster-thumb" src="/posters/hero-cinema.jpg" alt="Tutt Paini English Ne box office poster" loading="lazy" />
+            <span>Tutt Paini English Ne<span class="pill">Playing</span></span>
+          </a>
+        </td>
+        <td>Indian</td>
+        <td>25 Sept 2026</td>
+        <td class="num">₹0.14 Cr</td>
+        <td class="num strong">₹0.15 Cr</td>
+      </tr>
+</tbody>
         </table>
       </div>
     </section>
@@ -254,9 +1334,15 @@
     <div class="wrap">
       Independent consensus of published theatrical estimates. India has no official auditor — we publish the spread.
       Figures in ₹ crore. India nett / worldwide gross.
+      · <a href="/about-methodology/">Methodology</a>
+      · <a href="/rankings/2026/">2026 rankings</a>
+      · <a href="/languages/hindi-box-office/">Hindi</a>
+      · <a href="/languages/tamil-box-office/">Tamil</a>
+      · <a href="/languages/telugu-box-office/">Telugu</a>
+      · <a href="/feed.xml">RSS</a>
     </div>
   </footer>
-  <script src="./catalog.js?v=20260920c"></script>
-  <script src="./app.js?v=20260920c"></script>
+  <script src="./catalog.js?v=20260926a"></script>
+  <script src="./app.js?v=20260926a"></script>
 </body>
 </html>
