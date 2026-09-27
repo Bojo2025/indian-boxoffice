@@ -1,6 +1,6 @@
 {
   "date": "2026-09-27",
-  "generatedAt": "2026-09-27T04:29:46.517Z",
+  "generatedAt": "2026-09-27T09:34:44.914Z",
   "films": [
     {
       "id": "toxic",
@@ -201,8 +201,8 @@
     {
       "id": "vvan-force-of-the-forrest",
       "title": "Vvan - Force of the Forrest",
-      "indiaNet": 19,
-      "worldwide": 24.85,
+      "indiaNet": 19.25,
+      "worldwide": 25.15,
       "status": "playing"
     },
     {
@@ -222,8 +222,15 @@
     {
       "id": "dorothy",
       "title": "Dorothy",
-      "indiaNet": 2.07,
-      "worldwide": 1.05,
+      "indiaNet": 2.15,
+      "worldwide": 2.5,
+      "status": "playing"
+    },
+    {
+      "id": "heart-of-the-beast",
+      "title": "Heart of the Beast",
+      "indiaNet": 2,
+      "worldwide": 2.39,
       "status": "playing"
     },
     {
@@ -231,13 +238,6 @@
       "title": "Primetime",
       "indiaNet": 0.81,
       "worldwide": 0.91,
-      "status": "playing"
-    },
-    {
-      "id": "heart-of-the-beast",
-      "title": "Heart of the Beast",
-      "indiaNet": 2.05,
-      "worldwide": 0.84,
       "status": "playing"
     },
     {
