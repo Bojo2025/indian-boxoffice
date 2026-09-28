@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generatedAt": "2026-09-28T04:31:01.819Z",
+  "generatedAt": "2026-09-28T10:13:35.537Z",
   "films": [
     {
       "id": "toxic",
@@ -201,8 +201,8 @@
     {
       "id": "vvan-force-of-the-forrest",
       "title": "Vvan - Force of the Forrest",
-      "indiaNet": 33.25,
-      "worldwide": 43.15,
+      "indiaNet": 33.6,
+      "worldwide": 43.65,
       "status": "playing"
     },
     {

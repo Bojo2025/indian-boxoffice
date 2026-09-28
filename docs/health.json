@@ -1,44 +1,44 @@
 {
-  "updatedAt": "2026-09-28T04:31:01.819Z",
+  "updatedAt": "2026-09-28T10:13:35.537Z",
   "spine": {
     "sacnilk": {
       "ok": true,
       "streakFail": 0,
-      "lastOk": "2026-09-28T04:31:01.819Z",
+      "lastOk": "2026-09-28T10:13:35.537Z",
       "lastFail": "2026-09-24T21:19:37.184Z",
       "detail": "1034 collection rows from 20 live pulls",
       "readings": 1034
     },
     "koimoi": {
       "ok": false,
-      "streakFail": 60,
+      "streakFail": 61,
       "lastOk": null,
-      "lastFail": "2026-09-28T04:31:01.819Z",
+      "lastFail": "2026-09-28T10:13:35.537Z",
       "detail": "HTTP 403",
       "readings": 0
     },
     "hungama": {
       "ok": true,
       "streakFail": 0,
-      "lastOk": "2026-09-28T04:31:01.819Z",
+      "lastOk": "2026-09-28T10:13:35.537Z",
       "lastFail": null,
       "detail": "49 collection rows from 16 live pulls",
       "readings": 49
     },
     "boi": {
       "ok": false,
-      "streakFail": 40,
+      "streakFail": 41,
       "lastOk": "2026-09-20T12:15:00.746Z",
-      "lastFail": "2026-09-28T04:31:01.819Z",
+      "lastFail": "2026-09-28T10:13:35.537Z",
       "detail": "HTTP 403",
       "readings": 0
     }
   },
   "alerts": [
-    "koimoi failed: HTTP 403 (streak 60)",
-    "koimoi has failed 60 consecutive publishes",
-    "boi failed: HTTP 403 (streak 40)",
-    "boi has failed 40 consecutive publishes"
+    "koimoi failed: HTTP 403 (streak 61)",
+    "koimoi has failed 61 consecutive publishes",
+    "boi failed: HTTP 403 (streak 41)",
+    "boi has failed 41 consecutive publishes"
   ],
   "hardFail": false
 }

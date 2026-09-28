@@ -1,5 +1,5 @@
 window.IBO_CATALOG = {
-  "generatedAt": "2026-09-28T04:31:01.819Z",
+  "generatedAt": "2026-09-28T10:13:35.537Z",
   "deskDate": "2026-09-28",
   "comparedTo": "2026-09-28 prior",
   "mode": "server-consensus",
@@ -12,10 +12,10 @@ window.IBO_CATALOG = {
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 60)",
-      "koimoi has failed 60 consecutive publishes",
-      "boi failed: HTTP 403 (streak 40)",
-      "boi has failed 40 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 61)",
+      "koimoi has failed 61 consecutive publishes",
+      "boi failed: HTTP 403 (streak 41)",
+      "boi has failed 41 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
@@ -25,7 +25,7 @@ window.IBO_CATALOG = {
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 60,
+        "streakFail": 61,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@ window.IBO_CATALOG = {
       },
       "boi": {
         "ok": false,
-        "streakFail": 40,
+        "streakFail": 41,
         "detail": "HTTP 403"
       }
     }
@@ -1704,10 +1704,9 @@ window.IBO_CATALOG = {
       "overseas": 22.45,
       "worldwide": 244.45,
       "lastDayNet": 0.61,
-      "trackedThroughDay": 39,
+      "trackedThroughDay": 38,
       "liveSources": [
-        "sacnilk",
-        "pinkvilla"
+        "sacnilk"
       ],
       "deltaNet": 0,
       "deltaWw": 0,
@@ -3296,8 +3295,7 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk",
         "hungama",
-        "wikipedia",
-        "pinkvilla"
+        "wikipedia"
       ],
       "deltaNet": 0,
       "deltaWw": 0,
@@ -4409,8 +4407,8 @@ window.IBO_CATALOG = {
       "trackedThroughDay": 25,
       "liveSources": [
         "sacnilk",
-        "hungama",
-        "wikipedia"
+        "wikipedia",
+        "hungama"
       ],
       "deltaNet": 0,
       "deltaWw": 0,
@@ -9588,8 +9586,8 @@ window.IBO_CATALOG = {
       "trackedThroughDay": 186,
       "liveSources": [
         "sacnilk",
-        "hungama",
-        "wikipedia"
+        "wikipedia",
+        "hungama"
       ],
       "deltaNet": 0,
       "deltaWw": 0,
@@ -13084,17 +13082,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 33.25,
-      "indiaGross": 39.65,
+      "indiaNet": 33.6,
+      "indiaGross": 40.15,
       "overseas": 3.5,
-      "worldwide": 43.15,
-      "lastDayNet": 14,
+      "worldwide": 43.65,
+      "lastDayNet": 14.35,
       "trackedThroughDay": 4,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.35,
+      "deltaWw": 0.5,
       "dayWise": [
         {
           "reportDate": "2026-09-25",
@@ -13123,11 +13121,11 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-09-27",
           "dayNumber": 3,
-          "indiaNet": 14,
-          "indiaGross": 16.75,
+          "indiaNet": 14.35,
+          "indiaGross": 17.25,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": 24.44,
+          "netChangePct": 27.56,
           "disagreementPct": 0,
           "screens": 7135,
           "occupancy": 43
@@ -13357,8 +13355,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": -0.11,
-      "deltaWw": 1.65,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-09-25",
@@ -13554,11 +13552,11 @@ window.IBO_CATALOG = {
   ],
   "changes": [
     {
-      "id": "dorothy",
-      "title": "Dorothy",
-      "text": "Dorothy: WW +₹1.65 Cr since 2026-09-28 prior",
-      "deltaNet": -0.11,
-      "deltaWw": 1.65
+      "id": "vvan-force-of-the-forrest",
+      "title": "Vvan - Force of the Forrest",
+      "text": "Vvan - Force of the Forrest: WW +₹0.5 Cr since 2026-09-28 prior",
+      "deltaNet": 0.35,
+      "deltaWw": 0.5
     }
   ],
   "logs": [
@@ -13573,19 +13571,14 @@ window.IBO_CATALOG = {
       "detail": "49 collection rows from 16 live pulls"
     },
     {
-      "sourceId": "etimes",
-      "status": "ok",
-      "detail": "Fetched 1 page (headlines / status)"
-    },
-    {
       "sourceId": "wikipedia",
       "status": "ok",
       "detail": "8 collection rows from 1 live pull"
     },
     {
-      "sourceId": "pinkvilla",
+      "sourceId": "etimes",
       "status": "ok",
-      "detail": "2 collection rows from 1 live pull"
+      "detail": "Fetched 1 page (headlines / status)"
     },
     {
       "sourceId": "koimoi",
@@ -13593,14 +13586,19 @@ window.IBO_CATALOG = {
       "detail": "HTTP 403"
     },
     {
-      "sourceId": "boi",
-      "status": "blocked",
-      "detail": "HTTP 403"
+      "sourceId": "pinkvilla",
+      "status": "ok",
+      "detail": "Fetched 1 page (headlines / status)"
     },
     {
       "sourceId": "express",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
+    },
+    {
+      "sourceId": "boi",
+      "status": "blocked",
+      "detail": "HTTP 403"
     }
   ],
   "headlines": [
@@ -13608,123 +13606,123 @@ window.IBO_CATALOG = {
       "sourceId": "sacnilk",
       "title": "Batwara 1947: Sacnilk 29 days, India net ₹38.08 Cr",
       "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:55.968Z",
+      "publishedAt": "2026-09-28T10:13:30.925Z",
       "summary": "Live day-wise pull. Last day 41. WW ₹54.2 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Toxic: Sacnilk 33 days, India net ₹250.09 Cr",
       "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:56.004Z",
+      "publishedAt": "2026-09-28T10:13:30.961Z",
       "summary": "Live day-wise pull. Last day 1. WW ₹342.21 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Border 2: Sacnilk 88 days, India net ₹329.43 Cr",
       "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:56.114Z",
+      "publishedAt": "2026-09-28T10:13:31.058Z",
       "summary": "Live day-wise pull. Last day 112. WW ₹450.19 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Awarapan 2: Sacnilk 45 days, India net ₹150.59 Cr",
-      "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:56.151Z",
-      "summary": "Live day-wise pull. Last day 43. WW ₹213.01 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Irumudi: Sacnilk 38 days, India net ₹191.88 Cr",
-      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:56.174Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹244.45 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Hi: Sacnilk 31 days, India net ₹12.83 Cr",
       "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:56.197Z",
+      "publishedAt": "2026-09-28T10:13:31.108Z",
       "summary": "Live day-wise pull. Last day 30. WW ₹14.93 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Vvan - Force of the Forrest: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/Vvan_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:56.256Z",
+      "publishedAt": "2026-09-28T10:13:31.218Z",
       "summary": "Auto-discovered Bollywood title. Latest reported India net ₹8 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Irumudi: Sacnilk 38 days, India net ₹191.88 Cr",
+      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-28T10:13:31.284Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹244.45 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Meesaya Murukku 2: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/Meesaya_Murukku_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:56.270Z",
+      "publishedAt": "2026-09-28T10:13:31.294Z",
       "summary": "Auto-discovered Kollywood title. Latest reported India net ₹3.3 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Vishwanath And Sons: Sacnilk 45 days, India net ₹122.54 Cr",
-      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:56.302Z",
-      "summary": "Live day-wise pull. Last day 45. WW ₹209.46 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Avengers Endgame: Encore: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/Avengers_Endgame_Encore_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:56.353Z",
+      "publishedAt": "2026-09-28T10:13:31.306Z",
       "summary": "Auto-discovered Hollywood title. Latest reported India net ₹7.25 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Vishwanath And Sons: Sacnilk 45 days, India net ₹122.54 Cr",
+      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-28T10:13:31.335Z",
+      "summary": "Live day-wise pull. Last day 45. WW ₹209.46 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Peddi: Sacnilk 73 days, India net ₹244.64 Cr",
       "url": "https://www.sacnilk.com/news/peddi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:56.397Z",
+      "publishedAt": "2026-09-28T10:13:31.368Z",
       "summary": "Live day-wise pull. Last day 88. WW ₹341.9 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Marham: Poetry &amp; Music - Live on Stage: Sacnilk discovered",
       "url": "https://www.sacnilk.com/movie/Marham_Poetry__Music__Live_on_Stage_2026",
-      "publishedAt": "2026-09-28T04:30:56.456Z",
+      "publishedAt": "2026-09-28T10:13:31.428Z",
       "summary": "Auto-discovered Bollywood title. Current board India net ₹0.18 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Karuppu: Sacnilk 67 days, India net ₹198.18 Cr",
-      "url": "https://www.sacnilk.com/news/karuppu_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:56.520Z",
-      "summary": "Live day-wise pull. Last day 69. WW ₹310.12 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Dorothy: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Dorothy_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:56.545Z",
-      "summary": "Auto-discovered Kollywood title. Latest reported India net ₹0.9 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Dhamaal 4: Sacnilk 65 days, India net ₹167.88 Cr",
-      "url": "https://www.sacnilk.com/news/dhamaal_4_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:56.614Z",
-      "summary": "Live day-wise pull. Last day 74. WW ₹230.17 Cr."
+      "title": "Awarapan 2: Sacnilk 45 days, India net ₹150.59 Cr",
+      "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-28T10:13:31.563Z",
+      "summary": "Live day-wise pull. Last day 43. WW ₹213.01 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Heart of the Beast: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/Heart_of_the_Beast_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-09-28T04:30:56.627Z",
+      "publishedAt": "2026-09-28T10:13:31.576Z",
       "summary": "Auto-discovered Hollywood title. Latest reported India net ₹0.7 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Karuppu: Sacnilk 67 days, India net ₹198.18 Cr",
+      "url": "https://www.sacnilk.com/news/karuppu_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-28T10:13:31.608Z",
+      "summary": "Live day-wise pull. Last day 69. WW ₹310.12 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Primetime: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Primetime_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-28T10:13:31.622Z",
+      "summary": "Auto-discovered Hollywood title. Latest reported India net ₹0.29 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Dhurandhar: The Revenge: Sacnilk 106 days, India net ₹1149.3 Cr",
+      "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-09-28T10:13:31.667Z",
+      "summary": "Live day-wise pull. Last day 106. WW ₹1813.39 Cr."
     }
   ],
   "morningBrief": {
-    "briefDate": "2026-09-27",
-    "generatedAt": "2026-09-27T09:34:50.736Z",
-    "headline": "India box office: Vvan - Force of the Forrest leads the latest daily chart at ₹11.3 Cr",
-    "lede": "Vvan - Force of the Forrest leads the latest reported daily India nett at ₹11.3 Cr on Day 3; its cumulative India nett is ₹19.3 Cr.",
-    "body": "Latest reported daily ranking: 1. Vvan - Force of the Forrest — ₹11.3 Cr on Day 3; cumulative India nett ₹19.3 Cr | 2. Avengers Endgame: Encore — ₹7.7 Cr on Day 3; cumulative India nett ₹14.9 Cr | 3. Hanuman Ansh — ₹6.5 Cr on Day 52; cumulative India nett ₹298 Cr | 4. Meesaya Murukku 2 — ₹4.6 Cr on Day 3; cumulative India nett ₹7.9 Cr | 5. Mirzapur: The Movie — ₹1.6 Cr on Day 24; cumulative India nett ₹225.4 Cr.\n\nRecent-release watch: Marham: Poetry &amp; Music - Live on Stage (released 2026-09-26) — latest India nett n/a; Vvan - Force of the Forrest (released 2026-09-25) — latest India nett ₹11.3 Cr; Avengers Endgame: Encore (released 2026-09-25) — latest India nett ₹7.7 Cr; Meesaya Murukku 2 (released 2026-09-25) — latest India nett ₹4.6 Cr.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader at ₹1,820 Cr, but that is not the current daily chart.\n\nMomentum: Heart of the Beast +1.6 Cr worldwide; Dorothy +1.5 Cr worldwide since the previous board snapshot.\n\nDesk health: 2 of 4 tracker feeds are unreachable on this pull. Figures remain the weighted-median consensus of the trackers still reporting; India has no official box-office auditor.",
+    "briefDate": "2026-09-28",
+    "generatedAt": "2026-09-28T10:13:40.562Z",
+    "headline": "India box office: Vvan - Force of the Forrest leads the latest daily chart at ₹14.4 Cr",
+    "lede": "Vvan - Force of the Forrest leads the latest reported daily India nett at ₹14.4 Cr on Day 4; its cumulative India nett is ₹33.6 Cr.",
+    "body": "Latest reported daily ranking: 1. Vvan - Force of the Forrest — ₹14.4 Cr on Day 4; cumulative India nett ₹33.6 Cr | 2. Hanuman Ansh — ₹9 Cr on Day 53; cumulative India nett ₹307 Cr | 3. Avengers Endgame: Encore — ₹7.6 Cr on Day 4; cumulative India nett ₹22.5 Cr | 4. Meesaya Murukku 2 — ₹6.1 Cr on Day 4; cumulative India nett ₹14 Cr | 5. Mirzapur: The Movie — ₹1.7 Cr on Day 25; cumulative India nett ₹227.1 Cr.\n\nRecent-release watch: Marham: Poetry &amp; Music - Live on Stage (released 2026-09-26) — latest India nett n/a; Vvan - Force of the Forrest (released 2026-09-25) — latest India nett ₹14.4 Cr; Avengers Endgame: Encore (released 2026-09-25) — latest India nett ₹7.6 Cr; Meesaya Murukku 2 (released 2026-09-25) — latest India nett ₹6.1 Cr.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader at ₹1,820 Cr, but that is not the current daily chart.\n\nMomentum: Vvan - Force of the Forrest +0.5 Cr worldwide since the previous board snapshot.\n\nDesk health: 2 of 4 tracker feeds are unreachable on this pull. Figures remain the weighted-median consensus of the trackers still reporting; India has no official box-office auditor.",
     "citations": [],
-    "boardGeneratedAt": "2026-09-27T09:34:44.914Z",
+    "boardGeneratedAt": "2026-09-28T10:13:35.537Z",
     "model": "deterministic-editorial-v1"
   },
   "downloads": {
