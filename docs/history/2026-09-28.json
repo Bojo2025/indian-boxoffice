@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generatedAt": "2026-09-27T21:06:28.777Z",
+  "generatedAt": "2026-09-28T04:31:01.819Z",
   "films": [
     {
       "id": "toxic",
@@ -229,8 +229,8 @@
     {
       "id": "dorothy",
       "title": "Dorothy",
-      "indiaNet": 3.66,
-      "worldwide": 2.5,
+      "indiaNet": 3.55,
+      "worldwide": 4.15,
       "status": "playing"
     },
     {
