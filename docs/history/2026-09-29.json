@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generatedAt": "2026-09-29T04:59:51.848Z",
+  "generatedAt": "2026-09-29T10:11:00.206Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 309.38,
-      "worldwide": 404.25,
+      "indiaNet": 309.28,
+      "worldwide": 404.15,
       "status": "late"
     },
     {
@@ -229,8 +229,8 @@
     {
       "id": "heart-of-the-beast",
       "title": "Heart of the Beast",
-      "indiaNet": 3.99,
-      "worldwide": 4.19,
+      "indiaNet": 4.05,
+      "worldwide": 4.84,
       "status": "playing"
     },
     {
