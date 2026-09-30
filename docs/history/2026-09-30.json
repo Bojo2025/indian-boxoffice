@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generatedAt": "2026-09-29T19:52:34.237Z",
+  "generatedAt": "2026-09-30T00:09:43.088Z",
   "films": [
     {
       "id": "toxic",
@@ -194,8 +194,8 @@
     {
       "id": "marham-poetry-amp-music-live-on-stage",
       "title": "Marham: Poetry &amp; Music - Live on Stage",
-      "indiaNet": 0.18,
-      "worldwide": 0.2,
+      "indiaNet": 0.24,
+      "worldwide": 0.27,
       "status": "playing"
     },
     {
