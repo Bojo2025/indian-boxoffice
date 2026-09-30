@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generatedAt": "2026-09-30T10:03:02.892Z",
+  "generatedAt": "2026-09-30T17:48:21.186Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 312.28,
-      "worldwide": 407.9,
+      "indiaNet": 314.63,
+      "worldwide": 410.75,
       "status": "late"
     },
     {
@@ -82,8 +82,8 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 228.35,
-      "worldwide": 332.54,
+      "indiaNet": 228.9,
+      "worldwide": 333.29,
       "status": "playing"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 117.7,
-      "worldwide": 153.01,
+      "indiaNet": 195.78,
+      "worldwide": 233.27,
       "status": "late"
     },
     {
@@ -201,36 +201,36 @@
     {
       "id": "vvan-force-of-the-forrest",
       "title": "Vvan - Force of the Forrest",
-      "indiaNet": 44.85,
-      "worldwide": 57.95,
+      "indiaNet": 49.2,
+      "worldwide": 63.54,
       "status": "playing"
     },
     {
       "id": "avengers-endgame-encore",
       "title": "Avengers Endgame: Encore",
-      "indiaNet": 27.3,
-      "worldwide": 32.63,
+      "indiaNet": 29.35,
+      "worldwide": 35.07,
       "status": "playing"
     },
     {
       "id": "meesaya-murukku-2",
       "title": "Meesaya Murukku 2",
-      "indiaNet": 19.35,
-      "worldwide": 27.35,
+      "indiaNet": 21.45,
+      "worldwide": 29.75,
       "status": "playing"
     },
     {
       "id": "dorothy",
       "title": "Dorothy",
-      "indiaNet": 5.25,
-      "worldwide": 6.15,
+      "indiaNet": 6.08,
+      "worldwide": 7.1,
       "status": "playing"
     },
     {
       "id": "heart-of-the-beast",
       "title": "Heart of the Beast",
-      "indiaNet": 4.7,
-      "worldwide": 4.84,
+      "indiaNet": 4.65,
+      "worldwide": 5.54,
       "status": "playing"
     },
     {
@@ -243,8 +243,8 @@
     {
       "id": "primetime",
       "title": "Primetime",
-      "indiaNet": 1.69,
-      "worldwide": 1.9,
+      "indiaNet": 1.83,
+      "worldwide": 2.07,
       "status": "playing"
     },
     {
