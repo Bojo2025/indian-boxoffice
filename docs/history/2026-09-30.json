@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generatedAt": "2026-09-30T09:27:57.662Z",
+  "generatedAt": "2026-09-30T10:03:02.892Z",
   "films": [
     {
       "id": "toxic",
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 195.78,
-      "worldwide": 233.27,
+      "indiaNet": 117.7,
+      "worldwide": 153.01,
       "status": "late"
     },
     {
@@ -259,76 +259,6 @@
       "title": "Aaram",
       "indiaNet": 1,
       "worldwide": 1.12,
-      "status": "playing"
-    },
-    {
-      "id": "tutt-paini-english-ne",
-      "title": "Tutt Paini English Ne",
-      "indiaNet": 0.82,
-      "worldwide": 0.9,
-      "status": "playing"
-    },
-    {
-      "id": "mitrata",
-      "title": "Mitrata",
-      "indiaNet": 0.77,
-      "worldwide": 0.87,
-      "status": "playing"
-    },
-    {
-      "id": "forgotten-island-3d",
-      "title": "Forgotten Island (3D)",
-      "indiaNet": 0.76,
-      "worldwide": 0.82,
-      "status": "playing"
-    },
-    {
-      "id": "spark",
-      "title": "Spark",
-      "indiaNet": 0.45,
-      "worldwide": 0.51,
-      "status": "playing"
-    },
-    {
-      "id": "lenin-pandiyan",
-      "title": "Lenin Pandiyan",
-      "indiaNet": 0.44,
-      "worldwide": 0.5,
-      "status": "playing"
-    },
-    {
-      "id": "lutt-mubarak",
-      "title": "Lutt Mubarak",
-      "indiaNet": 0.4,
-      "worldwide": 0.47,
-      "status": "playing"
-    },
-    {
-      "id": "anumana-pakshi",
-      "title": "Anumana Pakshi",
-      "indiaNet": 0.4,
-      "worldwide": 0.46,
-      "status": "playing"
-    },
-    {
-      "id": "mahakavya-shri-ramayan-katha",
-      "title": "Mahakavya Shri Ramayan Katha",
-      "indiaNet": 0.38,
-      "worldwide": 0.43,
-      "status": "playing"
-    },
-    {
-      "id": "love-lottery",
-      "title": "Love Lottery",
-      "indiaNet": 0.31,
-      "worldwide": 0.34,
-      "status": "playing"
-    },
-    {
-      "id": "runner",
-      "title": "Runner",
-      "indiaNet": 0.18,
-      "worldwide": 0.21,
       "status": "playing"
     }
   ]
