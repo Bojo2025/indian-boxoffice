@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generatedAt": "2026-10-01T04:59:00.345Z",
+  "generatedAt": "2026-10-01T10:30:47.936Z",
   "films": [
     {
       "id": "toxic",
@@ -61,7 +61,7 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 314.63,
+      "indiaNet": 314.48,
       "worldwide": 410.57,
       "status": "late"
     },
@@ -201,8 +201,8 @@
     {
       "id": "vvan-force-of-the-forrest",
       "title": "Vvan - Force of the Forrest",
-      "indiaNet": 49.2,
-      "worldwide": 63.54,
+      "indiaNet": 49.1,
+      "worldwide": 63.42,
       "status": "playing"
     },
     {
@@ -229,8 +229,8 @@
     {
       "id": "heart-of-the-beast",
       "title": "Heart of the Beast",
-      "indiaNet": 5.19,
-      "worldwide": 5.54,
+      "indiaNet": 5.25,
+      "worldwide": 6.24,
       "status": "playing"
     },
     {
