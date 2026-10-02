@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generatedAt": "2026-10-02T00:36:12.451Z",
+  "generatedAt": "2026-10-02T09:30:43.922Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 317.33,
-      "worldwide": 414,
+      "indiaNet": 317.38,
+      "worldwide": 414.06,
       "status": "late"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 195.84,
-      "worldwide": 233.34,
+      "indiaNet": 195.7,
+      "worldwide": 233.18,
       "status": "late"
     },
     {
@@ -215,8 +215,8 @@
     {
       "id": "vvan-force-of-the-forrest",
       "title": "Vvan - Force of the Forrest",
-      "indiaNet": 53.5,
-      "worldwide": 69.07,
+      "indiaNet": 53.6,
+      "worldwide": 69.19,
       "status": "playing"
     },
     {
@@ -234,13 +234,6 @@
       "status": "playing"
     },
     {
-      "id": "premada-oorali",
-      "title": "Premada Oorali",
-      "indiaNet": 7.07,
-      "worldwide": 7.92,
-      "status": "playing"
-    },
-    {
       "id": "dorothy",
       "title": "Dorothy",
       "indiaNet": 6.78,
@@ -252,6 +245,13 @@
       "title": "Heart of the Beast",
       "indiaNet": 6.02,
       "worldwide": 6.24,
+      "status": "playing"
+    },
+    {
+      "id": "premada-oorali",
+      "title": "Premada Oorali",
+      "indiaNet": 5.13,
+      "worldwide": 5.94,
       "status": "playing"
     },
     {
