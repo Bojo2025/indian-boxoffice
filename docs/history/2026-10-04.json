@@ -1,6 +1,6 @@
 {
   "date": "2026-10-04",
-  "generatedAt": "2026-10-03T20:47:13.029Z",
+  "generatedAt": "2026-10-03T23:36:49.579Z",
   "films": [
     {
       "id": "toxic",
@@ -26,8 +26,8 @@
     {
       "id": "irumudi",
       "title": "Irumudi",
-      "indiaNet": 194.02,
-      "worldwide": 246.31,
+      "indiaNet": 194.12,
+      "worldwide": 246.42,
       "status": "playing"
     },
     {
@@ -82,15 +82,15 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 229.67,
-      "worldwide": 334.29,
+      "indiaNet": 229.8,
+      "worldwide": 334.45,
       "status": "playing"
     },
     {
       "id": "spider-man-bnd",
       "title": "Spider-Man: Brand New Day",
-      "indiaNet": 500.54,
-      "worldwide": 598.78,
+      "indiaNet": 500.56,
+      "worldwide": 598.81,
       "status": "late"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 195.71,
-      "worldwide": 233.19,
+      "indiaNet": 195.72,
+      "worldwide": 233.2,
       "status": "late"
     },
     {
@@ -192,6 +192,13 @@
       "status": "closed"
     },
     {
+      "id": "doraemon-castle-of-the-undersea-devil-4dx-hindi",
+      "title": "Doraemon: Castle of the Undersea Devil (4DX)(Hindi)",
+      "indiaNet": 7.03,
+      "worldwide": 5.99,
+      "status": "playing"
+    },
+    {
       "id": "sigma",
       "title": "Sigma",
       "indiaNet": 3.85,
@@ -199,59 +206,52 @@
       "status": "playing"
     },
     {
-      "id": "doraemon-castle-of-the-undersea-devil-4dx-hindi",
-      "title": "Doraemon: Castle of the Undersea Devil (4DX)(Hindi)",
-      "indiaNet": 3.94,
-      "worldwide": 2.33,
-      "status": "playing"
-    },
-    {
       "id": "verity",
       "title": "Verity",
-      "indiaNet": 1.89,
-      "worldwide": 2.12,
+      "indiaNet": 3.5,
+      "worldwide": 4.03,
       "status": "playing"
     },
     {
       "id": "dont-trouble-the-trouble",
       "title": "Don't Trouble The Trouble",
-      "indiaNet": 2.49,
-      "worldwide": 1.9,
+      "indiaNet": 3.7,
+      "worldwide": 3.32,
       "status": "playing"
     },
     {
       "id": "bail",
       "title": "Bail",
-      "indiaNet": 1.34,
-      "worldwide": 1.5,
+      "indiaNet": 2.16,
+      "worldwide": 2.47,
+      "status": "playing"
+    },
+    {
+      "id": "avaraachan-amp-sons",
+      "title": "Avaraachan &amp; Sons",
+      "indiaNet": 1.18,
+      "worldwide": 1.38,
       "status": "playing"
     },
     {
       "id": "digger",
       "title": "Digger",
-      "indiaNet": 0.65,
-      "worldwide": 0.78,
+      "indiaNet": 1.1,
+      "worldwide": 1.3,
+      "status": "playing"
+    },
+    {
+      "id": "thella-kaagitham",
+      "title": "Thella Kaagitham",
+      "indiaNet": 0.95,
+      "worldwide": 1.1,
       "status": "playing"
     },
     {
       "id": "prem-keetanu",
       "title": "Prem Keetanu",
-      "indiaNet": 0.77,
-      "worldwide": 0.6,
-      "status": "playing"
-    },
-    {
-      "id": "anakapalli",
-      "title": "Anakapalli",
-      "indiaNet": 0.34,
-      "worldwide": 0.38,
-      "status": "playing"
-    },
-    {
-      "id": "the-third-murder",
-      "title": "The Third Murder",
-      "indiaNet": 0.1,
-      "worldwide": 0.11,
+      "indiaNet": 1.15,
+      "worldwide": 1.06,
       "status": "playing"
     }
   ]
