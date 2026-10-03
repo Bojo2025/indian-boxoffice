@@ -1,6 +1,6 @@
 {
   "date": "2026-10-03",
-  "generatedAt": "2026-10-03T09:28:33.978Z",
+  "generatedAt": "2026-10-03T11:19:42.029Z",
   "films": [
     {
       "id": "toxic",
@@ -201,8 +201,8 @@
     {
       "id": "doraemon-castle-of-the-undersea-devil-4dx-hindi",
       "title": "Doraemon: Castle of the Undersea Devil (4DX)(Hindi)",
-      "indiaNet": 1.85,
-      "worldwide": 2.21,
+      "indiaNet": 1.95,
+      "worldwide": 2.33,
       "status": "playing"
     },
     {
