@@ -1,5 +1,5 @@
 window.IBO_CATALOG = {
-  "generatedAt": "2026-10-03T04:31:50.353Z",
+  "generatedAt": "2026-10-03T09:28:33.978Z",
   "deskDate": "2026-10-03",
   "comparedTo": "2026-10-03 prior",
   "mode": "server-consensus",
@@ -12,10 +12,10 @@ window.IBO_CATALOG = {
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 82)",
-      "koimoi has failed 82 consecutive publishes",
-      "boi failed: HTTP 403 (streak 62)",
-      "boi has failed 62 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 83)",
+      "koimoi has failed 83 consecutive publishes",
+      "boi failed: HTTP 403 (streak 63)",
+      "boi has failed 63 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
@@ -25,7 +25,7 @@ window.IBO_CATALOG = {
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 82,
+        "streakFail": 83,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@ window.IBO_CATALOG = {
       },
       "boi": {
         "ok": false,
-        "streakFail": 62,
+        "streakFail": 63,
         "detail": "HTTP 403"
       }
     }
@@ -3514,19 +3514,19 @@ window.IBO_CATALOG = {
       "verdict": "Flop",
       "posterKey": "hanuman-ansh",
       "poster": "./posters/hanuman-ansh.jpg",
-      "indiaNet": 319.73,
-      "indiaGross": 377.66,
+      "indiaNet": 319.63,
+      "indiaGross": 377.51,
       "overseas": 39.35,
-      "worldwide": 417.01,
-      "lastDayNet": 2.35,
+      "worldwide": 416.86,
+      "lastDayNet": 2.25,
       "trackedThroughDay": 58,
       "liveSources": [
         "sacnilk",
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": -0.1,
+      "deltaWw": -0.15,
       "dayWise": [
         {
           "reportDate": "2026-08-07",
@@ -4203,11 +4203,11 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-10-02",
           "dayNumber": 57,
-          "indiaNet": 2.35,
-          "indiaGross": 2.8,
+          "indiaNet": 2.25,
+          "indiaGross": 2.65,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": -18.97,
+          "netChangePct": -22.41,
           "disagreementPct": 0,
           "screens": 1166,
           "occupancy": 54
@@ -4531,8 +4531,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 0,
       "trackedThroughDay": 23,
       "liveSources": [
-        "sacnilk",
-        "hungama"
+        "hungama",
+        "sacnilk"
       ],
       "deltaNet": 0,
       "deltaWw": 0,
@@ -10126,8 +10126,8 @@ window.IBO_CATALOG = {
       "trackedThroughDay": 191,
       "liveSources": [
         "sacnilk",
-        "wikipedia",
-        "hungama"
+        "hungama",
+        "wikipedia"
       ],
       "deltaNet": 0,
       "deltaWw": 0,
@@ -13578,48 +13578,6 @@ window.IBO_CATALOG = {
       "dayWise": []
     },
     {
-      "id": "doraemon-castle-of-the-undersea-devil-4dx-hindi",
-      "slug": "Doraemon_Castle_of_the_Undersea_Devil_2026",
-      "title": "Doraemon: Castle of the Undersea Devil (4DX)(Hindi)",
-      "language": "Hollywood",
-      "industry": "Hollywood",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-10-02",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "rating": null,
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 3.21,
-      "indiaGross": 3.6,
-      "overseas": 0,
-      "worldwide": 3.6,
-      "lastDayNet": 3.21,
-      "trackedThroughDay": 2,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": 0,
-      "deltaWw": 0,
-      "dayWise": [
-        {
-          "reportDate": "2026-10-02",
-          "dayNumber": 1,
-          "indiaNet": 3.21,
-          "indiaGross": 0,
-          "overseas": 0,
-          "worldwide": 0,
-          "netChangePct": null,
-          "disagreementPct": 0,
-          "screens": null,
-          "occupancy": 75.1
-        }
-      ]
-    },
-    {
       "id": "sigma",
       "slug": "Sigma_2026",
       "title": "Sigma",
@@ -13662,6 +13620,48 @@ window.IBO_CATALOG = {
       ]
     },
     {
+      "id": "doraemon-castle-of-the-undersea-devil-4dx-hindi",
+      "slug": "Doraemon_Castle_of_the_Undersea_Devil_2026",
+      "title": "Doraemon: Castle of the Undersea Devil (4DX)(Hindi)",
+      "language": "Hollywood",
+      "industry": "Hollywood",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-10-02",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "rating": null,
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 1.85,
+      "indiaGross": 2.21,
+      "overseas": 0,
+      "worldwide": 2.21,
+      "lastDayNet": 1.85,
+      "trackedThroughDay": 2,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": -1.36,
+      "deltaWw": -1.39,
+      "dayWise": [
+        {
+          "reportDate": "2026-10-02",
+          "dayNumber": 1,
+          "indiaNet": 1.85,
+          "indiaGross": 0,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": null,
+          "disagreementPct": 0,
+          "screens": null,
+          "occupancy": 75.1
+        }
+      ]
+    },
+    {
       "id": "verity",
       "slug": "Verity_2026",
       "title": "Verity",
@@ -13699,7 +13699,7 @@ window.IBO_CATALOG = {
           "netChangePct": null,
           "disagreementPct": 0,
           "screens": null,
-          "occupancy": 58.9
+          "occupancy": 58
         }
       ]
     },
@@ -13790,22 +13790,22 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.62,
-      "indiaGross": 0.69,
+      "indiaNet": 0.65,
+      "indiaGross": 0.78,
       "overseas": 0,
-      "worldwide": 0.69,
-      "lastDayNet": 0.62,
+      "worldwide": 0.78,
+      "lastDayNet": 0.65,
       "trackedThroughDay": 2,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.03,
+      "deltaWw": 0.09,
       "dayWise": [
         {
           "reportDate": "2026-10-02",
           "dayNumber": 1,
-          "indiaNet": 0.62,
+          "indiaNet": 0.65,
           "indiaGross": 0,
           "overseas": 0,
           "worldwide": 0,
@@ -13854,7 +13854,7 @@ window.IBO_CATALOG = {
           "netChangePct": null,
           "disagreementPct": 0,
           "screens": null,
-          "occupancy": 12
+          "occupancy": 11
         }
       ]
     },
@@ -13930,7 +13930,15 @@ window.IBO_CATALOG = {
       "dayWise": []
     }
   ],
-  "changes": [],
+  "changes": [
+    {
+      "id": "doraemon-castle-of-the-undersea-devil-4dx-hindi",
+      "title": "Doraemon: Castle of the Undersea Devil (4DX)(Hindi)",
+      "text": "Doraemon: Castle of the Undersea Devil (4DX)(Hindi): WW ₹-1.39 Cr, India net ₹-1.36 Cr since 2026-10-03 prior",
+      "deltaNet": -1.36,
+      "deltaWw": -1.39
+    }
+  ],
   "logs": [
     {
       "sourceId": "sacnilk",
@@ -13978,123 +13986,123 @@ window.IBO_CATALOG = {
       "sourceId": "sacnilk",
       "title": "Toxic: Sacnilk 37 days, India net ₹250.13 Cr",
       "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.004Z",
+      "publishedAt": "2026-10-03T09:28:30.465Z",
       "summary": "Live day-wise pull. Last day 1. WW ₹342.26 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Hi: Sacnilk 35 days, India net ₹12.83 Cr",
-      "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.079Z",
-      "summary": "Live day-wise pull. Last day 35. WW ₹14.93 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Irumudi: Sacnilk 43 days, India net ₹194.02 Cr",
-      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.106Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹246.31 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Border 2: Sacnilk 88 days, India net ₹329.43 Cr",
-      "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.153Z",
-      "summary": "Live day-wise pull. Last day 112. WW ₹450.19 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Awarapan 2: Sacnilk 47 days, India net ₹150.59 Cr",
-      "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.178Z",
-      "summary": "Live day-wise pull. Last day 47. WW ₹213.01 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Vishwanath And Sons: Sacnilk 49 days, India net ₹122.54 Cr",
-      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.209Z",
-      "summary": "Live day-wise pull. Last day 49. WW ₹209.46 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Batwara 1947: Sacnilk 29 days, India net ₹38.08 Cr",
       "url": "https://www.sacnilk.com/news/batwara_1947_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.248Z",
+      "publishedAt": "2026-10-03T09:28:30.483Z",
       "summary": "Live day-wise pull. Last day 41. WW ₹54.2 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Doraemon: Castle of the Undersea Devil (4DX)(Hindi): Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Doraemon_Castle_of_the_Undersea_Devil_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.257Z",
-      "summary": "Auto-discovered Hollywood title. Latest reported India net ₹3.21 Cr."
+      "title": "Awarapan 2: Sacnilk 47 days, India net ₹150.59 Cr",
+      "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-03T09:28:30.503Z",
+      "summary": "Live day-wise pull. Last day 47. WW ₹213.01 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Border 2: Sacnilk 88 days, India net ₹329.43 Cr",
+      "url": "https://www.sacnilk.com/news/border_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-03T09:28:30.528Z",
+      "summary": "Live day-wise pull. Last day 112. WW ₹450.19 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Vishwanath And Sons: Sacnilk 49 days, India net ₹122.54 Cr",
+      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-03T09:28:30.559Z",
+      "summary": "Live day-wise pull. Last day 49. WW ₹209.46 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Irumudi: Sacnilk 43 days, India net ₹194.02 Cr",
+      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-03T09:28:30.582Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹246.31 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Verity: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/Verity_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.271Z",
+      "publishedAt": "2026-10-03T09:28:30.697Z",
       "summary": "Auto-discovered Hollywood title. Latest reported India net ₹1.89 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Don't Trouble The Trouble: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Dont_Trouble_The_Trouble_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.280Z",
-      "summary": "Auto-discovered Mollywood title. Latest reported India net ₹1.65 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Sigma: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/Sigma_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.288Z",
+      "publishedAt": "2026-10-03T09:28:30.710Z",
       "summary": "Auto-discovered Kollywood title. Latest reported India net ₹2.35 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Doraemon: Castle of the Undersea Devil (4DX)(Hindi): Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Doraemon_Castle_of_the_Undersea_Devil_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-03T09:28:30.731Z",
+      "summary": "Auto-discovered Hollywood title. Latest reported India net ₹1.85 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Don't Trouble The Trouble: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Dont_Trouble_The_Trouble_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-03T09:28:30.776Z",
+      "summary": "Auto-discovered Mollywood title. Latest reported India net ₹1.65 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Peddi: Sacnilk 73 days, India net ₹244.64 Cr",
       "url": "https://www.sacnilk.com/news/peddi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.390Z",
+      "publishedAt": "2026-10-03T09:28:30.848Z",
       "summary": "Live day-wise pull. Last day 88. WW ₹341.9 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Dhurandhar: The Revenge: Sacnilk 106 days, India net ₹1149.3 Cr",
-      "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.479Z",
-      "summary": "Live day-wise pull. Last day 106. WW ₹1813.39 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Karuppu: Sacnilk 67 days, India net ₹198.18 Cr",
-      "url": "https://www.sacnilk.com/news/karuppu_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.513Z",
-      "summary": "Live day-wise pull. Last day 69. WW ₹310.12 Cr."
+      "title": "Hi: Sacnilk 35 days, India net ₹12.83 Cr",
+      "url": "https://www.sacnilk.com/news/hi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-03T09:28:30.904Z",
+      "summary": "Live day-wise pull. Last day 35. WW ₹14.93 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Welcome To The Jungle: Sacnilk 49 days, India net ₹134.11 Cr",
       "url": "https://www.sacnilk.com/news/welcome_to_the_jungle_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.532Z",
+      "publishedAt": "2026-10-03T09:28:30.974Z",
       "summary": "Live day-wise pull. Last day 49. WW ₹192.75 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Spider-Man: Brand New Day: Sacnilk 65 days, India net ₹500.54 Cr",
-      "url": "https://www.sacnilk.com/news/spider_man_brand_new_day_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-03T04:31:45.573Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹598.78 Cr."
+      "title": "Digger: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Digger_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-03T09:28:31.000Z",
+      "summary": "Auto-discovered Hollywood title. Latest reported India net ₹0.65 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Prem Keetanu: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Prem_Keetanu_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-03T09:28:31.043Z",
+      "summary": "Auto-discovered Bollywood title. Latest reported India net ₹0.5 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Dhurandhar: The Revenge: Sacnilk 106 days, India net ₹1149.3 Cr",
+      "url": "https://www.sacnilk.com/news/dhurandhar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-03T09:28:31.104Z",
+      "summary": "Live day-wise pull. Last day 106. WW ₹1813.39 Cr."
     }
   ],
   "morningBrief": {
-    "briefDate": "2026-10-02",
-    "generatedAt": "2026-10-02T10:06:06.521Z",
-    "headline": "India box office: Vvan - Force of the Forrest leads the latest daily chart at ₹4.5 Cr",
-    "lede": "Vvan - Force of the Forrest leads the latest reported daily India nett at ₹4.5 Cr on Day 8; its cumulative India nett is ₹53.6 Cr.",
-    "body": "Latest reported daily ranking: 1. Vvan - Force of the Forrest — ₹4.5 Cr on Day 8; cumulative India nett ₹53.6 Cr | 2. Hanuman Ansh — ₹2.9 Cr on Day 57; cumulative India nett ₹317.4 Cr | 3. Avengers Endgame: Encore — ₹2.1 Cr on Day 8; cumulative India nett ₹31.4 Cr | 4. Meesaya Murukku 2 — ₹1.9 Cr on Day 8; cumulative India nett ₹23.4 Cr | 5. Premada Oorali — ₹1.6 Cr on Day 8; cumulative India nett ₹5.1 Cr.\n\nRecent-release watch: Baththa (released 2026-10-01) — latest India nett ₹1.5 Cr; Sanchaari (released 2026-10-01) — latest India nett n/a; Marham: Poetry &amp; Music - Live on Stage (released 2026-09-26) — latest India nett n/a; Vvan - Force of the Forrest (released 2026-09-25) — latest India nett ₹4.5 Cr.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader at ₹1,820 Cr, but that is not the current daily chart.\n\nNo material day-over-day worldwide move of ₹0.5 Cr or more was recorded in the latest board comparison.\n\nDesk health: 2 of 4 tracker feeds are unreachable on this pull. Figures remain the weighted-median consensus of the trackers still reporting; India has no official box-office auditor.",
+    "briefDate": "2026-10-03",
+    "generatedAt": "2026-10-03T09:28:39.842Z",
+    "headline": "India box office: Sigma leads the latest daily chart at ₹2.4 Cr",
+    "lede": "Sigma leads the latest reported daily India nett at ₹2.4 Cr on Day 2; its cumulative India nett is ₹2.4 Cr.",
+    "body": "Latest reported daily ranking: 1. Sigma — ₹2.4 Cr on Day 2; cumulative India nett ₹2.4 Cr | 2. Hanuman Ansh — ₹2.3 Cr on Day 58; cumulative India nett ₹319.6 Cr | 3. Verity — ₹1.9 Cr on Day 2; cumulative India nett ₹1.9 Cr | 4. Doraemon: Castle of the Undersea Devil (4DX)(Hindi) — ₹1.9 Cr on Day 2; cumulative India nett ₹1.9 Cr | 5. Don't Trouble The Trouble — ₹1.7 Cr on Day 2; cumulative India nett ₹1.7 Cr.\n\nRecent-release watch: Sigma (released 2026-10-02) — latest India nett ₹2.4 Cr; Doraemon: Castle of the Undersea Devil (4DX)(Hindi) (released 2026-10-02) — latest India nett ₹1.9 Cr; Verity (released 2026-10-02) — latest India nett ₹1.9 Cr; Don't Trouble The Trouble (released 2026-10-02) — latest India nett ₹1.7 Cr.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader at ₹1,820 Cr, but that is not the current daily chart.\n\nMomentum: Doraemon: Castle of the Undersea Devil (4DX)(Hindi) -1.4 Cr worldwide; India nett -1.4 Cr since the previous board snapshot.\n\nDesk health: 2 of 4 tracker feeds are unreachable on this pull. Figures remain the weighted-median consensus of the trackers still reporting; India has no official box-office auditor.",
     "citations": [],
-    "boardGeneratedAt": "2026-10-02T10:06:00.872Z",
+    "boardGeneratedAt": "2026-10-03T09:28:33.978Z",
     "model": "deterministic-editorial-v1"
   },
   "downloads": {

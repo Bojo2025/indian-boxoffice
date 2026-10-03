@@ -1,6 +1,6 @@
 {
   "date": "2026-10-03",
-  "generatedAt": "2026-10-03T04:31:50.353Z",
+  "generatedAt": "2026-10-03T09:28:33.978Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 319.73,
-      "worldwide": 417.01,
+      "indiaNet": 319.63,
+      "worldwide": 416.86,
       "status": "late"
     },
     {
@@ -192,17 +192,17 @@
       "status": "closed"
     },
     {
-      "id": "doraemon-castle-of-the-undersea-devil-4dx-hindi",
-      "title": "Doraemon: Castle of the Undersea Devil (4DX)(Hindi)",
-      "indiaNet": 3.21,
-      "worldwide": 3.6,
-      "status": "playing"
-    },
-    {
       "id": "sigma",
       "title": "Sigma",
       "indiaNet": 2.35,
       "worldwide": 2.7,
+      "status": "playing"
+    },
+    {
+      "id": "doraemon-castle-of-the-undersea-devil-4dx-hindi",
+      "title": "Doraemon: Castle of the Undersea Devil (4DX)(Hindi)",
+      "indiaNet": 1.85,
+      "worldwide": 2.21,
       "status": "playing"
     },
     {
@@ -229,8 +229,8 @@
     {
       "id": "digger",
       "title": "Digger",
-      "indiaNet": 0.62,
-      "worldwide": 0.69,
+      "indiaNet": 0.65,
+      "worldwide": 0.78,
       "status": "playing"
     },
     {
