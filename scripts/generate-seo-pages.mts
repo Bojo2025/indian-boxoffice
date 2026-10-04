@@ -1227,18 +1227,25 @@ async function pingIndexNow(key: string, urls: string[]) {
 
 function collectBriefs(pack: Pack): MorningBrief[] {
   const map = new Map<string, MorningBrief>();
-  const live = readJson<MorningBrief>(join(outDir, "morning-brief.json"));
-  if (live?.briefDate) map.set(live.briefDate, live);
-  if (pack.morningBrief?.briefDate) map.set(pack.morningBrief.briefDate, pack.morningBrief);
+  const upsert = (brief: MorningBrief | null | undefined) => {
+    if (!brief?.briefDate) return;
+    const prev = map.get(brief.briefDate);
+    // Keep the freshest revision when the same desk date is rewritten.
+    if (!prev || (brief.generatedAt ?? "") >= (prev.generatedAt ?? "")) {
+      map.set(brief.briefDate, brief);
+    }
+  };
 
+  // Archives first, then board copy, then live morning-brief.json last.
   const briefsDir = join(outDir, "briefs");
   if (existsSync(briefsDir)) {
     for (const name of readdirSync(briefsDir)) {
-      const jsonPath = join(briefsDir, name, "brief.json");
-      const archived = readJson<MorningBrief>(jsonPath);
-      if (archived?.briefDate) map.set(archived.briefDate, archived);
+      upsert(readJson<MorningBrief>(join(briefsDir, name, "brief.json")));
     }
   }
+  upsert(pack.morningBrief);
+  upsert(readJson<MorningBrief>(join(outDir, "morning-brief.json")));
+
   return [...map.values()].sort((a, b) => b.briefDate.localeCompare(a.briefDate));
 }
 
