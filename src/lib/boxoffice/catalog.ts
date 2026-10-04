@@ -438,18 +438,18 @@ export const MOVIES: Movie[] = [
   {
     id: "drishyam-3",
     slug: "drishyam-3",
-    title: "Drishyam 3",
-    language: "Malayalam",
-    industry: "Mollywood",
-    director: "Jeethu Joseph",
-    starring: "Mohanlal",
-    releaseDate: "2026-02-19",
-    budgetCr: 70,
-    runtimeMin: 165,
-    synopsis: "The franchise still prints money in Malayalam and dubbed Hindi without needing a splash opening.",
+    title: "Drishyam 3: The Conclusion",
+    language: "Hindi",
+    industry: "Bollywood",
+    director: "Abhishek Pathak",
+    starring: "Ajay Devgn, Tabu, Shriya Saran, Jaideep Ahlawat",
+    releaseDate: "2026-10-02",
+    budgetCr: 150,
+    runtimeMin: 150,
+    synopsis: "Hindi theatrical conclusion of the Drishyam franchise — Day 1 India nett crossed ₹60 Cr.",
     posterKey: "drishyam-3",
-    status: "closed",
-    verdict: "Blockbuster",
+    status: "playing",
+    verdict: "Pending",
   },
   {
     id: "vaazha-ii",
@@ -537,6 +537,7 @@ export const SACNILK_PAGES: { movieId: string; slug: string }[] = [
   { movieId: "mirzapur-the-movie", slug: "mirzapur_the_movie_2026_Box_Office_Collection_Day_Wise_Worldwide" },
   { movieId: "the-odyssey", slug: "the_odyssey_2026_Box_Office_Collection_Day_Wise_Worldwide" },
   { movieId: "cocktail-2", slug: "cocktail_2_2026_Box_Office_Collection_Day_Wise_Worldwide" },
+  { movieId: "drishyam-3", slug: "drishyam_3_hindi_2026_Box_Office_Collection_Day_Wise_Worldwide" },
 ];
 
 export const HUNGAMA_PAGES: { movieId: string; slug: string }[] = [
@@ -555,6 +556,7 @@ export const HUNGAMA_PAGES: { movieId: string; slug: string }[] = [
   { movieId: "spider-man-bnd", slug: "spider-man-brand-new-day" },
   { movieId: "the-odyssey", slug: "the-odyssey" },
   { movieId: "insidious-further", slug: "insidious-out-of-the-further" },
+  { movieId: "drishyam-3", slug: "drishyam-the-conclusion" },
 ];
 
 /** Koimoi day-wise pages. Often Cloudflare-blocked; publisher keeps seed rows when live pull fails. */
@@ -567,6 +569,7 @@ export const KOIMOI_PAGES: { movieId: string; slug: string }[] = [
   { movieId: "spider-man-bnd", slug: "spider-man-brand-new-day-day-wise-box-office-collection" },
   { movieId: "batwara-1947", slug: "batwara-1947-day-wise-box-office-collection" },
   { movieId: "hanuman-ansh", slug: "hanuman-ansh-day-wise-box-office-collection" },
+  { movieId: "drishyam-3", slug: "drishyam-3-the-conclusion-day-wise-box-office-collection" },
 ];
 
 
@@ -911,7 +914,7 @@ export const SERIES: Series[] = [
   lifetime("karuppu", "wikipedia", 70, { worldwide: 312.5, indiaGross: 270, indiaNet: 229, overseas: 42.5 }, "Range ₹310–315 Cr."),
   lifetime("msvpg", "wikipedia", 70, { worldwide: 305, indiaGross: 255, indiaNet: 216, overseas: 50 }, "Range ₹300–310 Cr. Variety H1 India ₹255 Cr."),
   lifetime("bhooth-bangla", "wikipedia", 70, { worldwide: 247.28, indiaGross: 210, indiaNet: 178, overseas: 37.28 }, "Wikipedia worldwide ₹247.28 Cr."),
-  lifetime("drishyam-3", "wikipedia", 80, { worldwide: 242, indiaGross: 205, indiaNet: 174, overseas: 37 }, "Wikipedia worldwide ₹242 Cr."),
+  // Drishyam 3: The Conclusion (Hindi, 2 Oct 2026) — live Sacnilk/Hungama day-wise replaces seed.
   lifetime("vaazha-ii", "wikipedia", 80, { worldwide: 234.5, indiaGross: 210, indiaNet: 178, overseas: 24.5 }, "Range ₹234–235 Cr."),
   lifetime("welcome-jungle", "hungama", 66, { worldwide: 168, indiaGross: 154.3, indiaNet: 130.8, overseas: 13.7 }, "Hungama India nett ~₹130.8 Cr."),
   lifetime("cocktail-2", "hungama", 73, { worldwide: 118, indiaGross: 108.7, indiaNet: 92.09, overseas: 9.3 }, "Hungama India nett ₹92.09 Cr. Verdict: Average."),
