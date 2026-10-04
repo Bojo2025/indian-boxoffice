@@ -1,6 +1,6 @@
 {
   "date": "2026-10-04",
-  "generatedAt": "2026-10-04T12:00:27.958Z",
+  "generatedAt": "2026-10-04T16:49:31.037Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 321.73,
-      "worldwide": 419.46,
+      "indiaNet": 324.73,
+      "worldwide": 423.26,
       "status": "late"
     },
     {
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 115.5,
-      "worldwide": 179.6,
+      "indiaNet": 177.5,
+      "worldwide": 274,
       "status": "playing"
     },
     {
