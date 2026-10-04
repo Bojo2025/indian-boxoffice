@@ -1,6 +1,6 @@
 {
   "date": "2026-10-04",
-  "generatedAt": "2026-10-04T02:46:22.970Z",
+  "generatedAt": "2026-10-04T05:03:29.071Z",
   "films": [
     {
       "id": "toxic",
@@ -110,8 +110,8 @@
     {
       "id": "dhurandhar",
       "title": "Dhurandhar: The Revenge",
-      "indiaNet": 1149.3,
-      "worldwide": 1813.39,
+      "indiaNet": 1108.09,
+      "worldwide": 1820,
       "status": "playing"
     },
     {
@@ -252,6 +252,76 @@
       "title": "Prem Keetanu",
       "indiaNet": 1.15,
       "worldwide": 1.15,
+      "status": "playing"
+    },
+    {
+      "id": "anbil-avan",
+      "title": "Anbil Avan",
+      "indiaNet": 0.9,
+      "worldwide": 1.05,
+      "status": "playing"
+    },
+    {
+      "id": "anakapalli",
+      "title": "Anakapalli",
+      "indiaNet": 0.6,
+      "worldwide": 0.68,
+      "status": "playing"
+    },
+    {
+      "id": "the-third-murder",
+      "title": "The Third Murder",
+      "indiaNet": 0.2,
+      "worldwide": 0.22,
+      "status": "playing"
+    },
+    {
+      "id": "premane-oorilo",
+      "title": "Premane Oorilo",
+      "indiaNet": 0.07,
+      "worldwide": 0.08,
+      "status": "playing"
+    },
+    {
+      "id": "aali-mothi-shahani",
+      "title": "Aali Mothi Shahani",
+      "indiaNet": 0.07,
+      "worldwide": 0.08,
+      "status": "playing"
+    },
+    {
+      "id": "si-yugandhar",
+      "title": "SI Yugandhar",
+      "indiaNet": 0.06,
+      "worldwide": 0.07,
+      "status": "playing"
+    },
+    {
+      "id": "bhootu-aaya-bhago",
+      "title": "Bhootu Aaya Bhago",
+      "indiaNet": 0.06,
+      "worldwide": 0.06,
+      "status": "playing"
+    },
+    {
+      "id": "hulibeera",
+      "title": "Hulibeera",
+      "indiaNet": 0.03,
+      "worldwide": 0.04,
+      "status": "playing"
+    },
+    {
+      "id": "prem-xl",
+      "title": "Prem XL",
+      "indiaNet": 0.03,
+      "worldwide": 0.03,
+      "status": "playing"
+    },
+    {
+      "id": "tatvam",
+      "title": "Tatvam",
+      "indiaNet": 0.03,
+      "worldwide": 0.03,
       "status": "playing"
     }
   ]
