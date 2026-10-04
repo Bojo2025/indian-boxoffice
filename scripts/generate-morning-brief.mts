@@ -172,10 +172,8 @@ function recentReleaseLine(): string {
     .join("; ");
 }
 
-function momentumLine(): string {
-  if (!movers.length) {
-    return "No material day-over-day worldwide move of ₹0.5 Cr or more was recorded in the latest board comparison.";
-  }
+function momentumLine(): string | null {
+  if (!movers.length) return null;
 
   const entries = movers.slice(0, 3).map((film) => {
     const indiaMove =
@@ -185,22 +183,6 @@ function momentumLine(): string {
     return `${film.title} ${deltaLabel(film.deltaWw)} worldwide${indiaMove}`;
   });
   return `Momentum: ${entries.join("; ")} since the previous board snapshot.`;
-}
-
-// Reports feed health as counts only — individual tracker names are never
-// exposed to readers.
-function deskNote(): string {
-  const spine = board?.health?.spine ?? {};
-  const feeds = Object.values(spine);
-  const degraded = feeds.filter((feed) => feed?.ok === false).length;
-  if (!feeds.length && (board?.health?.alerts?.length ?? 0) > 0) {
-    return "Desk health: some feeds are degraded on this pull. Figures remain the weighted-median consensus of the trackers still reporting; India has no official box-office auditor.";
-  }
-  if (degraded > 0) {
-    const noun = degraded === 1 ? "feed is" : "feeds are";
-    return `Desk health: ${degraded} of ${feeds.length} tracker ${noun} unreachable on this pull. Figures remain the weighted-median consensus of the trackers still reporting; India has no official box-office auditor.`;
-  }
-  return "Desk health is clear, with every tracker feed reporting. Figures are the weighted-median consensus of those feeds; India has no official box-office auditor.";
 }
 
 function buildBrief(): Brief {
@@ -215,10 +197,11 @@ function buildBrief(): Brief {
     `Recent-release watch: ${recentReleaseLine()}.`,
     top
       ? `Lifetime context: ${top.title} remains the cumulative worldwide leader at ${fmt(top.worldwide)}, but that is not the current daily chart.`
-      : "Lifetime totals are unavailable on this board pull.",
+      : null,
     momentumLine(),
-    deskNote(),
-  ].join("\n\n");
+  ]
+    .filter((paragraph): paragraph is string => Boolean(paragraph))
+    .join("\n\n");
 
   return {
     briefDate: todayMu,
