@@ -1,18 +1,18 @@
 {
-  "date": "2026-09-26",
-  "generatedAt": "2026-09-26T16:03:43.026Z",
+  "date": "2026-10-02",
+  "generatedAt": "2026-10-02T17:39:39.770Z",
   "films": [
     {
       "id": "toxic",
       "title": "Toxic",
-      "indiaNet": 250.06,
-      "worldwide": 342.16,
+      "indiaNet": 250.13,
+      "worldwide": 342.26,
       "status": "playing"
     },
     {
       "id": "awarapan-2",
       "title": "Awarapan 2",
-      "indiaNet": 150.57,
+      "indiaNet": 150.59,
       "worldwide": 210.26,
       "status": "playing"
     },
@@ -26,8 +26,8 @@
     {
       "id": "irumudi",
       "title": "Irumudi",
-      "indiaNet": 190.79,
-      "worldwide": 243.23,
+      "indiaNet": 193.9,
+      "worldwide": 246.18,
       "status": "playing"
     },
     {
@@ -40,8 +40,8 @@
     {
       "id": "hi",
       "title": "Hi",
-      "indiaNet": 12.82,
-      "worldwide": 14.92,
+      "indiaNet": 12.83,
+      "worldwide": 14.93,
       "status": "playing"
     },
     {
@@ -61,15 +61,15 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 291.53,
-      "worldwide": 381.35,
+      "indiaNet": 319.73,
+      "worldwide": 417.01,
       "status": "late"
     },
     {
       "id": "sardar-2",
       "title": "Sardar 2",
-      "indiaNet": 16.28,
-      "worldwide": 23.83,
+      "indiaNet": 16.33,
+      "worldwide": 23.88,
       "status": "playing"
     },
     {
@@ -82,15 +82,15 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 223.8,
-      "worldwide": 325.87,
+      "indiaNet": 229.5,
+      "worldwide": 334.1,
       "status": "playing"
     },
     {
       "id": "spider-man-bnd",
       "title": "Spider-Man: Brand New Day",
-      "indiaNet": 500.2,
-      "worldwide": 598.42,
+      "indiaNet": 500.52,
+      "worldwide": 598.75,
       "status": "late"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 195.57,
-      "worldwide": 233.03,
+      "indiaNet": 195.7,
+      "worldwide": 233.18,
       "status": "late"
     },
     {
@@ -192,73 +192,66 @@
       "status": "closed"
     },
     {
+      "id": "sigma",
+      "title": "Sigma",
+      "indiaNet": 2.35,
+      "worldwide": 2.7,
+      "status": "playing"
+    },
+    {
+      "id": "dont-trouble-the-trouble",
+      "title": "Don't Trouble The Trouble",
+      "indiaNet": 1.65,
+      "worldwide": 1.9,
+      "status": "playing"
+    },
+    {
+      "id": "prem-keetanu",
+      "title": "Prem Keetanu",
+      "indiaNet": 0.5,
+      "worldwide": 0.6,
+      "status": "playing"
+    },
+    {
+      "id": "baththa",
+      "title": "Baththa",
+      "indiaNet": 4.2,
+      "worldwide": 4.88,
+      "status": "playing"
+    },
+    {
+      "id": "sanchaari",
+      "title": "Sanchaari",
+      "indiaNet": 0.09,
+      "worldwide": 0.11,
+      "status": "playing"
+    },
+    {
+      "id": "marham-poetry-amp-music-live-on-stage",
+      "title": "Marham: Poetry &amp; Music - Live on Stage",
+      "indiaNet": 0.24,
+      "worldwide": 0.27,
+      "status": "playing"
+    },
+    {
       "id": "vvan-force-of-the-forrest",
       "title": "Vvan - Force of the Forrest",
-      "indiaNet": 8,
-      "worldwide": 10.6,
+      "indiaNet": 57,
+      "worldwide": 73.74,
       "status": "playing"
     },
     {
       "id": "avengers-endgame-encore",
       "title": "Avengers Endgame: Encore",
-      "indiaNet": 7.25,
-      "worldwide": 8.68,
+      "indiaNet": 31.4,
+      "worldwide": 37.5,
       "status": "playing"
     },
     {
       "id": "meesaya-murukku-2",
       "title": "Meesaya Murukku 2",
-      "indiaNet": 3.3,
-      "worldwide": 3.85,
-      "status": "playing"
-    },
-    {
-      "id": "dorothy",
-      "title": "Dorothy",
-      "indiaNet": 0.9,
-      "worldwide": 1.05,
-      "status": "playing"
-    },
-    {
-      "id": "heart-of-the-beast",
-      "title": "Heart of the Beast",
-      "indiaNet": 0.7,
-      "worldwide": 0.84,
-      "status": "playing"
-    },
-    {
-      "id": "primetime",
-      "title": "Primetime",
-      "indiaNet": 0.29,
-      "worldwide": 0.33,
-      "status": "playing"
-    },
-    {
-      "id": "aaram",
-      "title": "Aaram",
-      "indiaNet": 0.2,
-      "worldwide": 0.22,
-      "status": "playing"
-    },
-    {
-      "id": "lenin-pandiyan",
-      "title": "Lenin Pandiyan",
-      "indiaNet": 0.16,
-      "worldwide": 0.18,
-      "status": "playing"
-    },
-    {
-      "id": "forgotten-island-3d",
-      "title": "Forgotten Island (3D)",
-      "indiaNet": 0.17,
-      "worldwide": 0.18,
-      "status": "playing"
-    },
-    {
-      "id": "tutt-paini-english-ne",
-      "title": "Tutt Paini English Ne",
-      "indiaNet": 0.14,
-      "worldwide": 0.15,
+      "indiaNet": 26.35,
+      "worldwide": 36.68,
       "status": "playing"
     }
   ]
