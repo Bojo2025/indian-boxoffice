@@ -45,18 +45,21 @@ function stripTags(s: string): string {
 function decodeHtml(s: string): string {
   return s
     .replace(/&#8377;/g, "\u20B9")
-    .replace(/&#8377;/g, "\u20B9")
     .replace(/&nbsp;/gi, " ")
     .replace(/&#039;/g, "'")
-    .replace(/'/g, "'")
-    .replace(/"/g, '"')
-    .replace(/&/g, "&")
-    .replace(/</g, "<")
-    .replace(/>/g, ">")
+    .replace(/&apos;/gi, "'")
+    .replace(/&quot;/gi, '"')
     .replace(/&#(\d+);/g, (_, n) => {
       const code = Number(n);
       return Number.isFinite(code) ? String.fromCharCode(code) : "";
-    });
+    })
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => {
+      const code = Number.parseInt(hex, 16);
+      return Number.isFinite(code) ? String.fromCharCode(code) : "";
+    })
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&amp;/gi, "&");
 }
 
 function decodeXml(s: string): string {
@@ -698,11 +701,29 @@ export async function ingestLiveSources(): Promise<IngestResult> {
       sourceId: "sacnilk",
       run: async () => {
         const html = await fetchText("https://www.sacnilk.com/box-office-collections");
-        const discovered = parseSacnilkIndex(html).filter(({ movie }) => !matchMovie(movie.title));
-        discoveredMovies.push(...discovered.map(({ movie }) => movie));
-        readings.push(...discovered.map(({ reading }) => reading));
+        const indexRows = parseSacnilkIndex(html);
+        const coveredIds = new Set(SACNILK_PAGES.map((p) => p.movieId));
+        const dayWiseJobs: Movie[] = [];
 
-        await runPool(discovered, 4, async ({ movie }) => {
+        for (const row of indexRows) {
+          const matched = matchMovie(row.movie.title);
+          if (matched) {
+            // Index hit a catalog title — keep the Sacnilk slug for day-wise scrape when
+            // the film is not already covered by SACNILK_PAGES (closed/stale catalog
+            // entries used to swallow big openers like Drishyam 3 entirely).
+            readings.push({ ...row.reading, movieId: matched.id });
+            if (!coveredIds.has(matched.id)) {
+              dayWiseJobs.push({ ...matched, slug: row.movie.slug });
+              coveredIds.add(matched.id);
+            }
+          } else {
+            discoveredMovies.push(row.movie);
+            readings.push(row.reading);
+            dayWiseJobs.push(row.movie);
+          }
+        }
+
+        await runPool(dayWiseJobs, 4, async (movie) => {
           const pageSlug = movie.slug.replace(/_2026$/i, "");
           try {
             const detail = await fetchText(

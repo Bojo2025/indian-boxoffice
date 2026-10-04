@@ -326,6 +326,10 @@ const films: FilmCard[] = movieCatalog.map((m) => {
   const overseas = consensusField(rows, "overseas");
   let worldwide = consensusField(rows, "worldwide");
   if (!worldwide && indiaGross) worldwide = indiaGross;
+  // Sanity: worldwide gross cannot be below domestic nett / gross.
+  if (worldwide > 0) {
+    worldwide = Math.max(worldwide, indiaGross || 0, indiaNet || 0);
+  }
   const liveSources = [...new Set(live.readings.filter((r) => r.movieId === m.id).map((r) => r.sourceId))];
   const hasLiveDaily = live.readings.some(
     (r) => r.movieId === m.id && r.note === "live scrape" && r.reportDate < "2099-01-01",

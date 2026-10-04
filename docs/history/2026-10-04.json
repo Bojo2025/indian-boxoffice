@@ -1,6 +1,6 @@
 {
   "date": "2026-10-04",
-  "generatedAt": "2026-10-03T23:36:49.579Z",
+  "generatedAt": "2026-10-04T02:46:22.970Z",
   "films": [
     {
       "id": "toxic",
@@ -110,8 +110,8 @@
     {
       "id": "dhurandhar",
       "title": "Dhurandhar: The Revenge",
-      "indiaNet": 1108.09,
-      "worldwide": 1820,
+      "indiaNet": 1149.3,
+      "worldwide": 1813.39,
       "status": "playing"
     },
     {
@@ -158,10 +158,10 @@
     },
     {
       "id": "drishyam-3",
-      "title": "Drishyam 3",
-      "indiaNet": 174,
-      "worldwide": 242,
-      "status": "closed"
+      "title": "Drishyam 3: The Conclusion",
+      "indiaNet": 115.5,
+      "worldwide": 177.1,
+      "status": "playing"
     },
     {
       "id": "vaazha-ii",
@@ -195,7 +195,7 @@
       "id": "doraemon-castle-of-the-undersea-devil-4dx-hindi",
       "title": "Doraemon: Castle of the Undersea Devil (4DX)(Hindi)",
       "indiaNet": 7.03,
-      "worldwide": 5.99,
+      "worldwide": 7.03,
       "status": "playing"
     },
     {
@@ -216,7 +216,7 @@
       "id": "dont-trouble-the-trouble",
       "title": "Don't Trouble The Trouble",
       "indiaNet": 3.7,
-      "worldwide": 3.32,
+      "worldwide": 3.7,
       "status": "playing"
     },
     {
@@ -227,8 +227,8 @@
       "status": "playing"
     },
     {
-      "id": "avaraachan-amp-sons",
-      "title": "Avaraachan &amp; Sons",
+      "id": "avaraachan-sons",
+      "title": "Avaraachan & Sons",
       "indiaNet": 1.18,
       "worldwide": 1.38,
       "status": "playing"
@@ -251,7 +251,7 @@
       "id": "prem-keetanu",
       "title": "Prem Keetanu",
       "indiaNet": 1.15,
-      "worldwide": 1.06,
+      "worldwide": 1.15,
       "status": "playing"
     }
   ]

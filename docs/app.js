@@ -651,7 +651,14 @@
   }
 
   function esc(value) {
+    // Decode first so already-encoded titles (e.g. "A &amp; B") don't become "&amp;amp;".
     return String(value ?? "")
+      .replace(/&amp;/gi, "&")
+      .replace(/&lt;/gi, "<")
+      .replace(/&gt;/gi, ">")
+      .replace(/&quot;/gi, '"')
+      .replace(/&#039;/g, "'")
+      .replace(/&apos;/gi, "'")
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")

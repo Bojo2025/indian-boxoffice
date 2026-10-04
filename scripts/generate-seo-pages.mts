@@ -18,7 +18,7 @@ import { randomBytes } from "node:crypto";
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const outDir = join(root, "docs");
 const SITE = "https://indian-boxoffice.com";
-const ASSET_VER = "20260926a";
+const ASSET_VER = "20261004a";
 
 type DayWise = {
   reportDate: string;
