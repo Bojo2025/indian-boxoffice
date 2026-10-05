@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generatedAt": "2026-10-05T04:49:04.950Z",
+  "generatedAt": "2026-10-05T10:54:56.893Z",
   "films": [
     {
       "id": "toxic",
@@ -68,8 +68,8 @@
     {
       "id": "sardar-2",
       "title": "Sardar 2",
-      "indiaNet": 16.33,
-      "worldwide": 23.88,
+      "indiaNet": 0,
+      "worldwide": 0,
       "status": "playing"
     },
     {
@@ -82,8 +82,8 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 229.95,
-      "worldwide": 334.62,
+      "indiaNet": 217.86,
+      "worldwide": 324.56,
       "status": "playing"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 195.73,
-      "worldwide": 233.21,
+      "indiaNet": 117.7,
+      "worldwide": 153.01,
       "status": "late"
     },
     {
@@ -180,9 +180,9 @@
     {
       "id": "cocktail-2",
       "title": "Cocktail 2",
-      "indiaNet": 95.5,
-      "worldwide": 147.73,
-      "status": "playing"
+      "indiaNet": 92.09,
+      "worldwide": 143.6,
+      "status": "closed"
     },
     {
       "id": "alpha",
@@ -213,6 +213,13 @@
       "status": "playing"
     },
     {
+      "id": "avaraachan-sons",
+      "title": "Avaraachan & Sons",
+      "indiaNet": 3.19,
+      "worldwide": 3.7,
+      "status": "playing"
+    },
+    {
       "id": "bail",
       "title": "Bail",
       "indiaNet": 3.05,
@@ -234,10 +241,10 @@
       "status": "playing"
     },
     {
-      "id": "avaraachan-sons",
-      "title": "Avaraachan & Sons",
-      "indiaNet": 2.45,
-      "worldwide": 2.45,
+      "id": "prem-keetanu",
+      "title": "Prem Keetanu",
+      "indiaNet": 1.11,
+      "worldwide": 1.33,
       "status": "playing"
     },
     {
@@ -245,13 +252,6 @@
       "title": "Thella Kaagitham",
       "indiaNet": 2.03,
       "worldwide": 2.03,
-      "status": "playing"
-    },
-    {
-      "id": "anbil-avan",
-      "title": "Anbil Avan",
-      "indiaNet": 1.95,
-      "worldwide": 1.95,
       "status": "playing"
     }
   ]
