@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generatedAt": "2026-10-05T10:54:56.893Z",
+  "generatedAt": "2026-10-05T14:02:21.234Z",
   "films": [
     {
       "id": "toxic",
@@ -68,8 +68,8 @@
     {
       "id": "sardar-2",
       "title": "Sardar 2",
-      "indiaNet": 0,
-      "worldwide": 0,
+      "indiaNet": 16.33,
+      "worldwide": 23.88,
       "status": "playing"
     },
     {
