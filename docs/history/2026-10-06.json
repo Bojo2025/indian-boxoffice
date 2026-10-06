@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generatedAt": "2026-10-06T10:50:31.379Z",
+  "generatedAt": "2026-10-06T13:02:06.378Z",
   "films": [
     {
       "id": "toxic",
@@ -68,8 +68,8 @@
     {
       "id": "sardar-2",
       "title": "Sardar 2",
-      "indiaNet": 0,
-      "worldwide": 0,
+      "indiaNet": 16.33,
+      "worldwide": 23.88,
       "status": "playing"
     },
     {
@@ -82,8 +82,8 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 217.89,
-      "worldwide": 324.59,
+      "indiaNet": 230,
+      "worldwide": 334.68,
       "status": "playing"
     },
     {
@@ -145,7 +145,7 @@
     {
       "id": "msvpg",
       "title": "Mana Shankara Vara Prasad Garu",
-      "indiaNet": 0,
+      "indiaNet": 216,
       "worldwide": 305,
       "status": "closed"
     },
