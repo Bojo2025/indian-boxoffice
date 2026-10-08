@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generatedAt": "2026-10-08T10:13:08.805Z",
+  "generatedAt": "2026-10-08T10:59:03.571Z",
   "films": [
     {
       "id": "toxic",
@@ -68,8 +68,8 @@
     {
       "id": "sardar-2",
       "title": "Sardar 2",
-      "indiaNet": 16.33,
-      "worldwide": 23.88,
+      "indiaNet": 0,
+      "worldwide": 0,
       "status": "playing"
     },
     {
@@ -82,8 +82,8 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 230.14,
-      "worldwide": 334.84,
+      "indiaNet": 217.96,
+      "worldwide": 324.68,
       "status": "playing"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 195.75,
-      "worldwide": 233.24,
+      "indiaNet": 117.7,
+      "worldwide": 153.01,
       "status": "late"
     },
     {
@@ -180,9 +180,9 @@
     {
       "id": "cocktail-2",
       "title": "Cocktail 2",
-      "indiaNet": 95.5,
-      "worldwide": 147.73,
-      "status": "playing"
+      "indiaNet": 92.09,
+      "worldwide": 143.6,
+      "status": "closed"
     },
     {
       "id": "alpha",
@@ -252,6 +252,76 @@
       "title": "Digger",
       "indiaNet": 2.03,
       "worldwide": 2.33,
+      "status": "playing"
+    },
+    {
+      "id": "prem-keetanu",
+      "title": "Prem Keetanu",
+      "indiaNet": 1.39,
+      "worldwide": 1.57,
+      "status": "playing"
+    },
+    {
+      "id": "anakapalli",
+      "title": "Anakapalli",
+      "indiaNet": 1.34,
+      "worldwide": 1.51,
+      "status": "playing"
+    },
+    {
+      "id": "the-third-murder",
+      "title": "The Third Murder",
+      "indiaNet": 0.47,
+      "worldwide": 0.52,
+      "status": "playing"
+    },
+    {
+      "id": "premane-oorilo",
+      "title": "Premane Oorilo",
+      "indiaNet": 0.22,
+      "worldwide": 0.24,
+      "status": "playing"
+    },
+    {
+      "id": "si-yugandhar",
+      "title": "SI Yugandhar",
+      "indiaNet": 0.15,
+      "worldwide": 0.18,
+      "status": "playing"
+    },
+    {
+      "id": "aali-mothi-shahani",
+      "title": "Aali Mothi Shahani",
+      "indiaNet": 0.13,
+      "worldwide": 0.14,
+      "status": "playing"
+    },
+    {
+      "id": "bhootu-aaya-bhago",
+      "title": "Bhootu Aaya Bhago",
+      "indiaNet": 0.12,
+      "worldwide": 0.13,
+      "status": "playing"
+    },
+    {
+      "id": "gaman",
+      "title": "Gaman",
+      "indiaNet": 0.09,
+      "worldwide": 0.09,
+      "status": "playing"
+    },
+    {
+      "id": "hulibeera",
+      "title": "Hulibeera",
+      "indiaNet": 0.07,
+      "worldwide": 0.09,
+      "status": "playing"
+    },
+    {
+      "id": "prem-xl",
+      "title": "Prem XL",
+      "indiaNet": 0.07,
+      "worldwide": 0.08,
       "status": "playing"
     }
   ]
