@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generatedAt": "2026-10-07T18:40:01.155Z",
+  "generatedAt": "2026-10-08T00:50:02.438Z",
   "films": [
     {
       "id": "toxic",
@@ -26,8 +26,8 @@
     {
       "id": "irumudi",
       "title": "Irumudi",
-      "indiaNet": 194.25,
-      "worldwide": 246.57,
+      "indiaNet": 194.26,
+      "worldwide": 246.58,
       "status": "playing"
     },
     {
@@ -82,15 +82,15 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 217.93,
-      "worldwide": 324.64,
+      "indiaNet": 230.14,
+      "worldwide": 334.84,
       "status": "playing"
     },
     {
       "id": "spider-man-bnd",
       "title": "Spider-Man: Brand New Day",
-      "indiaNet": 500.58,
-      "worldwide": 598.84,
+      "indiaNet": 500.59,
+      "worldwide": 598.85,
       "status": "late"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 195.74,
-      "worldwide": 233.23,
+      "indiaNet": 195.75,
+      "worldwide": 233.24,
       "status": "late"
     },
     {
@@ -180,9 +180,9 @@
     {
       "id": "cocktail-2",
       "title": "Cocktail 2",
-      "indiaNet": 95.5,
-      "worldwide": 147.73,
-      "status": "playing"
+      "indiaNet": 92.09,
+      "worldwide": 143.6,
+      "status": "closed"
     },
     {
       "id": "alpha",
@@ -208,8 +208,15 @@
     {
       "id": "verity",
       "title": "Verity",
-      "indiaNet": 6.18,
-      "worldwide": 7.04,
+      "indiaNet": 6.72,
+      "worldwide": 7.65,
+      "status": "playing"
+    },
+    {
+      "id": "bail",
+      "title": "Bail",
+      "indiaNet": 4.14,
+      "worldwide": 4.69,
       "status": "playing"
     },
     {
@@ -227,13 +234,6 @@
       "status": "playing"
     },
     {
-      "id": "bail",
-      "title": "Bail",
-      "indiaNet": 3.81,
-      "worldwide": 4.32,
-      "status": "playing"
-    },
-    {
       "id": "thella-kaagitham",
       "title": "Thella Kaagitham",
       "indiaNet": 3.64,
@@ -243,15 +243,15 @@
     {
       "id": "anbil-avan",
       "title": "Anbil Avan",
-      "indiaNet": 2.55,
-      "worldwide": 2.95,
+      "indiaNet": 3.1,
+      "worldwide": 3.57,
       "status": "playing"
     },
     {
       "id": "digger",
       "title": "Digger",
-      "indiaNet": 1.89,
-      "worldwide": 2.18,
+      "indiaNet": 2.03,
+      "worldwide": 2.33,
       "status": "playing"
     }
   ]
