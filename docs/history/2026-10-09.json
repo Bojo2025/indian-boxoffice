@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generatedAt": "2026-10-09T10:57:46.328Z",
+  "generatedAt": "2026-10-09T18:09:11.812Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 327.98,
-      "worldwide": 427.43,
+      "indiaNet": 329.18,
+      "worldwide": 428.82,
       "status": "late"
     },
     {
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 245.5,
-      "worldwide": 383.6,
+      "indiaNet": 260,
+      "worldwide": 407,
       "status": "playing"
     },
     {
@@ -190,6 +190,20 @@
       "indiaNet": 57.72,
       "worldwide": 98.62,
       "status": "closed"
+    },
+    {
+      "id": "comrade-kalyan",
+      "title": "Comrade Kalyan",
+      "indiaNet": 2.1,
+      "worldwide": 2.4,
+      "status": "playing"
+    },
+    {
+      "id": "other-mommy",
+      "title": "Other Mommy",
+      "indiaNet": 0.8,
+      "worldwide": 0.96,
+      "status": "playing"
     },
     {
       "id": "doraemon-castle-of-the-undersea-devil-4dx-hindi",
@@ -308,20 +322,6 @@
       "title": "Hulibeera",
       "indiaNet": 0.09,
       "worldwide": 0.11,
-      "status": "playing"
-    },
-    {
-      "id": "gaman",
-      "title": "Gaman",
-      "indiaNet": 0.1,
-      "worldwide": 0.1,
-      "status": "playing"
-    },
-    {
-      "id": "prem-xl",
-      "title": "Prem XL",
-      "indiaNet": 0.08,
-      "worldwide": 0.09,
       "status": "playing"
     }
   ]
