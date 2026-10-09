@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generatedAt": "2026-10-09T10:14:41.580Z",
+  "generatedAt": "2026-10-09T10:57:46.328Z",
   "films": [
     {
       "id": "toxic",
@@ -194,15 +194,15 @@
     {
       "id": "doraemon-castle-of-the-undersea-devil-4dx-hindi",
       "title": "Doraemon: Castle of the Undersea Devil (4DX)(Hindi)",
-      "indiaNet": 12.15,
-      "worldwide": 13.24,
+      "indiaNet": 12.29,
+      "worldwide": 14.48,
       "status": "playing"
     },
     {
       "id": "sigma",
       "title": "Sigma",
-      "indiaNet": 8.27,
-      "worldwide": 8.65,
+      "indiaNet": 8.23,
+      "worldwide": 9.35,
       "status": "playing"
     },
     {
@@ -210,6 +210,13 @@
       "title": "Verity",
       "indiaNet": 7.18,
       "worldwide": 8.15,
+      "status": "playing"
+    },
+    {
+      "id": "dont-trouble-the-trouble",
+      "title": "Don't Trouble The Trouble",
+      "indiaNet": 4.41,
+      "worldwide": 5.06,
       "status": "playing"
     },
     {
@@ -227,10 +234,10 @@
       "status": "playing"
     },
     {
-      "id": "dont-trouble-the-trouble",
-      "title": "Don't Trouble The Trouble",
-      "indiaNet": 4.41,
-      "worldwide": 4.77,
+      "id": "thella-kaagitham",
+      "title": "Thella Kaagitham",
+      "indiaNet": 4.05,
+      "worldwide": 4.55,
       "status": "playing"
     },
     {
@@ -241,13 +248,6 @@
       "status": "playing"
     },
     {
-      "id": "thella-kaagitham",
-      "title": "Thella Kaagitham",
-      "indiaNet": 4.09,
-      "worldwide": 4.1,
-      "status": "playing"
-    },
-    {
       "id": "digger",
       "title": "Digger",
       "indiaNet": 2.18,
@@ -255,17 +255,17 @@
       "status": "playing"
     },
     {
+      "id": "prem-keetanu",
+      "title": "Prem Keetanu",
+      "indiaNet": 1.46,
+      "worldwide": 1.74,
+      "status": "playing"
+    },
+    {
       "id": "anakapalli",
       "title": "Anakapalli",
       "indiaNet": 1.54,
       "worldwide": 1.73,
-      "status": "playing"
-    },
-    {
-      "id": "prem-keetanu",
-      "title": "Prem Keetanu",
-      "indiaNet": 1.46,
-      "worldwide": 1.57,
       "status": "playing"
     },
     {
