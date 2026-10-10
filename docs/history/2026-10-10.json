@@ -1,6 +1,6 @@
 {
   "date": "2026-10-10",
-  "generatedAt": "2026-10-10T10:10:09.469Z",
+  "generatedAt": "2026-10-10T17:08:25.264Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 329.18,
-      "worldwide": 428.82,
+      "indiaNet": 331.63,
+      "worldwide": 431.85,
       "status": "late"
     },
     {
@@ -82,8 +82,8 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 218.02,
-      "worldwide": 324.75,
+      "indiaNet": 230.15,
+      "worldwide": 339.37,
       "status": "playing"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 117.7,
-      "worldwide": 153.01,
+      "indiaNet": 195.82,
+      "worldwide": 233.31,
       "status": "late"
     },
     {
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 260,
-      "worldwide": 407,
+      "indiaNet": 286.5,
+      "worldwide": 446.8,
       "status": "playing"
     },
     {
@@ -180,9 +180,9 @@
     {
       "id": "cocktail-2",
       "title": "Cocktail 2",
-      "indiaNet": 92.09,
-      "worldwide": 143.6,
-      "status": "closed"
+      "indiaNet": 95.5,
+      "worldwide": 147.73,
+      "status": "playing"
     },
     {
       "id": "alpha",
