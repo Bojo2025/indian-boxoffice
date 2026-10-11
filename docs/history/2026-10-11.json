@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "generatedAt": "2026-10-10T21:21:15.444Z",
+  "generatedAt": "2026-10-11T04:53:24.817Z",
   "films": [
     {
       "id": "toxic",
@@ -82,8 +82,8 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 218.02,
-      "worldwide": 324.75,
+      "indiaNet": 230.24,
+      "worldwide": 339.47,
       "status": "playing"
     },
     {
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 286.5,
-      "worldwide": 446.8,
+      "indiaNet": 0,
+      "worldwide": 0,
       "status": "playing"
     },
     {
