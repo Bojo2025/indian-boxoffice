@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generatedAt": "2026-10-11T19:24:23.055Z",
+  "generatedAt": "2026-10-12T00:19:04.143Z",
   "films": [
     {
       "id": "toxic",
@@ -26,8 +26,8 @@
     {
       "id": "irumudi",
       "title": "Irumudi",
-      "indiaNet": 194.35,
-      "worldwide": 246.68,
+      "indiaNet": 194.37,
+      "worldwide": 246.7,
       "status": "playing"
     },
     {
@@ -82,15 +82,15 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 218.07,
-      "worldwide": 324.81,
+      "indiaNet": 230.31,
+      "worldwide": 339.55,
       "status": "playing"
     },
     {
       "id": "spider-man-bnd",
       "title": "Spider-Man: Brand New Day",
-      "indiaNet": 500.61,
-      "worldwide": 598.87,
+      "indiaNet": 500.62,
+      "worldwide": 598.88,
       "status": "late"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 117.7,
-      "worldwide": 153.01,
+      "indiaNet": 196.21,
+      "worldwide": 233.74,
       "status": "late"
     },
     {
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 213,
-      "worldwide": 0,
+      "indiaNet": 309.5,
+      "worldwide": 480.4,
       "status": "playing"
     },
     {
@@ -180,9 +180,9 @@
     {
       "id": "cocktail-2",
       "title": "Cocktail 2",
-      "indiaNet": 92.09,
-      "worldwide": 143.6,
-      "status": "closed"
+      "indiaNet": 95.5,
+      "worldwide": 147.73,
+      "status": "playing"
     },
     {
       "id": "alpha",
@@ -208,127 +208,127 @@
     {
       "id": "eh-din-roz-ni-aune",
       "title": "Eh Din Roz Ni Aune",
-      "indiaNet": 0.27,
-      "worldwide": 0.31,
+      "indiaNet": 0.45,
+      "worldwide": 0.51,
       "status": "playing"
     },
     {
       "id": "chiram",
       "title": "Chiram",
-      "indiaNet": 0.11,
-      "worldwide": 0.12,
+      "indiaNet": 0.14,
+      "worldwide": 0.15,
       "status": "playing"
     },
     {
       "id": "baa-baa-black-sheep",
       "title": "Baa Baa Black Sheep",
-      "indiaNet": 0.09,
-      "worldwide": 0.1,
+      "indiaNet": 0.11,
+      "worldwide": 0.12,
       "status": "playing"
     },
     {
       "id": "afratafri",
       "title": "Afratafri",
-      "indiaNet": 0.05,
-      "worldwide": 0.07,
-      "status": "playing"
-    },
-    {
-      "id": "good-time",
-      "title": "Good Time",
-      "indiaNet": 0.05,
-      "worldwide": 0.06,
-      "status": "playing"
-    },
-    {
-      "id": "beware-boiuna",
-      "title": "Beware Boiuna",
-      "indiaNet": 0.05,
-      "worldwide": 0.06,
-      "status": "playing"
-    },
-    {
-      "id": "mayookha",
-      "title": "Mayookha",
-      "indiaNet": 0.04,
-      "worldwide": 0.06,
+      "indiaNet": 0.08,
+      "worldwide": 0.11,
       "status": "playing"
     },
     {
       "id": "paach-futacha-bachchan",
       "title": "Paach Futacha Bachchan",
-      "indiaNet": 0.03,
-      "worldwide": 0.05,
+      "indiaNet": 0.07,
+      "worldwide": 0.09,
       "status": "playing"
     },
     {
-      "id": "kitti",
-      "title": "Kitti",
-      "indiaNet": 0.04,
-      "worldwide": 0.04,
+      "id": "beware-boiuna",
+      "title": "Beware Boiuna",
+      "indiaNet": 0.07,
+      "worldwide": 0.09,
+      "status": "playing"
+    },
+    {
+      "id": "mayookha",
+      "title": "Mayookha",
+      "indiaNet": 0.06,
+      "worldwide": 0.09,
+      "status": "playing"
+    },
+    {
+      "id": "good-time",
+      "title": "Good Time",
+      "indiaNet": 0.06,
+      "worldwide": 0.07,
       "status": "playing"
     },
     {
       "id": "dipholu",
       "title": "Dipholu",
-      "indiaNet": 0.03,
-      "worldwide": 0.03,
+      "indiaNet": 0.06,
+      "worldwide": 0.06,
+      "status": "playing"
+    },
+    {
+      "id": "kitti",
+      "title": "Kitti",
+      "indiaNet": 0.06,
+      "worldwide": 0.06,
       "status": "playing"
     },
     {
       "id": "all-pass",
       "title": "All Pass",
-      "indiaNet": 0.03,
-      "worldwide": 0.03,
+      "indiaNet": 0.05,
+      "worldwide": 0.05,
       "status": "playing"
     },
     {
       "id": "dhappa",
       "title": "Dhappa",
-      "indiaNet": 0.03,
-      "worldwide": 0.03,
-      "status": "playing"
-    },
-    {
-      "id": "parunthu",
-      "title": "Parunthu",
-      "indiaNet": 0.02,
-      "worldwide": 0.02,
+      "indiaNet": 0.05,
+      "worldwide": 0.05,
       "status": "playing"
     },
     {
       "id": "gondhal-hindi",
       "title": "Gondhal (Hindi)",
-      "indiaNet": 0.02,
-      "worldwide": 0.02,
+      "indiaNet": 0.04,
+      "worldwide": 0.04,
+      "status": "playing"
+    },
+    {
+      "id": "parunthu",
+      "title": "Parunthu",
+      "indiaNet": 0.03,
+      "worldwide": 0.03,
       "status": "playing"
     },
     {
       "id": "panchayathu-patti",
       "title": "Panchayathu Patti",
-      "indiaNet": 0.02,
-      "worldwide": 0.02,
+      "indiaNet": 0.03,
+      "worldwide": 0.03,
       "status": "playing"
     },
     {
       "id": "thaainilam",
       "title": "Thaainilam",
-      "indiaNet": 0.02,
-      "worldwide": 0.02,
+      "indiaNet": 0.03,
+      "worldwide": 0.03,
       "status": "playing"
     },
     {
       "id": "aarambham-oru-albaniyo-katha",
       "title": "Aarambham Oru Albaniyo Katha",
-      "indiaNet": 0.02,
-      "worldwide": 0.02,
+      "indiaNet": 0.03,
+      "worldwide": 0.03,
       "status": "playing"
     },
     {
       "id": "dhanushkodiyilekku",
       "title": "Dhanushkodiyilekku",
-      "indiaNet": 0.02,
-      "worldwide": 0.02,
+      "indiaNet": 0.03,
+      "worldwide": 0.03,
       "status": "playing"
     }
   ]
