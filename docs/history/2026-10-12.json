@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generatedAt": "2026-10-12T00:19:04.143Z",
+  "generatedAt": "2026-10-12T10:27:33.914Z",
   "films": [
     {
       "id": "toxic",
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 309.5,
-      "worldwide": 480.4,
+      "indiaNet": 309,
+      "worldwide": 479.8,
       "status": "playing"
     },
     {
@@ -180,9 +180,9 @@
     {
       "id": "cocktail-2",
       "title": "Cocktail 2",
-      "indiaNet": 95.5,
-      "worldwide": 147.73,
-      "status": "playing"
+      "indiaNet": 92.09,
+      "worldwide": 143.6,
+      "status": "closed"
     },
     {
       "id": "alpha",
@@ -192,6 +192,13 @@
       "status": "closed"
     },
     {
+      "id": "comrade-kalyan",
+      "title": "Comrade Kalyan",
+      "indiaNet": 8.15,
+      "worldwide": 11.39,
+      "status": "playing"
+    },
+    {
       "id": "other-mommy",
       "title": "Other Mommy",
       "indiaNet": 2.45,
@@ -199,10 +206,10 @@
       "status": "playing"
     },
     {
-      "id": "comrade-kalyan",
-      "title": "Comrade Kalyan",
-      "indiaNet": 8.01,
-      "worldwide": 8.01,
+      "id": "the-social-reckoning",
+      "title": "The Social Reckoning",
+      "indiaNet": 0.75,
+      "worldwide": 0.9,
       "status": "playing"
     },
     {
@@ -320,13 +327,6 @@
     {
       "id": "aarambham-oru-albaniyo-katha",
       "title": "Aarambham Oru Albaniyo Katha",
-      "indiaNet": 0.03,
-      "worldwide": 0.03,
-      "status": "playing"
-    },
-    {
-      "id": "dhanushkodiyilekku",
-      "title": "Dhanushkodiyilekku",
       "indiaNet": 0.03,
       "worldwide": 0.03,
       "status": "playing"
