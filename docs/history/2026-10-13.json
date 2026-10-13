@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generatedAt": "2026-10-13T11:13:42.415Z",
+  "generatedAt": "2026-10-13T16:48:16.957Z",
   "films": [
     {
       "id": "toxic",
@@ -82,8 +82,8 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 230.34,
-      "worldwide": 339.58,
+      "indiaNet": 218.13,
+      "worldwide": 324.88,
       "status": "playing"
     },
     {
