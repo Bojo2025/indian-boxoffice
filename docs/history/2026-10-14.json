@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generatedAt": "2026-10-14T04:10:56.712Z",
+  "generatedAt": "2026-10-14T09:05:07.174Z",
   "films": [
     {
       "id": "toxic",
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 196.33,
-      "worldwide": 233.87,
+      "indiaNet": 117.7,
+      "worldwide": 153.01,
       "status": "late"
     },
     {
