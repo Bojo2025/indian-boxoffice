@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generatedAt": "2026-10-13T22:25:56.415Z",
+  "generatedAt": "2026-10-14T04:10:56.712Z",
   "films": [
     {
       "id": "toxic",
@@ -82,8 +82,8 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 218.13,
-      "worldwide": 324.88,
+      "indiaNet": 218.16,
+      "worldwide": 324.91,
       "status": "playing"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 117.7,
-      "worldwide": 153.01,
+      "indiaNet": 196.33,
+      "worldwide": 233.87,
       "status": "late"
     },
     {
