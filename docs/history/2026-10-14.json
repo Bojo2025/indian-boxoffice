@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generatedAt": "2026-10-14T11:28:24.496Z",
+  "generatedAt": "2026-10-14T16:50:19.146Z",
   "films": [
     {
       "id": "toxic",
@@ -82,8 +82,8 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 218.16,
-      "worldwide": 324.91,
+      "indiaNet": 230.38,
+      "worldwide": 339.63,
       "status": "playing"
     },
     {
@@ -180,9 +180,9 @@
     {
       "id": "cocktail-2",
       "title": "Cocktail 2",
-      "indiaNet": 92.09,
-      "worldwide": 143.6,
-      "status": "closed"
+      "indiaNet": 95.5,
+      "worldwide": 147.73,
+      "status": "playing"
     },
     {
       "id": "alpha",
