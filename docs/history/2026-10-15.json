@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generatedAt": "2026-10-15T05:18:08.303Z",
+  "generatedAt": "2026-10-15T08:38:45.962Z",
   "films": [
     {
       "id": "toxic",
@@ -96,22 +96,22 @@
     {
       "id": "dhamaal-4",
       "title": "Dhamaal 4",
-      "indiaNet": 163.8,
-      "worldwide": 224.61,
+      "indiaNet": 167.88,
+      "worldwide": 230.17,
       "status": "late"
     },
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 117.7,
-      "worldwide": 153.01,
+      "indiaNet": 196.41,
+      "worldwide": 233.95,
       "status": "late"
     },
     {
       "id": "dhurandhar",
       "title": "Dhurandhar: The Revenge",
-      "indiaNet": 1149.3,
-      "worldwide": 1813.39,
+      "indiaNet": 1108.09,
+      "worldwide": 1820,
       "status": "playing"
     },
     {
@@ -180,9 +180,9 @@
     {
       "id": "cocktail-2",
       "title": "Cocktail 2",
-      "indiaNet": 92.09,
-      "worldwide": 143.6,
-      "status": "closed"
+      "indiaNet": 95.5,
+      "worldwide": 147.73,
+      "status": "playing"
     },
     {
       "id": "alpha",
