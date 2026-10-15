@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generatedAt": "2026-10-15T03:53:21.305Z",
+  "generatedAt": "2026-10-15T05:18:08.303Z",
   "films": [
     {
       "id": "toxic",
@@ -82,8 +82,8 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 218.16,
-      "worldwide": 324.91,
+      "indiaNet": 230.41,
+      "worldwide": 339.66,
       "status": "playing"
     },
     {
@@ -96,8 +96,8 @@
     {
       "id": "dhamaal-4",
       "title": "Dhamaal 4",
-      "indiaNet": 167.88,
-      "worldwide": 230.17,
+      "indiaNet": 163.8,
+      "worldwide": 224.61,
       "status": "late"
     },
     {
@@ -110,8 +110,8 @@
     {
       "id": "dhurandhar",
       "title": "Dhurandhar: The Revenge",
-      "indiaNet": 1108.09,
-      "worldwide": 1820,
+      "indiaNet": 1149.3,
+      "worldwide": 1813.39,
       "status": "playing"
     },
     {
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 213,
-      "worldwide": 0,
+      "indiaNet": 328.75,
+      "worldwide": 509,
       "status": "playing"
     },
     {

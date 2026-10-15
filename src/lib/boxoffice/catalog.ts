@@ -518,6 +518,12 @@ export const MOVIES: Movie[] = [
 ];
 
 export const SACNILK_PAGES: { movieId: string; slug: string }[] = [
+  // Currently playing / high-traffic first — Sacnilk 429s starve the tail of this list.
+  { movieId: "drishyam-3", slug: "drishyam_3_hindi_2026_Box_Office_Collection_Day_Wise_Worldwide" },
+  { movieId: "hanuman-ansh", slug: "hanuman_ansh_2026_Box_Office_Collection_Day_Wise_Worldwide" },
+  { movieId: "mirzapur-the-movie", slug: "mirzapur_the_movie_2026_Box_Office_Collection_Day_Wise_Worldwide" },
+  { movieId: "sardar-2", slug: "sardar_2_2026_Box_Office_Collection_Day_Wise_Worldwide" },
+  { movieId: "haiwaan", slug: "haiwaan_2026_Box_Office_Collection_Day_Wise_Worldwide" },
   { movieId: "toxic", slug: "toxic_2026_Box_Office_Collection_Day_Wise_Worldwide" },
   { movieId: "awarapan-2", slug: "awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide" },
   { movieId: "irumudi", slug: "irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide" },
@@ -531,13 +537,8 @@ export const SACNILK_PAGES: { movieId: string; slug: string }[] = [
   { movieId: "dhamaal-4", slug: "dhamaal_4_2026_Box_Office_Collection_Day_Wise_Worldwide" },
   { movieId: "karuppu", slug: "karuppu_2026_Box_Office_Collection_Day_Wise_Worldwide" },
   { movieId: "welcome-jungle", slug: "welcome_to_the_jungle_2026_Box_Office_Collection_Day_Wise_Worldwide" },
-  { movieId: "hanuman-ansh", slug: "hanuman_ansh_2026_Box_Office_Collection_Day_Wise_Worldwide" },
-  { movieId: "sardar-2", slug: "sardar_2_2026_Box_Office_Collection_Day_Wise_Worldwide" },
-  { movieId: "haiwaan", slug: "haiwaan_2026_Box_Office_Collection_Day_Wise_Worldwide" },
-  { movieId: "mirzapur-the-movie", slug: "mirzapur_the_movie_2026_Box_Office_Collection_Day_Wise_Worldwide" },
   { movieId: "the-odyssey", slug: "the_odyssey_2026_Box_Office_Collection_Day_Wise_Worldwide" },
   { movieId: "cocktail-2", slug: "cocktail_2_2026_Box_Office_Collection_Day_Wise_Worldwide" },
-  { movieId: "drishyam-3", slug: "drishyam_3_hindi_2026_Box_Office_Collection_Day_Wise_Worldwide" },
 ];
 
 export const HUNGAMA_PAGES: { movieId: string; slug: string }[] = [

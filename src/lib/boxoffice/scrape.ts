@@ -105,24 +105,46 @@ function matchMovie(title: string): Movie | null {
   return best;
 }
 
-async function fetchText(url: string, timeoutMs = 12000): Promise<string> {
-  const ctrl = new AbortController();
-  const t = setTimeout(() => ctrl.abort(), timeoutMs);
-  try {
-    const res = await fetch(url, {
-      signal: ctrl.signal,
-      headers: {
-        "User-Agent": UA,
-        Accept: "text/html,application/xhtml+xml,application/xml,application/json;q=0.9,*/*;q=0.8",
-        "Accept-Language": "en-IN,en;q=0.9",
-        Referer: "https://www.google.com/",
-      },
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return decodeHtml(await res.text());
-  } finally {
-    clearTimeout(t);
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function fetchText(url: string, timeoutMs = 15000, attempts = 4): Promise<string> {
+  let lastError: Error | null = null;
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), timeoutMs);
+    try {
+      const res = await fetch(url, {
+        signal: ctrl.signal,
+        headers: {
+          "User-Agent": UA,
+          Accept: "text/html,application/xhtml+xml,application/xml,application/json;q=0.9,*/*;q=0.8",
+          "Accept-Language": "en-IN,en;q=0.9",
+          Referer: "https://www.google.com/",
+        },
+      });
+      if (res.status === 429 || res.status === 503) {
+        lastError = new Error(`HTTP ${res.status}`);
+        const retryAfter = Number(res.headers.get("retry-after"));
+        const backoff = Number.isFinite(retryAfter)
+          ? retryAfter * 1000
+          : Math.min(10_000, 700 * 2 ** (attempt - 1)) + Math.floor(Math.random() * 500);
+        await sleep(backoff);
+        continue;
+      }
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return decodeHtml(await res.text());
+    } catch (err) {
+      lastError = err instanceof Error ? err : new Error(String(err));
+      if (attempt < attempts) {
+        await sleep(Math.min(8_000, 500 * 2 ** (attempt - 1)));
+      }
+    } finally {
+      clearTimeout(t);
+    }
   }
+  throw lastError ?? new Error("fetch failed");
 }
 
 async function runPool<T>(items: T[], limit: number, fn: (item: T) => Promise<void>): Promise<void> {
@@ -756,20 +778,25 @@ export async function ingestLiveSources(): Promise<IngestResult> {
       run: async () => {
         const movie = MOVIES.find((m) => m.id === page.movieId);
         if (!movie) throw new Error(`Unknown movie ${page.movieId}`);
-        const html = await fetchText(`https://www.sacnilk.com/news/${page.slug}`);
-        const parsed = parseSacnilkPage(html, movie);
-        if (!parsed.readings.length) throw new Error("No day-wise rows");
-        readings.push(...parsed.readings);
-        territories.push(...parsed.territories);
-        const lastDaily = parsed.readings.filter((r) => r.note === "live scrape").at(-1);
-        const life = parsed.readings.find((r) => r.note.startsWith("lifetime"));
-        headlines.push({
-          sourceId: "sacnilk",
-          title: `${movie.title}: Sacnilk ${parsed.readings.filter((r) => r.note === "live scrape").length} days, India net \u20B9${life?.indiaNet ?? lastDaily?.indiaNet} Cr`,
-          url: `https://www.sacnilk.com/news/${page.slug}`,
-          publishedAt: new Date().toISOString(),
-          summary: `Live day-wise pull. Last day ${lastDaily?.dayNumber ?? "—"}. WW \u20B9${life?.worldwide ?? "—"} Cr.`,
-        });
+        try {
+          const html = await fetchText(`https://www.sacnilk.com/news/${page.slug}`);
+          const parsed = parseSacnilkPage(html, movie);
+          if (!parsed.readings.length) throw new Error("No day-wise rows");
+          readings.push(...parsed.readings);
+          territories.push(...parsed.territories);
+          const lastDaily = parsed.readings.filter((r) => r.note === "live scrape").at(-1);
+          const life = parsed.readings.find((r) => r.note.startsWith("lifetime"));
+          headlines.push({
+            sourceId: "sacnilk",
+            title: `${movie.title}: Sacnilk ${parsed.readings.filter((r) => r.note === "live scrape").length} days, India net \u20B9${life?.indiaNet ?? lastDaily?.indiaNet} Cr`,
+            url: `https://www.sacnilk.com/news/${page.slug}`,
+            publishedAt: new Date().toISOString(),
+            summary: `Live day-wise pull. Last day ${lastDaily?.dayNumber ?? "—"}. WW \u20B9${life?.worldwide ?? "—"} Cr.`,
+          });
+        } catch (err) {
+          const detail = err instanceof Error ? err.message : "Failed";
+          throw new Error(`${page.movieId}: ${detail}`);
+        }
       },
     })),
     {
@@ -935,7 +962,9 @@ export async function ingestLiveSources(): Promise<IngestResult> {
 
   const jobNotes: { sourceId: string; ok: boolean; detail: string }[] = [];
 
-  await runPool(jobs, 8, async (job) => {
+  // Keep Sacnilk concurrency modest — their edge returns HTTP 429 under burst
+  // traffic, which previously starved late pages like Drishyam 3.
+  await runPool(jobs, 4, async (job) => {
     try {
       await job.run();
       jobNotes.push({
