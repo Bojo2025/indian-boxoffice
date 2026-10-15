@@ -325,7 +325,9 @@ const films: FilmCard[] = movieCatalog.map((m) => {
   const indiaGross = consensusField(rows, "indiaGross");
   const overseas = consensusField(rows, "overseas");
   let worldwide = consensusField(rows, "worldwide");
-  if (!worldwide && indiaGross) worldwide = indiaGross;
+  // If trackers only published nett (or WW scrape 429'd), never leave WW at 0
+  // while India nett is live — that reads as a broken board to visitors.
+  if (!worldwide) worldwide = indiaGross || indiaNet || 0;
   // Sanity: worldwide gross cannot be below domestic nett / gross.
   if (worldwide > 0) {
     worldwide = Math.max(worldwide, indiaGross || 0, indiaNet || 0);
