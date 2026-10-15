@@ -1,6 +1,6 @@
 {
   "date": "2026-10-04",
-  "generatedAt": "2026-10-04T02:46:22.970Z",
+  "generatedAt": "2026-10-04T16:49:31.037Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 321.73,
-      "worldwide": 419.46,
+      "indiaNet": 324.73,
+      "worldwide": 423.26,
       "status": "late"
     },
     {
@@ -110,8 +110,8 @@
     {
       "id": "dhurandhar",
       "title": "Dhurandhar: The Revenge",
-      "indiaNet": 1149.3,
-      "worldwide": 1813.39,
+      "indiaNet": 1108.09,
+      "worldwide": 1820,
       "status": "playing"
     },
     {
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 115.5,
-      "worldwide": 177.1,
+      "indiaNet": 177.5,
+      "worldwide": 274,
       "status": "playing"
     },
     {
@@ -194,8 +194,8 @@
     {
       "id": "doraemon-castle-of-the-undersea-devil-4dx-hindi",
       "title": "Doraemon: Castle of the Undersea Devil (4DX)(Hindi)",
-      "indiaNet": 7.03,
-      "worldwide": 7.03,
+      "indiaNet": 4.1,
+      "worldwide": 4.89,
       "status": "playing"
     },
     {
@@ -215,8 +215,8 @@
     {
       "id": "dont-trouble-the-trouble",
       "title": "Don't Trouble The Trouble",
-      "indiaNet": 3.7,
-      "worldwide": 3.7,
+      "indiaNet": 2.42,
+      "worldwide": 2.79,
       "status": "playing"
     },
     {
@@ -248,10 +248,10 @@
       "status": "playing"
     },
     {
-      "id": "prem-keetanu",
-      "title": "Prem Keetanu",
-      "indiaNet": 1.15,
-      "worldwide": 1.15,
+      "id": "anbil-avan",
+      "title": "Anbil Avan",
+      "indiaNet": 0.9,
+      "worldwide": 1.05,
       "status": "playing"
     }
   ]
