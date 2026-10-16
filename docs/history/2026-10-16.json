@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generatedAt": "2026-10-16T08:33:51.927Z",
+  "generatedAt": "2026-10-16T11:00:51.432Z",
   "films": [
     {
       "id": "toxic",
@@ -195,7 +195,7 @@
       "id": "jailer-2",
       "title": "Jailer 2",
       "indiaNet": 59.7,
-      "worldwide": 125.25,
+      "worldwide": 127.25,
       "status": "playing"
     },
     {
