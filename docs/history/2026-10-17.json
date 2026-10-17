@@ -1,6 +1,6 @@
 {
   "date": "2026-10-17",
-  "generatedAt": "2026-10-16T23:21:14.725Z",
+  "generatedAt": "2026-10-17T03:39:32.390Z",
   "films": [
     {
       "id": "toxic",
@@ -222,8 +222,8 @@
     {
       "id": "desu7",
       "title": "DeSu7",
-      "indiaNet": 1.11,
-      "worldwide": 1.24,
+      "indiaNet": 0.7,
+      "worldwide": 0.83,
       "status": "playing"
     },
     {
