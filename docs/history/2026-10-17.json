@@ -1,6 +1,6 @@
 {
   "date": "2026-10-17",
-  "generatedAt": "2026-10-17T03:39:32.390Z",
+  "generatedAt": "2026-10-17T08:06:03.832Z",
   "films": [
     {
       "id": "toxic",
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 336,
-      "worldwide": 520.15,
+      "indiaNet": 336.1,
+      "worldwide": 520.27,
       "status": "playing"
     },
     {
@@ -195,7 +195,7 @@
       "id": "ranabaali",
       "title": "Ranabaali",
       "indiaNet": 9.25,
-      "worldwide": 16.5,
+      "worldwide": 16.15,
       "status": "playing"
     },
     {
@@ -327,8 +327,8 @@
     {
       "id": "jailer-2",
       "title": "Jailer 2",
-      "indiaNet": 95.3,
-      "worldwide": 209.1,
+      "indiaNet": 96.8,
+      "worldwide": 213.65,
       "status": "playing"
     }
   ]
