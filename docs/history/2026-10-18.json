@@ -1,6 +1,6 @@
 {
   "date": "2026-10-18",
-  "generatedAt": "2026-10-18T03:45:41.532Z",
+  "generatedAt": "2026-10-18T08:23:22.192Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 339.71,
-      "worldwide": 449.38,
+      "indiaNet": 339.39,
+      "worldwide": 449.02,
       "status": "late"
     },
     {
@@ -220,17 +220,17 @@
       "status": "playing"
     },
     {
+      "id": "street-fighter",
+      "title": "Street Fighter",
+      "indiaNet": 2.5,
+      "worldwide": 2.95,
+      "status": "playing"
+    },
+    {
       "id": "desu7",
       "title": "DeSu7",
       "indiaNet": 1.49,
       "worldwide": 1.72,
-      "status": "playing"
-    },
-    {
-      "id": "street-fighter",
-      "title": "Street Fighter",
-      "indiaNet": 2.46,
-      "worldwide": 2.46,
       "status": "playing"
     },
     {
@@ -241,17 +241,17 @@
       "status": "playing"
     },
     {
+      "id": "crazy-kalyanam",
+      "title": "Crazy Kalyanam",
+      "indiaNet": 0.4,
+      "worldwide": 0.46,
+      "status": "playing"
+    },
+    {
       "id": "drones",
       "title": "Drones",
       "indiaNet": 0.27,
       "worldwide": 0.31,
-      "status": "playing"
-    },
-    {
-      "id": "crazy-kalyanam",
-      "title": "Crazy Kalyanam",
-      "indiaNet": 0.41,
-      "worldwide": 0.41,
       "status": "playing"
     },
     {
