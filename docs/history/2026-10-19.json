@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "generatedAt": "2026-10-19T03:55:29.791Z",
+  "generatedAt": "2026-10-19T09:21:58.965Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 339.93,
-      "worldwide": 449.62,
+      "indiaNet": 339.85,
+      "worldwide": 449.67,
       "status": "late"
     },
     {
