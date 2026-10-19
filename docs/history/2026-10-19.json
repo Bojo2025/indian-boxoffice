@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "generatedAt": "2026-10-19T09:21:58.965Z",
+  "generatedAt": "2026-10-19T12:36:40.550Z",
   "films": [
     {
       "id": "toxic",
@@ -194,8 +194,8 @@
     {
       "id": "garividi-lakshmi",
       "title": "Garividi Lakshmi",
-      "indiaNet": 1.37,
-      "worldwide": 1.37,
+      "indiaNet": 1.38,
+      "worldwide": 1.6,
       "status": "playing"
     },
     {
@@ -223,14 +223,14 @@
       "id": "street-fighter",
       "title": "Street Fighter",
       "indiaNet": 4.08,
-      "worldwide": 4.08,
+      "worldwide": 4.83,
       "status": "playing"
     },
     {
       "id": "desu7",
       "title": "DeSu7",
-      "indiaNet": 2.47,
-      "worldwide": 2.47,
+      "indiaNet": 2.15,
+      "worldwide": 2.55,
       "status": "playing"
     },
     {

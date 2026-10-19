@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T09:21:58.965Z",
+  "generatedAt": "2026-10-19T12:36:40.550Z",
   "deskDate": "2026-10-19",
   "comparedTo": "2026-10-19 prior",
   "mode": "server-consensus",
@@ -12,10 +12,10 @@
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 79)",
-      "koimoi has failed 79 consecutive publishes",
-      "boi failed: HTTP 403 (streak 24)",
-      "boi has failed 24 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 80)",
+      "koimoi has failed 80 consecutive publishes",
+      "boi failed: HTTP 403 (streak 25)",
+      "boi has failed 25 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
@@ -25,7 +25,7 @@
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 79,
+        "streakFail": 80,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@
       },
       "boi": {
         "ok": false,
-        "streakFail": 24,
+        "streakFail": 25,
         "detail": "HTTP 403"
       }
     }
@@ -3765,8 +3765,8 @@
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": -0.08,
-      "deltaWw": 0.05,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-07",
@@ -14807,17 +14807,17 @@
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 1.37,
-      "indiaGross": 0.89,
+      "indiaNet": 1.38,
+      "indiaGross": 1.6,
       "overseas": 0,
-      "worldwide": 1.37,
-      "lastDayNet": 0.77,
+      "worldwide": 1.6,
+      "lastDayNet": 0.78,
       "trackedThroughDay": 3,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.01,
+      "deltaWw": 0.23,
       "dayWise": [
         {
           "reportDate": "2026-10-17",
@@ -14834,11 +14834,11 @@
         {
           "reportDate": "2026-10-18",
           "dayNumber": 2,
-          "indiaNet": 0.77,
-          "indiaGross": 0.89,
+          "indiaNet": 0.78,
+          "indiaGross": 0.9,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": 28.33,
+          "netChangePct": 30,
           "disagreementPct": 0,
           "screens": 575,
           "occupancy": 36
@@ -15060,16 +15060,16 @@
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
       "indiaNet": 4.08,
-      "indiaGross": 3.61,
+      "indiaGross": 4.83,
       "overseas": 0,
-      "worldwide": 4.08,
+      "worldwide": 4.83,
       "lastDayNet": 1.58,
       "trackedThroughDay": 4,
       "liveSources": [
         "sacnilk"
       ],
       "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaWw": 0.75,
       "dayWise": [
         {
           "reportDate": "2026-10-16",
@@ -15099,13 +15099,13 @@
           "reportDate": "2026-10-18",
           "dayNumber": 3,
           "indiaNet": 1.58,
-          "indiaGross": 1.9,
+          "indiaGross": 1.88,
           "overseas": 0,
           "worldwide": 0,
           "netChangePct": 8.97,
           "disagreementPct": 0,
-          "screens": 1839,
-          "occupancy": 19.4
+          "screens": 1921,
+          "occupancy": 19.3
         }
       ]
     },
@@ -15125,22 +15125,22 @@
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 2.47,
-      "indiaGross": 2.05,
+      "indiaNet": 2.15,
+      "indiaGross": 2.55,
       "overseas": 0,
-      "worldwide": 2.47,
-      "lastDayNet": 0.98,
+      "worldwide": 2.55,
+      "lastDayNet": 0.75,
       "trackedThroughDay": 4,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": -0.32,
+      "deltaWw": 0.08,
       "dayWise": [
         {
           "reportDate": "2026-10-16",
           "dayNumber": 1,
-          "indiaNet": 0.7,
+          "indiaNet": 0.75,
           "indiaGross": 0,
           "overseas": 0,
           "worldwide": 0,
@@ -15152,11 +15152,11 @@
         {
           "reportDate": "2026-10-17",
           "dayNumber": 2,
-          "indiaNet": 0.79,
-          "indiaGross": 0.89,
+          "indiaNet": 0.65,
+          "indiaGross": 0.77,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": 12.86,
+          "netChangePct": -13.33,
           "disagreementPct": 0,
           "screens": 442,
           "occupancy": 29
@@ -15164,11 +15164,11 @@
         {
           "reportDate": "2026-10-18",
           "dayNumber": 3,
-          "indiaNet": 0.98,
-          "indiaGross": 1.16,
+          "indiaNet": 0.75,
+          "indiaGross": 0.89,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": 24.05,
+          "netChangePct": 15.38,
           "disagreementPct": 0,
           "screens": 441,
           "occupancy": 35
@@ -15656,7 +15656,15 @@
       "dayWise": []
     }
   ],
-  "changes": [],
+  "changes": [
+    {
+      "id": "street-fighter",
+      "title": "Street Fighter",
+      "text": "Street Fighter: WW +₹0.75 Cr since 2026-10-19 prior",
+      "deltaNet": 0,
+      "deltaWw": 0.75
+    }
+  ],
   "logs": [
     {
       "sourceId": "sacnilk",
@@ -15684,14 +15692,14 @@
       "detail": "Fetched 1 page (headlines / status)"
     },
     {
-      "sourceId": "koimoi",
-      "status": "blocked",
-      "detail": "HTTP 403"
-    },
-    {
       "sourceId": "express",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
+    },
+    {
+      "sourceId": "koimoi",
+      "status": "blocked",
+      "detail": "HTTP 403"
     },
     {
       "sourceId": "boi",
@@ -15702,114 +15710,114 @@
   "headlines": [
     {
       "sourceId": "sacnilk",
-      "title": "Mirzapur: The Movie: Sacnilk 45 days, India net ₹230.46 Cr",
-      "url": "https://www.sacnilk.com/news/mirzapur_the_movie_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:19.671Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹339.71 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
       "title": "Drishyam 3: The Conclusion: Sacnilk 17 days, India net ₹347.35 Cr",
       "url": "https://www.sacnilk.com/news/drishyam_3_hindi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:19.727Z",
+      "publishedAt": "2026-10-19T12:36:06.434Z",
       "summary": "Live day-wise pull. Last day 1. WW ₹538.27 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Nayyi Navelli: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Nayyi_Navelli_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:20.006Z",
-      "summary": "Auto-discovered Bollywood title. Latest reported India net ₹3.25 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Sardar 2: Sacnilk 22 days, India net ₹16.33 Cr",
-      "url": "https://www.sacnilk.com/news/sardar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:20.022Z",
-      "summary": "Live day-wise pull. Last day 19. WW ₹23.88 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Prahaar - The Ujjwal Nikam Story: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Prahaar_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:20.035Z",
-      "summary": "Auto-discovered Bollywood title. Latest reported India net ₹2.35 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Ranabaali: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Ranabaali_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:20.060Z",
-      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹9.25 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Garividi Lakshmi: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Garividi_Lakshmi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:20.101Z",
-      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹0.6 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Haiwaan: Sacnilk 17 days, India net ₹9.92 Cr",
-      "url": "https://www.sacnilk.com/news/haiwaan_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:20.279Z",
-      "summary": "Live day-wise pull. Last day 19. WW ₹15.08 Cr."
+      "title": "Mirzapur: The Movie: Sacnilk 45 days, India net ₹230.46 Cr",
+      "url": "https://www.sacnilk.com/news/mirzapur_the_movie_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-19T12:36:06.827Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹339.71 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Hanuman Ansh: Sacnilk 73 days, India net ₹339.85 Cr",
       "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:20.305Z",
+      "publishedAt": "2026-10-19T12:36:06.855Z",
       "summary": "Live day-wise pull. Last day 1. WW ₹449.67 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Street Fighter: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Street_Fighter_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:20.318Z",
-      "summary": "Auto-discovered Kollywood title. Latest reported India net ₹1.05 Cr."
+      "title": "Garividi Lakshmi: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Garividi_Lakshmi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-19T12:36:06.906Z",
+      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹0.6 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Ranabaali: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Ranabaali_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-19T12:36:06.928Z",
+      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹9.25 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Nayyi Navelli: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Nayyi_Navelli_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-19T12:36:06.969Z",
+      "summary": "Auto-discovered Bollywood title. Latest reported India net ₹3.25 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Prahaar - The Ujjwal Nikam Story: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Prahaar_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-19T12:36:06.989Z",
+      "summary": "Auto-discovered Bollywood title. Latest reported India net ₹2.35 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Toxic: Sacnilk 37 days, India net ₹250.13 Cr",
       "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:20.389Z",
+      "publishedAt": "2026-10-19T12:36:07.244Z",
       "summary": "Live day-wise pull. Last day 1. WW ₹342.26 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Sardar 2: Sacnilk 22 days, India net ₹16.33 Cr",
+      "url": "https://www.sacnilk.com/news/sardar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-19T12:36:07.263Z",
+      "summary": "Live day-wise pull. Last day 19. WW ₹23.88 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "DeSu7: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/DeSu7_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:20.424Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.7 Cr."
+      "publishedAt": "2026-10-19T12:36:07.273Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.75 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Awarapan 2: Sacnilk 49 days, India net ₹150.59 Cr",
-      "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:20.629Z",
-      "summary": "Live day-wise pull. Last day 62. WW ₹213.01 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Crazy Kalyanam: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Crazy_Kalyanam_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:20.687Z",
-      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹0.2 Cr."
+      "title": "Street Fighter: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Street_Fighter_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-19T12:36:07.282Z",
+      "summary": "Auto-discovered Kollywood title. Latest reported India net ₹1.05 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Whalefall: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/Whalefall_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:20.695Z",
+      "publishedAt": "2026-10-19T12:36:07.430Z",
       "summary": "Auto-discovered Hollywood title. Latest reported India net ₹0.2 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Haiwaan: Sacnilk 17 days, India net ₹9.92 Cr",
+      "url": "https://www.sacnilk.com/news/haiwaan_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-19T12:36:07.459Z",
+      "summary": "Live day-wise pull. Last day 19. WW ₹15.08 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Crazy Kalyanam: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Crazy_Kalyanam_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-19T12:36:07.701Z",
+      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹0.2 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Awarapan 2: Sacnilk 49 days, India net ₹150.59 Cr",
+      "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-19T12:36:07.933Z",
+      "summary": "Live day-wise pull. Last day 62. WW ₹213.01 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Irumudi: Sacnilk 59 days, India net ₹194.44 Cr",
       "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-19T09:21:20.764Z",
+      "publishedAt": "2026-10-19T12:36:08.164Z",
       "summary": "Live day-wise pull. Last day 1. WW ₹246.77 Cr."
     }
   ],
