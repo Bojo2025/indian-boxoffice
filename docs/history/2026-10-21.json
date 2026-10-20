@@ -1,6 +1,6 @@
 {
   "date": "2026-10-21",
-  "generatedAt": "2026-10-20T19:03:47.272Z",
+  "generatedAt": "2026-10-20T23:41:55.294Z",
   "films": [
     {
       "id": "toxic",
@@ -26,8 +26,8 @@
     {
       "id": "irumudi",
       "title": "Irumudi",
-      "indiaNet": 194.45,
-      "worldwide": 246.78,
+      "indiaNet": 194.46,
+      "worldwide": 246.79,
       "status": "playing"
     },
     {
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 340.13,
-      "worldwide": 449.99,
+      "indiaNet": 340.75,
+      "worldwide": 450.68,
       "status": "late"
     },
     {
@@ -82,15 +82,15 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 230.48,
-      "worldwide": 339.73,
+      "indiaNet": 230.5,
+      "worldwide": 339.75,
       "status": "playing"
     },
     {
       "id": "spider-man-bnd",
       "title": "Spider-Man: Brand New Day",
-      "indiaNet": 500.71,
-      "worldwide": 598.97,
+      "indiaNet": 500.73,
+      "worldwide": 598.99,
       "status": "late"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 196.5,
-      "worldwide": 234.05,
+      "indiaNet": 196.52,
+      "worldwide": 234.07,
       "status": "late"
     },
     {
@@ -236,71 +236,71 @@
     {
       "id": "whalefall",
       "title": "Whalefall",
-      "indiaNet": 0.92,
-      "worldwide": 1.04,
+      "indiaNet": 1.12,
+      "worldwide": 1.26,
       "status": "playing"
     },
     {
       "id": "drones",
       "title": "Drones",
-      "indiaNet": 0.56,
-      "worldwide": 0.64,
+      "indiaNet": 0.71,
+      "worldwide": 0.8,
       "status": "playing"
     },
     {
       "id": "crazy-kalyanam",
       "title": "Crazy Kalyanam",
-      "indiaNet": 0.74,
-      "worldwide": 0.74,
-      "status": "playing"
-    },
-    {
-      "id": "thaapi",
-      "title": "Thaapi",
-      "indiaNet": 0.32,
-      "worldwide": 0.35,
+      "indiaNet": 0.97,
+      "worldwide": 0.97,
       "status": "playing"
     },
     {
       "id": "danger-devdas",
       "title": "Danger Devdas",
-      "indiaNet": 0.24,
-      "worldwide": 0.28,
+      "indiaNet": 0.32,
+      "worldwide": 0.37,
       "status": "playing"
     },
     {
-      "id": "monster-the-ultimate",
-      "title": "Monster-The Ultimate",
-      "indiaNet": 0.17,
-      "worldwide": 0.18,
+      "id": "thaapi",
+      "title": "Thaapi",
+      "indiaNet": 0.33,
+      "worldwide": 0.36,
       "status": "playing"
     },
     {
       "id": "shaun-the-sheep-the-beast-of-mossy-bottom",
       "title": "Shaun the Sheep: The Beast of Mossy Bottom",
-      "indiaNet": 0.15,
-      "worldwide": 0.16,
+      "indiaNet": 0.21,
+      "worldwide": 0.22,
+      "status": "playing"
+    },
+    {
+      "id": "monster-the-ultimate",
+      "title": "Monster-The Ultimate",
+      "indiaNet": 0.2,
+      "worldwide": 0.21,
       "status": "playing"
     },
     {
       "id": "sohla",
       "title": "Sohla",
-      "indiaNet": 0.12,
-      "worldwide": 0.14,
+      "indiaNet": 0.13,
+      "worldwide": 0.15,
       "status": "playing"
     },
     {
       "id": "madhumallati",
       "title": "Madhumallati",
-      "indiaNet": 0.09,
-      "worldwide": 0.1,
+      "indiaNet": 0.12,
+      "worldwide": 0.13,
       "status": "playing"
     },
     {
       "id": "awm-agney-weds-minal",
       "title": "AWM: Agney Weds Minal",
-      "indiaNet": 0.06,
-      "worldwide": 0.07,
+      "indiaNet": 0.07,
+      "worldwide": 0.08,
       "status": "playing"
     },
     {
@@ -325,10 +325,10 @@
       "status": "playing"
     },
     {
-      "id": "bhagya",
-      "title": "Bhagya",
-      "indiaNet": 0.01,
-      "worldwide": 0.01,
+      "id": "andhkar",
+      "title": "Andhkar",
+      "indiaNet": 0.02,
+      "worldwide": 0.02,
       "status": "playing"
     }
   ]
