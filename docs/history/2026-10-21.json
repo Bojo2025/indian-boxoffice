@@ -1,6 +1,6 @@
 {
   "date": "2026-10-21",
-  "generatedAt": "2026-10-21T11:26:07.590Z",
+  "generatedAt": "2026-10-21T16:53:21.696Z",
   "films": [
     {
       "id": "toxic",
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 357.1,
-      "worldwide": 556.37,
+      "indiaNet": 359.75,
+      "worldwide": 560.02,
       "status": "playing"
     },
     {
@@ -194,8 +194,8 @@
     {
       "id": "garividi-lakshmi",
       "title": "Garividi Lakshmi",
-      "indiaNet": 2.99,
-      "worldwide": 2.99,
+      "indiaNet": 3.06,
+      "worldwide": 3.52,
       "status": "playing"
     },
     {
@@ -208,22 +208,22 @@
     {
       "id": "nayyi-navelli",
       "title": "Nayyi Navelli",
-      "indiaNet": 18.65,
-      "worldwide": 24.68,
+      "indiaNet": 20.65,
+      "worldwide": 27.19,
       "status": "playing"
     },
     {
       "id": "prahaar-the-ujjwal-nikam-story",
       "title": "Prahaar - The Ujjwal Nikam Story",
-      "indiaNet": 14.45,
-      "worldwide": 19.51,
+      "indiaNet": 15.95,
+      "worldwide": 21.4,
       "status": "playing"
     },
     {
       "id": "street-fighter",
       "title": "Street Fighter",
-      "indiaNet": 5.74,
-      "worldwide": 5.74,
+      "indiaNet": 5.88,
+      "worldwide": 6.96,
       "status": "playing"
     },
     {
