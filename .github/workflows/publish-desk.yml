@@ -51,7 +51,7 @@ jobs:
         run: |
           git config user.name "ibo-desk-bot"
           git config user.email "ibo-desk-bot@users.noreply.github.com"
-          git add docs/catalog.js docs/board.json docs/health.json docs/history docs/app.js docs/index.html docs/styles.css docs/sitemap.xml docs/robots.txt docs/morning-brief.json docs/feed.xml docs/movies docs/rankings docs/languages docs/about-methodology docs/brief docs/briefs docs/.indexnow-key docs/*.txt || true
+          git add docs/catalog.js docs/board.json docs/health.json docs/history docs/app.js docs/index.html docs/styles.css docs/sitemap.xml docs/robots.txt docs/ads.txt docs/morning-brief.json docs/feed.xml docs/movies docs/rankings docs/languages docs/about-methodology docs/privacy-policy docs/brief docs/briefs docs/.indexnow-key docs/*.txt || true
           if git diff --staged --quiet; then
             echo "No board changes"
             exit 0
