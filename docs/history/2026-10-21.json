@@ -1,6 +1,6 @@
 {
   "date": "2026-10-21",
-  "generatedAt": "2026-10-21T03:56:25.597Z",
+  "generatedAt": "2026-10-21T08:56:28.086Z",
   "films": [
     {
       "id": "toxic",
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 357,
-      "worldwide": 556.22,
+      "indiaNet": 357.1,
+      "worldwide": 556.37,
       "status": "playing"
     },
     {
