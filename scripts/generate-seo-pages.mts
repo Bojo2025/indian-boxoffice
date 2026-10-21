@@ -19,6 +19,8 @@ const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const outDir = join(root, "docs");
 const SITE = "https://indian-boxoffice.com";
 const ASSET_VER = "20261004a";
+const ADSENSE_CLIENT = "ca-pub-3635078997966836";
+const ADSENSE_SCRIPT = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>`;
 
 type DayWise = {
   reportDate: string;
@@ -264,6 +266,7 @@ function shell(opts: {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css?v=${ASSET_VER}" />
+  ${ADSENSE_SCRIPT}
   ${allLd.map((ld) => `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, "\\u003c")}</script>`).join("\n  ")}
 </head>
 <body>
@@ -296,6 +299,7 @@ function shell(opts: {
       · <a href="/records/highest-day-1-collection-2026/">Day 1 records</a>
       · <a href="/rankings/2026/">2026 rankings</a>
       · <a href="/about-methodology/">Methodology</a>
+      · <a href="/privacy-policy/">Privacy policy</a>
       · <a href="/feed.xml">RSS</a>
     </div>
   </footer>
@@ -925,6 +929,60 @@ function renderMethodologyPage(): string {
   });
 }
 
+function renderPrivacyPolicyPage(): string {
+  const url = `${SITE}/privacy-policy/`;
+  const body = `
+    <p class="kicker">Privacy</p>
+    <h1>Privacy policy</h1>
+    <p class="page-sub">How Indian Box Office (indian-boxoffice.com) handles information when you visit this website. Last updated: 21 October 2026.</p>
+
+    <section class="seo-prose">
+      <h2>Who we are</h2>
+      <p>Indian Box Office is an independent box office reporting website developed by Mr Kevin Boyjonauth. This page explains what information is collected when you browse the site, how advertising cookies work, and the choices available to you.</p>
+
+      <h2>Information we collect</h2>
+      <p>We do not require you to create an account, sign in, or submit personal information to read this website, and we do not operate a comment system or contact form on this site. Like most websites, our hosting provider may automatically record standard technical information in server logs, such as your IP address, browser type, device information, referring page, and the pages you visit. We use this information in aggregate to operate, secure, and improve the website.</p>
+
+      <h2>Cookies and advertising</h2>
+      <p>We use Google AdSense to display advertising on this website. Google and its partners may use cookies and similar technologies (including web beacons and IP addresses) to serve ads based on your prior visits to this website and/or other sites on the Internet, and to measure ad performance and prevent fraud.</p>
+      <ul>
+        <li>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites.</li>
+        <li>Google's use of advertising cookies enables it and its partners to serve ads to users based on their visit to this site and/or other sites on the Internet.</li>
+        <li>You may opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" rel="noopener">Google Ads Settings</a>. You can also opt out of some third-party vendors' use of cookies for personalised advertising at <a href="https://www.aboutads.info/" rel="noopener">aboutads.info</a>.</li>
+        <li>For more information about how Google uses data from sites that use its services, see <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use our services</a>.</li>
+      </ul>
+      <p>Where required by applicable law (including in the European Economic Area, the United Kingdom, and Switzerland), we request your consent for the use of cookies for personalised advertising through a Google-certified consent message shown on this site. You can change or withdraw your consent through that message where it is presented.</p>
+
+      <h2>Your browser choices</h2>
+      <p>Most browsers let you block or delete cookies through their settings. If you disable cookies, this website should remain readable, although advertising and some site features may work less well.</p>
+
+      <h2>External links</h2>
+      <p>This website links to external websites (for example, source publications and our public code repository). We are not responsible for the privacy practices or content of those external sites, and we encourage you to read their privacy policies.</p>
+
+      <h2>Children</h2>
+      <p>This website is a general-audience publication about film box office results and is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this privacy policy from time to time. Material changes will be reflected on this page together with a revised "last updated" date.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this privacy policy can be raised through our public repository: <a href="https://github.com/Bojo2025/indian-boxoffice">github.com/Bojo2025/indian-boxoffice</a>.</p>
+    </section>
+  `;
+
+  return shell({
+    title: "Privacy Policy | Indian Box Office",
+    description:
+      "Privacy policy for Indian Box Office: cookies, Google AdSense advertising, opt-out choices, and contact information.",
+    canonical: url,
+    breadcrumbs: [
+      { name: "Home", url: `${SITE}/` },
+      { name: "Privacy Policy", url },
+    ],
+    body,
+  });
+}
+
 function renderBriefPage(brief: MorningBrief, isLatest: boolean): string {
   const path = isLatest ? "/brief/" : `/briefs/${brief.briefDate}/`;
   const url = `${SITE}${path}`;
@@ -1094,6 +1152,10 @@ function prerenderHomepage(pack: Pack) {
     );
   }
 
+  if (!html.includes("adsbygoogle.js")) {
+    html = html.replace("</head>", `  ${ADSENSE_SCRIPT}\n</head>`);
+  }
+
   writeFileSync(indexPath, html);
 }
 
@@ -1105,6 +1167,7 @@ function writeSitemap(pack: Pack, briefDates: string[]) {
     { loc: `${SITE}/rankings/2026/`, changefreq: "hourly", priority: "0.9" },
     { loc: `${SITE}/records/highest-day-1-collection-2026/`, changefreq: "daily", priority: "0.85" },
     { loc: `${SITE}/about-methodology/`, changefreq: "monthly", priority: "0.6" },
+    { loc: `${SITE}/privacy-policy/`, changefreq: "yearly", priority: "0.3" },
     { loc: `${SITE}/brief/`, changefreq: "daily", priority: "0.8" },
     { loc: `${SITE}/feed.xml`, changefreq: "hourly", priority: "0.5" },
   ];
@@ -1285,6 +1348,11 @@ export async function generateSeoPages(packInput?: Pack): Promise<void> {
   }
 
   writePage("about-methodology/index.html", renderMethodologyPage());
+  writePage("privacy-policy/index.html", renderPrivacyPolicyPage());
+  writeFileSync(
+    join(outDir, "ads.txt"),
+    "# Google AdSense — authorized digital sellers for indian-boxoffice.com\ngoogle.com, pub-3635078997966836, DIRECT, f08c47fec0942fa0\n",
+  );
 
   const briefs = collectBriefs(pack);
   for (const brief of briefs) {

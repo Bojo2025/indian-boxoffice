@@ -982,6 +982,18 @@ tr.day-one td {
   display: block;
 }
 
+/* ── Advertising (AdSense) ─────────────────────────────────────────────── */
+.ad-slot {
+  margin: 28px auto;
+  min-height: 110px;
+  max-width: 970px;
+  text-align: center;
+}
+.ad-slot .adsbygoogle {
+  display: block;
+  min-height: 100px;
+}
+
 /* ── Day-wise milestones & day-by-day indicators ────────────────────────── */
 .film-day-tagline {
   font-size: 12px;
