@@ -1,7 +1,7 @@
 window.IBO_CATALOG = {
-  "generatedAt": "2026-10-22T16:53:26.239Z",
-  "deskDate": "2026-10-22",
-  "comparedTo": "2026-10-22 prior",
+  "generatedAt": "2026-10-22T21:20:43.953Z",
+  "deskDate": "2026-10-23",
+  "comparedTo": "2026-10-22",
   "mode": "server-consensus",
   "spine": [
     "sacnilk",
@@ -12,20 +12,20 @@ window.IBO_CATALOG = {
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 96)",
-      "koimoi has failed 96 consecutive publishes",
-      "boi failed: HTTP 403 (streak 41)",
-      "boi has failed 41 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 97)",
+      "koimoi has failed 97 consecutive publishes",
+      "boi failed: HTTP 403 (streak 42)",
+      "boi has failed 42 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
         "ok": true,
         "streakFail": 0,
-        "detail": "1242 collection rows from 21 live pulls"
+        "detail": "1256 collection rows from 21 live pulls"
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 96,
+        "streakFail": 97,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@ window.IBO_CATALOG = {
       },
       "boi": {
         "ok": false,
-        "streakFail": 41,
+        "streakFail": 42,
         "detail": "HTTP 403"
       }
     }
@@ -136,7 +136,7 @@ window.IBO_CATALOG = {
       "overseas": 43.75,
       "worldwide": 342.26,
       "lastDayNet": 0.02,
-      "trackedThroughDay": 58,
+      "trackedThroughDay": 59,
       "liveSources": [
         "sacnilk",
         "wikipedia"
@@ -611,7 +611,7 @@ window.IBO_CATALOG = {
       "overseas": 33.41,
       "worldwide": 210.26,
       "lastDayNet": 0,
-      "trackedThroughDay": 70,
+      "trackedThroughDay": 71,
       "liveSources": [
         "sacnilk",
         "hungama"
@@ -1843,17 +1843,17 @@ window.IBO_CATALOG = {
       "verdict": "Super Hit",
       "posterKey": "irumudi",
       "poster": "./posters/irumudi.jpg",
-      "indiaNet": 194.47,
-      "indiaGross": 224.35,
+      "indiaNet": 194.48,
+      "indiaGross": 224.36,
       "overseas": 22.45,
-      "worldwide": 246.8,
+      "worldwide": 246.81,
       "lastDayNet": 0.01,
-      "trackedThroughDay": 62,
+      "trackedThroughDay": 63,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.01,
+      "deltaWw": 0.01,
       "dayWise": [
         {
           "reportDate": "2026-08-21",
@@ -2598,6 +2598,18 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 16,
           "occupancy": 19
+        },
+        {
+          "reportDate": "2026-10-22",
+          "dayNumber": 63,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 16,
+          "occupancy": 9
         }
       ]
     },
@@ -2622,7 +2634,7 @@ window.IBO_CATALOG = {
       "overseas": 9.05,
       "worldwide": 54.2,
       "lastDayNet": 0,
-      "trackedThroughDay": 70,
+      "trackedThroughDay": 71,
       "liveSources": [
         "sacnilk",
         "hungama"
@@ -3790,19 +3802,19 @@ window.IBO_CATALOG = {
       "verdict": "Flop",
       "posterKey": "hanuman-ansh",
       "poster": "./posters/hanuman-ansh.jpg",
-      "indiaNet": 341.04,
-      "indiaGross": 402.4,
+      "indiaNet": 341.26,
+      "indiaGross": 402.64,
       "overseas": 48.6,
-      "worldwide": 451,
-      "lastDayNet": 0.29,
-      "trackedThroughDay": 77,
+      "worldwide": 451.24,
+      "lastDayNet": 0.22,
+      "trackedThroughDay": 78,
       "liveSources": [
         "sacnilk",
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.22,
+      "deltaWw": 0.24,
       "dayWise": [
         {
           "reportDate": "2026-08-07",
@@ -4715,6 +4727,18 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 465,
           "occupancy": 17.2
+        },
+        {
+          "reportDate": "2026-10-22",
+          "dayNumber": 77,
+          "indiaNet": 0.22,
+          "indiaGross": 0.24,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -24.14,
+          "disagreementPct": 0,
+          "screens": 455,
+          "occupancy": 14
         }
       ]
     },
@@ -5033,7 +5057,7 @@ window.IBO_CATALOG = {
       "overseas": 3.25,
       "worldwide": 15.08,
       "lastDayNet": 0,
-      "trackedThroughDay": 42,
+      "trackedThroughDay": 43,
       "liveSources": [
         "sacnilk",
         "hungama"
@@ -5263,19 +5287,19 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "mirzapur-the-movie",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 230.51,
-      "indiaGross": 274.26,
+      "indiaNet": 230.52,
+      "indiaGross": 274.27,
       "overseas": 65.5,
-      "worldwide": 339.76,
+      "worldwide": 339.77,
       "lastDayNet": 0.01,
-      "trackedThroughDay": 49,
+      "trackedThroughDay": 50,
       "liveSources": [
         "sacnilk",
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.01,
+      "deltaWw": 0.01,
       "dayWise": [
         {
           "reportDate": "2026-09-04",
@@ -5852,6 +5876,18 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 21,
           "occupancy": 13
+        },
+        {
+          "reportDate": "2026-10-22",
+          "dayNumber": 49,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 0,
+          "disagreementPct": 0,
+          "screens": 25,
+          "occupancy": 8
         }
       ]
     },
@@ -5875,8 +5911,8 @@ window.IBO_CATALOG = {
       "indiaGross": 599.01,
       "overseas": 0,
       "worldwide": 599.01,
-      "lastDayNet": 0.02,
-      "trackedThroughDay": 84,
+      "lastDayNet": 0,
+      "trackedThroughDay": 85,
       "liveSources": [
         "sacnilk"
       ],
@@ -6890,6 +6926,18 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 7,
           "occupancy": 28.6
+        },
+        {
+          "reportDate": "2026-10-22",
+          "dayNumber": 85,
+          "indiaNet": 0,
+          "indiaGross": 0,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -100,
+          "disagreementPct": 0,
+          "screens": null,
+          "occupancy": 12.8
         }
       ]
     },
@@ -6914,7 +6962,7 @@ window.IBO_CATALOG = {
       "overseas": 30.85,
       "worldwide": 230.17,
       "lastDayNet": 0,
-      "trackedThroughDay": 105,
+      "trackedThroughDay": 106,
       "liveSources": [
         "sacnilk",
         "hungama"
@@ -7720,17 +7768,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "the-odyssey",
       "poster": "./posters/the-odyssey.jpg",
-      "indiaNet": 196.54,
-      "indiaGross": 234.09,
+      "indiaNet": 196.55,
+      "indiaGross": 234.1,
       "overseas": 0,
-      "worldwide": 234.09,
-      "lastDayNet": 0.02,
-      "trackedThroughDay": 97,
+      "worldwide": 234.1,
+      "lastDayNet": 0.01,
+      "trackedThroughDay": 98,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.01,
+      "deltaWw": 0.01,
       "dayWise": [
         {
           "reportDate": "2026-07-17",
@@ -8895,6 +8943,18 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 4,
           "occupancy": 47.3
+        },
+        {
+          "reportDate": "2026-10-22",
+          "dayNumber": 98,
+          "indiaNet": 0.01,
+          "indiaGross": 0.01,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -50,
+          "disagreementPct": 0,
+          "screens": 4,
+          "occupancy": 37
         }
       ]
     },
@@ -8919,7 +8979,7 @@ window.IBO_CATALOG = {
       "overseas": 470,
       "worldwide": 1820,
       "lastDayNet": 0,
-      "trackedThroughDay": 218,
+      "trackedThroughDay": 219,
       "liveSources": [
         "sacnilk",
         "hungama",
@@ -10223,7 +10283,7 @@ window.IBO_CATALOG = {
       "overseas": 57.25,
       "worldwide": 450.19,
       "lastDayNet": 0,
-      "trackedThroughDay": 273,
+      "trackedThroughDay": 274,
       "liveSources": [
         "sacnilk",
         "hungama",
@@ -11311,7 +11371,7 @@ window.IBO_CATALOG = {
       "overseas": 52.9,
       "worldwide": 341.9,
       "lastDayNet": 0,
-      "trackedThroughDay": 210,
+      "trackedThroughDay": 211,
       "liveSources": [
         "sacnilk",
         "hungama",
@@ -12231,7 +12291,7 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 322.5,
       "lastDayNet": null,
-      "trackedThroughDay": 286,
+      "trackedThroughDay": 287,
       "liveSources": [
         "wikipedia"
       ],
@@ -13121,7 +13181,7 @@ window.IBO_CATALOG = {
       "overseas": 48.15,
       "worldwide": 247.28,
       "lastDayNet": 5,
-      "trackedThroughDay": 203,
+      "trackedThroughDay": 204,
       "liveSources": [
         "hungama"
       ],
@@ -13216,8 +13276,8 @@ window.IBO_CATALOG = {
         "sacnilk",
         "hungama"
       ],
-      "deltaNet": 2.1,
-      "deltaWw": 3,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-02",
@@ -13469,7 +13529,7 @@ window.IBO_CATALOG = {
           "netChangePct": -20.75,
           "disagreementPct": 0,
           "screens": 4503,
-          "occupancy": 12
+          "occupancy": 13
         }
       ]
     },
@@ -13521,7 +13581,7 @@ window.IBO_CATALOG = {
       "overseas": 33.6,
       "worldwide": 192.75,
       "lastDayNet": 0.01,
-      "trackedThroughDay": 119,
+      "trackedThroughDay": 120,
       "liveSources": [
         "sacnilk",
         "hungama"
@@ -14140,7 +14200,7 @@ window.IBO_CATALOG = {
       "overseas": 34,
       "worldwide": 147.73,
       "lastDayNet": 0,
-      "trackedThroughDay": 126,
+      "trackedThroughDay": 127,
       "liveSources": [
         "sacnilk",
         "hungama"
@@ -15011,7 +15071,7 @@ window.IBO_CATALOG = {
       "overseas": 29.9,
       "worldwide": 98.62,
       "lastDayNet": null,
-      "trackedThroughDay": 112,
+      "trackedThroughDay": 113,
       "liveSources": [
         "hungama"
       ],
@@ -15020,9 +15080,153 @@ window.IBO_CATALOG = {
       "dayWise": []
     },
     {
+      "id": "titans",
+      "slug": "Titans_2026",
+      "title": "Titans",
+      "language": "Malayalam",
+      "industry": "Mollywood",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-10-23",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "rating": null,
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.65,
+      "indiaGross": 0.75,
+      "overseas": 0,
+      "worldwide": 0.75,
+      "lastDayNet": 0.65,
+      "trackedThroughDay": 1,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": null,
+      "deltaWw": null,
+      "dayWise": [
+        {
+          "reportDate": "2026-10-23",
+          "dayNumber": 1,
+          "indiaNet": 0.65,
+          "indiaGross": 0,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": null,
+          "disagreementPct": 0,
+          "screens": null,
+          "occupancy": 23
+        }
+      ]
+    },
+    {
       "id": "garividi-lakshmi",
       "slug": "Garividi_Lakshmi_2026",
       "title": "Garividi Lakshmi",
+      "language": "Telugu",
+      "industry": "Tollywood",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-10-18",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "rating": null,
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 4.63,
+      "indiaGross": 4.59,
+      "overseas": 0,
+      "worldwide": 4.63,
+      "lastDayNet": 0.69,
+      "trackedThroughDay": 6,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": 0.69,
+      "deltaWw": 0.11,
+      "dayWise": [
+        {
+          "reportDate": "2026-10-18",
+          "dayNumber": 1,
+          "indiaNet": 0.6,
+          "indiaGross": 0,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": null,
+          "disagreementPct": 0,
+          "screens": null,
+          "occupancy": 29
+        },
+        {
+          "reportDate": "2026-10-19",
+          "dayNumber": 2,
+          "indiaNet": 0.78,
+          "indiaGross": 0.9,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 30,
+          "disagreementPct": 0,
+          "screens": 575,
+          "occupancy": 36
+        },
+        {
+          "reportDate": "2026-10-20",
+          "dayNumber": 3,
+          "indiaNet": 0.68,
+          "indiaGross": 0.77,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -12.82,
+          "disagreementPct": 0,
+          "screens": 564,
+          "occupancy": 32
+        },
+        {
+          "reportDate": "2026-10-21",
+          "dayNumber": 4,
+          "indiaNet": 1,
+          "indiaGross": 1.15,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": 47.06,
+          "disagreementPct": 0,
+          "screens": 532,
+          "occupancy": 47
+        },
+        {
+          "reportDate": "2026-10-22",
+          "dayNumber": 5,
+          "indiaNet": 0.88,
+          "indiaGross": 1,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -12,
+          "disagreementPct": 0,
+          "screens": 550,
+          "occupancy": 42
+        },
+        {
+          "reportDate": "2026-10-23",
+          "dayNumber": 6,
+          "indiaNet": 0.69,
+          "indiaGross": 0.77,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -21.59,
+          "disagreementPct": 0,
+          "screens": 556,
+          "occupancy": 34
+        }
+      ]
+    },
+    {
+      "id": "ranabaali",
+      "slug": "Ranabaali_2026",
+      "title": "Ranabaali",
       "language": "Telugu",
       "industry": "Tollywood",
       "director": "—",
@@ -15035,110 +15239,20 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 3.94,
-      "indiaGross": 4.52,
-      "overseas": 0,
-      "worldwide": 4.52,
-      "lastDayNet": 0.88,
-      "trackedThroughDay": 6,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": 0,
-      "deltaWw": 0,
-      "dayWise": [
-        {
-          "reportDate": "2026-10-17",
-          "dayNumber": 1,
-          "indiaNet": 0.6,
-          "indiaGross": 0,
-          "overseas": 0,
-          "worldwide": 0,
-          "netChangePct": null,
-          "disagreementPct": 0,
-          "screens": null,
-          "occupancy": 29
-        },
-        {
-          "reportDate": "2026-10-18",
-          "dayNumber": 2,
-          "indiaNet": 0.78,
-          "indiaGross": 0.9,
-          "overseas": 0,
-          "worldwide": 0,
-          "netChangePct": 30,
-          "disagreementPct": 0,
-          "screens": 575,
-          "occupancy": 36
-        },
-        {
-          "reportDate": "2026-10-19",
-          "dayNumber": 3,
-          "indiaNet": 0.68,
-          "indiaGross": 0.77,
-          "overseas": 0,
-          "worldwide": 0,
-          "netChangePct": -12.82,
-          "disagreementPct": 0,
-          "screens": 564,
-          "occupancy": 32
-        },
-        {
-          "reportDate": "2026-10-20",
-          "dayNumber": 4,
-          "indiaNet": 1,
-          "indiaGross": 1.15,
-          "overseas": 0,
-          "worldwide": 0,
-          "netChangePct": 47.06,
-          "disagreementPct": 0,
-          "screens": 532,
-          "occupancy": 47
-        },
-        {
-          "reportDate": "2026-10-21",
-          "dayNumber": 5,
-          "indiaNet": 0.88,
-          "indiaGross": 1,
-          "overseas": 0,
-          "worldwide": 0,
-          "netChangePct": -12,
-          "disagreementPct": 0,
-          "screens": 550,
-          "occupancy": 42
-        }
-      ]
-    },
-    {
-      "id": "ranabaali",
-      "slug": "Ranabaali_2026",
-      "title": "Ranabaali",
-      "language": "Telugu",
-      "industry": "Tollywood",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-10-16",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "rating": null,
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 42.05,
-      "indiaGross": 48.9,
-      "overseas": 10.75,
-      "worldwide": 59.65,
-      "lastDayNet": 5.5,
+      "indiaNet": 45.2,
+      "indiaGross": 52.55,
+      "overseas": 11.1,
+      "worldwide": 63.65,
+      "lastDayNet": 3.15,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 3.15,
+      "deltaWw": 4,
       "dayWise": [
         {
-          "reportDate": "2026-10-16",
+          "reportDate": "2026-10-17",
           "dayNumber": 1,
           "indiaNet": 9.25,
           "indiaGross": 0,
@@ -15150,7 +15264,7 @@ window.IBO_CATALOG = {
           "occupancy": 57
         },
         {
-          "reportDate": "2026-10-17",
+          "reportDate": "2026-10-18",
           "dayNumber": 2,
           "indiaNet": 7.3,
           "indiaGross": 8.5,
@@ -15162,7 +15276,7 @@ window.IBO_CATALOG = {
           "occupancy": 53
         },
         {
-          "reportDate": "2026-10-18",
+          "reportDate": "2026-10-19",
           "dayNumber": 3,
           "indiaNet": 7.5,
           "indiaGross": 8.75,
@@ -15174,7 +15288,7 @@ window.IBO_CATALOG = {
           "occupancy": 56
         },
         {
-          "reportDate": "2026-10-19",
+          "reportDate": "2026-10-20",
           "dayNumber": 4,
           "indiaNet": 5.4,
           "indiaGross": 6.35,
@@ -15186,7 +15300,7 @@ window.IBO_CATALOG = {
           "occupancy": 46
         },
         {
-          "reportDate": "2026-10-20",
+          "reportDate": "2026-10-21",
           "dayNumber": 5,
           "indiaNet": 7.1,
           "indiaGross": 8.2,
@@ -15198,7 +15312,7 @@ window.IBO_CATALOG = {
           "occupancy": 56
         },
         {
-          "reportDate": "2026-10-21",
+          "reportDate": "2026-10-22",
           "dayNumber": 6,
           "indiaNet": 5.5,
           "indiaGross": 6.35,
@@ -15208,6 +15322,18 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 2232,
           "occupancy": 46
+        },
+        {
+          "reportDate": "2026-10-23",
+          "dayNumber": 7,
+          "indiaNet": 3.15,
+          "indiaGross": 3.65,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -42.73,
+          "disagreementPct": 0,
+          "screens": 2112,
+          "occupancy": 31
         }
       ]
     },
@@ -15219,7 +15345,7 @@ window.IBO_CATALOG = {
       "industry": "Bollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -15236,11 +15362,11 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 1.5,
-      "deltaWw": 1.87,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
-          "reportDate": "2026-10-16",
+          "reportDate": "2026-10-17",
           "dayNumber": 1,
           "indiaNet": 3.25,
           "indiaGross": 0,
@@ -15252,7 +15378,7 @@ window.IBO_CATALOG = {
           "occupancy": 11
         },
         {
-          "reportDate": "2026-10-17",
+          "reportDate": "2026-10-18",
           "dayNumber": 2,
           "indiaNet": 4,
           "indiaGross": 4.8,
@@ -15264,7 +15390,7 @@ window.IBO_CATALOG = {
           "occupancy": 14
         },
         {
-          "reportDate": "2026-10-18",
+          "reportDate": "2026-10-19",
           "dayNumber": 3,
           "indiaNet": 4.4,
           "indiaGross": 5.25,
@@ -15276,7 +15402,7 @@ window.IBO_CATALOG = {
           "occupancy": 17
         },
         {
-          "reportDate": "2026-10-19",
+          "reportDate": "2026-10-20",
           "dayNumber": 4,
           "indiaNet": 2.65,
           "indiaGross": 3.15,
@@ -15288,7 +15414,7 @@ window.IBO_CATALOG = {
           "occupancy": 14
         },
         {
-          "reportDate": "2026-10-20",
+          "reportDate": "2026-10-21",
           "dayNumber": 5,
           "indiaNet": 4.35,
           "indiaGross": 5.15,
@@ -15300,7 +15426,7 @@ window.IBO_CATALOG = {
           "occupancy": 21
         },
         {
-          "reportDate": "2026-10-21",
+          "reportDate": "2026-10-22",
           "dayNumber": 6,
           "indiaNet": 2,
           "indiaGross": 2.36,
@@ -15312,7 +15438,7 @@ window.IBO_CATALOG = {
           "occupancy": 12
         },
         {
-          "reportDate": "2026-10-22",
+          "reportDate": "2026-10-23",
           "dayNumber": 7,
           "indiaNet": 1.5,
           "indiaGross": 1.77,
@@ -15320,7 +15446,7 @@ window.IBO_CATALOG = {
           "worldwide": 0,
           "netChangePct": -25,
           "disagreementPct": 0,
-          "screens": 4536,
+          "screens": 4539,
           "occupancy": 9
         }
       ]
@@ -15333,7 +15459,7 @@ window.IBO_CATALOG = {
       "industry": "Bollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -15341,20 +15467,20 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 15.95,
-      "indiaGross": 19,
-      "overseas": 2.4,
-      "worldwide": 21.4,
-      "lastDayNet": 1.5,
+      "indiaNet": 17.15,
+      "indiaGross": 20.44,
+      "overseas": 2.5,
+      "worldwide": 22.94,
+      "lastDayNet": 1.2,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 1.2,
+      "deltaWw": 1.54,
       "dayWise": [
         {
-          "reportDate": "2026-10-16",
+          "reportDate": "2026-10-17",
           "dayNumber": 1,
           "indiaNet": 2.35,
           "indiaGross": 0,
@@ -15366,7 +15492,7 @@ window.IBO_CATALOG = {
           "occupancy": 13
         },
         {
-          "reportDate": "2026-10-17",
+          "reportDate": "2026-10-18",
           "dayNumber": 2,
           "indiaNet": 3.15,
           "indiaGross": 3.71,
@@ -15378,7 +15504,7 @@ window.IBO_CATALOG = {
           "occupancy": 17
         },
         {
-          "reportDate": "2026-10-18",
+          "reportDate": "2026-10-19",
           "dayNumber": 3,
           "indiaNet": 3.65,
           "indiaGross": 4.38,
@@ -15390,7 +15516,7 @@ window.IBO_CATALOG = {
           "occupancy": 22
         },
         {
-          "reportDate": "2026-10-19",
+          "reportDate": "2026-10-20",
           "dayNumber": 4,
           "indiaNet": 2,
           "indiaGross": 2.4,
@@ -15402,7 +15528,7 @@ window.IBO_CATALOG = {
           "occupancy": 17
         },
         {
-          "reportDate": "2026-10-20",
+          "reportDate": "2026-10-21",
           "dayNumber": 5,
           "indiaNet": 3.3,
           "indiaGross": 3.95,
@@ -15414,7 +15540,7 @@ window.IBO_CATALOG = {
           "occupancy": 24
         },
         {
-          "reportDate": "2026-10-21",
+          "reportDate": "2026-10-22",
           "dayNumber": 6,
           "indiaNet": 1.5,
           "indiaGross": 1.79,
@@ -15424,6 +15550,18 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 3231,
           "occupancy": 13
+        },
+        {
+          "reportDate": "2026-10-23",
+          "dayNumber": 7,
+          "indiaNet": 1.2,
+          "indiaGross": 1.44,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -20,
+          "disagreementPct": 0,
+          "screens": 3091,
+          "occupancy": 11
         }
       ]
     },
@@ -15435,7 +15573,7 @@ window.IBO_CATALOG = {
       "industry": "Kollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -15443,20 +15581,20 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 6.46,
+      "indiaNet": 6.87,
       "indiaGross": 7.64,
       "overseas": 0,
       "worldwide": 7.64,
-      "lastDayNet": 0.58,
+      "lastDayNet": 0.41,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
+      "deltaNet": 0.41,
       "deltaWw": 0,
       "dayWise": [
         {
-          "reportDate": "2026-10-16",
+          "reportDate": "2026-10-17",
           "dayNumber": 1,
           "indiaNet": 1.05,
           "indiaGross": 0,
@@ -15468,7 +15606,7 @@ window.IBO_CATALOG = {
           "occupancy": 13.4
         },
         {
-          "reportDate": "2026-10-17",
+          "reportDate": "2026-10-18",
           "dayNumber": 2,
           "indiaNet": 1.45,
           "indiaGross": 1.71,
@@ -15480,7 +15618,7 @@ window.IBO_CATALOG = {
           "occupancy": 16.6
         },
         {
-          "reportDate": "2026-10-18",
+          "reportDate": "2026-10-19",
           "dayNumber": 3,
           "indiaNet": 1.58,
           "indiaGross": 1.88,
@@ -15492,7 +15630,7 @@ window.IBO_CATALOG = {
           "occupancy": 19.3
         },
         {
-          "reportDate": "2026-10-19",
+          "reportDate": "2026-10-20",
           "dayNumber": 4,
           "indiaNet": 0.78,
           "indiaGross": 0.92,
@@ -15504,7 +15642,7 @@ window.IBO_CATALOG = {
           "occupancy": 13
         },
         {
-          "reportDate": "2026-10-20",
+          "reportDate": "2026-10-21",
           "dayNumber": 5,
           "indiaNet": 1.02,
           "indiaGross": 1.21,
@@ -15516,7 +15654,7 @@ window.IBO_CATALOG = {
           "occupancy": 16
         },
         {
-          "reportDate": "2026-10-21",
+          "reportDate": "2026-10-22",
           "dayNumber": 6,
           "indiaNet": 0.58,
           "indiaGross": 0.68,
@@ -15526,6 +15664,18 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 1643,
           "occupancy": 9.7
+        },
+        {
+          "reportDate": "2026-10-23",
+          "dayNumber": 7,
+          "indiaNet": 0.41,
+          "indiaGross": 0.49,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -29.31,
+          "disagreementPct": 0,
+          "screens": 1451,
+          "occupancy": 8.3
         }
       ]
     },
@@ -15537,7 +15687,7 @@ window.IBO_CATALOG = {
       "industry": "Indian",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -15545,20 +15695,20 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 4.19,
-      "indiaGross": 4.27,
+      "indiaNet": 4.65,
+      "indiaGross": 4.62,
       "overseas": 0,
-      "worldwide": 4.27,
-      "lastDayNet": 0.59,
+      "worldwide": 4.65,
+      "lastDayNet": 0.46,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.46,
+      "deltaWw": 0.38,
       "dayWise": [
         {
-          "reportDate": "2026-10-16",
+          "reportDate": "2026-10-17",
           "dayNumber": 1,
           "indiaNet": 0.75,
           "indiaGross": 0,
@@ -15570,7 +15720,7 @@ window.IBO_CATALOG = {
           "occupancy": 31
         },
         {
-          "reportDate": "2026-10-17",
+          "reportDate": "2026-10-18",
           "dayNumber": 2,
           "indiaNet": 0.65,
           "indiaGross": 0.77,
@@ -15582,7 +15732,7 @@ window.IBO_CATALOG = {
           "occupancy": 29
         },
         {
-          "reportDate": "2026-10-18",
+          "reportDate": "2026-10-19",
           "dayNumber": 3,
           "indiaNet": 0.75,
           "indiaGross": 0.89,
@@ -15594,7 +15744,7 @@ window.IBO_CATALOG = {
           "occupancy": 35
         },
         {
-          "reportDate": "2026-10-19",
+          "reportDate": "2026-10-20",
           "dayNumber": 4,
           "indiaNet": 0.75,
           "indiaGross": 0.89,
@@ -15606,7 +15756,7 @@ window.IBO_CATALOG = {
           "occupancy": 38
         },
         {
-          "reportDate": "2026-10-20",
+          "reportDate": "2026-10-21",
           "dayNumber": 5,
           "indiaNet": 0.7,
           "indiaGross": 0.83,
@@ -15618,7 +15768,7 @@ window.IBO_CATALOG = {
           "occupancy": 35
         },
         {
-          "reportDate": "2026-10-21",
+          "reportDate": "2026-10-22",
           "dayNumber": 6,
           "indiaNet": 0.59,
           "indiaGross": 0.7,
@@ -15628,6 +15778,18 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 400,
           "occupancy": 31
+        },
+        {
+          "reportDate": "2026-10-23",
+          "dayNumber": 7,
+          "indiaNet": 0.46,
+          "indiaGross": 0.54,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -22.03,
+          "disagreementPct": 0,
+          "screens": 407,
+          "occupancy": 26
         }
       ]
     },
@@ -15639,7 +15801,7 @@ window.IBO_CATALOG = {
       "industry": "Hollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -15647,20 +15809,20 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 1.25,
-      "indiaGross": 1.4,
+      "indiaNet": 1.32,
+      "indiaGross": 1.49,
       "overseas": 0,
-      "worldwide": 1.4,
-      "lastDayNet": 0.13,
+      "worldwide": 1.49,
+      "lastDayNet": 0.07,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.07,
+      "deltaWw": 0.09,
       "dayWise": [
         {
-          "reportDate": "2026-10-16",
+          "reportDate": "2026-10-17",
           "dayNumber": 1,
           "indiaNet": 0.2,
           "indiaGross": 0,
@@ -15672,7 +15834,7 @@ window.IBO_CATALOG = {
           "occupancy": 13.7
         },
         {
-          "reportDate": "2026-10-17",
+          "reportDate": "2026-10-18",
           "dayNumber": 2,
           "indiaNet": 0.28,
           "indiaGross": 0.32,
@@ -15684,7 +15846,7 @@ window.IBO_CATALOG = {
           "occupancy": 17.6
         },
         {
-          "reportDate": "2026-10-18",
+          "reportDate": "2026-10-19",
           "dayNumber": 3,
           "indiaNet": 0.3,
           "indiaGross": 0.34,
@@ -15696,7 +15858,7 @@ window.IBO_CATALOG = {
           "occupancy": 22.5
         },
         {
-          "reportDate": "2026-10-19",
+          "reportDate": "2026-10-20",
           "dayNumber": 4,
           "indiaNet": 0.14,
           "indiaGross": 0.16,
@@ -15708,7 +15870,7 @@ window.IBO_CATALOG = {
           "occupancy": 19.1
         },
         {
-          "reportDate": "2026-10-20",
+          "reportDate": "2026-10-21",
           "dayNumber": 5,
           "indiaNet": 0.2,
           "indiaGross": 0.22,
@@ -15720,7 +15882,7 @@ window.IBO_CATALOG = {
           "occupancy": 24.2
         },
         {
-          "reportDate": "2026-10-21",
+          "reportDate": "2026-10-22",
           "dayNumber": 6,
           "indiaNet": 0.13,
           "indiaGross": 0.14,
@@ -15730,6 +15892,18 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 209,
           "occupancy": 17.8
+        },
+        {
+          "reportDate": "2026-10-23",
+          "dayNumber": 7,
+          "indiaNet": 0.07,
+          "indiaGross": 0.09,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -46.15,
+          "disagreementPct": 0,
+          "screens": 188,
+          "occupancy": 12.2
         }
       ]
     },
@@ -15741,7 +15915,7 @@ window.IBO_CATALOG = {
       "industry": "Tollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -15749,20 +15923,20 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 1.15,
-      "indiaGross": 1.08,
+      "indiaNet": 1.3,
+      "indiaGross": 1.25,
       "overseas": 0,
-      "worldwide": 1.15,
-      "lastDayNet": 0.18,
+      "worldwide": 1.3,
+      "lastDayNet": 0.15,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.15,
+      "deltaWw": 0.15,
       "dayWise": [
         {
-          "reportDate": "2026-10-16",
+          "reportDate": "2026-10-17",
           "dayNumber": 1,
           "indiaNet": 0.2,
           "indiaGross": 0,
@@ -15774,7 +15948,7 @@ window.IBO_CATALOG = {
           "occupancy": 13
         },
         {
-          "reportDate": "2026-10-17",
+          "reportDate": "2026-10-18",
           "dayNumber": 2,
           "indiaNet": 0.2,
           "indiaGross": 0.23,
@@ -15786,7 +15960,7 @@ window.IBO_CATALOG = {
           "occupancy": 17
         },
         {
-          "reportDate": "2026-10-18",
+          "reportDate": "2026-10-19",
           "dayNumber": 3,
           "indiaNet": 0.19,
           "indiaGross": 0.21,
@@ -15798,7 +15972,7 @@ window.IBO_CATALOG = {
           "occupancy": 19
         },
         {
-          "reportDate": "2026-10-19",
+          "reportDate": "2026-10-20",
           "dayNumber": 4,
           "indiaNet": 0.15,
           "indiaGross": 0.17,
@@ -15810,7 +15984,7 @@ window.IBO_CATALOG = {
           "occupancy": 16
         },
         {
-          "reportDate": "2026-10-20",
+          "reportDate": "2026-10-21",
           "dayNumber": 5,
           "indiaNet": 0.23,
           "indiaGross": 0.26,
@@ -15822,7 +15996,7 @@ window.IBO_CATALOG = {
           "occupancy": 20
         },
         {
-          "reportDate": "2026-10-21",
+          "reportDate": "2026-10-22",
           "dayNumber": 6,
           "indiaNet": 0.18,
           "indiaGross": 0.21,
@@ -15832,6 +16006,18 @@ window.IBO_CATALOG = {
           "disagreementPct": 0,
           "screens": 295,
           "occupancy": 17
+        },
+        {
+          "reportDate": "2026-10-23",
+          "dayNumber": 7,
+          "indiaNet": 0.15,
+          "indiaGross": 0.17,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": -16.67,
+          "disagreementPct": 0,
+          "screens": 278,
+          "occupancy": 15
         }
       ]
     },
@@ -15843,7 +16029,7 @@ window.IBO_CATALOG = {
       "industry": "Kollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -15851,17 +16037,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.81,
-      "indiaGross": 0.91,
+      "indiaNet": 0.88,
+      "indiaGross": 0.99,
       "overseas": 0,
-      "worldwide": 0.91,
+      "worldwide": 0.99,
       "lastDayNet": null,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.07,
+      "deltaWw": 0.08,
       "dayWise": []
     },
     {
@@ -15872,7 +16058,7 @@ window.IBO_CATALOG = {
       "industry": "Indian",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -15880,17 +16066,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.37,
-      "indiaGross": 0.42,
+      "indiaNet": 0.4,
+      "indiaGross": 0.45,
       "overseas": 0,
-      "worldwide": 0.42,
+      "worldwide": 0.45,
       "lastDayNet": null,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.03,
+      "deltaWw": 0.03,
       "dayWise": []
     },
     {
@@ -15901,7 +16087,7 @@ window.IBO_CATALOG = {
       "industry": "Indian",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -15909,17 +16095,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.34,
-      "indiaGross": 0.38,
+      "indiaNet": 0.36,
+      "indiaGross": 0.4,
       "overseas": 0,
-      "worldwide": 0.38,
+      "worldwide": 0.4,
       "lastDayNet": null,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.02,
+      "deltaWw": 0.02,
       "dayWise": []
     },
     {
@@ -15930,7 +16116,7 @@ window.IBO_CATALOG = {
       "industry": "Indian",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -15938,17 +16124,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.22,
-      "indiaGross": 0.24,
+      "indiaNet": 0.25,
+      "indiaGross": 0.27,
       "overseas": 0,
-      "worldwide": 0.24,
+      "worldwide": 0.27,
       "lastDayNet": null,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.03,
+      "deltaWw": 0.03,
       "dayWise": []
     },
     {
@@ -15959,7 +16145,7 @@ window.IBO_CATALOG = {
       "industry": "Hollywood",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -15967,17 +16153,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.23,
-      "indiaGross": 0.24,
+      "indiaNet": 0.24,
+      "indiaGross": 0.25,
       "overseas": 0,
-      "worldwide": 0.24,
+      "worldwide": 0.25,
       "lastDayNet": null,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.01,
+      "deltaWw": 0.01,
       "dayWise": []
     },
     {
@@ -15988,7 +16174,7 @@ window.IBO_CATALOG = {
       "industry": "Indian",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -15996,17 +16182,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.14,
-      "indiaGross": 0.16,
+      "indiaNet": 0.15,
+      "indiaGross": 0.17,
       "overseas": 0,
-      "worldwide": 0.16,
+      "worldwide": 0.17,
       "lastDayNet": null,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.01,
+      "deltaWw": 0.01,
       "dayWise": []
     },
     {
@@ -16017,7 +16203,7 @@ window.IBO_CATALOG = {
       "industry": "Indian",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -16025,17 +16211,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.14,
-      "indiaGross": 0.15,
+      "indiaNet": 0.15,
+      "indiaGross": 0.16,
       "overseas": 0,
-      "worldwide": 0.15,
+      "worldwide": 0.16,
       "lastDayNet": null,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.01,
+      "deltaWw": 0.01,
       "dayWise": []
     },
     {
@@ -16046,7 +16232,7 @@ window.IBO_CATALOG = {
       "industry": "Indian",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -16054,46 +16240,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "hero-cinema",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.08,
-      "indiaGross": 0.09,
+      "indiaNet": 0.09,
+      "indiaGross": 0.1,
       "overseas": 0,
-      "worldwide": 0.09,
+      "worldwide": 0.1,
       "lastDayNet": null,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
-      "dayWise": []
-    },
-    {
-      "id": "kranti",
-      "slug": "Kranti_2026",
-      "title": "Kranti",
-      "language": "Indian",
-      "industry": "Indian",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-10-16",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "rating": null,
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.03,
-      "indiaGross": 0.03,
-      "overseas": 0,
-      "worldwide": 0.03,
-      "lastDayNet": null,
-      "trackedThroughDay": 7,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.01,
+      "deltaWw": 0.01,
       "dayWise": []
     },
     {
@@ -16104,7 +16261,36 @@ window.IBO_CATALOG = {
       "industry": "Indian",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "rating": null,
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "hero-cinema",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.04,
+      "indiaGross": 0.04,
+      "overseas": 0,
+      "worldwide": 0.04,
+      "lastDayNet": null,
+      "trackedThroughDay": 7,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": 0.01,
+      "deltaWw": 0.01,
+      "dayWise": []
+    },
+    {
+      "id": "kranti",
+      "slug": "Kranti_2026",
+      "title": "Kranti",
+      "language": "Indian",
+      "industry": "Indian",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -16133,36 +16319,7 @@ window.IBO_CATALOG = {
       "industry": "Indian",
       "director": "—",
       "starring": "—",
-      "releaseDate": "2026-10-16",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "rating": null,
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "hero-cinema",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.02,
-      "indiaGross": 0.02,
-      "overseas": 0,
-      "worldwide": 0.02,
-      "lastDayNet": null,
-      "trackedThroughDay": 7,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": 0,
-      "deltaWw": 0,
-      "dayWise": []
-    },
-    {
-      "id": "prekshakarude-sradhaykku",
-      "slug": "Prekshakarude_Sradhaykku_2026",
-      "title": "Prekshakarude Sradhaykku",
-      "language": "Malayalam",
-      "industry": "Mollywood",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-10-16",
+      "releaseDate": "2026-10-17",
       "budgetCr": null,
       "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
       "rating": null,
@@ -16186,25 +16343,32 @@ window.IBO_CATALOG = {
   ],
   "changes": [
     {
-      "id": "drishyam-3",
-      "title": "Drishyam 3: The Conclusion",
-      "text": "Drishyam 3: The Conclusion: WW +₹3 Cr, India net +₹2.1 Cr since 2026-10-22 prior",
-      "deltaNet": 2.1,
-      "deltaWw": 3
+      "id": "ranabaali",
+      "title": "Ranabaali",
+      "text": "Ranabaali: WW +₹4 Cr, India net +₹3.15 Cr since 2026-10-22",
+      "deltaNet": 3.15,
+      "deltaWw": 4
     },
     {
-      "id": "nayyi-navelli",
-      "title": "Nayyi Navelli",
-      "text": "Nayyi Navelli: WW +₹1.87 Cr, India net +₹1.5 Cr since 2026-10-22 prior",
-      "deltaNet": 1.5,
-      "deltaWw": 1.87
+      "id": "prahaar-the-ujjwal-nikam-story",
+      "title": "Prahaar - The Ujjwal Nikam Story",
+      "text": "Prahaar - The Ujjwal Nikam Story: WW +₹1.54 Cr, India net +₹1.2 Cr since 2026-10-22",
+      "deltaNet": 1.2,
+      "deltaWw": 1.54
+    },
+    {
+      "id": "garividi-lakshmi",
+      "title": "Garividi Lakshmi",
+      "text": "Garividi Lakshmi: India net +₹0.69 Cr since 2026-10-22",
+      "deltaNet": 0.69,
+      "deltaWw": 0.11
     }
   ],
   "logs": [
     {
       "sourceId": "sacnilk",
       "status": "ok",
-      "detail": "1242 collection rows from 21 live pulls"
+      "detail": "1256 collection rows from 21 live pulls"
     },
     {
       "sourceId": "hungama",
@@ -16227,14 +16391,14 @@ window.IBO_CATALOG = {
       "detail": "Fetched 1 page (headlines / status)"
     },
     {
-      "sourceId": "koimoi",
-      "status": "blocked",
-      "detail": "HTTP 403"
-    },
-    {
       "sourceId": "express",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
+    },
+    {
+      "sourceId": "koimoi",
+      "status": "blocked",
+      "detail": "HTTP 403"
     },
     {
       "sourceId": "boi",
@@ -16247,113 +16411,113 @@ window.IBO_CATALOG = {
       "sourceId": "sacnilk",
       "title": "Drishyam 3: The Conclusion: Sacnilk 21 days, India net ₹361.85 Cr",
       "url": "https://www.sacnilk.com/news/drishyam_3_hindi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:39.354Z",
+      "publishedAt": "2026-10-22T21:20:12.890Z",
       "summary": "Live day-wise pull. Last day 1. WW ₹563.02 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Mirzapur: The Movie: Sacnilk 48 days, India net ₹230.51 Cr",
+      "title": "Mirzapur: The Movie: Sacnilk 49 days, India net ₹230.52 Cr",
       "url": "https://www.sacnilk.com/news/mirzapur_the_movie_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:39.553Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹339.76 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Ranabaali: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Ranabaali_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:39.799Z",
-      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹9.25 Cr."
+      "publishedAt": "2026-10-22T21:20:13.261Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹339.77 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Garividi Lakshmi: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/Garividi_Lakshmi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:39.813Z",
+      "publishedAt": "2026-10-22T21:20:13.353Z",
       "summary": "Auto-discovered Tollywood title. Latest reported India net ₹0.6 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Prahaar - The Ujjwal Nikam Story: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Prahaar_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:39.828Z",
-      "summary": "Auto-discovered Bollywood title. Latest reported India net ₹2.35 Cr."
+      "title": "Hanuman Ansh: Sacnilk 77 days, India net ₹341.26 Cr",
+      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-22T21:20:13.374Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹451.24 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Titans: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Titans_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-22T21:20:13.382Z",
+      "summary": "Auto-discovered Mollywood title. Latest reported India net ₹0.65 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Ranabaali: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Ranabaali_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-22T21:20:13.390Z",
+      "summary": "Auto-discovered Tollywood title. Latest reported India net ₹9.25 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Nayyi Navelli: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/Nayyi_Navelli_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:39.865Z",
+      "publishedAt": "2026-10-22T21:20:13.411Z",
       "summary": "Auto-discovered Bollywood title. Latest reported India net ₹3.25 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Hanuman Ansh: Sacnilk 76 days, India net ₹341.04 Cr",
-      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:39.904Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹451 Cr."
+      "title": "Prahaar - The Ujjwal Nikam Story: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Prahaar_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-22T21:20:13.692Z",
+      "summary": "Auto-discovered Bollywood title. Latest reported India net ₹2.35 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Whalefall: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Whalefall_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-22T21:20:13.706Z",
+      "summary": "Auto-discovered Hollywood title. Latest reported India net ₹0.2 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Street Fighter: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/Street_Fighter_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-22T21:20:13.714Z",
+      "summary": "Auto-discovered Kollywood title. Latest reported India net ₹1.05 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "DeSu7: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/DeSu7_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-22T21:20:13.719Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.75 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Toxic: Sacnilk 37 days, India net ₹250.13 Cr",
+      "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-10-22T21:20:13.818Z",
+      "summary": "Live day-wise pull. Last day 1. WW ₹342.26 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Sardar 2: Sacnilk 22 days, India net ₹16.33 Cr",
       "url": "https://www.sacnilk.com/news/sardar_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:40.090Z",
+      "publishedAt": "2026-10-22T21:20:13.828Z",
       "summary": "Live day-wise pull. Last day 19. WW ₹23.88 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Haiwaan: Sacnilk 17 days, India net ₹9.92 Cr",
       "url": "https://www.sacnilk.com/news/haiwaan_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:40.141Z",
+      "publishedAt": "2026-10-22T21:20:13.882Z",
       "summary": "Live day-wise pull. Last day 19. WW ₹15.08 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "DeSu7: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/DeSu7_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:40.166Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.75 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Street Fighter: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Street_Fighter_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:40.183Z",
-      "summary": "Auto-discovered Kollywood title. Latest reported India net ₹1.05 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Whalefall: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/Whalefall_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:40.295Z",
-      "summary": "Auto-discovered Hollywood title. Latest reported India net ₹0.2 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Crazy Kalyanam: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/Crazy_Kalyanam_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:40.317Z",
+      "publishedAt": "2026-10-22T21:20:14.027Z",
       "summary": "Auto-discovered Tollywood title. Latest reported India net ₹0.2 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Toxic: Sacnilk 37 days, India net ₹250.13 Cr",
-      "url": "https://www.sacnilk.com/news/toxic_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:40.350Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹342.26 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Awarapan 2: Sacnilk 49 days, India net ₹150.59 Cr",
       "url": "https://www.sacnilk.com/news/awarapan_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:40.838Z",
+      "publishedAt": "2026-10-22T21:20:14.578Z",
       "summary": "Live day-wise pull. Last day 62. WW ₹213.01 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Irumudi: Sacnilk 62 days, India net ₹194.47 Cr",
-      "url": "https://www.sacnilk.com/news/irumudi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-10-22T16:52:40.876Z",
-      "summary": "Live day-wise pull. Last day 1. WW ₹246.8 Cr."
     }
   ],
   "morningBrief": {
@@ -16369,6 +16533,6 @@ window.IBO_CATALOG = {
   "downloads": {
     "boardJson": "./board.json",
     "healthJson": "./health.json",
-    "history": "./history/2026-10-22.json"
+    "history": "./history/2026-10-23.json"
   }
 };
