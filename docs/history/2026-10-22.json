@@ -1,6 +1,6 @@
 {
   "date": "2026-10-22",
-  "generatedAt": "2026-10-22T11:26:23.457Z",
+  "generatedAt": "2026-10-22T16:53:26.239Z",
   "films": [
     {
       "id": "toxic",
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 359.75,
-      "worldwide": 560.02,
+      "indiaNet": 361.85,
+      "worldwide": 563.02,
       "status": "playing"
     },
     {
@@ -208,8 +208,8 @@
     {
       "id": "nayyi-navelli",
       "title": "Nayyi Navelli",
-      "indiaNet": 20.65,
-      "worldwide": 27.19,
+      "indiaNet": 22.15,
+      "worldwide": 29.06,
       "status": "playing"
     },
     {
