@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "generatedAt": "2026-10-23T08:53:50.436Z",
+  "generatedAt": "2026-10-23T11:16:09.477Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 341.26,
-      "worldwide": 451.24,
+      "indiaNet": 341.19,
+      "worldwide": 451.17,
       "status": "late"
     },
     {
@@ -201,8 +201,8 @@
     {
       "id": "garividi-lakshmi",
       "title": "Garividi Lakshmi",
-      "indiaNet": 4.63,
-      "worldwide": 4.63,
+      "indiaNet": 4.64,
+      "worldwide": 5.32,
       "status": "playing"
     },
     {
@@ -230,14 +230,14 @@
       "id": "street-fighter",
       "title": "Street Fighter",
       "indiaNet": 6.87,
-      "worldwide": 7.64,
+      "worldwide": 8.12,
       "status": "playing"
     },
     {
       "id": "desu7",
       "title": "DeSu7",
-      "indiaNet": 4.65,
-      "worldwide": 4.65,
+      "indiaNet": 4.67,
+      "worldwide": 5.53,
       "status": "playing"
     },
     {
@@ -257,8 +257,8 @@
     {
       "id": "drones",
       "title": "Drones",
-      "indiaNet": 0.88,
-      "worldwide": 0.99,
+      "indiaNet": 0.77,
+      "worldwide": 0.89,
       "status": "playing"
     },
     {
