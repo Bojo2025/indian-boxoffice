@@ -1,6 +1,6 @@
 {
   "date": "2026-10-26",
-  "generatedAt": "2026-10-26T03:58:02.811Z",
+  "generatedAt": "2026-10-26T09:26:06.589Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 341.26,
-      "worldwide": 451.52,
+      "indiaNet": 341.51,
+      "worldwide": 451.82,
       "status": "late"
     },
     {
@@ -208,15 +208,29 @@
     {
       "id": "udta-teer",
       "title": "Udta Teer",
-      "indiaNet": 19.45,
-      "worldwide": 27.58,
+      "indiaNet": 19.55,
+      "worldwide": 27.87,
       "status": "playing"
     },
     {
       "id": "418",
       "title": "418",
-      "indiaNet": 6.9,
-      "worldwide": 7.25,
+      "indiaNet": 7.65,
+      "worldwide": 10.75,
+      "status": "playing"
+    },
+    {
+      "id": "clayface",
+      "title": "Clayface",
+      "indiaNet": 2.67,
+      "worldwide": 3.2,
+      "status": "playing"
+    },
+    {
+      "id": "pehla-pyaar-doosri-baar",
+      "title": "Pehla Pyaar Doosri Baar",
+      "indiaNet": 1.9,
+      "worldwide": 2.28,
       "status": "playing"
     },
     {
@@ -231,20 +245,6 @@
       "title": "Hope (Hindi)",
       "indiaNet": 0.81,
       "worldwide": 0.92,
-      "status": "playing"
-    },
-    {
-      "id": "clayface",
-      "title": "Clayface",
-      "indiaNet": 2.83,
-      "worldwide": 2.83,
-      "status": "playing"
-    },
-    {
-      "id": "pehla-pyaar-doosri-baar",
-      "title": "Pehla Pyaar Doosri Baar",
-      "indiaNet": 2,
-      "worldwide": 2,
       "status": "playing"
     },
     {
