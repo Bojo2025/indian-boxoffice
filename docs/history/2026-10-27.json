@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "generatedAt": "2026-10-27T08:47:13.245Z",
+  "generatedAt": "2026-10-27T09:24:30.112Z",
   "films": [
     {
       "id": "toxic",
@@ -89,8 +89,8 @@
     {
       "id": "spider-man-bnd",
       "title": "Spider-Man: Brand New Day",
-      "indiaNet": 500.78,
-      "worldwide": 599.04,
+      "indiaNet": 494,
+      "worldwide": 590.27,
       "status": "late"
     },
     {
