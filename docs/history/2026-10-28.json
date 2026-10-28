@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "generatedAt": "2026-10-28T04:49:42.145Z",
+  "generatedAt": "2026-10-28T10:06:33.739Z",
   "films": [
     {
       "id": "toxic",
@@ -110,9 +110,9 @@
     {
       "id": "dhurandhar",
       "title": "Dhurandhar: The Revenge",
-      "indiaNet": 1108.09,
+      "indiaNet": 1095,
       "worldwide": 1820,
-      "status": "playing"
+      "status": "closed"
     },
     {
       "id": "border-2",
@@ -208,8 +208,8 @@
     {
       "id": "udta-teer",
       "title": "Udta Teer",
-      "indiaNet": 25.85,
-      "worldwide": 38.53,
+      "indiaNet": 26,
+      "worldwide": 38.78,
       "status": "playing"
     },
     {
