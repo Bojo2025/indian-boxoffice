@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generatedAt": "2026-10-29T10:29:49.893Z",
+  "generatedAt": "2026-10-29T18:14:23.820Z",
   "films": [
     {
       "id": "toxic",
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 372.1,
-      "worldwide": 577.56,
+      "indiaNet": 373,
+      "worldwide": 578.77,
       "status": "playing"
     },
     {
@@ -208,8 +208,8 @@
     {
       "id": "udta-teer",
       "title": "Udta Teer",
-      "indiaNet": 28.65,
-      "worldwide": 42.68,
+      "indiaNet": 31.25,
+      "worldwide": 46.28,
       "status": "playing"
     },
     {
