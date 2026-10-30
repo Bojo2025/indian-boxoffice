@@ -1,7 +1,7 @@
 window.IBO_CATALOG = {
-  "generatedAt": "2026-10-30T17:51:46.739Z",
-  "deskDate": "2026-10-30",
-  "comparedTo": "2026-10-30 prior",
+  "generatedAt": "2026-10-30T22:04:23.050Z",
+  "deskDate": "2026-10-31",
+  "comparedTo": "2026-10-30",
   "mode": "server-consensus",
   "spine": [
     "sacnilk",
@@ -13,21 +13,22 @@ window.IBO_CATALOG = {
     "hardFail": true,
     "alerts": [
       "HARD: Sacnilk returned 0 day-wise rows — primary spine is down or the HTML regex broke",
-      "sacnilk failed: Fetched 1 page (headlines / status) (streak 1)",
-      "koimoi failed: HTTP 403 (streak 135)",
-      "koimoi has failed 135 consecutive publishes",
-      "boi failed: HTTP 403 (streak 80)",
-      "boi has failed 80 consecutive publishes"
+      "sacnilk failed: Fetched 1 page (headlines / status) (streak 2)",
+      "sacnilk has failed 2 consecutive publishes",
+      "koimoi failed: HTTP 403 (streak 136)",
+      "koimoi has failed 136 consecutive publishes",
+      "boi failed: HTTP 403 (streak 81)",
+      "boi has failed 81 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
         "ok": false,
-        "streakFail": 1,
+        "streakFail": 2,
         "detail": "Fetched 1 page (headlines / status)"
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 135,
+        "streakFail": 136,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -37,7 +38,7 @@ window.IBO_CATALOG = {
       },
       "boi": {
         "ok": false,
-        "streakFail": 80,
+        "streakFail": 81,
         "detail": "HTTP 403"
       }
     }
@@ -138,12 +139,12 @@ window.IBO_CATALOG = {
       "overseas": 34,
       "worldwide": 287.41,
       "lastDayNet": 5.9,
-      "trackedThroughDay": 66,
+      "trackedThroughDay": 67,
       "liveSources": [
         "wikipedia"
       ],
-      "deltaNet": -35.38,
-      "deltaWw": -54.85,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-26",
@@ -240,11 +241,11 @@ window.IBO_CATALOG = {
       "overseas": 28.92,
       "worldwide": 210.26,
       "lastDayNet": 0.95,
-      "trackedThroughDay": 78,
+      "trackedThroughDay": 79,
       "liveSources": [
         "hungama"
       ],
-      "deltaNet": 3.08,
+      "deltaNet": 0,
       "deltaWw": 0,
       "dayWise": [
         {
@@ -488,8 +489,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 1.05,
       "trackedThroughDay": 18,
       "liveSources": [],
-      "deltaNet": -17.13,
-      "deltaWw": -40.82,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-14",
@@ -732,8 +733,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 3.4,
       "trackedThroughDay": 11,
       "liveSources": [],
-      "deltaNet": -91.04,
-      "deltaWw": -101.42,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-21",
@@ -890,12 +891,12 @@ window.IBO_CATALOG = {
       "overseas": 5.73,
       "worldwide": 49.49,
       "lastDayNet": null,
-      "trackedThroughDay": 78,
+      "trackedThroughDay": 79,
       "liveSources": [
         "hungama"
       ],
-      "deltaNet": -1.32,
-      "deltaWw": -4.71,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
@@ -921,8 +922,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 0.72,
       "trackedThroughDay": 4,
       "liveSources": [],
-      "deltaNet": -6.88,
-      "deltaWw": -7.18,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-28",
@@ -1315,13 +1316,13 @@ window.IBO_CATALOG = {
       "overseas": 54.43,
       "worldwide": 441.56,
       "lastDayNet": 13,
-      "trackedThroughDay": 85,
+      "trackedThroughDay": 86,
       "liveSources": [
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": -16.61,
-      "deltaWw": -10.58,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-27",
@@ -1372,8 +1373,8 @@ window.IBO_CATALOG = {
       "lastDayNet": null,
       "trackedThroughDay": null,
       "liveSources": [],
-      "deltaNet": -16.33,
-      "deltaWw": -23.88,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
@@ -1397,12 +1398,12 @@ window.IBO_CATALOG = {
       "overseas": 1.15,
       "worldwide": 11.52,
       "lastDayNet": null,
-      "trackedThroughDay": 50,
+      "trackedThroughDay": 51,
       "liveSources": [
         "hungama"
       ],
-      "deltaNet": -1.21,
-      "deltaWw": -3.56,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
@@ -1426,13 +1427,13 @@ window.IBO_CATALOG = {
       "overseas": 65.2,
       "worldwide": 325.04,
       "lastDayNet": null,
-      "trackedThroughDay": 57,
+      "trackedThroughDay": 58,
       "liveSources": [
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": -12.32,
-      "deltaWw": -14.8,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
@@ -1458,8 +1459,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 0.72,
       "trackedThroughDay": 33,
       "liveSources": [],
-      "deltaNet": -6.79,
-      "deltaWw": -8.78,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-07-30",
@@ -1664,12 +1665,12 @@ window.IBO_CATALOG = {
       "overseas": 29.61,
       "worldwide": 224.61,
       "lastDayNet": null,
-      "trackedThroughDay": 113,
+      "trackedThroughDay": 114,
       "liveSources": [
         "hungama"
       ],
-      "deltaNet": -4.08,
-      "deltaWw": -5.56,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
@@ -1695,8 +1696,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 0.55,
       "trackedThroughDay": 45,
       "liveSources": [],
-      "deltaNet": -78.97,
-      "deltaWw": -81.23,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-07-17",
@@ -1865,12 +1866,12 @@ window.IBO_CATALOG = {
       "overseas": 470,
       "worldwide": 1820,
       "lastDayNet": 1,
-      "trackedThroughDay": 226,
+      "trackedThroughDay": 227,
       "liveSources": [
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": -13.09,
+      "deltaNet": 0,
       "deltaWw": 0,
       "dayWise": [
         {
@@ -2208,13 +2209,13 @@ window.IBO_CATALOG = {
       "overseas": 57.71,
       "worldwide": 464.5,
       "lastDayNet": 5,
-      "trackedThroughDay": 281,
+      "trackedThroughDay": 282,
       "liveSources": [
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": 12.27,
-      "deltaWw": 14.31,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-02-01",
@@ -2263,13 +2264,13 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 333.43,
       "lastDayNet": 1,
-      "trackedThroughDay": 218,
+      "trackedThroughDay": 219,
       "liveSources": [
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": -243.64,
-      "deltaWw": -8.47,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-06-08",
@@ -2306,7 +2307,7 @@ window.IBO_CATALOG = {
       "overseas": 0,
       "worldwide": 322.5,
       "lastDayNet": null,
-      "trackedThroughDay": 294,
+      "trackedThroughDay": 295,
       "liveSources": [
         "wikipedia"
       ],
@@ -2337,8 +2338,8 @@ window.IBO_CATALOG = {
       "lastDayNet": null,
       "trackedThroughDay": 70,
       "liveSources": [],
-      "deltaNet": 30.82,
-      "deltaWw": 2.38,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
@@ -2389,7 +2390,7 @@ window.IBO_CATALOG = {
       "overseas": 48.15,
       "worldwide": 247.28,
       "lastDayNet": 5,
-      "trackedThroughDay": 211,
+      "trackedThroughDay": 212,
       "liveSources": [
         "hungama"
       ],
@@ -2483,8 +2484,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "hungama"
       ],
-      "deltaNet": -146,
-      "deltaWw": -351.77,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-02",
@@ -2632,12 +2633,12 @@ window.IBO_CATALOG = {
       "overseas": 31.13,
       "worldwide": 186.84,
       "lastDayNet": 6,
-      "trackedThroughDay": 127,
+      "trackedThroughDay": 128,
       "liveSources": [
         "hungama"
       ],
-      "deltaNet": -3.31,
-      "deltaWw": -5.91,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-07-01",
@@ -2674,12 +2675,12 @@ window.IBO_CATALOG = {
       "overseas": 33.96,
       "worldwide": 143.6,
       "lastDayNet": null,
-      "trackedThroughDay": 134,
+      "trackedThroughDay": 135,
       "liveSources": [
         "hungama"
       ],
-      "deltaNet": -3.41,
-      "deltaWw": -4.13,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": []
     },
     {
@@ -2703,7 +2704,7 @@ window.IBO_CATALOG = {
       "overseas": 29.9,
       "worldwide": 98.62,
       "lastDayNet": null,
-      "trackedThroughDay": 120,
+      "trackedThroughDay": 121,
       "liveSources": [
         "hungama"
       ],
@@ -2712,64 +2713,7 @@ window.IBO_CATALOG = {
       "dayWise": []
     }
   ],
-  "changes": [
-    {
-      "id": "drishyam-3",
-      "title": "Drishyam 3: The Conclusion",
-      "text": "Drishyam 3: The Conclusion: WW ₹-351.77 Cr, India net ₹-146 Cr since 2026-10-30 prior",
-      "deltaNet": -146,
-      "deltaWw": -351.77
-    },
-    {
-      "id": "irumudi",
-      "title": "Irumudi",
-      "text": "Irumudi: WW ₹-101.42 Cr, India net ₹-91.04 Cr since 2026-10-30 prior",
-      "deltaNet": -91.04,
-      "deltaWw": -101.42
-    },
-    {
-      "id": "the-odyssey",
-      "title": "The Odyssey",
-      "text": "The Odyssey: WW ₹-81.23 Cr, India net ₹-78.97 Cr since 2026-10-30 prior",
-      "deltaNet": -78.97,
-      "deltaWw": -81.23
-    },
-    {
-      "id": "toxic",
-      "title": "Toxic",
-      "text": "Toxic: WW ₹-54.85 Cr, India net ₹-35.38 Cr since 2026-10-30 prior",
-      "deltaNet": -35.38,
-      "deltaWw": -54.85
-    },
-    {
-      "id": "vishwanath-and-sons",
-      "title": "Vishwanath And Sons",
-      "text": "Vishwanath And Sons: WW ₹-40.82 Cr, India net ₹-17.13 Cr since 2026-10-30 prior",
-      "deltaNet": -17.13,
-      "deltaWw": -40.82
-    },
-    {
-      "id": "sardar-2",
-      "title": "Sardar 2",
-      "text": "Sardar 2: WW ₹-23.88 Cr, India net ₹-16.33 Cr since 2026-10-30 prior",
-      "deltaNet": -16.33,
-      "deltaWw": -23.88
-    },
-    {
-      "id": "mirzapur-the-movie",
-      "title": "Mirzapur: The Movie",
-      "text": "Mirzapur: The Movie: WW ₹-14.8 Cr, India net ₹-12.32 Cr since 2026-10-30 prior",
-      "deltaNet": -12.32,
-      "deltaWw": -14.8
-    },
-    {
-      "id": "border-2",
-      "title": "Border 2",
-      "text": "Border 2: WW +₹14.31 Cr, India net +₹12.27 Cr since 2026-10-30 prior",
-      "deltaNet": 12.27,
-      "deltaWw": 14.31
-    }
-  ],
+  "changes": [],
   "logs": [
     {
       "sourceId": "sacnilk",
@@ -2782,14 +2726,14 @@ window.IBO_CATALOG = {
       "detail": "57 collection rows from 17 live pulls"
     },
     {
-      "sourceId": "etimes",
-      "status": "ok",
-      "detail": "Fetched 1 page (headlines / status)"
-    },
-    {
       "sourceId": "wikipedia",
       "status": "ok",
       "detail": "7 collection rows from 1 live pull"
+    },
+    {
+      "sourceId": "etimes",
+      "status": "ok",
+      "detail": "Fetched 1 page (headlines / status)"
     },
     {
       "sourceId": "pinkvilla",
@@ -2817,8 +2761,36 @@ window.IBO_CATALOG = {
       "sourceId": "hungama",
       "title": "Hungama 2026 worldwide: 12 titles matched",
       "url": "https://www.bollywoodhungama.com/box-office-collections/worldwide/2026/",
-      "publishedAt": "2026-10-30T17:51:33.886Z",
+      "publishedAt": "2026-10-30T22:04:03.109Z",
       "summary": "dhurandhar ₹1852.44 Cr WW · border-2 ₹464.5 Cr WW · hanuman-ansh ₹441.56 Cr WW · mirzapur-the-movie ₹325.04 Cr WW · bhooth-bangla ₹247.28 Cr WW"
+    },
+    {
+      "sourceId": "wikipedia",
+      "title": "Wikipedia 2026 ranking: Dhurandhar: The Revenge leads at 1,852.44 crore",
+      "url": "https://en.wikipedia.org/wiki/List_of_Indian_films_of_2026",
+      "publishedAt": "2026-10-30T22:04:11.867Z",
+      "summary": "1. Dhurandhar: The Revenge (Hindi) 1,852.44 crore · 2. Jailer 2 (Tamil) 750–755 crore · 3. Drishyam: The Conclusion (Tamil) 553.81 crore · 4. Border 2 (Tamil) 464.50 crore · 5. Hanuman Ansh (Tamil) 440.76 crore · 6. Peddi (Telugu) 330–336.85 crore"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Patrick Stewart dies at 86: His three marriages, children, grandchildren",
+      "url": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/patrick-stewart-dies-at-86-a-look-at-his-three-marriages-wife-sunny-ozell-two-children-and-four-grandchildren-and-his-regret-over-strained-family-ties/articleshow/135377051.cms",
+      "publishedAt": "2026-10-30T20:25:04.000Z",
+      "summary": "Patrick Stewart, who died at 86, was married three times, including to musician Sunny Ozell, and had two children and four grandchildren. While he found lasting companionship in his third marriage, the actor spoke candidly about his strained relationship with his children, admitt"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Vidnyan Mane says Bombay HC dismissed Palash Muchhal’s defamation case",
+      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/vidnyan-mane-says-bombay-high-court-dismissed-palash-muchhals-defamation-case-claims-people-should-not-file-baseless-and-false-cases-in-court-merely-to-generate-publicity/articleshow/135374825.cms",
+      "publishedAt": "2026-10-30T18:37:00.000Z",
+      "summary": "Vidnyan Mane, a friend of Smriti Mandhana, faces a legal battle with composer Palash Muchhal. The Bombay High Court dismissed Muchhal's defamation case against Mane, who plans to initiate criminal proceedings. Mane accused Muchhal of cheating him out of investment money for an un"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Priyanka wears embroidered Indian outfit as Nick matches in cream-white at Diwali gathering in LA",
+      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/priyanka-chopra-wears-embroidered-indian-outfit-with-floral-gajra-as-nick-jonas-matches-in-cream-and-white-at-star-studded-diwali-gathering-in-la/articleshow/135372889.cms",
+      "publishedAt": "2026-10-30T17:51:24.000Z",
+      "summary": "In a heartwarming Diwali celebration, Priyanka Chopra and Nick Jonas dazzled in coordinated festive attire while surrounded by their loved ones in Los Angeles. The couple participated in traditional festivities, with Priyanka also celebrating Karwa Chauth, sharing joyous family m"
     },
     {
       "sourceId": "etimes",
@@ -2884,45 +2856,17 @@ window.IBO_CATALOG = {
       "summary": "In the directorial debut 'Sigma', Jason Sanjay presents a heist film on Netflix that elicits a mixed response from viewers. While Sundeep Kishan's performance shines, the screenplay and script face substantial criticism. Many appreciate the intriguing heist premise but find the n"
     },
     {
-      "sourceId": "etimes",
-      "title": "'Drishyam' actor Kamlesh Sawant recalls accidentally slapping Ishita Dutta on set",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/drishyam-actor-kamlesh-sawant-recalls-accidentally-slapping-ishita-dutta-on-set-my-hand-stuck-right-on-her-face/articleshow/135366351.cms",
-      "publishedAt": "2026-10-30T14:35:40.000Z",
-      "summary": "Kamlesh Sawant recounted a striking yet unfortunate moment during the filming of Drishyam 2 with Ishita Dutta. A rehearsed slap inadvertently went wrong due to their proximity, prompting an angry reaction from director Nishikant Kamat. However, Ishita quickly came to Kamlesh's de"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Shraddha Kapoor reveals she suffered muscle tear while shooting dance sequence for 'Eetha'",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/shraddha-kapoor-reveals-she-suffered-a-muscle-tear-while-shooting-a-dance-for-eetha-i-had-to-understand-lavani-had-to-practise-a-lot/articleshow/135364565.cms",
-      "publishedAt": "2026-10-30T13:56:17.000Z",
-      "summary": "In an exciting new role, Shraddha Kapoor will embody a Lavani dancer in the anticipated film 'Eetha', inspired by the life of the legendary Vithabai Bhau Mang Narayangaonkar, a celebrated folk artist. The recently unveiled trailer immerses viewers in the vibrant culture of Tamash"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "GV Prakash officially replaces Ilaiyaraaja in 'Pocket Novel'",
-      "url": "https://timesofindia.indiatimes.com/entertainment/tamil/movies/news/gv-prakash-officially-replaces-ilaiyaraaja-as-music-composer-for-vijay-sethupathi-and-thiagarajan-kumararajas-pocket-novel-announcement-video-surprises-fans/articleshow/135365254.cms",
-      "publishedAt": "2026-10-30T13:59:28.000Z",
-      "summary": "GV Prakash Kumar has been officially named the music composer for the much-anticipated film 'Pocket Novel'. Taking over from Ilaiyaraaja, who was previously linked to the film, this change has been verified by the production team. Starring Vijay Sethupathi, Malavika Mohanan, and "
-    },
-    {
-      "sourceId": "wikipedia",
-      "title": "Wikipedia 2026 ranking: Dhurandhar: The Revenge leads at 1,852.44 crore",
-      "url": "https://en.wikipedia.org/wiki/List_of_Indian_films_of_2026",
-      "publishedAt": "2026-10-30T17:51:35.347Z",
-      "summary": "1. Dhurandhar: The Revenge (Hindi) 1,852.44 crore · 2. Jailer 2 (Tamil) 750–755 crore · 3. Drishyam: The Conclusion (Tamil) 553.81 crore · 4. Border 2 (Tamil) 464.50 crore · 5. Hanuman Ansh (Tamil) 440.76 crore · 6. Peddi (Telugu) 330–336.85 crore"
-    },
-    {
       "sourceId": "pinkvilla",
       "title": "Premada Oorali Box Office Collections: Kannada film fetches Rs 15 crore in Week 5, targets Rs 120 crore plus closing",
       "url": "https://www.pinkvilla.com/entertainment/box-office/premada-oorali-box-office-collections-kannada-film-fetches-rs-15-crore-in-week-5-targets-rs-120-crore-plus-closing-1406191",
-      "publishedAt": "2026-10-30T17:51:35.535Z",
+      "publishedAt": "2026-10-30T22:04:12.085Z",
       "summary": "Pinkvilla box-office desk"
     },
     {
       "sourceId": "pinkvilla",
       "title": "Drishyam The Conclusion Box Office Collections: Ajay Devgn's film collects Rs 11 crore in Week 4, targets Rs 365 crore finish",
       "url": "https://www.pinkvilla.com/entertainment/box-office/drishyam-the-conclusion-box-office-collections-ajay-devgns-film-collects-rs-11-crore-in-week-4-targets-rs-365-crore-finish-1406189",
-      "publishedAt": "2026-10-30T17:51:35.535Z",
+      "publishedAt": "2026-10-30T22:04:12.085Z",
       "summary": "Pinkvilla box-office desk"
     }
   ],
@@ -2939,6 +2883,6 @@ window.IBO_CATALOG = {
   "downloads": {
     "boardJson": "./board.json",
     "healthJson": "./health.json",
-    "history": "./history/2026-10-30.json"
+    "history": "./history/2026-10-31.json"
   }
 };
