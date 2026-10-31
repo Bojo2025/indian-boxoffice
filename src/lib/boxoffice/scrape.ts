@@ -76,6 +76,15 @@ function parseCr(raw: string | undefined | null): number | null {
   return Number.isFinite(n) ? n : null;
 }
 
+/** Sacnilk amounts may be Crore (Cr) or Lakh (L). Desk stores crores. */
+function parseMoneyToCr(amount: string | undefined | null, unit: string | undefined | null): number | null {
+  const n = parseCr(amount);
+  if (n == null) return null;
+  const u = (unit ?? "Cr").trim().toLowerCase();
+  if (u === "l" || u === "lakh" || u === "lakhs") return Math.round((n / 100) * 10000) / 10000;
+  return n;
+}
+
 function foldTitle(s: string): string {
   return s
     .toLowerCase()
@@ -198,29 +207,27 @@ function dateFromAge(days: number): string {
 function parseSacnilkIndex(html: string): { movie: Movie; reading: Reading }[] {
   const out: { movie: Movie; reading: Reading }[] = [];
   const seen = new Set<string>();
-  const links = /href="(\/movie\/([^"]+))"/gi;
-  let match: RegExpExecArray | null;
 
-  while ((match = links.exec(html))) {
-    const path = match[1];
-    const start = html.lastIndexOf('<div class="movie-card', match.index);
-    const next = html.indexOf('<div class="movie-card', match.index + path.length);
-    const card = html.slice(start >= 0 ? start : match.index, next >= 0 ? next : match.index + 10000);
-    const detailSlug = match[2];
-    const titleRaw =
-      card.match(/<h3[^>]*>([\s\S]*?)<\/h3>/i)?.[1] ??
-      card.match(/<div class="font-bold">([\s\S]*?)<\/div>/i)?.[1] ??
-      "";
-    const title = stripTags(titleRaw).replace(/\s+/g, " ").replace(/\s*\([^)]*\)\s*$/, "").trim();
+  // Sacnilk redesigned the theatrical board (late Oct 2026) around ds-lrow cards.
+  const rows = html.match(/<li class="ds-lrow[^"]*"[^>]*>[\s\S]*?<\/li>/gi) ?? [];
+  for (const row of rows) {
+    const link =
+      row.match(/href="\/movie\/([^"]+)"[^>]*class="[^"]*ds-lrow__name[^"]*"[^>]*>([\s\S]*?)<\/a>/i) ??
+      row.match(/class="[^"]*ds-lrow__name[^"]*"[^>]*href="\/movie\/([^"]+)"[^>]*>([\s\S]*?)<\/a>/i) ??
+      row.match(/href="\/movie\/([^"]+)"[\s\S]*?ds-lrow__name[^>]*>([\s\S]*?)<\/a>/i);
+    if (!link) continue;
+    const detailSlug = link[1];
+    if (seen.has(detailSlug)) continue;
+    const title = stripTags(link[2]).replace(/\s+/g, " ").replace(/\s*\([^)]*\)\s*$/, "").trim();
+    const sub = stripTags(row.match(/class="[^"]*ds-sub[^"]*"[^>]*>([\s\S]*?)<\//i)?.[1] ?? "");
+    const days = Number(sub.match(/Day\s+(\d+)/i)?.[1] ?? "");
+    const fig = row.match(/class="[^"]*ds-fig[^"]*"[^>]*>\s*\u20B9\s*([\d,.]+)\s*(?:<small>)?\s*(Cr|L)/i);
+    const latestDayNet = parseMoneyToCr(fig?.[1], fig?.[2]);
     const industry =
-      titleRaw.match(/\((Bollywood|Kollywood|Tollywood|Mollywood|Sandalwood|Hollywood)\)/i)?.[1] ??
+      title.match(/\((Bollywood|Kollywood|Tollywood|Mollywood|Sandalwood|Hollywood)\)/i)?.[1] ??
+      stripTags(row).match(/\b(Bollywood|Kollywood|Tollywood|Mollywood|Sandalwood|Hollywood)\b/i)?.[1] ??
       "Indian";
-    const text = stripTags(card);
-    const net = parseCr(text.match(/Net:\s*₹\s*([\d,.]+)\s*Cr/i)?.[1]);
-    const gross = parseCr(text.match(/Gross:\s*₹\s*([\d,.]+)\s*Cr/i)?.[1]);
-    const worldwide = parseCr(text.match(/WW:\s*₹\s*([\d,.]+)\s*Cr/i)?.[1]);
-    const days = Number(text.match(/Days:\s*(\d+)\s*Days/i)?.[1] ?? "");
-    if (!title || !net || !worldwide || !days || seen.has(detailSlug)) continue;
+    if (!title || !latestDayNet || !days) continue;
     seen.add(detailSlug);
 
     const id = discoveredId(title);
@@ -245,17 +252,77 @@ function parseSacnilkIndex(html: string): { movie: Movie; reading: Reading }[] {
       reading: {
         movieId: id,
         sourceId: "sacnilk",
-        reportDate: LIFETIME_DATE,
+        reportDate: deskDate(),
         dayNumber: days,
-        indiaNet: net,
-        indiaGross: gross,
-        overseas: worldwide != null && gross != null ? Math.max(0, worldwide - gross) : null,
-        worldwide,
+        indiaNet: latestDayNet,
+        indiaGross: null,
+        overseas: null,
+        worldwide: null,
         screens: null,
         occupancy: null,
-        note: "live index",
+        note: "live scrape",
       },
     });
+  }
+
+  // Legacy movie-card markup (pre-redesign) — keep as fallback.
+  if (!out.length) {
+    const links = /href="(\/movie\/([^"]+))"/gi;
+    let match: RegExpExecArray | null;
+    while ((match = links.exec(html))) {
+      const path = match[1];
+      const start = html.lastIndexOf('<div class="movie-card', match.index);
+      const next = html.indexOf('<div class="movie-card', match.index + path.length);
+      const card = html.slice(start >= 0 ? start : match.index, next >= 0 ? next : match.index + 10000);
+      const detailSlug = match[2];
+      const titleRaw =
+        card.match(/<h3[^>]*>([\s\S]*?)<\/h3>/i)?.[1] ??
+        card.match(/<div class="font-bold">([\s\S]*?)<\/div>/i)?.[1] ??
+        "";
+      const title = stripTags(titleRaw).replace(/\s+/g, " ").replace(/\s*\([^)]*\)\s*$/, "").trim();
+      const industry =
+        titleRaw.match(/\((Bollywood|Kollywood|Tollywood|Mollywood|Sandalwood|Hollywood)\)/i)?.[1] ??
+        "Indian";
+      const text = stripTags(card);
+      const net = parseCr(text.match(/Net:\s*\u20B9\s*([\d,.]+)\s*Cr/i)?.[1]);
+      const gross = parseCr(text.match(/Gross:\s*\u20B9\s*([\d,.]+)\s*Cr/i)?.[1]);
+      const worldwide = parseCr(text.match(/WW:\s*\u20B9\s*([\d,.]+)\s*Cr/i)?.[1]);
+      const days = Number(text.match(/Days:\s*(\d+)\s*Days/i)?.[1] ?? "");
+      if (!title || !net || !worldwide || !days || seen.has(detailSlug)) continue;
+      seen.add(detailSlug);
+      const id = discoveredId(title);
+      out.push({
+        movie: {
+          id,
+          slug: detailSlug,
+          title,
+          language: discoveredLanguage(industry),
+          industry,
+          director: "—",
+          starring: "—",
+          releaseDate: dateFromAge(days),
+          budgetCr: null,
+          runtimeMin: null,
+          synopsis: "Automatically discovered from Sacnilk's current theatrical board.",
+          posterKey: "hero-cinema",
+          status: "playing",
+          verdict: "Pending",
+        },
+        reading: {
+          movieId: id,
+          sourceId: "sacnilk",
+          reportDate: LIFETIME_DATE,
+          dayNumber: days,
+          indiaNet: net,
+          indiaGross: gross,
+          overseas: worldwide != null && gross != null ? Math.max(0, worldwide - gross) : null,
+          worldwide,
+          screens: null,
+          occupancy: null,
+          note: "live index",
+        },
+      });
+    }
   }
   return out;
 }
@@ -348,16 +415,22 @@ function parseSacnilkPage(
 ): { readings: Reading[]; territories: TerritorySplit[] } {
   const text = stripTags(html);
   const readings: Reading[] = [];
-  const dayRe =
-    /Day\s+(\d+)(?:\s+\d{1,2}\s+[A-Za-z]{3,9})?\s*\([^)]+\)\s*\u20B9\s*([\d,.]+)\s*Cr\s*\u20B9\s*([\d,.]+)\s*Cr\s*([\d,]+)\s*([\d.]+)\s*%/g;
+  const seenDays = new Set<number>();
   let match: RegExpExecArray | null;
-  while ((match = dayRe.exec(text))) {
+
+  // Late-2026 Sacnilk day-wise table (net/gross may be Cr or L):
+  // "Day 1 Fri 23 Oct · 6,265 shows · 13.0% ₹4.10 Cr ₹4.83 Cr"
+  // "Day 1 Fri 30 Oct · 1,240 shows · 22.0% ₹95 L ₹1.10 Cr"
+  const modernDayRe =
+    /Day\s+(\d+)\s+[A-Za-z]{3}\s+\d{1,2}\s+[A-Za-z]{3}(?:\s+\d{4})?\s*·\s*([\d,]+)\s*shows\s*·\s*([\d.]+)\s*%\s*\u20B9\s*([\d,.]+)\s*(Cr|L)\s*\u20B9\s*([\d,.]+)\s*(Cr|L)/g;
+  while ((match = modernDayRe.exec(text))) {
     const day = Number(match[1]);
-    const indiaGross = parseCr(match[2]);
-    const indiaNet = parseCr(match[3]);
-    const screens = Number(String(match[4]).replace(/,/g, ""));
-    const occupancy = Number(match[5]);
-    if (!day || indiaNet == null) continue;
+    const screens = Number(String(match[2]).replace(/,/g, ""));
+    const occupancy = Number(match[3]);
+    const indiaNet = parseMoneyToCr(match[4], match[5]);
+    const indiaGross = parseMoneyToCr(match[6], match[7]);
+    if (!day || indiaNet == null || seenDays.has(day)) continue;
+    seenDays.add(day);
     readings.push({
       movieId: movie.id,
       sourceId: "sacnilk",
@@ -373,11 +446,35 @@ function parseSacnilkPage(
     });
   }
 
-  // Newer Sacnilk cards sometimes expose only India nett + occupancy, with
-  // the calendar year between the date and the weekday label.
+  // Legacy Sacnilk day-wise table (parenthetical weekday labels).
+  const dayRe =
+    /Day\s+(\d+)(?:\s+\d{1,2}\s+[A-Za-z]{3,9})?\s*\([^)]+\)\s*\u20B9\s*([\d,.]+)\s*Cr\s*\u20B9\s*([\d,.]+)\s*Cr\s*([\d,]+)\s*([\d.]+)\s*%/g;
+  while ((match = dayRe.exec(text))) {
+    const day = Number(match[1]);
+    const indiaGross = parseCr(match[2]);
+    const indiaNet = parseCr(match[3]);
+    const screens = Number(String(match[4]).replace(/,/g, ""));
+    const occupancy = Number(match[5]);
+    if (!day || indiaNet == null || seenDays.has(day)) continue;
+    seenDays.add(day);
+    readings.push({
+      movieId: movie.id,
+      sourceId: "sacnilk",
+      reportDate: dateForDay(movie.releaseDate, day),
+      dayNumber: day,
+      indiaNet,
+      indiaGross,
+      overseas: null,
+      worldwide: null,
+      screens: Number.isFinite(screens) ? screens : null,
+      occupancy: Number.isFinite(occupancy) ? occupancy : null,
+      note: "live scrape",
+    });
+  }
+
+  // Compact legacy cards: India nett + occupancy only.
   const compactDayRe =
     /Day\s+(\d+)(?:\s+\d{1,2}\s+[A-Za-z]{3,9}(?:\s+\d{4})?)?\s*\([^)]+\)\s*\u20B9\s*([\d,.]+)\s*Cr(?:\s+([\d.]+)\s*%|\s+Language Breakdown)/g;
-  const seenDays = new Set(readings.map((reading) => reading.dayNumber));
   while ((match = compactDayRe.exec(text))) {
     const day = Number(match[1]);
     const indiaNet = parseCr(match[2]);
@@ -398,14 +495,43 @@ function parseSacnilkPage(
     });
   }
 
-  const life = text.match(
-    /worldwide collections of\s*\u20B9\s*([\d,.]+)\s*Cr\s*\(\s*India Gross:\s*\u20B9\s*([\d,.]+)\s*Cr\s*,\s*Overseas:\s*\u20B9\s*([\d,.]+)\s*Cr[\s\S]{0,120}?\u20B9\s*([\d,.]+)\s*Cr in net/i,
-  );
+  const life =
+    text.match(
+      /worldwide collections of\s*\u20B9\s*([\d,.]+)\s*Cr\s*\(\s*India Gross:\s*\u20B9\s*([\d,.]+)\s*Cr\s*,\s*Overseas:\s*\u20B9\s*([\d,.]+)\s*Cr[\s\S]{0,120}?\u20B9\s*([\d,.]+)\s*Cr in net/i,
+    ) ??
+    text.match(
+      /Worldwide gross\s*\u20B9\s*([\d,.]+)\s*(Cr|L)\s*India net\s*\u20B9\s*([\d,.]+)\s*(Cr|L)\s*India gross\s*\u20B9\s*([\d,.]+)\s*(Cr|L)(?:\s*Overseas\s*\u20B9\s*([\d,.]+)\s*(Cr|L))?/i,
+    ) ??
+    text.match(
+      /worldwide gross after\s+\d+\s+days is\s*\u20B9\s*([\d,.]+)\s*Cr\s*:\s*India gross\s*\u20B9\s*([\d,.]+)\s*Cr\s*\(\s*\u20B9\s*([\d,.]+)\s*Cr net/i,
+    );
+
   if (life) {
-    const worldwideRaw = parseCr(life[1]);
-    const indiaGross = parseCr(life[2]);
-    const overseasRaw = parseCr(life[3]);
-    const indiaNet = parseCr(life[4]);
+    // Groups differ by pattern:
+    // legacy: ww, indiaGross, overseas, indiaNet
+    // card:   ww, wwU, indiaNet, netU, indiaGross, grossU, overseas?, overseasU?
+    // after:  ww, indiaGross, indiaNet
+    let worldwideRaw: number | null;
+    let indiaGross: number | null;
+    let overseasRaw: number | null;
+    let indiaNet: number | null;
+    if (/Worldwide gross\s*\u20B9/i.test(life[0]) && /India net\s*\u20B9/i.test(life[0])) {
+      worldwideRaw = parseMoneyToCr(life[1], life[2]);
+      indiaNet = parseMoneyToCr(life[3], life[4]);
+      indiaGross = parseMoneyToCr(life[5], life[6]);
+      overseasRaw = parseMoneyToCr(life[7], life[8]);
+    } else if (/worldwide gross after/i.test(life[0])) {
+      worldwideRaw = parseCr(life[1]);
+      indiaGross = parseCr(life[2]);
+      indiaNet = parseCr(life[3]);
+      overseasRaw =
+        worldwideRaw != null && indiaGross != null ? Math.max(0, worldwideRaw - indiaGross) : null;
+    } else {
+      worldwideRaw = parseCr(life[1]);
+      indiaGross = parseCr(life[2]);
+      overseasRaw = parseCr(life[3]);
+      indiaNet = parseCr(life[4]);
+    }
     const clamped = clampHollywoodWorldwide(movie, worldwideRaw, indiaGross);
     const worldwide = clamped.value;
     const overseas =
@@ -430,6 +556,29 @@ function parseSacnilkPage(
         ? `lifetime live · ${clamped.note}`
         : "lifetime live",
     });
+  } else {
+    // Totals row: "Total · 8 days ₹33.75 Cr ₹40.28 Cr" or "₹95 L ₹1.10 Cr"
+    const total = text.match(
+      /Total\s*·\s*(\d+)\s*days\s*\u20B9\s*([\d,.]+)\s*(Cr|L)\s*\u20B9\s*([\d,.]+)\s*(Cr|L)/i,
+    );
+    if (total) {
+      const indiaNet = parseMoneyToCr(total[2], total[3]);
+      const indiaGross = parseMoneyToCr(total[4], total[5]);
+      const lastDay = Number(total[1]) || movieDayFallback(movie);
+      readings.push({
+        movieId: movie.id,
+        sourceId: "sacnilk",
+        reportDate: LIFETIME_DATE,
+        dayNumber: lastDay,
+        indiaNet,
+        indiaGross,
+        overseas: null,
+        worldwide: indiaGross,
+        screens: null,
+        occupancy: null,
+        note: "lifetime live",
+      });
+    }
   }
 
   const territories: TerritorySplit[] = [];
@@ -746,7 +895,7 @@ export async function ingestLiveSources(): Promise<IngestResult> {
         }
 
         await runPool(dayWiseJobs, 4, async (movie) => {
-          const pageSlug = movie.slug.replace(/_2026$/i, "");
+          const pageSlug = movie.slug.replace(/_2026$/i, "").toLowerCase();
           try {
             const detail = await fetchText(
               `https://www.sacnilk.com/news/${pageSlug}_2026_Box_Office_Collection_Day_Wise_Worldwide`,
@@ -779,7 +928,8 @@ export async function ingestLiveSources(): Promise<IngestResult> {
         const movie = MOVIES.find((m) => m.id === page.movieId);
         if (!movie) throw new Error(`Unknown movie ${page.movieId}`);
         try {
-          const html = await fetchText(`https://www.sacnilk.com/news/${page.slug}`);
+          const newsSlug = page.slug.toLowerCase();
+          const html = await fetchText(`https://www.sacnilk.com/news/${newsSlug}`);
           const parsed = parseSacnilkPage(html, movie);
           if (!parsed.readings.length) throw new Error("No day-wise rows");
           readings.push(...parsed.readings);
@@ -789,7 +939,7 @@ export async function ingestLiveSources(): Promise<IngestResult> {
           headlines.push({
             sourceId: "sacnilk",
             title: `${movie.title}: Sacnilk ${parsed.readings.filter((r) => r.note === "live scrape").length} days, India net \u20B9${life?.indiaNet ?? lastDaily?.indiaNet} Cr`,
-            url: `https://www.sacnilk.com/news/${page.slug}`,
+            url: `https://www.sacnilk.com/news/${newsSlug}`,
             publishedAt: new Date().toISOString(),
             summary: `Live day-wise pull. Last day ${lastDaily?.dayNumber ?? "—"}. WW \u20B9${life?.worldwide ?? "—"} Cr.`,
           });
