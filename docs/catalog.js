@@ -1,7 +1,7 @@
 window.IBO_CATALOG = {
-  "generatedAt": "2026-10-30T22:04:23.050Z",
+  "generatedAt": "2026-10-31T04:47:06.824Z",
   "deskDate": "2026-10-31",
-  "comparedTo": "2026-10-30",
+  "comparedTo": "2026-10-31 prior",
   "mode": "server-consensus",
   "spine": [
     "sacnilk",
@@ -13,22 +13,22 @@ window.IBO_CATALOG = {
     "hardFail": true,
     "alerts": [
       "HARD: Sacnilk returned 0 day-wise rows — primary spine is down or the HTML regex broke",
-      "sacnilk failed: Fetched 1 page (headlines / status) (streak 2)",
-      "sacnilk has failed 2 consecutive publishes",
-      "koimoi failed: HTTP 403 (streak 136)",
-      "koimoi has failed 136 consecutive publishes",
-      "boi failed: HTTP 403 (streak 81)",
-      "boi has failed 81 consecutive publishes"
+      "sacnilk failed: Fetched 1 page (headlines / status) (streak 3)",
+      "sacnilk has failed 3 consecutive publishes",
+      "koimoi failed: HTTP 403 (streak 137)",
+      "koimoi has failed 137 consecutive publishes",
+      "boi failed: HTTP 403 (streak 82)",
+      "boi has failed 82 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
         "ok": false,
-        "streakFail": 2,
+        "streakFail": 3,
         "detail": "Fetched 1 page (headlines / status)"
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 136,
+        "streakFail": 137,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -38,7 +38,7 @@ window.IBO_CATALOG = {
       },
       "boi": {
         "ok": false,
-        "streakFail": 81,
+        "streakFail": 82,
         "detail": "HTTP 403"
       }
     }
@@ -2726,14 +2726,14 @@ window.IBO_CATALOG = {
       "detail": "57 collection rows from 17 live pulls"
     },
     {
-      "sourceId": "wikipedia",
-      "status": "ok",
-      "detail": "7 collection rows from 1 live pull"
-    },
-    {
       "sourceId": "etimes",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
+    },
+    {
+      "sourceId": "wikipedia",
+      "status": "ok",
+      "detail": "7 collection rows from 1 live pull"
     },
     {
       "sourceId": "pinkvilla",
@@ -2741,14 +2741,14 @@ window.IBO_CATALOG = {
       "detail": "Fetched 1 page (headlines / status)"
     },
     {
-      "sourceId": "express",
-      "status": "ok",
-      "detail": "Fetched 1 page (headlines / status)"
-    },
-    {
       "sourceId": "koimoi",
       "status": "blocked",
       "detail": "HTTP 403"
+    },
+    {
+      "sourceId": "express",
+      "status": "ok",
+      "detail": "Fetched 1 page (headlines / status)"
     },
     {
       "sourceId": "boi",
@@ -2761,112 +2761,112 @@ window.IBO_CATALOG = {
       "sourceId": "hungama",
       "title": "Hungama 2026 worldwide: 12 titles matched",
       "url": "https://www.bollywoodhungama.com/box-office-collections/worldwide/2026/",
-      "publishedAt": "2026-10-30T22:04:03.109Z",
+      "publishedAt": "2026-10-31T04:46:52.180Z",
       "summary": "dhurandhar ₹1852.44 Cr WW · border-2 ₹464.5 Cr WW · hanuman-ansh ₹441.56 Cr WW · mirzapur-the-movie ₹325.04 Cr WW · bhooth-bangla ₹247.28 Cr WW"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Criminal Minds’ cancelled after 20 seasons; finale to air in 2027",
+      "url": "https://timesofindia.indiatimes.com/web-series/news/english/criminal-minds-to-end-after-season-20-production-company-confirms-shows-finale-to-air-in-2027/articleshow/135387996.cms",
+      "publishedAt": "2026-10-31T04:33:09.000Z",
+      "summary": "Criminal Minds, a beloved series, will reach its end with the highly anticipated 20th season slated for 2027. Originally broadcast on CBS for 15 successful seasons, the show was revived as Criminal Minds: Evolution for an additional five. Showrunner Erica Messer has expressed her"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Did Diljit Dosanjh take a jibe at CJP for past comments? - WATCH",
+      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/did-diljit-dosanjh-take-a-jibe-at-cjp-for-comments-on-his-film-satluj-abhijeet-dipke-responds-watch/articleshow/135387239.cms",
+      "publishedAt": "2026-10-31T04:28:12.000Z",
+      "summary": "During his concert in New Delhi, Diljit Dosanjh responded to criticism regarding his political views. He emphasized his identity as an artist and expressed support for all attendees. Dosanjh defended his film on human rights activist Jaswant Singh Khalra, which was ridiculed by c"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Michael Douglas on struggle to shake off ‘TV star' image",
+      "url": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/michael-douglas-claims-he-was-not-taken-seriously-despite-oscar-win-says-people-saw-him-as-a-tv-star/articleshow/135387886.cms",
+      "publishedAt": "2026-10-31T04:27:22.000Z",
+      "summary": "In a recent interview, veteran actor Michael Douglas revealed the obstacles he faced in his career, particularly the challenge of being pigeonholed as a television actor. Despite his remarkable success on TV, many overlooked his potential for films. Douglas reflected on the strug"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "‘Cult’ BO collection day 1: Vishwak Sen’s film opens at Rs 1.30 crore worldwide",
+      "url": "https://timesofindia.indiatimes.com/entertainment/telugu/movies/news/cult-box-office-collection-day-1-vishwak-sens-action-slasher-film-mints-rs-1-10-crore-in-india-grosses-rs-1-30-crore-worldwide/articleshow/135387092.cms",
+      "publishedAt": "2026-10-31T03:56:16.000Z",
+      "summary": "Vishwak Sen has stepped into the director's chair for his debut film, 'Cult,' which has hit theaters to a mixed reception. On its opening day, the film garnered an average of Rs 7,661 per show, amassing a total gross of Rs 1.10 crore across India. However, it faced tough competit"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Michael Douglas reveals Catherine Zeta-Jones’ ultimatum about affairs before accepting actor's proposal",
+      "url": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/michael-douglas-reveals-catherine-zeta-jones-ultimatum-before-marriage-either-continue-affairs-or-end-it-and-be-with-me/articleshow/135386301.cms",
+      "publishedAt": "2026-10-31T03:35:47.000Z",
+      "summary": "During his recent guest appearance on 'The Graham Norton Show', Michael Douglas offered a heartfelt glimpse into his marriage with Catherine Zeta-Jones. He revealed an emotional ultimatum from Zeta-Jones regarding his previous affairs and recognized the pivotal moment he knew she"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Sara Ali Khan's net worth grows from Rs 13 crore to Rs 41 crore",
+      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/sara-ali-khans-net-worth-grows-from-rs-13-crore-to-rs-41-crore-film-fees-brand-endorsements-properties-cars-and-more/articleshow/135386063.cms",
+      "publishedAt": "2026-10-31T03:23:25.000Z",
+      "summary": "Sara Ali Khan has made remarkable strides in her Bollywood journey since debuting in 2018, with her net worth escalating from Rs 13 crore in 2019 to a striking Rs 41 crore currently. Her film fee is around Rs 3 crore, complemented by endorsements worth about Rs 1 crore. She has a"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "'King' UPDATE: First song to release on Shah Rukh Khan's birthday",
+      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/king-update-first-song-to-release-on-shah-rukh-khans-birthday-arijit-singh-to-sing-lead-track-reports/articleshow/135385891.cms",
+      "publishedAt": "2026-10-31T03:15:35.000Z",
+      "summary": "October 2 brings exciting news for fans of Shah Rukh Khan, as his upcoming film 'King' will unveil its first song, coinciding with his 61st birthday celebrations. The music department sees a transformation, with Sachin-Jigar stepping in place of Anirudh Ravichander, ensuring fres"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Akshay Oberoi on working with Siddharth Anand in 'King'",
+      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/i-do-whatever-he-wants-me-to-do-akshay-oberoi-on-working-with-siddharth-anand-in-king-calls-shah-rukh-khans-work-ethic-exceptional/articleshow/135384604.cms",
+      "publishedAt": "2026-10-31T02:15:58.000Z",
+      "summary": "In a recent interview, Akshay Oberoi expresses his enthusiasm for working alongside the acclaimed director Siddharth Anand and the superstar Shah Rukh Khan in 'King'. He commends Anand’s skillful visual narration and technical prowess in the realm of commercial cinema. Oberoi app"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "'Aadarsha Kutumbam – House No. 47' BO day 1",
+      "url": "https://timesofindia.indiatimes.com/entertainment/telugu/movies/news/aadarsha-kutumbam-house-no-47-box-office-collection-day-1-venkatesh-and-srinidhi-shettys-film-records-impressive-worldwide-opening-mints-rs-16-65-cr/articleshow/135385067.cms",
+      "publishedAt": "2026-10-31T02:40:58.000Z",
+      "summary": "On October 30, Venkatesh Daggubati's latest film, 'Aadarsha Kutumbam – House No. 47,' hit theaters and made a strong impact. With a remarkable opening day earning of Rs 16.65 crore worldwide, it thrived especially in the domestic circuits of Andhra Pradesh and Telangana. After ta"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Sunainaa condemns AI-morphed video, urges people to fight misuse",
+      "url": "https://timesofindia.indiatimes.com/entertainment/tamil/movies/news/sunainaa-issues-second-statement-on-ai-misuse-says-i-refuse-to-let-someone-elses-actions-define-my-peace/articleshow/135384732.cms",
+      "publishedAt": "2026-10-31T02:26:29.000Z",
+      "summary": "Sunainaa publicly voiced her outrage over a manipulated video that exploited her identity and dignity. She condemned the perpetrators and stressed the pressing need to safeguard women's consent and safety. In her statement, she affirmed her determination to stay unaffected by suc"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "Selma Blair in tears as she breaks silence on arrest following plane incident; says she didn't intend to 'hurt or frighten anyone'",
+      "url": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/selma-blair-in-tears-as-she-opens-up-about-arrest-following-plane-incident-says-she-didnt-intend-to-hurt-or-frighten-anyone/articleshow/135384218.cms",
+      "publishedAt": "2026-10-31T02:02:42.000Z",
+      "summary": "Selma Blair recently addressed her arrest after an incident on a flight, expressing deep regret. She emphasized that she never intended to hurt anyone and apologized for any distress caused. The actress described the overwhelming support she received during this difficult period,"
+    },
+    {
+      "sourceId": "etimes",
+      "title": "'Sarala Subbarao' OTT: Where to stream Ajay Rao's film online",
+      "url": "https://timesofindia.indiatimes.com/entertainment/kannada/movies/news/sarala-subbarao-ott-release-where-to-stream-ajay-rao-and-misha-narangs-film-online/articleshow/135384142.cms",
+      "publishedAt": "2026-10-31T01:57:24.000Z",
+      "summary": "The Kannada film 'Sarala Subbarao' stars Ajay Rao and Misha Narang and is now available on Amazon Prime Video. The story is set during the 1970s and explores the relationship of a couple affected by the 1971 Indo-Pak War. Inspired by Triveni's novel 'Vasantha Gana', it deals with"
     },
     {
       "sourceId": "wikipedia",
       "title": "Wikipedia 2026 ranking: Dhurandhar: The Revenge leads at 1,852.44 crore",
       "url": "https://en.wikipedia.org/wiki/List_of_Indian_films_of_2026",
-      "publishedAt": "2026-10-30T22:04:11.867Z",
+      "publishedAt": "2026-10-31T04:46:55.184Z",
       "summary": "1. Dhurandhar: The Revenge (Hindi) 1,852.44 crore · 2. Jailer 2 (Tamil) 750–755 crore · 3. Drishyam: The Conclusion (Tamil) 553.81 crore · 4. Border 2 (Tamil) 464.50 crore · 5. Hanuman Ansh (Tamil) 440.76 crore · 6. Peddi (Telugu) 330–336.85 crore"
     },
     {
-      "sourceId": "etimes",
-      "title": "Patrick Stewart dies at 86: His three marriages, children, grandchildren",
-      "url": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/patrick-stewart-dies-at-86-a-look-at-his-three-marriages-wife-sunny-ozell-two-children-and-four-grandchildren-and-his-regret-over-strained-family-ties/articleshow/135377051.cms",
-      "publishedAt": "2026-10-30T20:25:04.000Z",
-      "summary": "Patrick Stewart, who died at 86, was married three times, including to musician Sunny Ozell, and had two children and four grandchildren. While he found lasting companionship in his third marriage, the actor spoke candidly about his strained relationship with his children, admitt"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Vidnyan Mane says Bombay HC dismissed Palash Muchhal’s defamation case",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/vidnyan-mane-says-bombay-high-court-dismissed-palash-muchhals-defamation-case-claims-people-should-not-file-baseless-and-false-cases-in-court-merely-to-generate-publicity/articleshow/135374825.cms",
-      "publishedAt": "2026-10-30T18:37:00.000Z",
-      "summary": "Vidnyan Mane, a friend of Smriti Mandhana, faces a legal battle with composer Palash Muchhal. The Bombay High Court dismissed Muchhal's defamation case against Mane, who plans to initiate criminal proceedings. Mane accused Muchhal of cheating him out of investment money for an un"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Priyanka wears embroidered Indian outfit as Nick matches in cream-white at Diwali gathering in LA",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/priyanka-chopra-wears-embroidered-indian-outfit-with-floral-gajra-as-nick-jonas-matches-in-cream-and-white-at-star-studded-diwali-gathering-in-la/articleshow/135372889.cms",
-      "publishedAt": "2026-10-30T17:51:24.000Z",
-      "summary": "In a heartwarming Diwali celebration, Priyanka Chopra and Nick Jonas dazzled in coordinated festive attire while surrounded by their loved ones in Los Angeles. The couple participated in traditional festivities, with Priyanka also celebrating Karwa Chauth, sharing joyous family m"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Barbara Barrie's daughter recalls decision to end her life with medical aid",
-      "url": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/barbara-barries-daughter-jane-harnick-recalls-mothers-decision-to-end-her-life-with-medical-assistance-at-95-after-terminal-cancer-diagnosis-reveals-her-final-words-to-family-she-was-ready-to-go/articleshow/135371247.cms",
-      "publishedAt": "2026-10-30T17:09:46.000Z",
-      "summary": "Veteran actress Barbara Barrie, best known for 'Suddenly Susan' and 'Breaking Away', chose medical aid in dying at her Manhattan home after a terminal cancer diagnosis. Her daughter, Jane Harnick, has opened up about the family's support for her decision, the actress' final days "
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Shraddha gets emotional at ‘Eetha’ trailer launch: 'My grandmother would be very proud of me'",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/shraddha-kapoor-gets-emotional-at-eetha-trailer-launch-says-my-grandmother-would-be-very-proud-of-me-for-being-a-part-of-this-film/articleshow/135370802.cms",
-      "publishedAt": "2026-10-30T16:58:44.000Z",
-      "summary": "At the heartfelt trailer launch of her film 'Eetha', Shraddha Kapoor shared an emotional bond with the narrative. She reminisced about her grandmother's pride in her performance, reflecting on the similarities between the film's artistic struggles and her own family's journeys. S"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Mira tells Kareena about Shahid Kapoor's support as she embraced motherhood at 21",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/kareena-kapoor-asks-mira-rajput-about-becoming-a-mother-at-21-she-says-shahid-kapoor-was-extremely-supportive-takes-care-of-the-sports-diet-of-the-kids/articleshow/135369090.cms",
-      "publishedAt": "2026-10-30T16:07:59.000Z",
-      "summary": "During a recent appearance on a popular talk show, Mira Rajput shared insights into her journey as a young mother. She highlighted the vital role of her husband, Shahid Kapoor, and her two sisters in supporting her through challenging times. Mira relishes the unique bond with her"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Inside Saif Ali Khan's Rs 800 crore Pataudi Palace: 150 rooms, grand verandas",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/inside-saif-ali-khans-rs-800-crore-pataudi-palace-150-rooms-grand-verandas-venetian-chandeliers-and-more/articleshow/135364524.cms",
-      "publishedAt": "2026-10-30T13:47:10.000Z",
-      "summary": "Saif Ali Khan's ancestral home, the Pataudi Palace, spans across 10 acres and features nearly 150 rooms. Built in 1935, the palace was designed by Robert Tor Russell and showcases a blend of European neoclassical and Indian architectural elements. After his father's passing, Saif"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Maharashtra FDA completes proceedings against SRK, Ajay, and Tiger over pan masala ads",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/maharashtra-fda-completes-proceedings-against-shah-rukh-khan-ajay-devgn-and-tiger-shroff-over-pan-masala-ads-tukaram-mundhe-says-assistant-commissioner-found-that-they-violated-the-states-rules/articleshow/135368829.cms",
-      "publishedAt": "2026-10-30T15:55:51.000Z",
-      "summary": "Maharashtra's Food and Drug Administration has concluded its investigation into celebrities promoting Vimal Pan Masala. The investigation revealed violations of state advertising rules by Shah Rukh Khan, Ajay Devgn, and Tiger Shroff. Ajay Devgn has approached the Bombay High Cour"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Anil Kapoor recalls shooting for 'Tezaab' at Mannat before Shah Rukh bought it",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/anil-kapoor-recalls-shooting-for-tezaab-at-mannat-later-shah-rukh-khan-bought-it-weve-been-friends-for-many-years-i-felt-he-would-become-a-big-star/articleshow/135368710.cms",
-      "publishedAt": "2026-10-30T15:55:56.000Z",
-      "summary": "Anil Kapoor reminisced about his friendship with Shah Rukh Khan and their initial meeting during filming. He remembered Shah Rukh’s journey from living in a flat to owning Mannat, his dream home. Kapoor also noted that they have appeared together in the film 'Trimurti', which did"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "James Gunn says Margot Robbie 'may be over' playing Harley Quinn",
-      "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/james-gunn-says-margot-robbie-may-be-over-playing-harley-quinn-raising-doubts-about-her-return-to-the-dc-role/articleshow/135368017.cms",
-      "publishedAt": "2026-10-30T15:25:26.000Z",
-      "summary": "In a recent statement, James Gunn hinted that Margot Robbie may not reprise her iconic role as Harley Quinn in future installments. Acknowledging her remarkable journey since first taking on the character in 2016, he expressed admiration for her talents but questioned her desire "
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Silambarasan and Nayanthara to reunite Keerthiswaran's direction",
-      "url": "https://timesofindia.indiatimes.com/entertainment/tamil/movies/news/silambarasan-and-nayantharas-possible-reunion-after-10-years-in-dude-director-keerthiswarans-next-sparks-excitement-among-fans/articleshow/135367259.cms",
-      "publishedAt": "2026-10-30T15:15:41.000Z",
-      "summary": "Exciting news for fans! Nayanthara and Silambarasan may reunite in an upcoming film directed by Keerthiswaran, with Silambarasan reportedly in the lead role. If confirmed, Nayanthara could play a police officer, marking their first collaboration in almost a decade. Fans are buzzi"
-    },
-    {
-      "sourceId": "etimes",
-      "title": "Sigma' OTT review: Vijay's son Jason Sanjay's film gets mixed reactions",
-      "url": "https://timesofindia.indiatimes.com/entertainment/tamil/movies/news/sigma-ott-review-vijays-son-jason-sanjays-directorial-debut-gets-mixed-reactions-fans-praise-sundeep-kishan-but-call-the-screenplay-disappointing/articleshow/135365916.cms",
-      "publishedAt": "2026-10-30T14:47:53.000Z",
-      "summary": "In the directorial debut 'Sigma', Jason Sanjay presents a heist film on Netflix that elicits a mixed response from viewers. While Sundeep Kishan's performance shines, the screenplay and script face substantial criticism. Many appreciate the intriguing heist premise but find the n"
-    },
-    {
       "sourceId": "pinkvilla",
-      "title": "Premada Oorali Box Office Collections: Kannada film fetches Rs 15 crore in Week 5, targets Rs 120 crore plus closing",
-      "url": "https://www.pinkvilla.com/entertainment/box-office/premada-oorali-box-office-collections-kannada-film-fetches-rs-15-crore-in-week-5-targets-rs-120-crore-plus-closing-1406191",
-      "publishedAt": "2026-10-30T22:04:12.085Z",
+      "title": "Premada Oorali Box Office Collections: Kannada film maintains good hold on 6th Friday, targets Rs. 125 crore end",
+      "url": "https://www.pinkvilla.com/entertainment/box-office/premada-oorali-box-office-collections-kannada-film-maintains-good-hold-on-6th-friday-targets-rs-125-crore-end-1406203",
+      "publishedAt": "2026-10-31T04:46:55.323Z",
       "summary": "Pinkvilla box-office desk"
     },
     {
       "sourceId": "pinkvilla",
-      "title": "Drishyam The Conclusion Box Office Collections: Ajay Devgn's film collects Rs 11 crore in Week 4, targets Rs 365 crore finish",
-      "url": "https://www.pinkvilla.com/entertainment/box-office/drishyam-the-conclusion-box-office-collections-ajay-devgns-film-collects-rs-11-crore-in-week-4-targets-rs-365-crore-finish-1406189",
-      "publishedAt": "2026-10-30T22:04:12.085Z",
+      "title": "Udta Teer 2nd Friday Box Office Collections: Ayushmann Khurrana's spy comedy enters Week 2 with GOOD hold, nears Rs 35 crore mark",
+      "url": "https://www.pinkvilla.com/entertainment/box-office/udta-teer-2nd-friday-box-office-collections-ayushmann-khurranas-spy-comedy-enters-week-2-with-good-hold-nears-rs-35-crore-mark-1406202",
+      "publishedAt": "2026-10-31T04:46:55.323Z",
       "summary": "Pinkvilla box-office desk"
     }
   ],
