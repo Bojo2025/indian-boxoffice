@@ -1,6 +1,6 @@
 {
   "date": "2026-10-31",
-  "generatedAt": "2026-10-31T05:42:10.948Z",
+  "generatedAt": "2026-10-31T10:00:32.040Z",
   "films": [
     {
       "id": "toxic",
@@ -110,16 +110,16 @@
     {
       "id": "dhurandhar",
       "title": "Dhurandhar: The Revenge",
-      "indiaNet": 1149.3,
-      "worldwide": 1813.39,
+      "indiaNet": 1108.09,
+      "worldwide": 1820,
       "status": "playing"
     },
     {
       "id": "border-2",
       "title": "Border 2",
-      "indiaNet": 341.7,
-      "worldwide": 464.5,
-      "status": "closed"
+      "indiaNet": 329.43,
+      "worldwide": 450.19,
+      "status": "playing"
     },
     {
       "id": "peddi",
@@ -194,8 +194,8 @@
     {
       "id": "aadarsha-kutumbam-house-no-47",
       "title": "Aadarsha Kutumbam House No: 47",
-      "indiaNet": 19,
-      "worldwide": 19,
+      "indiaNet": 19.5,
+      "worldwide": 19.5,
       "status": "playing"
     },
     {
@@ -227,10 +227,17 @@
       "status": "playing"
     },
     {
+      "id": "418",
+      "title": "418",
+      "indiaNet": 0.37,
+      "worldwide": 0.37,
+      "status": "playing"
+    },
+    {
       "id": "prahaar-the-ujjwal-nikam-story",
       "title": "Prahaar - The Ujjwal Nikam Story",
-      "indiaNet": 22.15,
-      "worldwide": 27.93,
+      "indiaNet": 22.35,
+      "worldwide": 29.14,
       "status": "playing"
     },
     {
@@ -241,6 +248,13 @@
       "status": "playing"
     },
     {
+      "id": "ranabaali",
+      "title": "Ranabaali",
+      "indiaNet": 57.74,
+      "worldwide": 79.15,
+      "status": "playing"
+    },
+    {
       "id": "nayyi-navelli",
       "title": "Nayyi Navelli",
       "indiaNet": 26.2,
@@ -248,24 +262,10 @@
       "status": "playing"
     },
     {
-      "id": "ranabaali",
-      "title": "Ranabaali",
-      "indiaNet": 57.7,
-      "worldwide": 78.9,
-      "status": "playing"
-    },
-    {
       "id": "garividi-lakshmi",
       "title": "Garividi Lakshmi",
-      "indiaNet": 0.16,
-      "worldwide": 0.16,
-      "status": "playing"
-    },
-    {
-      "id": "418",
-      "title": "418",
-      "indiaNet": 0.16,
-      "worldwide": 0.16,
+      "indiaNet": 8.29,
+      "worldwide": 9.28,
       "status": "playing"
     },
     {
