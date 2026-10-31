@@ -18,7 +18,7 @@ import { randomBytes } from "node:crypto";
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const outDir = join(root, "docs");
 const SITE = "https://indian-boxoffice.com";
-const ASSET_VER = "20261004a";
+const ASSET_VER = "20261031a";
 const ADSENSE_CLIENT = "ca-pub-3635078997966836";
 const ADSENSE_SCRIPT = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>`;
 
@@ -1139,6 +1139,21 @@ function prerenderHomepage(pack: Pack) {
   html = replaceInnerById(html, "now-grid", now.map((m) => cardHtml(m, deskDate)).join("\n") || `<p class="meta">No live titles.</p>`);
   html = replaceInnerById(html, "late-grid", late.map((m) => cardHtml(m, deskDate)).join("\n") || `<p class="meta">No late-run titles.</p>`);
   html = replaceInnerById(html, "rank-body", rankingsRows(ranked));
+
+  const stamp = pack.generatedAt
+    ? `Last updated ${new Date(pack.generatedAt).toLocaleString("en-GB", {
+        timeZone: "Asia/Kolkata",
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      })} IST${pack.comparedTo ? ` · vs ${pack.comparedTo}` : ""}`
+    : `Desk date ${deskDate}`;
+  html = html.replace(
+    /(<p class="updated" id="updated-line">)[\s\S]*?(<\/p>)/i,
+    `$1${stamp}$2`,
+  );
 
   // Bump stylesheet cache + ensure RSS link + feed discovery
   html = html.replace(/styles\.css\?v=[^"]+/g, `styles.css?v=${ASSET_VER}`);
