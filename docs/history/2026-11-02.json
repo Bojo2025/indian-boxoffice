@@ -1,6 +1,6 @@
 {
   "date": "2026-11-02",
-  "generatedAt": "2026-11-02T00:26:09.852Z",
+  "generatedAt": "2026-11-02T10:44:49.126Z",
   "films": [
     {
       "id": "toxic",
@@ -258,7 +258,7 @@
       "id": "ranabaali",
       "title": "Ranabaali",
       "indiaNet": 58.65,
-      "worldwide": 79.15,
+      "worldwide": 80.03,
       "status": "playing"
     },
     {
