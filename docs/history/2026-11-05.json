@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "generatedAt": "2026-11-04T19:33:15.527Z",
+  "generatedAt": "2026-11-05T01:24:26.565Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 342.64,
-      "worldwide": 453.09,
+      "indiaNet": 342.84,
+      "worldwide": 453.2,
       "status": "late"
     },
     {
@@ -82,15 +82,15 @@
     {
       "id": "mirzapur-the-movie",
       "title": "Mirzapur: The Movie",
-      "indiaNet": 230.63,
-      "worldwide": 339.9,
+      "indiaNet": 230.64,
+      "worldwide": 339.91,
       "status": "playing"
     },
     {
       "id": "spider-man-bnd",
       "title": "Spider-Man: Brand New Day",
-      "indiaNet": 500.98,
-      "worldwide": 599.24,
+      "indiaNet": 501.04,
+      "worldwide": 599.27,
       "status": "late"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 196.79,
-      "worldwide": 234.36,
+      "indiaNet": 196.81,
+      "worldwide": 234.38,
       "status": "late"
     },
     {
@@ -234,10 +234,24 @@
       "status": "playing"
     },
     {
+      "id": "pyre",
+      "title": "Pyre",
+      "indiaNet": 0.2,
+      "worldwide": 0.2,
+      "status": "playing"
+    },
+    {
       "id": "prahaar-the-ujjwal-nikam-story",
       "title": "Prahaar - The Ujjwal Nikam Story",
       "indiaNet": 23.97,
       "worldwide": 30.81,
+      "status": "playing"
+    },
+    {
+      "id": "clayface",
+      "title": "Clayface",
+      "indiaNet": 0.16,
+      "worldwide": 0.16,
       "status": "playing"
     },
     {
@@ -255,10 +269,115 @@
       "status": "playing"
     },
     {
+      "id": "doraemon-castle-of-the-undersea-devil-4dx",
+      "title": "Doraemon: Castle of the Undersea Devil (4DX)",
+      "indiaNet": 24.35,
+      "worldwide": 28.47,
+      "status": "playing"
+    },
+    {
+      "id": "bohurupi-the-golden-daku",
+      "title": "Bohurupi: The Golden Daku",
+      "indiaNet": 0.08,
+      "worldwide": 0.08,
+      "status": "playing"
+    },
+    {
       "id": "418",
       "title": "418",
       "indiaNet": 0.08,
       "worldwide": 0.08,
+      "status": "playing"
+    },
+    {
+      "id": "desu7",
+      "title": "DeSu7",
+      "indiaNet": 6.46,
+      "worldwide": 7.47,
+      "status": "playing"
+    },
+    {
+      "id": "street-fighter",
+      "title": "Street Fighter",
+      "indiaNet": 8.26,
+      "worldwide": 9.59,
+      "status": "playing"
+    },
+    {
+      "id": "the-eken-kerala-e-kurukshetra",
+      "title": "The Eken: Kerala-e-Kurukshetra",
+      "indiaNet": 8.37,
+      "worldwide": 9.55,
+      "status": "playing"
+    },
+    {
+      "id": "garividi-lakshmi",
+      "title": "Garividi Lakshmi",
+      "indiaNet": 8.92,
+      "worldwide": 10.12,
+      "status": "playing"
+    },
+    {
+      "id": "titans",
+      "title": "Titans",
+      "indiaNet": 3.25,
+      "worldwide": 3.67,
+      "status": "playing"
+    },
+    {
+      "id": "singgaramm",
+      "title": "Singgaramm",
+      "indiaNet": 0.05,
+      "worldwide": 0.05,
+      "status": "playing"
+    },
+    {
+      "id": "sense-and-sensibility",
+      "title": "Sense and Sensibility",
+      "indiaNet": 0.05,
+      "worldwide": 0.05,
+      "status": "playing"
+    },
+    {
+      "id": "enemy-of-the-smuggler",
+      "title": "Enemy Of The Smuggler",
+      "indiaNet": 0.05,
+      "worldwide": 0.05,
+      "status": "playing"
+    },
+    {
+      "id": "haiku",
+      "title": "Haiku",
+      "indiaNet": 2.32,
+      "worldwide": 2.58,
+      "status": "playing"
+    },
+    {
+      "id": "wicker",
+      "title": "Wicker",
+      "indiaNet": 0.04,
+      "worldwide": 0.04,
+      "status": "playing"
+    },
+    {
+      "id": "avengers-endgame-encore",
+      "title": "Avengers Endgame: Encore",
+      "indiaNet": 37.95,
+      "worldwide": 44.88,
+      "status": "playing"
+    },
+    {
+      "id": "resident-evil",
+      "title": "Resident Evil",
+      "indiaNet": 21.41,
+      "worldwide": 25.01,
+      "status": "playing"
+    },
+    {
+      "id": "baththa",
+      "title": "Baththa",
+      "indiaNet": 30.32,
+      "worldwide": 34.98,
       "status": "playing"
     }
   ]
