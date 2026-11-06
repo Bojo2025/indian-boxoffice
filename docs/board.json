@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T01:26:51.187Z",
+  "generatedAt": "2026-11-06T10:35:48.806Z",
   "deskDate": "2026-11-06",
   "comparedTo": "2026-11-06 prior",
   "mode": "server-consensus",
@@ -12,10 +12,10 @@
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 164)",
-      "koimoi has failed 164 consecutive publishes",
-      "boi failed: HTTP 403 (streak 25)",
-      "boi has failed 25 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 165)",
+      "koimoi has failed 165 consecutive publishes",
+      "boi failed: HTTP 403 (streak 26)",
+      "boi has failed 26 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
@@ -25,7 +25,7 @@
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 164,
+        "streakFail": 165,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@
       },
       "boi": {
         "ok": false,
-        "streakFail": 25,
+        "streakFail": 26,
         "detail": "HTTP 403"
       }
     }
@@ -3574,7 +3574,7 @@
         "wikipedia"
       ],
       "deltaNet": 0,
-      "deltaWw": 0.01,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-07",
@@ -7559,8 +7559,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.02,
-      "deltaWw": 0.01,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-07-17",
@@ -12458,8 +12458,8 @@
         "sacnilk",
         "hungama"
       ],
-      "deltaNet": 0.1,
-      "deltaWw": 0.06,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-02",
@@ -13552,8 +13552,8 @@
       "lastDayNet": 0.01,
       "trackedThroughDay": 141,
       "liveSources": [
-        "sacnilk",
-        "hungama"
+        "hungama",
+        "sacnilk"
       ],
       "deltaNet": 0,
       "deltaWw": 0,
@@ -14315,7 +14315,7 @@
       "poster": "./posters/hero-cinema.jpg",
       "indiaNet": 129.7,
       "indiaGross": 77.5,
-      "overseas": 0,
+      "overseas": 50,
       "worldwide": 129.7,
       "lastDayNet": 64.85,
       "trackedThroughDay": 1,
@@ -14357,15 +14357,15 @@
       "poster": "./posters/hero-cinema.jpg",
       "indiaNet": 42.8,
       "indiaGross": 48.2,
-      "overseas": 15.75,
-      "worldwide": 63.95,
+      "overseas": 16,
+      "worldwide": 64.2,
       "lastDayNet": 1.65,
       "trackedThroughDay": 7,
       "liveSources": [
         "sacnilk"
       ],
       "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaWw": 0.25,
       "dayWise": [
         {
           "reportDate": "2026-10-31",
@@ -14772,8 +14772,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-09-26",
@@ -15306,8 +15306,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-24",
@@ -15504,8 +15504,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-17",
@@ -15900,8 +15900,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-06",
@@ -15942,8 +15942,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-06",
@@ -15984,8 +15984,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-18",
@@ -16254,8 +16254,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-06",
@@ -16296,8 +16296,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-03",
@@ -16746,8 +16746,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-06",
@@ -16788,8 +16788,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-02",
@@ -17250,8 +17250,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-16",
@@ -17544,8 +17544,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-23",
@@ -17754,8 +17754,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-06",
@@ -17796,8 +17796,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-17",
@@ -18078,8 +18078,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-17",
@@ -18360,8 +18360,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-09-26",
@@ -18894,8 +18894,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-03",
@@ -19344,8 +19344,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-09-26",
@@ -19878,8 +19878,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-03",
@@ -20328,8 +20328,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-03",
@@ -20778,8 +20778,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-06",
@@ -20820,8 +20820,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-06",
@@ -20862,8 +20862,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-06",
@@ -20904,8 +20904,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-24",
@@ -21106,14 +21106,14 @@
       "detail": "Fetched 1 page (headlines / status)"
     },
     {
-      "sourceId": "koimoi",
-      "status": "blocked",
-      "detail": "HTTP 403"
-    },
-    {
       "sourceId": "express",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
+    },
+    {
+      "sourceId": "koimoi",
+      "status": "blocked",
+      "detail": "HTTP 403"
     },
     {
       "sourceId": "boi",
@@ -21124,115 +21124,115 @@
   "headlines": [
     {
       "sourceId": "sacnilk",
+      "title": "Mirzapur: The Movie: Sacnilk 61 days, India net ₹230.64 Cr",
+      "url": "https://www.sacnilk.com/news/mirzapur_the_movie_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-06T10:35:08.362Z",
+      "summary": "Live day-wise pull. Last day 62. WW ₹339.91 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
       "title": "Ramayana: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/ramayana_part_1_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-06T01:26:04.146Z",
+      "publishedAt": "2026-11-06T10:35:08.370Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹64.85 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Hanuman Ansh: Sacnilk 89 days, India net ₹342.74 Cr",
-      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-06T01:26:04.319Z",
-      "summary": "Live day-wise pull. Last day 90. WW ₹453.21 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Premada Oorali: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/premada_oorali_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-06T01:26:04.412Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.29 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Jailer 2: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/jailer_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-06T01:26:04.425Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹1.6 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Drishyam 3: The Conclusion: Sacnilk 35 days, India net ₹379.25 Cr",
       "url": "https://www.sacnilk.com/news/drishyam_3_hindi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-06T01:26:04.556Z",
+      "publishedAt": "2026-11-06T10:35:08.443Z",
       "summary": "Live day-wise pull. Last day 35. WW ₹587.36 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Mirzapur: The Movie: Sacnilk 61 days, India net ₹230.64 Cr",
-      "url": "https://www.sacnilk.com/news/mirzapur_the_movie_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-06T01:26:04.665Z",
-      "summary": "Live day-wise pull. Last day 62. WW ₹339.91 Cr."
+      "title": "Hanuman Ansh: Sacnilk 89 days, India net ₹342.74 Cr",
+      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-06T10:35:08.557Z",
+      "summary": "Live day-wise pull. Last day 90. WW ₹453.21 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Udta Teer: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/udta_teer_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-06T01:26:04.676Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.21 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Ranabaali: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/ranabaali_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-06T01:26:04.712Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.12 Cr."
+      "title": "Jailer 2: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/jailer_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-06T10:35:08.692Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹1.6 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Aadarsha Kutumbam House No: 47: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/aadarsha_kutumbam_house_no_47_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-06T01:26:04.841Z",
+      "publishedAt": "2026-11-06T10:35:08.781Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹1.65 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Cult: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/cult_telugu_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-06T01:26:04.884Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.11 Cr."
+      "title": "Premada Oorali: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/premada_oorali_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-06T10:35:08.978Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.29 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Toxic: Sacnilk 36 days, India net ₹250.13 Cr",
       "url": "https://www.sacnilk.com/news/toxic_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-06T01:26:04.926Z",
+      "publishedAt": "2026-11-06T10:35:09.193Z",
       "summary": "Live day-wise pull. Last day 37. WW ₹342.26 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Ranabaali: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/ranabaali_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-06T10:35:09.332Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.12 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Sardar 2: Sacnilk 21 days, India net ₹16.33 Cr",
       "url": "https://www.sacnilk.com/news/sardar_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-06T01:26:05.105Z",
+      "publishedAt": "2026-11-06T10:35:09.368Z",
       "summary": "Live day-wise pull. Last day 22. WW ₹23.88 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Irumudi: Sacnilk 69 days, India net ₹194.54 Cr",
-      "url": "https://www.sacnilk.com/news/irumudi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-06T01:26:05.589Z",
-      "summary": "Live day-wise pull. Last day 70. WW ₹246.87 Cr."
+      "title": "Udta Teer: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/udta_teer_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-06T10:35:09.398Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.21 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Garividi Lakshmi: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/garividi_lakshmi_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-06T01:26:05.600Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.05 Cr."
+      "title": "Cult: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/cult_telugu_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-06T10:35:09.495Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.11 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Awarapan 2: Sacnilk 46 days, India net ₹150.63 Cr",
       "url": "https://www.sacnilk.com/news/awarapan_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-06T01:26:05.692Z",
+      "publishedAt": "2026-11-06T10:35:09.948Z",
       "summary": "Live day-wise pull. Last day 82. WW ₹213.05 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr",
-      "url": "https://www.sacnilk.com/news/border_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-06T01:26:16.386Z",
-      "summary": "Live day-wise pull. Last day 58. WW ₹450.19 Cr."
+      "title": "Garividi Lakshmi: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/garividi_lakshmi_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-06T10:35:10.017Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.05 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Irumudi: Sacnilk 69 days, India net ₹194.54 Cr",
+      "url": "https://www.sacnilk.com/news/irumudi_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-06T10:35:10.148Z",
+      "summary": "Live day-wise pull. Last day 70. WW ₹246.87 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Doraemon: Castle of the Undersea Devil (4DX): Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/doraemon_castle_of_the_undersea_devil_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-06T10:35:20.063Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.03 Cr."
     }
   ],
   "morningBrief": {

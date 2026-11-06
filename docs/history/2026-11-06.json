@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "generatedAt": "2026-11-06T01:26:51.187Z",
+  "generatedAt": "2026-11-06T10:35:48.806Z",
   "films": [
     {
       "id": "toxic",
@@ -202,7 +202,7 @@
       "id": "aadarsha-kutumbam-house-no-47",
       "title": "Aadarsha Kutumbam House No: 47",
       "indiaNet": 42.8,
-      "worldwide": 63.95,
+      "worldwide": 64.2,
       "status": "playing"
     },
     {
