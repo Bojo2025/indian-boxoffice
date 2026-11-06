@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "generatedAt": "2026-11-06T10:35:48.806Z",
+  "generatedAt": "2026-11-06T11:40:37.045Z",
   "films": [
     {
       "id": "toxic",
@@ -13,7 +13,7 @@
       "id": "awarapan-2",
       "title": "Awarapan 2",
       "indiaNet": 150.63,
-      "worldwide": 210.26,
+      "worldwide": 213.05,
       "status": "playing"
     },
     {
@@ -76,7 +76,7 @@
       "id": "haiwaan",
       "title": "Haiwaan",
       "indiaNet": 8.71,
-      "worldwide": 11.52,
+      "worldwide": 13.71,
       "status": "playing"
     },
     {
