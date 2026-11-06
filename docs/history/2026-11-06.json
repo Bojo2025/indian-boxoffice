@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "generatedAt": "2026-11-05T19:43:31.552Z",
+  "generatedAt": "2026-11-06T01:26:51.187Z",
   "films": [
     {
       "id": "toxic",
@@ -62,7 +62,7 @@
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
       "indiaNet": 342.74,
-      "worldwide": 453.2,
+      "worldwide": 453.21,
       "status": "late"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 196.81,
-      "worldwide": 234.38,
+      "indiaNet": 196.83,
+      "worldwide": 234.39,
       "status": "late"
     },
     {
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 379.2,
-      "worldwide": 587.3,
+      "indiaNet": 379.3,
+      "worldwide": 587.36,
       "status": "playing"
     },
     {
@@ -213,10 +213,178 @@
       "status": "playing"
     },
     {
+      "id": "premada-oorali",
+      "title": "Premada Oorali",
+      "indiaNet": 113.2,
+      "worldwide": 135.65,
+      "status": "playing"
+    },
+    {
+      "id": "udta-teer",
+      "title": "Udta Teer",
+      "indiaNet": 46.67,
+      "worldwide": 67.3,
+      "status": "playing"
+    },
+    {
+      "id": "ranabaali",
+      "title": "Ranabaali",
+      "indiaNet": 59.1,
+      "worldwide": 80.59,
+      "status": "playing"
+    },
+    {
       "id": "cult",
       "title": "Cult",
       "indiaNet": 5.06,
       "worldwide": 5.73,
+      "status": "playing"
+    },
+    {
+      "id": "418",
+      "title": "418",
+      "indiaNet": 0.1,
+      "worldwide": 0.1,
+      "status": "playing"
+    },
+    {
+      "id": "pyre",
+      "title": "Pyre",
+      "indiaNet": 0.06,
+      "worldwide": 0.06,
+      "status": "playing"
+    },
+    {
+      "id": "garividi-lakshmi",
+      "title": "Garividi Lakshmi",
+      "indiaNet": 8.97,
+      "worldwide": 10.18,
+      "status": "playing"
+    },
+    {
+      "id": "enemy-of-the-smuggler",
+      "title": "Enemy Of The Smuggler",
+      "indiaNet": 0.05,
+      "worldwide": 0.05,
+      "status": "playing"
+    },
+    {
+      "id": "doraemon-castle-of-the-undersea-devil-4dx",
+      "title": "Doraemon: Castle of the Undersea Devil (4DX)",
+      "indiaNet": 24.33,
+      "worldwide": 28.5,
+      "status": "playing"
+    },
+    {
+      "id": "bohurupi-the-golden-daku",
+      "title": "Bohurupi: The Golden Daku",
+      "indiaNet": 0.03,
+      "worldwide": 0.03,
+      "status": "playing"
+    },
+    {
+      "id": "baththa",
+      "title": "Baththa",
+      "indiaNet": 30.33,
+      "worldwide": 35,
+      "status": "playing"
+    },
+    {
+      "id": "the-eken-kerala-e-kurukshetra",
+      "title": "The Eken: Kerala-e-Kurukshetra",
+      "indiaNet": 8.36,
+      "worldwide": 9.57,
+      "status": "playing"
+    },
+    {
+      "id": "titans",
+      "title": "Titans",
+      "indiaNet": 3.24,
+      "worldwide": 3.69,
+      "status": "playing"
+    },
+    {
+      "id": "clayface",
+      "title": "Clayface",
+      "indiaNet": 0.02,
+      "worldwide": 0.02,
+      "status": "playing"
+    },
+    {
+      "id": "desu7",
+      "title": "DeSu7",
+      "indiaNet": 6.42,
+      "worldwide": 7.48,
+      "status": "playing"
+    },
+    {
+      "id": "prahaar-the-ujjwal-nikam-story",
+      "title": "Prahaar - The Ujjwal Nikam Story",
+      "indiaNet": 23.83,
+      "worldwide": 30.83,
+      "status": "playing"
+    },
+    {
+      "id": "dorothy",
+      "title": "Dorothy",
+      "indiaNet": 15.97,
+      "worldwide": 18.45,
+      "status": "playing"
+    },
+    {
+      "id": "anbil-avan",
+      "title": "Anbil Avan",
+      "indiaNet": 7.89,
+      "worldwide": 9.05,
+      "status": "playing"
+    },
+    {
+      "id": "heart-of-the-beast",
+      "title": "Heart of the Beast",
+      "indiaNet": 14.29,
+      "worldwide": 16.48,
+      "status": "playing"
+    },
+    {
+      "id": "verity",
+      "title": "Verity",
+      "indiaNet": 10.89,
+      "worldwide": 12.28,
+      "status": "playing"
+    },
+    {
+      "id": "avaraachan-sons",
+      "title": "Avaraachan & Sons",
+      "indiaNet": 6.72,
+      "worldwide": 7.71,
+      "status": "playing"
+    },
+    {
+      "id": "emperor-vs-sarat-chandra",
+      "title": "Emperor vs Sarat Chandra",
+      "indiaNet": 0.01,
+      "worldwide": 0.01,
+      "status": "playing"
+    },
+    {
+      "id": "drones",
+      "title": "Drones",
+      "indiaNet": 0.01,
+      "worldwide": 0.01,
+      "status": "playing"
+    },
+    {
+      "id": "orijinal",
+      "title": "Orijinal",
+      "indiaNet": 0.01,
+      "worldwide": 0.01,
+      "status": "playing"
+    },
+    {
+      "id": "haiku",
+      "title": "Haiku",
+      "indiaNet": 2.3,
+      "worldwide": 2.59,
       "status": "playing"
     }
   ]
