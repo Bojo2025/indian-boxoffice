@@ -1,6 +1,6 @@
 {
   "date": "2026-11-07",
-  "generatedAt": "2026-11-06T19:05:42.493Z",
+  "generatedAt": "2026-11-07T00:44:27.595Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 342.74,
-      "worldwide": 453.21,
+      "indiaNet": 342.76,
+      "worldwide": 453.22,
       "status": "late"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 196.82,
-      "worldwide": 234.39,
+      "indiaNet": 196.84,
+      "worldwide": 234.4,
       "status": "late"
     },
     {
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 379.25,
-      "worldwide": 587.36,
+      "indiaNet": 379.35,
+      "worldwide": 587.42,
       "status": "playing"
     },
     {
@@ -231,6 +231,153 @@
       "title": "Disco",
       "indiaNet": 0.6,
       "worldwide": 0.6,
+      "status": "playing"
+    },
+    {
+      "id": "premada-oorali",
+      "title": "Premada Oorali",
+      "indiaNet": 113.37,
+      "worldwide": 135.91,
+      "status": "playing"
+    },
+    {
+      "id": "udta-teer",
+      "title": "Udta Teer",
+      "indiaNet": 46.78,
+      "worldwide": 67.55,
+      "status": "playing"
+    },
+    {
+      "id": "summer-holidays",
+      "title": "Summer Holidays",
+      "indiaNet": 0.16,
+      "worldwide": 0.16,
+      "status": "playing"
+    },
+    {
+      "id": "the-cat-in-the-hat",
+      "title": "The Cat in the Hat",
+      "indiaNet": 0.13,
+      "worldwide": 0.13,
+      "status": "playing"
+    },
+    {
+      "id": "pyre",
+      "title": "Pyre",
+      "indiaNet": 0.06,
+      "worldwide": 0.06,
+      "status": "playing"
+    },
+    {
+      "id": "cult",
+      "title": "Cult",
+      "indiaNet": 5.05,
+      "worldwide": 5.78,
+      "status": "playing"
+    },
+    {
+      "id": "garividi-lakshmi",
+      "title": "Garividi Lakshmi",
+      "indiaNet": 9,
+      "worldwide": 10.23,
+      "status": "playing"
+    },
+    {
+      "id": "doraemon-castle-of-the-undersea-devil-4dx",
+      "title": "Doraemon: Castle of the Undersea Devil (4DX)",
+      "indiaNet": 24.36,
+      "worldwide": 28.53,
+      "status": "playing"
+    },
+    {
+      "id": "bhai-beej",
+      "title": "Bhai Beej",
+      "indiaNet": 0.03,
+      "worldwide": 0.03,
+      "status": "playing"
+    },
+    {
+      "id": "bohurupi-the-golden-daku",
+      "title": "Bohurupi: The Golden Daku",
+      "indiaNet": 0.02,
+      "worldwide": 0.02,
+      "status": "playing"
+    },
+    {
+      "id": "the-eken-kerala-e-kurukshetra",
+      "title": "The Eken: Kerala-e-Kurukshetra",
+      "indiaNet": 8.38,
+      "worldwide": 9.59,
+      "status": "playing"
+    },
+    {
+      "id": "clayface",
+      "title": "Clayface",
+      "indiaNet": 0.02,
+      "worldwide": 0.02,
+      "status": "playing"
+    },
+    {
+      "id": "desu7",
+      "title": "DeSu7",
+      "indiaNet": 6.43,
+      "worldwide": 7.49,
+      "status": "playing"
+    },
+    {
+      "id": "prahaar-the-ujjwal-nikam-story",
+      "title": "Prahaar - The Ujjwal Nikam Story",
+      "indiaNet": 23.84,
+      "worldwide": 30.85,
+      "status": "playing"
+    },
+    {
+      "id": "anbil-avan",
+      "title": "Anbil Avan",
+      "indiaNet": 7.9,
+      "worldwide": 9.06,
+      "status": "playing"
+    },
+    {
+      "id": "heart-of-the-beast",
+      "title": "Heart of the Beast",
+      "indiaNet": 14.3,
+      "worldwide": 16.49,
+      "status": "playing"
+    },
+    {
+      "id": "baththa",
+      "title": "Baththa",
+      "indiaNet": 30.33,
+      "worldwide": 35.01,
+      "status": "playing"
+    },
+    {
+      "id": "ranabaali",
+      "title": "Ranabaali",
+      "indiaNet": 59,
+      "worldwide": 80.6,
+      "status": "playing"
+    },
+    {
+      "id": "418",
+      "title": "418",
+      "indiaNet": 0.01,
+      "worldwide": 0.01,
+      "status": "playing"
+    },
+    {
+      "id": "orijinal",
+      "title": "Orijinal",
+      "indiaNet": 0.01,
+      "worldwide": 0.01,
+      "status": "playing"
+    },
+    {
+      "id": "bana",
+      "title": "Bana",
+      "indiaNet": 0.01,
+      "worldwide": 0.01,
       "status": "playing"
     }
   ]
