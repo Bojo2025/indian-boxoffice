@@ -1,6 +1,6 @@
 {
   "date": "2026-11-08",
-  "generatedAt": "2026-11-07T21:38:21.050Z",
+  "generatedAt": "2026-11-08T05:15:45.179Z",
   "films": [
     {
       "id": "toxic",
@@ -201,8 +201,8 @@
     {
       "id": "scene",
       "title": "Scene",
-      "indiaNet": 59.65,
-      "worldwide": 81.5,
+      "indiaNet": 59.85,
+      "worldwide": 81.65,
       "status": "playing"
     },
     {
