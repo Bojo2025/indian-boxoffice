@@ -25,7 +25,25 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://indian-boxoffice.com/about/</loc>
+    <lastmod>2026-11-09T00:39:29.612Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://indian-boxoffice.com/about-methodology/</loc>
+    <lastmod>2026-11-09T00:39:29.612Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://indian-boxoffice.com/editorial-policy/</loc>
+    <lastmod>2026-11-09T00:39:29.612Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://indian-boxoffice.com/contact/</loc>
     <lastmod>2026-11-09T00:39:29.612Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +58,13 @@
     <loc>https://indian-boxoffice.com/brief/</loc>
     <lastmod>2026-11-09T00:39:29.612Z</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://indian-boxoffice.com/briefs/</loc>
+    <lastmod>2026-11-09T00:39:29.612Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://indian-boxoffice.com/feed.xml</loc>
@@ -401,6 +425,12 @@
     <lastmod>2026-11-09T00:39:29.612Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://indian-boxoffice.com/briefs/2026-11-09/</loc>
+    <lastmod>2026-11-09T00:39:29.612Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://indian-boxoffice.com/briefs/2026-11-08/</loc>
