@@ -28,18 +28,22 @@ function syncPosters() {
   }
 }
 
-function posterFor(posterKey: string): { posterKey: string; poster: string } {
-  const jpg = join(postersOut, `${posterKey}.jpg`);
-  const jpeg = join(postersOut, `${posterKey}.jpeg`);
-  const png = join(postersOut, `${posterKey}.png`);
-  const webp = join(postersOut, `${posterKey}.webp`);
-  const svg = join(postersOut, `${posterKey}.svg`);
-  if (existsSync(jpg)) return { posterKey, poster: `./posters/${posterKey}.jpg` };
-  if (existsSync(jpeg)) return { posterKey, poster: `./posters/${posterKey}.jpeg` };
-  if (existsSync(png)) return { posterKey, poster: `./posters/${posterKey}.png` };
-  if (existsSync(webp)) return { posterKey, poster: `./posters/${posterKey}.webp` };
-  if (existsSync(svg)) return { posterKey, poster: `./posters/${posterKey}.svg` };
-  return { posterKey, poster: "./posters/hero-cinema.jpg" };
+function posterFile(posterKey: string): string | null {
+  for (const ext of ["jpg", "jpeg", "png", "webp", "svg"] as const) {
+    if (existsSync(join(postersOut, `${posterKey}.${ext}`))) return `./posters/${posterKey}.${ext}`;
+  }
+  return null;
+}
+
+function posterFor(posterKey: string, filmId?: string): { posterKey: string; poster: string } {
+  const keys = [posterKey, filmId].filter(
+    (k): k is string => Boolean(k) && k !== "hero-cinema",
+  );
+  for (const key of keys) {
+    const path = posterFile(key);
+    if (path) return { posterKey: key, poster: path };
+  }
+  return { posterKey: posterKey || filmId || "hero-cinema", poster: "./posters/hero-cinema.jpg" };
 }
 
 syncPosters();
@@ -339,7 +343,7 @@ const films: FilmCard[] = movieCatalog.map((m) => {
   const prev = priorMap.get(m.id);
   const deltaNet = prev ? round2(indiaNet - prev.indiaNet) : null;
   const deltaWw = prev ? round2(worldwide - prev.worldwide) : null;
-  const art = posterFor(m.posterKey || m.id);
+  const art = posterFor(m.posterKey || m.id, m.id);
   const dayWise = buildConsensus(
     rows.filter((r) => !r.note.startsWith("lifetime") && r.reportDate < "2099-01-01"),
     weights,
