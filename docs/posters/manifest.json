@@ -1,180 +1,230 @@
 {
-  "fetchedAt": "2026-09-08T08:13:23.469Z",
+  "fetchedAt": "2026-11-09T08:14:25.477Z",
+  "maxEdgePx": 336,
   "results": [
     {
-      "id": "toxic",
-      "key": "toxic",
-      "source": "hungama",
+      "id": "sardar-2",
+      "key": "sardar-2",
+      "source": "sacnilk-news",
       "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2025/01/Toxic-12.jpg"
+      "detail": "https://cdn.sacnilk.com/image/news/1000027230.jpg"
     },
     {
-      "id": "awarapan-2",
-      "key": "awarapan-2",
-      "source": "hungama",
+      "id": "haiwaan",
+      "key": "haiwaan",
+      "source": "sacnilk-news",
       "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2025/03/Awarapan-2.jpg"
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/12344.jpg"
     },
     {
-      "id": "border-2",
-      "key": "border-2",
-      "source": "hungama",
+      "id": "mirzapur-the-movie",
+      "key": "mirzapur-the-movie",
+      "source": "sacnilk-news",
       "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2024/05/Border2.jpg"
-    },
-    {
-      "id": "dhurandhar",
-      "key": "dhurandhar",
-      "source": "hungama",
-      "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/03/Dhurandhar-The-Revenge-3.jpeg"
-    },
-    {
-      "id": "dhamaal-4",
-      "key": "dhamaal-4",
-      "source": "hungama",
-      "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2025/03/Dhamaal-4-poster.jpeg"
-    },
-    {
-      "id": "batwara-1947",
-      "key": "batwara",
-      "source": "hungama",
-      "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2023/10/Batwara1947.jpeg"
-    },
-    {
-      "id": "welcome-jungle",
-      "key": "welcome-jungle",
-      "source": "hungama",
-      "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2021/12/Welcome-To-The-Jungle-poster-2026.jpeg"
-    },
-    {
-      "id": "cocktail-2",
-      "key": "cocktail-2",
-      "source": "hungama",
-      "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2025/09/Cocktail2.jpg"
-    },
-    {
-      "id": "alpha",
-      "key": "alpha",
-      "source": "hungama",
-      "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/07/Alpha-13.jpeg"
-    },
-    {
-      "id": "bhooth-bangla",
-      "key": "bhooth-bangla",
-      "source": "hungama",
-      "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/04/Bhooth-Bangla1-1.jpeg"
-    },
-    {
-      "id": "peddi",
-      "key": "peddi",
-      "source": "hungama",
-      "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/02/Peddi-2-1.jpg"
-    },
-    {
-      "id": "hanuman-ansh",
-      "key": "hanuman-ansh",
-      "source": "hungama",
-      "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/08/Hanuman-Ansh.jpg"
-    },
-    {
-      "id": "spider-man-bnd",
-      "key": "spider-man-bnd",
-      "source": "hungama",
-      "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2025/08/Spider-Man-Brand-New-Day-2025.jpg"
-    },
-    {
-      "id": "the-odyssey",
-      "key": "the-odyssey",
-      "source": "hungama",
-      "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/07/The-Odyssey-English-POSTER.jpg"
-    },
-    {
-      "id": "insidious-further",
-      "key": "insidious-further",
-      "source": "hungama",
-      "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2025/08/INSIDIOUS.jpg"
-    },
-    {
-      "id": "jana-nayagan",
-      "key": "jana-nayagan",
-      "source": "hungama",
-      "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/01/Jan-Neta-poster.jpeg"
-    },
-    {
-      "id": "karuppu",
-      "key": "karuppu",
-      "source": "hungama",
-      "ok": false,
-      "detail": "HTTP 404"
+      "detail": "https://cdn.sacnilk.com/image/news/1000027019.jpg"
     },
     {
       "id": "msvpg",
       "key": "msvpg",
-      "source": "hungama",
+      "source": "none",
       "ok": false,
       "detail": "HTTP 404"
-    },
-    {
-      "id": "drishyam-3",
-      "key": "drishyam-3",
-      "source": "hungama",
-      "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/09/Drishyam-–-The-Conclusion-001.jpeg"
     },
     {
       "id": "vaazha-ii",
       "key": "vaazha-ii",
-      "source": "hungama",
+      "source": "none",
       "ok": false,
       "detail": "HTTP 404"
     },
     {
-      "id": "paw-patrol-dino",
-      "key": "paw-patrol-dino",
-      "source": "hungama",
+      "id": "ramayana",
+      "key": "ramayana",
+      "source": "sacnilk-movie",
       "ok": true,
-      "detail": "https://www.bollywoodhungama.com/wp-content/uploads/2026/01/PAW.jpg"
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/9986.jpg"
     },
     {
-      "id": "irumudi",
-      "key": "irumudi",
-      "source": "sacnilk",
+      "id": "scene",
+      "key": "scene",
+      "source": "sacnilk-movie",
       "ok": true,
-      "detail": "https://cdn.sacnilk.com/image/news/1000026812.jpg"
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14427.jpg"
     },
     {
-      "id": "hi",
-      "key": "hi",
-      "source": "sacnilk",
+      "id": "mookuthi-amman-2",
+      "key": "mookuthi-amman-2",
+      "source": "sacnilk-movie",
       "ok": true,
-      "detail": "https://cdn.sacnilk.com/image/news/1000026974.jpg"
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14538.jpg"
     },
     {
-      "id": "vishwanath-and-sons",
-      "key": "vishwanath",
-      "source": "sacnilk",
+      "id": "aadarsha-kutumbam-house-no-47",
+      "key": "aadarsha-kutumbam-house-no-47",
+      "source": "sacnilk-movie",
       "ok": true,
-      "detail": "https://cdn.sacnilk.com/image/news/1000026663.jpg"
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14351.jpg"
     },
     {
-      "id": "karuppu",
-      "key": "karuppu",
-      "source": "sacnilk",
+      "id": "jailer-2",
+      "key": "jailer-2",
+      "source": "sacnilk-movie",
       "ok": true,
-      "detail": "https://cdn.sacnilk.com/image/news/1000025690.jpg"
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/9463.jpg"
+    },
+    {
+      "id": "premada-oorali",
+      "key": "premada-oorali",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14186.jpg"
+    },
+    {
+      "id": "udta-teer",
+      "key": "udta-teer",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14312.jpg"
+    },
+    {
+      "id": "disco",
+      "key": "disco",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14540.jpg"
+    },
+    {
+      "id": "the-cat-in-the-hat",
+      "key": "the-cat-in-the-hat",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14536.jpg"
+    },
+    {
+      "id": "summer-holidays",
+      "key": "summer-holidays",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14539.jpg"
+    },
+    {
+      "id": "pyre",
+      "key": "pyre",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14371.jpg"
+    },
+    {
+      "id": "bohurupi-the-golden-daku",
+      "key": "bohurupi-the-golden-daku",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14285.jpg"
+    },
+    {
+      "id": "bhai-beej",
+      "key": "bhai-beej",
+      "source": "none",
+      "ok": false,
+      "detail": "download HTTP 404"
+    },
+    {
+      "id": "doraemon-castle-of-the-undersea-devil-4dx",
+      "key": "doraemon-castle-of-the-undersea-devil-4dx",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14229.jpg"
+    },
+    {
+      "id": "the-eken-kerala-e-kurukshetra",
+      "key": "the-eken-kerala-e-kurukshetra",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14286.jpg"
+    },
+    {
+      "id": "garividi-lakshmi",
+      "key": "garividi-lakshmi",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14292.jpg"
+    },
+    {
+      "id": "cult",
+      "key": "cult",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14423.jpg"
+    },
+    {
+      "id": "clayface",
+      "key": "clayface",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14310.jpg"
+    },
+    {
+      "id": "418",
+      "key": "418",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14313.jpg"
+    },
+    {
+      "id": "desu7",
+      "key": "desu7",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/13129.jpg"
+    },
+    {
+      "id": "prahaar-the-ujjwal-nikam-story",
+      "key": "prahaar-the-ujjwal-nikam-story",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/13850.jpg"
+    },
+    {
+      "id": "anbil-avan",
+      "key": "anbil-avan",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14188.jpg"
+    },
+    {
+      "id": "heart-of-the-beast",
+      "key": "heart-of-the-beast",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14191.jpg"
+    },
+    {
+      "id": "verity",
+      "key": "verity",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14223.jpg"
+    },
+    {
+      "id": "baththa",
+      "key": "baththa",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14224.jpg"
+    },
+    {
+      "id": "drones",
+      "key": "drones",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14288.jpg"
+    },
+    {
+      "id": "ranabaali",
+      "key": "ranabaali",
+      "source": "sacnilk-movie",
+      "ok": true,
+      "detail": "https://cdn.sacnilk.com/image/movie/2026/14289.jpg"
     }
   ]
 }

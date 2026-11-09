@@ -243,7 +243,7 @@ function parseSacnilkIndex(html: string): { movie: Movie; reading: Reading }[] {
       budgetCr: null,
       runtimeMin: null,
       synopsis: "Automatically discovered from Sacnilk's current theatrical board.",
-      posterKey: "hero-cinema",
+      posterKey: id,
       status: "playing",
       verdict: "Pending",
     };
@@ -304,7 +304,7 @@ function parseSacnilkIndex(html: string): { movie: Movie; reading: Reading }[] {
           budgetCr: null,
           runtimeMin: null,
           synopsis: "Automatically discovered from Sacnilk's current theatrical board.",
-          posterKey: "hero-cinema",
+          posterKey: id,
           status: "playing",
           verdict: "Pending",
         },
