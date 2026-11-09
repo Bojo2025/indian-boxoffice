@@ -18,9 +18,12 @@ import { randomBytes } from "node:crypto";
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const outDir = join(root, "docs");
 const SITE = "https://indian-boxoffice.com";
-const ASSET_VER = "20261031a";
+const ASSET_VER = "20261109a";
 const ADSENSE_CLIENT = "ca-pub-3635078997966836";
 const ADSENSE_SCRIPT = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>`;
+const DESK_EMAIL = "desk@indian-boxoffice.com";
+const PUBLISHER_NAME = "Kevin Boyjonauth";
+const GITHUB_REPO = "https://github.com/Bojo2025/indian-boxoffice";
 
 type DayWise = {
   reportDate: string;
@@ -282,9 +285,11 @@ function shell(opts: {
     <nav>
       <a href="/daily-box-office/">Daily chart</a>
       <a href="/brief/">Morning brief</a>
+      <a href="/briefs/">Brief archive</a>
       <a href="/rankings/2026/">2026 rankings</a>
-      <a href="/records/highest-day-1-collection-2026/">Day 1 records</a>
+      <a href="/about/">About</a>
       <a href="/about-methodology/">Methodology</a>
+      <a href="/contact/">Contact</a>
     </nav>
   </header>
   <main>
@@ -296,9 +301,13 @@ function shell(opts: {
       Independent consensus of published theatrical estimates. India has no official auditor — we publish the spread.
       Figures in ₹ crore. India nett / worldwide gross.
       · <a href="/daily-box-office/">Daily chart</a>
-      · <a href="/records/highest-day-1-collection-2026/">Day 1 records</a>
+      · <a href="/brief/">Morning brief</a>
+      · <a href="/briefs/">Brief archive</a>
       · <a href="/rankings/2026/">2026 rankings</a>
+      · <a href="/about/">About</a>
       · <a href="/about-methodology/">Methodology</a>
+      · <a href="/editorial-policy/">Editorial policy</a>
+      · <a href="/contact/">Contact</a>
       · <a href="/privacy-policy/">Privacy policy</a>
       · <a href="/feed.xml">RSS</a>
     </div>
@@ -310,6 +319,119 @@ function shell(opts: {
 
 function movieUrl(slug: string): string {
   return `${SITE}/movies/${slug}/`;
+}
+
+function isAutoSynopsis(synopsis: string | undefined): boolean {
+  const s = (synopsis || "").trim();
+  if (!s) return true;
+  return /automatically discovered/i.test(s) || s.length < 80;
+}
+
+function filmReadableSynopsis(film: Film): string {
+  if (!isAutoSynopsis(film.synopsis)) return film.synopsis;
+  const lang = film.language && film.language !== "Indian" ? film.language : film.industry || "Indian";
+  const days = film.dayWise?.length ?? film.trackedThroughDay ?? 0;
+  const dayBit =
+    days > 0
+      ? ` This page tracks ${days} reported theatrical day${days === 1 ? "" : "s"} with India nett and worldwide totals.`
+      : " Day-wise figures are added as soon as the desk receives a usable daily report.";
+  return `${film.title} is a ${lang} theatrical release (${formatReleaseDate(film.releaseDate)}) covered by the Indian Box Office consensus desk.${dayBit} Figures below are desk consensus estimates, not an official audit.`;
+}
+
+/** Original editorial narrative built from this film's own day-wise board — unique per title. */
+function filmRunAnalysisHtml(film: Film, deskDate: string): string {
+  const days = [...(film.dayWise ?? [])].sort((a, b) => a.dayNumber - b.dayNumber);
+  const milestones = computeDayMilestones(days);
+  const day1 = milestones.day1;
+  const last = days.length ? days[days.length - 1] : null;
+  const prior = days.length > 1 ? days[days.length - 2] : null;
+  const paragraphs: string[] = [];
+
+  paragraphs.push(
+    `This desk follows ${esc(film.title)} day by day from first reported theatrical day through the current run. ` +
+      `As of ${esc(deskDate)} (IST), consensus India nett stands at ${esc(formatCr(film.indiaNet))} with worldwide gross at ${esc(formatCr(film.worldwide))}. ` +
+      `The film is listed as ${esc(film.status)} with a working box office verdict of ${esc(film.verdict)}.`,
+  );
+
+  if (day1) {
+    paragraphs.push(
+      `Opening day (Day 1, ${esc(formatReleaseDate(day1.reportDate))}) came in at ${esc(formatCr(day1.indiaNet))} India nett` +
+        `${day1.occupancy != null ? ` with reported occupancy around ${esc(String(Math.round(day1.occupancy)))}%` : ""}. ` +
+        (milestones.weekendNet != null
+          ? `Opening weekend (Days 1–3) totals about ${esc(formatCr(milestones.weekendNet))} India nett on this board. `
+          : "") +
+        (milestones.week1Net != null && days.length >= 7
+          ? `Week 1 (Days 1–7) is tracked at roughly ${esc(formatCr(milestones.week1Net))} India nett.`
+          : days.length < 7
+            ? `The first week is still building; only ${days.length} day${days.length === 1 ? "" : "s"} are on the ledger so far.`
+            : ""),
+    );
+  } else {
+    paragraphs.push(
+      `A full Day 1 row is not yet on the board for ${esc(film.title)}. ` +
+        `When opening-day India nett lands, this page will show the Day 1 figure beside later daily movement so readers can judge the run without waiting for a lifetime-only total.`,
+    );
+  }
+
+  if (last && days.length >= 2) {
+    const change =
+      last.netChangePct != null
+        ? ` that is a ${esc(String(Math.round(last.netChangePct)))}% move versus the previous reported day`
+        : prior
+          ? ` compared with ${esc(formatCr(prior.indiaNet))} on Day ${prior.dayNumber}`
+          : "";
+    paragraphs.push(
+      `The latest reported day is Day ${last.dayNumber} (${esc(formatReleaseDate(last.reportDate))}) at ${esc(formatCr(last.indiaNet))} India nett${change}. ` +
+        `Readers should treat single-day swings carefully: weekday vs weekend mix, screen count, and holiday calendars all move the curve.`,
+    );
+  } else if (last) {
+    paragraphs.push(
+      `Only Day ${last.dayNumber} is on the ledger so far (${esc(formatCr(last.indiaNet))} India nett). ` +
+        `Early figures are the most volatile part of any theatrical run; this page will extend the day-wise table as later days clear.`,
+    );
+  }
+
+  const overseas =
+    film.worldwide != null && film.indiaGross != null
+      ? Math.max(0, film.worldwide - film.indiaGross)
+      : film.overseas;
+  if (film.worldwide > 0 && film.indiaNet > 0) {
+    const share =
+      film.worldwide > 0 ? Math.round((film.indiaNet / film.worldwide) * 1000) / 10 : null;
+    paragraphs.push(
+      `Domestic vs global: India nett ${esc(formatCr(film.indiaNet))} sits against worldwide gross ${esc(formatCr(film.worldwide))}` +
+        `${overseas != null && overseas > 0 ? `, with overseas gross near ${esc(formatCr(overseas))}` : ""}.` +
+        (share != null
+          ? ` India nett is about ${share}% of the worldwide gross figure on this desk (nett and gross are different bases, so treat the ratio as orientation, not a precise share of tickets).`
+          : ""),
+    );
+  }
+
+  if (film.budgetCr != null && film.budgetCr > 0) {
+    const multiple = film.indiaNet / film.budgetCr;
+    paragraphs.push(
+      `Against the published budget estimate of ${esc(formatCr(film.budgetCr))}, current India nett is roughly ${multiple.toFixed(2)}× budget on this board. ` +
+        `Verdict labels (${esc(film.verdict)}) are desk working labels from that relationship and the shape of the run — they are not studio marketing claims.`,
+    );
+  } else {
+    paragraphs.push(
+      `${esc(film.title)} does not yet carry a reliable public budget on this desk, so hit/flop language stays provisional. ` +
+        `We still publish day-wise India nett so readers can watch the theatrical curve independently of marketing narratives.`,
+    );
+  }
+
+  const lang = film.language && film.language !== "Indian" ? film.language : null;
+  paragraphs.push(
+    `${lang ? `As a ${esc(lang)} release` : "As a multi-industry theatrical title"}, ${esc(film.title)} is filed under ${esc(film.industry || "Indian cinema")} on the language hubs and daily chart. ` +
+      `Director credit on file: ${esc(film.director || "—")}. Cast listed: ${esc(film.starring || "—")}. ` +
+      `All money figures are consensus estimates in ₹ crore and will move when later daily reports land.`,
+  );
+
+  return `
+      <section class="seo-prose film-analysis" id="analysis">
+        <h2>${esc(film.title)} box office analysis</h2>
+        ${paragraphs.map((p) => `<p>${p}</p>`).join("\n        ")}
+      </section>`;
 }
 
 function rankingsRows(films: Film[]): string {
@@ -414,12 +536,13 @@ function renderMoviePage(film: Film, deskDate: string): string {
   const days = [...(film.dayWise ?? [])].sort((a, b) => a.dayNumber - b.dayNumber);
   const milestones = computeDayMilestones(days);
   const day1 = milestones.day1;
+  const synopsis = filmReadableSynopsis(film);
   const budgetText =
     film.budgetCr == null
-      ? `${film.title} does not yet have a published budget estimate on this desk.`
-      : `${film.title} had an estimated budget of ${formatCr(film.budgetCr)} and has collected ${formatCr(film.indiaNet)} India nett (${formatCr(film.worldwide)} worldwide), earning a box office verdict of ${film.verdict}.`;
+      ? `${film.title} does not yet have a published budget estimate on this desk, so any hit/flop label remains provisional until cost and longer-run nett are clearer.`
+      : `${film.title} had an estimated budget of ${formatCr(film.budgetCr)} and has collected ${formatCr(film.indiaNet)} India nett (${formatCr(film.worldwide)} worldwide), earning a working box office verdict of ${film.verdict} on this desk.`;
   const verdictHeading = `${film.title} Box Office Verdict: Hit or Flop?`;
-  const desc = `Complete day-by-day box office collection for ${film.title}. Track Day 1 opening, daily India nett, worldwide gross, day-wise change percentage, and box office verdict.`;
+  const desc = `Day-by-day box office collection and editorial analysis for ${film.title}: Day 1 opening, daily India nett, worldwide gross, weekend totals, and consensus verdict from the Indian Box Office desk.`;
 
   const movieLd = {
     "@context": "https://schema.org",
@@ -429,7 +552,7 @@ function renderMoviePage(film: Film, deskDate: string): string {
     image: posterAbs,
     datePublished: film.releaseDate,
     inLanguage: film.language,
-    description: film.synopsis || desc,
+    description: synopsis || desc,
     director: peopleList(film.director),
     actor: peopleList(film.starring),
     countryOfOrigin: { "@type": "Country", name: "India" },
@@ -505,7 +628,7 @@ function renderMoviePage(film: Film, deskDate: string): string {
           <p class="film-day-tagline">Day-by-Day Theatrical Box Office Collection</p>
           <p class="film-detail-meta">${esc(film.director)} · Released ${esc(formatReleaseDate(film.releaseDate))}</p>
           <p class="film-detail-cast"><strong>Cast</strong><br />${esc(film.starring)}</p>
-          <p class="film-detail-description">${esc(film.synopsis)}</p>
+          <p class="film-detail-description">${esc(synopsis)}</p>
         </div>
       </div>
       <dl class="film-detail-stats">
@@ -517,12 +640,15 @@ function renderMoviePage(film: Film, deskDate: string): string {
         <div><dt>Budget</dt><dd>${film.budgetCr == null ? "—" : esc(formatCr(film.budgetCr))}</dd></div>
       </dl>
 
+      ${filmRunAnalysisHtml(film, deskDate)}
+
       ${dayWiseTable(film)}
 
-      <section class="seo-verdict" id="verdict">
+      <section class="seo-verdict seo-prose" id="verdict">
         <h2>${esc(verdictHeading)}</h2>
         <p>${esc(budgetText)}</p>
-        <p>Updated on the Indian Box Office consensus desk for ${esc(deskDate)} (IST).</p>
+        <p>India has no official theatrical auditor. The numbers on this page are a weighted-median consensus built by Indian Box Office, not a studio press release. Compare Day 1, weekend, and later weekdays in the table above before treating any single headline figure as final.</p>
+        <p>Updated on the Indian Box Office consensus desk for ${esc(deskDate)} (IST). Corrections: <a href="/editorial-policy/">editorial policy</a> · <a href="/contact/">contact the desk</a>.</p>
       </section>
 
       <section class="faq-list seo-faq" id="faq">
@@ -853,6 +979,14 @@ function renderLanguagePage(
     <p class="kicker">${esc(meta.label)}</p>
     <h1>Highest grossing ${esc(meta.language)} movies 2026</h1>
     <p class="page-sub">${esc(meta.language)} theatrical box office collections — India nett and worldwide gross — updated ${esc(deskDate)} (IST).</p>
+    <section class="seo-prose">
+      <p>This hub isolates ${esc(meta.label)} titles on the Indian Box Office consensus board so readers can compare circuit peers without mixing every national release into one unsorted list. Rankings use cumulative India nett and worldwide gross from the same day-wise desk that powers individual film pages.</p>
+      <p>${
+        filtered.length
+          ? `Right now ${filtered.length} ${esc(meta.language)} title${filtered.length === 1 ? "" : "s"} ${filtered.length === 1 ? "is" : "are"} on the board. Open any film for Day 1, daily India nett, and editorial run analysis.`
+          : `No ${esc(meta.language)} titles are on the board yet; the hub will fill as soon as the desk ingests a qualifying theatrical report.`
+      }</p>
+    </section>
     ${
       filtered.length
         ? `<div style="overflow-x:auto;margin-top:24px">
@@ -872,12 +1006,12 @@ function renderLanguagePage(
     </div>`
         : `<p class="meta" style="margin-top:24px">No ${esc(meta.language)} titles are on the board yet.</p>`
     }
-    <p class="seo-back" style="margin-top:28px"><a href="/rankings/2026/">← 2026 rankings</a> · <a href="/">Home</a></p>
+    <p class="seo-back" style="margin-top:28px"><a href="/rankings/2026/">← 2026 rankings</a> · <a href="/about-methodology/">Methodology</a> · <a href="/">Home</a></p>
   `;
 
   return shell({
     title: `${meta.language} Box Office Collection 2026 | Highest Grossing ${meta.language} Films`,
-    description: `Highest grossing ${meta.language} movies of 2026 with India nett and worldwide gross. Daily ${meta.label} box office updates.`,
+    description: `Highest grossing ${meta.language} movies of 2026 with day-by-day India nett context, worldwide gross, and ${meta.label} box office rankings from Indian Box Office.`,
     canonical: url,
     breadcrumbs: [
       { name: "Home", url: `${SITE}/` },
@@ -893,37 +1027,235 @@ function renderMethodologyPage(): string {
   const body = `
     <p class="kicker">Editorial trust</p>
     <h1>About our box office methodology</h1>
-    <p class="page-sub">How Indian Box Office builds an independent consensus of theatrical collections across Hindi, Tamil, Telugu, Malayalam and Kannada releases.</p>
+    <p class="page-sub">How Indian Box Office builds an independent, day-by-day consensus of theatrical collections across Hindi, Tamil, Telugu, Malayalam and Kannada releases — and why we refuse to treat any single headline as fact.</p>
 
     <section class="seo-prose">
+      <h2>Why a consensus desk exists</h2>
+      <p>India has no official box office auditor. Trade outlets publish estimates that can diverge on the same film, the same day, by crores. Fans and journalists still need a clear picture of Day 1 openings, weekday holds, and closing runs. Indian Box Office exists to turn those competing estimates into a transparent, repeatedly updated consensus — with the day-wise spine kept in public view.</p>
+      <p>We are not a studio marketing channel. We do not invent openings to flatter a release. When sources disagree, the desk shows the consensus total and keeps refreshing as later reports arrive.</p>
+
       <h2>Weighted-median consensus</h2>
-      <p>India has no official box office auditor. Every published figure is an estimate. This desk therefore computes a weighted-median consensus across multiple trade trackers rather than reprinting any single reported number.</p>
-      <p>Each tracker is assigned a weight based on historical reliability and coverage. For a given money field (India nett, India gross, overseas, worldwide), we take the weighted median of source totals, which dampens outliers without discarding minority reports.</p>
+      <p>Every published figure on this site is an estimate. The desk therefore computes a weighted-median consensus across multiple independent trade reports rather than reprinting any single reported number as gospel.</p>
+      <p>Each contributing report is weighted by historical reliability and coverage for that money field (India nett, India gross, overseas, worldwide). A weighted median dampens outliers without throwing away minority reports that may later prove correct. When the spine that supplies day-wise rows is temporarily unavailable, the board falls back carefully and surfaces desk health alerts for editors — visitor pages never blame named trackers in the brief copy.</p>
+
+      <h2>What “day-by-day” means here</h2>
+      <p>Lifetime worldwide charts alone hide the story of a theatrical run. This desk prioritises:</p>
+      <ul>
+        <li><strong>Day 1 (opening day)</strong> India nett as soon as a usable report exists.</li>
+        <li><strong>Daily India nett</strong> through the run, with percentage change versus the previous reported day when available.</li>
+        <li><strong>Weekend and Week 1 milestones</strong> derived from the same day-wise ledger.</li>
+        <li><strong>Worldwide gross</strong> kept separate from India nett so readers are not forced to confuse tax bases.</li>
+      </ul>
+      <p>Film pages therefore carry both a day-wise table and a short editorial analysis written from that film’s own numbers — not a duplicated marketing synopsis.</p>
 
       <h2>Update cadence</h2>
-      <p>The board refreshes every three hours through the day. A written morning brief is published each morning. Day-wise collection figures update as soon as new numbers are reported.</p>
+      <p>The board refreshes multiple times through the Indian business day (scheduled ingest about every three hours). A written morning brief is published each morning with chart context, openers, and hold notes. Day-wise collection figures update as soon as new numbers clear the consensus pipeline.</p>
 
       <h2>Definitions</h2>
       <ul>
         <li><strong>India nett</strong> — domestic theatrical collection after entertainment tax and GST are removed.</li>
-        <li><strong>India gross</strong> — domestic theatrical ticket revenue before tax deductions.</li>
+        <li><strong>India gross</strong> — domestic theatrical ticket revenue before those tax deductions.</li>
         <li><strong>Worldwide gross</strong> — total global ticket revenue before tax deductions, including overseas markets.</li>
+        <li><strong>Occupancy / shows</strong> — when reported, used as context for a day’s strength; they are not substitutes for nett.</li>
       </ul>
-      <p>These figures are never interchangeable. The desk always reports India nett and worldwide gross separately.</p>
+      <p>These figures are never interchangeable. The desk always labels India nett and worldwide gross separately.</p>
+
+      <h2>Verdicts and budgets</h2>
+      <p>Hit / average / flop style labels on this site are working desk labels based on available budget estimates and the shape of the run. If budget is missing, verdicts stay provisional. Corrections follow the <a href="/editorial-policy/">editorial policy</a>.</p>
 
       <h2>Publisher</h2>
-      <p>Indian Box Office is developed by Mr Kevin Boyjonauth. Contact and source code: <a href="https://github.com/Bojo2025/indian-boxoffice">github.com/Bojo2025/indian-boxoffice</a>.</p>
+      <p>Indian Box Office is developed by Mr ${esc(PUBLISHER_NAME)}. Read the <a href="/about/">about page</a>, email <a href="mailto:${DESK_EMAIL}">${DESK_EMAIL}</a>, or see the public code at <a href="${GITHUB_REPO}">${GITHUB_REPO.replace("https://", "")}</a>.</p>
     </section>
   `;
 
   return shell({
     title: "Box Office Methodology | Indian Box Office Consensus Desk",
     description:
-      "How Indian Box Office computes weighted-median consensus of India nett and worldwide gross. Definitions, update cadence, and editorial trust notes.",
+      "How Indian Box Office computes weighted-median consensus of day-by-day India nett and worldwide gross: definitions, update cadence, verdicts, and editorial trust notes.",
     canonical: url,
     breadcrumbs: [
       { name: "Home", url: `${SITE}/` },
       { name: "Methodology", url },
+    ],
+    body,
+  });
+}
+
+function renderAboutPage(): string {
+  const url = `${SITE}/about/`;
+  const orgLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    name: "Indian Box Office",
+    alternateName: "IBO Desk",
+    url: SITE,
+    logo: `${SITE}/favicon.svg`,
+    email: DESK_EMAIL,
+    founder: { "@type": "Person", name: PUBLISHER_NAME, url: "https://github.com/Bojo2025" },
+    description:
+      "Independent day-by-day Indian theatrical box office consensus desk covering Hindi, Tamil, Telugu, Malayalam and Kannada cinema.",
+    publishingPrinciples: `${SITE}/editorial-policy/`,
+    privacyPolicy: `${SITE}/privacy-policy/`,
+    sameAs: [GITHUB_REPO],
+  };
+  const body = `
+    <p class="kicker">Publisher</p>
+    <h1>About Indian Box Office</h1>
+    <p class="page-sub">An independent consensus desk for Indian theatrical collections — built to answer “what did it do today?” with Day 1 through closing-run clarity.</p>
+
+    <section class="seo-prose">
+      <h2>What we publish</h2>
+      <p>Indian Box Office (indian-boxoffice.com) publishes a live theatrical board, day-wise film pages, language hubs, 2026 rankings, Day 1 records, and a daily morning brief. The product focus is deliberate: <strong>day-by-day India nett and worldwide gross</strong>, not only lifetime leaderboards that flatten the first two weeks of a release.</p>
+      <p>Coverage spans Hindi / Bollywood, Tamil / Kollywood, Telugu / Tollywood, Malayalam / Mollywood, Kannada / Sandalwood, and major Hollywood titles in Indian theatres. New releases are picked up as soon as usable daily reports exist.</p>
+
+      <h2>Who builds it</h2>
+      <p>The desk is developed by Mr ${esc(PUBLISHER_NAME)}. Editorial standards, corrections, and contact details are public so readers know who stands behind the numbers.</p>
+      <ul>
+        <li><strong>Methodology</strong> — <a href="/about-methodology/">how consensus is computed</a></li>
+        <li><strong>Editorial policy</strong> — <a href="/editorial-policy/">corrections, sourcing posture, advertising</a></li>
+        <li><strong>Contact</strong> — <a href="/contact/">${esc(DESK_EMAIL)}</a></li>
+        <li><strong>Source code</strong> — <a href="${GITHUB_REPO}">public repository</a></li>
+      </ul>
+
+      <h2>What we are not</h2>
+      <p>We are not an official auditor, not a studio PR desk, and not a scrapbook of unverified social-media screenshots. When the primary day-wise spine fails, we repair the ingest rather than invent rows. When AdSense or other advertising is enabled, ads are secondary to the editorial board — see the privacy and editorial pages for how that is disclosed.</p>
+
+      <h2>How to use the site</h2>
+      <p>Start with the <a href="/">home board</a> for this week’s daily chart, open a film for the full day-wise table and analysis, read the <a href="/brief/">morning brief</a> for context, and browse the <a href="/briefs/">brief archive</a> for prior mornings. Language hubs isolate industry runs when you only care about one circuit.</p>
+    </section>
+  `;
+
+  return shell({
+    title: "About Indian Box Office | Independent Day-by-Day Consensus Desk",
+    description:
+      "About Indian Box Office: who publishes the day-by-day Indian theatrical consensus desk, what we cover, and how to reach the editor.",
+    canonical: url,
+    breadcrumbs: [
+      { name: "Home", url: `${SITE}/` },
+      { name: "About", url },
+    ],
+    jsonLd: [orgLd],
+    body,
+  });
+}
+
+function renderContactPage(): string {
+  const url = `${SITE}/contact/`;
+  const body = `
+    <p class="kicker">Desk</p>
+    <h1>Contact Indian Box Office</h1>
+    <p class="page-sub">Corrections, press questions, partnership notes, and privacy requests — reach the publisher directly.</p>
+
+    <section class="seo-prose">
+      <h2>Email</h2>
+      <p>Write to <a href="mailto:${DESK_EMAIL}">${esc(DESK_EMAIL)}</a>. This inbox is monitored by Mr ${esc(PUBLISHER_NAME)} for the Indian Box Office desk.</p>
+      <p>Please include the film title, the date of the figure you are questioning, and a link to the page on indian-boxoffice.com. Clear reports are corrected faster.</p>
+
+      <h2>What to contact us about</h2>
+      <ul>
+        <li>Factual corrections to day-wise or lifetime totals on a film page</li>
+        <li>Missing releases that are already reporting in theatres</li>
+        <li>Privacy or advertising preference questions (see also the <a href="/privacy-policy/">privacy policy</a>)</li>
+        <li>Press or citation requests for morning briefs</li>
+      </ul>
+
+      <h2>Response expectations</h2>
+      <p>Theatrical numbers move through the day. We aim to acknowledge correction requests within two business days. Urgent opening-day issues are handled as soon as the next ingest cycle can verify them against independent reports.</p>
+
+      <h2>Public repository</h2>
+      <p>Technical issues with the open site build can also be filed at <a href="${GITHUB_REPO}/issues">${GITHUB_REPO.replace("https://", "")}/issues</a>.</p>
+    </section>
+  `;
+
+  return shell({
+    title: "Contact | Indian Box Office",
+    description: `Contact the Indian Box Office desk at ${DESK_EMAIL} for corrections, press, and privacy questions.`,
+    canonical: url,
+    breadcrumbs: [
+      { name: "Home", url: `${SITE}/` },
+      { name: "Contact", url },
+    ],
+    body,
+  });
+}
+
+function renderEditorialPolicyPage(): string {
+  const url = `${SITE}/editorial-policy/`;
+  const body = `
+    <p class="kicker">Standards</p>
+    <h1>Editorial policy &amp; corrections</h1>
+    <p class="page-sub">How Indian Box Office handles sourcing posture, corrections, advertising separation, and reader trust.</p>
+
+    <section class="seo-prose">
+      <h2>Editorial mission</h2>
+      <p>Publish a clear, day-by-day view of Indian theatrical collections that readers can check against the previous day — without pretending any single trade headline is an official audit.</p>
+
+      <h2>Sourcing posture</h2>
+      <p>Collection figures are estimates synthesised into a weighted-median consensus. Visitor-facing copy describes the desk’s own consensus; it does not turn the site into a mirror of one outlet’s homepage. Morning briefs are written from the verified board so every rupee claim can be traced to published desk data.</p>
+
+      <h2>Corrections</h2>
+      <p>If a day-wise row, lifetime total, or verdict label is wrong, email <a href="mailto:${DESK_EMAIL}">${esc(DESK_EMAIL)}</a> with the film, date, and expected correction. Material corrections are applied on the next successful publish after verification. We do not silently alter history without updating the live film page and, when relevant, noting the change in a later brief.</p>
+
+      <h2>Advertising</h2>
+      <p>When Google AdSense or similar advertising is active, ads are labelled by the ad network and are not editorial endorsements. Advertising partners do not decide Day 1 rankings, morning-brief headlines, or verdict labels. Cookie and personalised-ads disclosures live on the <a href="/privacy-policy/">privacy policy</a>.</p>
+
+      <h2>Conflicts &amp; independence</h2>
+      <p>The desk does not accept payment to inflate or suppress a film’s reported collection. Studio or publicist outreach is treated as correspondence, not as a substitute for the consensus pipeline.</p>
+
+      <h2>Publisher accountability</h2>
+      <p>Mr ${esc(PUBLISHER_NAME)} publishes Indian Box Office and is accountable for this policy. See <a href="/about/">About</a> and <a href="/contact/">Contact</a>.</p>
+    </section>
+  `;
+
+  return shell({
+    title: "Editorial Policy & Corrections | Indian Box Office",
+    description:
+      "Editorial policy for Indian Box Office: sourcing posture, corrections process, advertising separation, and publisher accountability.",
+    canonical: url,
+    breadcrumbs: [
+      { name: "Home", url: `${SITE}/` },
+      { name: "Editorial Policy", url },
+    ],
+    body,
+  });
+}
+
+function renderBriefsIndexPage(briefs: MorningBrief[]): string {
+  const url = `${SITE}/briefs/`;
+  const items = briefs
+    .map(
+      (b) => `<li>
+        <a href="/briefs/${esc(b.briefDate)}/">
+          <strong>${esc(b.briefDate)}</strong>
+          <span>${esc(b.headline)}</span>
+        </a>
+        <p>${esc(b.lede)}</p>
+      </li>`,
+    )
+    .join("\n");
+  const body = `
+    <p class="kicker">Archive</p>
+    <h1>Morning brief archive</h1>
+    <p class="page-sub">Dated editorial briefs from the Indian Box Office desk — daily chart context, openers, and hold notes kept in public archive.</p>
+
+    <section class="seo-prose">
+      <p>Each morning brief is generated from that morning’s consensus board, then filed here so readers can compare how the chart moved across days. The <a href="/brief/">latest brief</a> always mirrors the newest entry.</p>
+    </section>
+
+    <ol class="brief-archive-list">
+      ${items || "<li>No briefs archived yet.</li>"}
+    </ol>
+  `;
+
+  return shell({
+    title: "Morning Brief Archive | Indian Box Office",
+    description:
+      "Archive of Indian Box Office morning briefs: dated daily chart analysis for Hindi, Tamil, Telugu, Malayalam and Kannada theatrical collections.",
+    canonical: url,
+    breadcrumbs: [
+      { name: "Home", url: `${SITE}/` },
+      { name: "Morning Brief", url: `${SITE}/brief/` },
+      { name: "Archive", url },
     ],
     body,
   });
@@ -966,7 +1298,7 @@ function renderPrivacyPolicyPage(): string {
       <p>We may update this privacy policy from time to time. Material changes will be reflected on this page together with a revised "last updated" date.</p>
 
       <h2>Contact</h2>
-      <p>Questions about this privacy policy can be raised through our public repository: <a href="https://github.com/Bojo2025/indian-boxoffice">github.com/Bojo2025/indian-boxoffice</a>.</p>
+      <p>Questions about this privacy policy: email <a href="mailto:${DESK_EMAIL}">${esc(DESK_EMAIL)}</a> or use the <a href="/contact/">contact page</a>. Technical site issues can also be raised at <a href="${GITHUB_REPO}">${GITHUB_REPO.replace("https://", "")}</a>.</p>
     </section>
   `;
 
@@ -983,13 +1315,34 @@ function renderPrivacyPolicyPage(): string {
   });
 }
 
-function renderBriefPage(brief: MorningBrief, isLatest: boolean): string {
-  const path = isLatest ? "/brief/" : `/briefs/${brief.briefDate}/`;
-  const url = `${SITE}${path}`;
-  const paragraphs = String(brief.body || "")
+function renderBriefBodyHtml(body: string): string {
+  const blocks = String(body || "")
     .split(/\n\n+/)
     .map((p) => p.trim())
     .filter(Boolean);
+  return blocks
+    .map((block) => {
+      if (/^##\s+/.test(block)) {
+        return `<h2>${esc(block.replace(/^##\s+/, ""))}</h2>`;
+      }
+      if (/^###\s+/.test(block)) {
+        return `<h3>${esc(block.replace(/^###\s+/, ""))}</h3>`;
+      }
+      // Support simple bullet lists: lines starting with "- "
+      if (/^- /.test(block) || block.includes("\n- ")) {
+        const lines = block.split("\n").map((l) => l.trim()).filter(Boolean);
+        if (lines.every((l) => l.startsWith("- "))) {
+          return `<ul>${lines.map((l) => `<li>${esc(l.slice(2))}</li>`).join("")}</ul>`;
+        }
+      }
+      return `<p>${esc(block)}</p>`;
+    })
+    .join("\n");
+}
+
+function renderBriefPage(brief: MorningBrief, isLatest: boolean): string {
+  const path = isLatest ? "/brief/" : `/briefs/${brief.briefDate}/`;
+  const url = `${SITE}${path}`;
   const newsLd = {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
@@ -1000,14 +1353,16 @@ function renderBriefPage(brief: MorningBrief, isLatest: boolean): string {
     mainEntityOfPage: url,
     author: {
       "@type": "Person",
-      name: "Kevin Boyjonauth",
+      name: PUBLISHER_NAME,
       url: "https://github.com/Bojo2025",
+      email: DESK_EMAIL,
     },
     publisher: {
       "@type": "Organization",
       name: "Indian Box Office",
       url: SITE,
       logo: `${SITE}/favicon.svg`,
+      email: DESK_EMAIL,
     },
     image: `${SITE}/posters/hero-cinema.jpg`,
   };
@@ -1016,11 +1371,13 @@ function renderBriefPage(brief: MorningBrief, isLatest: boolean): string {
     <article class="seo-brief">
       <p class="kicker">Morning brief · ${esc(brief.briefDate)}</p>
       <h1>${esc(brief.headline)}</h1>
+      <p class="brief-byline">By ${esc(PUBLISHER_NAME)} · Indian Box Office consensus desk</p>
       <p class="brief-lede">${esc(brief.lede)}</p>
-      <div class="brief-body">
-        ${paragraphs.map((p) => `<p>${esc(p)}</p>`).join("\n")}
+      <div class="brief-body seo-prose">
+        ${renderBriefBodyHtml(brief.body || "")}
       </div>
       <p class="updated">Published ${esc(brief.generatedAt)}</p>
+      <p class="seo-back"><a href="/briefs/">Brief archive</a> · <a href="/about-methodology/">Methodology</a> · <a href="/contact/">Contact</a></p>
       ${isLatest ? "" : `<p class="seo-back"><a href="/brief/">← Latest morning brief</a></p>`}
       <p class="seo-back"><a href="/">← Home board</a></p>
     </article>
@@ -1181,9 +1538,13 @@ function writeSitemap(pack: Pack, briefDates: string[]) {
     { loc: `${SITE}/daily-box-office/`, changefreq: "hourly", priority: "0.95" },
     { loc: `${SITE}/rankings/2026/`, changefreq: "hourly", priority: "0.9" },
     { loc: `${SITE}/records/highest-day-1-collection-2026/`, changefreq: "daily", priority: "0.85" },
-    { loc: `${SITE}/about-methodology/`, changefreq: "monthly", priority: "0.6" },
+    { loc: `${SITE}/about/`, changefreq: "monthly", priority: "0.7" },
+    { loc: `${SITE}/about-methodology/`, changefreq: "monthly", priority: "0.7" },
+    { loc: `${SITE}/editorial-policy/`, changefreq: "monthly", priority: "0.55" },
+    { loc: `${SITE}/contact/`, changefreq: "monthly", priority: "0.6" },
     { loc: `${SITE}/privacy-policy/`, changefreq: "yearly", priority: "0.3" },
-    { loc: `${SITE}/brief/`, changefreq: "daily", priority: "0.8" },
+    { loc: `${SITE}/brief/`, changefreq: "daily", priority: "0.85" },
+    { loc: `${SITE}/briefs/`, changefreq: "daily", priority: "0.75" },
     { loc: `${SITE}/feed.xml`, changefreq: "hourly", priority: "0.5" },
   ];
   for (const lang of LANGUAGE_PAGES) {
@@ -1362,7 +1723,10 @@ export async function generateSeoPages(packInput?: Pack): Promise<void> {
     writePage(`languages/${lang.slug}/index.html`, renderLanguagePage(lang, pack.films, pack.deskDate));
   }
 
+  writePage("about/index.html", renderAboutPage());
   writePage("about-methodology/index.html", renderMethodologyPage());
+  writePage("editorial-policy/index.html", renderEditorialPolicyPage());
+  writePage("contact/index.html", renderContactPage());
   writePage("privacy-policy/index.html", renderPrivacyPolicyPage());
   writeFileSync(
     join(outDir, "ads.txt"),
@@ -1370,6 +1734,7 @@ export async function generateSeoPages(packInput?: Pack): Promise<void> {
   );
 
   const briefs = collectBriefs(pack);
+  writePage("briefs/index.html", renderBriefsIndexPage(briefs));
   for (const brief of briefs) {
     ensureDir(join(outDir, "briefs", brief.briefDate));
     writeFileSync(join(outDir, "briefs", brief.briefDate, "brief.json"), `${JSON.stringify(brief, null, 2)}\n`);
@@ -1417,6 +1782,11 @@ export async function generateSeoPages(packInput?: Pack): Promise<void> {
     `${SITE}/feed.xml`,
     `${SITE}/rankings/2026/`,
     `${SITE}/brief/`,
+    `${SITE}/briefs/`,
+    `${SITE}/about/`,
+    `${SITE}/about-methodology/`,
+    `${SITE}/editorial-policy/`,
+    `${SITE}/contact/`,
     ...pack.films.slice(0, 40).map((f) => movieUrl(f.slug)),
   ];
   if (latest) pingUrls.push(`${SITE}/briefs/${latest.briefDate}/`);

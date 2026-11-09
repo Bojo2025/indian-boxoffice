@@ -2,7 +2,7 @@
  * Morning Brief Agent — IBO Desk
  *
  * Runs once a day (08:00 Mauritius = 04:00 UTC via GitHub Actions).
- * Builds a concise editorial brief directly from the verified consensus board.
+ * Builds a substantial editorial brief directly from the verified consensus board.
  *
  * This intentionally has no generative-AI dependency: every figure and claim in
  * the brief is derived from board.json, so the daily copy is repeatable,
@@ -53,8 +53,8 @@ if (process.env.FORCE_BRIEF !== "1") {
   const usable =
     existing &&
     (existing.briefDate === todayMu || existing.briefDate === todayIst) &&
-    (existing.body?.trim().length ?? 0) >= 40 &&
-    (existing.lede?.trim().length ?? 0) >= 20;
+    (existing.body?.trim().length ?? 0) >= 800 &&
+    (existing.lede?.trim().length ?? 0) >= 40;
   if (usable) {
     console.log(
       `Morning brief already exists for ${existing!.briefDate} — skipping. Set FORCE_BRIEF=1 to regenerate.`,
@@ -69,6 +69,7 @@ type FilmRow = {
   id: string;
   title: string;
   language: string;
+  industry?: string;
   releaseDate: string;
   status: string;
   verdict: string;
@@ -82,24 +83,10 @@ type FilmRow = {
   deltaWw: number | null;
 };
 
-type Headline = {
-  sourceId: string;
-  title: string;
-  url: string;
-  publishedAt?: string | null;
-  summary?: string | null;
-};
-
 type Board = {
   generatedAt?: string;
   deskDate?: string;
   films?: FilmRow[];
-  headlines?: Headline[];
-  health?: {
-    hardFail?: boolean;
-    alerts?: string[];
-    spine?: Record<string, { ok?: boolean }>;
-  };
 };
 
 type Brief = {
@@ -127,7 +114,15 @@ const currentRanked = [...films]
   .filter((film) => film.status !== "closed" && film.lastDayNet != null && film.lastDayNet > 0)
   .sort((a, b) => (b.lastDayNet ?? 0) - (a.lastDayNet ?? 0));
 const movers = [...films]
-  .filter((film) => film.deltaWw != null && Math.abs(film.deltaWw) >= 0.5)
+  .filter((film) => {
+    if (film.deltaWw == null || !Number.isFinite(film.deltaWw)) return false;
+    const abs = Math.abs(film.deltaWw);
+    // Ignore absurd swings (usually unit/parse artefacts) and tiny noise.
+    if (abs < 0.5) return false;
+    if (film.worldwide > 0 && abs > film.worldwide * 0.85) return false;
+    if (abs > 80) return false;
+    return true;
+  })
   .sort((a, b) => Math.abs(b.deltaWw ?? 0) - Math.abs(a.deltaWw ?? 0));
 const top = ranked[0];
 const currentTop = currentRanked[0];
@@ -143,76 +138,157 @@ function deltaLabel(n: number | null | undefined): string {
   return `${n >= 0 ? "+" : ""}${n.toLocaleString("en-IN", { maximumFractionDigits: 1 })} Cr`;
 }
 
-function currentRankingLine(): string {
-  if (!currentRanked.length) return "No current daily collection figures are available.";
-  return currentRanked
-    .slice(0, 5)
-    .map(
-      (film, index) =>
-        `${index + 1}. ${film.title} — ${fmt(film.lastDayNet)} on Day ${film.trackedThroughDay ?? "—"}; cumulative India nett ${fmt(film.indiaNet)}`,
-    )
-    .join(" | ");
+function languageLabel(film: FilmRow): string {
+  if (film.language && film.language !== "Indian") return film.language;
+  return film.industry || "Indian cinema";
 }
 
-function recentReleaseLine(): string {
-  const recent = films
+function ageDays(film: FilmRow): number | null {
+  const released = Date.parse(`${film.releaseDate}T12:00:00+05:30`);
+  if (!Number.isFinite(released)) return null;
+  return Math.max(0, Math.floor((deskDayMs - released) / 86_400_000));
+}
+
+function recentReleases(): FilmRow[] {
+  return films
     .filter((film) => film.status !== "closed")
     .filter((film) => {
-      const ageMs = deskDayMs - Date.parse(`${film.releaseDate}T12:00:00+05:30`);
-      return ageMs >= 0 && ageMs <= 45 * 86_400_000;
+      const age = ageDays(film);
+      return age != null && age >= 0 && age <= 14;
     })
-    .sort((a, b) => b.releaseDate.localeCompare(a.releaseDate))
-    .slice(0, 4);
-  if (!recent.length) return "No recent release is currently represented with a daily figure.";
-  return recent
-    .map(
-      (film) =>
-        `${film.title} (released ${film.releaseDate}) — latest India nett ${fmt(film.lastDayNet)}`,
-    )
+    .sort((a, b) => b.releaseDate.localeCompare(a.releaseDate));
+}
+
+function languageSplitLine(): string {
+  const buckets = new Map<string, { count: number; nett: number }>();
+  for (const film of currentRanked.slice(0, 12)) {
+    const key = languageLabel(film);
+    const prev = buckets.get(key) ?? { count: 0, nett: 0 };
+    prev.count += 1;
+    prev.nett += film.lastDayNet ?? 0;
+    buckets.set(key, prev);
+  }
+  const rankedBuckets = [...buckets.entries()].sort((a, b) => b[1].nett - a[1].nett);
+  if (!rankedBuckets.length) return "Language mix on the daily chart is still settling.";
+  return rankedBuckets
+    .slice(0, 5)
+    .map(([label, row]) => `${label}: ${row.count} title${row.count === 1 ? "" : "s"} contributing about ${fmt(row.nett)} of latest-day India nett among the top tracked films`)
     .join("; ");
 }
 
-function momentumLine(): string | null {
-  if (!movers.length) return null;
-
-  const entries = movers.slice(0, 3).map((film) => {
-    const indiaMove =
-      film.deltaNet != null && Math.abs(film.deltaNet) >= 0.5
-        ? `; India nett ${deltaLabel(film.deltaNet)}`
-        : "";
-    return `${film.title} ${deltaLabel(film.deltaWw)} worldwide${indiaMove}`;
-  });
-  return `Momentum: ${entries.join("; ")} since the previous board snapshot.`;
-}
-
 function buildBrief(): Brief {
-  const headline = currentTop
-    ? `India box office: ${currentTop.title} leads the latest daily chart at ${fmt(currentTop.lastDayNet)}`
+  const leader = currentTop;
+  const second = currentRanked[1];
+  const third = currentRanked[2];
+  const recent = recentReleases();
+  const opener = recent.find((f) => (f.trackedThroughDay ?? ageDays(f) ?? 99) <= 3) ?? recent[0];
+
+  const headline = leader
+    ? `India box office: ${leader.title} leads the latest daily chart at ${fmt(leader.lastDayNet)}`
     : "Indian Box Office morning brief";
-  const lede = currentTop
-    ? `${currentTop.title} leads the latest reported daily India nett at ${fmt(currentTop.lastDayNet)} on Day ${currentTop.trackedThroughDay ?? "—"}; its cumulative India nett is ${fmt(currentTop.indiaNet)}.`
-    : "The IBO consensus board has been refreshed from the latest available tracker data.";
-  const body = [
-    `Latest reported daily ranking: ${currentRankingLine()}.`,
-    `Recent-release watch: ${recentReleaseLine()}.`,
-    top
-      ? `Lifetime context: ${top.title} remains the cumulative worldwide leader at ${fmt(top.worldwide)}, but that is not the current daily chart.`
-      : null,
-    momentumLine(),
-  ]
-    .filter((paragraph): paragraph is string => Boolean(paragraph))
-    .join("\n\n");
+
+  const lede = leader
+    ? `${leader.title} leads the latest reported daily India nett at ${fmt(leader.lastDayNet)} on Day ${leader.trackedThroughDay ?? "—"}, taking cumulative India nett to ${fmt(leader.indiaNet)} and worldwide gross to ${fmt(leader.worldwide)} on the Indian Box Office consensus desk.`
+    : "The Indian Box Office consensus board has been refreshed from the latest available theatrical reports.";
+
+  const rankingBullets = currentRanked.slice(0, 8).map((film, index) => {
+    const day = film.trackedThroughDay ?? "—";
+    return `- ${index + 1}. ${film.title} (${languageLabel(film)}) — ${fmt(film.lastDayNet)} on Day ${day}; cumulative India nett ${fmt(film.indiaNet)}; WW ${fmt(film.worldwide)}`;
+  });
+
+  const sections: string[] = [];
+
+  sections.push(
+    `Good morning. This is the Indian Box Office morning brief for ${todayIst} (IST desk date), written from the verified consensus board rather than any single trade headline. India still has no official theatrical auditor; every rupee figure below is a desk estimate, labelled so India nett is never confused with worldwide gross.`,
+  );
+
+  if (leader) {
+    sections.push(`## Daily chart leader`);
+    sections.push(
+      `${leader.title} sits at the top of the latest-day India nett ranking with ${fmt(leader.lastDayNet)} on Day ${leader.trackedThroughDay ?? "—"}. Cumulative India nett is ${fmt(leader.indiaNet)}; worldwide gross on this desk is ${fmt(leader.worldwide)}. The title is filed as ${languageLabel(leader)} and currently carries a working status of ${leader.status} with verdict ${leader.verdict}.`,
+    );
+    if (second) {
+      sections.push(
+        `${second.title} is next on the daily chart at ${fmt(second.lastDayNet)} (Day ${second.trackedThroughDay ?? "—"}, cumulative India nett ${fmt(second.indiaNet)})${
+          third
+            ? `, with ${third.title} third at ${fmt(third.lastDayNet)}`
+            : ""
+        }. Gaps between the top three matter more than the order alone: a soft midweek day for a long-runner can look “small” in absolute crores while still being a healthy hold for its week of release.`,
+      );
+    }
+  }
+
+  sections.push(`## Latest daily ranking`);
+  sections.push(
+    `Here is the desk’s latest-day India nett order among currently tracked theatrical titles (not a lifetime worldwide leaderboard):`,
+  );
+  if (rankingBullets.length) {
+    sections.push(rankingBullets.join("\n"));
+  } else {
+    sections.push(`No current daily collection figures are available on the board yet.`);
+  }
+
+  sections.push(`## Openers and recent releases`);
+  if (opener) {
+    const age = ageDays(opener);
+    sections.push(
+      `Among films released in the last two weeks, ${opener.title} is the one to watch closely: released ${opener.releaseDate}${age != null ? ` (${age} day${age === 1 ? "" : "s"} ago)` : ""}, latest reported India nett ${fmt(opener.lastDayNet)} with cumulative India nett ${fmt(opener.indiaNet)} and worldwide ${fmt(opener.worldwide)}. Early days are the most volatile part of any run — Day 1 and the first weekday drop usually say more about screens and word of mouth than a lifetime total published weeks later.`,
+    );
+  }
+  if (recent.length) {
+    const lines = recent.slice(0, 6).map((film) => {
+      return `- ${film.title} (released ${film.releaseDate}, ${languageLabel(film)}) — latest day ${fmt(film.lastDayNet)}; cumulative India nett ${fmt(film.indiaNet)}`;
+    });
+    sections.push(`Recent theatrical watchlist:`);
+    sections.push(lines.join("\n"));
+  } else {
+    sections.push(`No fresh theatrical openers are currently represented with a daily figure on the board.`);
+  }
+
+  sections.push(`## Holds, momentum, and lifetime context`);
+  if (movers.length) {
+    const entries = movers.slice(0, 4).map((film) => {
+      const indiaMove =
+        film.deltaNet != null && Math.abs(film.deltaNet) >= 0.5 && Math.abs(film.deltaNet) < 80
+          ? `; India nett ${deltaLabel(film.deltaNet)}`
+          : "";
+      return `${film.title} ${deltaLabel(film.deltaWw)} worldwide${indiaMove}`;
+    });
+    sections.push(
+      `Since the previous board snapshot, notable lifetime moves include: ${entries.join("; ")}. Treat snapshot-to-snapshot deltas as orientation — ingest repairs and late reports can restate a total without meaning the film “earned” that swing in a single calendar day.`,
+    );
+  } else {
+    sections.push(
+      `No clean mid-sized worldwide moves cleared the desk’s sanity filters since the previous snapshot. When deltas look extreme, we prefer to wait for the next ingest rather than narrate a bad parse.`,
+    );
+  }
+  if (top && (!leader || top.id !== leader.id)) {
+    sections.push(
+      `Lifetime context: ${top.title} remains the cumulative worldwide leader on this board at ${fmt(top.worldwide)} (India nett ${fmt(top.indiaNet)}). That is a career-to-date total, not today’s daily chart.`,
+    );
+  }
+
+  sections.push(`## Language circuits`);
+  sections.push(
+    `Across the top of the daily chart, circuit mix looks like this — ${languageSplitLine()}. Hindi, South Indian, and Hollywood titles can share the same national chart while living on very different screen footprints; compare like with like when judging a Day 8 versus a Day 1.`,
+  );
+
+  sections.push(`## How to read today’s brief`);
+  sections.push(
+    `Use the home board for the live “this week” stack, open individual film pages for the full day-wise table and analysis, and keep this brief as the morning narrative layer. Definitions: India nett is domestic after entertainment tax/GST; worldwide gross is global ticket revenue before those deductions. Methodology and corrections live on the desk’s public policy pages. Publisher: Kevin Boyjonauth · Indian Box Office.`,
+  );
+
+  const body = sections.join("\n\n");
 
   return {
     briefDate: todayMu,
     generatedAt: new Date().toISOString(),
-    headline: headline.slice(0, 100),
+    headline: headline.slice(0, 110),
     lede,
     body,
-    // Readers never see tracker attribution, so the brief ships no citations.
     citations: [],
     boardGeneratedAt: board?.generatedAt ?? null,
-    model: "deterministic-editorial-v1",
+    model: "deterministic-editorial-v2",
   };
 }
 
@@ -249,5 +325,5 @@ await generateSeoPages();
 
 console.log("✓ Morning brief written → docs/morning-brief.json");
 console.log(`  Headline: ${brief.headline}`);
+console.log(`  Body chars: ${brief.body.length}`);
 console.log(`  Model: ${brief.model}`);
-console.log(`  Citations: ${brief.citations.length}`);
