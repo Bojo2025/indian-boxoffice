@@ -23,7 +23,7 @@ import {
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const outDir = join(root, "docs");
 const SITE = "https://indian-boxoffice.com";
-const ASSET_VER = "20261109b";
+const ASSET_VER = "20261109c";
 const ADSENSE_CLIENT = "ca-pub-3635078997966836";
 const ADSENSE_SCRIPT = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>`;
 const DESK_EMAIL = "desk@indian-boxoffice.com";
@@ -211,6 +211,8 @@ function shell(opts: {
   canonical: string;
   ogType?: string;
   ogImage?: string;
+  ogImageAlt?: string;
+  keywords?: string;
   jsonLd?: unknown[];
   body: string;
   breadcrumbs?: { name: string; url: string }[];
@@ -251,8 +253,10 @@ function shell(opts: {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${esc(opts.title)}</title>
   <meta name="description" content="${esc(opts.description)}" />
+  ${opts.keywords ? `<meta name="keywords" content="${esc(opts.keywords)}" />` : ""}
   <meta name="author" content="Kevin Boyjonauth" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#0f0d0b" />
   <link rel="canonical" href="${esc(opts.canonical)}" />
   <link rel="alternate" type="application/rss+xml" title="Indian Box Office Feed" href="${SITE}/feed.xml" />
@@ -264,6 +268,9 @@ function shell(opts: {
   <meta property="og:title" content="${esc(opts.title)}" />
   <meta property="og:description" content="${esc(opts.description)}" />
   <meta property="og:image" content="${esc(ogImage)}" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="900" />
+  ${opts.ogImageAlt ? `<meta property="og:image:alt" content="${esc(opts.ogImageAlt)}" />` : ""}
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${esc(opts.title)}" />
@@ -684,7 +691,7 @@ function renderMoviePage(film: Film, deskDate: string): string {
 
       ${
         /ramayana/i.test(film.id) || /ramayana/i.test(film.title)
-          ? `<p class="seo-back"><a href="/ramayana/"><strong>Open Ramayana Box Office command centre →</strong></a></p>`
+          ? `<p class="seo-back"><a href="/ramayana/"><strong>Open Ramayana main page →</strong></a></p>`
           : ""
       }
       <p class="seo-back"><a href="/daily-box-office/">← Daily box office chart</a> · <a href="/records/highest-day-1-collection-2026/">Day 1 records</a> · <a href="/rankings/2026/">2026 rankings</a> · <a href="/">Home</a></p>
@@ -1038,12 +1045,24 @@ function renderRamayanaPage(pack: Pack): string | null {
   const body = renderRamayanaHubBody(pack);
   if (!body) return null;
   const url = `${SITE}/ramayana/`;
+  const ram = pack.films.find(
+    (f) => f.id === "ramayana" || /ramayana/i.test(f.title) || /ramayana/i.test(f.slug),
+  );
+  const posterAbs = ram
+    ? absolutePoster(ram.poster, ram.posterKey || ram.id)
+    : `${SITE}/posters/ramayana.jpg`;
+  const day = ram?.trackedThroughDay ?? "—";
+  const title = `Ramayana Box Office Collection Today (Day ${day}) | India Nett, Worldwide & Day-wise Tracker`;
+  const description = `Ramayana box office collection today and day-wise: Day ${day} India nett ${ram?.lastDayNet != null ? formatCr(ram.lastDayNet) : "—"}, cumulative India nett ${ram ? formatCr(ram.indiaNet) : "—"}, overseas ${ram ? formatCr(ram.overseas) : "—"}, worldwide ${ram ? formatCr(ram.worldwide) : "—"}. Opening weekend, records and comparisons from Indian Box Office.`;
   return shell({
-    title: "Ramayana Box Office Collection Today | Day-wise India Nett & Worldwide Tracker",
-    description:
-      "Ramayana box office command centre: day-wise India nett, worldwide and overseas gross, opening weekend, records, comparisons and Week 1 desk scenarios from Indian Box Office.",
+    title,
+    description,
+    keywords:
+      "Ramayana box office, Ramayana box office collection, Ramayana box office collection today, Ramayana Day 1 collection, Ramayana worldwide box office, Ramayana overseas collection, Ramayana India nett, Ramayana day wise collection, Indian Box Office",
     canonical: url,
     ogType: "article",
+    ogImage: posterAbs,
+    ogImageAlt: "Ramayana theatrical poster — box office tracker",
     breadcrumbs: [
       { name: "Home", url: `${SITE}/` },
       { name: "Ramayana Box Office", url },

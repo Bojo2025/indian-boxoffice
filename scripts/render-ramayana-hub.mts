@@ -294,14 +294,14 @@ export function ramayanaFeatureHtml(pack: Pack): string {
   const last = days[days.length - 1];
   const poster = localPoster(ram.poster, ram.posterKey || ram.id);
   return `
-    <aside class="rama-feature" aria-label="Ramayana box office command centre">
+    <aside class="rama-feature" aria-label="Ramayana box office main page">
       <a class="rama-feature-link" href="/ramayana/">
         <img class="rama-feature-poster" src="${esc(poster)}" alt="Ramayana poster" width="72" height="108" loading="lazy" />
         <div class="rama-feature-copy">
           <p class="kicker">Featured tracker</p>
           <h2>Ramayana Box Office</h2>
           <p>Day ${esc(String(ram.trackedThroughDay ?? last?.dayNumber ?? "—"))} live desk · India nett ${esc(formatCr(ram.indiaNet))} · Worldwide ${esc(formatCr(ram.worldwide))}</p>
-          <span class="rama-feature-cta">Open command centre →</span>
+          <span class="rama-feature-cta">Open Ramayana main page →</span>
         </div>
       </a>
     </aside>`;
@@ -376,9 +376,9 @@ export function renderRamayanaHubBody(pack: Pack): string | null {
       <header class="rama-hero">
         <img class="rama-hero-poster" src="${esc(poster)}" alt="Ramayana theatrical poster" width="140" height="210" />
         <div>
-          <p class="kicker">Command centre</p>
-          <h1>Ramayana Box Office</h1>
-          <p class="page-sub">Daily India and worldwide theatrical tracker — consensus desk estimates, not an official audit.</p>
+          <p class="kicker">Main tracker</p>
+          <h1>Ramayana Box Office Collection</h1>
+          <p class="page-sub">Ramayana box office collection today and day by day — India nett, overseas and worldwide gross from the Indian Box Office consensus desk (estimates, not an official audit).</p>
           <p class="rama-meta">
             <span class="rama-chip">${esc(statusChip)}</span>
             <span>Theatrical Day ${esc(String(through))}</span>
@@ -500,8 +500,32 @@ export function renderRamayanaHubBody(pack: Pack): string | null {
         ${projectionBlock(days)}
       </section>
 
+      <section class="faq-list seo-faq" id="faq">
+        <h2>Ramayana box office FAQ</h2>
+        <details open>
+          <summary>What is the Ramayana box office collection today?</summary>
+          <p>Latest reported India nett on Day ${esc(String(through))} is ${esc(formatCr(ram.lastDayNet ?? last?.indiaNet))}. Cumulative consensus India nett is ${esc(formatCr(ram.indiaNet))}; worldwide gross is ${esc(formatCr(ram.worldwide))}.</p>
+        </details>
+        <details open>
+          <summary>What is Ramayana worldwide box office collection?</summary>
+          <p>The Indian Box Office consensus worldwide gross for Ramayana is ${esc(formatCr(ram.worldwide))}, with overseas gross ${esc(formatCr(ram.overseas))} (outside India).</p>
+        </details>
+        <details>
+          <summary>What was Ramayana Day 1 / opening day collection?</summary>
+          <p>${day1 ? `Ramayana collected ${esc(formatCr(day1.indiaNet))} India nett on Day 1 (${esc(formatReleaseDate(day1.reportDate))}).` : "Day 1 India nett is not yet on the desk ledger."}</p>
+        </details>
+        <details>
+          <summary>What is Ramayana opening weekend box office?</summary>
+          <p>Opening weekend (Days 1–3) India nett on the day-wise ledger totals ${esc(formatCr(weekendNet))}.</p>
+        </details>
+        <details>
+          <summary>Where is the Ramayana day-wise box office table?</summary>
+          <p>The full day-by-day India nett and India gross table is on this page under <a href="#day-wise">Day-wise collection table</a>. The standard film file is also at <a href="${esc(filmPage)}">${esc(filmPage)}</a>.</p>
+        </details>
+      </section>
+
       <section class="seo-prose" id="about-this-hub">
-        <h2>How to read this hub</h2>
+        <h2>How to read this Ramayana main page</h2>
         <p>Indian Box Office is an independent consensus desk. Figures are weighted-median estimates across trade reports where available. There is still no official Indian theatrical auditor.</p>
         <ul>
           <li><strong>India nett</strong> — domestic after entertainment tax / GST conventions used by trade.</li>
@@ -509,7 +533,7 @@ export function renderRamayanaHubBody(pack: Pack): string | null {
           <li><strong>Overseas</strong> — outside India only.</li>
           <li><strong>Worldwide</strong> — lifetime consensus gross; daily worldwide is shown only when the ledger publishes it.</li>
         </ul>
-        <p>Full film file with FAQ: <a href="${esc(filmPage)}">${esc(filmPage)}</a>. Corrections: <a href="/contact/">contact the desk</a>.</p>
+        <p>Standard film page: <a href="${esc(filmPage)}">${esc(filmPage)}</a>. Corrections: <a href="/contact/">contact the desk</a>. Methodology: <a href="/about-methodology/">about-methodology</a>.</p>
       </section>
     </article>`;
 }
@@ -519,33 +543,59 @@ export function ramayanaJsonLd(pack: Pack): unknown[] {
   if (!ram) return [];
   const days = sortedDays(ram);
   const last = days[days.length - 1];
+  const day1 = days.find((d) => d.dayNumber === 1);
+  const weekendNet = round2(
+    days.filter((d) => d.dayNumber >= 1 && d.dayNumber <= 3).reduce((s, d) => s + (d.indiaNet || 0), 0),
+  );
+  const posterAbs = `${SITE}${localPoster(ram.poster, ram.posterKey || ram.id)}`;
+  const through = ram.trackedThroughDay ?? last?.dayNumber ?? "—";
   return [
     {
       "@context": "https://schema.org",
-      "@type": "WebPage",
-      name: "Ramayana Box Office Collection — Day-wise India & Worldwide Tracker",
+      "@type": "CollectionPage",
+      "@id": `${SITE}/ramayana/#webpage`,
+      name: "Ramayana Box Office Collection Today — Day-wise India Nett & Worldwide Tracker",
+      headline: "Ramayana Box Office Collection",
       url: `${SITE}/ramayana/`,
-      description:
-        "Ramayana box office command centre: day-wise India nett, worldwide gross, overseas totals, records and desk projections from Indian Box Office.",
-      dateModified: pack.generatedAt,
+      description: `Ramayana box office collection today (Day ${through}): India nett ${formatCr(ram.lastDayNet ?? last?.indiaNet)}, cumulative India nett ${formatCr(ram.indiaNet)}, overseas ${formatCr(ram.overseas)}, worldwide ${formatCr(ram.worldwide)}.`,
+      inLanguage: "en-IN",
       isPartOf: { "@type": "WebSite", name: "Indian Box Office", url: SITE },
+      primaryImageOfPage: { "@type": "ImageObject", url: posterAbs },
+      image: posterAbs,
+      datePublished: ram.releaseDate,
+      dateModified: pack.generatedAt,
+      author: { "@type": "Person", name: "Kevin Boyjonauth" },
+      publisher: {
+        "@type": "Organization",
+        name: "Indian Box Office",
+        url: SITE,
+        logo: `${SITE}/favicon.svg`,
+      },
       about: {
         "@type": "Movie",
-        name: ram.title,
+        name: "Ramayana",
+        alternateName: ["Ramayana Part 1", "Ramayana (2026)"],
         datePublished: ram.releaseDate,
-        image: `${SITE}${localPoster(ram.poster, ram.posterKey || ram.id)}`,
+        image: posterAbs,
+        url: `${SITE}/movies/${ram.slug}/`,
+      },
+      mainEntity: { "@id": `${SITE}/ramayana/#faq` },
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: ["h1", ".page-sub", "#faq"],
       },
     },
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
+      "@id": `${SITE}/ramayana/#faq`,
       mainEntity: [
         {
           "@type": "Question",
           name: "What is the Ramayana box office collection today?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: `Latest reported India nett on Day ${ram.trackedThroughDay ?? last?.dayNumber ?? "—"} is ${formatCr(ram.lastDayNet ?? last?.indiaNet)}. Cumulative consensus India nett is ${formatCr(ram.indiaNet)}; worldwide gross is ${formatCr(ram.worldwide)}.`,
+            text: `Latest reported India nett on Day ${through} is ${formatCr(ram.lastDayNet ?? last?.indiaNet)}. Cumulative consensus India nett is ${formatCr(ram.indiaNet)}; worldwide gross is ${formatCr(ram.worldwide)}.`,
           },
         },
         {
@@ -553,7 +603,7 @@ export function ramayanaJsonLd(pack: Pack): unknown[] {
           name: "What is Ramayana worldwide box office collection?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: `The Indian Box Office consensus worldwide gross for Ramayana is ${formatCr(ram.worldwide)}, with overseas gross ${formatCr(ram.overseas)}.`,
+            text: `The Indian Box Office consensus worldwide gross for Ramayana is ${formatCr(ram.worldwide)}, with overseas gross ${formatCr(ram.overseas)} (outside India).`,
           },
         },
         {
@@ -561,12 +611,41 @@ export function ramayanaJsonLd(pack: Pack): unknown[] {
           name: "What was Ramayana Day 1 box office collection?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: days.find((d) => d.dayNumber === 1)
-              ? `Ramayana collected ${formatCr(days.find((d) => d.dayNumber === 1)!.indiaNet)} India nett on Day 1.`
+            text: day1
+              ? `Ramayana collected ${formatCr(day1.indiaNet)} India nett on Day 1 (${formatReleaseDate(day1.reportDate)}).`
               : "Day 1 India nett is not yet on the desk ledger.",
           },
         },
+        {
+          "@type": "Question",
+          name: "What is Ramayana opening weekend box office collection?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: `Opening weekend (Days 1–3) India nett on the day-wise ledger totals ${formatCr(weekendNet)}.`,
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Where can I see Ramayana day wise box office collection?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: `The Ramayana main page at ${SITE}/ramayana/ publishes the day-wise India nett and India gross table, plus worldwide and overseas lifetime totals from the Indian Box Office consensus desk.`,
+          },
+        },
       ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      name: "Ramayana day-wise theatrical box office (India nett)",
+      description:
+        "Day-by-day India nett and India gross estimates for Ramayana as published on the Indian Box Office consensus desk.",
+      url: `${SITE}/ramayana/#day-wise`,
+      creator: { "@type": "Organization", name: "Indian Box Office", url: SITE },
+      temporalCoverage: days.length
+        ? `${days[0].reportDate}/${days[days.length - 1].reportDate}`
+        : ram.releaseDate,
+      variableMeasured: ["India nett (₹ Cr)", "India gross (₹ Cr)", "Shows", "Occupancy"],
     },
   ];
 }
