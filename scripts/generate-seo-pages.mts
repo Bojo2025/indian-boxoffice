@@ -14,11 +14,16 @@ import {
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { randomBytes } from "node:crypto";
+import {
+  ramayanaFeatureHtml,
+  ramayanaJsonLd,
+  renderRamayanaHubBody,
+} from "./render-ramayana-hub.mts";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const outDir = join(root, "docs");
 const SITE = "https://indian-boxoffice.com";
-const ASSET_VER = "20261109a";
+const ASSET_VER = "20261109b";
 const ADSENSE_CLIENT = "ca-pub-3635078997966836";
 const ADSENSE_SCRIPT = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>`;
 const DESK_EMAIL = "desk@indian-boxoffice.com";
@@ -77,6 +82,7 @@ type Pack = {
   deskDate: string;
   films: Film[];
   morningBrief?: MorningBrief | null;
+  comparedTo?: string | null;
 };
 
 const LANGUAGE_PAGES = [
@@ -283,12 +289,12 @@ function shell(opts: {
       <small class="credit">Developed by Mr Kevin Boyjonauth</small>
     </a>
     <nav>
+      <a href="/ramayana/">Ramayana</a>
       <a href="/daily-box-office/">Daily chart</a>
       <a href="/brief/">Morning brief</a>
       <a href="/briefs/">Brief archive</a>
       <a href="/rankings/2026/">2026 rankings</a>
       <a href="/about/">About</a>
-      <a href="/about-methodology/">Methodology</a>
       <a href="/contact/">Contact</a>
     </nav>
   </header>
@@ -300,6 +306,7 @@ function shell(opts: {
     <div class="wrap">
       Independent consensus of published theatrical estimates. India has no official auditor — we publish the spread.
       Figures in ₹ crore. India nett / worldwide gross.
+      · <a href="/ramayana/">Ramayana</a>
       · <a href="/daily-box-office/">Daily chart</a>
       · <a href="/brief/">Morning brief</a>
       · <a href="/briefs/">Brief archive</a>
@@ -675,6 +682,11 @@ function renderMoviePage(film: Film, deskDate: string): string {
         </details>
       </section>
 
+      ${
+        /ramayana/i.test(film.id) || /ramayana/i.test(film.title)
+          ? `<p class="seo-back"><a href="/ramayana/"><strong>Open Ramayana Box Office command centre →</strong></a></p>`
+          : ""
+      }
       <p class="seo-back"><a href="/daily-box-office/">← Daily box office chart</a> · <a href="/records/highest-day-1-collection-2026/">Day 1 records</a> · <a href="/rankings/2026/">2026 rankings</a> · <a href="/">Home</a></p>
     </article>
   `;
@@ -1018,6 +1030,25 @@ function renderLanguagePage(
       { name: `${meta.language} Box Office`, url },
     ],
     jsonLd: [itemList],
+    body,
+  });
+}
+
+function renderRamayanaPage(pack: Pack): string | null {
+  const body = renderRamayanaHubBody(pack);
+  if (!body) return null;
+  const url = `${SITE}/ramayana/`;
+  return shell({
+    title: "Ramayana Box Office Collection Today | Day-wise India Nett & Worldwide Tracker",
+    description:
+      "Ramayana box office command centre: day-wise India nett, worldwide and overseas gross, opening weekend, records, comparisons and Week 1 desk scenarios from Indian Box Office.",
+    canonical: url,
+    ogType: "article",
+    breadcrumbs: [
+      { name: "Home", url: `${SITE}/` },
+      { name: "Ramayana Box Office", url },
+    ],
+    jsonLd: ramayanaJsonLd(pack),
     body,
   });
 }
@@ -1497,6 +1528,16 @@ function prerenderHomepage(pack: Pack) {
   html = replaceInnerById(html, "late-grid", late.map((m) => cardHtml(m, deskDate)).join("\n") || `<p class="meta">No late-run titles.</p>`);
   html = replaceInnerById(html, "rank-body", rankingsRows(ranked));
 
+  const feature = ramayanaFeatureHtml(pack);
+  if (html.includes('id="ramayana-feature"')) {
+    html = replaceInnerById(html, "ramayana-feature", feature || "");
+  } else if (feature) {
+    html = html.replace(
+      /(<div class="board-top">)/,
+      `<div id="ramayana-feature">\n${feature}\n</div>\n    $1`,
+    );
+  }
+
   const stamp = pack.generatedAt
     ? `Last updated ${new Date(pack.generatedAt).toLocaleString("en-GB", {
         timeZone: "Asia/Kolkata",
@@ -1538,6 +1579,7 @@ function writeSitemap(pack: Pack, briefDates: string[]) {
     { loc: `${SITE}/daily-box-office/`, changefreq: "hourly", priority: "0.95" },
     { loc: `${SITE}/rankings/2026/`, changefreq: "hourly", priority: "0.9" },
     { loc: `${SITE}/records/highest-day-1-collection-2026/`, changefreq: "daily", priority: "0.85" },
+    { loc: `${SITE}/ramayana/`, changefreq: "hourly", priority: "0.98" },
     { loc: `${SITE}/about/`, changefreq: "monthly", priority: "0.7" },
     { loc: `${SITE}/about-methodology/`, changefreq: "monthly", priority: "0.7" },
     { loc: `${SITE}/editorial-policy/`, changefreq: "monthly", priority: "0.55" },
@@ -1723,6 +1765,9 @@ export async function generateSeoPages(packInput?: Pack): Promise<void> {
     writePage(`languages/${lang.slug}/index.html`, renderLanguagePage(lang, pack.films, pack.deskDate));
   }
 
+  const ramayanaHtml = renderRamayanaPage(pack);
+  if (ramayanaHtml) writePage("ramayana/index.html", ramayanaHtml);
+
   writePage("about/index.html", renderAboutPage());
   writePage("about-methodology/index.html", renderMethodologyPage());
   writePage("editorial-policy/index.html", renderEditorialPolicyPage());
@@ -1783,6 +1828,7 @@ export async function generateSeoPages(packInput?: Pack): Promise<void> {
     `${SITE}/rankings/2026/`,
     `${SITE}/brief/`,
     `${SITE}/briefs/`,
+    `${SITE}/ramayana/`,
     `${SITE}/about/`,
     `${SITE}/about-methodology/`,
     `${SITE}/editorial-policy/`,
@@ -1793,7 +1839,7 @@ export async function generateSeoPages(packInput?: Pack): Promise<void> {
   await pingIndexNow(indexNowKey, pingUrls);
 
   console.log(
-    `SEO pages: ${pack.films.length} movies · daily hub + records + ${LANGUAGE_PAGES.length} languages · ${briefs.length} briefs · sitemap + feed written`,
+    `SEO pages: ${pack.films.length} movies · daily hub + records + ${LANGUAGE_PAGES.length} languages · ${briefs.length} briefs${ramayanaHtml ? " · ramayana hub" : ""} · sitemap + feed written`,
   );
 }
 

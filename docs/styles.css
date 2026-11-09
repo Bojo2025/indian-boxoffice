@@ -1093,3 +1093,196 @@ tr.day-one td {
   color: var(--subtle);
 }
 
+/* ── Ramayana command centre ─────────────────────────────────────────────── */
+.rama-feature {
+  margin: 0 0 28px;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(120deg, color-mix(in srgb, var(--accent) 16%, transparent), transparent 55%),
+    var(--surface);
+}
+.rama-feature-link {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 16px;
+  padding: 16px 18px;
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+}
+.rama-feature-poster {
+  width: 72px;
+  height: 108px;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--border);
+  display: block;
+  background: #12100e;
+}
+.rama-feature-copy h2 {
+  font-family: Newsreader, Georgia, serif;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  margin: 2px 0 6px;
+  color: var(--fg);
+}
+.rama-feature-copy p {
+  margin: 0;
+  color: var(--paper);
+  max-width: 60ch;
+}
+.rama-feature-cta {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+.rama-hub { max-width: 1100px; }
+.rama-hero {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+.rama-hero-poster {
+  width: 140px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--border);
+  background: #12100e;
+}
+.rama-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin: 12px 0 8px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.rama-chip {
+  display: inline-block;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  padding: 3px 8px;
+}
+.rama-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin: 8px 0 18px;
+}
+.rama-metric {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.rama-metric .m-label {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.rama-metric strong {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 1.2rem;
+  color: var(--paper);
+  font-weight: 500;
+}
+.rama-metric .m-sub { font-size: 11px; color: var(--subtle); }
+.rama-note {
+  color: var(--muted);
+  max-width: 72ch;
+  margin: 0 0 18px;
+  font-size: 0.95rem;
+}
+.rama-today-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin: 0 0 14px;
+}
+.rama-today-grid div {
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+}
+.rama-today-grid dt {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+.rama-today-grid dd {
+  margin: 0;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 1.05rem;
+  color: var(--paper);
+}
+.rama-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.rama-table th, .rama-table td {
+  border-bottom: 1px solid var(--border);
+  padding: 8px 10px;
+  text-align: left;
+}
+.rama-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.rama-table tr.rama-total td { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+.rama-table tr.rama-self td { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.rama-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin: 12px 0 24px;
+}
+.rama-chart-grid figure {
+  margin: 0;
+  border: 1px solid var(--border);
+  padding: 12px 14px 8px;
+  background: var(--surface);
+  color: var(--paper);
+}
+.rama-chart-grid figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.rama-chart { width: 100%; height: auto; display: block; color: var(--accent); }
+.rama-records {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin: 12px 0 24px;
+}
+.rama-record {
+  border: 1px solid var(--border);
+  padding: 14px 16px;
+  background: var(--surface);
+}
+.rama-record h3 {
+  font-size: 1rem;
+  margin: 8px 0 6px;
+  color: var(--fg);
+}
+.rama-record p { margin: 0; color: var(--paper); font-size: 0.95rem; }
+.rama-hub section { margin: 28px 0; }
+.rama-hub h2 {
+  font-family: Newsreader, Georgia, serif;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  margin: 0 0 10px;
+}
+@media (max-width: 640px) {
+  .rama-hero { grid-template-columns: 96px 1fr; gap: 14px; }
+  .rama-hero-poster { width: 96px; }
+  .rama-feature-link { grid-template-columns: 56px 1fr; gap: 12px; padding: 12px; }
+  .rama-feature-poster { width: 56px; height: 84px; }
+}
+
