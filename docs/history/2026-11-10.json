@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generatedAt": "2026-11-10T06:39:03.722Z",
+  "generatedAt": "2026-11-10T11:54:51.861Z",
   "films": [
     {
       "id": "toxic",
@@ -138,9 +138,9 @@
     {
       "id": "karuppu",
       "title": "Karuppu",
-      "indiaNet": 229,
-      "worldwide": 312.5,
-      "status": "closed"
+      "indiaNet": 198.18,
+      "worldwide": 310.12,
+      "status": "playing"
     },
     {
       "id": "msvpg",
@@ -195,14 +195,14 @@
       "id": "ramayana",
       "title": "Ramayana",
       "indiaNet": 453.85,
-      "worldwide": 663.9,
+      "worldwide": 673.9,
       "status": "playing"
     },
     {
       "id": "scene",
       "title": "Scene",
-      "indiaNet": 105.8,
-      "worldwide": 149.7,
+      "indiaNet": 105.95,
+      "worldwide": 152.2,
       "status": "playing"
     },
     {
@@ -230,7 +230,7 @@
       "id": "udta-teer",
       "title": "Udta Teer",
       "indiaNet": 48.29,
-      "worldwide": 68.81,
+      "worldwide": 66.76,
       "status": "playing"
     },
     {
