@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "generatedAt": "2026-11-10T11:54:51.861Z",
+  "generatedAt": "2026-11-10T16:53:45.759Z",
   "films": [
     {
       "id": "toxic",
@@ -61,7 +61,7 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 342.81,
+      "indiaNet": 342.79,
       "worldwide": 453.26,
       "status": "late"
     },
@@ -103,7 +103,7 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 196.87,
+      "indiaNet": 196.86,
       "worldwide": 234.43,
       "status": "late"
     },
@@ -159,7 +159,7 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 379.87,
+      "indiaNet": 379.67,
       "worldwide": 587.83,
       "status": "playing"
     },
@@ -194,190 +194,8 @@
     {
       "id": "ramayana",
       "title": "Ramayana",
-      "indiaNet": 453.85,
-      "worldwide": 673.9,
-      "status": "playing"
-    },
-    {
-      "id": "scene",
-      "title": "Scene",
-      "indiaNet": 105.95,
-      "worldwide": 152.2,
-      "status": "playing"
-    },
-    {
-      "id": "mookuthi-amman-2",
-      "title": "Mookuthi Amman 2",
-      "indiaNet": 19.23,
-      "worldwide": 19.23,
-      "status": "playing"
-    },
-    {
-      "id": "aadarsha-kutumbam-house-no-47",
-      "title": "Aadarsha Kutumbam House No: 47",
-      "indiaNet": 48.15,
-      "worldwide": 71.45,
-      "status": "playing"
-    },
-    {
-      "id": "jailer-2",
-      "title": "Jailer 2",
-      "indiaNet": 472.9,
-      "worldwide": 828.5,
-      "status": "playing"
-    },
-    {
-      "id": "udta-teer",
-      "title": "Udta Teer",
-      "indiaNet": 48.29,
-      "worldwide": 66.76,
-      "status": "playing"
-    },
-    {
-      "id": "premada-oorali",
-      "title": "Premada Oorali",
-      "indiaNet": 114.81,
-      "worldwide": 137.24,
-      "status": "playing"
-    },
-    {
-      "id": "the-cat-in-the-hat",
-      "title": "The Cat in the Hat",
-      "indiaNet": 0.28,
-      "worldwide": 0.28,
-      "status": "playing"
-    },
-    {
-      "id": "pyre",
-      "title": "Pyre",
-      "indiaNet": 0.25,
-      "worldwide": 0.25,
-      "status": "playing"
-    },
-    {
-      "id": "summer-holidays",
-      "title": "Summer Holidays",
-      "indiaNet": 0.14,
-      "worldwide": 0.14,
-      "status": "playing"
-    },
-    {
-      "id": "disco",
-      "title": "Disco",
-      "indiaNet": 0.08,
-      "worldwide": 0.08,
-      "status": "playing"
-    },
-    {
-      "id": "bhai-beej",
-      "title": "Bhai Beej",
-      "indiaNet": 0.06,
-      "worldwide": 0.06,
-      "status": "playing"
-    },
-    {
-      "id": "bohurupi-the-golden-daku",
-      "title": "Bohurupi: The Golden Daku",
-      "indiaNet": 0.05,
-      "worldwide": 0.05,
-      "status": "playing"
-    },
-    {
-      "id": "the-eken-kerala-e-kurukshetra",
-      "title": "The Eken: Kerala-e-Kurukshetra",
-      "indiaNet": 8.5,
-      "worldwide": 9.7,
-      "status": "playing"
-    },
-    {
-      "id": "garividi-lakshmi",
-      "title": "Garividi Lakshmi",
-      "indiaNet": 9.11,
-      "worldwide": 10.35,
-      "status": "playing"
-    },
-    {
-      "id": "cult",
-      "title": "Cult",
-      "indiaNet": 5.15,
-      "worldwide": 5.9,
-      "status": "playing"
-    },
-    {
-      "id": "doraemon-castle-of-the-undersea-devil-4dx",
-      "title": "Doraemon: Castle of the Undersea Devil (4DX)",
-      "indiaNet": 24.46,
-      "worldwide": 28.64,
-      "status": "playing"
-    },
-    {
-      "id": "418",
-      "title": "418",
-      "indiaNet": 0.03,
-      "worldwide": 0.03,
-      "status": "playing"
-    },
-    {
-      "id": "prahaar-the-ujjwal-nikam-story",
-      "title": "Prahaar - The Ujjwal Nikam Story",
-      "indiaNet": 23.9,
-      "worldwide": 30.9,
-      "status": "playing"
-    },
-    {
-      "id": "baththa",
-      "title": "Baththa",
-      "indiaNet": 30.38,
-      "worldwide": 35.06,
-      "status": "playing"
-    },
-    {
-      "id": "clayface",
-      "title": "Clayface",
-      "indiaNet": 0.02,
-      "worldwide": 0.02,
-      "status": "playing"
-    },
-    {
-      "id": "desu7",
-      "title": "DeSu7",
-      "indiaNet": 6.46,
-      "worldwide": 7.52,
-      "status": "playing"
-    },
-    {
-      "id": "anbil-avan",
-      "title": "Anbil Avan",
-      "indiaNet": 7.92,
-      "worldwide": 9.08,
-      "status": "playing"
-    },
-    {
-      "id": "heart-of-the-beast",
-      "title": "Heart of the Beast",
-      "indiaNet": 14.33,
-      "worldwide": 16.52,
-      "status": "playing"
-    },
-    {
-      "id": "verity",
-      "title": "Verity",
-      "indiaNet": 10.92,
-      "worldwide": 12.31,
-      "status": "playing"
-    },
-    {
-      "id": "emperor-vs-sarat-chandra",
-      "title": "Emperor vs Sarat Chandra",
-      "indiaNet": 0.01,
-      "worldwide": 0.01,
-      "status": "playing"
-    },
-    {
-      "id": "ranabaali",
-      "title": "Ranabaali",
-      "indiaNet": 58.97,
-      "worldwide": 80.8,
+      "indiaNet": 534.55,
+      "worldwide": 823.5,
       "status": "playing"
     }
   ]
