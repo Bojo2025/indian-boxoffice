@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T05:25:44.851Z",
+  "generatedAt": "2026-11-11T11:31:36.303Z",
   "deskDate": "2026-11-11",
   "comparedTo": "2026-11-11 prior",
   "mode": "server-consensus",
@@ -12,10 +12,10 @@
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 185)",
-      "koimoi has failed 185 consecutive publishes",
-      "boi failed: HTTP 403 (streak 46)",
-      "boi has failed 46 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 186)",
+      "koimoi has failed 186 consecutive publishes",
+      "boi failed: HTTP 403 (streak 47)",
+      "boi has failed 47 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
@@ -25,7 +25,7 @@
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 185,
+        "streakFail": 186,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@
       },
       "boi": {
         "ok": false,
-        "streakFail": 46,
+        "streakFail": 47,
         "detail": "HTTP 403"
       }
     }
@@ -13742,8 +13742,8 @@
       "lastDayNet": 0.01,
       "trackedThroughDay": 146,
       "liveSources": [
-        "hungama",
-        "sacnilk"
+        "sacnilk",
+        "hungama"
       ],
       "deltaNet": 0,
       "deltaWw": 0,
@@ -20716,8 +20716,8 @@
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-17",
@@ -21082,123 +21082,123 @@
       "sourceId": "sacnilk",
       "title": "Drishyam 3: The Conclusion: Sacnilk 40 days, India net ₹379.87 Cr",
       "url": "https://www.sacnilk.com/news/drishyam_3_hindi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-11T05:25:02.863Z",
+      "publishedAt": "2026-11-11T11:30:43.517Z",
       "summary": "Live day-wise pull. Last day 40. WW ₹588.05 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Ramayana: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/ramayana_part_1_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-11T05:25:02.930Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹94.1 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Mirzapur: The Movie: Sacnilk 61 days, India net ₹230.64 Cr",
-      "url": "https://www.sacnilk.com/news/mirzapur_the_movie_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-11T05:25:03.164Z",
-      "summary": "Live day-wise pull. Last day 62. WW ₹339.91 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Hanuman Ansh: Sacnilk 94 days, India net ₹342.81 Cr",
       "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-11T05:25:03.196Z",
+      "publishedAt": "2026-11-11T11:30:43.572Z",
       "summary": "Live day-wise pull. Last day 96. WW ₹453.28 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Sardar 2: Sacnilk 21 days, India net ₹16.33 Cr",
-      "url": "https://www.sacnilk.com/news/sardar_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-11T05:25:03.234Z",
-      "summary": "Live day-wise pull. Last day 22. WW ₹23.88 Cr."
+      "title": "Mirzapur: The Movie: Sacnilk 61 days, India net ₹230.64 Cr",
+      "url": "https://www.sacnilk.com/news/mirzapur_the_movie_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-11T11:30:43.589Z",
+      "summary": "Live day-wise pull. Last day 62. WW ₹339.91 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Ramayana: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/ramayana_part_1_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-11T11:30:43.830Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹94.1 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Scene: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/scene_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-11T05:25:03.257Z",
+      "publishedAt": "2026-11-11T11:30:44.298Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹12.85 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Jailer 2: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/jailer_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-11T05:25:03.293Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.88 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Mookuthi Amman 2: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/mookuthi_amman_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-11T05:25:03.507Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹2.1 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Aadarsha Kutumbam House No: 47: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/aadarsha_kutumbam_house_no_47_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-11T05:25:03.519Z",
+      "publishedAt": "2026-11-11T11:30:44.433Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.9 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Mookuthi Amman 2: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/mookuthi_amman_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-11T11:30:44.513Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹2.1 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Toxic: Sacnilk 36 days, India net ₹250.13 Cr",
       "url": "https://www.sacnilk.com/news/toxic_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-11T05:25:03.557Z",
+      "publishedAt": "2026-11-11T11:30:44.546Z",
       "summary": "Live day-wise pull. Last day 37. WW ₹342.26 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Sardar 2: Sacnilk 21 days, India net ₹16.33 Cr",
+      "url": "https://www.sacnilk.com/news/sardar_2_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-11T11:30:45.135Z",
+      "summary": "Live day-wise pull. Last day 22. WW ₹23.88 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Awarapan 2: Sacnilk 46 days, India net ₹150.63 Cr",
+      "url": "https://www.sacnilk.com/news/awarapan_2_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-11T11:30:45.280Z",
+      "summary": "Live day-wise pull. Last day 82. WW ₹213.05 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Udta Teer: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/udta_teer_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-11T05:25:03.620Z",
+      "publishedAt": "2026-11-11T11:30:45.308Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.54 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Premada Oorali: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/premada_oorali_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-11T05:25:03.669Z",
+      "publishedAt": "2026-11-11T11:30:45.320Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.52 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Awarapan 2: Sacnilk 46 days, India net ₹150.63 Cr",
-      "url": "https://www.sacnilk.com/news/awarapan_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-11T05:25:03.864Z",
-      "summary": "Live day-wise pull. Last day 82. WW ₹213.05 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr",
-      "url": "https://www.sacnilk.com/news/border_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-11T05:25:04.499Z",
-      "summary": "Live day-wise pull. Last day 58. WW ₹450.19 Cr."
+      "title": "Jailer 2: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/jailer_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-11T11:30:45.361Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.88 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Irumudi: Sacnilk 69 days, India net ₹194.54 Cr",
       "url": "https://www.sacnilk.com/news/irumudi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-11T05:25:04.525Z",
+      "publishedAt": "2026-11-11T11:30:46.394Z",
       "summary": "Live day-wise pull. Last day 70. WW ₹246.87 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Batwara 1947: Sacnilk 24 days, India net ₹38.08 Cr",
-      "url": "https://www.sacnilk.com/news/batwara_1947_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-11T05:25:04.900Z",
-      "summary": "Live day-wise pull. Last day 24. WW ₹54.2 Cr."
+      "title": "The Cat in the Hat: Sacnilk discovered",
+      "url": "https://www.sacnilk.com/movie/The_Cat_in_the_Hat_2026",
+      "publishedAt": "2026-11-11T11:30:55.491Z",
+      "summary": "Auto-discovered Indian title. Current board India net ₹0.23 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Pyre: Sacnilk discovered",
+      "url": "https://www.sacnilk.com/movie/Pyre_2026",
+      "publishedAt": "2026-11-11T11:30:55.664Z",
+      "summary": "Auto-discovered Indian title. Current board India net ₹0.25 Cr."
     }
   ],
   "morningBrief": {
-    "briefDate": "2026-11-10",
-    "generatedAt": "2026-11-10T11:54:52.890Z",
-    "headline": "India box office: Ramayana leads the latest daily chart at ₹107.5 Cr",
-    "lede": "Ramayana leads the latest reported daily India nett at ₹107.5 Cr on Day 5, taking cumulative India nett to ₹453.9 Cr and worldwide gross to ₹673.9 Cr on the Indian Box Office consensus desk.",
-    "body": "Good morning. This is the Indian Box Office morning brief for 2026-11-10 (IST desk date), written from the verified consensus board rather than any single trade headline. India still has no official theatrical auditor; every rupee figure below is a desk estimate, labelled so India nett is never confused with worldwide gross.\n\n## Daily chart leader\n\nRamayana sits at the top of the latest-day India nett ranking with ₹107.5 Cr on Day 5. Cumulative India nett is ₹453.9 Cr; worldwide gross on this desk is ₹673.9 Cr. The title is filed as Indian and currently carries a working status of playing with verdict Pending.\n\nScene is next on the daily chart at ₹21.4 Cr (Day 4, cumulative India nett ₹106 Cr), with Mookuthi Amman 2 third at ₹5.2 Cr. Gaps between the top three matter more than the order alone: a soft midweek day for a long-runner can look “small” in absolute crores while still being a healthy hold for its week of release.\n\n## Latest daily ranking\n\nHere is the desk’s latest-day India nett order among currently tracked theatrical titles (not a lifetime worldwide leaderboard):\n\n- 1. Ramayana (Indian) — ₹107.5 Cr on Day 5; cumulative India nett ₹453.9 Cr; WW ₹673.9 Cr\n- 2. Scene (Indian) — ₹21.4 Cr on Day 4; cumulative India nett ₹106 Cr; WW ₹152.2 Cr\n- 3. Mookuthi Amman 2 (Indian) — ₹5.2 Cr on Day 4; cumulative India nett ₹19.2 Cr; WW ₹19.2 Cr\n- 4. Aadarsha Kutumbam House No: 47 (Indian) — ₹1.4 Cr on Day 11; cumulative India nett ₹48.2 Cr; WW ₹71.5 Cr\n- 5. Jailer 2 (Indian) — ₹1.3 Cr on Day 26; cumulative India nett ₹472.9 Cr; WW ₹828.5 Cr\n- 6. Udta Teer (Indian) — ₹0.6 Cr on Day 18; cumulative India nett ₹48.3 Cr; WW ₹66.8 Cr\n- 7. Premada Oorali (Indian) — ₹0.5 Cr on Day 46; cumulative India nett ₹114.8 Cr; WW ₹137.2 Cr\n- 8. The Cat in the Hat (Indian) — ₹0.3 Cr on Day 4; cumulative India nett ₹0.3 Cr; WW ₹0.3 Cr\n\n## Openers and recent releases\n\nAmong films released in the last two weeks, Scene is the one to watch closely: released 2026-11-07 (3 days ago), latest reported India nett ₹21.4 Cr with cumulative India nett ₹106 Cr and worldwide ₹152.2 Cr. Early days are the most volatile part of any run — Day 1 and the first weekday drop usually say more about screens and word of mouth than a lifetime total published weeks later.\n\nRecent theatrical watchlist:\n\n- Scene (released 2026-11-07, Indian) — latest day ₹21.4 Cr; cumulative India nett ₹106 Cr\n- Mookuthi Amman 2 (released 2026-11-07, Indian) — latest day ₹5.2 Cr; cumulative India nett ₹19.2 Cr\n- The Cat in the Hat (released 2026-11-07, Indian) — latest day ₹0.3 Cr; cumulative India nett ₹0.3 Cr\n- Summer Holidays (released 2026-11-07, Indian) — latest day ₹0.1 Cr; cumulative India nett ₹0.1 Cr\n- Disco (released 2026-11-07, Indian) — latest day ₹0.1 Cr; cumulative India nett ₹0.1 Cr\n- Bhai Beej (released 2026-11-07, Indian) — latest day ₹0.1 Cr; cumulative India nett ₹0.1 Cr\n\n## Holds, momentum, and lifetime context\n\nSince the previous board snapshot, notable lifetime moves include: Ramayana +10 Cr worldwide; Scene +2.5 Cr worldwide; Karuppu -2.4 Cr worldwide; India nett -30.8 Cr; Udta Teer -2.1 Cr worldwide. Treat snapshot-to-snapshot deltas as orientation — ingest repairs and late reports can restate a total without meaning the film “earned” that swing in a single calendar day.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader on this board at ₹1,820 Cr (India nett ₹1,108.1 Cr). That is a career-to-date total, not today’s daily chart.\n\n## Language circuits\n\nAcross the top of the daily chart, circuit mix looks like this — Indian: 10 titles contributing about ₹138.4 Cr of latest-day India nett among the top tracked films; Hindi: 1 title contributing about ₹0.2 Cr of latest-day India nett among the top tracked films; English: 1 title contributing about ₹0.2 Cr of latest-day India nett among the top tracked films. Hindi, South Indian, and Hollywood titles can share the same national chart while living on very different screen footprints; compare like with like when judging a Day 8 versus a Day 1.\n\n## How to read today’s brief\n\nUse the home board for the live “this week” stack, open individual film pages for the full day-wise table and analysis, and keep this brief as the morning narrative layer. Definitions: India nett is domestic after entertainment tax/GST; worldwide gross is global ticket revenue before those deductions. Methodology and corrections live on the desk’s public policy pages. Publisher: Kevin Boyjonauth · Indian Box Office.",
+    "briefDate": "2026-11-11",
+    "generatedAt": "2026-11-11T11:31:37.617Z",
+    "headline": "India box office: Ramayana leads the latest daily chart at ₹94.1 Cr",
+    "lede": "Ramayana leads the latest reported daily India nett at ₹94.1 Cr on Day 6, taking cumulative India nett to ₹534.6 Cr and worldwide gross to ₹823.5 Cr on the Indian Box Office consensus desk.",
+    "body": "Good morning. This is the Indian Box Office morning brief for 2026-11-11 (IST desk date), written from the verified consensus board rather than any single trade headline. India still has no official theatrical auditor; every rupee figure below is a desk estimate, labelled so India nett is never confused with worldwide gross.\n\n## Daily chart leader\n\nRamayana sits at the top of the latest-day India nett ranking with ₹94.1 Cr on Day 6. Cumulative India nett is ₹534.6 Cr; worldwide gross on this desk is ₹823.5 Cr. The title is filed as Indian and currently carries a working status of playing with verdict Pending.\n\nScene is next on the daily chart at ₹12.9 Cr (Day 5, cumulative India nett ₹110.3 Cr), with Mookuthi Amman 2 third at ₹2.1 Cr. Gaps between the top three matter more than the order alone: a soft midweek day for a long-runner can look “small” in absolute crores while still being a healthy hold for its week of release.\n\n## Latest daily ranking\n\nHere is the desk’s latest-day India nett order among currently tracked theatrical titles (not a lifetime worldwide leaderboard):\n\n- 1. Ramayana (Indian) — ₹94.1 Cr on Day 6; cumulative India nett ₹534.6 Cr; WW ₹823.5 Cr\n- 2. Scene (Indian) — ₹12.9 Cr on Day 5; cumulative India nett ₹110.3 Cr; WW ₹174.4 Cr\n- 3. Mookuthi Amman 2 (Indian) — ₹2.1 Cr on Day 5; cumulative India nett ₹18.3 Cr; WW ₹18.7 Cr\n- 4. Aadarsha Kutumbam House No: 47 (Indian) — ₹0.9 Cr on Day 12; cumulative India nett ₹48.6 Cr; WW ₹72.6 Cr\n- 5. Jailer 2 (Indian) — ₹0.9 Cr on Day 27; cumulative India nett ₹473.4 Cr; WW ₹829.7 Cr\n- 6. Udta Teer (Indian) — ₹0.5 Cr on Day 19; cumulative India nett ₹48.8 Cr; WW ₹67.4 Cr\n- 7. Premada Oorali (Indian) — ₹0.5 Cr on Day 47; cumulative India nett ₹115.4 Cr; WW ₹137.8 Cr\n- 8. Pyre (Indian) — ₹0.3 Cr on Day 12; cumulative India nett ₹0.3 Cr; WW ₹0.3 Cr\n\n## Openers and recent releases\n\nAmong films released in the last two weeks, Scene is the one to watch closely: released 2026-11-07 (4 days ago), latest reported India nett ₹12.9 Cr with cumulative India nett ₹110.3 Cr and worldwide ₹174.4 Cr. Early days are the most volatile part of any run — Day 1 and the first weekday drop usually say more about screens and word of mouth than a lifetime total published weeks later.\n\nRecent theatrical watchlist:\n\n- Scene (released 2026-11-07, Indian) — latest day ₹12.9 Cr; cumulative India nett ₹110.3 Cr\n- Mookuthi Amman 2 (released 2026-11-07, Indian) — latest day ₹2.1 Cr; cumulative India nett ₹18.3 Cr\n- The Cat in the Hat (released 2026-11-07, Indian) — latest day ₹0.2 Cr; cumulative India nett ₹0.2 Cr\n- Summer Holidays (released 2026-11-07, Indian) — latest day ₹0.1 Cr; cumulative India nett ₹0.1 Cr\n- Disco (released 2026-11-07, Indian) — latest day ₹0.1 Cr; cumulative India nett ₹0.1 Cr\n- Bhai Beej (released 2026-11-07, Indian) — latest day ₹0.1 Cr; cumulative India nett ₹0.1 Cr\n\n## Holds, momentum, and lifetime context\n\nNo clean mid-sized worldwide moves cleared the desk’s sanity filters since the previous snapshot. When deltas look extreme, we prefer to wait for the next ingest rather than narrate a bad parse.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader on this board at ₹1,820 Cr (India nett ₹1,108.1 Cr). That is a career-to-date total, not today’s daily chart.\n\n## Language circuits\n\nAcross the top of the daily chart, circuit mix looks like this — Indian: 10 titles contributing about ₹112.5 Cr of latest-day India nett among the top tracked films; Hindi: 1 title contributing about ₹0.2 Cr of latest-day India nett among the top tracked films; English: 1 title contributing about ₹0.2 Cr of latest-day India nett among the top tracked films. Hindi, South Indian, and Hollywood titles can share the same national chart while living on very different screen footprints; compare like with like when judging a Day 8 versus a Day 1.\n\n## How to read today’s brief\n\nUse the home board for the live “this week” stack, open individual film pages for the full day-wise table and analysis, and keep this brief as the morning narrative layer. Definitions: India nett is domestic after entertainment tax/GST; worldwide gross is global ticket revenue before those deductions. Methodology and corrections live on the desk’s public policy pages. Publisher: Kevin Boyjonauth · Indian Box Office.",
     "citations": [],
-    "boardGeneratedAt": "2026-11-10T11:54:51.861Z",
+    "boardGeneratedAt": "2026-11-11T11:31:36.303Z",
     "model": "deterministic-editorial-v2"
   },
   "downloads": {
