@@ -23,7 +23,7 @@ import {
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const outDir = join(root, "docs");
 const SITE = "https://indian-boxoffice.com";
-const ASSET_VER = "20261109c";
+const ASSET_VER = "20261112a";
 const ADSENSE_CLIENT = "ca-pub-3635078997966836";
 const ADSENSE_SCRIPT = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>`;
 const DESK_EMAIL = "desk@indian-boxoffice.com";
@@ -128,6 +128,69 @@ function formatCrCompact(value: number | null | undefined): string {
   }
   return `₹${abs.toLocaleString("en-IN", { maximumFractionDigits: 1, minimumFractionDigits: 1 })} Cr`;
 }
+
+/** Keep SERP titles/snippets readable; avoid mid-word cuts. */
+function clipText(text: string, max: number): string {
+  const t = String(text ?? "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, Math.max(0, max - 1));
+  const sp = cut.lastIndexOf(" ");
+  const base = (sp > max * 0.55 ? cut.slice(0, sp) : cut).replace(/[,:;.\-–—|/]+\s*$/, "").trim();
+  return `${base}…`;
+}
+
+function filmReleaseYear(film: Film): string {
+  const y = (film.releaseDate || "").slice(0, 4);
+  return /^\d{4}$/.test(y) ? y : "2026";
+}
+
+/** CTR-oriented film title — front-load name + India nett, keep ~60 chars when possible. */
+function filmSeoTitle(film: Film): string {
+  const nett = formatCrCompact(film.indiaNet);
+  const year = filmReleaseYear(film);
+  const candidates = [
+    `${film.title} Box Office Day-by-Day: ${nett} India Nett`,
+    `${film.title} Box Office ${year}: ${nett} India Nett`,
+    `${film.title} Box Office: ${nett} Nett | Indian Box Office`,
+    `${film.title} Box Office Collection ${year}`,
+  ];
+  for (const c of candidates) {
+    if (c.length <= 62) return c;
+  }
+  return clipText(`${film.title} Box Office | ${nett}`, 60);
+}
+
+/** Numbered meta description for film SERP snippets (≤158 chars). */
+function filmSeoDescription(film: Film): string {
+  const days = film.dayWise?.length ?? 0;
+  const dayBit =
+    days > 0
+      ? ` ${days} reported day${days === 1 ? "" : "s"} with occupancy & % change.`
+      : " Day-wise table updates as reports land.";
+  return clipText(
+    `${film.title} day-by-day box office: ${formatCr(film.indiaNet)} India nett & ${formatCr(film.worldwide)} worldwide so far.${dayBit} Consensus desk — not an official audit.`,
+    158,
+  );
+}
+
+function worldwideRankNote(film: Film, allFilms: Film[]): string | null {
+  if (!(film.worldwide > 0)) return null;
+  const ranked = [...allFilms]
+    .filter((f) => (f.worldwide || 0) > 0)
+    .sort((a, b) => (b.worldwide || 0) - (a.worldwide || 0));
+  const idx = ranked.findIndex((f) => f.id === film.id);
+  if (idx < 0 || idx >= 20) return null;
+  const rank = idx + 1;
+  const ordinal =
+    rank === 1 ? "1st" : rank === 2 ? "2nd" : rank === 3 ? "3rd" : `${rank}th`;
+  return `Currently ${ordinal} highest worldwide among ${ranked.length} titles on the 2026 Indian Box Office board.`;
+}
+
+const HOME_SEO_TITLE = "Indian Box Office Day-by-Day Collection 2026 | Consensus Desk";
+const HOME_SEO_DESCRIPTION =
+  "Day-by-day Indian box office consensus for Hindi, Tamil, Telugu, Malayalam & Kannada. India nett + worldwide gross, updated every 3 hours — no official auditor.";
 
 function formatReleaseDate(iso: string): string {
   if (!iso) return "—";
@@ -502,7 +565,7 @@ function dayWiseTable(film: Film): string {
     </div>
   `;
 
-  return `<div class="film-detail-days">
+  return `<div class="film-detail-days" id="day-wise">
     <h2>${esc(film.title)} Day by Day Box Office Collection (All Days)</h2>
     <p>Complete theatrical day-wise breakdown in Indian cinemas — domestic nett, worldwide gross, occupancy, and daily change.</p>
     ${milestoneHtml}
@@ -543,7 +606,7 @@ function dayWiseTable(film: Film): string {
   </div>`;
 }
 
-function renderMoviePage(film: Film, deskDate: string): string {
+function renderMoviePage(film: Film, deskDate: string, allFilms: Film[]): string {
   const url = movieUrl(film.slug);
   const posterAbs = absolutePoster(film.poster, film.posterKey);
   const posterLocal = localPoster(film.poster, film.posterKey);
@@ -556,7 +619,10 @@ function renderMoviePage(film: Film, deskDate: string): string {
       ? `${film.title} does not yet have a published budget estimate on this desk, so any hit/flop label remains provisional until cost and longer-run nett are clearer.`
       : `${film.title} had an estimated budget of ${formatCr(film.budgetCr)} and has collected ${formatCr(film.indiaNet)} India nett (${formatCr(film.worldwide)} worldwide), earning a working box office verdict of ${film.verdict} on this desk.`;
   const verdictHeading = `${film.title} Box Office Verdict: Hit or Flop?`;
-  const desc = `Day-by-day box office collection and editorial analysis for ${film.title}: Day 1 opening, daily India nett, worldwide gross, weekend totals, and consensus verdict from the Indian Box Office desk.`;
+  const desc = filmSeoDescription(film);
+  const pageTitle = filmSeoTitle(film);
+  const rankNote = worldwideRankNote(film, allFilms);
+  const trackedDays = days.length || film.trackedThroughDay || 0;
 
   const movieLd = {
     "@context": "https://schema.org",
@@ -587,7 +653,7 @@ function renderMoviePage(film: Film, deskDate: string): string {
     mainEntity: [
       {
         "@type": "Question",
-        name: `What is the day wise box office collection of ${film.title}?`,
+        name: `What is the day-by-day box office collection of ${film.title}?`,
         acceptedAnswer: {
           "@type": "Answer",
           text: `${film.title} has collected ${formatCr(film.indiaNet)} India nett and ${formatCr(film.worldwide)} worldwide gross across ${days.length || "multiple"} reported theatrical days. Refer to our day-by-day table for individual daily figures.`,
@@ -632,6 +698,24 @@ function renderMoviePage(film: Film, deskDate: string): string {
     ],
   };
 
+  const datasetLd =
+    days.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Dataset",
+          name: `${film.title} day-wise theatrical box office (India nett)`,
+          description: `Day-by-day India nett and worldwide figures for ${film.title} from the Indian Box Office consensus desk.`,
+          url: `${url}#day-wise`,
+          creator: {
+            "@type": "Organization",
+            name: "Indian Box Office",
+            url: SITE,
+          },
+          temporalCoverage: `${days[0].reportDate}/${days[days.length - 1].reportDate}`,
+          variableMeasured: ["India nett (₹ Cr)", "Worldwide gross (₹ Cr)", "Occupancy", "Day-over-day change"],
+        }
+      : null;
+
   const body = `
     <article class="seo-film">
       <p class="kicker">${esc(film.language)} · ${esc(film.industry)} · ${esc(film.status)}</p>
@@ -639,20 +723,21 @@ function renderMoviePage(film: Film, deskDate: string): string {
         <img class="film-detail-poster" src="${esc(posterLocal)}" alt="${esc(film.title)} poster" width="220" height="320" />
         <div>
           <h1>${esc(film.title)}</h1>
-          <p class="film-day-tagline">Day-by-Day Theatrical Box Office Collection</p>
+          <p class="film-day-tagline">Day-by-Day Theatrical Box Office Collection ${esc(filmReleaseYear(film))}</p>
           <p class="film-detail-meta">${esc(film.director)} · Released ${esc(formatReleaseDate(film.releaseDate))}</p>
           <p class="film-detail-cast"><strong>Cast</strong><br />${esc(film.starring)}</p>
           <p class="film-detail-description">${esc(synopsis)}</p>
         </div>
       </div>
-      <dl class="film-detail-stats">
-        <div><dt>India net</dt><dd>${esc(formatCr(film.indiaNet))}</dd></div>
+      <dl class="film-detail-stats" aria-label="${esc(film.title)} box office summary">
+        <div><dt>India nett</dt><dd>${esc(formatCr(film.indiaNet))}</dd></div>
         <div><dt>Worldwide</dt><dd>${esc(formatCr(film.worldwide))}</dd></div>
         <div><dt>Latest day</dt><dd>${esc(formatCr(film.lastDayNet))}</dd></div>
-        <div><dt>Film rating</dt><dd>${esc(formatRating(film.rating))}</dd></div>
+        <div><dt>Days tracked</dt><dd>${trackedDays || "—"}</dd></div>
         <div><dt>Box office verdict</dt><dd>${esc(film.verdict)}</dd></div>
         <div><dt>Budget</dt><dd>${film.budgetCr == null ? "—" : esc(formatCr(film.budgetCr))}</dd></div>
       </dl>
+      ${rankNote ? `<p class="film-rank-note">${esc(rankNote)} <a href="/rankings/2026/">See 2026 rankings</a> · <a href="/records/highest-day-1-collection-2026/">Highest Day 1 of 2026</a>.</p>` : `<p class="film-rank-note"><a href="/records/highest-day-1-collection-2026/">See highest Day 1 of 2026</a> · <a href="/rankings/2026/">2026 worldwide rankings</a>.</p>`}
 
       ${filmRunAnalysisHtml(film, deskDate)}
 
@@ -699,17 +784,18 @@ function renderMoviePage(film: Film, deskDate: string): string {
   `;
 
   return shell({
-    title: `${film.title} Day Wise Box Office Collection: Day by Day India Nett & Worldwide | Indian Box Office`,
+    title: pageTitle,
     description: desc,
     canonical: url,
     ogType: "video.movie",
     ogImage: posterAbs,
+    ogImageAlt: `${film.title} theatrical poster`,
     breadcrumbs: [
       { name: "Home", url: `${SITE}/` },
       { name: "Daily Box Office", url: `${SITE}/daily-box-office/` },
       { name: film.title, url },
     ],
-    jsonLd: [movieLd, faqLd],
+    jsonLd: [movieLd, faqLd, ...(datasetLd ? [datasetLd] : [])],
     body,
   });
 }
@@ -800,9 +886,20 @@ function renderDailyBoxOfficePage(films: Film[], deskDate: string): string {
     <p class="seo-back" style="margin-top:28px"><a href="/records/highest-day-1-collection-2026/">← Day 1 records</a> · <a href="/rankings/2026/">2026 rankings</a> · <a href="/">Home</a></p>
   `;
 
+  const topDaily = dailyList
+    .slice(0, 3)
+    .map((m) => m.title)
+    .filter(Boolean);
+  const dailyDesc = clipText(
+    `Daily Indian box office collection today: day-wise India nett for ${dailyList.length} films in theatres${
+      topDaily.length ? ` — led by ${topDaily.join(", ")}` : ""
+    }. Day numbers, % change, and consensus estimates updated every 3 hours.`,
+    158,
+  );
+
   return shell({
-    title: "Daily Indian Box Office Collection: Day-Wise Domestic Nett Today | Indian Box Office",
-    description: "Daily Indian box office collection for films currently running in theatres. Day-wise India nett, active release day numbers (Day 1, Day 2), and day-over-day change percentages.",
+    title: "Daily Indian Box Office Collection Today | Day-Wise India Nett",
+    description: dailyDesc,
     canonical: url,
     breadcrumbs: [
       { name: "Home", url: `${SITE}/` },
@@ -895,9 +992,20 @@ function renderDay1RecordsPage(films: Film[], deskDate: string): string {
     <p class="seo-back" style="margin-top:28px"><a href="/daily-box-office/">← Daily box office chart</a> · <a href="/rankings/2026/">2026 rankings</a> · <a href="/">Home</a></p>
   `;
 
+  const leaders = withDay1
+    .slice(0, 3)
+    .map((m) => m.title)
+    .filter(Boolean);
+  const recordsDesc = clipText(
+    `Highest Day 1 box office collections of 2026 ranked by India nett${
+      leaders.length ? `. ${leaders.join(", ")}${withDay1.length > 3 ? " and more" : ""}` : ""
+    }. Independent consensus desk updated daily.`,
+    158,
+  );
+
   return shell({
-    title: "Highest Day 1 Box Office Collection 2026 (Opening Day Records) | Indian Box Office",
-    description: "Highest opening day (Day 1) Indian box office collections of 2026 ranked by domestic India nett. Compare Bollywood, Tollywood, Kollywood, and Mollywood openers.",
+    title: "Highest Day 1 Box Office Collection 2026 | Indian Box Office",
+    description: recordsDesc,
     canonical: url,
     breadcrumbs: [
       { name: "Home", url: `${SITE}/` },
@@ -957,10 +1065,20 @@ function renderRankingsPage(films: Film[], deskDate: string): string {
     <p class="seo-back" style="margin-top:28px"><a href="/">← Home</a> · <a href="/about-methodology/">Methodology</a></p>
   `;
 
+  const topWw = ranked
+    .slice(0, 3)
+    .map((m) => `${m.title} (${formatCrCompact(m.worldwide)})`)
+    .filter(Boolean);
+  const rankingsDesc = clipText(
+    `Highest grossing Indian films 2026 by worldwide gross, with India nett${
+      topWw.length ? `. Leaders: ${topWw.join(", ")}` : ""
+    }. Day-by-day consensus desk updated daily.`,
+    158,
+  );
+
   return shell({
     title: "Highest Grossing Indian Films 2026 | Box Office Rankings",
-    description:
-      "Highest grossing Indian films of 2026 by worldwide gross, with India nett collection, language, and theatrical release date. Updated daily.",
+    description: rankingsDesc,
     canonical: url,
     breadcrumbs: [
       { name: "Home", url: `${SITE}/` },
@@ -1028,9 +1146,20 @@ function renderLanguagePage(
     <p class="seo-back" style="margin-top:28px"><a href="/rankings/2026/">← 2026 rankings</a> · <a href="/about-methodology/">Methodology</a> · <a href="/">Home</a></p>
   `;
 
+  const langLeaders = filtered
+    .slice(0, 3)
+    .map((m) => m.title)
+    .filter(Boolean);
+  const langDesc = clipText(
+    `Highest grossing ${meta.language} movies of 2026 — day-by-day India nett & worldwide gross${
+      langLeaders.length ? `. Featuring ${langLeaders.join(", ")}` : ""
+    }. ${meta.label} rankings from the Indian Box Office consensus desk.`,
+    158,
+  );
+
   return shell({
     title: `${meta.language} Box Office Collection 2026 | Highest Grossing ${meta.language} Films`,
-    description: `Highest grossing ${meta.language} movies of 2026 with day-by-day India nett context, worldwide gross, and ${meta.label} box office rankings from Indian Box Office.`,
+    description: langDesc,
     canonical: url,
     breadcrumbs: [
       { name: "Home", url: `${SITE}/` },
@@ -1052,8 +1181,16 @@ function renderRamayanaPage(pack: Pack): string | null {
     ? absolutePoster(ram.poster, ram.posterKey || ram.id)
     : `${SITE}/posters/ramayana.jpg`;
   const day = ram?.trackedThroughDay ?? "—";
-  const title = `Ramayana Box Office Collection Today (Day ${day}) | India Nett, Worldwide & Day-wise Tracker`;
-  const description = `Ramayana box office collection today and day-wise: Day ${day} India nett ${ram?.lastDayNet != null ? formatCr(ram.lastDayNet) : "—"}, cumulative India nett ${ram ? formatCr(ram.indiaNet) : "—"}, overseas ${ram ? formatCr(ram.overseas) : "—"}, worldwide ${ram ? formatCr(ram.worldwide) : "—"}. Opening weekend, records and comparisons from Indian Box Office.`;
+  const titleCandidates = [
+    `Ramayana Box Office Today (Day ${day}) | ${ram ? formatCrCompact(ram.indiaNet) : "—"} India Nett`,
+    `Ramayana Box Office Collection Today (Day ${day}) | India Nett`,
+    `Ramayana Box Office Collection Today | Indian Box Office`,
+  ];
+  const title = titleCandidates.find((t) => t.length <= 62) ?? clipText(titleCandidates[0], 60);
+  const description = clipText(
+    `Ramayana box office today (Day ${day}): ${ram?.lastDayNet != null ? formatCr(ram.lastDayNet) : "—"} India nett, cumulative ${ram ? formatCr(ram.indiaNet) : "—"} nett & ${ram ? formatCr(ram.worldwide) : "—"} worldwide. Day-wise tracker from Indian Box Office.`,
+    158,
+  );
   return shell({
     title,
     description,
@@ -1434,8 +1571,8 @@ function renderBriefPage(brief: MorningBrief, isLatest: boolean): string {
   `;
 
   return shell({
-    title: `${brief.headline} | Indian Box Office Morning Brief`,
-    description: brief.lede || brief.headline,
+    title: clipText(`${brief.headline} | Indian Box Office Morning Brief`, 62),
+    description: clipText(brief.lede || brief.headline, 158),
     canonical: url,
     ogType: "article",
     breadcrumbs: [
@@ -1475,18 +1612,23 @@ function weekBoardHtml(films: Film[], deskDate: string): string {
 function cardHtml(m: Film, deskDate: string): string {
   const day = dayNumber(m.releaseDate, deskDate);
   const img = localPoster(m.poster, m.posterKey);
-  return `<a class="film-card-link" href="/movies/${esc(m.slug)}/" aria-label="Open details for ${esc(m.title)}">
+  const latest =
+    m.lastDayNet != null && m.lastDayNet > 0
+      ? ` · Latest day ${esc(formatCrCompact(m.lastDayNet))}`
+      : "";
+  return `<a class="film-card-link" href="/movies/${esc(m.slug)}/" aria-label="Open ${esc(m.title)} box office — ${esc(formatCrCompact(m.indiaNet))} India nett">
       <article class="card">
         <div class="poster-wrap">
           <img class="poster" src="${esc(img)}" alt="${esc(m.title)} poster" loading="lazy" />
         </div>
         <div class="card-body">
-          <p class="kicker">${esc(m.language)} · Day ${day}${m.status === "late" ? " · Late run" : ""}</p>
+          <p class="kicker">${esc(m.language)} · Day ${day}${m.status === "late" ? " · Late run" : ""}${latest}</p>
           <h3>${esc(m.title)}</h3>
+          <p class="card-totals"><strong>${esc(formatCrCompact(m.indiaNet))}</strong> India nett · <strong>${esc(formatCrCompact(m.worldwide))}</strong> WW</p>
           <p class="meta">${esc(m.director)} · ${esc(m.starring)}</p>
           <p class="synopsis">${esc(m.synopsis)}</p>
           <dl>
-            <div><dt>India net</dt><dd>${esc(formatCr(m.indiaNet))}</dd></div>
+            <div><dt>India nett</dt><dd>${esc(formatCr(m.indiaNet))}</dd></div>
             <div><dt>Worldwide</dt><dd>${esc(formatCr(m.worldwide))}</dd></div>
           </dl>
         </div>
@@ -1571,6 +1713,36 @@ function prerenderHomepage(pack: Pack) {
     /(<p class="updated" id="updated-line">)[\s\S]*?(<\/p>)/i,
     `$1${stamp}$2`,
   );
+
+  // Keep homepage SERP title/description in sync with the CTR plan.
+  html = html.replace(/<title>[^<]*<\/title>/i, `<title>${esc(HOME_SEO_TITLE)}</title>`);
+  html = html.replace(
+    /<meta name="description" content="[^"]*"\s*\/?>/i,
+    `<meta name="description" content="${esc(HOME_SEO_DESCRIPTION)}" />`,
+  );
+  html = html.replace(
+    /<meta property="og:title" content="[^"]*"\s*\/?>/i,
+    `<meta property="og:title" content="${esc(HOME_SEO_TITLE)}" />`,
+  );
+  html = html.replace(
+    /<meta property="og:description" content="[^"]*"\s*\/?>/i,
+    `<meta property="og:description" content="${esc(HOME_SEO_DESCRIPTION)}" />`,
+  );
+  html = html.replace(
+    /<meta name="twitter:title" content="[^"]*"\s*\/?>/i,
+    `<meta name="twitter:title" content="${esc(HOME_SEO_TITLE)}" />`,
+  );
+  html = html.replace(
+    /<meta name="twitter:description" content="[^"]*"\s*\/?>/i,
+    `<meta name="twitter:description" content="${esc(HOME_SEO_DESCRIPTION)}" />`,
+  );
+
+  if (!html.includes('id="cadence-badge"')) {
+    html = html.replace(
+      /(<p class="updated" id="updated-line">[\s\S]*?<\/p>)/i,
+      `$1\n    <p class="cadence-badge" id="cadence-badge">Updated every 3 hours</p>`,
+    );
+  }
 
   // Bump stylesheet cache + ensure RSS link + feed discovery
   html = html.replace(/styles\.css\?v=[^"]+/g, `styles.css?v=${ASSET_VER}`);
@@ -1773,7 +1945,7 @@ export async function generateSeoPages(packInput?: Pack): Promise<void> {
   clearGeneratedMovieDirs(pack.films);
 
   for (const film of pack.films) {
-    writePage(`movies/${film.slug}/index.html`, renderMoviePage(film, pack.deskDate));
+    writePage(`movies/${film.slug}/index.html`, renderMoviePage(film, pack.deskDate, pack.films));
   }
 
   writePage("daily-box-office/index.html", renderDailyBoxOfficePage(pack.films, pack.deskDate));

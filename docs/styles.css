@@ -85,11 +85,19 @@ h2 { font-size: 2rem; }
   line-height: 1.6;
 }
 .updated {
-  margin: 0 0 20px;
+  margin: 0 0 8px;
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--muted);
   letter-spacing: 0.02em;
+}
+.cadence-badge {
+  margin: 0 0 20px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 .alert {
   margin: 16px 0 0;
@@ -263,6 +271,14 @@ section { margin: 40px 0; }
 }
 .title-cell > a:hover span:last-child { color: var(--accent); }
 .card h3, .source h3 { font-size: 1.35rem; margin-top: 6px; }
+.card-totals {
+  margin: 2px 0 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--paper);
+  letter-spacing: 0.01em;
+}
+.card-totals strong { color: var(--fg); font-weight: 500; }
 .source { padding: 20px; }
 .meta { color: var(--muted); font-size: 13px; }
 .synopsis { color: var(--paper); font-size: 14px; }
@@ -919,6 +935,14 @@ a {
 }
 .crumbs a:hover { color: var(--fg); }
 .seo-film .film-detail-hero { margin-top: 8px; }
+.film-rank-note {
+  margin: 14px 0 0;
+  max-width: 70ch;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--paper);
+}
+.film-rank-note a { color: var(--fg); }
 .seo-verdict {
   margin: 32px 0 8px;
   padding: 20px 0 0;
