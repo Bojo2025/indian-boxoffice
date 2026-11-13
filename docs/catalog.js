@@ -1,5 +1,5 @@
 window.IBO_CATALOG = {
-  "generatedAt": "2026-11-13T05:49:05.870Z",
+  "generatedAt": "2026-11-13T11:41:00.273Z",
   "deskDate": "2026-11-13",
   "comparedTo": "2026-11-13 prior",
   "mode": "server-consensus",
@@ -12,10 +12,10 @@ window.IBO_CATALOG = {
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 193)",
-      "koimoi has failed 193 consecutive publishes",
-      "boi failed: HTTP 403 (streak 54)",
-      "boi has failed 54 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 194)",
+      "koimoi has failed 194 consecutive publishes",
+      "boi failed: HTTP 403 (streak 55)",
+      "boi has failed 55 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
@@ -25,7 +25,7 @@ window.IBO_CATALOG = {
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 193,
+        "streakFail": 194,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@ window.IBO_CATALOG = {
       },
       "boi": {
         "ok": false,
-        "streakFail": 54,
+        "streakFail": 55,
         "detail": "HTTP 403"
       }
     }
@@ -15589,17 +15589,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "udta-teer",
       "poster": "./posters/udta-teer.jpg",
-      "indiaNet": 49.24,
-      "indiaGross": 58.12,
+      "indiaNet": 48.77,
+      "indiaGross": 57.81,
       "overseas": 10.05,
-      "worldwide": 68.17,
-      "lastDayNet": 0.28,
+      "worldwide": 67.86,
+      "lastDayNet": 0.22,
       "trackedThroughDay": 21,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": -0.47,
+      "deltaWw": -0.31,
       "dayWise": [
         {
           "reportDate": "2026-10-24",
@@ -15724,11 +15724,11 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-11-03",
           "dayNumber": 11,
-          "indiaNet": 1.35,
-          "indiaGross": 1.57,
+          "indiaNet": 1.45,
+          "indiaGross": 1.7,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": -68.97,
+          "netChangePct": -66.67,
           "disagreementPct": 0,
           "screens": 4951,
           "occupancy": 11
@@ -15736,11 +15736,11 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-11-04",
           "dayNumber": 12,
-          "indiaNet": 1.6,
-          "indiaGross": 1.84,
+          "indiaNet": 1.7,
+          "indiaGross": 1.95,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": 18.52,
+          "netChangePct": 17.24,
           "disagreementPct": 0,
           "screens": 4980,
           "occupancy": 14
@@ -15748,11 +15748,11 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-11-05",
           "dayNumber": 13,
-          "indiaNet": 1.2,
-          "indiaGross": 1.4,
+          "indiaNet": 1.25,
+          "indiaGross": 1.45,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": -25,
+          "netChangePct": -26.47,
           "disagreementPct": 0,
           "screens": 4912,
           "occupancy": 10
@@ -15764,7 +15764,7 @@ window.IBO_CATALOG = {
           "indiaGross": 0.18,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": -87.5,
+          "netChangePct": -88,
           "disagreementPct": 0,
           "screens": 218,
           "occupancy": 24
@@ -15772,11 +15772,11 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-11-07",
           "dayNumber": 15,
-          "indiaNet": 0.19,
-          "indiaGross": 0.21,
+          "indiaNet": 0.15,
+          "indiaGross": 0.18,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": 26.67,
+          "netChangePct": 0,
           "disagreementPct": 0,
           "screens": 185,
           "occupancy": 23
@@ -15784,11 +15784,11 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-11-08",
           "dayNumber": 16,
-          "indiaNet": 0.33,
-          "indiaGross": 0.37,
+          "indiaNet": 0.25,
+          "indiaGross": 0.3,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": 73.68,
+          "netChangePct": 66.67,
           "disagreementPct": 0,
           "screens": 191,
           "occupancy": 36
@@ -15796,11 +15796,11 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-11-09",
           "dayNumber": 17,
-          "indiaNet": 0.21,
-          "indiaGross": 0.24,
+          "indiaNet": 0.18,
+          "indiaGross": 0.22,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": -36.36,
+          "netChangePct": -28,
           "disagreementPct": 0,
           "screens": 179,
           "occupancy": 27
@@ -15808,11 +15808,11 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-11-10",
           "dayNumber": 18,
-          "indiaNet": 0.58,
-          "indiaGross": 0.65,
+          "indiaNet": 0.4,
+          "indiaGross": 0.48,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": 176.19,
+          "netChangePct": 122.22,
           "disagreementPct": 0,
           "screens": 195,
           "occupancy": 62
@@ -15820,11 +15820,11 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-11-11",
           "dayNumber": 19,
-          "indiaNet": 0.54,
-          "indiaGross": 0.61,
+          "indiaNet": 0.4,
+          "indiaGross": 0.48,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": -6.9,
+          "netChangePct": 0,
           "disagreementPct": 0,
           "screens": 207,
           "occupancy": 55
@@ -15832,11 +15832,11 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-11-12",
           "dayNumber": 20,
-          "indiaNet": 0.43,
-          "indiaGross": 0.48,
+          "indiaNet": 0.3,
+          "indiaGross": 0.36,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": -20.37,
+          "netChangePct": -25,
           "disagreementPct": 0,
           "screens": 212,
           "occupancy": 43
@@ -15844,11 +15844,11 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-11-13",
           "dayNumber": 21,
-          "indiaNet": 0.28,
-          "indiaGross": 0.32,
+          "indiaNet": 0.22,
+          "indiaGross": 0.26,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": -34.88,
+          "netChangePct": -26.67,
           "disagreementPct": 0,
           "screens": 200,
           "occupancy": 32
@@ -21428,125 +21428,125 @@ window.IBO_CATALOG = {
   "headlines": [
     {
       "sourceId": "sacnilk",
-      "title": "Ramayana: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/ramayana_part_1_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-13T05:48:21.123Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹53.5 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
       "title": "Drishyam 3: The Conclusion: Sacnilk 42 days, India net ₹380.19 Cr",
       "url": "https://www.sacnilk.com/news/drishyam_3_hindi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-13T05:48:21.331Z",
+      "publishedAt": "2026-11-13T11:40:11.801Z",
       "summary": "Live day-wise pull. Last day 42. WW ₹588.41 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Hanuman Ansh: Sacnilk 96 days, India net ₹342.85 Cr",
       "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-13T05:48:21.361Z",
+      "publishedAt": "2026-11-13T11:40:11.855Z",
       "summary": "Live day-wise pull. Last day 98. WW ₹453.32 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Ramayana: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/ramayana_part_1_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-13T11:40:11.932Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹53.5 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Aadarsha Kutumbam House No: 47: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/aadarsha_kutumbam_house_no_47_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-13T11:40:11.970Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.52 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Scene: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/scene_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-13T05:48:21.448Z",
+      "publishedAt": "2026-11-13T11:40:11.981Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹6.1 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Mirzapur: The Movie: Sacnilk 61 days, India net ₹230.64 Cr",
       "url": "https://www.sacnilk.com/news/mirzapur_the_movie_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-13T05:48:21.563Z",
+      "publishedAt": "2026-11-13T11:40:12.121Z",
       "summary": "Live day-wise pull. Last day 62. WW ₹339.91 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Aadarsha Kutumbam House No: 47: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/aadarsha_kutumbam_house_no_47_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-13T05:48:21.660Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.52 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Mookuthi Amman 2: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/mookuthi_amman_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-13T05:48:21.699Z",
+      "publishedAt": "2026-11-13T11:40:12.245Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.75 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Toxic: Sacnilk 36 days, India net ₹250.13 Cr",
       "url": "https://www.sacnilk.com/news/toxic_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-13T05:48:22.158Z",
+      "publishedAt": "2026-11-13T11:40:12.464Z",
       "summary": "Live day-wise pull. Last day 37. WW ₹342.26 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Sardar 2: Sacnilk 21 days, India net ₹16.33 Cr",
-      "url": "https://www.sacnilk.com/news/sardar_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-13T05:48:22.204Z",
-      "summary": "Live day-wise pull. Last day 22. WW ₹23.88 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Jailer 2: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/jailer_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-13T05:48:22.248Z",
+      "publishedAt": "2026-11-13T11:40:12.580Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.35 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Udta Teer: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/udta_teer_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-13T05:48:22.281Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.28 Cr."
+      "title": "Sardar 2: Sacnilk 21 days, India net ₹16.33 Cr",
+      "url": "https://www.sacnilk.com/news/sardar_2_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-13T11:40:12.682Z",
+      "summary": "Live day-wise pull. Last day 22. WW ₹23.88 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Awarapan 2: Sacnilk 46 days, India net ₹150.63 Cr",
       "url": "https://www.sacnilk.com/news/awarapan_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-13T05:48:22.745Z",
+      "publishedAt": "2026-11-13T11:40:13.051Z",
       "summary": "Live day-wise pull. Last day 82. WW ₹213.05 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Udta Teer: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/udta_teer_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-13T11:40:13.146Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.22 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Premada Oorali: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/premada_oorali_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-13T05:48:22.826Z",
+      "publishedAt": "2026-11-13T11:40:13.176Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.19 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Irumudi: Sacnilk 69 days, India net ₹194.54 Cr",
       "url": "https://www.sacnilk.com/news/irumudi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-13T05:48:22.843Z",
+      "publishedAt": "2026-11-13T11:40:13.296Z",
       "summary": "Live day-wise pull. Last day 70. WW ₹246.87 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "G.O.A.T: Sacnilk discovered",
+      "url": "https://www.sacnilk.com/movie/GOAT_Telugu_2026",
+      "publishedAt": "2026-11-13T11:40:23.121Z",
+      "summary": "Auto-discovered Indian title. Current board India net ₹0.36 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr",
       "url": "https://www.sacnilk.com/news/border_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-13T05:48:23.587Z",
+      "publishedAt": "2026-11-13T11:40:23.999Z",
       "summary": "Live day-wise pull. Last day 58. WW ₹450.19 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Hi: Sacnilk 28 days, India net ₹12.83 Cr",
-      "url": "https://www.sacnilk.com/news/hi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-13T05:48:23.709Z",
-      "summary": "Live day-wise pull. Last day 31. WW ₹14.93 Cr."
     }
   ],
   "morningBrief": {
-    "briefDate": "2026-11-12",
-    "generatedAt": "2026-11-12T11:57:30.950Z",
-    "headline": "India box office: Ramayana leads the latest daily chart at ₹70.7 Cr",
-    "lede": "Ramayana leads the latest reported daily India nett at ₹70.7 Cr on Day 7, taking cumulative India nett to ₹581.8 Cr and worldwide gross to ₹934.6 Cr on the Indian Box Office consensus desk.",
-    "body": "Good morning. This is the Indian Box Office morning brief for 2026-11-12 (IST desk date), written from the verified consensus board rather than any single trade headline. India still has no official theatrical auditor; every rupee figure below is a desk estimate, labelled so India nett is never confused with worldwide gross.\n\n## Daily chart leader\n\nRamayana sits at the top of the latest-day India nett ranking with ₹70.7 Cr on Day 7. Cumulative India nett is ₹581.8 Cr; worldwide gross on this desk is ₹934.6 Cr. The title is filed as Indian and currently carries a working status of playing with verdict Pending.\n\nScene is next on the daily chart at ₹8.1 Cr (Day 6, cumulative India nett ₹113.5 Cr), with Mookuthi Amman 2 third at ₹1 Cr. Gaps between the top three matter more than the order alone: a soft midweek day for a long-runner can look “small” in absolute crores while still being a healthy hold for its week of release.\n\n## Latest daily ranking\n\nHere is the desk’s latest-day India nett order among currently tracked theatrical titles (not a lifetime worldwide leaderboard):\n\n- 1. Ramayana (Indian) — ₹70.7 Cr on Day 7; cumulative India nett ₹581.8 Cr; WW ₹934.6 Cr\n- 2. Scene (Indian) — ₹8.1 Cr on Day 6; cumulative India nett ₹113.5 Cr; WW ₹188.5 Cr\n- 3. Mookuthi Amman 2 (Indian) — ₹1 Cr on Day 6; cumulative India nett ₹18.2 Cr; WW ₹19.9 Cr\n- 4. Aadarsha Kutumbam House No: 47 (Indian) — ₹0.7 Cr on Day 13; cumulative India nett ₹49 Cr; WW ₹72.6 Cr\n- 5. Jailer 2 (Indian) — ₹0.5 Cr on Day 28; cumulative India nett ₹473.6 Cr; WW ₹830.3 Cr\n- 6. Udta Teer (Indian) — ₹0.4 Cr on Day 20; cumulative India nett ₹49.1 Cr; WW ₹67.9 Cr\n- 7. Premada Oorali (Indian) — ₹0.3 Cr on Day 48; cumulative India nett ₹115.4 Cr; WW ₹138.2 Cr\n- 8. Pyre (Indian) — ₹0.2 Cr on Day 13; cumulative India nett ₹0.2 Cr; WW ₹0.2 Cr\n\n## Openers and recent releases\n\nAmong films released in the last two weeks, Scene is the one to watch closely: released 2026-11-07 (5 days ago), latest reported India nett ₹8.1 Cr with cumulative India nett ₹113.5 Cr and worldwide ₹188.5 Cr. Early days are the most volatile part of any run — Day 1 and the first weekday drop usually say more about screens and word of mouth than a lifetime total published weeks later.\n\nRecent theatrical watchlist:\n\n- Scene (released 2026-11-07, Indian) — latest day ₹8.1 Cr; cumulative India nett ₹113.5 Cr\n- Mookuthi Amman 2 (released 2026-11-07, Indian) — latest day ₹1 Cr; cumulative India nett ₹18.2 Cr\n- The Cat in the Hat (released 2026-11-07, Indian) — latest day ₹0.2 Cr; cumulative India nett ₹0.2 Cr\n- Summer Holidays (released 2026-11-07, Indian) — latest day ₹0.1 Cr; cumulative India nett ₹0.1 Cr\n- Bhai Beej (released 2026-11-07, Indian) — latest day ₹0.1 Cr; cumulative India nett ₹0.1 Cr\n- Disco (released 2026-11-07, Indian) — latest day ₹0.1 Cr; cumulative India nett ₹0.1 Cr\n\n## Holds, momentum, and lifetime context\n\nNo clean mid-sized worldwide moves cleared the desk’s sanity filters since the previous snapshot. When deltas look extreme, we prefer to wait for the next ingest rather than narrate a bad parse.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader on this board at ₹1,820 Cr (India nett ₹1,108.1 Cr). That is a career-to-date total, not today’s daily chart.\n\n## Language circuits\n\nAcross the top of the daily chart, circuit mix looks like this — Indian: 10 titles contributing about ₹82.1 Cr of latest-day India nett among the top tracked films; English: 1 title contributing about ₹0.2 Cr of latest-day India nett among the top tracked films; Hindi: 1 title contributing about ₹0.2 Cr of latest-day India nett among the top tracked films. Hindi, South Indian, and Hollywood titles can share the same national chart while living on very different screen footprints; compare like with like when judging a Day 8 versus a Day 1.\n\n## How to read today’s brief\n\nUse the home board for the live “this week” stack, open individual film pages for the full day-wise table and analysis, and keep this brief as the morning narrative layer. Definitions: India nett is domestic after entertainment tax/GST; worldwide gross is global ticket revenue before those deductions. Methodology and corrections live on the desk’s public policy pages. Publisher: Kevin Boyjonauth · Indian Box Office.",
+    "briefDate": "2026-11-13",
+    "generatedAt": "2026-11-13T11:41:01.635Z",
+    "headline": "India box office: Ramayana leads the latest daily chart at ₹53.5 Cr",
+    "lede": "Ramayana leads the latest reported daily India nett at ₹53.5 Cr on Day 8, taking cumulative India nett to ₹618.1 Cr and worldwide gross to ₹1,033.6 Cr on the Indian Box Office consensus desk.",
+    "body": "Good morning. This is the Indian Box Office morning brief for 2026-11-13 (IST desk date), written from the verified consensus board rather than any single trade headline. India still has no official theatrical auditor; every rupee figure below is a desk estimate, labelled so India nett is never confused with worldwide gross.\n\n## Daily chart leader\n\nRamayana sits at the top of the latest-day India nett ranking with ₹53.5 Cr on Day 8. Cumulative India nett is ₹618.1 Cr; worldwide gross on this desk is ₹1,033.6 Cr. The title is filed as Indian and currently carries a working status of playing with verdict Pending.\n\nScene is next on the daily chart at ₹6.1 Cr (Day 7, cumulative India nett ₹117.7 Cr), with Mookuthi Amman 2 third at ₹0.8 Cr. Gaps between the top three matter more than the order alone: a soft midweek day for a long-runner can look “small” in absolute crores while still being a healthy hold for its week of release.\n\n## Latest daily ranking\n\nHere is the desk’s latest-day India nett order among currently tracked theatrical titles (not a lifetime worldwide leaderboard):\n\n- 1. Ramayana (Indian) — ₹53.5 Cr on Day 8; cumulative India nett ₹618.1 Cr; WW ₹1,033.6 Cr\n- 2. Scene (Indian) — ₹6.1 Cr on Day 7; cumulative India nett ₹117.7 Cr; WW ₹200.6 Cr\n- 3. Mookuthi Amman 2 (Indian) — ₹0.8 Cr on Day 7; cumulative India nett ₹18.7 Cr; WW ₹20.7 Cr\n- 4. Aadarsha Kutumbam House No: 47 (Indian) — ₹0.5 Cr on Day 14; cumulative India nett ₹49.4 Cr; WW ₹74 Cr\n- 5. Bouma (Indian) — ₹0.5 Cr on Day 1; cumulative India nett ₹0.5 Cr; WW ₹0.5 Cr\n- 6. G.O.A.T (Indian) — ₹0.4 Cr on Day 1; cumulative India nett ₹0.4 Cr; WW ₹0.4 Cr\n- 7. Jailer 2 (Indian) — ₹0.4 Cr on Day 29; cumulative India nett ₹473.8 Cr; WW ₹830.8 Cr\n- 8. Udta Teer (Indian) — ₹0.2 Cr on Day 21; cumulative India nett ₹48.8 Cr; WW ₹67.9 Cr\n\n## Openers and recent releases\n\nAmong films released in the last two weeks, Bouma is the one to watch closely: released 2026-11-13 (0 days ago), latest reported India nett ₹0.5 Cr with cumulative India nett ₹0.5 Cr and worldwide ₹0.5 Cr. Early days are the most volatile part of any run — Day 1 and the first weekday drop usually say more about screens and word of mouth than a lifetime total published weeks later.\n\nRecent theatrical watchlist:\n\n- Bouma (released 2026-11-13, Indian) — latest day ₹0.5 Cr; cumulative India nett ₹0.5 Cr\n- G.O.A.T (released 2026-11-13, Indian) — latest day ₹0.4 Cr; cumulative India nett ₹0.4 Cr\n- Aadi Anant (released 2026-11-13, Indian) — latest day ₹0.2 Cr; cumulative India nett ₹0.2 Cr\n- Scene (released 2026-11-07, Indian) — latest day ₹6.1 Cr; cumulative India nett ₹117.7 Cr\n- Mookuthi Amman 2 (released 2026-11-07, Indian) — latest day ₹0.8 Cr; cumulative India nett ₹18.7 Cr\n- The Cat in the Hat (released 2026-11-07, Indian) — latest day ₹0.1 Cr; cumulative India nett ₹0.1 Cr\n\n## Holds, momentum, and lifetime context\n\nNo clean mid-sized worldwide moves cleared the desk’s sanity filters since the previous snapshot. When deltas look extreme, we prefer to wait for the next ingest rather than narrate a bad parse.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader on this board at ₹1,820 Cr (India nett ₹1,108.1 Cr). That is a career-to-date total, not today’s daily chart.\n\n## Language circuits\n\nAcross the top of the daily chart, circuit mix looks like this — Indian: 10 titles contributing about ₹62.6 Cr of latest-day India nett among the top tracked films; English: 1 title contributing about ₹0.2 Cr of latest-day India nett among the top tracked films; Hindi: 1 title contributing about ₹0.1 Cr of latest-day India nett among the top tracked films. Hindi, South Indian, and Hollywood titles can share the same national chart while living on very different screen footprints; compare like with like when judging a Day 8 versus a Day 1.\n\n## How to read today’s brief\n\nUse the home board for the live “this week” stack, open individual film pages for the full day-wise table and analysis, and keep this brief as the morning narrative layer. Definitions: India nett is domestic after entertainment tax/GST; worldwide gross is global ticket revenue before those deductions. Methodology and corrections live on the desk’s public policy pages. Publisher: Kevin Boyjonauth · Indian Box Office.",
     "citations": [],
-    "boardGeneratedAt": "2026-11-12T11:57:29.950Z",
+    "boardGeneratedAt": "2026-11-13T11:41:00.273Z",
     "model": "deterministic-editorial-v2"
   },
   "downloads": {

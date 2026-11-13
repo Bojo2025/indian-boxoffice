@@ -1,6 +1,6 @@
 {
   "date": "2026-11-13",
-  "generatedAt": "2026-11-13T05:49:05.870Z",
+  "generatedAt": "2026-11-13T11:41:00.273Z",
   "films": [
     {
       "id": "toxic",
@@ -243,8 +243,8 @@
     {
       "id": "udta-teer",
       "title": "Udta Teer",
-      "indiaNet": 49.24,
-      "worldwide": 68.17,
+      "indiaNet": 48.77,
+      "worldwide": 67.86,
       "status": "playing"
     },
     {
