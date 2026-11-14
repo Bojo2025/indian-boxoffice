@@ -1,6 +1,6 @@
 {
   "date": "2026-11-14",
-  "generatedAt": "2026-11-13T21:18:04.222Z",
+  "generatedAt": "2026-11-14T05:39:37.992Z",
   "films": [
     {
       "id": "toxic",
@@ -194,8 +194,8 @@
     {
       "id": "ramayana",
       "title": "Ramayana",
-      "indiaNet": 660.3,
-      "worldwide": 1110.7,
+      "indiaNet": 660.8,
+      "worldwide": 1111,
       "status": "playing"
     },
     {
@@ -208,22 +208,22 @@
     {
       "id": "donga-naa-koduku",
       "title": "Donga Naa Koduku",
-      "indiaNet": 1.85,
-      "worldwide": 1.85,
+      "indiaNet": 3.7,
+      "worldwide": 3.7,
       "status": "playing"
     },
     {
       "id": "itllu-arjuna",
       "title": "Itllu Arjuna",
-      "indiaNet": 1.05,
-      "worldwide": 1.05,
+      "indiaNet": 2.1,
+      "worldwide": 2.1,
       "status": "playing"
     },
     {
       "id": "bouma",
       "title": "Bouma",
-      "indiaNet": 0.93,
-      "worldwide": 0.93,
+      "indiaNet": 0.9,
+      "worldwide": 0.9,
       "status": "playing"
     },
     {
