@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "generatedAt": "2026-11-15T18:39:18.391Z",
+  "generatedAt": "2026-11-16T00:52:44.338Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 342.88,
-      "worldwide": 453.35,
+      "indiaNet": 342.92,
+      "worldwide": 453.37,
       "status": "late"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 196.9,
-      "worldwide": 234.47,
+      "indiaNet": 196.92,
+      "worldwide": 234.48,
       "status": "late"
     },
     {
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 380.48,
-      "worldwide": 588.74,
+      "indiaNet": 380.82,
+      "worldwide": 588.93,
       "status": "playing"
     },
     {
@@ -217,6 +217,167 @@
       "title": "Bouma",
       "indiaNet": 1.5,
       "worldwide": 1.5,
+      "status": "playing"
+    },
+    {
+      "id": "itllu-arjuna",
+      "title": "Itllu Arjuna",
+      "indiaNet": 4.29,
+      "worldwide": 4.29,
+      "status": "playing"
+    },
+    {
+      "id": "mookuthi-amman-2",
+      "title": "Mookuthi Amman 2",
+      "indiaNet": 20.93,
+      "worldwide": 23.22,
+      "status": "playing"
+    },
+    {
+      "id": "aadi-anant",
+      "title": "Aadi Anant",
+      "indiaNet": 0.53,
+      "worldwide": 0.53,
+      "status": "playing"
+    },
+    {
+      "id": "jailer-2",
+      "title": "Jailer 2",
+      "indiaNet": 475.33,
+      "worldwide": 832.31,
+      "status": "playing"
+    },
+    {
+      "id": "john-doe",
+      "title": "John Doe",
+      "indiaNet": 0.5,
+      "worldwide": 0.5,
+      "status": "playing"
+    },
+    {
+      "id": "udta-teer",
+      "title": "Udta Teer",
+      "indiaNet": 49.88,
+      "worldwide": 68.88,
+      "status": "playing"
+    },
+    {
+      "id": "pyre",
+      "title": "Pyre",
+      "indiaNet": 0.37,
+      "worldwide": 0.37,
+      "status": "playing"
+    },
+    {
+      "id": "i-play-rocky",
+      "title": "I Play Rocky",
+      "indiaNet": 0.37,
+      "worldwide": 0.37,
+      "status": "playing"
+    },
+    {
+      "id": "premada-oorali",
+      "title": "Premada Oorali",
+      "indiaNet": 116.39,
+      "worldwide": 139.17,
+      "status": "playing"
+    },
+    {
+      "id": "wildwood",
+      "title": "Wildwood",
+      "indiaNet": 0.31,
+      "worldwide": 0.31,
+      "status": "playing"
+    },
+    {
+      "id": "aadarsha-kutumbam-house-no-47",
+      "title": "Aadarsha Kutumbam House No: 47",
+      "indiaNet": 49.88,
+      "worldwide": 74.83,
+      "status": "playing"
+    },
+    {
+      "id": "goat",
+      "title": "G.O.A.T",
+      "indiaNet": 0.23,
+      "worldwide": 0.23,
+      "status": "playing"
+    },
+    {
+      "id": "ghost-soldier",
+      "title": "Ghost Soldier",
+      "indiaNet": 0.16,
+      "worldwide": 0.16,
+      "status": "playing"
+    },
+    {
+      "id": "melcow-pondicherry",
+      "title": "Melcow Pondicherry",
+      "indiaNet": 0.15,
+      "worldwide": 0.15,
+      "status": "playing"
+    },
+    {
+      "id": "the-cat-in-the-hat",
+      "title": "The Cat in the Hat",
+      "indiaNet": 0.07,
+      "worldwide": 0.07,
+      "status": "playing"
+    },
+    {
+      "id": "lambodhara-20",
+      "title": "Lambodhara 2.0",
+      "indiaNet": 0.06,
+      "worldwide": 0.06,
+      "status": "playing"
+    },
+    {
+      "id": "maya-lady",
+      "title": "Maya Lady",
+      "indiaNet": 0.05,
+      "worldwide": 0.05,
+      "status": "playing"
+    },
+    {
+      "id": "bohurupi-the-golden-daku",
+      "title": "Bohurupi: The Golden Daku",
+      "indiaNet": 0.04,
+      "worldwide": 0.04,
+      "status": "playing"
+    },
+    {
+      "id": "bhai-beej",
+      "title": "Bhai Beej",
+      "indiaNet": 0.04,
+      "worldwide": 0.04,
+      "status": "playing"
+    },
+    {
+      "id": "doraemon-castle-of-the-undersea-devil-4dx",
+      "title": "Doraemon: Castle of the Undersea Devil (4DX)",
+      "indiaNet": 24.57,
+      "worldwide": 28.77,
+      "status": "playing"
+    },
+    {
+      "id": "the-eken-kerala-e-kurukshetra",
+      "title": "The Eken: Kerala-e-Kurukshetra",
+      "indiaNet": 8.63,
+      "worldwide": 9.85,
+      "status": "playing"
+    },
+    {
+      "id": "nee-nange-allava",
+      "title": "Nee Nange Allava",
+      "indiaNet": 0.02,
+      "worldwide": 0.02,
+      "status": "playing"
+    },
+    {
+      "id": "har-maidan-fateh",
+      "title": "Har Maidan Fateh",
+      "indiaNet": 0.02,
+      "worldwide": 0.02,
       "status": "playing"
     }
   ]
