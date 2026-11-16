@@ -1,5 +1,5 @@
 window.IBO_CATALOG = {
-  "generatedAt": "2026-11-16T10:49:43.932Z",
+  "generatedAt": "2026-11-16T12:10:16.932Z",
   "deskDate": "2026-11-16",
   "comparedTo": "2026-11-16 prior",
   "mode": "server-consensus",
@@ -12,10 +12,10 @@ window.IBO_CATALOG = {
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 206)",
-      "koimoi has failed 206 consecutive publishes",
-      "boi failed: HTTP 403 (streak 67)",
-      "boi has failed 67 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 207)",
+      "koimoi has failed 207 consecutive publishes",
+      "boi failed: HTTP 403 (streak 68)",
+      "boi has failed 68 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
@@ -25,7 +25,7 @@ window.IBO_CATALOG = {
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 206,
+        "streakFail": 207,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@ window.IBO_CATALOG = {
       },
       "boi": {
         "ok": false,
-        "streakFail": 67,
+        "streakFail": 68,
         "detail": "HTTP 403"
       }
     }
@@ -13303,8 +13303,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 0.01,
       "trackedThroughDay": 144,
       "liveSources": [
-        "hungama",
-        "sacnilk"
+        "sacnilk",
+        "hungama"
       ],
       "deltaNet": 0,
       "deltaWw": 0,
@@ -13910,8 +13910,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 0.01,
       "trackedThroughDay": 151,
       "liveSources": [
-        "hungama",
-        "sacnilk"
+        "sacnilk",
+        "hungama"
       ],
       "deltaNet": 0,
       "deltaWw": 0,
@@ -15100,8 +15100,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": -0.2,
-      "deltaWw": -0.2,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-14",
@@ -15166,8 +15166,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.07,
-      "deltaWw": 0.03,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-07",
@@ -18525,12 +18525,12 @@ window.IBO_CATALOG = {
       "detail": "Fetched 1 page (headlines / status)"
     },
     {
-      "sourceId": "express",
+      "sourceId": "pinkvilla",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
     },
     {
-      "sourceId": "pinkvilla",
+      "sourceId": "express",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
     },
@@ -18548,125 +18548,125 @@ window.IBO_CATALOG = {
   "headlines": [
     {
       "sourceId": "sacnilk",
-      "title": "Hanuman Ansh: Sacnilk 99 days, India net ₹342.9 Cr",
-      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-16T10:48:49.104Z",
-      "summary": "Live day-wise pull. Last day 101. WW ₹453.37 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Ramayana: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/ramayana_part_1_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-16T10:48:49.154Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹75 Cr."
+      "title": "Drishyam 3: The Conclusion: Sacnilk 45 days, India net ₹380.65 Cr",
+      "url": "https://www.sacnilk.com/news/drishyam_3_hindi_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-16T12:09:26.311Z",
+      "summary": "Live day-wise pull. Last day 45. WW ₹588.93 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Mirzapur: The Movie: Sacnilk 61 days, India net ₹230.64 Cr",
       "url": "https://www.sacnilk.com/news/mirzapur_the_movie_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-16T10:48:49.164Z",
+      "publishedAt": "2026-11-16T12:09:26.346Z",
       "summary": "Live day-wise pull. Last day 62. WW ₹339.91 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Drishyam 3: The Conclusion: Sacnilk 45 days, India net ₹380.65 Cr",
-      "url": "https://www.sacnilk.com/news/drishyam_3_hindi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-16T10:48:49.511Z",
-      "summary": "Live day-wise pull. Last day 45. WW ₹588.93 Cr."
+      "title": "Ramayana: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/ramayana_part_1_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-16T12:09:26.369Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹75 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Sardar 2: Sacnilk 21 days, India net ₹16.33 Cr",
-      "url": "https://www.sacnilk.com/news/sardar_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-16T10:48:49.685Z",
-      "summary": "Live day-wise pull. Last day 22. WW ₹23.88 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Scene: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/scene_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-16T10:48:49.911Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹9.3 Cr."
+      "title": "Hanuman Ansh: Sacnilk 99 days, India net ₹342.9 Cr",
+      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-16T12:09:26.667Z",
+      "summary": "Live day-wise pull. Last day 101. WW ₹453.37 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Donga Naa Koduku: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/donga_naa_koduku_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-16T10:48:49.963Z",
+      "publishedAt": "2026-11-16T12:09:26.687Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹1.95 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Toxic: Sacnilk 36 days, India net ₹250.13 Cr",
-      "url": "https://www.sacnilk.com/news/toxic_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-16T10:48:50.105Z",
-      "summary": "Live day-wise pull. Last day 37. WW ₹342.26 Cr."
+      "title": "Scene: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/scene_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-16T12:09:26.712Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹9.3 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Itllu Arjuna: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/itllu_arjuna_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-16T10:48:50.425Z",
+      "publishedAt": "2026-11-16T12:09:27.039Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹1 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Awarapan 2: Sacnilk 46 days, India net ₹150.63 Cr",
-      "url": "https://www.sacnilk.com/news/awarapan_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-16T10:48:50.434Z",
-      "summary": "Live day-wise pull. Last day 82. WW ₹213.05 Cr."
+      "title": "Sardar 2: Sacnilk 21 days, India net ₹16.33 Cr",
+      "url": "https://www.sacnilk.com/news/sardar_2_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-16T12:09:27.187Z",
+      "summary": "Live day-wise pull. Last day 22. WW ₹23.88 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Irumudi: Sacnilk 69 days, India net ₹194.54 Cr",
-      "url": "https://www.sacnilk.com/news/irumudi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-16T10:48:50.447Z",
-      "summary": "Live day-wise pull. Last day 70. WW ₹246.87 Cr."
+      "title": "Toxic: Sacnilk 36 days, India net ₹250.13 Cr",
+      "url": "https://www.sacnilk.com/news/toxic_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-16T12:09:27.359Z",
+      "summary": "Live day-wise pull. Last day 37. WW ₹342.26 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Mookuthi Amman 2: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/mookuthi_amman_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-16T10:48:50.645Z",
+      "publishedAt": "2026-11-16T12:09:27.402Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.87 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr",
-      "url": "https://www.sacnilk.com/news/border_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-16T10:48:51.021Z",
-      "summary": "Live day-wise pull. Last day 58. WW ₹450.19 Cr."
+      "title": "Jailer 2: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/jailer_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-16T12:09:27.428Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.52 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Vishwanath And Sons: Sacnilk 41 days, India net ₹122.54 Cr",
-      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-16T10:49:00.560Z",
-      "summary": "Live day-wise pull. Last day 42. WW ₹209.46 Cr."
+      "title": "Irumudi: Sacnilk 69 days, India net ₹194.54 Cr",
+      "url": "https://www.sacnilk.com/news/irumudi_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-16T12:09:28.114Z",
+      "summary": "Live day-wise pull. Last day 70. WW ₹246.87 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Batwara 1947: Sacnilk 24 days, India net ₹38.08 Cr",
-      "url": "https://www.sacnilk.com/news/batwara_1947_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-16T10:49:00.837Z",
-      "summary": "Live day-wise pull. Last day 24. WW ₹54.2 Cr."
+      "title": "Awarapan 2: Sacnilk 46 days, India net ₹150.63 Cr",
+      "url": "https://www.sacnilk.com/news/awarapan_2_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-16T12:09:28.126Z",
+      "summary": "Live day-wise pull. Last day 82. WW ₹213.05 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Udta Teer: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/udta_teer_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-16T12:09:28.147Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.41 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Bouma: Sacnilk discovered",
       "url": "https://www.sacnilk.com/movie/Bouma_2026",
-      "publishedAt": "2026-11-16T10:49:00.959Z",
+      "publishedAt": "2026-11-16T12:09:38.179Z",
       "summary": "Auto-discovered Indian title. Current board India net ₹1.5 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr",
+      "url": "https://www.sacnilk.com/news/border_2_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-16T12:09:39.084Z",
+      "summary": "Live day-wise pull. Last day 58. WW ₹450.19 Cr."
     }
   ],
   "morningBrief": {
-    "briefDate": "2026-11-15",
-    "generatedAt": "2026-11-15T11:36:41.902Z",
-    "headline": "India box office: Ramayana leads the latest daily chart at ₹72.9 Cr",
-    "lede": "Ramayana leads the latest reported daily India nett at ₹72.9 Cr on Day 10, taking cumulative India nett to ₹758.5 Cr and worldwide gross to ₹1,228 Cr on the Indian Box Office consensus desk.",
-    "body": "Good morning. This is the Indian Box Office morning brief for 2026-11-15 (IST desk date), written from the verified consensus board rather than any single trade headline. India still has no official theatrical auditor; every rupee figure below is a desk estimate, labelled so India nett is never confused with worldwide gross.\n\n## Daily chart leader\n\nRamayana sits at the top of the latest-day India nett ranking with ₹72.9 Cr on Day 10. Cumulative India nett is ₹758.5 Cr; worldwide gross on this desk is ₹1,228 Cr. The title is filed as Indian and currently carries a working status of playing with verdict Pending.\n\nScene is next on the daily chart at ₹9.5 Cr (Day 9, cumulative India nett ₹136.7 Cr), with Donga Naa Koduku third at ₹2 Cr. Gaps between the top three matter more than the order alone: a soft midweek day for a long-runner can look “small” in absolute crores while still being a healthy hold for its week of release.\n\n## Latest daily ranking\n\nHere is the desk’s latest-day India nett order among currently tracked theatrical titles (not a lifetime worldwide leaderboard):\n\n- 1. Ramayana (Indian) — ₹72.9 Cr on Day 10; cumulative India nett ₹758.5 Cr; WW ₹1,228 Cr\n- 2. Scene (Indian) — ₹9.5 Cr on Day 9; cumulative India nett ₹136.7 Cr; WW ₹227.3 Cr\n- 3. Donga Naa Koduku (Indian) — ₹2 Cr on Day 2; cumulative India nett ₹5.9 Cr; WW ₹5.9 Cr\n- 4. Bouma (Indian) — ₹1.4 Cr on Day 3; cumulative India nett ₹1.4 Cr; WW ₹1.4 Cr\n- 5. Itllu Arjuna (Indian) — ₹1.2 Cr on Day 2; cumulative India nett ₹3.4 Cr; WW ₹3.4 Cr\n- 6. Mookuthi Amman 2 (Indian) — ₹0.9 Cr on Day 9; cumulative India nett ₹20.1 Cr; WW ₹22.3 Cr\n- 7. Jailer 2 (Indian) — ₹0.5 Cr on Day 31; cumulative India nett ₹474.8 Cr; WW ₹831.7 Cr\n- 8. John Doe (Indian) — ₹0.4 Cr on Day 2; cumulative India nett ₹0.4 Cr; WW ₹0.4 Cr\n\n## Openers and recent releases\n\nAmong films released in the last two weeks, Donga Naa Koduku is the one to watch closely: released 2026-11-14 (1 day ago), latest reported India nett ₹2 Cr with cumulative India nett ₹5.9 Cr and worldwide ₹5.9 Cr. Early days are the most volatile part of any run — Day 1 and the first weekday drop usually say more about screens and word of mouth than a lifetime total published weeks later.\n\nRecent theatrical watchlist:\n\n- Donga Naa Koduku (released 2026-11-14, Indian) — latest day ₹2 Cr; cumulative India nett ₹5.9 Cr\n- Itllu Arjuna (released 2026-11-14, Indian) — latest day ₹1.2 Cr; cumulative India nett ₹3.4 Cr\n- John Doe (released 2026-11-14, Indian) — latest day ₹0.4 Cr; cumulative India nett ₹0.4 Cr\n- I Play Rocky (released 2026-11-14, Indian) — latest day ₹0.4 Cr; cumulative India nett ₹0.4 Cr\n- Wildwood (released 2026-11-14, Indian) — latest day ₹0.3 Cr; cumulative India nett ₹0.3 Cr\n- Melcow Pondicherry (released 2026-11-14, Indian) — latest day ₹0.2 Cr; cumulative India nett ₹0.2 Cr\n\n## Holds, momentum, and lifetime context\n\nNo clean mid-sized worldwide moves cleared the desk’s sanity filters since the previous snapshot. When deltas look extreme, we prefer to wait for the next ingest rather than narrate a bad parse.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader on this board at ₹1,820 Cr (India nett ₹1,108.1 Cr). That is a career-to-date total, not today’s daily chart.\n\n## Language circuits\n\nAcross the top of the daily chart, circuit mix looks like this — Indian: 12 titles contributing about ₹90.1 Cr of latest-day India nett among the top tracked films. Hindi, South Indian, and Hollywood titles can share the same national chart while living on very different screen footprints; compare like with like when judging a Day 8 versus a Day 1.\n\n## How to read today’s brief\n\nUse the home board for the live “this week” stack, open individual film pages for the full day-wise table and analysis, and keep this brief as the morning narrative layer. Definitions: India nett is domestic after entertainment tax/GST; worldwide gross is global ticket revenue before those deductions. Methodology and corrections live on the desk’s public policy pages. Publisher: Kevin Boyjonauth · Indian Box Office.",
+    "briefDate": "2026-11-16",
+    "generatedAt": "2026-11-16T12:10:17.964Z",
+    "headline": "India box office: Ramayana leads the latest daily chart at ₹75 Cr",
+    "lede": "Ramayana leads the latest reported daily India nett at ₹75 Cr on Day 11, taking cumulative India nett to ₹835.6 Cr and worldwide gross to ₹1,384.5 Cr on the Indian Box Office consensus desk.",
+    "body": "Good morning. This is the Indian Box Office morning brief for 2026-11-16 (IST desk date), written from the verified consensus board rather than any single trade headline. India still has no official theatrical auditor; every rupee figure below is a desk estimate, labelled so India nett is never confused with worldwide gross.\n\n## Daily chart leader\n\nRamayana sits at the top of the latest-day India nett ranking with ₹75 Cr on Day 11. Cumulative India nett is ₹835.6 Cr; worldwide gross on this desk is ₹1,384.5 Cr. The title is filed as Indian and currently carries a working status of playing with verdict Pending.\n\nScene is next on the daily chart at ₹9.3 Cr (Day 10, cumulative India nett ₹145.8 Cr), with Donga Naa Koduku third at ₹2 Cr. Gaps between the top three matter more than the order alone: a soft midweek day for a long-runner can look “small” in absolute crores while still being a healthy hold for its week of release.\n\n## Latest daily ranking\n\nHere is the desk’s latest-day India nett order among currently tracked theatrical titles (not a lifetime worldwide leaderboard):\n\n- 1. Ramayana (Indian) — ₹75 Cr on Day 11; cumulative India nett ₹835.6 Cr; WW ₹1,384.5 Cr\n- 2. Scene (Indian) — ₹9.3 Cr on Day 10; cumulative India nett ₹145.8 Cr; WW ₹242.1 Cr\n- 3. Donga Naa Koduku (Indian) — ₹2 Cr on Day 3; cumulative India nett ₹7.8 Cr; WW ₹7.8 Cr\n- 4. Bouma (Indian) — ₹1.5 Cr on Day 4; cumulative India nett ₹1.5 Cr; WW ₹1.5 Cr\n- 5. Itllu Arjuna (Indian) — ₹1 Cr on Day 3; cumulative India nett ₹4.1 Cr; WW ₹4.1 Cr\n- 6. Mookuthi Amman 2 (Indian) — ₹0.9 Cr on Day 10; cumulative India nett ₹21 Cr; WW ₹23.3 Cr\n- 7. Aadi Anant (Indian) — ₹0.5 Cr on Day 4; cumulative India nett ₹0.5 Cr; WW ₹0.5 Cr\n- 8. Jailer 2 (Indian) — ₹0.5 Cr on Day 32; cumulative India nett ₹475.3 Cr; WW ₹832.3 Cr\n\n## Openers and recent releases\n\nAmong films released in the last two weeks, Donga Naa Koduku is the one to watch closely: released 2026-11-14 (2 days ago), latest reported India nett ₹2 Cr with cumulative India nett ₹7.8 Cr and worldwide ₹7.8 Cr. Early days are the most volatile part of any run — Day 1 and the first weekday drop usually say more about screens and word of mouth than a lifetime total published weeks later.\n\nRecent theatrical watchlist:\n\n- Donga Naa Koduku (released 2026-11-14, Indian) — latest day ₹2 Cr; cumulative India nett ₹7.8 Cr\n- Itllu Arjuna (released 2026-11-14, Indian) — latest day ₹1 Cr; cumulative India nett ₹4.1 Cr\n- John Doe (released 2026-11-14, Indian) — latest day ₹0.5 Cr; cumulative India nett ₹0.5 Cr\n- I Play Rocky (released 2026-11-14, Indian) — latest day ₹0.4 Cr; cumulative India nett ₹0.4 Cr\n- Wildwood (released 2026-11-14, Indian) — latest day ₹0.3 Cr; cumulative India nett ₹0.3 Cr\n- Ghost Soldier (released 2026-11-14, Indian) — latest day ₹0.2 Cr; cumulative India nett ₹0.2 Cr\n\n## Holds, momentum, and lifetime context\n\nNo clean mid-sized worldwide moves cleared the desk’s sanity filters since the previous snapshot. When deltas look extreme, we prefer to wait for the next ingest rather than narrate a bad parse.\n\nLifetime context: Dhurandhar: The Revenge remains the cumulative worldwide leader on this board at ₹1,820 Cr (India nett ₹1,108.1 Cr). That is a career-to-date total, not today’s daily chart.\n\n## Language circuits\n\nAcross the top of the daily chart, circuit mix looks like this — Indian: 12 titles contributing about ₹92.3 Cr of latest-day India nett among the top tracked films. Hindi, South Indian, and Hollywood titles can share the same national chart while living on very different screen footprints; compare like with like when judging a Day 8 versus a Day 1.\n\n## How to read today’s brief\n\nUse the home board for the live “this week” stack, open individual film pages for the full day-wise table and analysis, and keep this brief as the morning narrative layer. Definitions: India nett is domestic after entertainment tax/GST; worldwide gross is global ticket revenue before those deductions. Methodology and corrections live on the desk’s public policy pages. Publisher: Kevin Boyjonauth · Indian Box Office.",
     "citations": [],
-    "boardGeneratedAt": "2026-11-15T11:36:40.790Z",
+    "boardGeneratedAt": "2026-11-16T12:10:16.932Z",
     "model": "deterministic-editorial-v2"
   },
   "downloads": {
