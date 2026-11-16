@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "generatedAt": "2026-11-16T00:52:44.338Z",
+  "generatedAt": "2026-11-16T10:49:43.932Z",
   "films": [
     {
       "id": "toxic",
@@ -222,15 +222,15 @@
     {
       "id": "itllu-arjuna",
       "title": "Itllu Arjuna",
-      "indiaNet": 4.29,
-      "worldwide": 4.29,
+      "indiaNet": 4.09,
+      "worldwide": 4.09,
       "status": "playing"
     },
     {
       "id": "mookuthi-amman-2",
       "title": "Mookuthi Amman 2",
-      "indiaNet": 20.93,
-      "worldwide": 23.22,
+      "indiaNet": 21,
+      "worldwide": 23.25,
       "status": "playing"
     },
     {
