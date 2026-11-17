@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "generatedAt": "2026-11-16T21:48:56.066Z",
+  "generatedAt": "2026-11-17T07:14:21.022Z",
   "films": [
     {
       "id": "toxic",
@@ -251,7 +251,7 @@
       "id": "jailer-2",
       "title": "Jailer 2",
       "indiaNet": 475.23,
-      "worldwide": 832.54,
+      "worldwide": 835.44,
       "status": "playing"
     },
     {
@@ -346,6 +346,13 @@
       "status": "playing"
     },
     {
+      "id": "verity",
+      "title": "Verity",
+      "indiaNet": 10.98,
+      "worldwide": 12.37,
+      "status": "playing"
+    },
+    {
       "id": "doraemon-castle-of-the-undersea-devil-4dx",
       "title": "Doraemon: Castle of the Undersea Devil (4DX)",
       "indiaNet": 24.56,
@@ -367,15 +374,8 @@
       "status": "playing"
     },
     {
-      "id": "garividi-lakshmi",
-      "title": "Garividi Lakshmi",
-      "indiaNet": 9.16,
-      "worldwide": 10.44,
-      "status": "playing"
-    },
-    {
-      "id": "clayface",
-      "title": "Clayface",
+      "id": "emperor-vs-sarat-chandra",
+      "title": "Emperor vs Sarat Chandra",
       "indiaNet": 0.01,
       "worldwide": 0.01,
       "status": "playing"
