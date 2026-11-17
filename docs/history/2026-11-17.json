@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "generatedAt": "2026-11-17T07:14:21.022Z",
+  "generatedAt": "2026-11-17T12:35:18.501Z",
   "films": [
     {
       "id": "toxic",
@@ -248,13 +248,6 @@
       "status": "playing"
     },
     {
-      "id": "jailer-2",
-      "title": "Jailer 2",
-      "indiaNet": 475.23,
-      "worldwide": 835.44,
-      "status": "playing"
-    },
-    {
       "id": "goat",
       "title": "G.O.A.T",
       "indiaNet": 0.18,
@@ -266,6 +259,13 @@
       "title": "Udta Teer",
       "indiaNet": 49.77,
       "worldwide": 69.05,
+      "status": "playing"
+    },
+    {
+      "id": "jailer-2",
+      "title": "Jailer 2",
+      "indiaNet": 474.74,
+      "worldwide": 835.05,
       "status": "playing"
     },
     {
@@ -283,17 +283,17 @@
       "status": "playing"
     },
     {
-      "id": "pyre",
-      "title": "Pyre",
+      "id": "i-play-rocky",
+      "title": "I Play Rocky",
       "indiaNet": 0.12,
       "worldwide": 0.12,
       "status": "playing"
     },
     {
-      "id": "i-play-rocky",
-      "title": "I Play Rocky",
-      "indiaNet": 0.12,
-      "worldwide": 0.12,
+      "id": "pyre",
+      "title": "Pyre",
+      "indiaNet": 0.1,
+      "worldwide": 0.1,
       "status": "playing"
     },
     {
