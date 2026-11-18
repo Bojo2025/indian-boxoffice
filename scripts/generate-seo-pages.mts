@@ -1613,7 +1613,7 @@ export function deskReportsSectionHtml(bundle: MorningBrief | null): string {
   });
   return `<p class="kicker">Today's reports</p>
     <h2>Desk reports${date ? ` · ${esc(date)}` : ""}</h2>
-    <p class="page-sub">Three reports each day: 7:00 IST on the closed previous day, 13:00 IST on shows, occupancy and bookings, and 20:00 IST on the day's collections. Numbers are the desk series. A newsroom figure that disagrees is cited beside them.</p>
+    <p class="page-sub">Three reports each day: 7:00 IST on the closed previous day, 13:00 IST on shows, occupancy and bookings, and 20:00 IST on the day's collections. Numbers are the desk series. A newsroom figure that disagrees is left out of that total.</p>
     <div class="desk-report-grid">
       ${cards.join("\n")}
     </div>`;
