@@ -276,10 +276,13 @@ async function searchNews(film: FilmRow): Promise<NewsHit[]> {
       const block = item[1];
       const title = stripTags(block.match(/<title>([\s\S]*?)<\/title>/i)?.[1] ?? "");
       const link = stripTags(block.match(/<link>([\s\S]*?)<\/link>/i)?.[1] ?? "");
-      const source = stripTags(block.match(/<source[^>]*>([\s\S]*?)<\/source>/i)?.[1] ?? "News");
-      if (!title || !link) continue;
+      const sourceTag = block.match(/<source\b([^>]*)>([\s\S]*?)<\/source>/i);
+      const source = stripTags(sourceTag?.[2] ?? "News");
+      const sourceUrl = sourceTag?.[1]?.match(/\burl="([^"]+)"/i)?.[1] ?? "";
+      if (!title || !source) continue;
+      const url = sourceUrl || (link && !/news\.google\.com/i.test(link) ? link : "");
       hits.push({
-        url: link,
+        url,
         title,
         source,
         numbers: croreNumbers(title),
@@ -288,17 +291,6 @@ async function searchNews(film: FilmRow): Promise<NewsHit[]> {
         status: "cited",
       });
     }
-  } else {
-    hits.push({
-      url: rssUrl,
-      title: "Google News search",
-      source: "Google News",
-      numbers: [],
-      mentionsBooking: false,
-      mentionsProducer: false,
-      status: "unchecked",
-      detail: rss.status ? `HTTP ${rss.status}` : "unreachable",
-    });
   }
 
   const pages: { source: string; url: string }[] = [
@@ -318,27 +310,15 @@ async function searchNews(film: FilmRow): Promise<NewsHit[]> {
 
   for (const page of pages) {
     const result = await fetchText(page.url);
-    if (!result.ok) {
-      hits.push({
-        url: page.url,
-        title: page.source,
-        source: page.source,
-        numbers: [],
-        mentionsBooking: false,
-        mentionsProducer: false,
-        status: "unchecked",
-        detail: result.status ? `HTTP ${result.status}` : "unreachable",
-      });
-      continue;
-    }
-    const text = stripTags(result.text).slice(0, 20000);
+    if (!result.ok) continue;
+    const text = stripTags(result.text).slice(0, 12000);
     const mentionsFilm = new RegExp(film.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i").test(text);
     if (!mentionsFilm && !/sacnilk/i.test(page.source)) continue;
     hits.push({
       url: page.url,
-      title: `${page.source} — ${film.title}`,
+      title: page.source,
       source: page.source,
-      numbers: croreNumbers(text).slice(0, 12),
+      numbers: [],
       mentionsBooking: /advance booking|tickets booked|occupancy/i.test(text),
       mentionsProducer: /producer|official collection/i.test(text),
       status: "cited",
@@ -375,137 +355,70 @@ function buildEdition(
     prior && prior.indiaNet > 0 ? round2(((day.indiaNet - prior.indiaNet) / prior.indiaNet) * 100) : day.netChangePct;
   const provisional =
     slot !== "morning" && (day.reportDate === today || !(day.overseas > 0) || !(day.worldwide > 0));
-  const status = provisional ? "live estimate" : "closed";
-  const meta = SLOT_META[slot];
-  const sources = (film.liveSources ?? []).filter(Boolean);
-  const sourceLabel = sources.length ? sources.join(", ") : "desk board";
+  const targets = deskTargets(film, day, prior);
   const daySumNet = round2(sortedDays(film).reduce((sum, row) => sum + (row.indiaNet || 0), 0));
   const nettGap = round2(film.indiaNet - daySumNet);
   const nextMilestone = film.worldwide >= 1500 ? 2000 : film.worldwide >= 1000 ? 1500 : 1000;
   const milestoneGap = round2(nextMilestone - film.worldwide);
+  const throughDay = film.trackedThroughDay ?? day.dayNumber;
+  const occ =
+    day.occupancy != null && day.occupancy > 0
+      ? `${day.occupancy.toLocaleString("en-IN", { maximumFractionDigits: 1 })}% occupancy`
+      : "";
+  const shows = day.screens ? `${fmtInt(day.screens)} shows` : "";
+  const footprint = [shows, occ].filter(Boolean).join(" at ");
+  const changeBit = prior
+    ? `${fmtPct(change)} from Day ${prior.dayNumber}'s ${fmt(prior.indiaNet)}`
+    : "with no previous day on the ledger";
+  const bookingNoted = news.some((hit) => hit.status === "cited" && hit.mentionsBooking);
+  const producerNoted = news.some((hit) => hit.status === "cited" && hit.mentionsProducer);
 
   const headline = `${film.title} Day ${day.dayNumber}: ${fmt(day.indiaNet)} India nett`;
-  const lede = [
-    `${longDate(day.reportDate)}. ${status[0].toUpperCase()}${status.slice(1)} on the Indian Box Office desk (${sourceLabel}), board updated ${istClock(board.generatedAt)} IST.`,
-    prior
-      ? `Day ${day.dayNumber} India nett is ${fmt(day.indiaNet)} against Day ${prior.dayNumber} ${fmt(prior.indiaNet)} (${fmtPct(change)}).`
-      : `Day ${day.dayNumber} India nett is ${fmt(day.indiaNet)}.`,
-    `Desk cumulative India nett is ${fmt(film.indiaNet)} and worldwide gross is ${fmt(film.worldwide)} through Day ${film.trackedThroughDay ?? day.dayNumber}.`,
-  ].join(" ");
 
-  const tableRows = sortedDays(film)
-    .map((row) => {
-      const mark = row.dayNumber === day.dayNumber && provisional ? "*" : "";
-      return `| ${row.dayNumber}${mark} | ${shortDate(row.reportDate)} | ${fmt(row.indiaNet)} | ${fmt(row.indiaGross)} | ${fmtInt(row.screens)} | ${row.occupancy != null && row.occupancy > 0 ? `${row.occupancy.toLocaleString("en-IN", { maximumFractionDigits: 1 })}%` : "—"} | ${fmt(row.overseas, true)} | ${fmt(row.worldwide, true)} |`;
-    })
-    .join("\n");
+  const opening =
+    slot === "midday"
+      ? `${film.title} on Day ${day.dayNumber} (${longDate(day.reportDate)}) is at ${fmt(day.indiaNet)} India nett and ${fmt(day.indiaGross)} India gross, ${changeBit}. ${footprint ? `The board has ${footprint}.` : "Shows and occupancy are not on this row yet."} ${bookingNoted ? "Trade notes mention advance bookings, but no separate booking total is published here." : "Advance bookings are not reported yet."} ${provisional ? "The day is still open, so this is not the final figure." : ""}`
+      : slot === "morning"
+        ? `${film.title} closed Day ${day.dayNumber} on ${longDate(day.reportDate)} at ${fmt(day.indiaNet)} India nett and ${fmt(day.indiaGross)} India gross, ${changeBit}. ${footprint ? `That day played on ${footprint}.` : ""} This is the closed day on the desk, not a live estimate.`
+        : `${film.title}'s Day ${day.dayNumber} collection so far, on ${longDate(day.reportDate)}, is ${fmt(day.indiaNet)} India nett and ${fmt(day.indiaGross)} India gross, ${changeBit}. ${footprint ? `That is across ${footprint}.` : ""} ${provisional ? `Updated ${istClock(board.generatedAt)} IST, and still a live estimate rather than the final drop.` : "The desk is treating this day as closed."}`;
 
-  const targets = deskTargets(film, day, prior);
-  const disagreements: string[] = [];
-  const agreements: string[] = [];
-  let bookingLine = "Advance bookings: not reported yet on the pages checked for this run.";
-  let producerLine = "No producer-certified collection figure was identified in the sources checked. Figures above are desk and trade estimates.";
-
-  for (const hit of news) {
-    if (hit.status === "unchecked") {
-      disagreements.push(`- ${hit.source}: unchecked (${hit.detail ?? "no response"}) — ${hit.url}`);
-      continue;
-    }
-    if (hit.mentionsBooking && slot === "midday") {
-      bookingLine = `Advance bookings: ${hit.source} mentions bookings or occupancy. See ${hit.url}. The desk does not turn that mention into a rupee total.`;
-    }
-    if (hit.mentionsProducer) {
-      producerLine = `${hit.source} uses producer or official-collection language. It is cited below and is not folded into the desk total. ${hit.url}`;
-    }
-    const fresh = hit.numbers.filter((value) => !targets.some((target) => near(value, target)));
-    const matched = hit.numbers.filter((value) => targets.some((target) => near(value, target)));
-    if (fresh.length) {
-      const shown = [...new Set(fresh.map((value) => fmt(value)))].slice(0, 4).join(", ");
-      disagreements.push(
-        `- ${hit.source}: reports ${shown}, which is not the desk series (${fmt(film.indiaNet)} India nett / ${fmt(film.worldwide)} worldwide). Not averaged. ${hit.url}`,
-      );
-    } else if (matched.length) {
-      agreements.push(`- ${hit.source}: figures in this headline sit on the desk series. ${hit.url}`);
-    } else {
-      agreements.push(`- ${hit.source}: checked, no separate crore figure extracted. ${hit.url}`);
-    }
-  }
-
-  const othersLines = others.slice(0, 4).map((other, index) => {
-    const lang = languageLabel(other);
-    return `- ${index + 2}. ${other.title}${lang ? ` (${lang})` : ""} — latest day ${fmt(other.lastDayNet)}; cumulative India nett ${fmt(other.indiaNet)}; worldwide ${fmt(other.worldwide)}`;
-  });
-
-  const sections = [
-    `${meta.clock} desk report. ${meta.focus}. ${provisional ? "This day is still moving, so the daily figure is a live estimate and is not the final drop." : "This is the closed day on the desk ledger."}`,
-    `## Day ${day.dayNumber} — latest reported collection`,
-    [
-      `Status: ${status}.`,
-      `Source on the board: ${sourceLabel}.`,
-      `Updated: ${istClock(board.generatedAt)} IST.`,
-      day.screens ? `Shows tracked: ${fmtInt(day.screens)}.` : "Shows tracked: not on this row.",
-      day.occupancy != null && day.occupancy > 0
-        ? `Occupancy: ${day.occupancy.toLocaleString("en-IN", { maximumFractionDigits: 1 })}%.`
-        : "Occupancy: not on this row.",
-    ].join(" "),
-    `India nett: ${fmt(day.indiaNet)}${provisional ? " (live estimate)" : ""}.`,
-    `India gross: ${fmt(day.indiaGross)}${provisional ? " (live estimate)" : ""}.`,
-    prior
-      ? `Change against Day ${prior.dayNumber}: previous day ${fmt(prior.indiaNet)} nett, current day ${fmt(day.indiaNet)} nett, change ${fmtPct(change)}.`
-      : "No previous day is on the ledger, so a day-to-day change is not calculated.",
-    slot === "midday" ? bookingLine : "",
-    `## Day-by-day collection`,
-    "India nett and India gross are daily figures. Overseas and worldwide stay blank when that day's row does not report them. A blank cell is not zero, and it is not filled from the jump in the lifetime worldwide total.",
-    [
-      "| Day | Date | India nett | India gross | Shows | Occupancy | Overseas | Worldwide |",
-      "| --- | --- | --- | --- | --- | --- | --- | --- |",
-      tableRows,
-    ].join("\n"),
-    provisional ? `* Day ${day.dayNumber} is a live estimate.` : "",
-    `## Cumulative totals through Day ${film.trackedThroughDay ?? day.dayNumber}`,
-    `These are the desk lifetime fields, not a sum invented from the day table.`,
-    `- India nett: ${fmt(film.indiaNet)}`,
-    `- India gross: ${fmt(film.indiaGross)}`,
-    `- Overseas gross: ${fmt(film.overseas, true)}`,
-    `- Worldwide gross: ${fmt(film.worldwide, true)}`,
+  const chart = others
+    .slice(0, 2)
+    .map((other) => `${other.title} at ${fmt(other.lastDayNet)}`)
+    .join(" and ");
+  const running = `Through Day ${throughDay} the desk has ${film.title} at ${fmt(film.indiaNet)} India nett, ${fmt(film.indiaGross)} India gross, ${fmt(film.overseas)} overseas and ${fmt(film.worldwide)} worldwide. ${
     Math.abs(nettGap) >= 1
-      ? `The day-wise India nett rows on this film add up to ${fmtExact(daySumNet)}. That sum is not the same series as the desk lifetime nett of ${fmt(film.indiaNet)} (gap ${fmtExact(Math.abs(nettGap))}). Both stay on the page. They are not merged.`
-      : "",
-    day.worldwide > 0 ? "" : `Day ${day.dayNumber} worldwide gross is not on the row, so the lifetime worldwide figure is not moved forward for this day.`,
-    `## Cross-check`,
-    `Desk series, kept as published: Day ${day.dayNumber} India nett ${fmt(day.indiaNet)}, India gross ${fmt(day.indiaGross)}, lifetime India nett ${fmt(film.indiaNet)}, worldwide ${fmt(film.worldwide)}.`,
-    disagreements.length ? disagreements.join("\n") : "No fetched page produced a crore figure outside the desk series.",
-    agreements.length ? agreements.join("\n") : "",
-    producerLine,
-    othersLines.length ? `## Other films on the daily chart` : "",
-    othersLines.length
-      ? `Ranked by latest reported India nett, after dropping sub-₹1 Cr titles whose lifetime equals a single day.\n\n${othersLines.join("\n")}`
-      : "",
-    `## Observation`,
-    [
-      milestoneGap > 0 && milestoneGap <= 80
-        ? `Worldwide gross is ${fmt(film.worldwide)} through Day ${film.trackedThroughDay ?? day.dayNumber}, ${fmt(milestoneGap)} short of ${fmt(nextMilestone)}.`
-        : `Worldwide gross on the desk is ${fmt(film.worldwide)} through Day ${film.trackedThroughDay ?? day.dayNumber}.`,
-      !(day.overseas > 0)
-        ? "This day's overseas figure is not on the row, so domestic nett and worldwide gross stay in separate columns."
-        : "",
-    ]
-      .filter(Boolean)
-      .join(" "),
-  ].filter(Boolean);
+      ? `Adding the day-wise nett rows gives ${fmtExact(daySumNet)}, which is a different series from that lifetime nett, so the two are not combined. `
+      : ""
+  }${
+    milestoneGap > 0 && milestoneGap <= 80
+      ? `Worldwide is ${fmtExact(milestoneGap)} short of ${fmt(nextMilestone)}. `
+      : ""
+  }${chart ? `Behind it on the daily chart, ${chart}.` : ""} ${
+    day.overseas > 0 ? "" : "This day's overseas figure is not in, so it is not used to move the worldwide total."
+  }`;
 
-  const citations: Citation[] = [];
-  const seen = new Set<string>();
-  for (const hit of news) {
-    if (seen.has(hit.url)) continue;
-    seen.add(hit.url);
-    citations.push({
-      url: hit.url,
-      title: hit.title || hit.source,
-      note: hit.status === "unchecked" ? hit.detail ?? "unchecked" : undefined,
-    });
-    if (citations.length >= 10) break;
+  const cited = news.filter((hit) => hit.status === "cited");
+  const mentioned: string[] = [];
+  const seenSource = new Set<string>();
+  for (const hit of cited) {
+    if (seenSource.has(hit.source)) continue;
+    const fresh = hit.numbers.find((value) => value >= 100 && !targets.some((target) => near(value, target)));
+    if (fresh == null) continue;
+    seenSource.add(hit.source);
+    mentioned.push(`${hit.source} is citing about ${fmt(fresh)}`);
+    if (mentioned.length >= 3) break;
   }
+  const newsLine = mentioned.length
+    ? `Trade coverage is still led by ${film.title}. ${mentioned.join(", ")}. The desk keeps ${fmt(film.indiaNet)} India nett and ${fmt(film.worldwide)} worldwide, and does not blend those reports into its own total.`
+    : `Trade coverage is still led by ${film.title}. The desk figure remains ${fmt(film.indiaNet)} India nett and ${fmt(film.worldwide)} worldwide.`;
+  const producerLine = producerNoted
+    ? " A producer claim is not included in that total."
+    : " No producer-certified total is included.";
+
+  const lede = opening.replace(/\s+/g, " ").trim();
+  const body = [running, `${newsLine}${producerLine}`].map((paragraph) => paragraph.replace(/\s+/g, " ").trim()).join("\n\n");
+  const citations: Citation[] = [];
 
   return {
     kind: "desk-edition",
@@ -514,7 +427,7 @@ function buildEdition(
     generatedAt: new Date().toISOString(),
     headline,
     lede,
-    body: sections.join("\n\n"),
+    body,
     citations,
     boardGeneratedAt: board.generatedAt ?? null,
     model: "desk-report-v1",
@@ -529,14 +442,6 @@ function bundleEditions(editions: DeskEdition[], board: Board): DeskBundle {
   );
   const latest = ordered[ordered.length - 1];
   const citations: Citation[] = [];
-  const seen = new Set<string>();
-  for (const edition of ordered) {
-    for (const citation of edition.citations) {
-      if (seen.has(citation.url)) continue;
-      seen.add(citation.url);
-      citations.push(citation);
-    }
-  }
   return {
     kind: "desk-day",
     briefDate: latest?.briefDate ?? deskDateIst(),

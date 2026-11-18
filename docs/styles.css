@@ -237,8 +237,12 @@ button.pull:disabled { opacity: 0.5; cursor: wait; }
 }
 .desk-report table { font-size: 13px; }
 .desk-report-pending p:last-child { color: var(--muted); }
-.brief-citations { margin: 12px 0 0; padding-left: 18px; }
-.brief-citations a { color: var(--fg); }
+.brief-sources {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+.brief-sources a { color: var(--fg); }
 section { margin: 40px 0; }
 #now { margin-top: 12px; }
 .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }

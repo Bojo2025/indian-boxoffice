@@ -1582,14 +1582,8 @@ function editionList(brief: MorningBrief): MorningBrief[] {
   return (brief.editions ?? []).filter((edition) => edition?.slot && edition.headline);
 }
 
-function citationListHtml(citations: BriefCitation[] | undefined): string {
-  if (!citations?.length) return "";
-  return `<ul class="brief-citations">${citations
-    .map((citation) => {
-      const note = citation.note ? ` <span class="meta">(${esc(citation.note)})</span>` : "";
-      return `<li><a href="${esc(citation.url)}" rel="noopener noreferrer">${esc(citation.title || citation.url)}</a>${note}</li>`;
-    })
-    .join("")}</ul>`;
+function citationListHtml(_citations: BriefCitation[] | undefined): string {
+  return "";
 }
 
 function renderEditionArticle(edition: MorningBrief): string {
