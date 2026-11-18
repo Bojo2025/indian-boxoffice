@@ -2,16 +2,25 @@ name: Publish desk board
 
 on:
   schedule:
-    # Every 3 hours — box office moves fast around openings / weekends
+    # Every 3 hours — board only. Briefs have their own IST slots below.
     - cron: "0 */3 * * *"
-    # 04:00 UTC = 08:00 Mauritius — dedicated morning brief run
-    - cron: "0 4 * * *"
+    # 07:00 IST — yesterday's closed day
+    - cron: "30 1 * * *"
+    # 13:00 IST — shows, occupancy, advance bookings
+    - cron: "30 7 * * *"
+    # 20:00 IST — the day's collections so far
+    - cron: "30 14 * * *"
   workflow_dispatch:
     inputs:
-      force_brief:
-        description: "Force regenerate today's morning brief even if it already exists"
+      brief_slot:
+        description: "Desk report to write: morning, midday, evening, or all"
         required: false
-        default: "false"
+        default: "all"
+        type: string
+      force_brief:
+        description: "Rewrite today's report even if that slot already exists"
+        required: false
+        default: "true"
         type: boolean
 
 permissions:
@@ -32,18 +41,26 @@ jobs:
         id: publish
         continue-on-error: true
         run: npm run publish:desk
-      - name: Generate morning brief
+      - name: Generate desk report
         id: brief
         continue-on-error: true
         env:
           FORCE_BRIEF: ${{ (inputs.force_brief == true || inputs.force_brief == 'true') && '1' || '' }}
         run: |
-          # Use the schedule identity; GitHub may start cron jobs late or early.
-          if [ "${{ github.event.schedule }}" = "0 4 * * *" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "${{ inputs.force_brief }}" = "true" ]; then
-            npm run morning:brief
-          else
-            echo "This is not the 04:00 UTC brief schedule — skipping."
+          # Slot comes from the cron that was scheduled, not from the clock when the runner starts.
+          SCHEDULE="${{ github.event.schedule }}"
+          SLOT="${{ github.event_name == 'workflow_dispatch' && inputs.brief_slot || '' }}"
+          case "$SCHEDULE" in
+            "30 1 * * *") SLOT="morning" ;;
+            "30 7 * * *") SLOT="midday" ;;
+            "30 14 * * *") SLOT="evening" ;;
+          esac
+          if [ -z "$SLOT" ]; then
+            echo "Board refresh only — no desk-report slot on this run."
+            exit 0
           fi
+          echo "Writing desk report slot: $SLOT"
+          BRIEF_SLOT="$SLOT" npm run morning:brief
       - name: Refresh SEO static pages
         continue-on-error: true
         run: npm run seo:pages

@@ -23,7 +23,7 @@ import {
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const outDir = join(root, "docs");
 const SITE = "https://indian-boxoffice.com";
-const ASSET_VER = "20261112a";
+const ASSET_VER = "20261118a";
 const ADSENSE_CLIENT = "ca-pub-3635078997966836";
 const ADSENSE_SCRIPT = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>`;
 const DESK_EMAIL = "desk@indian-boxoffice.com";
@@ -68,13 +68,21 @@ type Film = {
   dayWise?: DayWise[];
 };
 
+type BriefCitation = { url: string; title?: string; note?: string };
+
 type MorningBrief = {
+  kind?: string;
+  slot?: "morning" | "midday" | "evening";
   briefDate: string;
   generatedAt: string;
   headline: string;
   lede: string;
   body: string;
-  citations?: { url: string; title?: string }[];
+  citations?: BriefCitation[];
+  model?: string;
+  provisional?: boolean;
+  leadTitle?: string;
+  editions?: MorningBrief[];
 };
 
 type Pack = {
@@ -361,7 +369,7 @@ function shell(opts: {
     <nav>
       <a href="/ramayana/">Ramayana</a>
       <a href="/daily-box-office/">Daily chart</a>
-      <a href="/brief/">Morning brief</a>
+      <a href="/brief/">Desk reports</a>
       <a href="/briefs/">Brief archive</a>
       <a href="/rankings/2026/">2026 rankings</a>
       <a href="/about/">About</a>
@@ -378,7 +386,7 @@ function shell(opts: {
       Figures in ₹ crore. India nett / worldwide gross.
       · <a href="/ramayana/">Ramayana</a>
       · <a href="/daily-box-office/">Daily chart</a>
-      · <a href="/brief/">Morning brief</a>
+      · <a href="/brief/">Desk reports</a>
       · <a href="/briefs/">Brief archive</a>
       · <a href="/rankings/2026/">2026 rankings</a>
       · <a href="/about/">About</a>
@@ -1410,23 +1418,30 @@ function renderEditorialPolicyPage(): string {
 function renderBriefsIndexPage(briefs: MorningBrief[]): string {
   const url = `${SITE}/briefs/`;
   const items = briefs
-    .map(
-      (b) => `<li>
+    .map((b) => {
+      const slots = editionList(b)
+        .map(
+          (edition) =>
+            `<a href="/briefs/${esc(b.briefDate)}/${esc(edition.slot)}/">${esc(SLOT_LABEL[edition.slot || ""] || edition.slot || "")}</a>`,
+        )
+        .join(" · ");
+      return `<li>
         <a href="/briefs/${esc(b.briefDate)}/">
           <strong>${esc(b.briefDate)}</strong>
           <span>${esc(b.headline)}</span>
         </a>
         <p>${esc(b.lede)}</p>
-      </li>`,
-    )
+        ${slots ? `<p>${slots}</p>` : ""}
+      </li>`;
+    })
     .join("\n");
   const body = `
     <p class="kicker">Archive</p>
-    <h1>Morning brief archive</h1>
-    <p class="page-sub">Dated editorial briefs from the Indian Box Office desk — daily chart context, openers, and hold notes kept in public archive.</p>
+    <h1>Desk report archive</h1>
+    <p class="page-sub">Dated desk reports — 7:00, 13:00 and 20:00 IST — kept so readers can compare how the chart moved.</p>
 
     <section class="seo-prose">
-      <p>Each morning brief is generated from that morning’s consensus board, then filed here so readers can compare how the chart moved across days. The <a href="/brief/">latest brief</a> always mirrors the newest entry.</p>
+      <p>Each report is written from that run's consensus board. A later edition does not replace an earlier one. The <a href="/brief/">latest day</a> lists every edition filed for today.</p>
     </section>
 
     <ol class="brief-archive-list">
@@ -1435,13 +1450,13 @@ function renderBriefsIndexPage(briefs: MorningBrief[]): string {
   `;
 
   return shell({
-    title: "Morning Brief Archive | Indian Box Office",
+    title: "Desk Report Archive | Indian Box Office",
     description:
-      "Archive of Indian Box Office morning briefs: dated daily chart analysis for Hindi, Tamil, Telugu, Malayalam and Kannada theatrical collections.",
+      "Archive of Indian Box Office desk reports: 7:00, 13:00 and 20:00 IST notes on India nett, worldwide gross, and cited trade figures.",
     canonical: url,
     breadcrumbs: [
       { name: "Home", url: `${SITE}/` },
-      { name: "Morning Brief", url: `${SITE}/brief/` },
+      { name: "Desk reports", url: `${SITE}/brief/` },
       { name: "Archive", url },
     ],
     body,
@@ -1502,6 +1517,36 @@ function renderPrivacyPolicyPage(): string {
   });
 }
 
+function splitTableRow(line: string): string[] {
+  return line
+    .replace(/^\|/, "")
+    .replace(/\|$/, "")
+    .split("|")
+    .map((cell) => cell.trim());
+}
+
+function isTableSeparator(line: string): boolean {
+  const cells = splitTableRow(line);
+  return cells.length > 1 && cells.every((cell) => /^:?-{3,}:?$/.test(cell));
+}
+
+function renderMarkdownTable(block: string): string {
+  const lines = block
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line.startsWith("|"));
+  const rows = lines.filter((line) => !isTableSeparator(line));
+  if (rows.length < 2) return `<p>${esc(block)}</p>`;
+  const head = splitTableRow(rows[0]);
+  const body = rows.slice(1).map(splitTableRow);
+  return `<div style="overflow-x:auto"><table>
+    <thead><tr>${head.map((cell) => `<th>${esc(cell)}</th>`).join("")}</tr></thead>
+    <tbody>${body
+      .map((row) => `<tr>${row.map((cell) => `<td>${esc(cell)}</td>`).join("")}</tr>`)
+      .join("")}</tbody>
+  </table></div>`;
+}
+
 function renderBriefBodyHtml(body: string): string {
   const blocks = String(body || "")
     .split(/\n\n+/)
@@ -1509,28 +1554,79 @@ function renderBriefBodyHtml(body: string): string {
     .filter(Boolean);
   return blocks
     .map((block) => {
-      if (/^##\s+/.test(block)) {
+      if (/^##\s+/.test(block) && !block.includes("\n")) {
         return `<h2>${esc(block.replace(/^##\s+/, ""))}</h2>`;
       }
-      if (/^###\s+/.test(block)) {
+      if (/^###\s+/.test(block) && !block.includes("\n")) {
         return `<h3>${esc(block.replace(/^###\s+/, ""))}</h3>`;
       }
-      // Support simple bullet lists: lines starting with "- "
-      if (/^- /.test(block) || block.includes("\n- ")) {
-        const lines = block.split("\n").map((l) => l.trim()).filter(Boolean);
-        if (lines.every((l) => l.startsWith("- "))) {
-          return `<ul>${lines.map((l) => `<li>${esc(l.slice(2))}</li>`).join("")}</ul>`;
-        }
+      const lines = block.split("\n").map((line) => line.trim()).filter(Boolean);
+      if (lines.length >= 2 && lines.every((line) => line.startsWith("|"))) {
+        return renderMarkdownTable(block);
+      }
+      if (lines.length && lines.every((line) => line.startsWith("- "))) {
+        return `<ul>${lines.map((line) => `<li>${esc(line.slice(2))}</li>`).join("")}</ul>`;
       }
       return `<p>${esc(block)}</p>`;
     })
     .join("\n");
 }
 
-function renderBriefPage(brief: MorningBrief, isLatest: boolean): string {
-  const path = isLatest ? "/brief/" : `/briefs/${brief.briefDate}/`;
-  const url = `${SITE}${path}`;
-  const newsLd = {
+const SLOT_LABEL: Record<string, string> = {
+  morning: "7:00 IST · Last day",
+  midday: "13:00 IST · Occupancy and bookings",
+  evening: "20:00 IST · Collections so far",
+};
+
+function editionList(brief: MorningBrief): MorningBrief[] {
+  return (brief.editions ?? []).filter((edition) => edition?.slot && edition.headline);
+}
+
+function citationListHtml(citations: BriefCitation[] | undefined): string {
+  if (!citations?.length) return "";
+  return `<ul class="brief-citations">${citations
+    .map((citation) => {
+      const note = citation.note ? ` <span class="meta">(${esc(citation.note)})</span>` : "";
+      return `<li><a href="${esc(citation.url)}" rel="noopener noreferrer">${esc(citation.title || citation.url)}</a>${note}</li>`;
+    })
+    .join("")}</ul>`;
+}
+
+function renderEditionArticle(edition: MorningBrief): string {
+  const label = SLOT_LABEL[edition.slot || ""] || "Desk report";
+  const href = `/briefs/${edition.briefDate}/${edition.slot}/`;
+  return `<article class="desk-report" id="desk-report-${esc(edition.slot || "report")}">
+    <p class="kicker">${esc(label)}</p>
+    <h3><a href="${href}">${esc(edition.headline)}</a></h3>
+    <p class="brief-lede">${esc(edition.lede)}</p>
+    <div class="brief-body seo-prose">${renderBriefBodyHtml(edition.body || "")}</div>
+    ${citationListHtml(edition.citations)}
+    <p class="seo-back"><a href="${href}">Open this report</a></p>
+  </article>`;
+}
+
+export function deskReportsSectionHtml(bundle: MorningBrief | null): string {
+  const editions = bundle ? editionList(bundle) : [];
+  const date = bundle?.briefDate || "";
+  const bySlot = new Map(editions.map((edition) => [edition.slot, edition]));
+  const cards = (["morning", "midday", "evening"] as const).map((slot) => {
+    const edition = bySlot.get(slot);
+    if (edition) return renderEditionArticle(edition);
+    return `<article class="desk-report desk-report-pending" id="desk-report-${slot}">
+      <p class="kicker">${esc(SLOT_LABEL[slot])}</p>
+      <p>This report publishes at ${esc(SLOT_LABEL[slot].split("·")[0].trim())}. It is filed separately and does not copy an earlier edition.</p>
+    </article>`;
+  });
+  return `<p class="kicker">Today's reports</p>
+    <h2>Desk reports${date ? ` · ${esc(date)}` : ""}</h2>
+    <p class="page-sub">Three reports each day: 7:00 IST on the closed previous day, 13:00 IST on shows, occupancy and bookings, and 20:00 IST on the day's collections. Numbers are the desk series. A newsroom figure that disagrees is cited beside them.</p>
+    <div class="desk-report-grid">
+      ${cards.join("\n")}
+    </div>`;
+}
+
+function briefNewsLd(brief: MorningBrief, url: string) {
+  return {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
     headline: brief.headline,
@@ -1553,34 +1649,78 @@ function renderBriefPage(brief: MorningBrief, isLatest: boolean): string {
     },
     image: `${SITE}/posters/hero-cinema.jpg`,
   };
+}
 
-  const body = `
-    <article class="seo-brief">
-      <p class="kicker">Morning brief · ${esc(brief.briefDate)}</p>
+function renderBriefPage(brief: MorningBrief, isLatest: boolean): string {
+  const editions = editionList(brief);
+  const path = isLatest ? "/brief/" : `/briefs/${brief.briefDate}/`;
+  const url = `${SITE}${path}`;
+  const title = editions.length
+    ? `Desk reports ${brief.briefDate} | Indian Box Office`
+    : clipText(`${brief.headline} | Indian Box Office`, 62);
+  const description = clipText(brief.lede || brief.headline, 158);
+  const inner = editions.length
+    ? deskReportsSectionHtml(brief)
+    : `<p class="kicker">Desk report · ${esc(brief.briefDate)}</p>
       <h1>${esc(brief.headline)}</h1>
       <p class="brief-byline">By ${esc(PUBLISHER_NAME)} · Indian Box Office consensus desk</p>
       <p class="brief-lede">${esc(brief.lede)}</p>
-      <div class="brief-body seo-prose">
-        ${renderBriefBodyHtml(brief.body || "")}
-      </div>
+      <div class="brief-body seo-prose">${renderBriefBodyHtml(brief.body || "")}</div>
+      ${citationListHtml(brief.citations)}`;
+
+  const body = `
+    <article class="seo-brief">
+      ${inner}
       <p class="updated">Published ${esc(brief.generatedAt)}</p>
-      <p class="seo-back"><a href="/briefs/">Brief archive</a> · <a href="/about-methodology/">Methodology</a> · <a href="/contact/">Contact</a></p>
-      ${isLatest ? "" : `<p class="seo-back"><a href="/brief/">← Latest morning brief</a></p>`}
+      <p class="seo-back"><a href="/briefs/">Report archive</a> · <a href="/about-methodology/">Methodology</a> · <a href="/contact/">Contact</a></p>
+      ${isLatest ? "" : `<p class="seo-back"><a href="/brief/">← Today's reports</a></p>`}
       <p class="seo-back"><a href="/">← Home board</a></p>
     </article>
   `;
 
   return shell({
-    title: clipText(`${brief.headline} | Indian Box Office Morning Brief`, 62),
-    description: clipText(brief.lede || brief.headline, 158),
+    title,
+    description,
     canonical: url,
     ogType: "article",
     breadcrumbs: [
       { name: "Home", url: `${SITE}/` },
-      { name: "Morning Brief", url: `${SITE}/brief/` },
+      { name: "Desk reports", url: `${SITE}/brief/` },
       ...(isLatest ? [] : [{ name: brief.briefDate, url }]),
     ],
-    jsonLd: [newsLd],
+    jsonLd: [briefNewsLd(brief, url)],
+    body,
+  });
+}
+
+function renderSlotPage(edition: MorningBrief): string {
+  const path = `/briefs/${edition.briefDate}/${edition.slot}/`;
+  const url = `${SITE}${path}`;
+  const label = SLOT_LABEL[edition.slot || ""] || "Desk report";
+  const body = `
+    <article class="seo-brief">
+      <p class="kicker">${esc(label)} · ${esc(edition.briefDate)}</p>
+      <h1>${esc(edition.headline)}</h1>
+      <p class="brief-byline">By ${esc(PUBLISHER_NAME)} · Indian Box Office consensus desk</p>
+      <p class="brief-lede">${esc(edition.lede)}</p>
+      <div class="brief-body seo-prose">${renderBriefBodyHtml(edition.body || "")}</div>
+      ${citationListHtml(edition.citations)}
+      <p class="updated">Published ${esc(edition.generatedAt)}</p>
+      <p class="seo-back"><a href="/briefs/${esc(edition.briefDate)}/">All reports for ${esc(edition.briefDate)}</a> · <a href="/brief/">Today</a> · <a href="/">Home</a></p>
+    </article>
+  `;
+  return shell({
+    title: clipText(`${edition.headline} | Indian Box Office`, 62),
+    description: clipText(edition.lede || edition.headline, 158),
+    canonical: url,
+    ogType: "article",
+    breadcrumbs: [
+      { name: "Home", url: `${SITE}/` },
+      { name: "Desk reports", url: `${SITE}/brief/` },
+      { name: edition.briefDate, url: `${SITE}/briefs/${edition.briefDate}/` },
+      { name: label, url },
+    ],
+    jsonLd: [briefNewsLd(edition, url)],
     body,
   });
 }
@@ -1760,10 +1900,29 @@ function prerenderHomepage(pack: Pack) {
     html = html.replace("</head>", `  ${ADSENSE_SCRIPT}\n</head>`);
   }
 
+  const reportBundle = readJson<MorningBrief>(join(outDir, "morning-brief.json"));
+  const reports = deskReportsSectionHtml(reportBundle);
+  if (html.includes('id="desk-reports"')) {
+    html = replaceInnerById(html, "desk-reports", `\n${reports}\n`);
+  } else {
+    html = html.replace(
+      /<aside id="brief"[\s\S]*?<\/aside>\s*/,
+      "",
+    );
+    html = html.replace(
+      /<dialog id="brief-modal"[\s\S]*?<\/dialog>\s*/,
+      "",
+    );
+    html = html.replace(
+      /(<div class="board-top">[\s\S]*?<\/div>)/,
+      `$1\n    <section id="desk-reports" class="desk-reports" aria-label="Today's box office reports">\n${reports}\n    </section>`,
+    );
+  }
+
   writeFileSync(indexPath, html);
 }
 
-function writeSitemap(pack: Pack, briefDates: string[]) {
+function writeSitemap(pack: Pack, briefs: MorningBrief[]) {
   const lastmod = pack.generatedAt;
   const urls: { loc: string; changefreq: string; priority: string }[] = [
     { loc: `${SITE}/`, changefreq: "hourly", priority: "1.0" },
@@ -1786,8 +1945,15 @@ function writeSitemap(pack: Pack, briefDates: string[]) {
   for (const f of pack.films) {
     urls.push({ loc: movieUrl(f.slug), changefreq: "hourly", priority: "0.8" });
   }
-  for (const d of briefDates) {
-    urls.push({ loc: `${SITE}/briefs/${d}/`, changefreq: "weekly", priority: "0.7" });
+  for (const brief of briefs) {
+    urls.push({ loc: `${SITE}/briefs/${brief.briefDate}/`, changefreq: "daily", priority: "0.7" });
+    for (const edition of editionList(brief)) {
+      urls.push({
+        loc: `${SITE}/briefs/${brief.briefDate}/${edition.slot}/`,
+        changefreq: "daily",
+        priority: "0.72",
+      });
+    }
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -1973,8 +2139,14 @@ export async function generateSeoPages(packInput?: Pack): Promise<void> {
   writePage("briefs/index.html", renderBriefsIndexPage(briefs));
   for (const brief of briefs) {
     ensureDir(join(outDir, "briefs", brief.briefDate));
-    writeFileSync(join(outDir, "briefs", brief.briefDate, "brief.json"), `${JSON.stringify(brief, null, 2)}\n`);
-    writePage(`briefs/${brief.briefDate}/index.html`, renderBriefPage(brief, false));
+    const dayJsonPath = join(outDir, "briefs", brief.briefDate, "brief.json");
+    const onDisk = readJson<MorningBrief>(dayJsonPath);
+    const toStore = editionList(brief).length ? brief : onDisk?.kind === "desk-day" ? onDisk : brief;
+    writeFileSync(dayJsonPath, `${JSON.stringify(toStore, null, 2)}\n`);
+    writePage(`briefs/${brief.briefDate}/index.html`, renderBriefPage(toStore, false));
+    for (const edition of editionList(toStore)) {
+      writePage(`briefs/${brief.briefDate}/${edition.slot}/index.html`, renderSlotPage(edition));
+    }
   }
   // Prefer the newest brief by date (morning-brief.json may be newer than board.json's copy).
   const latest = briefs[0] ?? null;
@@ -2007,7 +2179,7 @@ export async function generateSeoPages(packInput?: Pack): Promise<void> {
   }
 
   prerenderHomepage(pack);
-  writeSitemap(pack, briefs.map((b) => b.briefDate));
+  writeSitemap(pack, briefs);
   writeFeed(pack, briefs);
 
   const indexNowKey = ensureIndexNowKey();
@@ -2026,7 +2198,12 @@ export async function generateSeoPages(packInput?: Pack): Promise<void> {
     `${SITE}/contact/`,
     ...pack.films.slice(0, 40).map((f) => movieUrl(f.slug)),
   ];
-  if (latest) pingUrls.push(`${SITE}/briefs/${latest.briefDate}/`);
+  if (latest) {
+    pingUrls.push(`${SITE}/briefs/${latest.briefDate}/`);
+    for (const edition of editionList(latest)) {
+      pingUrls.push(`${SITE}/briefs/${latest.briefDate}/${edition.slot}/`);
+    }
+  }
   await pingIndexNow(indexNowKey, pingUrls);
 
   console.log(

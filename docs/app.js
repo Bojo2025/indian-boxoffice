@@ -243,94 +243,57 @@
     return `${(sp > 40 ? cut.slice(0, sp) : cut).trim()}…`;
   }
 
-  function renderBrief(brief) {
-    const box = document.getElementById("brief");
-    const modal = document.getElementById("brief-modal");
-    const teaser = document.getElementById("brief-teaser");
-    if (!brief || !brief.headline || !box || !modal || !teaser) return;
+  const SLOT_LABEL = {
+    morning: "7:00 IST · Last day",
+    midday: "13:00 IST · Occupancy and bookings",
+    evening: "20:00 IST · Collections so far",
+  };
 
-    const briefMs = new Date(brief.generatedAt).getTime();
-    if (!Number.isFinite(briefMs) || (Date.now() - briefMs) / 86400000 > 1.5) return;
-
-    const fullText = [brief.lede, brief.body].filter(Boolean).join(" ").trim();
-    const preview = clip(fullText || brief.headline, 120);
-
-    document.getElementById("brief-headline").textContent = brief.headline;
-    document.getElementById("brief-preview").textContent = preview;
-    document.getElementById("brief-modal-headline").textContent = brief.headline;
-    document.getElementById("brief-lede").textContent = brief.lede || "";
-
-    const bodyEl = document.getElementById("brief-body");
-    bodyEl.innerHTML = (brief.body || "")
+  function briefBodyHtml(body) {
+    return String(body || "")
       .split(/\n\n+/)
+      .map((block) => block.trim())
       .filter(Boolean)
-      .map((p) => `<p>${esc(p.trim())}</p>`)
+      .map((block) => {
+        if (/^##\s+/.test(block) && !block.includes("\n")) return `<h2>${esc(block.replace(/^##\s+/, ""))}</h2>`;
+        const lines = block.split("\n").map((line) => line.trim()).filter(Boolean);
+        if (lines.length >= 2 && lines.every((line) => line.startsWith("|"))) {
+          const rows = lines.filter((line) => !/^\|[\s|:-]+\|$/.test(line));
+          const cells = (line) => line.replace(/^\|/, "").replace(/\|$/, "").split("|").map((cell) => cell.trim());
+          const head = cells(rows[0] || "");
+          const bodyRows = rows.slice(1);
+          return `<div style="overflow-x:auto"><table><thead><tr>${head.map((cell) => `<th>${esc(cell)}</th>`).join("")}</tr></thead><tbody>${bodyRows
+            .map((row) => `<tr>${cells(row).map((cell) => `<td>${esc(cell)}</td>`).join("")}</tr>`)
+            .join("")}</tbody></table></div>`;
+        }
+        if (lines.every((line) => line.startsWith("- "))) {
+          return `<ul>${lines.map((line) => `<li>${esc(line.slice(2))}</li>`).join("")}</ul>`;
+        }
+        return `<p>${esc(block)}</p>`;
+      })
       .join("");
+  }
 
-    const citeEl = document.getElementById("brief-citations");
-    if (brief.citations && brief.citations.length) {
-      citeEl.style.display = "";
-      citeEl.innerHTML = brief.citations
-        .map(
-          (c) =>
-            `<li><a href="${esc(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.title || c.url)}</a></li>`,
-        )
+  function renderBrief(brief) {
+    const section = document.getElementById("desk-reports");
+    if (!section || !brief?.headline) return;
+    const editions = Array.isArray(brief.editions) ? brief.editions.filter((edition) => edition?.slot && edition.headline) : [];
+    if (!editions.length) return;
+    const bySlot = new Map(editions.map((edition) => [edition.slot, edition]));
+    const cards = ["morning", "midday", "evening"].map((slot) => {
+      const edition = bySlot.get(slot);
+      if (!edition) {
+        return `<article class="desk-report desk-report-pending" id="desk-report-${slot}"><p class="kicker">${esc(SLOT_LABEL[slot])}</p><p>This report publishes at ${esc(SLOT_LABEL[slot].split("·")[0].trim())}.</p></article>`;
+      }
+      const href = `/briefs/${edition.briefDate}/${edition.slot}/`;
+      const cites = (edition.citations || [])
+        .map((citation) => `<li><a href="${esc(citation.url)}" rel="noopener noreferrer">${esc(citation.title || citation.url)}</a></li>`)
         .join("");
-    } else {
-      citeEl.innerHTML = "";
-      citeEl.style.display = "none";
-    }
-
-    const stampEl = document.getElementById("brief-stamp");
-    try {
-      stampEl.textContent = `Generated ${new Date(brief.generatedAt).toLocaleString("en-GB", {
-        timeZone: "Indian/Mauritius",
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        hour: "2-digit",
-        minute: "2-digit",
-      })} (Mauritius)`;
-    } catch {
-      stampEl.textContent = brief.generatedAt;
-    }
-
-    function openBrief() {
-      if (typeof modal.showModal === "function") modal.showModal();
-      else modal.setAttribute("open", "");
-      history.replaceState(null, "", "#brief");
-    }
-
-    function closeBrief() {
-      if (typeof modal.close === "function" && modal.open) modal.close();
-      else modal.removeAttribute("open");
-      if (location.hash === "#brief") history.replaceState(null, "", " ");
-    }
-
-    teaser.onclick = (e) => {
-      e.preventDefault();
-      window.location.href = "/brief/";
-    };
-
-    const more = teaser.querySelector(".brief-more");
-    if (more) more.textContent = "Read full morning brief →";
-
-    modal.addEventListener("close", () => {
-      if (location.hash === "#brief") history.replaceState(null, "", " ");
+      return `<article class="desk-report" id="desk-report-${esc(slot)}"><p class="kicker">${esc(SLOT_LABEL[slot])}</p><h3><a href="${href}">${esc(edition.headline)}</a></h3><p class="brief-lede">${esc(edition.lede || "")}</p><div class="brief-body seo-prose">${briefBodyHtml(edition.body)}</div>${cites ? `<ul class="brief-citations">${cites}</ul>` : ""}<p class="seo-back"><a href="${href}">Open this report</a></p></article>`;
     });
-
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) closeBrief();
-    });
-
-    document.querySelectorAll('a[href="#brief"]').forEach((a) => {
-      a.setAttribute("href", "/brief/");
-    });
-
-    box.style.display = "flex";
-    if (location.hash === "#brief") {
-      window.location.replace("/brief/");
-    }
+    section.innerHTML = `<p class="kicker">Today's reports</p><h2>Desk reports · ${esc(brief.briefDate || "")}</h2><p class="page-sub">Three reports each day: 7:00 IST on the closed previous day, 13:00 IST on shows, occupancy and bookings, and 20:00 IST on the day's collections.</p><div class="desk-report-grid">${cards.join("")}</div>`;
+    section.hidden = false;
+  }
 
   async function loadBrief() {
     let brief = catalog.morningBrief || null;
@@ -341,7 +304,7 @@
         if (remote?.headline) brief = remote;
       }
     } catch {
-      /* keep catalog fallback */
+      /* keep the reports already in the page */
     }
     renderBrief(brief);
   }
