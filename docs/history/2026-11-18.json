@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "generatedAt": "2026-11-18T02:48:24.951Z",
+  "generatedAt": "2026-11-18T11:21:58.867Z",
   "films": [
     {
       "id": "toxic",
@@ -243,8 +243,8 @@
     {
       "id": "mookuthi-amman-2",
       "title": "Mookuthi Amman 2",
-      "indiaNet": 21.26,
-      "worldwide": 24.18,
+      "indiaNet": 21.28,
+      "worldwide": 24.2,
       "status": "playing"
     },
     {
