@@ -286,10 +286,7 @@
         return `<article class="desk-report desk-report-pending" id="desk-report-${slot}"><p class="kicker">${esc(SLOT_LABEL[slot])}</p><p>This report publishes at ${esc(SLOT_LABEL[slot].split("·")[0].trim())}.</p></article>`;
       }
       const href = `/briefs/${edition.briefDate}/${edition.slot}/`;
-      const cites = (edition.citations || [])
-        .map((citation) => `<li><a href="${esc(citation.url)}" rel="noopener noreferrer">${esc(citation.title || citation.url)}</a></li>`)
-        .join("");
-      return `<article class="desk-report" id="desk-report-${esc(slot)}"><p class="kicker">${esc(SLOT_LABEL[slot])}</p><h3><a href="${href}">${esc(edition.headline)}</a></h3><p class="brief-lede">${esc(edition.lede || "")}</p><div class="brief-body seo-prose">${briefBodyHtml(edition.body)}</div>${cites ? `<ul class="brief-citations">${cites}</ul>` : ""}<p class="seo-back"><a href="${href}">Open this report</a></p></article>`;
+      return `<article class="desk-report" id="desk-report-${esc(slot)}"><p class="kicker">${esc(SLOT_LABEL[slot])}</p><h3><a href="${href}">${esc(edition.headline)}</a></h3><p class="brief-lede">${esc(edition.lede || "")}</p><div class="brief-body seo-prose">${briefBodyHtml(edition.body)}</div><p class="seo-back"><a href="${href}">Open this report</a></p></article>`;
     });
     section.innerHTML = `<p class="kicker">Today's reports</p><h2>Desk reports · ${esc(brief.briefDate || "")}</h2><p class="page-sub">Three reports each day: 7:00 IST on the closed previous day, 13:00 IST on shows, occupancy and bookings, and 20:00 IST on the day's collections.</p><div class="desk-report-grid">${cards.join("")}</div>`;
     section.hidden = false;
