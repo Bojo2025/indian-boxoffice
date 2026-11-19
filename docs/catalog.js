@@ -1,7 +1,7 @@
 window.IBO_CATALOG = {
-  "generatedAt": "2026-11-19T20:15:56.025Z",
+  "generatedAt": "2026-11-19T22:24:07.988Z",
   "deskDate": "2026-11-20",
-  "comparedTo": "2026-11-19",
+  "comparedTo": "2026-11-20 prior",
   "mode": "server-consensus",
   "spine": [
     "sacnilk",
@@ -12,10 +12,10 @@ window.IBO_CATALOG = {
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 220)",
-      "koimoi has failed 220 consecutive publishes",
-      "boi failed: HTTP 403 (streak 81)",
-      "boi has failed 81 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 221)",
+      "koimoi has failed 221 consecutive publishes",
+      "boi failed: HTTP 403 (streak 82)",
+      "boi has failed 82 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
@@ -25,7 +25,7 @@ window.IBO_CATALOG = {
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 220,
+        "streakFail": 221,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@ window.IBO_CATALOG = {
       },
       "boi": {
         "ok": false,
-        "streakFail": 81,
+        "streakFail": 82,
         "detail": "HTTP 403"
       }
     }
@@ -3573,8 +3573,8 @@ window.IBO_CATALOG = {
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": 0.02,
-      "deltaWw": 0.01,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-08-07",
@@ -7739,8 +7739,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0.02,
-      "deltaWw": 0.01,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-07-17",
@@ -12792,8 +12792,8 @@ window.IBO_CATALOG = {
         "sacnilk",
         "hungama"
       ],
-      "deltaNet": 0.12,
-      "deltaWw": 0.07,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-02",
@@ -14054,8 +14054,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 0.01,
       "trackedThroughDay": 155,
       "liveSources": [
-        "hungama",
-        "sacnilk"
+        "sacnilk",
+        "hungama"
       ],
       "deltaNet": 0,
       "deltaWw": 0,
@@ -14824,7 +14824,7 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 16.2,
+      "deltaNet": 0,
       "deltaWw": 0,
       "dayWise": [
         {
@@ -15034,8 +15034,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-20",
@@ -15076,8 +15076,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-20",
@@ -15118,8 +15118,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-07",
@@ -15316,8 +15316,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-14",
@@ -15430,8 +15430,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-20",
@@ -15472,8 +15472,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-14",
@@ -15586,8 +15586,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-20",
@@ -15628,8 +15628,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-20",
@@ -15670,8 +15670,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-07",
@@ -15868,8 +15868,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-16",
@@ -16330,8 +16330,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-24",
@@ -16696,8 +16696,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-20",
@@ -16738,8 +16738,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-20",
@@ -16780,8 +16780,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-09-26",
@@ -17482,8 +17482,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-20",
@@ -17524,8 +17524,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-20",
@@ -17566,8 +17566,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-20",
@@ -17608,8 +17608,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-31",
@@ -17890,8 +17890,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-20",
@@ -17932,8 +17932,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-20",
@@ -17974,8 +17974,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-17",
@@ -18400,8 +18400,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-17",
@@ -18838,8 +18838,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-03",
@@ -19420,8 +19420,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-03",
@@ -19985,7 +19985,7 @@ window.IBO_CATALOG = {
           "netChangePct": 0,
           "disagreementPct": 0,
           "screens": 3,
-          "occupancy": 19
+          "occupancy": 22
         }
       ]
     },
@@ -20014,8 +20014,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-11-20",
@@ -20056,8 +20056,8 @@ window.IBO_CATALOG = {
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": null,
-      "deltaWw": null,
+      "deltaNet": 0,
+      "deltaWw": 0,
       "dayWise": [
         {
           "reportDate": "2026-10-16",
@@ -20482,15 +20482,7 @@ window.IBO_CATALOG = {
       ]
     }
   ],
-  "changes": [
-    {
-      "id": "ramayana",
-      "title": "Ramayana",
-      "text": "Ramayana: India net +₹16.2 Cr since 2026-11-19",
-      "deltaNet": 16.2,
-      "deltaWw": 0
-    }
-  ],
+  "changes": [],
   "logs": [
     {
       "sourceId": "sacnilk",
@@ -20536,152 +20528,138 @@ window.IBO_CATALOG = {
   "headlines": [
     {
       "sourceId": "sacnilk",
-      "title": "Drishyam 3: The Conclusion: Sacnilk 49 days, India net ₹380.92 Cr",
-      "url": "https://www.sacnilk.com/news/drishyam_3_hindi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T20:15:12.624Z",
-      "summary": "Live day-wise pull. Last day 49. WW ₹589.23 Cr."
+      "title": "Hanuman Ansh: Sacnilk 103 days, India net ₹342.94 Cr",
+      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-19T22:23:24.060Z",
+      "summary": "Live day-wise pull. Last day 105. WW ₹453.41 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Ramayana: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/ramayana_part_1_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-19T20:15:12.899Z",
+      "publishedAt": "2026-11-19T22:23:24.124Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹19.35 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Hanuman Ansh: Sacnilk 103 days, India net ₹342.94 Cr",
-      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T20:15:12.917Z",
-      "summary": "Live day-wise pull. Last day 105. WW ₹453.41 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "ENE Repeat: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/ene_repeat_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-19T20:15:13.025Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹5.85 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Bachelor Party D'eux: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/bachelor_party_deux_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-19T20:15:13.071Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹2.55 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Scene: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/scene_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-19T20:15:13.082Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹1.9 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Donga Naa Koduku: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/donga_naa_koduku_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-19T20:15:13.267Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.5 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Mirzapur: The Movie: Sacnilk 61 days, India net ₹230.64 Cr",
       "url": "https://www.sacnilk.com/news/mirzapur_the_movie_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T20:15:13.289Z",
+      "publishedAt": "2026-11-19T22:23:24.155Z",
       "summary": "Live day-wise pull. Last day 62. WW ₹339.91 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Bachelor Party D'eux: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/bachelor_party_deux_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-19T22:23:24.166Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹2.55 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "ENE Repeat: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/ene_repeat_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-19T22:23:24.189Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹5.85 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Donga Naa Koduku: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/donga_naa_koduku_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-19T22:23:24.211Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.5 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Drishyam 3: The Conclusion: Sacnilk 49 days, India net ₹380.92 Cr",
+      "url": "https://www.sacnilk.com/news/drishyam_3_hindi_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-19T22:23:24.358Z",
+      "summary": "Live day-wise pull. Last day 49. WW ₹589.23 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Itllu Arjuna: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/itllu_arjuna_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-19T20:15:13.497Z",
+      "publishedAt": "2026-11-19T22:23:24.462Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.3 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Toxic: Sacnilk 36 days, India net ₹250.13 Cr",
       "url": "https://www.sacnilk.com/news/toxic_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T20:15:13.684Z",
+      "publishedAt": "2026-11-19T22:23:24.644Z",
       "summary": "Live day-wise pull. Last day 37. WW ₹342.26 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Sardar 2: Sacnilk 21 days, India net ₹16.33 Cr",
       "url": "https://www.sacnilk.com/news/sardar_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T20:15:13.882Z",
+      "publishedAt": "2026-11-19T22:23:24.665Z",
       "summary": "Live day-wise pull. Last day 22. WW ₹23.88 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Scene: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/scene_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-19T22:23:24.686Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹1.9 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Mookuthi Amman 2: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/mookuthi_amman_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-19T20:15:13.932Z",
+      "publishedAt": "2026-11-19T22:23:24.970Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.24 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Irumudi: Sacnilk 69 days, India net ₹194.54 Cr",
-      "url": "https://www.sacnilk.com/news/irumudi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T20:15:14.241Z",
-      "summary": "Live day-wise pull. Last day 70. WW ₹246.87 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Awarapan 2: Sacnilk 46 days, India net ₹150.63 Cr",
       "url": "https://www.sacnilk.com/news/awarapan_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T20:15:14.354Z",
+      "publishedAt": "2026-11-19T22:23:25.219Z",
       "summary": "Live day-wise pull. Last day 82. WW ₹213.05 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Bouma: Sacnilk discovered",
-      "url": "https://www.sacnilk.com/movie/Bouma_2026",
-      "publishedAt": "2026-11-19T20:15:24.158Z",
-      "summary": "Auto-discovered Indian title. Current board India net ₹0.33 Cr."
+      "title": "Irumudi: Sacnilk 69 days, India net ₹194.54 Cr",
+      "url": "https://www.sacnilk.com/news/irumudi_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-19T22:23:25.536Z",
+      "summary": "Live day-wise pull. Last day 70. WW ₹246.87 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Jailer 2: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/jailer_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-19T20:15:24.742Z",
+      "publishedAt": "2026-11-19T22:23:35.407Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.16 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr",
+      "url": "https://www.sacnilk.com/news/border_2_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-19T22:23:35.861Z",
+      "summary": "Live day-wise pull. Last day 58. WW ₹450.19 Cr."
     }
   ],
   "morningBrief": {
     "kind": "desk-day",
-    "briefDate": "2026-11-19",
-    "generatedAt": "2026-11-19T16:42:13.179Z",
-    "headline": "Ramayana Day 15: ₹3.15 Cr India nett",
-    "lede": "7:00 IST: Ramayana Day 13: ₹28.60 Cr India nett 13:00 IST: Ramayana Day 15: ₹3.15 Cr India nett",
-    "body": "## 7:00 IST — Last day\n\nThrough Day 14 the desk has Ramayana at ₹867.6 Cr India nett, ₹1,009.1 Cr India gross, ₹510.0 Cr overseas and ₹1,519.1 Cr worldwide. Adding the day-wise nett rows gives ₹844.40 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Scene at ₹2.65 Cr and Donga Naa Koduku at ₹0.66 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The Times of India is citing about ₹1,000.0 Cr, WION is citing about ₹1,500.0 Cr, The Week is citing about ₹1,500.0 Cr. The desk keeps ₹867.6 Cr India nett and ₹1,519.1 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.\n\n## 13:00 IST — Occupancy and bookings\n\nThrough Day 15 the desk has Ramayana at ₹866.9 Cr India nett, ₹1,032.2 Cr India gross, ₹515.0 Cr overseas and ₹1,547.2 Cr worldwide. Adding the day-wise nett rows gives ₹847.55 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Insidious: Out of The Further at ₹0.18 Cr and PAW Patrol: The Dino Movie at ₹0.08 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The Times of India is citing about ₹1,000.0 Cr, The Week is citing about ₹1,500.0 Cr, NDTV is citing about ₹1,400.0 Cr. The desk keeps ₹866.9 Cr India nett and ₹1,547.2 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.",
+    "briefDate": "2026-11-20",
+    "generatedAt": "2026-11-19T22:24:10.609Z",
+    "headline": "Ramayana Day 15: ₹19.35 Cr India nett",
+    "lede": "20:00 IST: Ramayana Day 15: ₹19.35 Cr India nett",
+    "body": "## 20:00 IST — Collections so far\n\nThrough Day 15 the desk has Ramayana at ₹883.1 Cr India nett, ₹1,032.2 Cr India gross, ₹515.0 Cr overseas and ₹1,547.2 Cr worldwide. Adding the day-wise nett rows gives ₹863.75 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, ENE Repeat at ₹5.85 Cr and Bachelor Party D'eux at ₹2.55 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The Times of India is citing about ₹800.0 Cr, India Today is citing about ₹1,500.0 Cr, The Week is citing about ₹1,500.0 Cr. The desk keeps ₹883.1 Cr India nett and ₹1,547.2 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.",
     "citations": [],
-    "boardGeneratedAt": "2026-11-19T16:42:10.513Z",
+    "boardGeneratedAt": "2026-11-19T22:24:07.988Z",
     "model": "desk-report-v1",
     "editions": [
       {
         "kind": "desk-edition",
-        "slot": "morning",
-        "briefDate": "2026-11-19",
-        "generatedAt": "2026-11-19T09:19:57.876Z",
-        "headline": "Ramayana Day 13: ₹28.60 Cr India nett",
-        "lede": "Ramayana closed Day 13 on Wednesday, 18 November 2026 at ₹28.60 Cr India nett and ₹34.15 Cr India gross, -10.6% from Day 12's ₹32.00 Cr. That day played on 22,551 shows at 22.9% occupancy. This is the closed day on the desk, not a live estimate.",
-        "body": "Through Day 14 the desk has Ramayana at ₹867.6 Cr India nett, ₹1,009.1 Cr India gross, ₹510.0 Cr overseas and ₹1,519.1 Cr worldwide. Adding the day-wise nett rows gives ₹844.40 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Scene at ₹2.65 Cr and Donga Naa Koduku at ₹0.66 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The Times of India is citing about ₹1,000.0 Cr, WION is citing about ₹1,500.0 Cr, The Week is citing about ₹1,500.0 Cr. The desk keeps ₹867.6 Cr India nett and ₹1,519.1 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.",
+        "slot": "evening",
+        "briefDate": "2026-11-20",
+        "generatedAt": "2026-11-19T22:24:10.609Z",
+        "headline": "Ramayana Day 15: ₹19.35 Cr India nett",
+        "lede": "Ramayana's Day 15 collection so far, on Friday, 20 November 2026, is ₹19.35 Cr India nett and ₹23.10 Cr India gross, -16.6% from Day 14's ₹23.20 Cr. That is across 21,437 shows at 16.9% occupancy. Updated 03:54 am IST, and still a live estimate rather than the final drop.",
+        "body": "Through Day 15 the desk has Ramayana at ₹883.1 Cr India nett, ₹1,032.2 Cr India gross, ₹515.0 Cr overseas and ₹1,547.2 Cr worldwide. Adding the day-wise nett rows gives ₹863.75 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, ENE Repeat at ₹5.85 Cr and Bachelor Party D'eux at ₹2.55 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The Times of India is citing about ₹800.0 Cr, India Today is citing about ₹1,500.0 Cr, The Week is citing about ₹1,500.0 Cr. The desk keeps ₹883.1 Cr India nett and ₹1,547.2 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.",
         "citations": [],
-        "boardGeneratedAt": "2026-11-19T09:19:55.599Z",
-        "model": "desk-report-v1",
-        "provisional": false,
-        "leadTitle": "Ramayana"
-      },
-      {
-        "kind": "desk-edition",
-        "slot": "midday",
-        "briefDate": "2026-11-19",
-        "generatedAt": "2026-11-19T16:42:13.179Z",
-        "headline": "Ramayana Day 15: ₹3.15 Cr India nett",
-        "lede": "Ramayana on Day 15 (Thursday, 19 November 2026) is at ₹3.15 Cr India nett and ₹23.10 Cr India gross, -86.4% from Day 14's ₹23.20 Cr. The board has 21,411 shows at 16.3% occupancy. Trade notes mention advance bookings, but no separate booking total is published here. The day is still open, so this is not the final figure.",
-        "body": "Through Day 15 the desk has Ramayana at ₹866.9 Cr India nett, ₹1,032.2 Cr India gross, ₹515.0 Cr overseas and ₹1,547.2 Cr worldwide. Adding the day-wise nett rows gives ₹847.55 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Insidious: Out of The Further at ₹0.18 Cr and PAW Patrol: The Dino Movie at ₹0.08 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The Times of India is citing about ₹1,000.0 Cr, The Week is citing about ₹1,500.0 Cr, NDTV is citing about ₹1,400.0 Cr. The desk keeps ₹866.9 Cr India nett and ₹1,547.2 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.",
-        "citations": [],
-        "boardGeneratedAt": "2026-11-19T16:42:10.513Z",
+        "boardGeneratedAt": "2026-11-19T22:24:07.988Z",
         "model": "desk-report-v1",
         "provisional": true,
         "leadTitle": "Ramayana"
