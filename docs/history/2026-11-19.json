@@ -1,6 +1,6 @@
 {
   "date": "2026-11-19",
-  "generatedAt": "2026-11-19T11:19:54.704Z",
+  "generatedAt": "2026-11-19T16:42:10.513Z",
   "films": [
     {
       "id": "toxic",
@@ -61,7 +61,7 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 342.94,
+      "indiaNet": 342.93,
       "worldwide": 453.4,
       "status": "late"
     },
@@ -103,7 +103,7 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 196.95,
+      "indiaNet": 196.94,
       "worldwide": 234.51,
       "status": "late"
     },
@@ -159,7 +159,7 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 380.92,
+      "indiaNet": 380.86,
       "worldwide": 589.16,
       "status": "playing"
     },
@@ -194,190 +194,8 @@
     {
       "id": "ramayana",
       "title": "Ramayana",
-      "indiaNet": 867.6,
-      "worldwide": 1519.05,
-      "status": "playing"
-    },
-    {
-      "id": "scene",
-      "title": "Scene",
-      "indiaNet": 147.7,
-      "worldwide": 256.5,
-      "status": "playing"
-    },
-    {
-      "id": "donga-naa-koduku",
-      "title": "Donga Naa Koduku",
-      "indiaNet": 8.7,
-      "worldwide": 9.26,
-      "status": "playing"
-    },
-    {
-      "id": "bouma",
-      "title": "Bouma",
-      "indiaNet": 0.54,
-      "worldwide": 0.54,
-      "status": "playing"
-    },
-    {
-      "id": "itllu-arjuna",
-      "title": "Itllu Arjuna",
-      "indiaNet": 5.13,
-      "worldwide": 5.38,
-      "status": "playing"
-    },
-    {
-      "id": "john-doe",
-      "title": "John Doe",
-      "indiaNet": 0.3,
-      "worldwide": 0.3,
-      "status": "playing"
-    },
-    {
-      "id": "mookuthi-amman-2",
-      "title": "Mookuthi Amman 2",
-      "indiaNet": 21.56,
-      "worldwide": 24.52,
-      "status": "playing"
-    },
-    {
-      "id": "aadi-anant",
-      "title": "Aadi Anant",
-      "indiaNet": 0.29,
-      "worldwide": 0.29,
-      "status": "playing"
-    },
-    {
-      "id": "jailer-2",
-      "title": "Jailer 2",
-      "indiaNet": 475.24,
-      "worldwide": 835.53,
-      "status": "playing"
-    },
-    {
-      "id": "goat",
-      "title": "G.O.A.T",
-      "indiaNet": 0.18,
-      "worldwide": 0.18,
-      "status": "playing"
-    },
-    {
-      "id": "i-play-rocky",
-      "title": "I Play Rocky",
-      "indiaNet": 0.14,
-      "worldwide": 0.14,
-      "status": "playing"
-    },
-    {
-      "id": "udta-teer",
-      "title": "Udta Teer",
-      "indiaNet": 50.04,
-      "worldwide": 69.38,
-      "status": "playing"
-    },
-    {
-      "id": "premada-oorali",
-      "title": "Premada Oorali",
-      "indiaNet": 116.55,
-      "worldwide": 139.6,
-      "status": "playing"
-    },
-    {
-      "id": "pyre",
-      "title": "Pyre",
-      "indiaNet": 0.12,
-      "worldwide": 0.12,
-      "status": "playing"
-    },
-    {
-      "id": "aadarsha-kutumbam-house-no-47",
-      "title": "Aadarsha Kutumbam House No: 47",
-      "indiaNet": 50.05,
-      "worldwide": 75.22,
-      "status": "playing"
-    },
-    {
-      "id": "wildwood",
-      "title": "Wildwood",
-      "indiaNet": 0.09,
-      "worldwide": 0.09,
-      "status": "playing"
-    },
-    {
-      "id": "ghost-soldier",
-      "title": "Ghost Soldier",
-      "indiaNet": 0.04,
-      "worldwide": 0.04,
-      "status": "playing"
-    },
-    {
-      "id": "melcow-pondicherry",
-      "title": "Melcow Pondicherry",
-      "indiaNet": 0.04,
-      "worldwide": 0.04,
-      "status": "playing"
-    },
-    {
-      "id": "the-cat-in-the-hat",
-      "title": "The Cat in the Hat",
-      "indiaNet": 0.03,
-      "worldwide": 0.03,
-      "status": "playing"
-    },
-    {
-      "id": "bhai-beej",
-      "title": "Bhai Beej",
-      "indiaNet": 0.03,
-      "worldwide": 0.03,
-      "status": "playing"
-    },
-    {
-      "id": "lambodhara-20",
-      "title": "Lambodhara 2.0",
-      "indiaNet": 0.02,
-      "worldwide": 0.02,
-      "status": "playing"
-    },
-    {
-      "id": "desu7",
-      "title": "DeSu7",
-      "indiaNet": 6.53,
-      "worldwide": 7.6,
-      "status": "playing"
-    },
-    {
-      "id": "prahaar-the-ujjwal-nikam-story",
-      "title": "Prahaar - The Ujjwal Nikam Story",
-      "indiaNet": 23.99,
-      "worldwide": 31.01,
-      "status": "playing"
-    },
-    {
-      "id": "anbil-avan",
-      "title": "Anbil Avan",
-      "indiaNet": 7.99,
-      "worldwide": 9.15,
-      "status": "playing"
-    },
-    {
-      "id": "verity",
-      "title": "Verity",
-      "indiaNet": 11,
-      "worldwide": 12.39,
-      "status": "playing"
-    },
-    {
-      "id": "baththa",
-      "title": "Baththa",
-      "indiaNet": 29.88,
-      "worldwide": 38.85,
-      "status": "playing"
-    },
-    {
-      "id": "doraemon-castle-of-the-undersea-devil-4dx",
-      "title": "Doraemon: Castle of the Undersea Devil (4DX)",
-      "indiaNet": 24.58,
-      "worldwide": 28.8,
+      "indiaNet": 866.9,
+      "worldwide": 1547.15,
       "status": "playing"
     }
   ]
