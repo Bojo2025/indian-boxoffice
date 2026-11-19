@@ -1,5 +1,5 @@
 window.IBO_CATALOG = {
-  "generatedAt": "2026-11-19T02:24:15.952Z",
+  "generatedAt": "2026-11-19T09:19:55.599Z",
   "deskDate": "2026-11-19",
   "comparedTo": "2026-11-19 prior",
   "mode": "server-consensus",
@@ -12,10 +12,10 @@ window.IBO_CATALOG = {
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 216)",
-      "koimoi has failed 216 consecutive publishes",
-      "boi failed: HTTP 403 (streak 77)",
-      "boi has failed 77 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 217)",
+      "koimoi has failed 217 consecutive publishes",
+      "boi failed: HTTP 403 (streak 78)",
+      "boi has failed 78 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
@@ -25,7 +25,7 @@ window.IBO_CATALOG = {
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 216,
+        "streakFail": 217,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@ window.IBO_CATALOG = {
       },
       "boi": {
         "ok": false,
-        "streakFail": 77,
+        "streakFail": 78,
         "detail": "HTTP 403"
       }
     }
@@ -14018,8 +14018,8 @@ window.IBO_CATALOG = {
       "lastDayNet": 0.01,
       "trackedThroughDay": 154,
       "liveSources": [
-        "sacnilk",
-        "hungama"
+        "hungama",
+        "sacnilk"
       ],
       "deltaNet": 0,
       "deltaWw": 0,
@@ -15436,48 +15436,6 @@ window.IBO_CATALOG = {
       ]
     },
     {
-      "id": "aadi-anant",
-      "slug": "Aadi_Anant_2026",
-      "title": "Aadi Anant",
-      "language": "Indian",
-      "industry": "Indian",
-      "director": "—",
-      "starring": "—",
-      "releaseDate": "2026-11-13",
-      "budgetCr": null,
-      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
-      "rating": null,
-      "status": "playing",
-      "verdict": "Pending",
-      "posterKey": "aadi-anant",
-      "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 0.29,
-      "indiaGross": 0,
-      "overseas": 0,
-      "worldwide": 0.29,
-      "lastDayNet": 0.29,
-      "trackedThroughDay": 7,
-      "liveSources": [
-        "sacnilk"
-      ],
-      "deltaNet": 0,
-      "deltaWw": 0,
-      "dayWise": [
-        {
-          "reportDate": "2026-11-19",
-          "dayNumber": 7,
-          "indiaNet": 0.29,
-          "indiaGross": 0,
-          "overseas": 0,
-          "worldwide": 0,
-          "netChangePct": null,
-          "disagreementPct": 0,
-          "screens": null,
-          "occupancy": null
-        }
-      ]
-    },
-    {
       "id": "mookuthi-amman-2",
       "slug": "Mookuthi_Amman_2_2026",
       "title": "Mookuthi Amman 2",
@@ -15493,17 +15451,17 @@ window.IBO_CATALOG = {
       "verdict": "Pending",
       "posterKey": "mookuthi-amman-2",
       "poster": "./posters/mookuthi-amman-2.jpg",
-      "indiaNet": 21.48,
-      "indiaGross": 24.48,
+      "indiaNet": 21.56,
+      "indiaGross": 24.52,
       "overseas": 0,
-      "worldwide": 24.48,
-      "lastDayNet": 0.25,
+      "worldwide": 24.52,
+      "lastDayNet": 0.29,
       "trackedThroughDay": 13,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.08,
+      "deltaWw": 0.04,
       "dayWise": [
         {
           "reportDate": "2026-11-07",
@@ -15652,14 +15610,56 @@ window.IBO_CATALOG = {
         {
           "reportDate": "2026-11-19",
           "dayNumber": 13,
-          "indiaNet": 0.25,
-          "indiaGross": 0.28,
+          "indiaNet": 0.29,
+          "indiaGross": 0.32,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": -16.67,
+          "netChangePct": -3.33,
           "disagreementPct": 0,
-          "screens": 685,
-          "occupancy": 14
+          "screens": 745,
+          "occupancy": 13.8
+        }
+      ]
+    },
+    {
+      "id": "aadi-anant",
+      "slug": "Aadi_Anant_2026",
+      "title": "Aadi Anant",
+      "language": "Indian",
+      "industry": "Indian",
+      "director": "—",
+      "starring": "—",
+      "releaseDate": "2026-11-13",
+      "budgetCr": null,
+      "synopsis": "Automatically discovered from Sacnilk's current theatrical board.",
+      "rating": null,
+      "status": "playing",
+      "verdict": "Pending",
+      "posterKey": "aadi-anant",
+      "poster": "./posters/hero-cinema.jpg",
+      "indiaNet": 0.29,
+      "indiaGross": 0,
+      "overseas": 0,
+      "worldwide": 0.29,
+      "lastDayNet": 0.29,
+      "trackedThroughDay": 7,
+      "liveSources": [
+        "sacnilk"
+      ],
+      "deltaNet": 0,
+      "deltaWw": 0,
+      "dayWise": [
+        {
+          "reportDate": "2026-11-19",
+          "dayNumber": 7,
+          "indiaNet": 0.29,
+          "indiaGross": 0,
+          "overseas": 0,
+          "worldwide": 0,
+          "netChangePct": null,
+          "disagreementPct": 0,
+          "screens": null,
+          "occupancy": null
         }
       ]
     },
@@ -21020,8 +21020,8 @@ window.IBO_CATALOG = {
     },
     {
       "sourceId": "express",
-      "status": "blocked",
-      "detail": "HTTP 403"
+      "status": "ok",
+      "detail": "Fetched 1 page (headlines / status)"
     },
     {
       "sourceId": "boi",
@@ -21034,166 +21034,138 @@ window.IBO_CATALOG = {
       "sourceId": "sacnilk",
       "title": "Hanuman Ansh: Sacnilk 102 days, India net ₹342.93 Cr",
       "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T02:23:41.439Z",
+      "publishedAt": "2026-11-19T09:19:07.804Z",
       "summary": "Live day-wise pull. Last day 104. WW ₹453.4 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Ramayana: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/ramayana_part_1_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-19T02:23:41.645Z",
+      "publishedAt": "2026-11-19T09:19:07.822Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹23.2 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Scene: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/scene_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-19T09:19:08.173Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹2.65 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Drishyam 3: The Conclusion: Sacnilk 48 days, India net ₹380.86 Cr",
       "url": "https://www.sacnilk.com/news/drishyam_3_hindi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T02:23:41.834Z",
+      "publishedAt": "2026-11-19T09:19:08.223Z",
       "summary": "Live day-wise pull. Last day 48. WW ₹589.16 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Mirzapur: The Movie: Sacnilk 61 days, India net ₹230.64 Cr",
       "url": "https://www.sacnilk.com/news/mirzapur_the_movie_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T02:23:41.928Z",
+      "publishedAt": "2026-11-19T09:19:08.372Z",
       "summary": "Live day-wise pull. Last day 62. WW ₹339.91 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Itllu Arjuna: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/itllu_arjuna_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-19T02:23:41.935Z",
+      "publishedAt": "2026-11-19T09:19:08.382Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.46 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Scene: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/scene_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-19T02:23:42.238Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹2.65 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Donga Naa Koduku: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/donga_naa_koduku_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-19T02:23:42.262Z",
+      "publishedAt": "2026-11-19T09:19:08.437Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.66 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Sardar 2: Sacnilk 21 days, India net ₹16.33 Cr",
       "url": "https://www.sacnilk.com/news/sardar_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T02:23:42.347Z",
+      "publishedAt": "2026-11-19T09:19:08.662Z",
       "summary": "Live day-wise pull. Last day 22. WW ₹23.88 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Mookuthi Amman 2: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/mookuthi_amman_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-19T09:19:08.963Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.29 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Toxic: Sacnilk 36 days, India net ₹250.13 Cr",
       "url": "https://www.sacnilk.com/news/toxic_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T02:23:42.479Z",
+      "publishedAt": "2026-11-19T09:19:09.009Z",
       "summary": "Live day-wise pull. Last day 37. WW ₹342.26 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Awarapan 2: Sacnilk 46 days, India net ₹150.63 Cr",
       "url": "https://www.sacnilk.com/news/awarapan_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T02:23:42.731Z",
+      "publishedAt": "2026-11-19T09:19:09.292Z",
       "summary": "Live day-wise pull. Last day 82. WW ₹213.05 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Irumudi: Sacnilk 69 days, India net ₹194.54 Cr",
-      "url": "https://www.sacnilk.com/news/irumudi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T02:23:43.089Z",
-      "summary": "Live day-wise pull. Last day 70. WW ₹246.87 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Mookuthi Amman 2: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/mookuthi_amman_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-19T02:23:43.096Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.25 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr",
-      "url": "https://www.sacnilk.com/news/border_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T02:23:43.317Z",
-      "summary": "Live day-wise pull. Last day 58. WW ₹450.19 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Jailer 2: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/jailer_2_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-19T02:23:43.841Z",
+      "publishedAt": "2026-11-19T09:19:09.524Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.2 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "John Doe: Sacnilk discovered",
+      "url": "https://www.sacnilk.com/movie/John_Doe_2026",
+      "publishedAt": "2026-11-19T09:19:19.246Z",
+      "summary": "Auto-discovered Indian title. Current board India net ₹0.3 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Irumudi: Sacnilk 69 days, India net ₹194.54 Cr",
+      "url": "https://www.sacnilk.com/news/irumudi_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-19T09:19:19.696Z",
+      "summary": "Live day-wise pull. Last day 70. WW ₹246.87 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Bouma: Sacnilk discovered",
+      "url": "https://www.sacnilk.com/movie/Bouma_2026",
+      "publishedAt": "2026-11-19T09:19:19.826Z",
+      "summary": "Auto-discovered Indian title. Current board India net ₹0.54 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Hi: Sacnilk 28 days, India net ₹12.83 Cr",
       "url": "https://www.sacnilk.com/news/hi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T02:23:43.869Z",
+      "publishedAt": "2026-11-19T09:19:20.223Z",
       "summary": "Live day-wise pull. Last day 31. WW ₹14.93 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Batwara 1947: Sacnilk 24 days, India net ₹38.08 Cr",
-      "url": "https://www.sacnilk.com/news/batwara_1947_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-19T02:23:44.286Z",
-      "summary": "Live day-wise pull. Last day 24. WW ₹54.2 Cr."
     }
   ],
   "morningBrief": {
     "kind": "desk-day",
-    "briefDate": "2026-11-18",
-    "generatedAt": "2026-11-18T16:42:05.291Z",
-    "headline": "Ramayana Day 13: ₹28.35 Cr India nett",
-    "lede": "7:00 IST: Ramayana Day 12: ₹32.00 Cr India nett 13:00 IST: Ramayana Day 13: ₹28.35 Cr India nett 20:00 IST: Ramayana Day 13: ₹28.35 Cr India nett",
-    "body": "## 7:00 IST — Last day\n\nThrough Day 13 the desk has Ramayana at ₹849.3 Cr India nett, ₹981.1 Cr India gross, ₹502.0 Cr overseas and ₹1,483.1 Cr worldwide. Adding the day-wise nett rows gives ₹820.95 Cr, which is a different series from that lifetime nett, so the two are not combined. Worldwide is ₹16.90 Cr short of ₹1,500.0 Cr. Behind it on the daily chart, Scene at ₹2.90 Cr and Donga Naa Koduku at ₹0.80 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The desk figure remains ₹849.3 Cr India nett and ₹1,483.1 Cr worldwide. No producer-certified total is included.\n\n## 13:00 IST — Occupancy and bookings\n\nThrough Day 13 the desk has Ramayana at ₹849.3 Cr India nett, ₹981.1 Cr India gross, ₹502.0 Cr overseas and ₹1,483.1 Cr worldwide. Adding the day-wise nett rows gives ₹820.95 Cr, which is a different series from that lifetime nett, so the two are not combined. Worldwide is ₹16.90 Cr short of ₹1,500.0 Cr. Behind it on the daily chart, Scene at ₹2.90 Cr and Donga Naa Koduku at ₹0.80 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The desk figure remains ₹849.3 Cr India nett and ₹1,483.1 Cr worldwide. No producer-certified total is included.\n\n## 20:00 IST — Collections so far\n\nThrough Day 13 the desk has Ramayana at ₹849.3 Cr India nett, ₹981.1 Cr India gross, ₹502.0 Cr overseas and ₹1,483.1 Cr worldwide. Adding the day-wise nett rows gives ₹820.95 Cr, which is a different series from that lifetime nett, so the two are not combined. Worldwide is ₹16.90 Cr short of ₹1,500.0 Cr. Behind it on the daily chart, Scene at ₹2.90 Cr and Donga Naa Koduku at ₹0.80 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The desk figure remains ₹849.3 Cr India nett and ₹1,483.1 Cr worldwide. No producer-certified total is included.",
+    "briefDate": "2026-11-19",
+    "generatedAt": "2026-11-19T09:19:57.876Z",
+    "headline": "Ramayana Day 13: ₹28.60 Cr India nett",
+    "lede": "7:00 IST: Ramayana Day 13: ₹28.60 Cr India nett",
+    "body": "## 7:00 IST — Last day\n\nThrough Day 14 the desk has Ramayana at ₹867.6 Cr India nett, ₹1,009.1 Cr India gross, ₹510.0 Cr overseas and ₹1,519.1 Cr worldwide. Adding the day-wise nett rows gives ₹844.40 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Scene at ₹2.65 Cr and Donga Naa Koduku at ₹0.66 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The Times of India is citing about ₹1,000.0 Cr, WION is citing about ₹1,500.0 Cr, The Week is citing about ₹1,500.0 Cr. The desk keeps ₹867.6 Cr India nett and ₹1,519.1 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.",
     "citations": [],
-    "boardGeneratedAt": "2026-11-18T12:23:42.776Z",
+    "boardGeneratedAt": "2026-11-19T09:19:55.599Z",
     "model": "desk-report-v1",
     "editions": [
       {
         "kind": "desk-edition",
         "slot": "morning",
-        "briefDate": "2026-11-18",
-        "generatedAt": "2026-11-18T16:42:05.288Z",
-        "headline": "Ramayana Day 12: ₹32.00 Cr India nett",
-        "lede": "Ramayana closed Day 12 on Tuesday, 17 November 2026 at ₹32.00 Cr India nett and ₹38.25 Cr India gross, -57.3% from Day 11's ₹75.00 Cr. That day played on 22,395 shows at 25.3% occupancy. This is the closed day on the desk, not a live estimate.",
-        "body": "Through Day 13 the desk has Ramayana at ₹849.3 Cr India nett, ₹981.1 Cr India gross, ₹502.0 Cr overseas and ₹1,483.1 Cr worldwide. Adding the day-wise nett rows gives ₹820.95 Cr, which is a different series from that lifetime nett, so the two are not combined. Worldwide is ₹16.90 Cr short of ₹1,500.0 Cr. Behind it on the daily chart, Scene at ₹2.90 Cr and Donga Naa Koduku at ₹0.80 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The desk figure remains ₹849.3 Cr India nett and ₹1,483.1 Cr worldwide. No producer-certified total is included.",
+        "briefDate": "2026-11-19",
+        "generatedAt": "2026-11-19T09:19:57.876Z",
+        "headline": "Ramayana Day 13: ₹28.60 Cr India nett",
+        "lede": "Ramayana closed Day 13 on Wednesday, 18 November 2026 at ₹28.60 Cr India nett and ₹34.15 Cr India gross, -10.6% from Day 12's ₹32.00 Cr. That day played on 22,551 shows at 22.9% occupancy. This is the closed day on the desk, not a live estimate.",
+        "body": "Through Day 14 the desk has Ramayana at ₹867.6 Cr India nett, ₹1,009.1 Cr India gross, ₹510.0 Cr overseas and ₹1,519.1 Cr worldwide. Adding the day-wise nett rows gives ₹844.40 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Scene at ₹2.65 Cr and Donga Naa Koduku at ₹0.66 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The Times of India is citing about ₹1,000.0 Cr, WION is citing about ₹1,500.0 Cr, The Week is citing about ₹1,500.0 Cr. The desk keeps ₹867.6 Cr India nett and ₹1,519.1 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.",
         "citations": [],
-        "boardGeneratedAt": "2026-11-18T12:23:42.776Z",
+        "boardGeneratedAt": "2026-11-19T09:19:55.599Z",
         "model": "desk-report-v1",
         "provisional": false,
-        "leadTitle": "Ramayana"
-      },
-      {
-        "kind": "desk-edition",
-        "slot": "midday",
-        "briefDate": "2026-11-18",
-        "generatedAt": "2026-11-18T16:42:05.290Z",
-        "headline": "Ramayana Day 13: ₹28.35 Cr India nett",
-        "lede": "Ramayana on Day 13 (Wednesday, 18 November 2026) is at ₹28.35 Cr India nett and ₹33.85 Cr India gross, -11.4% from Day 12's ₹32.00 Cr. The board has 22,551 shows at 22.9% occupancy. Advance bookings are not reported yet. The day is still open, so this is not the final figure.",
-        "body": "Through Day 13 the desk has Ramayana at ₹849.3 Cr India nett, ₹981.1 Cr India gross, ₹502.0 Cr overseas and ₹1,483.1 Cr worldwide. Adding the day-wise nett rows gives ₹820.95 Cr, which is a different series from that lifetime nett, so the two are not combined. Worldwide is ₹16.90 Cr short of ₹1,500.0 Cr. Behind it on the daily chart, Scene at ₹2.90 Cr and Donga Naa Koduku at ₹0.80 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The desk figure remains ₹849.3 Cr India nett and ₹1,483.1 Cr worldwide. No producer-certified total is included.",
-        "citations": [],
-        "boardGeneratedAt": "2026-11-18T12:23:42.776Z",
-        "model": "desk-report-v1",
-        "provisional": true,
-        "leadTitle": "Ramayana"
-      },
-      {
-        "kind": "desk-edition",
-        "slot": "evening",
-        "briefDate": "2026-11-18",
-        "generatedAt": "2026-11-18T16:42:05.291Z",
-        "headline": "Ramayana Day 13: ₹28.35 Cr India nett",
-        "lede": "Ramayana's Day 13 collection so far, on Wednesday, 18 November 2026, is ₹28.35 Cr India nett and ₹33.85 Cr India gross, -11.4% from Day 12's ₹32.00 Cr. That is across 22,551 shows at 22.9% occupancy. Updated 05:53 pm IST, and still a live estimate rather than the final drop.",
-        "body": "Through Day 13 the desk has Ramayana at ₹849.3 Cr India nett, ₹981.1 Cr India gross, ₹502.0 Cr overseas and ₹1,483.1 Cr worldwide. Adding the day-wise nett rows gives ₹820.95 Cr, which is a different series from that lifetime nett, so the two are not combined. Worldwide is ₹16.90 Cr short of ₹1,500.0 Cr. Behind it on the daily chart, Scene at ₹2.90 Cr and Donga Naa Koduku at ₹0.80 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The desk figure remains ₹849.3 Cr India nett and ₹1,483.1 Cr worldwide. No producer-certified total is included.",
-        "citations": [],
-        "boardGeneratedAt": "2026-11-18T12:23:42.776Z",
-        "model": "desk-report-v1",
-        "provisional": true,
         "leadTitle": "Ramayana"
       }
     ]

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-19",
-  "generatedAt": "2026-11-19T02:24:15.952Z",
+  "generatedAt": "2026-11-19T09:19:55.599Z",
   "films": [
     {
       "id": "toxic",
@@ -234,17 +234,17 @@
       "status": "playing"
     },
     {
+      "id": "mookuthi-amman-2",
+      "title": "Mookuthi Amman 2",
+      "indiaNet": 21.56,
+      "worldwide": 24.52,
+      "status": "playing"
+    },
+    {
       "id": "aadi-anant",
       "title": "Aadi Anant",
       "indiaNet": 0.29,
       "worldwide": 0.29,
-      "status": "playing"
-    },
-    {
-      "id": "mookuthi-amman-2",
-      "title": "Mookuthi Amman 2",
-      "indiaNet": 21.48,
-      "worldwide": 24.48,
       "status": "playing"
     },
     {
