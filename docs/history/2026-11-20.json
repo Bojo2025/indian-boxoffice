@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "generatedAt": "2026-11-20T11:06:01.832Z",
+  "generatedAt": "2026-11-20T16:17:59.348Z",
   "films": [
     {
       "id": "toxic",
@@ -202,7 +202,7 @@
       "id": "ene-repeat",
       "title": "ENE Repeat",
       "indiaNet": 11.7,
-      "worldwide": 11.8,
+      "worldwide": 13.3,
       "status": "playing"
     },
     {
@@ -257,8 +257,8 @@
     {
       "id": "mookuthi-amman-2",
       "title": "Mookuthi Amman 2",
-      "indiaNet": 21.75,
-      "worldwide": 24.79,
+      "indiaNet": 21.71,
+      "worldwide": 24.77,
       "status": "playing"
     },
     {
@@ -269,17 +269,17 @@
       "status": "playing"
     },
     {
-      "id": "udta-teer",
-      "title": "Udta Teer",
-      "indiaNet": 49.91,
-      "worldwide": 69.33,
-      "status": "playing"
-    },
-    {
       "id": "i-play-rocky",
       "title": "I Play Rocky",
       "indiaNet": 0.11,
       "worldwide": 0.11,
+      "status": "playing"
+    },
+    {
+      "id": "udta-teer",
+      "title": "Udta Teer",
+      "indiaNet": 49.89,
+      "worldwide": 69.33,
       "status": "playing"
     },
     {
