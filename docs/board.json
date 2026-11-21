@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T02:03:05.963Z",
+  "generatedAt": "2026-11-21T08:42:13.260Z",
   "deskDate": "2026-11-21",
   "comparedTo": "2026-11-21 prior",
   "mode": "server-consensus",
@@ -12,10 +12,10 @@
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 228)",
-      "koimoi has failed 228 consecutive publishes",
-      "boi failed: HTTP 403 (streak 89)",
-      "boi has failed 89 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 229)",
+      "koimoi has failed 229 consecutive publishes",
+      "boi failed: HTTP 403 (streak 90)",
+      "boi has failed 90 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
@@ -25,7 +25,7 @@
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 228,
+        "streakFail": 229,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@
       },
       "boi": {
         "ok": false,
-        "streakFail": 89,
+        "streakFail": 90,
         "detail": "HTTP 403"
       }
     }
@@ -9259,7 +9259,7 @@
         "hungama",
         "wikipedia"
       ],
-      "deltaNet": 13.09,
+      "deltaNet": 0,
       "deltaWw": 0,
       "dayWise": [
         {
@@ -14803,27 +14803,27 @@
       "verdict": "Pending",
       "posterKey": "om-operation-mole",
       "poster": "./posters/hero-cinema.jpg",
-      "indiaNet": 35.4,
-      "indiaGross": 20.55,
+      "indiaNet": 35.8,
+      "indiaGross": 21,
       "overseas": 11,
-      "worldwide": 35.4,
-      "lastDayNet": 17.7,
+      "worldwide": 35.8,
+      "lastDayNet": 18.1,
       "trackedThroughDay": 1,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": 0.4,
+      "deltaWw": 0.4,
       "dayWise": [
         {
           "reportDate": "2026-11-21",
           "dayNumber": 1,
           "indiaNet": 17.7,
-          "indiaGross": 20.55,
+          "indiaGross": 21,
           "overseas": 0,
           "worldwide": 0,
           "netChangePct": null,
-          "disagreementPct": 0,
+          "disagreementPct": 2.234636871508392,
           "screens": 6628,
           "occupancy": 45.6
         }
@@ -14845,17 +14845,17 @@
       "verdict": "Pending",
       "posterKey": "ramayana",
       "poster": "./posters/ramayana.jpg",
-      "indiaNet": 896.35,
-      "indiaGross": 1051.6,
+      "indiaNet": 895.25,
+      "indiaGross": 1050.95,
       "overseas": 523,
-      "worldwide": 1574.6,
-      "lastDayNet": 16.3,
+      "worldwide": 1573.95,
+      "lastDayNet": 15.75,
       "trackedThroughDay": 16,
       "liveSources": [
         "sacnilk"
       ],
-      "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaNet": -1.1,
+      "deltaWw": -0.65,
       "dayWise": [
         {
           "reportDate": "2026-11-06",
@@ -15040,11 +15040,11 @@
         {
           "reportDate": "2026-11-21",
           "dayNumber": 16,
-          "indiaNet": 16.3,
-          "indiaGross": 19.45,
+          "indiaNet": 15.75,
+          "indiaGross": 18.8,
           "overseas": 0,
           "worldwide": 0,
-          "netChangePct": -15.76,
+          "netChangePct": -18.6,
           "disagreementPct": 0,
           "screens": 15497,
           "occupancy": 18.2
@@ -15458,7 +15458,7 @@
       "posterKey": "bachelor-party-deux",
       "poster": "./posters/hero-cinema.jpg",
       "indiaNet": 3.69,
-      "indiaGross": 3.68,
+      "indiaGross": 3.67,
       "overseas": 0,
       "worldwide": 3.69,
       "lastDayNet": 0.57,
@@ -15485,7 +15485,7 @@
           "reportDate": "2026-11-21",
           "dayNumber": 2,
           "indiaNet": 0.57,
-          "indiaGross": 0.68,
+          "indiaGross": 0.67,
           "overseas": 0,
           "worldwide": 0,
           "netChangePct": -77.65,
@@ -17274,11 +17274,11 @@
   ],
   "changes": [
     {
-      "id": "dhurandhar",
-      "title": "Dhurandhar: The Revenge",
-      "text": "Dhurandhar: The Revenge: India net +₹13.09 Cr since 2026-11-21 prior",
-      "deltaNet": 13.09,
-      "deltaWw": 0
+      "id": "ramayana",
+      "title": "Ramayana",
+      "text": "Ramayana: WW ₹-0.65 Cr, India net ₹-1.1 Cr since 2026-11-21 prior",
+      "deltaNet": -1.1,
+      "deltaWw": -0.65
     }
   ],
   "logs": [
@@ -17326,115 +17326,115 @@
   "headlines": [
     {
       "sourceId": "sacnilk",
-      "title": "Ramayana: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/ramayana_part_1_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-21T02:02:17.566Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹16.3 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Hanuman Ansh: Sacnilk 104 days, India net ₹342.95 Cr",
-      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-21T02:02:17.793Z",
-      "summary": "Live day-wise pull. Last day 106. WW ₹453.42 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
       "title": "Mirzapur: The Movie: Sacnilk 61 days, India net ₹230.64 Cr",
       "url": "https://www.sacnilk.com/news/mirzapur_the_movie_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-21T02:02:17.819Z",
+      "publishedAt": "2026-11-21T08:41:12.177Z",
       "summary": "Live day-wise pull. Last day 62. WW ₹339.91 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "O.M Operation Mole: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/om_chapter_1_udhiram_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-21T02:02:17.832Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹17.7 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Drishyam 3: The Conclusion: Sacnilk 50 days, India net ₹380.95 Cr",
       "url": "https://www.sacnilk.com/news/drishyam_3_hindi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-21T02:02:18.032Z",
+      "publishedAt": "2026-11-21T08:41:12.186Z",
       "summary": "Live day-wise pull. Last day 50. WW ₹589.26 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Ramayana: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/ramayana_part_1_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-21T08:41:12.195Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹15.75 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "O.M Operation Mole: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/om_chapter_1_udhiram_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-21T08:41:12.416Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹18.1 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Scene: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/scene_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-21T02:02:18.047Z",
+      "publishedAt": "2026-11-21T08:41:12.474Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.77 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Hanuman Ansh: Sacnilk 104 days, India net ₹342.95 Cr",
+      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-21T08:41:12.483Z",
+      "summary": "Live day-wise pull. Last day 106. WW ₹453.42 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "ENE Repeat: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/ene_repeat_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-21T02:02:18.057Z",
+      "publishedAt": "2026-11-21T08:41:12.573Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹3.1 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Sardar 2: Sacnilk 21 days, India net ₹16.33 Cr",
       "url": "https://www.sacnilk.com/news/sardar_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-21T02:02:18.096Z",
+      "publishedAt": "2026-11-21T08:41:13.107Z",
       "summary": "Live day-wise pull. Last day 22. WW ₹23.88 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Toxic: Sacnilk 36 days, India net ₹250.13 Cr",
       "url": "https://www.sacnilk.com/news/toxic_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-21T02:02:18.543Z",
+      "publishedAt": "2026-11-21T08:41:13.209Z",
       "summary": "Live day-wise pull. Last day 37. WW ₹342.26 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Awarapan 2: Sacnilk 46 days, India net ₹150.63 Cr",
-      "url": "https://www.sacnilk.com/news/awarapan_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-21T02:02:18.653Z",
-      "summary": "Live day-wise pull. Last day 82. WW ₹213.05 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Bachelor Party D'eux: Sacnilk discovered live",
       "url": "https://www.sacnilk.com/news/bachelor_party_deux_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-21T02:02:18.802Z",
+      "publishedAt": "2026-11-21T08:41:13.290Z",
       "summary": "Auto-discovered Indian title. Latest reported India net ₹0.57 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Awarapan 2: Sacnilk 46 days, India net ₹150.63 Cr",
+      "url": "https://www.sacnilk.com/news/awarapan_2_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-21T08:41:13.748Z",
+      "summary": "Live day-wise pull. Last day 82. WW ₹213.05 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Irumudi: Sacnilk 69 days, India net ₹194.54 Cr",
       "url": "https://www.sacnilk.com/news/irumudi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-21T02:02:19.102Z",
+      "publishedAt": "2026-11-21T08:41:14.145Z",
       "summary": "Live day-wise pull. Last day 70. WW ₹246.87 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr",
-      "url": "https://www.sacnilk.com/news/border_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-21T02:02:19.198Z",
-      "summary": "Live day-wise pull. Last day 58. WW ₹450.19 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Godzilla Minus Zero: Sacnilk discovered",
       "url": "https://www.sacnilk.com/movie/Godzilla_Minus_Zero_2026",
-      "publishedAt": "2026-11-21T02:02:28.587Z",
+      "publishedAt": "2026-11-21T08:41:23.304Z",
       "summary": "Auto-discovered Indian title. Current board India net ₹0.7 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "AOT: Sacnilk discovered",
+      "url": "https://www.sacnilk.com/movie/AOT_2026",
+      "publishedAt": "2026-11-21T08:41:23.530Z",
+      "summary": "Auto-discovered Indian title. Current board India net ₹0.67 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Brindavihari: Sacnilk discovered",
+      "url": "https://www.sacnilk.com/movie/Brindavihari_2026",
+      "publishedAt": "2026-11-21T08:41:23.575Z",
+      "summary": "Auto-discovered Indian title. Current board India net ₹0.6 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Hi: Sacnilk 28 days, India net ₹12.83 Cr",
       "url": "https://www.sacnilk.com/news/hi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-21T02:02:28.738Z",
+      "publishedAt": "2026-11-21T08:41:24.095Z",
       "summary": "Live day-wise pull. Last day 31. WW ₹14.93 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Batwara 1947: Sacnilk 24 days, India net ₹38.08 Cr",
-      "url": "https://www.sacnilk.com/news/batwara_1947_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-21T02:02:28.811Z",
-      "summary": "Live day-wise pull. Last day 24. WW ₹54.2 Cr."
     }
   ],
   "morningBrief": {
@@ -17442,12 +17442,26 @@
     "briefDate": "2026-11-21",
     "generatedAt": "2026-11-20T21:56:51.952Z",
     "headline": "O.M Operation Mole Day 1: ₹17.70 Cr India nett",
-    "lede": "20:00 IST: O.M Operation Mole Day 1: ₹17.70 Cr India nett",
-    "body": "## 20:00 IST — Collections so far\n\nThrough Day 1 the desk has O.M Operation Mole at ₹35.40 Cr India nett, ₹20.55 Cr India gross, ₹11.00 Cr overseas and ₹35.40 Cr worldwide. Adding the day-wise nett rows gives ₹17.70 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Ramayana at ₹16.30 Cr and ENE Repeat at ₹3.10 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by O.M Operation Mole. The desk figure remains ₹35.40 Cr India nett and ₹35.40 Cr worldwide. No producer-certified total is included.",
+    "lede": "7:00 IST: O.M Operation Mole Day 1: ₹17.70 Cr India nett 20:00 IST: O.M Operation Mole Day 1: ₹17.70 Cr India nett",
+    "body": "## 7:00 IST — Last day\n\nThrough Day 1 the desk has O.M Operation Mole at ₹35.80 Cr India nett, ₹21.00 Cr India gross, ₹11.00 Cr overseas and ₹35.80 Cr worldwide. Adding the day-wise nett rows gives ₹17.70 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Ramayana at ₹15.75 Cr and ENE Repeat at ₹3.10 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by O.M Operation Mole. The desk figure remains ₹35.80 Cr India nett and ₹35.80 Cr worldwide. No producer-certified total is included.\n\n## 20:00 IST — Collections so far\n\nThrough Day 1 the desk has O.M Operation Mole at ₹35.40 Cr India nett, ₹20.55 Cr India gross, ₹11.00 Cr overseas and ₹35.40 Cr worldwide. Adding the day-wise nett rows gives ₹17.70 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Ramayana at ₹16.30 Cr and ENE Repeat at ₹3.10 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by O.M Operation Mole. The desk figure remains ₹35.40 Cr India nett and ₹35.40 Cr worldwide. No producer-certified total is included.",
     "citations": [],
-    "boardGeneratedAt": "2026-11-20T21:56:49.673Z",
+    "boardGeneratedAt": "2026-11-21T08:42:13.260Z",
     "model": "desk-report-v1",
     "editions": [
+      {
+        "kind": "desk-edition",
+        "slot": "morning",
+        "briefDate": "2026-11-21",
+        "generatedAt": "2026-11-21T08:42:15.163Z",
+        "headline": "O.M Operation Mole Day 1: ₹17.70 Cr India nett",
+        "lede": "O.M Operation Mole closed Day 1 on Saturday, 21 November 2026 at ₹17.70 Cr India nett and ₹21.00 Cr India gross, with no previous day on the ledger. That day played on 6,628 shows at 45.6% occupancy. This is the closed day on the desk, not a live estimate.",
+        "body": "Through Day 1 the desk has O.M Operation Mole at ₹35.80 Cr India nett, ₹21.00 Cr India gross, ₹11.00 Cr overseas and ₹35.80 Cr worldwide. Adding the day-wise nett rows gives ₹17.70 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Ramayana at ₹15.75 Cr and ENE Repeat at ₹3.10 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by O.M Operation Mole. The desk figure remains ₹35.80 Cr India nett and ₹35.80 Cr worldwide. No producer-certified total is included.",
+        "citations": [],
+        "boardGeneratedAt": "2026-11-21T08:42:13.260Z",
+        "model": "desk-report-v1",
+        "provisional": false,
+        "leadTitle": "O.M Operation Mole"
+      },
       {
         "kind": "desk-edition",
         "slot": "evening",

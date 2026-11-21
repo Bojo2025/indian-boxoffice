@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "generatedAt": "2026-11-21T02:03:05.963Z",
+  "generatedAt": "2026-11-21T08:42:13.260Z",
   "films": [
     {
       "id": "toxic",
@@ -194,15 +194,15 @@
     {
       "id": "om-operation-mole",
       "title": "O.M Operation Mole",
-      "indiaNet": 35.4,
-      "worldwide": 35.4,
+      "indiaNet": 35.8,
+      "worldwide": 35.8,
       "status": "playing"
     },
     {
       "id": "ramayana",
       "title": "Ramayana",
-      "indiaNet": 896.35,
-      "worldwide": 1574.6,
+      "indiaNet": 895.25,
+      "worldwide": 1573.95,
       "status": "playing"
     },
     {
