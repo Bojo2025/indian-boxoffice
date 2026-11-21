@@ -548,7 +548,8 @@ export async function generateDeskBriefs(slotArg?: string): Promise<DeskBundle> 
 
   const today = deskDateIst();
   const real = films.filter((film) => !isNoise(film)).sort((a, b) => (b.lastDayNet ?? 0) - (a.lastDayNet ?? 0));
-  const lead = real[0];
+  // Ramayana leads the desk until a different film is chosen on purpose.
+  const lead = real.find((film) => film.id === "ramayana") ?? real[0];
   if (!lead) throw new Error("No film with a real latest-day India nett");
   const others = real.filter((film) => film.id !== lead.id);
   const wanted = parseSlots(slotArg ?? process.env.BRIEF_SLOT);
