@@ -10,10 +10,6 @@ on:
     - cron: "30 7 * * *"
     # 20:00 IST — the day's collections so far
     - cron: "30 14 * * *"
-    # Backups one hour later. An existing slot is kept, so a second run is harmless.
-    - cron: "15 2 * * *"
-    - cron: "15 8 * * *"
-    - cron: "15 15 * * *"
   workflow_dispatch:
     inputs:
       brief_slot:
@@ -58,9 +54,6 @@ jobs:
             "30 1 * * *") SLOT="morning" ;;
             "30 7 * * *") SLOT="midday" ;;
             "30 14 * * *") SLOT="evening" ;;
-            "15 2 * * *") SLOT="morning" ;;
-            "15 8 * * *") SLOT="midday" ;;
-            "15 15 * * *") SLOT="evening" ;;
           esac
           if [ -z "$SLOT" ]; then
             echo "Board refresh only — no desk-report slot on this run."
