@@ -98,6 +98,34 @@ export type DeskBundle = {
   editions: DeskEdition[];
 };
 
+const SLOT_START_MIN: Record<Slot, number> = { morning: 7 * 60, midday: 13 * 60, evening: 20 * 60 };
+
+function istMinutesNow(d = new Date()): number {
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Kolkata",
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23",
+  }).formatToParts(d);
+  const h = Number(parts.find((p) => p.type === "hour")?.value ?? 0);
+  const m = Number(parts.find((p) => p.type === "minute")?.value ?? 0);
+  return h * 60 + m;
+}
+
+// Scheduled runs only file a report inside the slot's window. A late run is
+// skipped instead of being filed under the wrong day or at the wrong hour.
+function outsideSlotWindow(slot: Slot): string | null {
+  if (process.env.GITHUB_EVENT_NAME !== "schedule") return null;
+  const now = istMinutesNow();
+  const start = SLOT_START_MIN[slot];
+  if (now < start - 60 || now > start + 240) {
+    const hh = String(Math.floor(now / 60)).padStart(2, "0");
+    const mm = String(now % 60).padStart(2, "0");
+    return `${slot} is outside its window (IST now ${hh}:${mm})`;
+  }
+  return null;
+}
+
 function deskDateIst(d = new Date()): string {
   return new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Kolkata",
@@ -265,6 +293,15 @@ function stripTags(value: string): string {
   return value.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
 }
 
+// Sources that are not trade box office reporting and must never be cited.
+const EXCLUDED_NEWS_SOURCES = /^(imdb|wikipedia|reddit|youtube|facebook|x|twitter|instagram)\b/i;
+
+// A headline only counts as a collection figure when it states a result, not a budget, target or forecast.
+function isCollectionClaim(title: string): boolean {
+  if (!/collect|box office|nett|net|gross|earn|worldwide|day \d+/i.test(title)) return false;
+  return !/\b(set to|to cross|will cross|eyes|target|budget|expected|projected|predict\w*|forecast|likely|could|may|aims?|goal|estimated cost|cost)\b/i.test(title);
+}
+
 async function searchNews(film: FilmRow): Promise<NewsHit[]> {
   const hits: NewsHit[] = [];
   const query = encodeURIComponent(`${film.title} box office collection`);
@@ -280,12 +317,13 @@ async function searchNews(film: FilmRow): Promise<NewsHit[]> {
       const source = stripTags(sourceTag?.[2] ?? "News");
       const sourceUrl = sourceTag?.[1]?.match(/\burl="([^"]+)"/i)?.[1] ?? "";
       if (!title || !source) continue;
+      if (EXCLUDED_NEWS_SOURCES.test(source)) continue;
       const url = sourceUrl || (link && !/news\.google\.com/i.test(link) ? link : "");
       hits.push({
         url,
         title,
         source,
-        numbers: croreNumbers(title),
+        numbers: isCollectionClaim(title) ? croreNumbers(title) : [],
         mentionsBooking: /advance booking|booking|occupancy/i.test(title),
         mentionsProducer: /producer|makers claim|official collection/i.test(title),
         status: "cited",
@@ -463,7 +501,12 @@ function writeEdition(edition: DeskEdition) {
 }
 
 function injectBundle(bundle: DeskBundle) {
+  if (!bundle.editions.length) {
+    console.log("No desk report was written this run; leaving the existing bundle in place.");
+    return;
+  }
   writeFileSync(briefPath, `${JSON.stringify(bundle, null, 2)}\n`);
+  mkdirSync(join(outDir, "briefs", bundle.briefDate), { recursive: true });
   writeFileSync(join(outDir, "briefs", bundle.briefDate, "brief.json"), `${JSON.stringify(bundle, null, 2)}\n`);
 
   if (existsSync(catalogPath)) {
@@ -522,6 +565,12 @@ export async function generateDeskBriefs(slotArg?: string): Promise<DeskBundle> 
     if (previous && previous.briefDate === today && previous.model === "desk-report-v1" && !force) {
       console.log(`${slot} report already exists for ${today} — keeping it. Set FORCE_BRIEF=1 to rewrite.`);
       editions.push(previous);
+      continue;
+    }
+    const late = outsideSlotWindow(slot);
+    if (late) {
+      console.log(`Skipped ${slot} report: ${late}.`);
+      if (previous?.briefDate === today) editions.push(previous);
       continue;
     }
     const edition = buildEdition(lead, others, slot, today, board!, news);
