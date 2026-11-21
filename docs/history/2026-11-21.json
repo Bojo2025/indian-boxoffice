@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "generatedAt": "2026-11-21T08:42:13.260Z",
+  "generatedAt": "2026-11-21T10:47:45.259Z",
   "films": [
     {
       "id": "toxic",
@@ -194,8 +194,8 @@
     {
       "id": "om-operation-mole",
       "title": "O.M Operation Mole",
-      "indiaNet": 35.8,
-      "worldwide": 35.8,
+      "indiaNet": 36.2,
+      "worldwide": 36.2,
       "status": "playing"
     },
     {
