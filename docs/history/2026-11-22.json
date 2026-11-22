@@ -1,6 +1,6 @@
 {
   "date": "2026-11-22",
-  "generatedAt": "2026-11-22T01:03:28.452Z",
+  "generatedAt": "2026-11-22T08:41:18.102Z",
   "films": [
     {
       "id": "toxic",
@@ -194,15 +194,15 @@
     {
       "id": "ramayana",
       "title": "Ramayana",
-      "indiaNet": 934.3,
-      "worldwide": 1616.7,
+      "indiaNet": 934.8,
+      "worldwide": 1651,
       "status": "playing"
     },
     {
       "id": "om-operation-mole",
       "title": "O.M Operation Mole",
-      "indiaNet": 48.9,
-      "worldwide": 60.9,
+      "indiaNet": 50.6,
+      "worldwide": 61.85,
       "status": "playing"
     },
     {
@@ -210,6 +210,13 @@
       "title": "ENE Repeat",
       "indiaNet": 17.85,
       "worldwide": 28.1,
+      "status": "playing"
+    },
+    {
+      "id": "aakasamlo-oka-tara",
+      "title": "Aakasamlo Oka Tara",
+      "indiaNet": 11.8,
+      "worldwide": 12.9,
       "status": "playing"
     },
     {
@@ -392,13 +399,6 @@
       "title": "Nanhey Dil",
       "indiaNet": 0.08,
       "worldwide": 0.08,
-      "status": "playing"
-    },
-    {
-      "id": "aayen-bayen-sayen",
-      "title": "Aayen Bayen Sayen",
-      "indiaNet": 0.07,
-      "worldwide": 0.07,
       "status": "playing"
     }
   ]
