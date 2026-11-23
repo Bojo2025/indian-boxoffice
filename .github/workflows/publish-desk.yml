@@ -62,6 +62,16 @@ jobs:
             "15 8 * * *") SLOT="midday" ;;
             "15 15 * * *") SLOT="evening" ;;
           esac
+          # If GitHub omitted the schedule string, pick the slot from IST clock.
+          if [ -z "$SLOT" ] && [ -z "$SCHEDULE" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            HOUR=$(TZ=Asia/Kolkata date +%H)
+            case "$HOUR" in
+              06|07|08|09|10|11) SLOT="morning" ;;
+              12|13|14|15|16|17) SLOT="midday" ;;
+              19|20|21|22|23|00|01|02|03|04|05) SLOT="evening" ;;
+            esac
+            echo "Schedule string missing; IST hour $HOUR → slot ${SLOT:-none}"
+          fi
           if [ -z "$SLOT" ]; then
             echo "Board refresh only — no desk-report slot on this run."
             exit 0
