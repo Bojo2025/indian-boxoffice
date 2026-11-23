@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "generatedAt": "2026-11-23T01:29:18.373Z",
+  "generatedAt": "2026-11-23T09:39:20.481Z",
   "films": [
     {
       "id": "toxic",
@@ -222,15 +222,15 @@
     {
       "id": "scene",
       "title": "Scene",
-      "indiaNet": 152.21,
-      "worldwide": 262.42,
+      "indiaNet": 152.23,
+      "worldwide": 264.5,
       "status": "playing"
     },
     {
       "id": "godzilla-minus-zero",
       "title": "Godzilla Minus Zero",
-      "indiaNet": 1.22,
-      "worldwide": 1.22,
+      "indiaNet": 4.1,
+      "worldwide": 4.1,
       "status": "playing"
     },
     {
@@ -248,17 +248,17 @@
       "status": "playing"
     },
     {
-      "id": "the-hunger-games-sunrise-on-the-reaping",
-      "title": "The Hunger Games: Sunrise on the Reaping",
-      "indiaNet": 0.69,
-      "worldwide": 0.69,
-      "status": "playing"
-    },
-    {
       "id": "aadi-anant",
       "title": "Aadi Anant",
       "indiaNet": 0.67,
       "worldwide": 0.67,
+      "status": "playing"
+    },
+    {
+      "id": "the-hunger-games-sunrise-on-the-reaping",
+      "title": "The Hunger Games: Sunrise on the Reaping",
+      "indiaNet": 0.55,
+      "worldwide": 0.55,
       "status": "playing"
     },
     {
@@ -297,17 +297,17 @@
       "status": "playing"
     },
     {
-      "id": "pyre",
-      "title": "Pyre",
+      "id": "shankarabharanna",
+      "title": "Shankarabharanna",
       "indiaNet": 0.27,
       "worldwide": 0.27,
       "status": "playing"
     },
     {
-      "id": "shankarabharanna",
-      "title": "Shankarabharanna",
-      "indiaNet": 0.27,
-      "worldwide": 0.27,
+      "id": "pyre",
+      "title": "Pyre",
+      "indiaNet": 0.22,
+      "worldwide": 0.22,
       "status": "playing"
     },
     {
