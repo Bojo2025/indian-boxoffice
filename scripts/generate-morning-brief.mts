@@ -98,34 +98,6 @@ export type DeskBundle = {
   editions: DeskEdition[];
 };
 
-const SLOT_START_MIN: Record<Slot, number> = { morning: 7 * 60, midday: 13 * 60, evening: 20 * 60 };
-
-function istMinutesNow(d = new Date()): number {
-  const parts = new Intl.DateTimeFormat("en-GB", {
-    timeZone: "Asia/Kolkata",
-    hour: "2-digit",
-    minute: "2-digit",
-    hourCycle: "h23",
-  }).formatToParts(d);
-  const h = Number(parts.find((p) => p.type === "hour")?.value ?? 0);
-  const m = Number(parts.find((p) => p.type === "minute")?.value ?? 0);
-  return h * 60 + m;
-}
-
-// Scheduled runs only file a report inside the slot's window. A late run is
-// skipped instead of being filed under the wrong day or at the wrong hour.
-function outsideSlotWindow(slot: Slot): string | null {
-  if (process.env.GITHUB_EVENT_NAME !== "schedule") return null;
-  const now = istMinutesNow();
-  const start = SLOT_START_MIN[slot];
-  if (now < start - 60 || now > start + 240) {
-    const hh = String(Math.floor(now / 60)).padStart(2, "0");
-    const mm = String(now % 60).padStart(2, "0");
-    return `${slot} is outside its window (IST now ${hh}:${mm})`;
-  }
-  return null;
-}
-
 function deskDateIst(d = new Date()): string {
   return new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Kolkata",
@@ -133,6 +105,29 @@ function deskDateIst(d = new Date()): string {
     month: "2-digit",
     day: "2-digit",
   }).format(d);
+}
+
+function shiftIstDate(iso: string, days: number): string {
+  const date = new Date(`${iso}T12:00:00+05:30`);
+  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+  return deskDateIst(date);
+}
+
+function istHourNow(d = new Date()): number {
+  return Number(
+    new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Asia/Kolkata",
+      hour: "2-digit",
+      hourCycle: "h23",
+    }).formatToParts(d).find((part) => part.type === "hour")?.value ?? 0,
+  );
+}
+
+// GitHub often starts a cron hours late. Keep the slot from the schedule, and
+// if the evening run lands after midnight IST, file it under yesterday.
+function reportDateForSlot(slot: Slot, today: string): string {
+  if (slot === "evening" && istHourNow() < 12) return shiftIstDate(today, -1);
+  return today;
 }
 
 function readJson<T>(path: string): T | null {
@@ -541,6 +536,12 @@ function parseSlots(raw: string | undefined): Slot[] {
   throw new Error(`Unknown BRIEF_SLOT "${raw}". Use morning, midday, evening, or all.`);
 }
 
+function loadDayEditions(date: string): DeskEdition[] {
+  return SLOT_ORDER.map((slot) => existingEdition(date, slot)).filter(
+    (edition): edition is DeskEdition => Boolean(edition),
+  );
+}
+
 export async function generateDeskBriefs(slotArg?: string): Promise<DeskBundle> {
   const board = readJson<Board>(boardPath);
   const films = board?.films ?? [];
@@ -555,34 +556,28 @@ export async function generateDeskBriefs(slotArg?: string): Promise<DeskBundle> 
   const wanted = parseSlots(slotArg ?? process.env.BRIEF_SLOT);
   const force = process.env.FORCE_BRIEF === "1";
 
-  const news = await searchNews(lead);
-  const editions: DeskEdition[] = [];
-  for (const slot of SLOT_ORDER) {
-    const previous = existingEdition(today, slot);
-    if (!wanted.includes(slot)) {
-      if (previous?.briefDate === today) editions.push(previous);
+  const news = wanted.length ? await searchNews(lead) : [];
+  for (const slot of wanted) {
+    const reportDate = reportDateForSlot(slot, today);
+    const previous = existingEdition(reportDate, slot);
+    if (previous && previous.briefDate === reportDate && previous.model === "desk-report-v1" && !force) {
+      console.log(`${slot} report already exists for ${reportDate} — keeping it. Set FORCE_BRIEF=1 to rewrite.`);
       continue;
     }
-    if (previous && previous.briefDate === today && previous.model === "desk-report-v1" && !force) {
-      console.log(`${slot} report already exists for ${today} — keeping it. Set FORCE_BRIEF=1 to rewrite.`);
-      editions.push(previous);
-      continue;
+    if (reportDate !== today) {
+      console.log(`${slot} cron landed after midnight IST — filing under ${reportDate}.`);
     }
-    const late = outsideSlotWindow(slot);
-    if (late) {
-      console.log(`Skipped ${slot} report: ${late}.`);
-      if (previous?.briefDate === today) editions.push(previous);
-      continue;
-    }
-    const edition = buildEdition(lead, others, slot, today, board!, news);
+    const edition = buildEdition(lead, others, slot, reportDate, board!, news);
     writeEdition(edition);
-    editions.push(edition);
     console.log(`✓ ${slot} report — ${edition.headline}`);
   }
 
+  const todayEditions = loadDayEditions(today);
+  const displayDate = todayEditions.length || istHourNow() >= 12 ? today : shiftIstDate(today, -1);
+  const editions = loadDayEditions(displayDate);
   const bundle = bundleEditions(editions, board!);
   injectBundle(bundle);
-  console.log(`✓ Desk bundle → docs/morning-brief.json (${bundle.editions.map((edition) => edition.slot).join(", ")})`);
+  console.log(`✓ Desk bundle → docs/morning-brief.json (${bundle.editions.map((edition) => edition.slot).join(", ") || "empty"})`);
   return bundle;
 }
 
