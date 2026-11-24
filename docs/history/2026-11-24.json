@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "generatedAt": "2026-11-24T09:07:01.425Z",
+  "generatedAt": "2026-11-24T11:31:40.441Z",
   "films": [
     {
       "id": "toxic",
@@ -292,8 +292,8 @@
     {
       "id": "bachelor-party-deux",
       "title": "Bachelor Party D'eux",
-      "indiaNet": 4.07,
-      "worldwide": 4.65,
+      "indiaNet": 4.05,
+      "worldwide": 6.59,
       "status": "playing"
     },
     {
