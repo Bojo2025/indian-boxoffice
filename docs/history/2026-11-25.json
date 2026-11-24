@@ -1,6 +1,6 @@
 {
   "date": "2026-11-25",
-  "generatedAt": "2026-11-24T19:33:34.267Z",
+  "generatedAt": "2026-11-24T22:07:36.105Z",
   "films": [
     {
       "id": "toxic",
@@ -61,8 +61,8 @@
     {
       "id": "hanuman-ansh",
       "title": "Hanuman Ansh",
-      "indiaNet": 342.98,
-      "worldwide": 453.45,
+      "indiaNet": 342.99,
+      "worldwide": 453.46,
       "status": "late"
     },
     {
@@ -89,8 +89,8 @@
     {
       "id": "spider-man-bnd",
       "title": "Spider-Man: Brand New Day",
-      "indiaNet": 501.02,
-      "worldwide": 599.28,
+      "indiaNet": 501.03,
+      "worldwide": 599.29,
       "status": "late"
     },
     {
@@ -103,8 +103,8 @@
     {
       "id": "the-odyssey",
       "title": "The Odyssey",
-      "indiaNet": 196.98,
-      "worldwide": 234.55,
+      "indiaNet": 196.99,
+      "worldwide": 234.56,
       "status": "late"
     },
     {
@@ -159,8 +159,8 @@
     {
       "id": "drishyam-3",
       "title": "Drishyam 3: The Conclusion",
-      "indiaNet": 381.13,
-      "worldwide": 589.46,
+      "indiaNet": 381.23,
+      "worldwide": 589.51,
       "status": "playing"
     },
     {
@@ -234,6 +234,27 @@
       "status": "playing"
     },
     {
+      "id": "sadhak-bamakhyapa",
+      "title": "Sadhak Bamakhyapa",
+      "indiaNet": 0.4,
+      "worldwide": 0.4,
+      "status": "playing"
+    },
+    {
+      "id": "aadi-anant",
+      "title": "Aadi Anant",
+      "indiaNet": 0.32,
+      "worldwide": 0.32,
+      "status": "playing"
+    },
+    {
+      "id": "the-hunger-games-sunrise-on-the-reaping",
+      "title": "The Hunger Games: Sunrise on the Reaping",
+      "indiaNet": 0.3,
+      "worldwide": 0.3,
+      "status": "playing"
+    },
+    {
       "id": "brindavihari",
       "title": "Brindavihari",
       "indiaNet": 0.29,
@@ -245,6 +266,132 @@
       "title": "Appakutty",
       "indiaNet": 0.26,
       "worldwide": 0.26,
+      "status": "playing"
+    },
+    {
+      "id": "kaali-kheti",
+      "title": "Kaali Kheti",
+      "indiaNet": 0.16,
+      "worldwide": 0.16,
+      "status": "playing"
+    },
+    {
+      "id": "bouma",
+      "title": "Bouma",
+      "indiaNet": 0.15,
+      "worldwide": 0.15,
+      "status": "playing"
+    },
+    {
+      "id": "sathyavan-savithiri",
+      "title": "Sathyavan Savithiri",
+      "indiaNet": 0.15,
+      "worldwide": 0.15,
+      "status": "playing"
+    },
+    {
+      "id": "pyre",
+      "title": "Pyre",
+      "indiaNet": 0.12,
+      "worldwide": 0.12,
+      "status": "playing"
+    },
+    {
+      "id": "ruff-and-tuff-kanya",
+      "title": "Ruff and Tuff Kanya",
+      "indiaNet": 0.11,
+      "worldwide": 0.11,
+      "status": "playing"
+    },
+    {
+      "id": "udta-teer",
+      "title": "Udta Teer",
+      "indiaNet": 50.43,
+      "worldwide": 69.93,
+      "status": "playing"
+    },
+    {
+      "id": "shankarabharanna",
+      "title": "Shankarabharanna",
+      "indiaNet": 0.09,
+      "worldwide": 0.09,
+      "status": "playing"
+    },
+    {
+      "id": "bachelor-party-deux",
+      "title": "Bachelor Party D'eux",
+      "indiaNet": 4.11,
+      "worldwide": 6.68,
+      "status": "playing"
+    },
+    {
+      "id": "donga-naa-koduku",
+      "title": "Donga Naa Koduku",
+      "indiaNet": 9.06,
+      "worldwide": 10.32,
+      "status": "playing"
+    },
+    {
+      "id": "aayen-bayen-sayen",
+      "title": "Aayen Bayen Sayen",
+      "indiaNet": 0.07,
+      "worldwide": 0.07,
+      "status": "playing"
+    },
+    {
+      "id": "adrishyya",
+      "title": "Adrishyya",
+      "indiaNet": 0.07,
+      "worldwide": 0.07,
+      "status": "playing"
+    },
+    {
+      "id": "jailer-2",
+      "title": "Jailer 2",
+      "indiaNet": 475.56,
+      "worldwide": 836.07,
+      "status": "playing"
+    },
+    {
+      "id": "wildwood",
+      "title": "Wildwood",
+      "indiaNet": 0.06,
+      "worldwide": 0.06,
+      "status": "playing"
+    },
+    {
+      "id": "i-play-rocky",
+      "title": "I Play Rocky",
+      "indiaNet": 0.06,
+      "worldwide": 0.06,
+      "status": "playing"
+    },
+    {
+      "id": "chakkven",
+      "title": "Chakkven",
+      "indiaNet": 0.06,
+      "worldwide": 0.06,
+      "status": "playing"
+    },
+    {
+      "id": "ebenezer-a-christmas-carol",
+      "title": "Ebenezer: A Christmas Carol",
+      "indiaNet": 0.05,
+      "worldwide": 0.05,
+      "status": "playing"
+    },
+    {
+      "id": "nanhey-dil",
+      "title": "Nanhey Dil",
+      "indiaNet": 0.05,
+      "worldwide": 0.05,
+      "status": "playing"
+    },
+    {
+      "id": "how-to-rob-a-bank",
+      "title": "How to Rob a Bank",
+      "indiaNet": 0.05,
+      "worldwide": 0.05,
       "status": "playing"
     }
   ]
