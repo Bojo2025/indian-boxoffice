@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T02:16:42.037Z",
+  "generatedAt": "2026-11-24T09:07:01.425Z",
   "deskDate": "2026-11-24",
   "comparedTo": "2026-11-24 prior",
   "mode": "server-consensus",
@@ -12,10 +12,10 @@
   "health": {
     "hardFail": false,
     "alerts": [
-      "koimoi failed: HTTP 403 (streak 246)",
-      "koimoi has failed 246 consecutive publishes",
-      "boi failed: HTTP 403 (streak 107)",
-      "boi has failed 107 consecutive publishes"
+      "koimoi failed: HTTP 403 (streak 247)",
+      "koimoi has failed 247 consecutive publishes",
+      "boi failed: HTTP 403 (streak 108)",
+      "boi has failed 108 consecutive publishes"
     ],
     "spine": {
       "sacnilk": {
@@ -25,7 +25,7 @@
       },
       "koimoi": {
         "ok": false,
-        "streakFail": 246,
+        "streakFail": 247,
         "detail": "HTTP 403"
       },
       "hungama": {
@@ -35,7 +35,7 @@
       },
       "boi": {
         "ok": false,
-        "streakFail": 107,
+        "streakFail": 108,
         "detail": "HTTP 403"
       }
     }
@@ -14937,15 +14937,15 @@
       "poster": "./posters/ramayana.jpg",
       "indiaNet": 968.15,
       "indiaGross": 1141.65,
-      "overseas": 563,
-      "worldwide": 1704.65,
+      "overseas": 568,
+      "worldwide": 1709.65,
       "lastDayNet": 12.7,
       "trackedThroughDay": 19,
       "liveSources": [
         "sacnilk"
       ],
       "deltaNet": 0,
-      "deltaWw": 0,
+      "deltaWw": 5,
       "dayWise": [
         {
           "reportDate": "2026-11-06",
@@ -17722,7 +17722,15 @@
       ]
     }
   ],
-  "changes": [],
+  "changes": [
+    {
+      "id": "ramayana",
+      "title": "Ramayana",
+      "text": "Ramayana: WW +₹5 Cr since 2026-11-24 prior",
+      "deltaNet": 0,
+      "deltaWw": 5
+    }
+  ],
   "logs": [
     {
       "sourceId": "sacnilk",
@@ -17750,14 +17758,14 @@
       "detail": "Fetched 1 page (headlines / status)"
     },
     {
-      "sourceId": "koimoi",
-      "status": "blocked",
-      "detail": "HTTP 403"
-    },
-    {
       "sourceId": "express",
       "status": "ok",
       "detail": "Fetched 1 page (headlines / status)"
+    },
+    {
+      "sourceId": "koimoi",
+      "status": "blocked",
+      "detail": "HTTP 403"
     },
     {
       "sourceId": "boi",
@@ -17768,115 +17776,115 @@
   "headlines": [
     {
       "sourceId": "sacnilk",
-      "title": "Hanuman Ansh: Sacnilk 107 days, India net ₹342.98 Cr",
-      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-24T02:16:09.714Z",
-      "summary": "Live day-wise pull. Last day 109. WW ₹453.45 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Ramayana: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/ramayana_part_1_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-24T02:16:09.747Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹12.7 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "Scene: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/scene_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-24T02:16:09.887Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.57 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
-      "title": "O.M Operation Mole: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/om_chapter_1_udhiram_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-24T02:16:10.009Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹6.2 Cr."
-    },
-    {
-      "sourceId": "sacnilk",
       "title": "Mirzapur: The Movie: Sacnilk 61 days, India net ₹230.64 Cr",
       "url": "https://www.sacnilk.com/news/mirzapur_the_movie_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-24T02:16:10.139Z",
+      "publishedAt": "2026-11-24T09:06:04.605Z",
       "summary": "Live day-wise pull. Last day 62. WW ₹339.91 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Drishyam 3: The Conclusion: Sacnilk 53 days, India net ₹381.13 Cr",
       "url": "https://www.sacnilk.com/news/drishyam_3_hindi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-24T02:16:10.152Z",
+      "publishedAt": "2026-11-24T09:06:04.622Z",
       "summary": "Live day-wise pull. Last day 53. WW ₹589.46 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "ENE Repeat: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/ene_repeat_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-24T02:16:10.227Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹2 Cr."
+      "title": "Ramayana: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/ramayana_part_1_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-24T09:06:04.635Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹12.7 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Godzilla Minus Zero: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/godzilla_minus_zero_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-24T02:16:10.261Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.4 Cr."
+      "title": "O.M Operation Mole: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/om_chapter_1_udhiram_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-24T09:06:04.661Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹6.2 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Aakasamlo Oka Tara: Sacnilk discovered live",
-      "url": "https://www.sacnilk.com/news/aakasamlo_oka_tara_2026_Box_Office_Collection_Day_Wise_Worldwide",
-      "publishedAt": "2026-11-24T02:16:10.387Z",
-      "summary": "Auto-discovered Indian title. Latest reported India net ₹3.2 Cr."
+      "title": "Hanuman Ansh: Sacnilk 107 days, India net ₹342.98 Cr",
+      "url": "https://www.sacnilk.com/news/hanuman_ansh_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-24T09:06:04.841Z",
+      "summary": "Live day-wise pull. Last day 109. WW ₹453.45 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Scene: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/scene_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-24T09:06:05.204Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.57 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Sardar 2: Sacnilk 21 days, India net ₹16.33 Cr",
       "url": "https://www.sacnilk.com/news/sardar_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-24T02:16:10.696Z",
+      "publishedAt": "2026-11-24T09:06:05.239Z",
       "summary": "Live day-wise pull. Last day 22. WW ₹23.88 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Aakasamlo Oka Tara: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/aakasamlo_oka_tara_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-24T09:06:05.250Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹3.2 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Toxic: Sacnilk 36 days, India net ₹250.13 Cr",
       "url": "https://www.sacnilk.com/news/toxic_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-24T02:16:10.859Z",
+      "publishedAt": "2026-11-24T09:06:05.264Z",
       "summary": "Live day-wise pull. Last day 37. WW ₹342.26 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Irumudi: Sacnilk 69 days, India net ₹194.54 Cr",
-      "url": "https://www.sacnilk.com/news/irumudi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-24T02:16:11.230Z",
-      "summary": "Live day-wise pull. Last day 70. WW ₹246.87 Cr."
+      "title": "Godzilla Minus Zero: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/godzilla_minus_zero_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-24T09:06:05.274Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹0.4 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "ENE Repeat: Sacnilk discovered live",
+      "url": "https://www.sacnilk.com/news/ene_repeat_2026_Box_Office_Collection_Day_Wise_Worldwide",
+      "publishedAt": "2026-11-24T09:06:05.459Z",
+      "summary": "Auto-discovered Indian title. Latest reported India net ₹2 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Awarapan 2: Sacnilk 46 days, India net ₹150.63 Cr",
       "url": "https://www.sacnilk.com/news/awarapan_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-24T02:16:11.360Z",
+      "publishedAt": "2026-11-24T09:06:05.815Z",
       "summary": "Live day-wise pull. Last day 82. WW ₹213.05 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Hi: Sacnilk 28 days, India net ₹12.83 Cr",
-      "url": "https://www.sacnilk.com/news/hi_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-24T02:16:12.047Z",
-      "summary": "Live day-wise pull. Last day 31. WW ₹14.93 Cr."
+      "title": "Irumudi: Sacnilk 69 days, India net ₹194.54 Cr",
+      "url": "https://www.sacnilk.com/news/irumudi_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-24T09:06:05.858Z",
+      "summary": "Live day-wise pull. Last day 70. WW ₹246.87 Cr."
     },
     {
       "sourceId": "sacnilk",
       "title": "Border 2: Sacnilk 56 days, India net ₹329.43 Cr",
       "url": "https://www.sacnilk.com/news/border_2_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-24T02:16:12.157Z",
+      "publishedAt": "2026-11-24T09:06:16.484Z",
       "summary": "Live day-wise pull. Last day 58. WW ₹450.19 Cr."
     },
     {
       "sourceId": "sacnilk",
-      "title": "Vishwanath And Sons: Sacnilk 41 days, India net ₹122.54 Cr",
-      "url": "https://www.sacnilk.com/news/vishwanath_and_sons_2026_box_office_collection_day_wise_worldwide",
-      "publishedAt": "2026-11-24T02:16:12.503Z",
-      "summary": "Live day-wise pull. Last day 42. WW ₹209.46 Cr."
+      "title": "Hi: Sacnilk 28 days, India net ₹12.83 Cr",
+      "url": "https://www.sacnilk.com/news/hi_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-24T09:06:16.552Z",
+      "summary": "Live day-wise pull. Last day 31. WW ₹14.93 Cr."
+    },
+    {
+      "sourceId": "sacnilk",
+      "title": "Batwara 1947: Sacnilk 24 days, India net ₹38.08 Cr",
+      "url": "https://www.sacnilk.com/news/batwara_1947_2026_box_office_collection_day_wise_worldwide",
+      "publishedAt": "2026-11-24T09:06:16.653Z",
+      "summary": "Live day-wise pull. Last day 24. WW ₹54.2 Cr."
     }
   ],
   "morningBrief": {
