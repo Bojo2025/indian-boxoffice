@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "generatedAt": "2026-11-25T18:41:23.416Z",
+  "generatedAt": "2026-11-25T19:02:52.469Z",
   "films": [
     {
       "id": "toxic",
@@ -229,8 +229,8 @@
     {
       "id": "godzilla-minus-zero",
       "title": "Godzilla Minus Zero",
-      "indiaNet": 4.21,
-      "worldwide": 4.67,
+      "indiaNet": 4.52,
+      "worldwide": 5.04,
       "status": "playing"
     },
     {
