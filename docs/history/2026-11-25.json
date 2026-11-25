@@ -1,6 +1,6 @@
 {
   "date": "2026-11-25",
-  "generatedAt": "2026-11-24T23:57:23.790Z",
+  "generatedAt": "2026-11-25T07:44:06.226Z",
   "films": [
     {
       "id": "toxic",
@@ -195,7 +195,7 @@
       "id": "ramayana",
       "title": "Ramayana",
       "indiaNet": 990.45,
-      "worldwide": 1735.15,
+      "worldwide": 1737.15,
       "status": "playing"
     },
     {
