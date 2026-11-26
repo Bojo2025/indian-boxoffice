@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "generatedAt": "2026-11-26T09:59:05.952Z",
+  "generatedAt": "2026-11-26T10:59:57.082Z",
   "films": [
     {
       "id": "toxic",
@@ -216,7 +216,7 @@
       "id": "ene-repeat",
       "title": "ENE Repeat",
       "indiaNet": 24.5,
-      "worldwide": 44.55,
+      "worldwide": 44.6,
       "status": "playing"
     },
     {
