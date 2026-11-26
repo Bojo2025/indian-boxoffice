@@ -1,12 +1,12 @@
 {
   "kind": "desk-day",
   "briefDate": "2026-11-26",
-  "generatedAt": "2026-11-25T18:41:25.783Z",
-  "headline": "Ramayana Day 21: ₹9.60 Cr India nett",
-  "lede": "7:00 IST: Ramayana Day 20: ₹17.50 Cr India nett 13:00 IST: Ramayana Day 21: ₹9.60 Cr India nett",
-  "body": "## 7:00 IST — Last day\n\nThrough Day 21 the desk has Ramayana at ₹992.0 Cr India nett, ₹1,173.5 Cr India gross, ₹582.0 Cr overseas and ₹1,755.5 Cr worldwide. Adding the day-wise nett rows gives ₹982.45 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, O.M Operation Mole at ₹4.10 Cr and Aakasamlo Oka Tara at ₹2.70 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The desk figure remains ₹992.0 Cr India nett and ₹1,755.5 Cr worldwide. No producer-certified total is included.\n\n## 13:00 IST — Occupancy and bookings\n\nThrough Day 21 the desk has Ramayana at ₹992.2 Cr India nett, ₹1,173.6 Cr India gross, ₹582.0 Cr overseas and ₹1,755.6 Cr worldwide. Adding the day-wise nett rows gives ₹982.55 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, O.M Operation Mole at ₹4.10 Cr and Aakasamlo Oka Tara at ₹2.70 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. Business Today is citing about ₹1,000.0 Cr. The desk keeps ₹992.2 Cr India nett and ₹1,755.6 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.",
+  "generatedAt": "2026-11-26T23:14:06.813Z",
+  "headline": "Ramayana Day 21: ₹9.50 Cr India nett",
+  "lede": "7:00 IST: Ramayana Day 20: ₹17.50 Cr India nett 13:00 IST: Ramayana Day 21: ₹9.60 Cr India nett 20:00 IST: Ramayana Day 21: ₹9.50 Cr India nett",
+  "body": "## 7:00 IST — Last day\n\nThrough Day 21 the desk has Ramayana at ₹992.0 Cr India nett, ₹1,173.5 Cr India gross, ₹582.0 Cr overseas and ₹1,755.5 Cr worldwide. Adding the day-wise nett rows gives ₹982.45 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, O.M Operation Mole at ₹4.10 Cr and Aakasamlo Oka Tara at ₹2.70 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The desk figure remains ₹992.0 Cr India nett and ₹1,755.5 Cr worldwide. No producer-certified total is included.\n\n## 13:00 IST — Occupancy and bookings\n\nThrough Day 21 the desk has Ramayana at ₹992.2 Cr India nett, ₹1,173.6 Cr India gross, ₹582.0 Cr overseas and ₹1,755.6 Cr worldwide. Adding the day-wise nett rows gives ₹982.55 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, O.M Operation Mole at ₹4.10 Cr and Aakasamlo Oka Tara at ₹2.70 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. Business Today is citing about ₹1,000.0 Cr. The desk keeps ₹992.2 Cr India nett and ₹1,755.6 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.\n\n## 20:00 IST — Collections so far\n\nThrough Day 22 the desk has Ramayana at ₹1,001.8 Cr India nett, ₹1,185.0 Cr India gross, ₹592.0 Cr overseas and ₹1,777.0 Cr worldwide. Adding the day-wise nett rows gives ₹992.10 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, O.M Operation Mole at ₹3.75 Cr and Aakasamlo Oka Tara at ₹2.70 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The desk figure remains ₹1,001.8 Cr India nett and ₹1,777.0 Cr worldwide. No producer-certified total is included.",
   "citations": [],
-  "boardGeneratedAt": "2026-11-26T18:29:20.812Z",
+  "boardGeneratedAt": "2026-11-26T23:14:04.516Z",
   "model": "desk-report-v1",
   "editions": [
     {
@@ -33,6 +33,20 @@
       "body": "Through Day 21 the desk has Ramayana at ₹992.2 Cr India nett, ₹1,173.6 Cr India gross, ₹582.0 Cr overseas and ₹1,755.6 Cr worldwide. Adding the day-wise nett rows gives ₹982.55 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, O.M Operation Mole at ₹4.10 Cr and Aakasamlo Oka Tara at ₹2.70 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. Business Today is citing about ₹1,000.0 Cr. The desk keeps ₹992.2 Cr India nett and ₹1,755.6 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.",
       "citations": [],
       "boardGeneratedAt": "2026-11-25T18:41:23.416Z",
+      "model": "desk-report-v1",
+      "provisional": true,
+      "leadTitle": "Ramayana"
+    },
+    {
+      "kind": "desk-edition",
+      "slot": "evening",
+      "briefDate": "2026-11-26",
+      "generatedAt": "2026-11-26T23:14:06.813Z",
+      "headline": "Ramayana Day 21: ₹9.50 Cr India nett",
+      "lede": "Ramayana's Day 21 collection so far, on Thursday, 26 November 2026, is ₹9.50 Cr India nett and ₹11.35 Cr India gross, -45.7% from Day 20's ₹17.50 Cr. That is across 15,700 shows at 12.7% occupancy. Updated 04:44 am IST, and still a live estimate rather than the final drop.",
+      "body": "Through Day 22 the desk has Ramayana at ₹1,001.8 Cr India nett, ₹1,185.0 Cr India gross, ₹592.0 Cr overseas and ₹1,777.0 Cr worldwide. Adding the day-wise nett rows gives ₹992.10 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, O.M Operation Mole at ₹3.75 Cr and Aakasamlo Oka Tara at ₹2.70 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The desk figure remains ₹1,001.8 Cr India nett and ₹1,777.0 Cr worldwide. No producer-certified total is included.",
+      "citations": [],
+      "boardGeneratedAt": "2026-11-26T23:14:04.516Z",
       "model": "desk-report-v1",
       "provisional": true,
       "leadTitle": "Ramayana"
