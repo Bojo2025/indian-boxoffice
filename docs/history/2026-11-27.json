@@ -1,6 +1,6 @@
 {
   "date": "2026-11-27",
-  "generatedAt": "2026-11-27T17:35:27.916Z",
+  "generatedAt": "2026-11-27T18:15:08.919Z",
   "films": [
     {
       "id": "toxic",
@@ -210,6 +210,13 @@
       "title": "Gunmaaster G9",
       "indiaNet": 7.3,
       "worldwide": 7.3,
+      "status": "playing"
+    },
+    {
+      "id": "bhogi",
+      "title": "Bhogi",
+      "indiaNet": 1.9,
+      "worldwide": 1.9,
       "status": "playing"
     }
   ]
