@@ -1,12 +1,12 @@
 {
   "kind": "desk-day",
   "briefDate": "2026-11-28",
-  "generatedAt": "2026-11-28T09:20:36.220Z",
-  "headline": "Ramayana Day 22: ₹9.65 Cr India nett",
-  "lede": "7:00 IST: Ramayana Day 22: ₹9.65 Cr India nett",
-  "body": "## 7:00 IST — Last day\n\nThrough Day 23 the desk has Ramayana at ₹1,009.0 Cr India nett, ₹1,195.1 Cr India gross, ₹595.0 Cr overseas and ₹1,790.1 Cr worldwide. Adding the day-wise nett rows gives ₹1,000.55 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Yeh Prem Mol Liya at ₹4.00 Cr and Gunmaaster G9 at ₹3.65 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. NDTV is citing about ₹1,000.0 Cr. The desk keeps ₹1,009.0 Cr India nett and ₹1,790.1 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.",
+  "generatedAt": "2026-11-28T16:19:22.682Z",
+  "headline": "Ramayana Day 23: ₹8.45 Cr India nett",
+  "lede": "7:00 IST: Ramayana Day 22: ₹9.65 Cr India nett 13:00 IST: Ramayana Day 23: ₹8.45 Cr India nett",
+  "body": "## 7:00 IST — Last day\n\nThrough Day 23 the desk has Ramayana at ₹1,009.0 Cr India nett, ₹1,195.1 Cr India gross, ₹595.0 Cr overseas and ₹1,790.1 Cr worldwide. Adding the day-wise nett rows gives ₹1,000.55 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Yeh Prem Mol Liya at ₹4.00 Cr and Gunmaaster G9 at ₹3.65 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. NDTV is citing about ₹1,000.0 Cr. The desk keeps ₹1,009.0 Cr India nett and ₹1,790.1 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.\n\n## 13:00 IST — Occupancy and bookings\n\nThrough Day 23 the desk has Ramayana at ₹1,009.0 Cr India nett, ₹1,195.1 Cr India gross, ₹595.0 Cr overseas and ₹1,790.1 Cr worldwide. Adding the day-wise nett rows gives ₹1,000.55 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Yeh Prem Mol Liya at ₹4.00 Cr and Gunmaaster G9 at ₹3.65 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The Indian Express is citing about ₹1,800.0 Cr, The Week is citing about ₹1,200.0 Cr. The desk keeps ₹1,009.0 Cr India nett and ₹1,790.1 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.",
   "citations": [],
-  "boardGeneratedAt": "2026-11-28T10:33:21.222Z",
+  "boardGeneratedAt": "2026-11-28T16:19:20.599Z",
   "model": "desk-report-v1",
   "editions": [
     {
@@ -21,6 +21,20 @@
       "boardGeneratedAt": "2026-11-28T09:20:34.054Z",
       "model": "desk-report-v1",
       "provisional": false,
+      "leadTitle": "Ramayana"
+    },
+    {
+      "kind": "desk-edition",
+      "slot": "midday",
+      "briefDate": "2026-11-28",
+      "generatedAt": "2026-11-28T16:19:22.682Z",
+      "headline": "Ramayana Day 23: ₹8.45 Cr India nett",
+      "lede": "Ramayana on Day 23 (Saturday, 28 November 2026) is at ₹8.45 Cr India nett and ₹10.10 Cr India gross, -12.4% from Day 22's ₹9.65 Cr. The board has 6,584 shows at 22.1% occupancy. Trade notes mention advance bookings, but no separate booking total is published here. The day is still open, so this is not the final figure.",
+      "body": "Through Day 23 the desk has Ramayana at ₹1,009.0 Cr India nett, ₹1,195.1 Cr India gross, ₹595.0 Cr overseas and ₹1,790.1 Cr worldwide. Adding the day-wise nett rows gives ₹1,000.55 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Yeh Prem Mol Liya at ₹4.00 Cr and Gunmaaster G9 at ₹3.65 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. The Indian Express is citing about ₹1,800.0 Cr, The Week is citing about ₹1,200.0 Cr. The desk keeps ₹1,009.0 Cr India nett and ₹1,790.1 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.",
+      "citations": [],
+      "boardGeneratedAt": "2026-11-28T16:19:20.599Z",
+      "model": "desk-report-v1",
+      "provisional": true,
       "leadTitle": "Ramayana"
     }
   ]
