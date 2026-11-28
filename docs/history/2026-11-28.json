@@ -1,6 +1,6 @@
 {
   "date": "2026-11-28",
-  "generatedAt": "2026-11-28T16:19:20.599Z",
+  "generatedAt": "2026-11-28T16:56:48.703Z",
   "films": [
     {
       "id": "toxic",
@@ -194,22 +194,22 @@
     {
       "id": "ramayana",
       "title": "Ramayana",
-      "indiaNet": 1009,
-      "worldwide": 1790.1,
+      "indiaNet": 1023.65,
+      "worldwide": 1814.55,
       "status": "playing"
     },
     {
       "id": "yeh-prem-mol-liya",
       "title": "Yeh Prem Mol Liya",
-      "indiaNet": 8,
-      "worldwide": 8.45,
+      "indiaNet": 13.25,
+      "worldwide": 18.75,
       "status": "playing"
     },
     {
       "id": "gunmaaster-g9",
       "title": "Gunmaaster G9",
-      "indiaNet": 7.3,
-      "worldwide": 7.3,
+      "indiaNet": 11.65,
+      "worldwide": 11.65,
       "status": "playing"
     },
     {
@@ -222,8 +222,8 @@
     {
       "id": "om-operation-mole",
       "title": "O.M Operation Mole",
-      "indiaNet": 74.24,
-      "worldwide": 114.3,
+      "indiaNet": 77.57,
+      "worldwide": 118.65,
       "status": "playing"
     },
     {
