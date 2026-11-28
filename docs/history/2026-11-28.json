@@ -1,6 +1,6 @@
 {
   "date": "2026-11-28",
-  "generatedAt": "2026-11-28T10:33:21.222Z",
+  "generatedAt": "2026-11-28T15:17:58.722Z",
   "films": [
     {
       "id": "toxic",
@@ -216,7 +216,7 @@
       "id": "aakasamlo-oka-tara",
       "title": "Aakasamlo Oka Tara",
       "indiaNet": 30.65,
-      "worldwide": 45.33,
+      "worldwide": 46.33,
       "status": "playing"
     },
     {
@@ -243,8 +243,15 @@
     {
       "id": "ene-repeat",
       "title": "ENE Repeat",
-      "indiaNet": 26.35,
-      "worldwide": 47.1,
+      "indiaNet": 26.75,
+      "worldwide": 49.3,
+      "status": "playing"
+    },
+    {
+      "id": "cosmic-samson",
+      "title": "Cosmic Samson",
+      "indiaNet": 0.82,
+      "worldwide": 0.82,
       "status": "playing"
     },
     {
@@ -257,8 +264,8 @@
     {
       "id": "scene",
       "title": "Scene",
-      "indiaNet": 153.57,
-      "worldwide": 267.38,
+      "indiaNet": 153.43,
+      "worldwide": 267.32,
       "status": "playing"
     },
     {
@@ -390,13 +397,6 @@
     {
       "id": "dads-little-friend",
       "title": "Dad's Little Friend",
-      "indiaNet": 0.03,
-      "worldwide": 0.03,
-      "status": "playing"
-    },
-    {
-      "id": "bala-369",
-      "title": "Bala 369",
       "indiaNet": 0.03,
       "worldwide": 0.03,
       "status": "playing"
