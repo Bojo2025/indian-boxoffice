@@ -1,0 +1,27 @@
+{
+  "kind": "desk-day",
+  "briefDate": "2026-11-28",
+  "generatedAt": "2026-11-28T09:20:36.220Z",
+  "headline": "Ramayana Day 22: ₹9.65 Cr India nett",
+  "lede": "7:00 IST: Ramayana Day 22: ₹9.65 Cr India nett",
+  "body": "## 7:00 IST — Last day\n\nThrough Day 23 the desk has Ramayana at ₹1,009.0 Cr India nett, ₹1,195.1 Cr India gross, ₹595.0 Cr overseas and ₹1,790.1 Cr worldwide. Adding the day-wise nett rows gives ₹1,000.55 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Yeh Prem Mol Liya at ₹4.00 Cr and Gunmaaster G9 at ₹3.65 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. NDTV is citing about ₹1,000.0 Cr. The desk keeps ₹1,009.0 Cr India nett and ₹1,790.1 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.",
+  "citations": [],
+  "boardGeneratedAt": "2026-11-28T09:20:34.054Z",
+  "model": "desk-report-v1",
+  "editions": [
+    {
+      "kind": "desk-edition",
+      "slot": "morning",
+      "briefDate": "2026-11-28",
+      "generatedAt": "2026-11-28T09:20:36.220Z",
+      "headline": "Ramayana Day 22: ₹9.65 Cr India nett",
+      "lede": "Ramayana closed Day 22 on Friday, 27 November 2026 at ₹9.65 Cr India nett and ₹11.50 Cr India gross, +1.6% from Day 21's ₹9.50 Cr. That day played on 15,418 shows at 12.8% occupancy. This is the closed day on the desk, not a live estimate.",
+      "body": "Through Day 23 the desk has Ramayana at ₹1,009.0 Cr India nett, ₹1,195.1 Cr India gross, ₹595.0 Cr overseas and ₹1,790.1 Cr worldwide. Adding the day-wise nett rows gives ₹1,000.55 Cr, which is a different series from that lifetime nett, so the two are not combined. Behind it on the daily chart, Yeh Prem Mol Liya at ₹4.00 Cr and Gunmaaster G9 at ₹3.65 Cr. This day's overseas figure is not in, so it is not used to move the worldwide total.\n\nTrade coverage is still led by Ramayana. NDTV is citing about ₹1,000.0 Cr. The desk keeps ₹1,009.0 Cr India nett and ₹1,790.1 Cr worldwide, and does not blend those reports into its own total. No producer-certified total is included.",
+      "citations": [],
+      "boardGeneratedAt": "2026-11-28T09:20:34.054Z",
+      "model": "desk-report-v1",
+      "provisional": false,
+      "leadTitle": "Ramayana"
+    }
+  ]
+}

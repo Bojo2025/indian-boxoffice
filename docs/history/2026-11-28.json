@@ -1,6 +1,6 @@
 {
   "date": "2026-11-28",
-  "generatedAt": "2026-11-28T03:11:23.480Z",
+  "generatedAt": "2026-11-28T09:20:34.054Z",
   "films": [
     {
       "id": "toxic",
@@ -117,9 +117,9 @@
     {
       "id": "border-2",
       "title": "Border 2",
-      "indiaNet": 329.43,
-      "worldwide": 450.19,
-      "status": "playing"
+      "indiaNet": 341.7,
+      "worldwide": 464.5,
+      "status": "closed"
     },
     {
       "id": "peddi",
@@ -202,7 +202,7 @@
       "id": "yeh-prem-mol-liya",
       "title": "Yeh Prem Mol Liya",
       "indiaNet": 8,
-      "worldwide": 8,
+      "worldwide": 8.45,
       "status": "playing"
     },
     {
@@ -215,15 +215,15 @@
     {
       "id": "aakasamlo-oka-tara",
       "title": "Aakasamlo Oka Tara",
-      "indiaNet": 30.39,
-      "worldwide": 40.83,
+      "indiaNet": 30.65,
+      "worldwide": 45.33,
       "status": "playing"
     },
     {
       "id": "om-operation-mole",
       "title": "O.M Operation Mole",
-      "indiaNet": 73.7,
-      "worldwide": 111.1,
+      "indiaNet": 74.24,
+      "worldwide": 114.3,
       "status": "playing"
     },
     {
